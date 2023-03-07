@@ -23,7 +23,7 @@ void I2C_Write_Address(uint8_t address);
 // -- функция инициализации I2C
 void I2C_Init(uint32_t BaudRate)
 {
-	uint8_t BaudDivider = ((F_CPU/BaudRate)-16)/2;
+	uint8_t BaudDivider = (uint8_t)((F_CPU/BaudRate)-16)/2;
 	
 	TWSR = 0; // TWSR = 0 => prescaler = 1
 	TWBR = BaudDivider; // 72 при 100KHz
@@ -75,7 +75,7 @@ uint8_t I2C_Read(uint8_t ack)
 // I2C, ожидание снятия флага TWINT
 void I2C_Wait()
 {
-	while(TWCR & (1 << TWINT)) ;
+	while( ! (TWCR & (1 << TWINT)) ) ;
 }
 
 // I2C передача адреса 

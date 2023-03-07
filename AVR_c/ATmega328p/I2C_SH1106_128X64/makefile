@@ -6,7 +6,7 @@ PORT			:= com8
 
 TARGET_FCPU		:= 16000000
 
-NAME			:= EEPROM
+NAME			:= I2C_SH1106_128X64
 CCC				:= $(NAME).c
 OBJ				:= $(NAME).o
 ELF				:= $(NAME).elf
