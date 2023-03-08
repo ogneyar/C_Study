@@ -2,9 +2,19 @@
 #ifndef _SSD1306_H_
 #define _SSD1306_H_
 
+#include <avr/io.h>
+#ifndef _AVR_IOXXX_H_
+#include <avr/iom328p.h>
+#endif 
 #include <avr/pgmspace.h>
+#include <util/delay.h>
 
+#ifdef SSD1306_SPI
+#include "spi.h"
+#else
 #include "i2c.h"
+#endif
+
 #include "defines.h"
 
 #ifndef SH1106
@@ -20,9 +30,9 @@
 #define BUFSIZE_128x64 (128*64/8)
 #define BUFSIZE_128x32 (128*32/8)
 
-#ifndef OLED_SPI_SPEED
-#define OLED_SPI_SPEED 1000000ul
-#endif
+// #ifndef OLED_SPI_SPEED
+// #define OLED_SPI_SPEED 1000000ul
+// #endif
 
 uint8_t _address = 0x3c;
 uint8_t addressWrite = 0x78; // address << 1 | 0x00
@@ -42,7 +52,7 @@ static const uint8_t _oled_init[] PROGMEM = {
     OLED_CHARGEPUMP,
     0x14,    // value
     OLED_ADDRESSING_MODE,
-    OLED_VERTICAL,
+    OLED_HORIZONTAL, // OLED_HORIZONTAL or OLED_VERTICAL
     OLED_NORMAL_H,
     OLED_NORMAL_V,
     OLED_CONTRAST,
@@ -53,24 +63,49 @@ static const uint8_t _oled_init[] PROGMEM = {
     OLED_DISPLAY_ON,
 	
 	OLED_SETCOMPINS,
-	OLED_HEIGHT_64,
+	OLED_HEIGHT_64, // OLED_HEIGHT_64 or OLED_HEIGHT_32
 	
 	OLED_SETMULTIPLEX,
-	OLED_64,
+	OLED_64, // OLED_64 or OLED_32
 };
 
 
-void disp_write(uint8_t mode, uint8_t data);
-void disp_write_array(void);
 void display_init(uint8_t address);
+void disp_write(uint8_t mode, uint8_t data); 
+void disp_write_array(void);
 void screen_clear(void);
 void screen_update(void);
 void test_screen(void);
 
 
+// Функция инициализации дисплея
+void display_init(uint8_t address) 
+{
+#ifdef SSD1306_SPI
+    SPI_Init();     
+    PORT_SPI &= ~(1 << DD_RES); // reset_on();
+    _delay_ms(10);
+    PORT_SPI |= (1 << DD_RES); // reset_off();
+#else
+    I2C_Init(400000);
+#endif
+    _address = address;
+    // Посылаем команды в дисплей из массива инициализации
+    for(uint8_t i = 0; i < sizeof _oled_init; i++) disp_write(0, pgm_read_byte(&_oled_init[i]));
+}
+
 // Функция записи данных/команды в дисплей
 void disp_write(uint8_t mode, uint8_t data) // Режим: 1-данные, 0-команда
 {
+#ifdef SSD1306_SPI
+    PORT_SPI &= ~(1 << DD_SS); // select_chip(); 
+    if(mode) PORT_SPI |= (1 << DD_DC); // data_mode();
+    else PORT_SPI &= ~(1 << DD_DC); // command_mode();
+    // USART_Transmit("eee");
+    SPI_Transmit(data);
+    // USART_Transmit("uf'");
+    PORT_SPI |= (1 << DD_SS); // deselect_chip();
+#else
     if(mode) mode = dataByte; // Режим данных
     else mode = command; // Режим команды
     
@@ -79,11 +114,18 @@ void disp_write(uint8_t mode, uint8_t data) // Режим: 1-данные, 0-к�
     I2C_Write(mode);   //Control Byte - Command
     I2C_Write(data);    //payload
     I2C_Stop();
+#endif
 }
 
 // Функция записи массива данных из буфера в дисплей
 void disp_write_array(void) 
 {
+#ifdef SSD1306_SPI
+    PORT_SPI &= ~(1 << DD_SS); // select_chip(); 
+    PORT_SPI |= (1 << DD_DC); // data_mode();
+    for(uint16_t i = 0; i < SCREEN_BUFFER_LENGTH; i++) SPI_Transmit(scr_buffer[i]);
+    PORT_SPI |= (1 << DD_SS); // deselect_chip();
+#else
     I2C_Start();
     I2C_Write_Address(_address); // команда на запись (7 бит адреса + 1 бит на запись/чтение )  
     for(uint16_t i = 0; i < SCREEN_BUFFER_LENGTH; i++) {
@@ -91,21 +133,14 @@ void disp_write_array(void)
         I2C_Write(scr_buffer[i]);    
     }
     I2C_Stop();    
-}
-
-
-// Функция инициализации дисплея
-void display_init(uint8_t address) 
-{
-    _address = address;
-    // Посылаем команды в дисплей из массива инициализации
-    for(uint8_t i = 0; i < sizeof _oled_init; i++) disp_write(0, pgm_read_byte(&_oled_init[i]));
+#endif
 }
 
 // Функция очистки буфера дисплея
 void screen_clear(void) 
 {
     for(uint16_t i = 0; i < SCREEN_BUFFER_LENGTH; i++) scr_buffer[i] = 0;
+    screen_update();
 }
 
 // Функция обновления дисплея
@@ -139,14 +174,18 @@ void screen_update(void)
         else disp_write(0, 3);    // Конечный адрес
         
         // Запись данных из буфера в дисплей
-        for(uint16_t i = 0; i < SCREEN_BUFFER_LENGTH; i++) disp_write(1, scr_buffer[i]);
-        //disp_write_array();  
+        // for(uint16_t i = 0; i < SCREEN_BUFFER_LENGTH; i++) disp_write(1, scr_buffer[i]);
+        disp_write_array();  
     }
 }
 
 // тесты экрана
 void test_screen(void) 
 {
+    screen_clear();
+
+    _delay_ms(1000);
+
     uint8_t flag = 0xff;
     for(uint16_t i = 0; i < 1024; i++) {
         scr_buffer[i] = flag;
@@ -156,10 +195,11 @@ void test_screen(void)
     screen_update();
     
     _delay_ms(1000);
+
     screen_clear();
-    screen_update();
     
     _delay_ms(1000);
+    
     for(uint16_t i = 0; i < SCREEN_BUFFER_LENGTH; i++) scr_buffer[i] = 0xff;
     screen_update();
 }

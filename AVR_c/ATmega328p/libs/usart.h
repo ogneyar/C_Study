@@ -2,6 +2,12 @@
 #ifndef _USART_H_
 #define _USART_H_
 	
+	
+#include <avr/io.h>
+#ifndef _AVR_IOXXX_H_
+#include <avr/iom328p.h>
+#endif 
+
 #ifndef F_CPU
 #define F_CPU 16000000UL
 #endif
