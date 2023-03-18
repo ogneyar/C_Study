@@ -82,7 +82,7 @@ void test_screen(void);
 void display_init(uint8_t address) 
 {
 #ifdef SSD1306_SPI
-    SPI_Init();     
+    SPI_Init(0);     
     PORT_SPI &= ~(1 << DD_RES); // reset_on();
     _delay_ms(10);
     PORT_SPI |= (1 << DD_RES); // reset_off();

@@ -23,7 +23,7 @@
 
 
 // Инициализация режима Master с управлением потоком по опросу.
-void SPI_Init(void) 
+void SPI_Init(uint8_t mode) 
 {
     /* Настройка на выход */
     DDR_SPI |= (1 << DD_MOSI) | (1 << DD_SCK) | (1 << DD_DC) | (1 << DD_RES) | (1 << DD_SS);
@@ -33,10 +33,10 @@ void SPI_Init(void)
     SPCR |= (1 << SPE) | (1 << MSTR);// | (1 << SPR1) | (1 << SPR0); 
     SPSR |= (1 << SPI2X);
     
-    // SPCR &= ~(1 << CPOL); SPCR &= ~(1 << CPHA);   // Mode 0 (CPOL = 0, CPHA = 0)
-    // SPCR &= ~(1 << CPOL); SPCR |= (1 << CPHA);    // Mode 1 (CPOL = 0, CPHA = 1)
-    // SPCR |= (1 << CPOL);  SPCR &= ~(1 << CPHA);   // Mode 2 (CPOL = 1, CPHA = 0)
-    // SPCR |= (1 << CPOL);  SPCR |= (1 << CPHA);    // Mode 3 (CPOL = 1, CPHA = 1)
+    if (mode == 0) SPCR &= ~(1 << CPOL); SPCR &= ~(1 << CPHA);   // Mode 0 (CPOL = 0, CPHA = 0)
+    if (mode == 1) SPCR &= ~(1 << CPOL); SPCR |= (1 << CPHA);    // Mode 1 (CPOL = 0, CPHA = 1)
+    if (mode == 2) SPCR |= (1 << CPOL);  SPCR &= ~(1 << CPHA);   // Mode 2 (CPOL = 1, CPHA = 0)
+    if (mode == 3) SPCR |= (1 << CPOL);  SPCR |= (1 << CPHA);    // Mode 3 (CPOL = 1, CPHA = 1)
 }
 
 // Передача данных
@@ -58,6 +58,20 @@ void SPI_SendArray(uint8_t* data)
         PtrToStrChar++;  // переход к следующему символу в строке.
     }  
 }
+
+
+// Передача и приём данных 
+uint8_t SPI_Transfer(uint8_t data) 
+{   
+    SPDR = data;
+    /* Ожидание завершения передачи: */
+    while (!(SPSR & (1 << SPIF))) ;
+    asm volatile("nop");
+    asm volatile("nop"); // для Nano при максимальной скорости
+	return SPDR;
+}
+
 // =================================================
+
 
 #endif  /* _SPI_H_ */

@@ -42,17 +42,60 @@ void USART_Init(uint32_t BaudRate)
 }
 
 
+
+void USART_Send_Byte(uint8_t data)
+{
+	while ( ! (UCSR0A & (1 << UDRE0)) ) 
+		; // ждем пока не освободится регистр передатчика
+	UDR0 = data;// пишем данные в регистр передатчика для отправки 
+}
+
+
 // -- Функция передачи данных -- 
 void USART_Transmit(char* str)
 {
 	uint8_t i = 0;
 	while (str[i])
 	{
-		while ( ! (UCSR0A & (1 << UDRE0)) ) 
-			; // ждем пока не освободится регистр передатчика
-		UDR0 = str[i];// пишем данные в регистр передатчика для отправки 
+		USART_Send_Byte(str[i]);
 		i++;
 	}
+}
+
+// -- Функция передачи 16тиричных данных -- 
+void USART_TransmitHEX(uint8_t hex)
+{
+	USART_Transmit("0x");
+
+	uint8_t sixteen = ( (hex>>4) & 0x0f );
+	if (sixteen > 9) USART_Send_Byte( (sixteen - 10) + 97); // символы от A до F
+	else USART_Send_Byte(sixteen + 48); // число от 0 до 9
+
+	sixteen = ( (hex) & 0x0f );
+	if (sixteen > 9) USART_Send_Byte( (sixteen - 10) + 97); // символы от A до F
+	else USART_Send_Byte(sixteen + 48); // число от 0 до 9
+}
+
+// -- Функция передачи 2х байт 16тиричных данных -- 
+void USART_TransmitHEX2(uint16_t hex)
+{
+	USART_Transmit("0x");
+
+	uint8_t sixteen = ( (hex>>12) & 0x0f );
+	if (sixteen > 9) USART_Send_Byte( (sixteen - 10) + 97); // символы от A до F
+	else USART_Send_Byte(sixteen + 48); // число от 0 до 9
+
+	sixteen = ( (hex>>8) & 0x0f );
+	if (sixteen > 9) USART_Send_Byte( (sixteen - 10) + 97); // символы от A до F
+	else USART_Send_Byte(sixteen + 48); // число от 0 до 9
+
+	sixteen = ( (hex>>4) & 0x0f );
+	if (sixteen > 9) USART_Send_Byte( (sixteen - 10) + 97); // символы от A до F
+	else USART_Send_Byte(sixteen + 48); // число от 0 до 9
+
+	sixteen = ( (hex) & 0x0f );
+	if (sixteen > 9) USART_Send_Byte( (sixteen - 10) + 97); // символы от A до F
+	else USART_Send_Byte(sixteen + 48); // число от 0 до 9
 }
 
 // -- Функция приёма данных -- 
