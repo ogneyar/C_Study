@@ -49,11 +49,22 @@ void SPI_Transmit(uint8_t data)
     asm volatile("nop"); // для Nano при максимальной скорости
 }
 
-// Передача массива данных
-void SPI_SendArray(uint8_t* data) 
+// Передача массива строк
+void SPI_SendArrayStr(uint8_t* data) 
 {   
     uint8_t* PtrToStrChar = data;  // Установить указатель на начало строки.
     while (*PtrToStrChar != 0) {// Цикл "если не конец строки", то ..
+        SPI_Transmit(*PtrToStrChar);
+        PtrToStrChar++;  // переход к следующему символу в строке.
+    }  
+}
+
+// Передача массива данных
+void SPI_SendArray(uint8_t* data, uint32_t length) 
+{   
+    uint8_t* PtrToStrChar = data;  // Установить указатель на начало строки.
+    for(uint32_t i = 0; i < length; i++)
+    {
         SPI_Transmit(*PtrToStrChar);
         PtrToStrChar++;  // переход к следующему символу в строке.
     }  

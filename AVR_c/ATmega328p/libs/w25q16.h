@@ -29,9 +29,10 @@
 #define W25_WRITE_STATUS_REGISTER_2 0x31
 #define W25_WRITE_STATUS_REGISTER_3 0x11
 #define W25_READ_DATA 0x03
+#define W25_FAST_READ 0x0B
 #define W25_SECTOR_ERASE_4K 0x20
 #define W25_BLOCK_ERASE_32K 0x52
-#define W25_BLOCK_ERASE_64K 0xd8
+#define W25_BLOCK_ERASE_64K 0xD8
 #define W25_CHIP_ERASE 0xC7
 #define W25_POWER_DOWN 0xB9
 #define W25_RELEASE_POWER_DOWN 0xAB
@@ -45,9 +46,9 @@
 
 void flash_init(void);
 uint8_t flash_read(uint16_t page, uint8_t pageAddress);
-void flash_readPage(uint16_t page, uint8_t pageAddress, uint8_t *data);
+void flash_readPage(uint16_t page, uint8_t *data);
 void flash_write(uint16_t page, uint8_t pageAddress, uint8_t val);
-void flash_writePage(uint16_t page, uint8_t pageAddress, uint8_t *data);
+void flash_writePage(uint16_t page, uint8_t *data, uint32_t length);
 uint8_t flash_manufacturerID(void);
 uint8_t flash_deviceID(void);
 uint8_t flash_uniqueID(void);
@@ -66,7 +67,7 @@ uint8_t flash_readStatusRegister1(void);
 // Функция инициализации памяти
 void flash_init(void) 
 {
-    SPI_Init(1); // mode = 1
+    SPI_Init(3); // mode = 3
 	cs_set();
     _delay_ms(100);
     flash_reset();
@@ -99,16 +100,17 @@ uint8_t flash_read(uint16_t page, uint8_t pageAddress)
 }
 
 // Чтение страницы
-void flash_readPage(uint16_t page, uint8_t pageAddress, uint8_t *data)
-{    
+void flash_readPage(uint16_t page, uint8_t *data)
+{
     cs_set();
-    SPI_Transmit(W25_READ_DATA);
+    SPI_Transmit(W25_FAST_READ);
     SPI_Transmit((page >> 8) & 0xFF);
     SPI_Transmit((page >> 0) & 0xFF);
-    SPI_Transmit(pageAddress);
+    SPI_Transmit(0x00);
+    SPI_Transmit(0x00);
     for(int i = 0; i < 256; i++)
     {
-        data[i] = SPI_Transfer(0);
+        data[(uint8_t)i] = SPI_Transfer(0);
     }
     cs_reset();
     flash_notBusy();
@@ -116,7 +118,6 @@ void flash_readPage(uint16_t page, uint8_t pageAddress, uint8_t *data)
 
 void flash_write(uint16_t page, uint8_t pageAddress, uint8_t val)
 {
-    // flash_notBusy();
     flash_setBlockProtect(0x00);
     flash_writeEnable();
     cs_set();
@@ -132,20 +133,17 @@ void flash_write(uint16_t page, uint8_t pageAddress, uint8_t val)
 }
 
 
-void flash_writePage(uint16_t page, uint8_t pageAddress, uint8_t *data)
+void flash_writePage(uint16_t page, uint8_t *data, uint32_t length)
 {      
+
     flash_setBlockProtect(0x00);
     flash_writeEnable();
     cs_set();
     SPI_Transmit(W25_PAGE_PROGRAM);
     SPI_Transmit((page >> 8) & 0xFF);
     SPI_Transmit((page >> 0) & 0xFF);
-    SPI_Transmit(pageAddress);
-    
-    for(uint16_t i = 0; i < 256; i++)
-    {
-        SPI_Transmit(data++);
-    }
+    SPI_Transmit(0x00);
+    for(uint32_t i = 0; i < length; i++) SPI_Transmit(data[(uint8_t)i]);  
     cs_reset();
     flash_notBusy();
     flash_writeDisable();
@@ -209,7 +207,6 @@ uint16_t flash_jedecID(void)
 
 void flash_chipErase(void)
 {
-    // flash_notBusy();
     flash_setBlockProtect(0x00);
     flash_writeEnable();
     cs_set();
@@ -223,29 +220,17 @@ void flash_chipErase(void)
 // Очистка сектора
 void flash_sectorErase(uint16_t sector)
 {
-    flash_setBlockProtect(0x00);
-  
-    sector = (sector << 1); 
-
+    sector = (sector << 1);
+    flash_setBlockProtect(0x00);  
+    flash_writeEnable();
     cs_set();
-    // Передать команду и адрес страницы
-    SPI_Transmit(W25_WRITE_ENABLE);
-    cs_reset();
-
-    cs_set();
-    // Передать команду и адрес страницы
     SPI_Transmit(W25_SECTOR_ERASE_4K);
     SPI_Transmit((uint8_t)(sector >> 8));
     SPI_Transmit((uint8_t)(sector & 0xFF));
     SPI_Transmit(0x00);
     cs_reset();
-
     flash_notBusy();
-      
-    cs_set();
-    SPI_Transmit(W25_WRITE_DISABLE);
-    cs_reset();
-
+    flash_writeDisable();
     flash_setBlockProtect(0x0F);
 }
 
@@ -332,6 +317,11 @@ void flash_writeStatusRegister1(uint8_t data)
     cs_reset();
     flash_writeDisable();
     flash_notBusy(); 
+}
+
+uint8_t reverseByte(uint8_t data)
+{
+    return (uint8_t)( ((data<<7)&0x80) | ((data<<6&0x40)) | ((data<<5&0x20)) | ((data<<4&0x10)) | ((data<<3&0x08)) | ((data<<2&0x04)) | ((data<<1&0x02)) | ((data&0x01)));
 }
 
 #endif // _W25Q16_H_
