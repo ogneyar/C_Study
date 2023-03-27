@@ -9,7 +9,7 @@ SECTIONS
 {
     .isr_vector :
     {
-            KEEP(*(.isr_vector))
+        KEEP(*(.isr_vector))
  
     } > ROM
    .text :
