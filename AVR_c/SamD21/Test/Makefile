@@ -1,56 +1,61 @@
 
-TOOL_CHAIN	:= E:\Program\arm-gnu-toolchain\bin
-OPENOCD_INTERFACE := interface/stlink.cfg
-OPENOCD_TARGET := target/stm32f1x.cfg
+MAIN_FILE_NAME = main
+# LD_FILE_NAME = samd21g18a_flash
+LD_FILE_NAME = script
 
-SCRIPT		:= script.ld
+CC=arm-none-eabi-gcc
+LD=arm-none-eabi-ld
+OBJCOPY=arm-none-eabi-objcopy
+OBJDUMP=arm-none-eabi-objdump
 
-BUILD_DIR	:= build
+CFLAGS = -mcpu=cortex-m0plus -mthumb
+CFLAGS += -Wall -Werror -std=c11
+CFLAGS += -O0
+CFLAGS += -g
+CFLAGS += -ffunction-sections -fdata-sections # cargo-cult
+CFLAGS += -Wl,--gc-sections -Wl,-Map=$(MAIN_FILE_NAME).map
+CFLAGS += -T ../libs/$(LD_FILE_NAME).ld
 
-FILE_NAME	:= Test
-CFILE		:= $(FILE_NAME).c
-OBJ			:= $(BUILD_DIR)/$(FILE_NAME).o
-ELF			:= $(BUILD_DIR)/$(FILE_NAME).elf
-HEX			:= $(BUILD_DIR)/$(FILE_NAME).hex
-BIN			:= $(BUILD_DIR)/$(FILE_NAME).bin
+# CFLAGS += -I ./config
+# CFLAGS += -I asf/sam0/utils
+# CFLAGS += -I asf/sam0/utils/cmsis/samd21/include
+# CFLAGS += -I asf/sam0/utils/cmsis/samd21/source
 
-all: flash
-	@echo finish All
+CFLAGS += -D __SAMD21G18A__
+CFLAGS += -D SYSTICK_MODE
 
-flash: obj
-#	@openocd -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET) -c "program $(ELF)" -c "verify_image $(ELF)" -c reset -c exit
+SRCS = $(MAIN_FILE_NAME).c
+# SRCS += ../libs/samd21/source/as_gcc/startup_samd21.c
+# SRCS += ../libs/samd21/source/system_samd21.c
 
-obj: link
-	@$(TOOL_CHAIN)\arm-none-eabi-objcopy.exe -O binary $(ELF) $(BIN)
-	@$(TOOL_CHAIN)\arm-none-eabi-objcopy.exe -O ihex $(ELF) $(HEX)
+.PHONY: all
+all: $(MAIN_FILE_NAME).bin
 
-link: compile
-	@$(TOOL_CHAIN)\arm-none-eabi-ld -g -T$(SCRIPT) -o $(ELF) $(OBJ)
-    
-compile:
-	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
-	@$(TOOL_CHAIN)\arm-none-eabi-gcc.exe -c -g -Wall -mcpu=cortex-m3 -mthumb -std=gnu99 -o $(OBJ) $(CFILE)
+$(MAIN_FILE_NAME).bin: $(MAIN_FILE_NAME).elf $(MAIN_FILE_NAME).lst
+	$(OBJCOPY) $< $@ -O binary
 
-size: 
-#	@$(TOOL_CHAIN)\arm-none-eabi-nm –print-size $(OBJ)
-	@$(TOOL_CHAIN)\arm-none-eabi-nm --print-size $(ELF)
+$(MAIN_FILE_NAME).lst: $(MAIN_FILE_NAME).elf
+	$(OBJDUMP) -D $^ > $@
 
-# запуск для дебага
-ocd:
-	@openocd -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET)
-	
-debug:
-	@$(TOOL_CHAIN)\arm-none-eabi-gdb $(ELF)
+$(MAIN_FILE_NAME).elf: $(SRCS)
+	$(CC) $(CFLAGS) $^ -o $@
 
-# target remote 127.0.0.1:3333
-# monitor halt — остановка чипа
-# load - загрузка файла Test.elf
-# monitor reset init - инициализировать чип (сбросить регистры тд)
-# x/20wux 0x800000 - показать дамп памяти по адресу 0x8000000, 20 слов (w) беззнаково (u) в HEX (x)
-# x/20wux 0x00 - дамп области начала памяти
-# p/x *(uint32_t*) 0x04 - команда p – печать переменной, через дробь параметр x – отобразить в HEX, а дальше обычный синтаксис C
-# p/x &Reset_Handler
-# step - выполнение до следующей строки исходника
-# stepi - выполнение до следующей машинной инструкции
-# continue - запуск программы пока она не будет прервана вручную или точной останова
 
+.PHONY: clean
+clean:
+	rm -f -- *.bin *.elf *.o *.lst
+
+.PHONY: upload
+upload:
+	openocd -d2 -f ../libs/openocd.cfg -c "program {{main.bin}} verify reset 0x00002000; shutdown"
+
+.PHONY: bossa
+bossa:
+	bossac --port=com2 --info --erase --write --verify --reset main.bin
+#	bossac --port "COM2" --arduino-erase --verify main.bin
+#	bossac --port "COM2" --info --verify main.bin
+#	bossac -pcom2 -r0x10000 image.bin 
+
+.PHONY: bootloader
+bootloader:
+	openocd -d2 -f ../libs/openocd.cfg -c "init; halt; at91samd bootloader 0; program {{bootloader/samd21_sam_ba.bin}} verify reset; shutdown"

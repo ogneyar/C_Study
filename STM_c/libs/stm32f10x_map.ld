@@ -3,7 +3,7 @@
 MEMORY
 {
 	/* FLASH - Программная flash память */
-	FLASH      (RX)  : ORIGIN = 0x08000000, LENGTH = 64K
+	FLASH     (RX)  : ORIGIN = 0x08000000, LENGTH = 64K
 
 }
 SECTIONS

@@ -7,6 +7,10 @@ SCRIPT		:= scriptC6.ld
 
 BUILD_DIR	:= build
 
+SYS_F_NAME	:= system_stm32f10x
+SYS_CF		:= ../libs/$(SYS_F_NAME).c
+SYS_OBJ		:= $(BUILD_DIR)/$(SYS_F_NAME).o
+
 FILE_NAME	:= Test
 CFILE		:= $(FILE_NAME).c
 OBJ			:= $(BUILD_DIR)/$(FILE_NAME).o
@@ -25,10 +29,12 @@ obj: link
 	@$(TOOL_CHAIN)\arm-none-eabi-objcopy.exe -O ihex $(ELF) $(HEX)
 
 link: compile
-	@$(TOOL_CHAIN)\arm-none-eabi-ld -g -T$(SCRIPT) -o $(ELF) $(OBJ)
+	@$(TOOL_CHAIN)\arm-none-eabi-ld -g -T$(SCRIPT) -o $(ELF) $(SYS_OBJ) $(OBJ)
     
 compile:
-	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
+#	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
+	@-mkdir $(BUILD_DIR)
+	@$(TOOL_CHAIN)\arm-none-eabi-gcc.exe -c -g -Wall -mcpu=cortex-m3 -mthumb -std=gnu99 -o $(SYS_OBJ) $(SYS_CF)
 	@$(TOOL_CHAIN)\arm-none-eabi-gcc.exe -c -g -Wall -mcpu=cortex-m3 -mthumb -std=gnu99 -o $(OBJ) $(CFILE)
 
 size: 
