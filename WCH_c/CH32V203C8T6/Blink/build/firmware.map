@@ -1592,15 +1592,15 @@ END GROUP
                 0x0000000020005000                PROVIDE (_eusrstack = .)
 OUTPUT(build/firmware.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x6c9b
- .debug_info    0x0000000000000000      0xc64 build/main.o
- .debug_info    0x0000000000000c64      0xb89 build/system_ch32v20x.o
- .debug_info    0x00000000000017ed      0xf25 build/debug.o
- .debug_info    0x0000000000002712     0x10d9 build/ch32v20x_gpio.o
- .debug_info    0x00000000000037eb      0xe7c build/ch32v20x_misc.o
- .debug_info    0x0000000000004667     0x125e build/ch32v20x_rcc.o
- .debug_info    0x00000000000058c5     0x13b4 build/ch32v20x_usart.o
- .debug_info    0x0000000000006c79       0x22 build/startup_ch32v20x_D6.o
+.debug_info     0x0000000000000000     0x6c9a
+ .debug_info    0x0000000000000000      0xc63 build/main.o
+ .debug_info    0x0000000000000c63      0xb89 build/system_ch32v20x.o
+ .debug_info    0x00000000000017ec      0xf25 build/debug.o
+ .debug_info    0x0000000000002711     0x10d9 build/ch32v20x_gpio.o
+ .debug_info    0x00000000000037ea      0xe7c build/ch32v20x_misc.o
+ .debug_info    0x0000000000004666     0x125e build/ch32v20x_rcc.o
+ .debug_info    0x00000000000058c4     0x13b4 build/ch32v20x_usart.o
+ .debug_info    0x0000000000006c78       0x22 build/startup_ch32v20x_D6.o
 
 .debug_abbrev   0x0000000000000000     0x153a
  .debug_abbrev  0x0000000000000000      0x2a7 build/main.o
