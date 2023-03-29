@@ -26,28 +26,28 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 	main.c \
-	src/system_ch32v20x.c \
+	src/system_ch32v00x.c \
 	../libs/Debug/debug.c \
-	../libs/Peripheral/src/ch32v20x_adc.c \
-	../libs/Peripheral/src/ch32v20x_dbgmcu.c \
-	../libs/Peripheral/src/ch32v20x_dma.c \
-	../libs/Peripheral/src/ch32v20x_exti.c \
-	../libs/Peripheral/src/ch32v20x_flash.c \
-	../libs/Peripheral/src/ch32v20x_gpio.c \
-	../libs/Peripheral/src/ch32v20x_i2c.c \
-	../libs/Peripheral/src/ch32v20x_iwdg.c \
-	../libs/Peripheral/src/ch32v20x_misc.c \
-	../libs/Peripheral/src/ch32v20x_opa.c \
-	../libs/Peripheral/src/ch32v20x_pwr.c \
-	../libs/Peripheral/src/ch32v20x_rcc.c \
-	../libs/Peripheral/src/ch32v20x_spi.c \
-	../libs/Peripheral/src/ch32v20x_tim.c \
-	../libs/Peripheral/src/ch32v20x_usart.c \
-	../libs/Peripheral/src/ch32v20x_wwdg.c
+	../libs/Peripheral/src/ch32v00x_adc.c \
+	../libs/Peripheral/src/ch32v00x_dbgmcu.c \
+	../libs/Peripheral/src/ch32v00x_dma.c \
+	../libs/Peripheral/src/ch32v00x_exti.c \
+	../libs/Peripheral/src/ch32v00x_flash.c \
+	../libs/Peripheral/src/ch32v00x_gpio.c \
+	../libs/Peripheral/src/ch32v00x_i2c.c \
+	../libs/Peripheral/src/ch32v00x_iwdg.c \
+	../libs/Peripheral/src/ch32v00x_misc.c \
+	../libs/Peripheral/src/ch32v00x_opa.c \
+	../libs/Peripheral/src/ch32v00x_pwr.c \
+	../libs/Peripheral/src/ch32v00x_rcc.c \
+	../libs/Peripheral/src/ch32v00x_spi.c \
+	../libs/Peripheral/src/ch32v00x_tim.c \
+	../libs/Peripheral/src/ch32v00x_usart.c \
+	../libs/Peripheral/src/ch32v00x_wwdg.c
 
 # ASM sources
 ASM_SOURCES =  \
-	../libs/Startup/startup_ch32v20x_D6.S
+	../libs/Startup/startup_ch32v00x.S
 
 ##########################################################################################################################
 # modified by Ngo Hung Cuong
@@ -126,11 +126,11 @@ AS_INCLUDES =
 
 # C includes
 C_INCLUDES =  \
-	-I. \
-	-Isrc \
-	-I../libs/Core \
-	-I../libs/Debug \
-	-I../libs/Peripheral/inc
+-I. \
+-Isrc \
+-I../libs/Core \
+-I../libs/Debug \
+-I../libs/Peripheral/inc
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT)
@@ -150,7 +150,7 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = ../libs/Ld/ch32v20x_map.ld
+LDSCRIPT = ../libs/Ld/ch32v00x_map.ld
 
 # libraries
 #LIBS = -lc -lm -lnosys 
@@ -164,7 +164,6 @@ all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET
 clear_build:
 	-del $(BUILD_DIR)\*.o
 	-del $(BUILD_DIR)\*.d
-
 
 #######################################
 # build the application
@@ -201,8 +200,10 @@ $(BUILD_DIR):
 clean:
 	-rm -fR $(BUILD_DIR)
 
-
-OPENOCD_CFG=../libs/Util/wch-riscv.cfg
+#######################################
+# OPENOCD config file
+#######################################
+OPENOCD_CFG = ../libs/Util/wch-riscv.cfg
 
 #######################################
 # erase
