@@ -56,7 +56,7 @@ extern "C" {
    microcontroller in "Options for Target->Device" window.
    For MDR32F1QI revision is selected in 
    "Device->Startup" variant in "Manage Run-Time Environment" window */
-// #define USE_MDR32F9Q2I
+#define USE_MDR32F9Q2I
 // #define USE_MDR32F1QI_REV3_4
 // #define USE_MDR32F1QI_REV6
 // #define USE_MDR32FG16S1QI
