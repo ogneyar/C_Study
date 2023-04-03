@@ -53,8 +53,9 @@ ASM_SOURCES =  \
 # modified by Ngo Hung Cuong
 ifeq ($(OS),Windows_NT)
 # Windows
-	GCC_PATH = E:\Program\MounRiver/MounRiver_Studio/toolchain/RISC-V Embedded GCC/bin
-	OCD_PATH = E:\Program\MounRiver/MounRiver_Studio/toolchain/OpenOCD/bin
+	GCC_PATH = E:/Program/MounRiver/MounRiver_Studio/toolchain/RISC-V Embedded GCC/bin
+#	OCD_PATH = E:/Program/MounRiver/MounRiver_Studio/toolchain/OpenOCD/bin
+	OCD_PATH = E:/Program/OpenOCD/bin
 else
 # Linux
 	GCC_PATH = "/home/ngohungcuong/Downloads/MRS_Toolchain_Linux_x64_V1.60/RISC-V Embedded GCC/bin"
@@ -159,7 +160,11 @@ LIBDIR =
 LDFLAGS = $(MCU) -g --specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -nostartfiles -Xlinker --gc-sections -Wl,-Map=$(BUILD_DIR)/$(TARGET).map --specs=nosys.specs $(OPT)
 
 # default action: build all
-all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin clear_build
+all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin clear_build erase flash reset
+
+
+build: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin clear_build
+
 
 clear_build:
 	-del $(BUILD_DIR)\*.o
@@ -213,9 +218,11 @@ erase:
 #######################################
 # flash
 #######################################
-flash: $(BUILD_DIR)/$(TARGET).hex
-	$(OCD) -f $(OPENOCD_CFG)  -c init -c halt  -c "program $(BUILD_DIR)/$(TARGET).hex" -c "verify_image $(BUILD_DIR)/$(TARGET).hex" -c wlink_reset_resume -c exit
-#	openocd -f wch-riscv.cfg  -c init -c halt  -c "program $(BUILD_DIR)/$(TARGET).hex" -c "verify_image $(BUILD_DIR)/$(TARGET).hex" -c wlink_reset_resume -c exit
+flash: # $(BUILD_DIR)/$(TARGET).hex
+	$(OCD) -f $(OPENOCD_CFG) -c init -c halt \
+	-c "program $(BUILD_DIR)/$(TARGET).hex" \
+	-c wlink_reset_resume -c exit
+#	-c "verify_image $(BUILD_DIR)/$(TARGET).hex" \
 
 #######################################
 # reset
@@ -227,5 +234,6 @@ reset:
 # dependencies
 #######################################
 -include $(wildcard $(BUILD_DIR)/*.d)
+
 
 # *** EOF ***

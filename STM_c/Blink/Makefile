@@ -54,3 +54,9 @@ debug:
 # stepi - выполнение до следующей машинной инструкции
 # continue - запуск программы пока она не будет прервана вручную или точной останова
 
+
+test: 
+	@E:/Program/MounRiver/MounRiver_Studio/toolchain/OpenOCD/bin/openocd \
+	-c "adapter driver hla" -c "hla_layout stlink" -c "hla_device_desc 'ST-LINK'" \
+	-c "hla_vid_pid 0x0483 0x3744 0x0483 0x3748 0x0483 0x374b 0x0483 0x374d 0x0483 0x374e 0x0483 0x374f 0x0483 0x3752 0x0483 0x3753 0x0483 0x3754" \
+	-f "E:/Program/MounRiver/MounRiver_Studio/toolchain/OpenOCD/scripts/target/stm32f1x.cfg" -c "program $(ELF)" -c "verify_image $(ELF)" -c reset -c exit
