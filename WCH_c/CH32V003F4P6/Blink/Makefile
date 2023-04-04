@@ -167,8 +167,8 @@ build: clear_build #$(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUIL
 
 
 clear_build: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
-	-del $(BUILD_DIR)\*.o
-	-del $(BUILD_DIR)\*.d
+#	-del $(BUILD_DIR)\*.o
+#	-del $(BUILD_DIR)\*.d
 
 #######################################
 # build the application
