@@ -5,10 +5,13 @@
 
 #define I2C_BaudRate  80000
 
-#define Size          7
-#define TxAdderss     0x3c
+#ifndef CTLR1_ACK_Set
+#define CTLR1_ACK_Set            ((uint16_t)0x0400)
+#define CTLR1_ACK_Reset          ((uint16_t)0xFBFF)
+#endif
 
-u8 TxData[Size] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06};
+#define TxAdderss     0x3c // адресс МК - любой
+
 
 void GPIOD_Pin0_Init(void);
 void IIC_Init(u32 bound, u16 address);
@@ -22,9 +25,9 @@ int main(void)
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
     Delay_Init();
     USART_Printf_Init(115200);
-    printf("SystemClk:%d\r\n", SystemCoreClock);
+    printf("\r\nТактирование МК: %d MHz\r\n", SystemCoreClock/1000000);
 
-    printf("I2C Scaner run\r\n");
+    printf("Поиск I2C устройств...\r\n");
     GPIOD_Pin0_Init();
 
 
@@ -90,6 +93,33 @@ void IIC_Init(u32 bound, u16 address)
 //
 void IIC_Scaner(void)
 {
+    uint8_t addressWrite = 0; // 0x3c; // 
+    u8 wait = 0, Ack = 0;
+
+    while (addressWrite < 128) {
+        /* ------------------------------------------------ */
+        while(I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY) != RESET);
+        I2C_GenerateSTART(I2C1, ENABLE);
+
+        while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT));
+        I2C_Send7bitAddress(I2C1, addressWrite<<1, I2C_Direction_Transmitter);
+        
+        wait = 0;
+        while(wait < 255) {
+            if (I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) == READY) Ack = addressWrite;
+            wait++;
+        }
+        
+        I2C_GenerateSTOP(I2C1, ENABLE);
+        /* ------------------------------------------------ */
+        addressWrite++;
+    }
+    
+    if (Ack) {
+         printf("Адрес устройства: 0x%x\r\n",Ack);
+    }else {
+        printf("Нет найденых устройств!\r\n");
+    }
 
 }
 
