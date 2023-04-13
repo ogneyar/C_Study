@@ -1,7 +1,10 @@
 
-TOOL_CHAIN	:= E:\Program\arm-gnu-toolchain\bin
-OPENOCD_INTERFACE := interface/stlink.cfg
-OPENOCD_TARGET := target/stm32f1x.cfg
+PREFIX			  	:= arm-none-eabi-
+# TOOL_CHAIN			:= E:/Program/arm-gnu-toolchain/bin/$(PREFIX)
+TOOL_CHAIN			:= E:/Program/MounRiver/MounRiver_Studio/toolchain/arm-none-eabi-gcc/bin/$(PREFIX)
+OPENOCD_INTERFACE 	:= interface/stlink.cfg
+OPENOCD_TARGET    	:= target/stm32f1x.cfg
+MCPU				:= cortex-m3
 
 SCRIPT		:= scriptC6.ld
 
@@ -21,20 +24,20 @@ flash: obj
 	@openocd -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET) -c "program $(ELF)" -c "verify_image $(ELF)" -c reset -c exit
 
 obj: link
-	@$(TOOL_CHAIN)\arm-none-eabi-objcopy.exe -O binary $(ELF) $(BIN)
-	@$(TOOL_CHAIN)\arm-none-eabi-objcopy.exe -O ihex $(ELF) $(HEX)
+	@$(TOOL_CHAIN)objcopy.exe -O binary $(ELF) $(BIN)
+	@$(TOOL_CHAIN)objcopy.exe -O ihex $(ELF) $(HEX)
 
 link: compile
-	@$(TOOL_CHAIN)\arm-none-eabi-ld -g -T$(SCRIPT) -o $(ELF) $(OBJ)
+	@$(TOOL_CHAIN)ld -g -T$(SCRIPT) -o $(ELF) $(OBJ)
     
 compile:
 	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
-	@$(TOOL_CHAIN)\arm-none-eabi-gcc.exe -c -g -Wall -mcpu=cortex-m3 -mthumb -std=gnu99 -o $(OBJ) $(CFILE)
+	@$(TOOL_CHAIN)gcc.exe -c -g -Wall -mcpu=$(MCPU) -mthumb -std=gnu99 -o $(OBJ) $(CFILE)
 
 size: 
-#	@$(TOOL_CHAIN)\arm-none-eabi-nm –print-size $(OBJ)
-	@$(TOOL_CHAIN)\arm-none-eabi-nm --print-size $(ELF)
-#	@$(TOOL_CHAIN)\arm-none-eabi-nm -a -n $(ELF)
+#	@$(TOOL_CHAIN)nm –print-size $(OBJ)
+	@$(TOOL_CHAIN)nm --print-size $(ELF)
+#	@$(TOOL_CHAIN)nm -a -n $(ELF)
 #	E:\Program\arm-gnu-toolchain\bin\arm-none-eabi-nm -a -n build/Test.elf
 
 # запуск для дебага
@@ -42,7 +45,7 @@ ocd:
 	@openocd -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET)
 	
 debug:
-	@$(TOOL_CHAIN)\arm-none-eabi-gdb $(ELF)
+	@$(TOOL_CHAIN)gdb $(ELF)
 
 # target remote 127.0.0.1:3333
 # monitor halt — остановка чипа
