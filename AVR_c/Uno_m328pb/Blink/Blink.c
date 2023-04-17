@@ -1,13 +1,11 @@
 
-// НЕ РАБОТАЕТ!!! :(
-
 #include <avr/io.h>
 #ifndef _AVR_IOXXX_H_
 #include <avr/iom328pb.h>
+#define PB5 5
 #endif 
 #include <util/delay.h>
 
-#define PB5 5
 
 int main(void) {
 	DDRB |= (1 << PB5);
