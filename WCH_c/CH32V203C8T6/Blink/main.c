@@ -1,23 +1,6 @@
-/********************************** (C) COPYRIGHT *******************************
- * File Name          : main.c
- * Author             : WCH
- * Version            : V1.0.0
- * Date               : 2021/06/06
- * Description        : Main program body.
-*********************************************************************************
-* Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
-* Attention: This software (modified or not) and binary are used for 
-* microcontroller manufactured by Nanjing Qinheng Microelectronics.
-*******************************************************************************/
-
-/*
- *@Note
- GPIO routine:
-PA0 push-pull output.
-
-*/
 
 #include "debug.h"
+#include <ch32v20x.h>
 
 /* Global define */
 
@@ -52,7 +35,7 @@ int main(void)
 {
     u8 i = 0;
 
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    // NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
     Delay_Init();
     USART_Printf_Init(115200);
     printf("SystemClk:%d\r\n", SystemCoreClock);
@@ -62,7 +45,7 @@ int main(void)
 
     while(1)
     {
-        Delay_Ms(100);
         GPIO_WriteBit(GPIOA, GPIO_Pin_0, (i == 0) ? (i = Bit_SET) : (i = Bit_RESET));
+        Delay_Ms(10);
     }
 }

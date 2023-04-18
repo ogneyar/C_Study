@@ -1558,14 +1558,14 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_ranges  0x00000000000001d8       0xf0 build/ch32v00x_usart.o
  .debug_ranges  0x00000000000002c8       0x28 build/startup_ch32v00x.o
 
-.debug_line     0x0000000000000000     0x394b
- .debug_line    0x0000000000000000      0x3e1 build/main.o
- .debug_line    0x00000000000003e1      0x5f0 build/system_ch32v00x.o
- .debug_line    0x00000000000009d1      0x6c2 build/debug.o
- .debug_line    0x0000000000001093      0xb55 build/ch32v00x_gpio.o
- .debug_line    0x0000000000001be8      0xcda build/ch32v00x_rcc.o
- .debug_line    0x00000000000028c2      0xed6 build/ch32v00x_usart.o
- .debug_line    0x0000000000003798      0x1b3 build/startup_ch32v00x.o
+.debug_line     0x0000000000000000     0x3943
+ .debug_line    0x0000000000000000      0x3d9 build/main.o
+ .debug_line    0x00000000000003d9      0x5f0 build/system_ch32v00x.o
+ .debug_line    0x00000000000009c9      0x6c2 build/debug.o
+ .debug_line    0x000000000000108b      0xb55 build/ch32v00x_gpio.o
+ .debug_line    0x0000000000001be0      0xcda build/ch32v00x_rcc.o
+ .debug_line    0x00000000000028ba      0xed6 build/ch32v00x_usart.o
+ .debug_line    0x0000000000003790      0x1b3 build/startup_ch32v00x.o
 
 .debug_str      0x0000000000000000     0x121b
  .debug_str     0x0000000000000000      0x74a build/main.o

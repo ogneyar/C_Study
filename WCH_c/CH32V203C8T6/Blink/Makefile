@@ -160,15 +160,15 @@ LIBDIR =
 LDFLAGS = $(MCU) -g --specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -nostartfiles -Xlinker --gc-sections -Wl,-Map=$(BUILD_DIR)/$(TARGET).map --specs=nosys.specs $(OPT)
 
 # default action: build all
-all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin clear_build erase flash reset
+all: flash #$(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin clear_build erase flash reset
 
 
-build: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin clear_build
+build: clear_build #$(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin clear_build
 
 
-clear_build:
-	-del $(BUILD_DIR)\*.o
-	-del $(BUILD_DIR)\*.d
+clear_build: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+#	-del $(BUILD_DIR)\*.o
+#	-del $(BUILD_DIR)\*.d
 
 
 #######################################
@@ -198,7 +198,7 @@ $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
 	$(BIN) $< $@	
 	
 $(BUILD_DIR):
-	mkdir $@		
+	@-mkdir $@		
 
 #######################################
 # clean up
@@ -212,16 +212,14 @@ OPENOCD_CFG=../libs/Util/wch-riscv.cfg
 #######################################
 # erase
 #######################################
-erase:
+erase: build
 	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "flash erase_sector wch_riscv 0 last" -c exit
 
 #######################################
 # flash
 #######################################
-flash: # $(BUILD_DIR)/$(TARGET).hex
-	$(OCD) -f $(OPENOCD_CFG) -c init -c halt \
-	-c "program $(BUILD_DIR)/$(TARGET).hex" \
-	-c wlink_reset_resume -c exit
+flash: erase # $(BUILD_DIR)/$(TARGET).hex
+	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "program $(BUILD_DIR)/$(TARGET).hex" -c wlink_reset_resume -c exit
 #	-c "verify_image $(BUILD_DIR)/$(TARGET).hex" \
 
 #######################################
