@@ -1,6 +1,5 @@
 
 PREFIX			  	:= arm-none-eabi-
-# TOOL_CHAIN			:= E:/Program/arm-gnu-toolchain/bin/$(PREFIX)
 TOOL_CHAIN			:= E:/Program/MounRiver/MounRiver_Studio/toolchain/arm-none-eabi-gcc/bin/$(PREFIX)
 OPENOCD_INTERFACE 	:= interface/stlink.cfg
 OPENOCD_TARGET    	:= target/stm32f1x.cfg
@@ -17,6 +16,11 @@ ELF			:= $(BUILD_DIR)/$(FILE_NAME).elf
 HEX			:= $(BUILD_DIR)/$(FILE_NAME).hex
 BIN			:= $(BUILD_DIR)/$(FILE_NAME).bin
 
+# C includes
+C_INCLUDES =  \
+	-I. \
+	-I../libs
+
 all: flash
 	@echo finish All
 
@@ -32,7 +36,7 @@ link: compile
     
 compile:
 	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
-	@$(TOOL_CHAIN)gcc.exe -c -g -Wall -mcpu=$(MCPU) -mthumb -std=gnu99 -o $(OBJ) $(CFILE)
+	@$(TOOL_CHAIN)gcc.exe -c -g -Wall -mcpu=$(MCPU) -mthumb -std=gnu99 -o $(OBJ) $(CFILE) $(C_INCLUDES)
 
 size: 
 #	@$(TOOL_CHAIN)nm –print-size $(OBJ)
