@@ -47,7 +47,7 @@ clean:
 
 .PHONY: upload
 upload:
-	openocd -d2 -f ../libs/openocd.cfg -c "program {main.bin} verify reset 0x00002000; shutdown"
+	openocd -d2 -f ../libs/openocd.cfg -c "program {main.bin} verify reset; shutdown"
 
 .PHONY: bossa
 bossa:
@@ -58,7 +58,8 @@ bossa:
 
 .PHONY: bootloader
 bootloader:
-	openocd -d2 -f ../libs/openocd.cfg -c "init; halt; at91samd bootloader 0; program {bootloader/samd21_sam_ba.bin} verify reset; shutdown"
+	openocd -d2 -f ../libs/openocd.cfg -c init -c halt -c "flash erase_sector 0x00000000 0 last" -c exit
+	openocd -d2 -f ../libs/openocd.cfg -c "init; halt; at91samd bootloader 0; program {bootloader/samd21_sam_ba.hex} verify reset; exit"
 
 #   эта команда прошила файл bootloader/samd21_sam_ba.bin в SamD
 #	openocd -d2 -f ../libs/openocd.cfg -c "init; halt; at91samd bootloader 0; program {bootloader/samd21_sam_ba.bin} verify reset; shutdown"
