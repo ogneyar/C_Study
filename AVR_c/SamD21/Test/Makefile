@@ -51,9 +51,9 @@ upload:
 
 .PHONY: bossa
 bossa:
-	bossac --port=com2 --info --erase --write --verify --reset main.bin
+#	bossac --port=com29 --info --erase --write --verify --reset main.bin
 #	bossac --port "COM2" --arduino-erase --verify main.bin
-#	bossac --port "COM2" --info --verify main.bin
+	bossac --port=COM29 --info --verify main.bin
 #	bossac -pcom2 -r0x10000 image.bin 
 
 .PHONY: bootloader
