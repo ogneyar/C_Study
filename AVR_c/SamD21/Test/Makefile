@@ -51,10 +51,7 @@ upload:
 
 .PHONY: bossa
 bossa:
-#	bossac --port=com29 --info --erase --write --verify --reset main.bin
-#	bossac --port "COM2" --arduino-erase --verify main.bin
-	bossac --port=COM29 --info --verify main.bin
-#	bossac -pcom2 -r0x10000 image.bin 
+	bossac -i -d --port=COM29 -i -e -w -v test2.bin -R
 
 .PHONY: bootloader
 bootloader:
@@ -63,3 +60,7 @@ bootloader:
 
 #   эта команда прошила файл bootloader/samd21_sam_ba.bin в SamD
 #	openocd -d2 -f ../libs/openocd.cfg -c "init; halt; at91samd bootloader 0; program {bootloader/samd21_sam_ba.bin} verify reset; shutdown"
+
+
+#   эта команда прошила файл test.bin в SamD
+#	bossac -i -d --port=COM29 -i -e -w -v test.bin -R
