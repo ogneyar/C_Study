@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 #define PORTA  0
-#define PORT_PA17 (1ul << 17)
+#define PORT_PA17 (1ul << 17) // Led  pin
 
 typedef volatile const uint8_t  RoReg8;
 

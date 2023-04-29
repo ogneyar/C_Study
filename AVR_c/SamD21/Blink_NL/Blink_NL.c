@@ -8,14 +8,14 @@ uint16_t delay_ms = 100;
 // основная функция
 int main(void) 
 {
-    PORT->Group[PORTA].DIRSET.reg = PORT_PA17;      // Set pin as output
+    PORT->Group[PORTA].DIRSET.reg |= PORT_PA17;      // Set pin as output
 
     while(1){
-        // PORT->Group[PORTA].OUTTGL.reg = PORT_PA17;  // toggle
+        // PORT->Group[PORTA].OUTTGL.reg |= PORT_PA17;  // toggle
         // delay(delay_ms);
-        PORT->Group[PORTA].OUTSET.reg = PORT_PA17;      // Set pin to high
+        PORT->Group[PORTA].OUTSET.reg |= PORT_PA17;      // Set pin to high
         delay(200);
-        PORT->Group[PORTA].OUTCLR.reg = PORT_PA17;      // Set pin to low
+        PORT->Group[PORTA].OUTCLR.reg |= PORT_PA17;      // Set pin to low
         delay(800);
     }
 }
