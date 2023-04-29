@@ -1,7 +1,9 @@
 
 
 
-#include "./samd21g18a.h"
+#include "samd21g18a.h"
+// #include "samd21.h"
+#include <stdint.h>
 
 /* Initialize segments */
 extern uint32_t _sfixed;

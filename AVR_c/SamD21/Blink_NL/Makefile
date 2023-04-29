@@ -1,14 +1,14 @@
 
 PREFIX		:= arm-none-eabi-
 TOOL_CHAIN	:= E:/Program/MounRiver/MounRiver_Studio/toolchain/arm-none-eabi-gcc/bin/$(PREFIX)
-OPENOCD_CFG	:= ../libs/openocd.cfg
+OPENOCD_CFG	:= openocd.cfg
 MCPU		:= cortex-m0plus
 
-SCRIPT		:= ../libs/samd21g18a_flash.ld
+SCRIPT		:= script.ld
 
 BUILD_DIR	:= build
 
-FILE_NAME	:= Blink
+FILE_NAME	:= Blink_NL
 CFILE		:= $(FILE_NAME).c
 OBJ			:= $(BUILD_DIR)/$(FILE_NAME).o
 ELF			:= $(BUILD_DIR)/$(FILE_NAME).elf
@@ -17,7 +17,7 @@ BIN			:= $(BUILD_DIR)/$(FILE_NAME).bin
 
 # C includes
 C_INCLUDES =  \
-	-I. \
+	-I. #\
 	-I ../libs \
 	-I ../libs/samd21 \
 	-I ../libs/samd21/source \
@@ -42,7 +42,7 @@ link: compile
     
 compile:
 	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
-	@$(TOOL_CHAIN)gcc.exe -c -g -Wall -mcpu=$(MCPU) -mthumb -std=gnu99 -o $(OBJ) $(CFILE) $(C_INCLUDES) -D __SAMD21G18A__
+	@$(TOOL_CHAIN)gcc.exe -c -g -Wall -mcpu=$(MCPU) -mthumb -std=gnu99 -o $(OBJ) $(CFILE) $(C_INCLUDES)
 	@echo gcc finish
 
 

@@ -46,6 +46,6 @@ int main(void)
     while(1)
     {
         GPIO_WriteBit(GPIOA, GPIO_Pin_0, (i == 0) ? (i = Bit_SET) : (i = Bit_RESET));
-        Delay_Ms(10);
+        Delay_Ms(100);
     }
 }
