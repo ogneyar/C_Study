@@ -1,6 +1,8 @@
 
+#include <stdio.h>
 #include "debug.h"
 #include <ch32v00x.h>
+
 
 void GPIOD_Pin0_Init(void);
 
@@ -8,8 +10,7 @@ void GPIOD_Pin0_Init(void);
 int main(void)
 {
     u8 i = 0;
-
-    // NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
     Delay_Init();
     USART_Printf_Init(115200);
     printf("SystemClk:%d\r\n", SystemCoreClock);
@@ -28,8 +29,7 @@ int main(void)
 void GPIOD_Pin0_Init(void)
 {
     // включаем тактирование порта D
-    // RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);    
-    RCC->APB2PCENR |= RCC_APB2Periph_GPIOD;
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);    
 
     GPIO_InitTypeDef GPIO_InitStructure = {0};
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
