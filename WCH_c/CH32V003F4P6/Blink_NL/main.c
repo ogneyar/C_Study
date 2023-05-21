@@ -31,14 +31,14 @@ int main(void)
     while(1)
     {
         GPIOD_OUTDR ^= (1 << LED);
-        delay(500);
+        delay(100);
     }
 }
 
 // инициализация PD0
-void GPIOD_Pin0_Init(void)
+void GPIOD_Pin0_Init(void) 
 {
-    // включаем тактирование порта D
+    // включаем тактирование порта D 
     RCC_APB2PCENR |= RCC_APB2PCENR_IOPDEN;
 
     GPIOD_CFGLR &= ~(GPIO_Msk << LED); // ~(0b1111);

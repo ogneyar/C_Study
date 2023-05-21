@@ -37,11 +37,7 @@ C_DEFS =
 AS_INCLUDES = 
 
 C_INCLUDES =  \
--I. \
--Isrc \
--I../libs/Core \
--I../libs/Debug \
--I../libs/Peripheral/inc
+-I. 
 
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT)
 
@@ -69,24 +65,29 @@ vpath %.c $(sort $(dir $(C_SOURCES)))
 OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.S=.o)))
 vpath %.s $(sort $(dir $(ASM_SOURCES)))
 
-$(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR) 
+$(BUILD_DIR)/%.o: %.c Makefile
+	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
 	$(CC) -c $(CFLAGS) -g -std=gnu99 -MT"$(@)" -c "$<" -o "$@"
 
-$(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)
+$(BUILD_DIR)/%.o: %.s Makefile
+	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
 	$(AS) -c $(CFLAGS) -g -MT"$(@)" -c "$<" -o "$@"
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
+	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
 	$(SZ) $@
 
-$(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
+$(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf
+	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
 	$(HEX) $< $@
 	
-$(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
+$(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf
+	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
 	$(BIN) $< $@	
 	
 $(BUILD_DIR):
-	@-mkdir $@		
+	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))	
 
 clean:
 	-rm -fR $(BUILD_DIR)
