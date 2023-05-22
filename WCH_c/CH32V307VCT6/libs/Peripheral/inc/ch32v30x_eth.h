@@ -1218,7 +1218,7 @@ Wake-UpFrame Filter Re7 : Filter3 CRC16 - Filter2 CRC16 */
 
 void ETH_DeInit(void);
 void ETH_StructInit(ETH_InitTypeDef* ETH_InitStruct);
-void ETH_SoftwareReset(void);
+void ETH_SoftwareReset(void); 
 FlagStatus ETH_GetSoftwareResetStatus(void);
 FlagStatus ETH_GetlinkStaus (void);
 void  ETH_Start(void);

@@ -15,7 +15,7 @@ ETH_DMADESCTypeDef *DMARxDescToGet;
 ETH_DMADESCTypeDef *DMAPTPTxDescToSet;
 ETH_DMADESCTypeDef *DMAPTPRxDescToGet;
 
-/*********************************************************************
+/********************************************************************* 
  * @fn      ETH_DeInit
  *
  * @brief   ETH hardware initialize again.
@@ -1431,7 +1431,7 @@ ITStatus ETH_GetDMAITStatus(uint32_t ETH_DMA_IT)
 /*********************************************************************
  * @fn      ETH_DMAClearITPendingBit
  *
- * @brief   Clears the ETHERNET’s DMA IT pending bit.
+ * @brief   Clears the ETHERNETï¿½s DMA IT pending bit.
  *
  * @param   ETH_DMA_IT - specifies the interrupt pending bit to clear.
  *            ETH_DMA_IT_NIS - Normal interrupt summary
