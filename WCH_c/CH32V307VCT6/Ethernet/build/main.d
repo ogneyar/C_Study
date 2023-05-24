@@ -1,6 +1,6 @@
 build/main.o: main.c ../libs/Debug/debug.h \
  ../libs/Peripheral/inc/ch32v30x.h ../libs/Core/core_riscv.h \
- src/system_ch32v30x.h src/ch32v30x_conf.h \
+ src/system_ch32v30x.h src/ch32v30x_conf.h src/ch32v30x_it.h \
  ../libs/Peripheral/inc/ch32v30x_adc.h ../libs/Peripheral/inc/ch32v30x.h \
  ../libs/Peripheral/inc/ch32v30x_bkp.h \
  ../libs/Peripheral/inc/ch32v30x_can.h \
@@ -21,7 +21,7 @@ build/main.o: main.c ../libs/Debug/debug.h \
  ../libs/Peripheral/inc/ch32v30x_spi.h \
  ../libs/Peripheral/inc/ch32v30x_tim.h \
  ../libs/Peripheral/inc/ch32v30x_usart.h \
- ../libs/Peripheral/inc/ch32v30x_wwdg.h src/ch32v30x_it.h \
+ ../libs/Peripheral/inc/ch32v30x_wwdg.h \
  ../libs/Peripheral/inc/ch32v30x_misc.h \
  ../libs/Peripheral/inc/ch32v30x_eth.h
 
@@ -34,6 +34,8 @@ build/main.o: main.c ../libs/Debug/debug.h \
 src/system_ch32v30x.h:
 
 src/ch32v30x_conf.h:
+
+src/ch32v30x_it.h:
 
 ../libs/Peripheral/inc/ch32v30x_adc.h:
 
@@ -78,8 +80,6 @@ src/ch32v30x_conf.h:
 ../libs/Peripheral/inc/ch32v30x_usart.h:
 
 ../libs/Peripheral/inc/ch32v30x_wwdg.h:
-
-src/ch32v30x_it.h:
 
 ../libs/Peripheral/inc/ch32v30x_misc.h:
 
