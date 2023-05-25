@@ -1,9 +1,9 @@
 
 #include "debug.h"
 // #include <wchnet.h>
+
 #include <ch32v30x.h>
 #include <ch32v30x_eth.h>
-
 
 #define USE_10M_BASE                            1  /* Internal 10M PHY */
 #define USE_MAC_MII                             2
@@ -49,15 +49,13 @@
 #define CHIP_C_VER_NUM   2
 #define PHY_PN_SWITCH_AUTO (2<<2)
 
+#define LED_PIN GPIO_Pin_4
+
 ETH_DMADESCTypeDef *pDMARxSet;
 ETH_DMADESCTypeDef *pDMATxSet;
 
 u16 LastPhyStat = 0;
 u32 LastQueryPhyTime = 0;
-
-// ETH_InitTypeDef ETH_InitStructure;
-// ETH_DMADESCTypeDef  DMARxDscrTab[ETH_RXBUFNB], DMATxDscrTab[ETH_TXBUFNB];
-// u8 Rx_Buff[ETH_RXBUFNB][ETH_MAX_PACKET_SIZE], Tx_Buff[ETH_TXBUFNB][ETH_MAX_PACKET_SIZE];
 
 uint16_t gPHYAddress;
 uint32_t volatile LocalTime;
@@ -83,6 +81,7 @@ void Ethernet_Configuration( uint8_t *macAddr );
 void Ethernet_MIIPinInit(void);
 uint32_t Ethernet_RegInit( ETH_InitTypeDef* ETH_InitStruct, uint16_t PHYAddress );
 void Ethernet_ETHIsr(void);
+void Ethernet_PHYLink(void);
 
 
 int main(void)
@@ -102,9 +101,9 @@ int main(void)
 
     while(1)
     {
-        // RecievePacket();
+        RecievePacket();
         Delay_Ms(500);
-        GPIO_WriteBit(GPIOA, GPIO_Pin_0, (i == 0) ? (i = Bit_SET) : (i = Bit_RESET));
+        GPIO_WriteBit(GPIOA, LED_PIN, (i == 0) ? (i = Bit_SET) : (i = Bit_RESET));
     }
 }
 
@@ -114,7 +113,7 @@ void GPIO_Toggle_INIT(void)
     GPIO_InitTypeDef GPIO_InitStructure = {0};
 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+    GPIO_InitStructure.GPIO_Pin = LED_PIN;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -131,6 +130,7 @@ void RecievePacket(void)
         {      
             data[i]=MACRxBuf[i];
         }
+        printf("Data[0]:%d\r\n", data[0]);
         //отдаем дескриптор в руки DMA Ethernet
         DMARxDscrTab -> Status = ETH_DMARxDesc_OWN;
         ETH_DMAReceptionCmd(ENABLE);
@@ -351,17 +351,17 @@ void Ethernet_ETHIsr(void)
             }
             ETH_DMAClearITPendingBit(ETH_DMA_IT_R);
             /* Check if the descriptor is owned by the ETHERNET DMA (when set) or CPU (when reset) */
-            if((DMARxDescToGet->Status & ETH_DMARxDesc_OWN) != (u32)RESET)
-            {
-                /***/
-            }
-            else
-            {
-                /* Update the ETHERNET DMA global Rx descriptor with next Rx descriptor */
-                /* Chained Mode */
-                /* Selects the next DMA Rx descriptor list for next buffer to read */
-                DMARxDescToGet = (ETH_DMADESCTypeDef*) (DMARxDescToGet->Buffer2NextDescAddr);
-            }
+            // if((DMARxDescToGet->Status & ETH_DMARxDesc_OWN) != (u32)RESET)
+            // {
+            //     /***/
+            // }
+            // else
+            // {
+            //     /* Update the ETHERNET DMA global Rx descriptor with next Rx descriptor */
+            //     /* Chained Mode */
+            //     /* Selects the next DMA Rx descriptor list for next buffer to read */
+            //     DMARxDescToGet = (ETH_DMADESCTypeDef*) (DMARxDescToGet->Buffer2NextDescAddr);
+            // }
         }
         if( int_sta & ETH_DMA_IT_T )
         {
@@ -382,7 +382,7 @@ void Ethernet_ETHIsr(void)
 
 
 
-void ETH_PHYLink( void )
+void Ethernet_PHYLink(void)
 {
     u32 phy_stat;
 
