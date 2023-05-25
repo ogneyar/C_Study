@@ -89,10 +89,7 @@ LDFLAGS = $(MCU) -g --specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -nostartf
 all: flash 
 
 
-build: clear_build 
-
-
-clear_build: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+build: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
 
 
 OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o)))
@@ -127,7 +124,8 @@ $(BUILD_DIR):
 	@-mkdir $@		
 
 clean:
-	-rm -fR $(BUILD_DIR)
+#	-rm -fR $(BUILD_DIR)
+	@-rmdir /s /q build
 
 OPENOCD_CFG=../libs/Util/wch-riscv.cfg
 

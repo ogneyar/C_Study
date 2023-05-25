@@ -4,9 +4,10 @@ OPT = -Os
 
 BUILD_DIR = build
 
-TARGET = ${BUILD_DIR}
+TARGET = target #${BUILD_DIR}
 
 C_SOURCES =  \
+	delay.c \
 	main.c 
 
 ASM_SOURCES =  \
@@ -20,6 +21,7 @@ OCD = "$(OCD_PATH)/openocd"
 PREFIX = riscv-none-embed-
 
 CC = "$(GCC_PATH)/$(PREFIX)gcc"
+AR = "$(GCC_PATH)/$(PREFIX)ar"
 AS = "$(GCC_PATH)/$(PREFIX)gcc" -x assembler-with-cpp
 CP = "$(GCC_PATH)/$(PREFIX)objcopy"
 SZ = "$(GCC_PATH)/$(PREFIX)size"
@@ -38,11 +40,7 @@ C_DEFS =
 AS_INCLUDES = 
 
 C_INCLUDES =  \
-	-I. \
-	-Isrc \
-	-I../libs/Core \
-	-I../libs/Debug \
-	-I../libs/Peripheral/inc
+	-I. 
 
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT)
 
@@ -55,48 +53,54 @@ LDSCRIPT = ../libs/Ld/ch32v307_map.ld
 LIBS = 
 LIBDIR = 
 LDFLAGS = $(MCU) -g --specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -nostartfiles -Xlinker \
-	--gc-sections -Wl,-Map=$(BUILD_DIR)/$(TARGET).map --specs=nosys.specs $(OPT)
+	--gc-sections -Wl,-Map=build/target.map --specs=nosys.specs $(OPT)
 
 
 all: flash 
 
 
-build: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+build: build/target.elf build/target.hex build/target.bin
+# build: clean build/target.elf build/target.hex build/target.bin
 
 
-OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o)))
-vpath %.c $(sort $(dir $(C_SOURCES)))
+OBJECTS = build/main.o \
+	build/startup_ch32v30x_D8C.o 
 
-OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.S=.o)))
-vpath %.s $(sort $(dir $(ASM_SOURCES)))
+# build/delay.o: delay.c Makefile
+# 	@if not exist build (mkdir build)	
+# 	$(CC) -c $(CFLAGS) -g -std=gnu99 -MT"$(@)" -c "$<" -o "$@"
 
-$(BUILD_DIR)/%.o: %.c Makefile
-	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))	
+# build/delay.a: build/delay.o Makefile
+# 	@if not exist build (mkdir build)	
+# 	$(AR) q "$@" "$<"
+
+build/main.o: main.c Makefile
+	@if not exist build (mkdir build)	
 	$(CC) -c $(CFLAGS) -g -std=gnu99 -MT"$(@)" -c "$<" -o "$@"
 
-$(BUILD_DIR)/%.o: %.s Makefile
-	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))	
+
+build/startup_ch32v30x_D8C.o: ../libs/Startup/startup_ch32v30x_D8C.S Makefile
+	@if not exist build (mkdir build)	
 	$(AS) -c $(CFLAGS) -g -MT"$(@)" -c "$<" -o "$@"
 
-$(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
-	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))	
-	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+build/target.elf: $(OBJECTS)  Makefile
+	@if not exist build (mkdir build)	
+	$(CC) $(OBJECTS) build/delay.a $(LDFLAGS) -o $@
 	$(SZ) $@
 
-$(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf
-	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))	
+build/target.hex: build/target.elf
+	@if not exist build (mkdir build)	
 	$(HEX) $< $@
 	
-$(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf
-	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))	
+build/target.bin: build/target.elf
+	@if not exist build (mkdir build)	
 	$(BIN) $< $@	
 	
-$(BUILD_DIR):
-	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))	
+build:
+	@if not exist build (mkdir build)	
 	@-mkdir $@		
 
 clean:
-#	-rm -fR $(BUILD_DIR)
 	@-rmdir /s /q build
 
 OPENOCD_CFG=../libs/Util/wch-riscv.cfg
@@ -105,7 +109,7 @@ erase: build
 	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "flash erase_sector wch_riscv 0 last" -c exit
 
 flash: erase 
-	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "program $(BUILD_DIR)/$(TARGET).hex" -c wlink_reset_resume -c exit
+	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "program build/target.hex" -c wlink_reset_resume -c exit
 
 reset:
 	$(OCD) -f $(OPENOCD_CFG) -c init -c reset -c resume -c exit
