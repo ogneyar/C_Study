@@ -1,4 +1,7 @@
 
+
+// НЕ РАБОТАЕТ!!!
+
 #include "debug.h"
 // #include <wchnet.h>
 
