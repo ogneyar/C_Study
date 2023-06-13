@@ -9,7 +9,7 @@
 /*********************************************************************
  * @fn      GPIO_Toggle_INIT
  *
- * @brief   Initializes GPIOA.0
+ * @brief   Initializes GPIOB.3
  *
  * @return  none
  */
@@ -17,11 +17,15 @@ void GPIO_Toggle_INIT(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure = {0};
 
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
 }
 
 /*********************************************************************
@@ -45,7 +49,9 @@ int main(void)
 
     while(1)
     {
-        GPIO_WriteBit(GPIOA, GPIO_Pin_0, (i == 0) ? (i = Bit_SET) : (i = Bit_RESET));
+        GPIO_WriteBit(GPIOB, GPIO_Pin_3, (i == 0) ? (i = Bit_SET) : (i = Bit_RESET));
+        GPIO_WriteBit(GPIOB, GPIO_Pin_4, (i == 0) ? (i = Bit_SET) : (i = Bit_RESET));
+        GPIO_WriteBit(GPIOB, GPIO_Pin_5, (i == 0) ? (i = Bit_SET) : (i = Bit_RESET));
         Delay_Ms(100);
     }
 }
