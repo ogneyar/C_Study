@@ -204,7 +204,8 @@ $(BUILD_DIR):
 # clean up
 #######################################
 clean:
-	-rm -fR $(BUILD_DIR)
+#	-rm -fR $(BUILD_DIR)
+	@-rmdir /s /q build
 
 
 OPENOCD_CFG=../libs/Util/wch-riscv.cfg
