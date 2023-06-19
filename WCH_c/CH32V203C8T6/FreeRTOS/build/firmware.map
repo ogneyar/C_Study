@@ -1,0 +1,2512 @@
+Archive member included to satisfy reference by file (symbol)
+
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+                              build/main.o (__riscv_save_2)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(muldi3.o)
+                              build/system_ch32v20x.o (__mulsi3)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(div.o)
+                              build/ch32v20x_adc.o (__divsi3)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+                              build/queue.o (memcpy)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
+                              build/stream_buffer.o (memset)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
+                              build/main.o (printf)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+                              build/main.o (puts)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+                              build/tasks.o (strlen)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o) (__swbuf_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o) (__swsetup_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o) (_fflush_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o) (__sinit)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o) (_fwalk)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-impure.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o) (_global_impure_ptr)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o) (__smakebuf_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o) (_free_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o) (_malloc_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o) (_vfprintf_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o) (_printf_i)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o) (__sread)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-writer.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o) (_write_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o) (_close_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o) (_fstat_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fvwrite.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o) (__sfvwrite_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o) (_isatty_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o) (_lseek_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memchr.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o) (memchr)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memmove.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fvwrite.o) (memmove)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-reallocr.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fvwrite.o) (_realloc_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o) (_read_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o) (errno)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-msizer.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-reallocr.o) (_malloc_usable_size_r)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o) (_close)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o) (_fstat)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o) (_isatty)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o) (_lseek)
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
+                              e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o) (_read)
+
+Allocating common symbols
+Common symbol       size              file
+
+errno               0x4               e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 build/main.o
+ .data          0x0000000000000000        0x0 build/main.o
+ .bss           0x0000000000000000        0x0 build/main.o
+ .text          0x0000000000000000        0x0 build/system_ch32v20x.o
+ .data          0x0000000000000000        0x0 build/system_ch32v20x.o
+ .bss           0x0000000000000000        0x0 build/system_ch32v20x.o
+ .text.SystemCoreClockUpdate
+                0x0000000000000000       0xa6 build/system_ch32v20x.o
+ .data.AHBPrescTable
+                0x0000000000000000       0x10 build/system_ch32v20x.o
+ .text          0x0000000000000000        0x0 build/debug.o
+ .data          0x0000000000000000        0x0 build/debug.o
+ .bss           0x0000000000000000        0x0 build/debug.o
+ .text.Delay_Us
+                0x0000000000000000       0x52 build/debug.o
+ .text.Delay_Ms
+                0x0000000000000000       0x52 build/debug.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_adc.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_adc.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_adc.o
+ .text.ADC_DeInit
+                0x0000000000000000       0x5a build/ch32v20x_adc.o
+ .text.ADC_Init
+                0x0000000000000000       0x56 build/ch32v20x_adc.o
+ .text.ADC_StructInit
+                0x0000000000000000       0x1a build/ch32v20x_adc.o
+ .text.ADC_Cmd  0x0000000000000000       0x10 build/ch32v20x_adc.o
+ .text.ADC_DMACmd
+                0x0000000000000000       0x12 build/ch32v20x_adc.o
+ .text.ADC_ITConfig
+                0x0000000000000000       0x16 build/ch32v20x_adc.o
+ .text.ADC_ResetCalibration
+                0x0000000000000000        0xa build/ch32v20x_adc.o
+ .text.ADC_GetResetCalibrationStatus
+                0x0000000000000000        0x8 build/ch32v20x_adc.o
+ .text.ADC_StartCalibration
+                0x0000000000000000        0xa build/ch32v20x_adc.o
+ .text.ADC_GetCalibrationStatus
+                0x0000000000000000        0x8 build/ch32v20x_adc.o
+ .text.ADC_SoftwareStartConvCmd
+                0x0000000000000000       0x18 build/ch32v20x_adc.o
+ .text.ADC_GetSoftwareStartConvStatus
+                0x0000000000000000        0x8 build/ch32v20x_adc.o
+ .text.ADC_DiscModeChannelCountConfig
+                0x0000000000000000       0x12 build/ch32v20x_adc.o
+ .text.ADC_DiscModeCmd
+                0x0000000000000000       0x1a build/ch32v20x_adc.o
+ .text.ADC_RegularChannelConfig
+                0x0000000000000000       0xba build/ch32v20x_adc.o
+ .text.ADC_ExternalTrigConvCmd
+                0x0000000000000000       0x18 build/ch32v20x_adc.o
+ .text.ADC_GetConversionValue
+                0x0000000000000000        0x8 build/ch32v20x_adc.o
+ .text.ADC_GetDualModeConversionValue
+                0x0000000000000000        0xa build/ch32v20x_adc.o
+ .text.ADC_AutoInjectedConvCmd
+                0x0000000000000000       0x12 build/ch32v20x_adc.o
+ .text.ADC_InjectedDiscModeCmd
+                0x0000000000000000       0x14 build/ch32v20x_adc.o
+ .text.ADC_ExternalTrigInjectedConvConfig
+                0x0000000000000000        0xe build/ch32v20x_adc.o
+ .text.ADC_ExternalTrigInjectedConvCmd
+                0x0000000000000000       0x14 build/ch32v20x_adc.o
+ .text.ADC_SoftwareStartInjectedConvCmd
+                0x0000000000000000       0x18 build/ch32v20x_adc.o
+ .text.ADC_GetSoftwareStartInjectedConvCmdStatus
+                0x0000000000000000        0x8 build/ch32v20x_adc.o
+ .text.ADC_InjectedChannelConfig
+                0x0000000000000000       0x7a build/ch32v20x_adc.o
+ .text.ADC_InjectedSequencerLengthConfig
+                0x0000000000000000       0x14 build/ch32v20x_adc.o
+ .text.ADC_SetInjectedOffset
+                0x0000000000000000       0x14 build/ch32v20x_adc.o
+ .text.ADC_GetInjectedConversionValue
+                0x0000000000000000       0x1c build/ch32v20x_adc.o
+ .text.ADC_AnalogWatchdogCmd
+                0x0000000000000000       0x12 build/ch32v20x_adc.o
+ .text.ADC_AnalogWatchdogThresholdsConfig
+                0x0000000000000000        0x6 build/ch32v20x_adc.o
+ .text.ADC_AnalogWatchdogSingleChannelConfig
+                0x0000000000000000        0xa build/ch32v20x_adc.o
+ .text.ADC_TempSensorVrefintCmd
+                0x0000000000000000       0x20 build/ch32v20x_adc.o
+ .text.ADC_GetFlagStatus
+                0x0000000000000000        0xa build/ch32v20x_adc.o
+ .text.ADC_ClearFlag
+                0x0000000000000000        0x8 build/ch32v20x_adc.o
+ .text.ADC_GetITStatus
+                0x0000000000000000       0x1c build/ch32v20x_adc.o
+ .text.ADC_ClearITPendingBit
+                0x0000000000000000        0xa build/ch32v20x_adc.o
+ .text.TempSensor_Volt_To_Temper
+                0x0000000000000000       0x3c build/ch32v20x_adc.o
+ .text.ADC_BufferCmd
+                0x0000000000000000       0x18 build/ch32v20x_adc.o
+ .text.Get_CalibrationValue
+                0x0000000000000000      0x26e build/ch32v20x_adc.o
+ .debug_info    0x0000000000000000     0x16f4 build/ch32v20x_adc.o
+ .debug_abbrev  0x0000000000000000      0x3c7 build/ch32v20x_adc.o
+ .debug_loc     0x0000000000000000      0xafa build/ch32v20x_adc.o
+ .debug_aranges
+                0x0000000000000000      0x150 build/ch32v20x_adc.o
+ .debug_ranges  0x0000000000000000      0x140 build/ch32v20x_adc.o
+ .debug_line    0x0000000000000000     0x1a91 build/ch32v20x_adc.o
+ .debug_str     0x0000000000000000      0xc10 build/ch32v20x_adc.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_adc.o
+ .debug_frame   0x0000000000000000      0x2c0 build/ch32v20x_adc.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_dbgmcu.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_dbgmcu.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_dbgmcu.o
+ .text.DBGMCU_GetREVID
+                0x0000000000000000        0xa build/ch32v20x_dbgmcu.o
+ .text.DBGMCU_GetDEVID
+                0x0000000000000000        0xa build/ch32v20x_dbgmcu.o
+ .text.__get_DEBUG_CR
+                0x0000000000000000        0x6 build/ch32v20x_dbgmcu.o
+ .text.__set_DEBUG_CR
+                0x0000000000000000        0x6 build/ch32v20x_dbgmcu.o
+ .text.DBGMCU_Config
+                0x0000000000000000       0x14 build/ch32v20x_dbgmcu.o
+ .debug_info    0x0000000000000000      0xa7e build/ch32v20x_dbgmcu.o
+ .debug_abbrev  0x0000000000000000      0x2f7 build/ch32v20x_dbgmcu.o
+ .debug_loc     0x0000000000000000       0x6e build/ch32v20x_dbgmcu.o
+ .debug_aranges
+                0x0000000000000000       0x40 build/ch32v20x_dbgmcu.o
+ .debug_ranges  0x0000000000000000       0x48 build/ch32v20x_dbgmcu.o
+ .debug_line    0x0000000000000000      0x315 build/ch32v20x_dbgmcu.o
+ .debug_str     0x0000000000000000      0x62e build/ch32v20x_dbgmcu.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_dbgmcu.o
+ .debug_frame   0x0000000000000000       0x60 build/ch32v20x_dbgmcu.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_dma.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_dma.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_dma.o
+ .text.DMA_DeInit
+                0x0000000000000000       0x9c build/ch32v20x_dma.o
+ .text.DMA_Init
+                0x0000000000000000       0x38 build/ch32v20x_dma.o
+ .text.DMA_StructInit
+                0x0000000000000000       0x2e build/ch32v20x_dma.o
+ .text.DMA_Cmd  0x0000000000000000       0x14 build/ch32v20x_dma.o
+ .text.DMA_ITConfig
+                0x0000000000000000       0x12 build/ch32v20x_dma.o
+ .text.DMA_SetCurrDataCounter
+                0x0000000000000000        0x4 build/ch32v20x_dma.o
+ .text.DMA_GetCurrDataCounter
+                0x0000000000000000        0x8 build/ch32v20x_dma.o
+ .text.DMA_GetFlagStatus
+                0x0000000000000000        0xe build/ch32v20x_dma.o
+ .text.DMA_ClearFlag
+                0x0000000000000000        0x8 build/ch32v20x_dma.o
+ .text.DMA_GetITStatus
+                0x0000000000000000       0x18 build/ch32v20x_dma.o
+ .text.DMA_ClearITPendingBit
+                0x0000000000000000        0x8 build/ch32v20x_dma.o
+ .debug_info    0x0000000000000000      0xd21 build/ch32v20x_dma.o
+ .debug_abbrev  0x0000000000000000      0x302 build/ch32v20x_dma.o
+ .debug_loc     0x0000000000000000      0x14a build/ch32v20x_dma.o
+ .debug_aranges
+                0x0000000000000000       0x60 build/ch32v20x_dma.o
+ .debug_ranges  0x0000000000000000       0x50 build/ch32v20x_dma.o
+ .debug_line    0x0000000000000000      0x745 build/ch32v20x_dma.o
+ .debug_str     0x0000000000000000      0x7ec build/ch32v20x_dma.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_dma.o
+ .debug_frame   0x0000000000000000       0xcc build/ch32v20x_dma.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_exti.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_exti.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_exti.o
+ .text.EXTI_DeInit
+                0x0000000000000000       0x22 build/ch32v20x_exti.o
+ .text.EXTI_Init
+                0x0000000000000000       0x6a build/ch32v20x_exti.o
+ .text.EXTI_StructInit
+                0x0000000000000000       0x12 build/ch32v20x_exti.o
+ .text.EXTI_GenerateSWInterrupt
+                0x0000000000000000       0x10 build/ch32v20x_exti.o
+ .text.EXTI_GetFlagStatus
+                0x0000000000000000       0x12 build/ch32v20x_exti.o
+ .text.EXTI_ClearFlag
+                0x0000000000000000        0xa build/ch32v20x_exti.o
+ .text.EXTI_GetITStatus
+                0x0000000000000000       0x1e build/ch32v20x_exti.o
+ .text.EXTI_ClearITPendingBit
+                0x0000000000000000        0xa build/ch32v20x_exti.o
+ .debug_info    0x0000000000000000      0xc0d build/ch32v20x_exti.o
+ .debug_abbrev  0x0000000000000000      0x2da build/ch32v20x_exti.o
+ .debug_loc     0x0000000000000000      0x181 build/ch32v20x_exti.o
+ .debug_aranges
+                0x0000000000000000       0x50 build/ch32v20x_exti.o
+ .debug_ranges  0x0000000000000000       0x40 build/ch32v20x_exti.o
+ .debug_line    0x0000000000000000      0x564 build/ch32v20x_exti.o
+ .debug_str     0x0000000000000000      0x786 build/ch32v20x_exti.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_exti.o
+ .debug_frame   0x0000000000000000       0x90 build/ch32v20x_exti.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_flash.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_flash.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_flash.o
+ .text.FLASH_Unlock
+                0x0000000000000000       0x1a build/ch32v20x_flash.o
+ .text.FLASH_UnlockBank1
+                0x0000000000000000       0x18 build/ch32v20x_flash.o
+ .text.FLASH_Lock
+                0x0000000000000000        0xe build/ch32v20x_flash.o
+ .text.FLASH_LockBank1
+                0x0000000000000000       0x18 build/ch32v20x_flash.o
+ .text.FLASH_GetUserOptionByte
+                0x0000000000000000        0xa build/ch32v20x_flash.o
+ .text.FLASH_GetWriteProtectionOptionByte
+                0x0000000000000000        0x8 build/ch32v20x_flash.o
+ .text.FLASH_GetReadOutProtectionStatus
+                0x0000000000000000        0xc build/ch32v20x_flash.o
+ .text.FLASH_ITConfig
+                0x0000000000000000       0x1e build/ch32v20x_flash.o
+ .text.FLASH_GetFlagStatus
+                0x0000000000000000       0x1e build/ch32v20x_flash.o
+ .text.FLASH_ClearFlag
+                0x0000000000000000        0x8 build/ch32v20x_flash.o
+ .text.FLASH_GetStatus
+                0x0000000000000000       0x18 build/ch32v20x_flash.o
+ .text.FLASH_GetBank1Status
+                0x0000000000000000       0x18 build/ch32v20x_flash.o
+ .text.FLASH_WaitForLastOperation
+                0x0000000000000000       0x34 build/ch32v20x_flash.o
+ .text.FLASH_ErasePage
+                0x0000000000000000       0x4c build/ch32v20x_flash.o
+ .text.FLASH_EraseAllPages
+                0x0000000000000000       0x48 build/ch32v20x_flash.o
+ .text.FLASH_EraseAllBank1Pages
+                0x0000000000000000       0x18 build/ch32v20x_flash.o
+ .text.FLASH_EraseOptionBytes
+                0x0000000000000000       0xe8 build/ch32v20x_flash.o
+ .text.FLASH_ProgramWord
+                0x0000000000000000       0x6e build/ch32v20x_flash.o
+ .text.FLASH_ProgramHalfWord
+                0x0000000000000000       0x48 build/ch32v20x_flash.o
+ .text.FLASH_ProgramOptionByteData
+                0x0000000000000000      0x106 build/ch32v20x_flash.o
+ .text.FLASH_EnableWriteProtection
+                0x0000000000000000      0x106 build/ch32v20x_flash.o
+ .text.FLASH_ReadOutProtection
+                0x0000000000000000       0xf4 build/ch32v20x_flash.o
+ .text.FLASH_UserOptionByteConfig
+                0x0000000000000000       0xf6 build/ch32v20x_flash.o
+ .text.FLASH_WaitForLastBank1Operation
+                0x0000000000000000       0x18 build/ch32v20x_flash.o
+ .text.FLASH_Unlock_Fast
+                0x0000000000000000       0x1e build/ch32v20x_flash.o
+ .text.FLASH_Lock_Fast
+                0x0000000000000000        0xe build/ch32v20x_flash.o
+ .text.FLASH_ErasePage_Fast
+                0x0000000000000000       0x2e build/ch32v20x_flash.o
+ .text.FLASH_EraseBlock_32K_Fast
+                0x0000000000000000       0x30 build/ch32v20x_flash.o
+ .text.FLASH_EraseBlock_64K_Fast
+                0x0000000000000000       0x30 build/ch32v20x_flash.o
+ .text.FLASH_ProgramPage_Fast
+                0x0000000000000000       0x64 build/ch32v20x_flash.o
+ .text.FLASH_Access_Clock_Cfg
+                0x0000000000000000       0x18 build/ch32v20x_flash.o
+ .text.FLASH_Enhance_Mode
+                0x0000000000000000       0x2e build/ch32v20x_flash.o
+ .text.FLASH_GetMACAddress
+                0x0000000000000000       0x26 build/ch32v20x_flash.o
+ .debug_info    0x0000000000000000     0x13c0 build/ch32v20x_flash.o
+ .debug_abbrev  0x0000000000000000      0x42c build/ch32v20x_flash.o
+ .debug_loc     0x0000000000000000      0x811 build/ch32v20x_flash.o
+ .debug_aranges
+                0x0000000000000000      0x100 build/ch32v20x_flash.o
+ .debug_ranges  0x0000000000000000       0xf0 build/ch32v20x_flash.o
+ .debug_line    0x0000000000000000     0x1c64 build/ch32v20x_flash.o
+ .debug_str     0x0000000000000000      0xa8e build/ch32v20x_flash.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_flash.o
+ .debug_frame   0x0000000000000000      0x324 build/ch32v20x_flash.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_gpio.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_gpio.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_gpio.o
+ .text.GPIO_DeInit
+                0x0000000000000000       0xa4 build/ch32v20x_gpio.o
+ .text.GPIO_AFIODeInit
+                0x0000000000000000       0x28 build/ch32v20x_gpio.o
+ .text.GPIO_StructInit
+                0x0000000000000000        0xe build/ch32v20x_gpio.o
+ .text.GPIO_ReadInputDataBit
+                0x0000000000000000       0x1e build/ch32v20x_gpio.o
+ .text.GPIO_ReadInputData
+                0x0000000000000000       0x20 build/ch32v20x_gpio.o
+ .text.GPIO_ReadOutputDataBit
+                0x0000000000000000       0x1e build/ch32v20x_gpio.o
+ .text.GPIO_ReadOutputData
+                0x0000000000000000       0x20 build/ch32v20x_gpio.o
+ .text.GPIO_WriteBit
+                0x0000000000000000       0x1e build/ch32v20x_gpio.o
+ .text.GPIO_Write
+                0x0000000000000000       0x18 build/ch32v20x_gpio.o
+ .text.GPIO_PinLockConfig
+                0x0000000000000000       0x24 build/ch32v20x_gpio.o
+ .text.GPIO_EventOutputConfig
+                0x0000000000000000       0x18 build/ch32v20x_gpio.o
+ .text.GPIO_EventOutputCmd
+                0x0000000000000000       0x16 build/ch32v20x_gpio.o
+ .text.GPIO_PinRemapConfig
+                0x0000000000000000       0xd4 build/ch32v20x_gpio.o
+ .text.GPIO_EXTILineConfig
+                0x0000000000000000       0x2c build/ch32v20x_gpio.o
+ .text.GPIO_ETH_MediaInterfaceConfig
+                0x0000000000000000       0x24 build/ch32v20x_gpio.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_i2c.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_i2c.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_i2c.o
+ .text.I2C_DeInit
+                0x0000000000000000       0x4c build/ch32v20x_i2c.o
+ .text.I2C_Init
+                0x0000000000000000      0x136 build/ch32v20x_i2c.o
+ .text.I2C_StructInit
+                0x0000000000000000       0x18 build/ch32v20x_i2c.o
+ .text.I2C_Cmd  0x0000000000000000       0x18 build/ch32v20x_i2c.o
+ .text.I2C_DMACmd
+                0x0000000000000000       0x1e build/ch32v20x_i2c.o
+ .text.I2C_DMALastTransferCmd
+                0x0000000000000000       0x16 build/ch32v20x_i2c.o
+ .text.I2C_GenerateSTART
+                0x0000000000000000       0x1a build/ch32v20x_i2c.o
+ .text.I2C_GenerateSTOP
+                0x0000000000000000       0x1a build/ch32v20x_i2c.o
+ .text.I2C_AcknowledgeConfig
+                0x0000000000000000       0x1a build/ch32v20x_i2c.o
+ .text.I2C_OwnAddress2Config
+                0x0000000000000000       0x14 build/ch32v20x_i2c.o
+ .text.I2C_DualAddressCmd
+                0x0000000000000000       0x18 build/ch32v20x_i2c.o
+ .text.I2C_GeneralCallCmd
+                0x0000000000000000       0x1a build/ch32v20x_i2c.o
+ .text.I2C_ITConfig
+                0x0000000000000000       0x12 build/ch32v20x_i2c.o
+ .text.I2C_SendData
+                0x0000000000000000        0x4 build/ch32v20x_i2c.o
+ .text.I2C_ReceiveData
+                0x0000000000000000        0x8 build/ch32v20x_i2c.o
+ .text.I2C_Send7bitAddress
+                0x0000000000000000       0x12 build/ch32v20x_i2c.o
+ .text.I2C_ReadRegister
+                0x0000000000000000       0x14 build/ch32v20x_i2c.o
+ .text.I2C_SoftwareResetCmd
+                0x0000000000000000       0x12 build/ch32v20x_i2c.o
+ .text.I2C_NACKPositionConfig
+                0x0000000000000000       0x22 build/ch32v20x_i2c.o
+ .text.I2C_SMBusAlertConfig
+                0x0000000000000000       0x1a build/ch32v20x_i2c.o
+ .text.I2C_TransmitPEC
+                0x0000000000000000       0x16 build/ch32v20x_i2c.o
+ .text.I2C_PECPositionConfig
+                0x0000000000000000       0x18 build/ch32v20x_i2c.o
+ .text.I2C_CalculatePEC
+                0x0000000000000000       0x1a build/ch32v20x_i2c.o
+ .text.I2C_GetPEC
+                0x0000000000000000        0x6 build/ch32v20x_i2c.o
+ .text.I2C_ARPCmd
+                0x0000000000000000       0x18 build/ch32v20x_i2c.o
+ .text.I2C_StretchClockCmd
+                0x0000000000000000       0x1a build/ch32v20x_i2c.o
+ .text.I2C_FastModeDutyCycleConfig
+                0x0000000000000000       0x1a build/ch32v20x_i2c.o
+ .text.I2C_CheckEvent
+                0x0000000000000000       0x16 build/ch32v20x_i2c.o
+ .text.I2C_GetLastEvent
+                0x0000000000000000        0xe build/ch32v20x_i2c.o
+ .text.I2C_GetFlagStatus
+                0x0000000000000000       0x32 build/ch32v20x_i2c.o
+ .text.I2C_ClearFlag
+                0x0000000000000000        0xc build/ch32v20x_i2c.o
+ .text.I2C_GetITStatus
+                0x0000000000000000       0x20 build/ch32v20x_i2c.o
+ .text.I2C_ClearITPendingBit
+                0x0000000000000000        0xc build/ch32v20x_i2c.o
+ .debug_info    0x0000000000000000     0x147f build/ch32v20x_i2c.o
+ .debug_abbrev  0x0000000000000000      0x3c3 build/ch32v20x_i2c.o
+ .debug_loc     0x0000000000000000      0x6cb build/ch32v20x_i2c.o
+ .debug_aranges
+                0x0000000000000000      0x110 build/ch32v20x_i2c.o
+ .debug_ranges  0x0000000000000000      0x100 build/ch32v20x_i2c.o
+ .debug_line    0x0000000000000000     0x10e7 build/ch32v20x_i2c.o
+ .debug_str     0x0000000000000000      0xad9 build/ch32v20x_i2c.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_i2c.o
+ .debug_frame   0x0000000000000000      0x264 build/ch32v20x_i2c.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_iwdg.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_iwdg.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_iwdg.o
+ .text.IWDG_WriteAccessCmd
+                0x0000000000000000        0x8 build/ch32v20x_iwdg.o
+ .text.IWDG_SetPrescaler
+                0x0000000000000000        0x8 build/ch32v20x_iwdg.o
+ .text.IWDG_SetReload
+                0x0000000000000000        0x8 build/ch32v20x_iwdg.o
+ .text.IWDG_ReloadCounter
+                0x0000000000000000        0xe build/ch32v20x_iwdg.o
+ .text.IWDG_Enable
+                0x0000000000000000        0xe build/ch32v20x_iwdg.o
+ .text.IWDG_GetFlagStatus
+                0x0000000000000000        0xe build/ch32v20x_iwdg.o
+ .debug_info    0x0000000000000000      0xab4 build/ch32v20x_iwdg.o
+ .debug_abbrev  0x0000000000000000      0x282 build/ch32v20x_iwdg.o
+ .debug_loc     0x0000000000000000       0x68 build/ch32v20x_iwdg.o
+ .debug_aranges
+                0x0000000000000000       0x48 build/ch32v20x_iwdg.o
+ .debug_ranges  0x0000000000000000       0x38 build/ch32v20x_iwdg.o
+ .debug_line    0x0000000000000000      0x33f build/ch32v20x_iwdg.o
+ .debug_str     0x0000000000000000      0x698 build/ch32v20x_iwdg.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_iwdg.o
+ .debug_frame   0x0000000000000000       0x70 build/ch32v20x_iwdg.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_misc.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_misc.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_misc.o
+ .text.NVIC_Init
+                0x0000000000000000       0xaa build/ch32v20x_misc.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_opa.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_opa.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_opa.o
+ .text.OPA_DeInit
+                0x0000000000000000        0xa build/ch32v20x_opa.o
+ .text.OPA_Init
+                0x0000000000000000       0x36 build/ch32v20x_opa.o
+ .text.OPA_StructInit
+                0x0000000000000000       0x12 build/ch32v20x_opa.o
+ .text.OPA_Cmd  0x0000000000000000       0x2c build/ch32v20x_opa.o
+ .debug_info    0x0000000000000000      0xb28 build/ch32v20x_opa.o
+ .debug_abbrev  0x0000000000000000      0x252 build/ch32v20x_opa.o
+ .debug_loc     0x0000000000000000       0x56 build/ch32v20x_opa.o
+ .debug_aranges
+                0x0000000000000000       0x38 build/ch32v20x_opa.o
+ .debug_ranges  0x0000000000000000       0x28 build/ch32v20x_opa.o
+ .debug_line    0x0000000000000000      0x3ec build/ch32v20x_opa.o
+ .debug_str     0x0000000000000000      0x6b4 build/ch32v20x_opa.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_opa.o
+ .debug_frame   0x0000000000000000       0x50 build/ch32v20x_opa.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_pwr.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_pwr.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_pwr.o
+ .text.PWR_DeInit
+                0x0000000000000000       0x2c build/ch32v20x_pwr.o
+ .text.PWR_BackupAccessCmd
+                0x0000000000000000       0x16 build/ch32v20x_pwr.o
+ .text.PWR_PVDCmd
+                0x0000000000000000       0x14 build/ch32v20x_pwr.o
+ .text.PWR_PVDLevelConfig
+                0x0000000000000000       0x10 build/ch32v20x_pwr.o
+ .text.PWR_WakeUpPinCmd
+                0x0000000000000000       0x16 build/ch32v20x_pwr.o
+ .text.PWR_EnterSTOPMode
+                0x0000000000000000       0x68 build/ch32v20x_pwr.o
+ .text.PWR_EnterSTANDBYMode
+                0x0000000000000000       0x34 build/ch32v20x_pwr.o
+ .text.PWR_GetFlagStatus
+                0x0000000000000000        0xe build/ch32v20x_pwr.o
+ .text.PWR_ClearFlag
+                0x0000000000000000        0xe build/ch32v20x_pwr.o
+ .text.PWR_EnterSTANDBYMode_RAM
+                0x0000000000000000       0x2e build/ch32v20x_pwr.o
+ .text.PWR_EnterSTANDBYMode_RAM_LV
+                0x0000000000000000       0x30 build/ch32v20x_pwr.o
+ .text.PWR_EnterSTANDBYMode_RAM_VBAT_EN
+                0x0000000000000000       0x30 build/ch32v20x_pwr.o
+ .text.PWR_EnterSTANDBYMode_RAM_LV_VBAT_EN
+                0x0000000000000000       0x30 build/ch32v20x_pwr.o
+ .text.PWR_EnterSTOPMode_RAM_LV
+                0x0000000000000000       0x6e build/ch32v20x_pwr.o
+ .debug_info    0x0000000000000000      0xf92 build/ch32v20x_pwr.o
+ .debug_abbrev  0x0000000000000000      0x384 build/ch32v20x_pwr.o
+ .debug_loc     0x0000000000000000      0x289 build/ch32v20x_pwr.o
+ .debug_aranges
+                0x0000000000000000       0x88 build/ch32v20x_pwr.o
+ .debug_ranges  0x0000000000000000       0xa8 build/ch32v20x_pwr.o
+ .debug_line    0x0000000000000000      0x9f4 build/ch32v20x_pwr.o
+ .debug_str     0x0000000000000000      0x846 build/ch32v20x_pwr.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_pwr.o
+ .debug_frame   0x0000000000000000       0xfc build/ch32v20x_pwr.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_rcc.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_rcc.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_rcc.o
+ .text.RCC_DeInit
+                0x0000000000000000       0x42 build/ch32v20x_rcc.o
+ .text.RCC_HSEConfig
+                0x0000000000000000       0x3c build/ch32v20x_rcc.o
+ .text.RCC_AdjustHSICalibrationValue
+                0x0000000000000000       0x12 build/ch32v20x_rcc.o
+ .text.RCC_HSICmd
+                0x0000000000000000       0x14 build/ch32v20x_rcc.o
+ .text.RCC_PLLConfig
+                0x0000000000000000       0x16 build/ch32v20x_rcc.o
+ .text.RCC_PLLCmd
+                0x0000000000000000       0x24 build/ch32v20x_rcc.o
+ .text.RCC_SYSCLKConfig
+                0x0000000000000000        0xe build/ch32v20x_rcc.o
+ .text.RCC_GetSYSCLKSource
+                0x0000000000000000        0xa build/ch32v20x_rcc.o
+ .text.RCC_HCLKConfig
+                0x0000000000000000       0x10 build/ch32v20x_rcc.o
+ .text.RCC_PCLK1Config
+                0x0000000000000000       0x10 build/ch32v20x_rcc.o
+ .text.RCC_PCLK2Config
+                0x0000000000000000       0x16 build/ch32v20x_rcc.o
+ .text.RCC_ITConfig
+                0x0000000000000000       0x16 build/ch32v20x_rcc.o
+ .text.RCC_USBCLKConfig
+                0x0000000000000000       0x1a build/ch32v20x_rcc.o
+ .text.RCC_ADCCLKConfig
+                0x0000000000000000       0x12 build/ch32v20x_rcc.o
+ .text.RCC_LSEConfig
+                0x0000000000000000       0x28 build/ch32v20x_rcc.o
+ .text.RCC_LSICmd
+                0x0000000000000000       0x14 build/ch32v20x_rcc.o
+ .text.RCC_RTCCLKConfig
+                0x0000000000000000        0xc build/ch32v20x_rcc.o
+ .text.RCC_RTCCLKCmd
+                0x0000000000000000       0x20 build/ch32v20x_rcc.o
+ .text.RCC_AHBPeriphClockCmd
+                0x0000000000000000       0x1e build/ch32v20x_rcc.o
+ .text.RCC_APB1PeriphClockCmd
+                0x0000000000000000       0x1e build/ch32v20x_rcc.o
+ .text.RCC_APB2PeriphResetCmd
+                0x0000000000000000       0x1e build/ch32v20x_rcc.o
+ .text.RCC_APB1PeriphResetCmd
+                0x0000000000000000       0x1e build/ch32v20x_rcc.o
+ .text.RCC_BackupResetCmd
+                0x0000000000000000       0x20 build/ch32v20x_rcc.o
+ .text.RCC_ClockSecuritySystemCmd
+                0x0000000000000000       0x24 build/ch32v20x_rcc.o
+ .text.RCC_MCOConfig
+                0x0000000000000000        0x8 build/ch32v20x_rcc.o
+ .text.RCC_GetFlagStatus
+                0x0000000000000000       0x2e build/ch32v20x_rcc.o
+ .text.RCC_WaitForHSEStartUp
+                0x0000000000000000       0x42 build/ch32v20x_rcc.o
+ .text.RCC_ClearFlag
+                0x0000000000000000       0x10 build/ch32v20x_rcc.o
+ .text.RCC_GetITStatus
+                0x0000000000000000        0xe build/ch32v20x_rcc.o
+ .text.RCC_ClearITPendingBit
+                0x0000000000000000        0x8 build/ch32v20x_rcc.o
+ .text.RCC_ADCCLKADJcmd
+                0x0000000000000000       0x18 build/ch32v20x_rcc.o
+ .text.RCC_ETHDIVConfig
+                0x0000000000000000       0x1a build/ch32v20x_rcc.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_spi.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_spi.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_spi.o
+ .text.SPI_I2S_DeInit
+                0x0000000000000000       0x56 build/ch32v20x_spi.o
+ .text.SPI_Init
+                0x0000000000000000       0x3e build/ch32v20x_spi.o
+ .text.I2S_Init
+                0x0000000000000000       0xd4 build/ch32v20x_spi.o
+ .text.SPI_StructInit
+                0x0000000000000000       0x22 build/ch32v20x_spi.o
+ .text.I2S_StructInit
+                0x0000000000000000       0x12 build/ch32v20x_spi.o
+ .text.SPI_Cmd  0x0000000000000000       0x1a build/ch32v20x_spi.o
+ .text.I2S_Cmd  0x0000000000000000       0x1a build/ch32v20x_spi.o
+ .text.SPI_I2S_ITConfig
+                0x0000000000000000       0x1e build/ch32v20x_spi.o
+ .text.SPI_I2S_DMACmd
+                0x0000000000000000       0x12 build/ch32v20x_spi.o
+ .text.SPI_I2S_SendData
+                0x0000000000000000        0x4 build/ch32v20x_spi.o
+ .text.SPI_I2S_ReceiveData
+                0x0000000000000000        0x4 build/ch32v20x_spi.o
+ .text.SPI_NSSInternalSoftwareConfig
+                0x0000000000000000       0x24 build/ch32v20x_spi.o
+ .text.SPI_SSOutputCmd
+                0x0000000000000000       0x18 build/ch32v20x_spi.o
+ .text.SPI_DataSizeConfig
+                0x0000000000000000       0x14 build/ch32v20x_spi.o
+ .text.SPI_TransmitCRC
+                0x0000000000000000        0xa build/ch32v20x_spi.o
+ .text.SPI_CalculateCRC
+                0x0000000000000000       0x16 build/ch32v20x_spi.o
+ .text.SPI_GetCRC
+                0x0000000000000000       0x12 build/ch32v20x_spi.o
+ .text.SPI_GetCRCPolynomial
+                0x0000000000000000        0x4 build/ch32v20x_spi.o
+ .text.SPI_BiDirectionalLineConfig
+                0x0000000000000000       0x1a build/ch32v20x_spi.o
+ .text.SPI_I2S_GetFlagStatus
+                0x0000000000000000        0xa build/ch32v20x_spi.o
+ .text.SPI_I2S_ClearFlag
+                0x0000000000000000        0xc build/ch32v20x_spi.o
+ .text.SPI_I2S_GetITStatus
+                0x0000000000000000       0x28 build/ch32v20x_spi.o
+ .text.SPI_I2S_ClearITPendingBit
+                0x0000000000000000       0x14 build/ch32v20x_spi.o
+ .debug_info    0x0000000000000000     0x12c1 build/ch32v20x_spi.o
+ .debug_abbrev  0x0000000000000000      0x323 build/ch32v20x_spi.o
+ .debug_loc     0x0000000000000000      0x57b build/ch32v20x_spi.o
+ .debug_aranges
+                0x0000000000000000       0xd0 build/ch32v20x_spi.o
+ .debug_ranges  0x0000000000000000       0xc0 build/ch32v20x_spi.o
+ .debug_line    0x0000000000000000      0xc85 build/ch32v20x_spi.o
+ .debug_str     0x0000000000000000      0xa88 build/ch32v20x_spi.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_spi.o
+ .debug_frame   0x0000000000000000      0x1a4 build/ch32v20x_spi.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_tim.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_tim.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_tim.o
+ .text.TI1_Config
+                0x0000000000000000       0x6a build/ch32v20x_tim.o
+ .text.TI2_Config
+                0x0000000000000000       0x82 build/ch32v20x_tim.o
+ .text.TIM_DeInit
+                0x0000000000000000       0xae build/ch32v20x_tim.o
+ .text.TIM_TimeBaseInit
+                0x0000000000000000       0x6a build/ch32v20x_tim.o
+ .text.TIM_OC1Init
+                0x0000000000000000       0x6a build/ch32v20x_tim.o
+ .text.TIM_OC2Init
+                0x0000000000000000       0x96 build/ch32v20x_tim.o
+ .text.TIM_OC3Init
+                0x0000000000000000       0x94 build/ch32v20x_tim.o
+ .text.TIM_OC4Init
+                0x0000000000000000       0x70 build/ch32v20x_tim.o
+ .text.TIM_BDTRConfig
+                0x0000000000000000       0x20 build/ch32v20x_tim.o
+ .text.TIM_TimeBaseStructInit
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_OCStructInit
+                0x0000000000000000       0x22 build/ch32v20x_tim.o
+ .text.TIM_ICStructInit
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_BDTRStructInit
+                0x0000000000000000       0x1e build/ch32v20x_tim.o
+ .text.TIM_Cmd  0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_CtrlPWMOutputs
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_ITConfig
+                0x0000000000000000       0x12 build/ch32v20x_tim.o
+ .text.TIM_GenerateEvent
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_DMAConfig
+                0x0000000000000000        0x8 build/ch32v20x_tim.o
+ .text.TIM_DMACmd
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_InternalClockConfig
+                0x0000000000000000       0x10 build/ch32v20x_tim.o
+ .text.TIM_ITRxExternalClockConfig
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_TIxExternalClockConfig
+                0x0000000000000000       0x48 build/ch32v20x_tim.o
+ .text.TIM_ETRConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_ETRClockMode1Config
+                0x0000000000000000       0x2a build/ch32v20x_tim.o
+ .text.TIM_ETRClockMode2Config
+                0x0000000000000000       0x22 build/ch32v20x_tim.o
+ .text.TIM_PrescalerConfig
+                0x0000000000000000        0x6 build/ch32v20x_tim.o
+ .text.TIM_CounterModeConfig
+                0x0000000000000000       0x10 build/ch32v20x_tim.o
+ .text.TIM_SelectInputTrigger
+                0x0000000000000000       0x10 build/ch32v20x_tim.o
+ .text.TIM_EncoderInterfaceConfig
+                0x0000000000000000       0x3c build/ch32v20x_tim.o
+ .text.TIM_ForcedOC1Config
+                0x0000000000000000       0x10 build/ch32v20x_tim.o
+ .text.TIM_ForcedOC2Config
+                0x0000000000000000       0x14 build/ch32v20x_tim.o
+ .text.TIM_ForcedOC3Config
+                0x0000000000000000       0x10 build/ch32v20x_tim.o
+ .text.TIM_ForcedOC4Config
+                0x0000000000000000       0x14 build/ch32v20x_tim.o
+ .text.TIM_ARRPreloadConfig
+                0x0000000000000000       0x1a build/ch32v20x_tim.o
+ .text.TIM_SelectCOM
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_SelectCCDMA
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_CCPreloadControl
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_OC1PreloadConfig
+                0x0000000000000000        0xe build/ch32v20x_tim.o
+ .text.TIM_OC2PreloadConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_OC3PreloadConfig
+                0x0000000000000000        0xe build/ch32v20x_tim.o
+ .text.TIM_OC4PreloadConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_OC1FastConfig
+                0x0000000000000000        0xe build/ch32v20x_tim.o
+ .text.TIM_OC2FastConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_OC3FastConfig
+                0x0000000000000000        0xe build/ch32v20x_tim.o
+ .text.TIM_OC4FastConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_ClearOC1Ref
+                0x0000000000000000       0x10 build/ch32v20x_tim.o
+ .text.TIM_ClearOC2Ref
+                0x0000000000000000       0x12 build/ch32v20x_tim.o
+ .text.TIM_ClearOC3Ref
+                0x0000000000000000       0x10 build/ch32v20x_tim.o
+ .text.TIM_ClearOC4Ref
+                0x0000000000000000       0x12 build/ch32v20x_tim.o
+ .text.TIM_OC1PolarityConfig
+                0x0000000000000000        0xe build/ch32v20x_tim.o
+ .text.TIM_OC1NPolarityConfig
+                0x0000000000000000        0xe build/ch32v20x_tim.o
+ .text.TIM_OC2PolarityConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_OC2NPolarityConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_OC3PolarityConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_OC3NPolarityConfig
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_OC4PolarityConfig
+                0x0000000000000000       0x14 build/ch32v20x_tim.o
+ .text.TIM_CCxCmd
+                0x0000000000000000       0x20 build/ch32v20x_tim.o
+ .text.TIM_CCxNCmd
+                0x0000000000000000       0x20 build/ch32v20x_tim.o
+ .text.TIM_SelectOCxM
+                0x0000000000000000       0x4c build/ch32v20x_tim.o
+ .text.TIM_UpdateDisableConfig
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_UpdateRequestConfig
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_SelectHallSensor
+                0x0000000000000000       0x1a build/ch32v20x_tim.o
+ .text.TIM_SelectOnePulseMode
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_SelectOutputTrigger
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_SelectSlaveMode
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_SelectMasterSlaveMode
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_SetCounter
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_SetAutoreload
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_SetCompare1
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_SetCompare2
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_SetCompare3
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_SetCompare4
+                0x0000000000000000        0x6 build/ch32v20x_tim.o
+ .text.TIM_SetIC1Prescaler
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_SetIC2Prescaler
+                0x0000000000000000       0x1a build/ch32v20x_tim.o
+ .text.TIM_PWMIConfig
+                0x0000000000000000       0xa4 build/ch32v20x_tim.o
+ .text.TIM_SetIC3Prescaler
+                0x0000000000000000       0x16 build/ch32v20x_tim.o
+ .text.TIM_SetIC4Prescaler
+                0x0000000000000000       0x1a build/ch32v20x_tim.o
+ .text.TIM_ICInit
+                0x0000000000000000      0x180 build/ch32v20x_tim.o
+ .text.TIM_SetClockDivision
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_GetCapture1
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_GetCapture2
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_GetCapture3
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_GetCapture4
+                0x0000000000000000        0x6 build/ch32v20x_tim.o
+ .text.TIM_GetCounter
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_GetPrescaler
+                0x0000000000000000        0x4 build/ch32v20x_tim.o
+ .text.TIM_GetFlagStatus
+                0x0000000000000000        0xa build/ch32v20x_tim.o
+ .text.TIM_ClearFlag
+                0x0000000000000000        0xc build/ch32v20x_tim.o
+ .text.TIM_GetITStatus
+                0x0000000000000000       0x18 build/ch32v20x_tim.o
+ .text.TIM_ClearITPendingBit
+                0x0000000000000000        0xc build/ch32v20x_tim.o
+ .debug_info    0x0000000000000000     0x29b8 build/ch32v20x_tim.o
+ .debug_abbrev  0x0000000000000000      0x408 build/ch32v20x_tim.o
+ .debug_loc     0x0000000000000000     0x1949 build/ch32v20x_tim.o
+ .debug_aranges
+                0x0000000000000000      0x2d0 build/ch32v20x_tim.o
+ .debug_ranges  0x0000000000000000      0x2f0 build/ch32v20x_tim.o
+ .debug_line    0x0000000000000000     0x304e build/ch32v20x_tim.o
+ .debug_str     0x0000000000000000     0x1274 build/ch32v20x_tim.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_tim.o
+ .debug_frame   0x0000000000000000      0x614 build/ch32v20x_tim.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_usart.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_usart.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_usart.o
+ .text.USART_DeInit
+                0x0000000000000000       0x9e build/ch32v20x_usart.o
+ .text.USART_StructInit
+                0x0000000000000000       0x18 build/ch32v20x_usart.o
+ .text.USART_ClockInit
+                0x0000000000000000       0x1e build/ch32v20x_usart.o
+ .text.USART_ClockStructInit
+                0x0000000000000000       0x12 build/ch32v20x_usart.o
+ .text.USART_ITConfig
+                0x0000000000000000       0x36 build/ch32v20x_usart.o
+ .text.USART_DMACmd
+                0x0000000000000000       0x12 build/ch32v20x_usart.o
+ .text.USART_SetAddress
+                0x0000000000000000       0x16 build/ch32v20x_usart.o
+ .text.USART_WakeUpConfig
+                0x0000000000000000       0x14 build/ch32v20x_usart.o
+ .text.USART_ReceiverWakeUpCmd
+                0x0000000000000000       0x18 build/ch32v20x_usart.o
+ .text.USART_LINBreakDetectLengthConfig
+                0x0000000000000000       0x18 build/ch32v20x_usart.o
+ .text.USART_LINCmd
+                0x0000000000000000       0x16 build/ch32v20x_usart.o
+ .text.USART_ReceiveData
+                0x0000000000000000        0x8 build/ch32v20x_usart.o
+ .text.USART_SendBreak
+                0x0000000000000000        0xa build/ch32v20x_usart.o
+ .text.USART_SetGuardTime
+                0x0000000000000000       0x12 build/ch32v20x_usart.o
+ .text.USART_SetPrescaler
+                0x0000000000000000       0x18 build/ch32v20x_usart.o
+ .text.USART_SmartCardCmd
+                0x0000000000000000       0x1a build/ch32v20x_usart.o
+ .text.USART_SmartCardNACKCmd
+                0x0000000000000000       0x18 build/ch32v20x_usart.o
+ .text.USART_HalfDuplexCmd
+                0x0000000000000000       0x18 build/ch32v20x_usart.o
+ .text.USART_OverSampling8Cmd
+                0x0000000000000000       0x12 build/ch32v20x_usart.o
+ .text.USART_OneBitMethodCmd
+                0x0000000000000000       0x1e build/ch32v20x_usart.o
+ .text.USART_IrDAConfig
+                0x0000000000000000       0x16 build/ch32v20x_usart.o
+ .text.USART_IrDACmd
+                0x0000000000000000       0x18 build/ch32v20x_usart.o
+ .text.USART_ClearFlag
+                0x0000000000000000        0xc build/ch32v20x_usart.o
+ .text.USART_GetITStatus
+                0x0000000000000000       0x3c build/ch32v20x_usart.o
+ .text.USART_ClearITPendingBit
+                0x0000000000000000       0x14 build/ch32v20x_usart.o
+ .text          0x0000000000000000        0x0 build/ch32v20x_wwdg.o
+ .data          0x0000000000000000        0x0 build/ch32v20x_wwdg.o
+ .bss           0x0000000000000000        0x0 build/ch32v20x_wwdg.o
+ .text.WWDG_DeInit
+                0x0000000000000000       0x2e build/ch32v20x_wwdg.o
+ .text.WWDG_SetPrescaler
+                0x0000000000000000       0x14 build/ch32v20x_wwdg.o
+ .text.WWDG_SetWindowValue
+                0x0000000000000000       0x26 build/ch32v20x_wwdg.o
+ .text.WWDG_EnableIT
+                0x0000000000000000       0x12 build/ch32v20x_wwdg.o
+ .text.WWDG_SetCounter
+                0x0000000000000000        0xe build/ch32v20x_wwdg.o
+ .text.WWDG_Enable
+                0x0000000000000000        0xe build/ch32v20x_wwdg.o
+ .text.WWDG_GetFlagStatus
+                0x0000000000000000        0xa build/ch32v20x_wwdg.o
+ .text.WWDG_ClearFlag
+                0x0000000000000000        0xa build/ch32v20x_wwdg.o
+ .debug_info    0x0000000000000000      0xb27 build/ch32v20x_wwdg.o
+ .debug_abbrev  0x0000000000000000      0x29d build/ch32v20x_wwdg.o
+ .debug_loc     0x0000000000000000       0xae build/ch32v20x_wwdg.o
+ .debug_aranges
+                0x0000000000000000       0x58 build/ch32v20x_wwdg.o
+ .debug_ranges  0x0000000000000000       0x48 build/ch32v20x_wwdg.o
+ .debug_line    0x0000000000000000      0x427 build/ch32v20x_wwdg.o
+ .debug_str     0x0000000000000000      0x6ab build/ch32v20x_wwdg.o
+ .comment       0x0000000000000000       0x34 build/ch32v20x_wwdg.o
+ .debug_frame   0x0000000000000000       0xa4 build/ch32v20x_wwdg.o
+ .text          0x0000000000000000        0x0 build/croutine.o
+ .data          0x0000000000000000        0x0 build/croutine.o
+ .bss           0x0000000000000000        0x0 build/croutine.o
+ .debug_info    0x0000000000000000      0x936 build/croutine.o
+ .debug_abbrev  0x0000000000000000      0x1b1 build/croutine.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/croutine.o
+ .debug_line    0x0000000000000000      0x1b5 build/croutine.o
+ .debug_str     0x0000000000000000      0x592 build/croutine.o
+ .comment       0x0000000000000000       0x34 build/croutine.o
+ .text          0x0000000000000000        0x0 build/event_groups.o
+ .data          0x0000000000000000        0x0 build/event_groups.o
+ .bss           0x0000000000000000        0x0 build/event_groups.o
+ .text.xEventGroupCreate
+                0x0000000000000000       0x2e build/event_groups.o
+ .text.xEventGroupWaitBits
+                0x0000000000000000      0x194 build/event_groups.o
+ .text.xEventGroupClearBits
+                0x0000000000000000       0x92 build/event_groups.o
+ .text.xEventGroupGetBitsFromISR
+                0x0000000000000000       0x26 build/event_groups.o
+ .text.xEventGroupSetBits
+                0x0000000000000000       0xe6 build/event_groups.o
+ .text.xEventGroupSync
+                0x0000000000000000      0x160 build/event_groups.o
+ .text.vEventGroupDelete
+                0x0000000000000000       0x9a build/event_groups.o
+ .text.vEventGroupSetBitsCallback
+                0x0000000000000000       0x18 build/event_groups.o
+ .text.vEventGroupClearBitsCallback
+                0x0000000000000000       0x18 build/event_groups.o
+ .rodata.xEventGroupWaitBits.str1.4
+                0x0000000000000000       0x41 build/event_groups.o
+ .debug_info    0x0000000000000000     0x18ec build/event_groups.o
+ .debug_abbrev  0x0000000000000000      0x3fe build/event_groups.o
+ .debug_loc     0x0000000000000000      0xd21 build/event_groups.o
+ .debug_aranges
+                0x0000000000000000       0x60 build/event_groups.o
+ .debug_ranges  0x0000000000000000       0xa0 build/event_groups.o
+ .debug_line    0x0000000000000000      0xfe0 build/event_groups.o
+ .debug_str     0x0000000000000000      0xde0 build/event_groups.o
+ .comment       0x0000000000000000       0x34 build/event_groups.o
+ .debug_frame   0x0000000000000000      0x148 build/event_groups.o
+ .text          0x0000000000000000        0x0 build/list.o
+ .data          0x0000000000000000        0x0 build/list.o
+ .bss           0x0000000000000000        0x0 build/list.o
+ .text.vListInsertEnd
+                0x0000000000000000       0x18 build/list.o
+ .text          0x0000000000000000        0x0 build/queue.o
+ .data          0x0000000000000000        0x0 build/queue.o
+ .bss           0x0000000000000000        0x0 build/queue.o
+ .text.prvCopyDataToQueue
+                0x0000000000000000       0x8c build/queue.o
+ .text.xQueueGetMutexHolder
+                0x0000000000000000       0x5c build/queue.o
+ .text.xQueueGetMutexHolderFromISR
+                0x0000000000000000       0x3e build/queue.o
+ .text.xQueueCreateCountingSemaphore
+                0x0000000000000000       0x50 build/queue.o
+ .text.xQueueGenericSend
+                0x0000000000000000      0x21c build/queue.o
+ .text.xQueueCreateMutex
+                0x0000000000000000       0x3e build/queue.o
+ .text.xQueueGiveMutexRecursive
+                0x0000000000000000       0x70 build/queue.o
+ .text.xQueueGenericSendFromISR
+                0x0000000000000000      0x158 build/queue.o
+ .text.xQueueGiveFromISR
+                0x0000000000000000      0x130 build/queue.o
+ .text.xQueueSemaphoreTake
+                0x0000000000000000      0x244 build/queue.o
+ .text.xQueueTakeMutexRecursive
+                0x0000000000000000       0x6e build/queue.o
+ .text.xQueuePeek
+                0x0000000000000000      0x1d4 build/queue.o
+ .text.xQueueReceiveFromISR
+                0x0000000000000000      0x114 build/queue.o
+ .text.xQueuePeekFromISR
+                0x0000000000000000       0xcc build/queue.o
+ .text.uxQueueMessagesWaiting
+                0x0000000000000000       0x58 build/queue.o
+ .text.uxQueueSpacesAvailable
+                0x0000000000000000       0x5a build/queue.o
+ .text.uxQueueMessagesWaitingFromISR
+                0x0000000000000000       0x38 build/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x0000000000000000       0x3c build/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x0000000000000000       0x40 build/queue.o
+ .text.pcQueueGetName
+                0x0000000000000000       0x5e build/queue.o
+ .text.vQueueUnregisterQueue
+                0x0000000000000000       0x62 build/queue.o
+ .text.vQueueDelete
+                0x0000000000000000       0x50 build/queue.o
+ .text          0x0000000000000000        0x0 build/stream_buffer.o
+ .data          0x0000000000000000        0x0 build/stream_buffer.o
+ .bss           0x0000000000000000        0x0 build/stream_buffer.o
+ .text.prvBytesInBuffer
+                0x0000000000000000       0x14 build/stream_buffer.o
+ .text.prvInitialiseNewStreamBuffer
+                0x0000000000000000       0x7c build/stream_buffer.o
+ .text.prvWriteBytesToBuffer.part.1
+                0x0000000000000000       0xcc build/stream_buffer.o
+ .text.prvWriteMessageToBuffer
+                0x0000000000000000       0x58 build/stream_buffer.o
+ .text.prvReadBytesFromBuffer.part.2
+                0x0000000000000000       0xc0 build/stream_buffer.o
+ .text.prvReadMessageFromBuffer
+                0x0000000000000000       0x5e build/stream_buffer.o
+ .text.xStreamBufferGenericCreate
+                0x0000000000000000       0xde build/stream_buffer.o
+ .text.vStreamBufferDelete
+                0x0000000000000000       0x58 build/stream_buffer.o
+ .text.xStreamBufferReset
+                0x0000000000000000       0x70 build/stream_buffer.o
+ .text.xStreamBufferSetTriggerLevel
+                0x0000000000000000       0x46 build/stream_buffer.o
+ .text.xStreamBufferSpacesAvailable
+                0x0000000000000000       0x50 build/stream_buffer.o
+ .text.xStreamBufferBytesAvailable
+                0x0000000000000000       0x42 build/stream_buffer.o
+ .text.xStreamBufferSend
+                0x0000000000000000      0x1c0 build/stream_buffer.o
+ .text.xStreamBufferSendFromISR
+                0x0000000000000000       0xe4 build/stream_buffer.o
+ .text.xStreamBufferReceive
+                0x0000000000000000      0x154 build/stream_buffer.o
+ .text.xStreamBufferNextMessageLengthBytes
+                0x0000000000000000       0x94 build/stream_buffer.o
+ .text.xStreamBufferReceiveFromISR
+                0x0000000000000000       0xd0 build/stream_buffer.o
+ .text.xStreamBufferIsEmpty
+                0x0000000000000000       0x3e build/stream_buffer.o
+ .text.xStreamBufferIsFull
+                0x0000000000000000       0x50 build/stream_buffer.o
+ .text.xStreamBufferSendCompletedFromISR
+                0x0000000000000000       0x7c build/stream_buffer.o
+ .text.xStreamBufferReceiveCompletedFromISR
+                0x0000000000000000       0x7c build/stream_buffer.o
+ .rodata.prvInitialiseNewStreamBuffer.str1.4
+                0x0000000000000000       0x45 build/stream_buffer.o
+ .debug_info    0x0000000000000000     0x21a9 build/stream_buffer.o
+ .debug_abbrev  0x0000000000000000      0x411 build/stream_buffer.o
+ .debug_loc     0x0000000000000000     0x195e build/stream_buffer.o
+ .debug_aranges
+                0x0000000000000000       0xc0 build/stream_buffer.o
+ .debug_ranges  0x0000000000000000       0xe8 build/stream_buffer.o
+ .debug_line    0x0000000000000000     0x1e8b build/stream_buffer.o
+ .debug_str     0x0000000000000000      0xc60 build/stream_buffer.o
+ .comment       0x0000000000000000       0x34 build/stream_buffer.o
+ .debug_frame   0x0000000000000000      0x300 build/stream_buffer.o
+ .text          0x0000000000000000        0x0 build/tasks.o
+ .data          0x0000000000000000        0x0 build/tasks.o
+ .bss           0x0000000000000000        0x0 build/tasks.o
+ .text.prvSearchForNameWithinSingleList
+                0x0000000000000000       0x5a build/tasks.o
+ .text.prvTaskIsTaskSuspended
+                0x0000000000000000       0x58 build/tasks.o
+ .text.vTaskDelete
+                0x0000000000000000      0x106 build/tasks.o
+ .text.eTaskGetState
+                0x0000000000000000       0xb2 build/tasks.o
+ .text.uxTaskPriorityGet
+                0x0000000000000000       0x38 build/tasks.o
+ .text.uxTaskPriorityGetFromISR
+                0x0000000000000000       0x30 build/tasks.o
+ .text.vTaskPrioritySet
+                0x0000000000000000      0x11a build/tasks.o
+ .text.vTaskResume
+                0x0000000000000000       0xce build/tasks.o
+ .text.xTaskResumeFromISR
+                0x0000000000000000       0xee build/tasks.o
+ .text.vTaskEndScheduler
+                0x0000000000000000       0x2a build/tasks.o
+ .text.xTaskGetTickCountFromISR
+                0x0000000000000000        0xa build/tasks.o
+ .text.uxTaskGetNumberOfTasks
+                0x0000000000000000        0xa build/tasks.o
+ .text.pcTaskGetName
+                0x0000000000000000       0x44 build/tasks.o
+ .text.xTaskDelayUntil
+                0x0000000000000000       0xf2 build/tasks.o
+ .text.xTaskGetHandle
+                0x0000000000000000       0xea build/tasks.o
+ .text.xTaskCatchUpTicks
+                0x0000000000000000       0x6a build/tasks.o
+ .text.xTaskAbortDelay
+                0x0000000000000000       0xea build/tasks.o
+ .text.vTaskSwitchContext
+                0x0000000000000000       0xb0 build/tasks.o
+ .text.vTaskSuspend
+                0x0000000000000000      0x114 build/tasks.o
+ .text.vTaskPlaceOnUnorderedEventList
+                0x0000000000000000       0xb4 build/tasks.o
+ .text.vTaskRemoveFromUnorderedEventList
+                0x0000000000000000      0x10e build/tasks.o
+ .text.vTaskSetTimeOutState
+                0x0000000000000000       0x68 build/tasks.o
+ .text.xTaskGetCurrentTaskHandle
+                0x0000000000000000        0xa build/tasks.o
+ .text.xTaskPriorityInherit
+                0x0000000000000000       0xc0 build/tasks.o
+ .text.xTaskPriorityDisinherit
+                0x0000000000000000       0xe2 build/tasks.o
+ .text.vTaskPriorityDisinheritAfterTimeout
+                0x0000000000000000       0xfe build/tasks.o
+ .text.uxTaskResetEventItemValue
+                0x0000000000000000       0x1a build/tasks.o
+ .text.pvTaskIncrementMutexHeldCount
+                0x0000000000000000       0x1c build/tasks.o
+ .text.ulTaskGenericNotifyTake
+                0x0000000000000000       0xb8 build/tasks.o
+ .text.xTaskGenericNotifyWait
+                0x0000000000000000       0xe0 build/tasks.o
+ .text.xTaskGenericNotify
+                0x0000000000000000      0x1b4 build/tasks.o
+ .rodata.xTaskGenericNotify
+                0x0000000000000000       0x14 build/tasks.o
+ .text.xTaskGenericNotifyFromISR
+                0x0000000000000000      0x1f0 build/tasks.o
+ .rodata.xTaskGenericNotifyFromISR
+                0x0000000000000000       0x14 build/tasks.o
+ .text.vTaskGenericNotifyGiveFromISR
+                0x0000000000000000      0x178 build/tasks.o
+ .text.xTaskGenericNotifyStateClear
+                0x0000000000000000       0x72 build/tasks.o
+ .text.ulTaskGenericNotifyValueClear
+                0x0000000000000000       0x4e build/tasks.o
+ .text          0x0000000000000000        0x0 build/timers.o
+ .data          0x0000000000000000        0x0 build/timers.o
+ .bss           0x0000000000000000        0x0 build/timers.o
+ .text.xTimerCreate
+                0x0000000000000000       0x9c build/timers.o
+ .text.xTimerGenericCommand
+                0x0000000000000000       0x92 build/timers.o
+ .text.xTimerGetTimerDaemonTaskHandle
+                0x0000000000000000       0x3c build/timers.o
+ .text.xTimerGetPeriod
+                0x0000000000000000       0x36 build/timers.o
+ .text.vTimerSetReloadMode
+                0x0000000000000000       0x68 build/timers.o
+ .text.uxTimerGetReloadMode
+                0x0000000000000000       0x5e build/timers.o
+ .text.xTimerGetExpiryTime
+                0x0000000000000000       0x36 build/timers.o
+ .text.pcTimerGetName
+                0x0000000000000000       0x36 build/timers.o
+ .text.xTimerIsTimerActive
+                0x0000000000000000       0x5c build/timers.o
+ .text.pvTimerGetTimerID
+                0x0000000000000000       0x58 build/timers.o
+ .text.vTimerSetTimerID
+                0x0000000000000000       0x58 build/timers.o
+ .text.xTimerPendFunctionCallFromISR
+                0x0000000000000000       0x36 build/timers.o
+ .text.xTimerPendFunctionCall
+                0x0000000000000000       0x62 build/timers.o
+ .text          0x0000000000000000        0x0 build/mpu_wrappers.o
+ .data          0x0000000000000000        0x0 build/mpu_wrappers.o
+ .bss           0x0000000000000000        0x0 build/mpu_wrappers.o
+ .text.MPU_xTaskCreate
+                0x0000000000000000       0x4e build/mpu_wrappers.o
+ .text.MPU_vTaskDelete
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_xTaskDelayUntil
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xTaskAbortDelay
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_vTaskDelay
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_uxTaskPriorityGet
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_vTaskPrioritySet
+                0x0000000000000000       0x3a build/mpu_wrappers.o
+ .text.MPU_eTaskGetState
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_vTaskSuspend
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_vTaskResume
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_vTaskSuspendAll
+                0x0000000000000000       0x2e build/mpu_wrappers.o
+ .text.MPU_xTaskResumeAll
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_xTaskGetTickCount
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_uxTaskGetNumberOfTasks
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_pcTaskGetName
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xTaskGetHandle
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xTaskCatchUpTicks
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xTaskGetCurrentTaskHandle
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_vTaskSetTimeOutState
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_xTaskCheckForTimeOut
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xTaskGenericNotify
+                0x0000000000000000       0x4a build/mpu_wrappers.o
+ .text.MPU_xTaskGenericNotifyWait
+                0x0000000000000000       0x4a build/mpu_wrappers.o
+ .text.MPU_ulTaskGenericNotifyTake
+                0x0000000000000000       0x42 build/mpu_wrappers.o
+ .text.MPU_xTaskGenericNotifyStateClear
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_ulTaskGenericNotifyValueClear
+                0x0000000000000000       0x42 build/mpu_wrappers.o
+ .text.MPU_xQueueGenericCreate
+                0x0000000000000000       0x42 build/mpu_wrappers.o
+ .text.MPU_xQueueGenericReset
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xQueueGenericSend
+                0x0000000000000000       0x46 build/mpu_wrappers.o
+ .text.MPU_uxQueueMessagesWaiting
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_uxQueueSpacesAvailable
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xQueueReceive
+                0x0000000000000000       0x42 build/mpu_wrappers.o
+ .text.MPU_xQueuePeek
+                0x0000000000000000       0x42 build/mpu_wrappers.o
+ .text.MPU_xQueueSemaphoreTake
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xQueueGetMutexHolder
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xQueueCreateMutex
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xQueueCreateCountingSemaphore
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xQueueTakeMutexRecursive
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xQueueGiveMutexRecursive
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_vQueueAddToRegistry
+                0x0000000000000000       0x3a build/mpu_wrappers.o
+ .text.MPU_vQueueUnregisterQueue
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_pcQueueGetName
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_vQueueDelete
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_xTimerCreate
+                0x0000000000000000       0x4a build/mpu_wrappers.o
+ .text.MPU_pvTimerGetTimerID
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_vTimerSetTimerID
+                0x0000000000000000       0x3a build/mpu_wrappers.o
+ .text.MPU_xTimerIsTimerActive
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xTimerGetTimerDaemonTaskHandle
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_xTimerPendFunctionCall
+                0x0000000000000000       0x46 build/mpu_wrappers.o
+ .text.MPU_vTimerSetReloadMode
+                0x0000000000000000       0x3a build/mpu_wrappers.o
+ .text.MPU_uxTimerGetReloadMode
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_pcTimerGetName
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xTimerGetPeriod
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xTimerGetExpiryTime
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xTimerGenericCommand
+                0x0000000000000000       0x4a build/mpu_wrappers.o
+ .text.MPU_xEventGroupCreate
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_xEventGroupWaitBits
+                0x0000000000000000       0x4a build/mpu_wrappers.o
+ .text.MPU_xEventGroupClearBits
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xEventGroupSetBits
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xEventGroupSync
+                0x0000000000000000       0x46 build/mpu_wrappers.o
+ .text.MPU_vEventGroupDelete
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferSend
+                0x0000000000000000       0x46 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferNextMessageLengthBytes
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferReceive
+                0x0000000000000000       0x46 build/mpu_wrappers.o
+ .text.MPU_vStreamBufferDelete
+                0x0000000000000000       0x32 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferIsFull
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferIsEmpty
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferReset
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferSpacesAvailable
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferBytesAvailable
+                0x0000000000000000       0x36 build/mpu_wrappers.o
+ .text.MPU_xStreamBufferSetTriggerLevel
+                0x0000000000000000       0x3e build/mpu_wrappers.o
+ .text.MPU_xStreamBufferGenericCreate
+                0x0000000000000000       0x42 build/mpu_wrappers.o
+ .debug_info    0x0000000000000000     0x41df build/mpu_wrappers.o
+ .debug_abbrev  0x0000000000000000      0x2fd build/mpu_wrappers.o
+ .debug_loc     0x0000000000000000     0x1541 build/mpu_wrappers.o
+ .debug_aranges
+                0x0000000000000000      0x250 build/mpu_wrappers.o
+ .debug_ranges  0x0000000000000000      0x240 build/mpu_wrappers.o
+ .debug_line    0x0000000000000000     0x1d80 build/mpu_wrappers.o
+ .debug_str     0x0000000000000000     0x184b build/mpu_wrappers.o
+ .comment       0x0000000000000000       0x34 build/mpu_wrappers.o
+ .debug_frame   0x0000000000000000      0x9e4 build/mpu_wrappers.o
+ .text          0x0000000000000000        0x0 build/port.o
+ .data          0x0000000000000000        0x0 build/port.o
+ .bss           0x0000000000000000        0x0 build/port.o
+ .text.vPortEndScheduler
+                0x0000000000000000        0x2 build/port.o
+ .text.xPortSetInterruptMask
+                0x0000000000000000        0xc build/port.o
+ .text.vPortClearInterruptMask
+                0x0000000000000000        0x6 build/port.o
+ .rodata.xISRStackTop
+                0x0000000000000000        0x4 build/port.o
+ .text          0x0000000000000000        0x0 build/heap_4.o
+ .data          0x0000000000000000        0x0 build/heap_4.o
+ .bss           0x0000000000000000        0x0 build/heap_4.o
+ .text.xPortGetFreeHeapSize
+                0x0000000000000000        0xa build/heap_4.o
+ .text.xPortGetMinimumEverFreeHeapSize
+                0x0000000000000000        0xa build/heap_4.o
+ .text.vPortInitialiseBlocks
+                0x0000000000000000        0x2 build/heap_4.o
+ .text.vPortGetHeapStats
+                0x0000000000000000       0xa2 build/heap_4.o
+ .text          0x0000000000000000        0x0 build/startup_ch32v20x_D6.o
+ .data          0x0000000000000000        0x0 build/startup_ch32v20x_D6.o
+ .bss           0x0000000000000000        0x0 build/startup_ch32v20x_D6.o
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+ .eh_frame      0x0000000000000000       0x68 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(muldi3.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(muldi3.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(div.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(div.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
+ .text._printf_r
+                0x0000000000000000       0x40 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+ .text.strlen   0x0000000000000000       0x12 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000000       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
+ .text.__swbuf  0x0000000000000000       0x16 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+ .text.fflush   0x0000000000000000       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text.__fp_lock
+                0x0000000000000000        0x4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text.__fp_unlock
+                0x0000000000000000        0x4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text._cleanup
+                0x0000000000000000       0x12 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text.__sfp_lock_acquire
+                0x0000000000000000        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text.__sfp_lock_release
+                0x0000000000000000        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text.__sinit_lock_acquire
+                0x0000000000000000        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text.__sinit_lock_release
+                0x0000000000000000        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text.__fp_lock_all
+                0x0000000000000000       0x1a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text.__fp_unlock_all
+                0x0000000000000000       0x1a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
+ .text._fwalk   0x0000000000000000       0x54 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ .text.__sprint_r
+                0x0000000000000000       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ .text.vfprintf
+                0x0000000000000000       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+ .text.__seofread
+                0x0000000000000000        0x4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-writer.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-writer.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-writer.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fvwrite.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fvwrite.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fvwrite.o)
+ .text.__sfvwrite_r
+                0x0000000000000000      0x338 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000000000000000       0x38 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fvwrite.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memchr.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memchr.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memchr.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memmove.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memmove.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memmove.o)
+ .text.memmove  0x0000000000000000       0x46 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000000000       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memmove.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-reallocr.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-reallocr.o)
+ .text._realloc_r
+                0x0000000000000000       0x72 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000000000000000       0x38 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-reallocr.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000      0x102 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-msizer.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-msizer.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-msizer.o)
+ .text._malloc_usable_size_r
+                0x0000000000000000       0x14 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000000000000000       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-msizer.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
+ .text          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000010000 xr
+RAM              0x0000000020000000 0x0000000000005000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/main.o
+LOAD build/system_ch32v20x.o
+LOAD build/debug.o
+LOAD build/ch32v20x_adc.o
+LOAD build/ch32v20x_dbgmcu.o
+LOAD build/ch32v20x_dma.o
+LOAD build/ch32v20x_exti.o
+LOAD build/ch32v20x_flash.o
+LOAD build/ch32v20x_gpio.o
+LOAD build/ch32v20x_i2c.o
+LOAD build/ch32v20x_iwdg.o
+LOAD build/ch32v20x_misc.o
+LOAD build/ch32v20x_opa.o
+LOAD build/ch32v20x_pwr.o
+LOAD build/ch32v20x_rcc.o
+LOAD build/ch32v20x_spi.o
+LOAD build/ch32v20x_tim.o
+LOAD build/ch32v20x_usart.o
+LOAD build/ch32v20x_wwdg.o
+LOAD build/croutine.o
+LOAD build/event_groups.o
+LOAD build/list.o
+LOAD build/queue.o
+LOAD build/stream_buffer.o
+LOAD build/tasks.o
+LOAD build/timers.o
+LOAD build/mpu_wrappers.o
+LOAD build/port.o
+LOAD build/heap_4.o
+LOAD build/startup_ch32v20x_D6.o
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+START GROUP
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a
+END GROUP
+START GROUP
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a
+END GROUP
+                0x0000000000000800                __stack_size = 0x800
+                [!provide]                        PROVIDE (_stack_size = __stack_size)
+
+.init           0x0000000000000000       0x38
+                0x0000000000000000                _sinit = .
+                0x0000000000000000                . = ALIGN (0x4)
+ *(SORT_NONE(.init))
+ .init          0x0000000000000000       0x38 build/startup_ch32v20x_D6.o
+                0x0000000000000000                _start
+                0x0000000000000038                . = ALIGN (0x4)
+                0x0000000000000038                _einit = .
+
+.vector         0x0000000000000038      0x108
+ *(.vector)
+ .vector        0x0000000000000038       0xfc build/startup_ch32v20x_D6.o
+                0x0000000000000140                . = ALIGN (0x40)
+ *fill*         0x0000000000000134        0xc 
+
+.text           0x0000000000000140     0x3348
+                0x0000000000000140                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000000000000140       0x14 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+                0x0000000000000140                __riscv_save_1
+                0x0000000000000140                __riscv_save_2
+                0x0000000000000140                __riscv_save_0
+                0x000000000000014a                __riscv_restore_0
+                0x000000000000014a                __riscv_restore_1
+                0x000000000000014a                __riscv_restore_2
+ .text          0x0000000000000154       0x16 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(muldi3.o)
+                0x0000000000000154                __mulsi3
+ *fill*         0x000000000000016a        0x2 
+ .text          0x000000000000016c       0x7e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(div.o)
+                0x000000000000016c                __divsi3
+                0x0000000000000174                __udivsi3
+                0x00000000000001a0                __umodsi3
+                0x00000000000001c4                __modsi3
+ .text          0x00000000000001ea       0xa8 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
+                0x00000000000001ea                memset
+ *(.text.*)
+ .text.task1_task
+                0x0000000000000292       0x36 build/main.o
+                0x0000000000000292                task1_task
+ .text.task2_task
+                0x00000000000002c8       0x36 build/main.o
+                0x00000000000002c8                task2_task
+ .text.task3_task
+                0x00000000000002fe       0x3a build/main.o
+                0x00000000000002fe                task3_task
+ .text.GPIO_Toggle_INIT
+                0x0000000000000338       0x30 build/main.o
+                0x0000000000000338                GPIO_Toggle_INIT
+ .text.startup.main
+                0x0000000000000368       0xae build/main.o
+                0x0000000000000368                main
+ .text.SystemInit
+                0x0000000000000416       0xea build/system_ch32v20x.o
+                0x0000000000000416                SystemInit
+ .text.Delay_Init
+                0x0000000000000500       0x30 build/debug.o
+                0x0000000000000500                Delay_Init
+ .text.USART_Printf_Init
+                0x0000000000000530       0x50 build/debug.o
+                0x0000000000000530                USART_Printf_Init
+ .text._write   0x0000000000000580       0x4a build/debug.o
+                0x0000000000000580                _write
+ .text._sbrk    0x00000000000005ca       0x2e build/debug.o
+                0x00000000000005ca                _sbrk
+ .text.GPIO_Init
+                0x00000000000005f8      0x108 build/ch32v20x_gpio.o
+                0x00000000000005f8                GPIO_Init
+ .text.GPIO_SetBits
+                0x0000000000000700       0x14 build/ch32v20x_gpio.o
+                0x0000000000000700                GPIO_SetBits
+ .text.GPIO_ResetBits
+                0x0000000000000714       0x14 build/ch32v20x_gpio.o
+                0x0000000000000714                GPIO_ResetBits
+ .text.NVIC_PriorityGroupConfig
+                0x0000000000000728        0x6 build/ch32v20x_misc.o
+                0x0000000000000728                NVIC_PriorityGroupConfig
+ .text.RCC_GetClocksFreq
+                0x000000000000072e       0xc6 build/ch32v20x_rcc.o
+                0x000000000000072e                RCC_GetClocksFreq
+ .text.RCC_APB2PeriphClockCmd
+                0x00000000000007f4       0x1e build/ch32v20x_rcc.o
+                0x00000000000007f4                RCC_APB2PeriphClockCmd
+ .text.USART_Init
+                0x0000000000000812       0xcc build/ch32v20x_usart.o
+                0x0000000000000812                USART_Init
+ .text.USART_Cmd
+                0x00000000000008de       0x16 build/ch32v20x_usart.o
+                0x00000000000008de                USART_Cmd
+ .text.USART_SendData
+                0x00000000000008f4        0x8 build/ch32v20x_usart.o
+                0x00000000000008f4                USART_SendData
+ .text.USART_GetFlagStatus
+                0x00000000000008fc        0xa build/ch32v20x_usart.o
+                0x00000000000008fc                USART_GetFlagStatus
+ .text.vListInitialise
+                0x0000000000000906       0x14 build/list.o
+                0x0000000000000906                vListInitialise
+ .text.vListInitialiseItem
+                0x000000000000091a        0x6 build/list.o
+                0x000000000000091a                vListInitialiseItem
+ .text.vListInsert
+                0x0000000000000920       0x2e build/list.o
+                0x0000000000000920                vListInsert
+ .text.uxListRemove
+                0x000000000000094e       0x20 build/list.o
+                0x000000000000094e                uxListRemove
+ .text.prvIsQueueEmpty
+                0x000000000000096e       0x1e build/queue.o
+ .text.prvCopyDataFromQueue
+                0x000000000000098c       0x28 build/queue.o
+ .text.prvUnlockQueue
+                0x00000000000009b4       0x8a build/queue.o
+ .text.xQueueGenericReset
+                0x0000000000000a3e      0x10e build/queue.o
+                0x0000000000000a3e                xQueueGenericReset
+ .text.xQueueGenericCreate
+                0x0000000000000b4c       0xbe build/queue.o
+                0x0000000000000b4c                xQueueGenericCreate
+ .text.xQueueReceive
+                0x0000000000000c0a      0x158 build/queue.o
+                0x0000000000000c0a                xQueueReceive
+ .text.vQueueAddToRegistry
+                0x0000000000000d62       0x68 build/queue.o
+                0x0000000000000d62                vQueueAddToRegistry
+ .text.vQueueWaitForMessageRestricted
+                0x0000000000000dca       0x5a build/queue.o
+                0x0000000000000dca                vQueueWaitForMessageRestricted
+ .text.prvResetNextTaskUnblockTime
+                0x0000000000000e24       0x1c build/tasks.o
+ .text.prvAddCurrentTaskToDelayedList
+                0x0000000000000e40       0x90 build/tasks.o
+ .text.prvIdleTask
+                0x0000000000000ed0       0x40 build/tasks.o
+ .text.xTaskCreate
+                0x0000000000000f10      0x1e4 build/tasks.o
+                0x0000000000000f10                xTaskCreate
+ .text.vTaskStartScheduler
+                0x00000000000010f4       0x84 build/tasks.o
+                0x00000000000010f4                vTaskStartScheduler
+ .text.vTaskSuspendAll
+                0x0000000000001178        0xc build/tasks.o
+                0x0000000000001178                vTaskSuspendAll
+ .text.xTaskGetTickCount
+                0x0000000000001184        0x6 build/tasks.o
+                0x0000000000001184                xTaskGetTickCount
+ .text.xTaskIncrementTick
+                0x000000000000118a      0x16a build/tasks.o
+                0x000000000000118a                xTaskIncrementTick
+ .text.xTaskResumeAll
+                0x00000000000012f4      0x134 build/tasks.o
+                0x00000000000012f4                xTaskResumeAll
+ .text.vTaskDelay
+                0x0000000000001428       0x5e build/tasks.o
+                0x0000000000001428                vTaskDelay
+ .text.vTaskPlaceOnEventList
+                0x0000000000001486       0x44 build/tasks.o
+                0x0000000000001486                vTaskPlaceOnEventList
+ .text.vTaskPlaceOnEventListRestricted
+                0x00000000000014ca       0x72 build/tasks.o
+                0x00000000000014ca                vTaskPlaceOnEventListRestricted
+ .text.xTaskRemoveFromEventList
+                0x000000000000153c       0xd8 build/tasks.o
+                0x000000000000153c                xTaskRemoveFromEventList
+ .text.vTaskInternalSetTimeOutState
+                0x0000000000001614        0xe build/tasks.o
+                0x0000000000001614                vTaskInternalSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x0000000000001622       0xb8 build/tasks.o
+                0x0000000000001622                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x00000000000016da        0x8 build/tasks.o
+                0x00000000000016da                vTaskMissedYield
+ .text.xTaskGetSchedulerState
+                0x00000000000016e2       0x14 build/tasks.o
+                0x00000000000016e2                xTaskGetSchedulerState
+ .text.prvCheckForValidListAndQueue
+                0x00000000000016f6       0x4e build/timers.o
+ .text.prvInsertTimerInActiveList
+                0x0000000000001744       0x3e build/timers.o
+ .text.prvReloadTimer
+                0x0000000000001782       0x2c build/timers.o
+ .text.prvProcessExpiredTimer
+                0x00000000000017ae       0x40 build/timers.o
+ .text.prvSwitchTimerLists
+                0x00000000000017ee       0x26 build/timers.o
+ .text.prvTimerTask
+                0x0000000000001814      0x188 build/timers.o
+ .text.xTimerCreateTimerTask
+                0x000000000000199c       0x56 build/timers.o
+                0x000000000000199c                xTimerCreateTimerTask
+ .text.vPortSetupTimerInterrupt
+                0x00000000000019f2       0x44 build/port.o
+                0x00000000000019f2                vPortSetupTimerInterrupt
+ .text.xPortStartScheduler
+                0x0000000000001a36       0x92 build/port.o
+                0x0000000000001a36                xPortStartScheduler
+ .text.SysTick_Handler
+                0x0000000000001ac8       0x68 build/port.o
+                0x0000000000001ac8                SysTick_Handler
+ .text.vPortEnterCritical
+                0x0000000000001b30       0x1a build/port.o
+                0x0000000000001b30                vPortEnterCritical
+ .text.vPortExitCritical
+                0x0000000000001b4a       0x44 build/port.o
+                0x0000000000001b4a                vPortExitCritical
+ .text.prvInsertBlockIntoFreeList
+                0x0000000000001b8e       0x48 build/heap_4.o
+ .text.pvPortMalloc
+                0x0000000000001bd6      0x192 build/heap_4.o
+                0x0000000000001bd6                pvPortMalloc
+ .text.vPortFree
+                0x0000000000001d68       0xa4 build/heap_4.o
+                0x0000000000001d68                vPortFree
+ .text.vector_handler
+                0x0000000000001e0c       0x6c build/startup_ch32v20x_D6.o
+                0x0000000000001e0c                NMI_Handler
+                0x0000000000001e0e                HardFault_Handler
+                0x0000000000001e10                Ecall_M_Mode_Handler
+                0x0000000000001e12                Ecall_U_Mode_Handler
+                0x0000000000001e14                Break_Point_Handler
+                0x0000000000001e18                SW_Handler
+                0x0000000000001e1a                WWDG_IRQHandler
+                0x0000000000001e1c                PVD_IRQHandler
+                0x0000000000001e1e                TAMPER_IRQHandler
+                0x0000000000001e20                RTC_IRQHandler
+                0x0000000000001e22                FLASH_IRQHandler
+                0x0000000000001e24                RCC_IRQHandler
+                0x0000000000001e26                EXTI0_IRQHandler
+                0x0000000000001e28                EXTI1_IRQHandler
+                0x0000000000001e2a                EXTI2_IRQHandler
+                0x0000000000001e2c                EXTI3_IRQHandler
+                0x0000000000001e2e                EXTI4_IRQHandler
+                0x0000000000001e30                DMA1_Channel1_IRQHandler
+                0x0000000000001e32                DMA1_Channel2_IRQHandler
+                0x0000000000001e34                DMA1_Channel3_IRQHandler
+                0x0000000000001e36                DMA1_Channel4_IRQHandler
+                0x0000000000001e38                DMA1_Channel5_IRQHandler
+                0x0000000000001e3a                DMA1_Channel6_IRQHandler
+                0x0000000000001e3c                DMA1_Channel7_IRQHandler
+                0x0000000000001e3e                ADC1_2_IRQHandler
+                0x0000000000001e40                USB_HP_CAN1_TX_IRQHandler
+                0x0000000000001e42                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000000001e44                CAN1_RX1_IRQHandler
+                0x0000000000001e46                CAN1_SCE_IRQHandler
+                0x0000000000001e48                EXTI9_5_IRQHandler
+                0x0000000000001e4a                TIM1_BRK_IRQHandler
+                0x0000000000001e4c                TIM1_UP_IRQHandler
+                0x0000000000001e4e                TIM1_TRG_COM_IRQHandler
+                0x0000000000001e50                TIM1_CC_IRQHandler
+                0x0000000000001e52                TIM2_IRQHandler
+                0x0000000000001e54                TIM3_IRQHandler
+                0x0000000000001e56                TIM4_IRQHandler
+                0x0000000000001e58                I2C1_EV_IRQHandler
+                0x0000000000001e5a                I2C1_ER_IRQHandler
+                0x0000000000001e5c                I2C2_EV_IRQHandler
+                0x0000000000001e5e                I2C2_ER_IRQHandler
+                0x0000000000001e60                SPI1_IRQHandler
+                0x0000000000001e62                SPI2_IRQHandler
+                0x0000000000001e64                USART1_IRQHandler
+                0x0000000000001e66                USART2_IRQHandler
+                0x0000000000001e68                USART3_IRQHandler
+                0x0000000000001e6a                EXTI15_10_IRQHandler
+                0x0000000000001e6c                RTCAlarm_IRQHandler
+                0x0000000000001e6e                USBWakeUp_IRQHandler
+                0x0000000000001e70                USBHD_IRQHandler
+                0x0000000000001e72                USBHDWakeUp_IRQHandler
+                0x0000000000001e74                UART4_IRQHandler
+                0x0000000000001e76                DMA1_Channel8_IRQHandler
+ .text.handle_reset
+                0x0000000000001e78       0x8a build/startup_ch32v20x_D6.o
+                0x0000000000001e78                handle_reset
+ .text.memcpy   0x0000000000001f02       0xd2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+                0x0000000000001f02                memcpy
+ .text.printf   0x0000000000001fd4       0x44 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
+                0x0000000000001fd4                iprintf
+                0x0000000000001fd4                printf
+ .text._puts_r  0x0000000000002018       0xca e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+                0x0000000000002018                _puts_r
+ .text.puts     0x00000000000020e2        0xe e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+                0x00000000000020e2                puts
+ .text.__swbuf_r
+                0x00000000000020f0       0xc2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
+                0x00000000000020f0                __swbuf_r
+ .text.__swsetup_r
+                0x00000000000021b2      0x102 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o)
+                0x00000000000021b2                __swsetup_r
+ .text.__sflush_r
+                0x00000000000022b4      0x128 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+                0x00000000000022b4                __sflush_r
+ .text._fflush_r
+                0x00000000000023dc       0x66 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+                0x00000000000023dc                _fflush_r
+ .text.std      0x0000000000002442       0x66 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .text._cleanup_r
+                0x00000000000024a8        0xa e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x00000000000024a8                _cleanup_r
+ .text.__sfmoreglue
+                0x00000000000024b2       0x48 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x00000000000024b2                __sfmoreglue
+ .text.__sinit  0x00000000000024fa       0x6a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x00000000000024fa                __sinit
+ .text.__sfp    0x0000000000002564       0xa0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000002564                __sfp
+ .text._fwalk_reent
+                0x0000000000002604       0x5e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
+                0x0000000000002604                _fwalk_reent
+ .text.__swhatbuf_r
+                0x0000000000002662       0x62 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+                0x0000000000002662                __swhatbuf_r
+ .text.__smakebuf_r
+                0x00000000000026c4       0x8c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+                0x00000000000026c4                __smakebuf_r
+ .text._free_r  0x0000000000002750       0xb0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
+                0x0000000000002750                _free_r
+ .text._malloc_r
+                0x0000000000002800       0xda e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000002800                _malloc_r
+ .text.__sfputc_r
+                0x00000000000028da       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ .text.__sfputs_r
+                0x0000000000002902       0x3c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000002902                __sfputs_r
+ .text._vfprintf_r
+                0x000000000000293e      0x2aa e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000000293e                _vfprintf_r
+                0x000000000000293e                _vfiprintf_r
+ .text._printf_common
+                0x0000000000002be8      0x12c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000002be8                _printf_common
+ .text._printf_i
+                0x0000000000002d14      0x2ba e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000002d14                _printf_i
+ .text._sbrk_r  0x0000000000002fce       0x32 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
+                0x0000000000002fce                _sbrk_r
+ .text.__sread  0x0000000000003000       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                0x0000000000003000                __sread
+ .text.__swrite
+                0x000000000000302c       0x48 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                0x000000000000302c                __swrite
+ .text.__sseek  0x0000000000003074       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                0x0000000000003074                __sseek
+ .text.__sclose
+                0x00000000000030a4        0x6 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                0x00000000000030a4                __sclose
+ .text._write_r
+                0x00000000000030aa       0x36 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-writer.o)
+                0x00000000000030aa                _write_r
+ .text._close_r
+                0x00000000000030e0       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o)
+                0x00000000000030e0                _close_r
+ .text._fstat_r
+                0x0000000000003110       0x32 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o)
+                0x0000000000003110                _fstat_r
+ .text._isatty_r
+                0x0000000000003142       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o)
+                0x0000000000003142                _isatty_r
+ .text._lseek_r
+                0x0000000000003172       0x34 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o)
+                0x0000000000003172                _lseek_r
+ .text.memchr   0x00000000000031a6       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memchr.o)
+                0x00000000000031a6                memchr
+ .text.__malloc_lock
+                0x00000000000031be        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+                0x00000000000031be                __malloc_lock
+ .text.__malloc_unlock
+                0x00000000000031c0        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+                0x00000000000031c0                __malloc_unlock
+ .text._read_r  0x00000000000031c2       0x34 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o)
+                0x00000000000031c2                _read_r
+ .text._close   0x00000000000031f6       0x10 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
+                0x00000000000031f6                _close
+ .text._fstat   0x0000000000003206       0x10 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
+                0x0000000000003206                _fstat
+ .text._isatty  0x0000000000003216       0x10 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
+                0x0000000000003216                _isatty
+ .text._lseek   0x0000000000003226       0x10 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
+                0x0000000000003226                _lseek
+ .text._read    0x0000000000003236       0x10 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
+                0x0000000000003236                _read
+ *(.rodata)
+ *(.rodata*)
+ *fill*         0x0000000000003246        0x2 
+ .rodata.main.str1.4
+                0x0000000000003248       0x68 build/main.o
+ .rodata.task1_task.str1.4
+                0x00000000000032b0        0xd build/main.o
+ *fill*         0x00000000000032bd        0x3 
+ .rodata.task2_task.str1.4
+                0x00000000000032c0        0xd build/main.o
+ *fill*         0x00000000000032cd        0x3 
+ .rodata.task3_task.str1.4
+                0x00000000000032d0        0xd build/main.o
+ *fill*         0x00000000000032dd        0x3 
+ .rodata.xQueueGenericReset.str1.4
+                0x00000000000032e0       0x3d build/queue.o
+ *fill*         0x000000000000331d        0x3 
+ .rodata.prvTaskIsTaskSuspended.str1.4
+                0x0000000000003320       0x19 build/tasks.o
+                                         0x3d (size before relaxing)
+ *fill*         0x0000000000003339        0x3 
+ .rodata.vTaskStartScheduler.str1.4
+                0x000000000000333c        0x5 build/tasks.o
+ *fill*         0x0000000000003341        0x3 
+ .rodata.prvTimerTask
+                0x0000000000003344       0x24 build/timers.o
+ .rodata.prvCheckForValidListAndQueue.str1.4
+                0x0000000000003368        0x5 build/timers.o
+ *fill*         0x000000000000336d        0x3 
+ .rodata.prvTimerTask.str1.4
+                0x0000000000003370       0x1a build/timers.o
+                                         0x3d (size before relaxing)
+ *fill*         0x000000000000338a        0x2 
+ .rodata.xTimerCreateTimerTask.str1.4
+                0x000000000000338c        0x8 build/timers.o
+ .rodata.xPortStartScheduler.str1.4
+                0x0000000000003394       0x2c build/port.o
+                                         0x4d (size before relaxing)
+ .rodata.pvPortMalloc.str1.4
+                0x00000000000033c0       0x2b build/heap_4.o
+                                         0x4d (size before relaxing)
+ *fill*         0x00000000000033eb        0x1 
+ .rodata.__sf_fake_stderr
+                0x00000000000033ec       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x00000000000033ec                __sf_fake_stderr
+ .rodata.__sf_fake_stdin
+                0x000000000000340c       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x000000000000340c                __sf_fake_stdin
+ .rodata.__sf_fake_stdout
+                0x000000000000342c       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x000000000000342c                __sf_fake_stdout
+ .rodata._vfprintf_r.str1.4
+                0x000000000000344c       0x13 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ *fill*         0x000000000000345f        0x1 
+ .rodata._printf_i.str1.4
+                0x0000000000003460       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                                         0x25 (size before relaxing)
+ *(.glue_7)
+ *(.glue_7t)
+ *(.gnu.linkonce.t.*)
+                0x0000000000003488                . = ALIGN (0x4)
+
+.rela.dyn       0x0000000000003488        0x0
+ .rela.text._sbrk
+                0x0000000000003488        0x0 build/main.o
+ .rela.data.curbrk.4579
+                0x0000000000003488        0x0 build/main.o
+ .rela.text.xTaskCreate
+                0x0000000000003488        0x0 build/main.o
+ .rela.text.xPortStartScheduler
+                0x0000000000003488        0x0 build/main.o
+ .rela.init     0x0000000000003488        0x0 build/main.o
+ .rela.vector   0x0000000000003488        0x0 build/main.o
+ .rela.text.handle_reset
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._vfprintf_r
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._sbrk_r
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._write_r
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._close_r
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._fstat_r
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._isatty_r
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._lseek_r
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._read_r
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._close
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._fstat
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._isatty
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._lseek
+                0x0000000000003488        0x0 build/main.o
+ .rela.text._read
+                0x0000000000003488        0x0 build/main.o
+
+.fini           0x0000000000003488        0x0
+ *(SORT_NONE(.fini))
+                0x0000000000003488                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (_eitcm = .)
+
+.preinit_array  0x0000000000003488        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x0000000000003488        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x0000000000003488        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.dalign         0x0000000020000000        0x0 load address 0x0000000000003488
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_data_vma = .)
+
+.dlalign        0x0000000000003488        0x0
+                0x0000000000003488                . = ALIGN (0x4)
+                0x0000000000003488                PROVIDE (_data_lma = .)
+
+.data           0x0000000020000000       0x90 load address 0x0000000000003488
+ *(.gnu.linkonce.r.*)
+ *(.data .data.*)
+ .data.SystemCoreClock
+                0x0000000020000000        0x4 build/system_ch32v20x.o
+                0x0000000020000000                SystemCoreClock
+ .data.curbrk.4579
+                0x0000000020000004        0x4 build/debug.o
+ .data.ADCPrescTable
+                0x0000000020000008        0x4 build/ch32v20x_rcc.o
+ .data.APBAHBPrescTable
+                0x000000002000000c       0x10 build/ch32v20x_rcc.o
+ .data.uxTopUsedPriority
+                0x000000002000001c        0x4 build/tasks.o
+                0x000000002000001c                uxTopUsedPriority
+ .data.uxCriticalNesting
+                0x0000000020000020        0x4 build/port.o
+ .data.impure_data
+                0x0000000020000024       0x60 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-impure.o)
+ *(.gnu.linkonce.d.*)
+                0x0000000020000088                . = ALIGN (0x8)
+ *fill*         0x0000000020000084        0x4 
+                0x0000000020000888                PROVIDE (__global_pointer$ = (. + 0x800))
+ *(.sdata .sdata.*)
+ .sdata._impure_ptr
+                0x0000000020000088        0x4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-impure.o)
+                0x0000000020000088                _impure_ptr
+ *(.sdata2.*)
+ .sdata2._global_impure_ptr
+                0x000000002000008c        0x4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-impure.o)
+                0x000000002000008c                _global_impure_ptr
+ *(.gnu.linkonce.s.*)
+                0x0000000020000090                . = ALIGN (0x8)
+ *(.srodata.cst16)
+ *(.srodata.cst8)
+ *(.srodata.cst4)
+ *(.srodata.cst2)
+ *(.srodata .srodata.*)
+                0x0000000020000090                . = ALIGN (0x4)
+                0x0000000020000090                PROVIDE (_edata = .)
+
+.bss            0x0000000020000090     0x3288 load address 0x0000000000003518
+                0x0000000020000090                . = ALIGN (0x4)
+                0x0000000020000090                PROVIDE (_sbss = .)
+ *(.sbss*)
+ .sbss.__malloc_free_list
+                0x0000000020000090        0x4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000090                __malloc_free_list
+ .sbss.__malloc_sbrk_start
+                0x0000000020000094        0x4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000094                __malloc_sbrk_start
+ *(.gnu.linkonce.sb.*)
+ *(.bss*)
+ .bss.Task1Task_Handler
+                0x0000000020000098        0x4 build/main.o
+                0x0000000020000098                Task1Task_Handler
+ .bss.Task2Task_Handler
+                0x000000002000009c        0x4 build/main.o
+                0x000000002000009c                Task2Task_Handler
+ .bss.Task3Task_Handler
+                0x00000000200000a0        0x4 build/main.o
+                0x00000000200000a0                Task3Task_Handler
+ .bss.p_ms      0x00000000200000a4        0x2 build/debug.o
+ .bss.p_us      0x00000000200000a6        0x1 build/debug.o
+ .bss.MCU_Version
+                0x00000000200000a7        0x1 build/ch32v20x_gpio.o
+                0x00000000200000a7                MCU_Version
+ .bss.NVIC_Priority_Group
+                0x00000000200000a8        0x4 build/ch32v20x_misc.o
+                0x00000000200000a8                NVIC_Priority_Group
+ .bss.xQueueRegistry
+                0x00000000200000ac       0x40 build/queue.o
+                0x00000000200000ac                xQueueRegistry
+ .bss.pxCurrentTCB
+                0x00000000200000ec        0x4 build/tasks.o
+                0x00000000200000ec                pxCurrentTCB
+ .bss.pxDelayedTaskList
+                0x00000000200000f0        0x4 build/tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x00000000200000f4        0x4 build/tasks.o
+ .bss.pxReadyTasksLists
+                0x00000000200000f8      0x12c build/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x0000000020000224        0x4 build/tasks.o
+ .bss.uxDeletedTasksWaitingCleanUp
+                0x0000000020000228        0x4 build/tasks.o
+ .bss.uxSchedulerSuspended
+                0x000000002000022c        0x4 build/tasks.o
+ .bss.uxTaskNumber
+                0x0000000020000230        0x4 build/tasks.o
+ .bss.uxTopReadyPriority
+                0x0000000020000234        0x4 build/tasks.o
+ .bss.xDelayedTaskList1
+                0x0000000020000238       0x14 build/tasks.o
+ .bss.xDelayedTaskList2
+                0x000000002000024c       0x14 build/tasks.o
+ .bss.xIdleTaskHandle
+                0x0000000020000260        0x4 build/tasks.o
+ .bss.xNextTaskUnblockTime
+                0x0000000020000264        0x4 build/tasks.o
+ .bss.xNumOfOverflows
+                0x0000000020000268        0x4 build/tasks.o
+ .bss.xPendedTicks
+                0x000000002000026c        0x4 build/tasks.o
+ .bss.xPendingReadyList
+                0x0000000020000270       0x14 build/tasks.o
+ .bss.xSchedulerRunning
+                0x0000000020000284        0x4 build/tasks.o
+ .bss.xSuspendedTaskList
+                0x0000000020000288       0x14 build/tasks.o
+ .bss.xTasksWaitingTermination
+                0x000000002000029c       0x14 build/tasks.o
+ .bss.xTickCount
+                0x00000000200002b0        0x4 build/tasks.o
+ .bss.xYieldPending
+                0x00000000200002b4        0x4 build/tasks.o
+ .bss.pxCurrentTimerList
+                0x00000000200002b8        0x4 build/timers.o
+ .bss.pxOverflowTimerList
+                0x00000000200002bc        0x4 build/timers.o
+ .bss.xActiveTimerList1
+                0x00000000200002c0       0x14 build/timers.o
+ .bss.xActiveTimerList2
+                0x00000000200002d4       0x14 build/timers.o
+ .bss.xLastTime.5631
+                0x00000000200002e8        0x4 build/timers.o
+ .bss.xTimerQueue
+                0x00000000200002ec        0x4 build/timers.o
+ .bss.xTimerTaskHandle
+                0x00000000200002f0        0x4 build/timers.o
+ .bss.pxEnd     0x00000000200002f4        0x4 build/heap_4.o
+ .bss.ucHeap    0x00000000200002f8     0x3000 build/heap_4.o
+ .bss.xBlockAllocatedBit
+                0x00000000200032f8        0x4 build/heap_4.o
+ .bss.xFreeBytesRemaining
+                0x00000000200032fc        0x4 build/heap_4.o
+ .bss.xMinimumEverFreeBytesRemaining
+                0x0000000020003300        0x4 build/heap_4.o
+ .bss.xNumberOfSuccessfulAllocations
+                0x0000000020003304        0x4 build/heap_4.o
+ .bss.xNumberOfSuccessfulFrees
+                0x0000000020003308        0x4 build/heap_4.o
+ .bss.xStart    0x000000002000330c        0x8 build/heap_4.o
+ *(.gnu.linkonce.b.*)
+ *(COMMON*)
+ COMMON         0x0000000020003314        0x4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+                0x0000000020003314                errno
+                0x0000000020003318                . = ALIGN (0x4)
+                0x0000000020003318                PROVIDE (_ebss = .)
+                0x0000000020003318                PROVIDE (_end = _ebss)
+                [!provide]                        PROVIDE (end = .)
+
+.stack          0x0000000020004800      0x800
+                0x0000000020004800                PROVIDE (_heap_end = .)
+                0x0000000020004800                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_susrstack = .)
+                0x0000000020005000                . = (. + __stack_size)
+ *fill*         0x0000000020004800      0x800 
+                0x0000000020005000                PROVIDE (_eusrstack = .)
+OUTPUT(build/firmware.elf elf32-littleriscv)
+
+.debug_info     0x0000000000000000    0x125b0
+ .debug_info    0x0000000000000000      0xf23 build/main.o
+ .debug_info    0x0000000000000f23      0xb89 build/system_ch32v20x.o
+ .debug_info    0x0000000000001aac      0xf25 build/debug.o
+ .debug_info    0x00000000000029d1     0x10d9 build/ch32v20x_gpio.o
+ .debug_info    0x0000000000003aaa      0xe7c build/ch32v20x_misc.o
+ .debug_info    0x0000000000004926     0x125e build/ch32v20x_rcc.o
+ .debug_info    0x0000000000005b84     0x13b4 build/ch32v20x_usart.o
+ .debug_info    0x0000000000006f38      0xb80 build/list.o
+ .debug_info    0x0000000000007ab8     0x2fd1 build/queue.o
+ .debug_info    0x000000000000aa89     0x3ba1 build/tasks.o
+ .debug_info    0x000000000000e62a     0x2072 build/timers.o
+ .debug_info    0x000000000001069c     0x1096 build/port.o
+ .debug_info    0x0000000000011732      0xe5c build/heap_4.o
+ .debug_info    0x000000000001258e       0x22 build/startup_ch32v20x_D6.o
+
+.debug_abbrev   0x0000000000000000     0x2cf9
+ .debug_abbrev  0x0000000000000000      0x2be build/main.o
+ .debug_abbrev  0x00000000000002be      0x2c0 build/system_ch32v20x.o
+ .debug_abbrev  0x000000000000057e      0x2f1 build/debug.o
+ .debug_abbrev  0x000000000000086f      0x33a build/ch32v20x_gpio.o
+ .debug_abbrev  0x0000000000000ba9      0x2fb build/ch32v20x_misc.o
+ .debug_abbrev  0x0000000000000ea4      0x36d build/ch32v20x_rcc.o
+ .debug_abbrev  0x0000000000001211      0x32e build/ch32v20x_usart.o
+ .debug_abbrev  0x000000000000153f      0x254 build/list.o
+ .debug_abbrev  0x0000000000001793      0x491 build/queue.o
+ .debug_abbrev  0x0000000000001c24      0x545 build/tasks.o
+ .debug_abbrev  0x0000000000002169      0x43a build/timers.o
+ .debug_abbrev  0x00000000000025a3      0x3d8 build/port.o
+ .debug_abbrev  0x000000000000297b      0x36c build/heap_4.o
+ .debug_abbrev  0x0000000000002ce7       0x12 build/startup_ch32v20x_D6.o
+
+.debug_loc      0x0000000000000000     0x6e76
+ .debug_loc     0x0000000000000000       0x63 build/main.o
+ .debug_loc     0x0000000000000063       0xac build/system_ch32v20x.o
+ .debug_loc     0x000000000000010f      0x1ed build/debug.o
+ .debug_loc     0x00000000000002fc      0x824 build/ch32v20x_gpio.o
+ .debug_loc     0x0000000000000b20       0xce build/ch32v20x_misc.o
+ .debug_loc     0x0000000000000bee      0x7a9 build/ch32v20x_rcc.o
+ .debug_loc     0x0000000000001397      0x775 build/ch32v20x_usart.o
+ .debug_loc     0x0000000000001b0c       0x94 build/list.o
+ .debug_loc     0x0000000000001ba0     0x1b43 build/queue.o
+ .debug_loc     0x00000000000036e3     0x23ee build/tasks.o
+ .debug_loc     0x0000000000005ad1      0xf77 build/timers.o
+ .debug_loc     0x0000000000006a48       0xad build/port.o
+ .debug_loc     0x0000000000006af5      0x381 build/heap_4.o
+
+.debug_aranges  0x0000000000000000      0x830
+ .debug_aranges
+                0x0000000000000000       0x40 build/main.o
+ .debug_aranges
+                0x0000000000000040       0x28 build/system_ch32v20x.o
+ .debug_aranges
+                0x0000000000000068       0x48 build/debug.o
+ .debug_aranges
+                0x00000000000000b0       0xa8 build/ch32v20x_gpio.o
+ .debug_aranges
+                0x0000000000000158       0x28 build/ch32v20x_misc.o
+ .debug_aranges
+                0x0000000000000180      0x128 build/ch32v20x_rcc.o
+ .debug_aranges
+                0x00000000000002a8      0x100 build/ch32v20x_usart.o
+ .debug_aranges
+                0x00000000000003a8       0x40 build/list.o
+ .debug_aranges
+                0x00000000000003e8      0x108 build/queue.o
+ .debug_aranges
+                0x00000000000004f0      0x1b0 build/tasks.o
+ .debug_aranges
+                0x00000000000006a0       0xb8 build/timers.o
+ .debug_aranges
+                0x0000000000000758       0x58 build/port.o
+ .debug_aranges
+                0x00000000000007b0       0x50 build/heap_4.o
+ .debug_aranges
+                0x0000000000000800       0x30 build/startup_ch32v20x_D6.o
+
+.debug_ranges   0x0000000000000000      0xc60
+ .debug_ranges  0x0000000000000000       0x30 build/main.o
+ .debug_ranges  0x0000000000000030       0x38 build/system_ch32v20x.o
+ .debug_ranges  0x0000000000000068       0x38 build/debug.o
+ .debug_ranges  0x00000000000000a0       0x98 build/ch32v20x_gpio.o
+ .debug_ranges  0x0000000000000138       0x48 build/ch32v20x_misc.o
+ .debug_ranges  0x0000000000000180      0x118 build/ch32v20x_rcc.o
+ .debug_ranges  0x0000000000000298       0xf0 build/ch32v20x_usart.o
+ .debug_ranges  0x0000000000000388       0x30 build/list.o
+ .debug_ranges  0x00000000000003b8      0x268 build/queue.o
+ .debug_ranges  0x0000000000000620      0x430 build/tasks.o
+ .debug_ranges  0x0000000000000a50      0x130 build/timers.o
+ .debug_ranges  0x0000000000000b80       0x78 build/port.o
+ .debug_ranges  0x0000000000000bf8       0x40 build/heap_4.o
+ .debug_ranges  0x0000000000000c38       0x28 build/startup_ch32v20x_D6.o
+
+.debug_line     0x0000000000000000     0xf6c9
+ .debug_line    0x0000000000000000      0x554 build/main.o
+ .debug_line    0x0000000000000554      0x636 build/system_ch32v20x.o
+ .debug_line    0x0000000000000b8a      0x6ba build/debug.o
+ .debug_line    0x0000000000001244      0xf3f build/ch32v20x_gpio.o
+ .debug_line    0x0000000000002183      0x45f build/ch32v20x_misc.o
+ .debug_line    0x00000000000025e2     0x1105 build/ch32v20x_rcc.o
+ .debug_line    0x00000000000036e7      0xf03 build/ch32v20x_usart.o
+ .debug_line    0x00000000000045ea      0x609 build/list.o
+ .debug_line    0x0000000000004bf3     0x30d7 build/queue.o
+ .debug_line    0x0000000000007cca     0x4fb7 build/tasks.o
+ .debug_line    0x000000000000cc81     0x1524 build/timers.o
+ .debug_line    0x000000000000e1a5      0x6ca build/port.o
+ .debug_line    0x000000000000e86f      0xbf6 build/heap_4.o
+ .debug_line    0x000000000000f465      0x264 build/startup_ch32v20x_D6.o
+
+.debug_str      0x0000000000000000     0x355e
+ .debug_str     0x0000000000000000      0x7e7 build/main.o
+                                        0x856 (size before relaxing)
+ .debug_str     0x00000000000007e7      0x111 build/system_ch32v20x.o
+                                        0x6bc (size before relaxing)
+ .debug_str     0x00000000000008f8      0x1aa build/debug.o
+                                        0x8f8 (size before relaxing)
+ .debug_str     0x0000000000000aa2      0x267 build/ch32v20x_gpio.o
+                                        0x976 (size before relaxing)
+ .debug_str     0x0000000000000d09      0x473 build/ch32v20x_misc.o
+                                        0xa7e (size before relaxing)
+ .debug_str     0x000000000000117c      0x3ca build/ch32v20x_rcc.o
+                                        0xab5 (size before relaxing)
+ .debug_str     0x0000000000001546      0x356 build/ch32v20x_usart.o
+                                        0xb10 (size before relaxing)
+ .debug_str     0x000000000000189c      0x14a build/list.o
+                                        0x6d7 (size before relaxing)
+ .debug_str     0x00000000000019e6      0x851 build/queue.o
+                                       0x12e1 (size before relaxing)
+ .debug_str     0x0000000000002237      0xab3 build/tasks.o
+                                       0x1823 (size before relaxing)
+ .debug_str     0x0000000000002cea      0x4ec build/timers.o
+                                       0x1120 (size before relaxing)
+ .debug_str     0x00000000000031d6       0xae build/port.o
+                                        0xb10 (size before relaxing)
+ .debug_str     0x0000000000003284      0x2a8 build/heap_4.o
+                                        0x8cd (size before relaxing)
+ .debug_str     0x000000000000352c       0x32 build/startup_ch32v20x_D6.o
+                                         0x60 (size before relaxing)
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 build/main.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 build/system_ch32v20x.o
+ .comment       0x0000000000000033       0x34 build/debug.o
+ .comment       0x0000000000000033       0x34 build/ch32v20x_gpio.o
+ .comment       0x0000000000000033       0x34 build/ch32v20x_misc.o
+ .comment       0x0000000000000033       0x34 build/ch32v20x_rcc.o
+ .comment       0x0000000000000033       0x34 build/ch32v20x_usart.o
+ .comment       0x0000000000000033       0x34 build/list.o
+ .comment       0x0000000000000033       0x34 build/queue.o
+ .comment       0x0000000000000033       0x34 build/tasks.o
+ .comment       0x0000000000000033       0x34 build/timers.o
+ .comment       0x0000000000000033       0x34 build/port.o
+ .comment       0x0000000000000033       0x34 build/heap_4.o
+
+.debug_frame    0x0000000000000000     0x1f40
+ .debug_frame   0x0000000000000000       0x9c build/main.o
+ .debug_frame   0x000000000000009c       0x4c build/system_ch32v20x.o
+ .debug_frame   0x00000000000000e8       0xc8 build/debug.o
+ .debug_frame   0x00000000000001b0      0x15c build/ch32v20x_gpio.o
+ .debug_frame   0x000000000000030c       0x30 build/ch32v20x_misc.o
+ .debug_frame   0x000000000000033c      0x250 build/ch32v20x_rcc.o
+ .debug_frame   0x000000000000058c      0x204 build/ch32v20x_usart.o
+ .debug_frame   0x0000000000000790       0x60 build/list.o
+ .debug_frame   0x00000000000007f0      0x43c build/queue.o
+ .debug_frame   0x0000000000000c2c      0x658 build/tasks.o
+ .debug_frame   0x0000000000001284      0x294 build/timers.o
+ .debug_frame   0x0000000000001518       0xec build/port.o
+ .debug_frame   0x0000000000001604       0xc0 build/heap_4.o
+ .debug_frame   0x00000000000016c4       0x38 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00000000000016fc       0x54 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
+ .debug_frame   0x0000000000001750       0x48 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+ .debug_frame   0x0000000000001798       0x48 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x00000000000017e0       0x38 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x0000000000001818       0x74 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+ .debug_frame   0x000000000000188c      0x13c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+ .debug_frame   0x00000000000019c8       0x60 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x0000000000001a28       0x5c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x0000000000001a84       0x40 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000001ac4       0x38 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000001afc       0xa4 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x0000000000001ba0       0x60 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000000000001c00       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000001c30       0x9c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+ .debug_frame   0x0000000000001ccc       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-writer.o)
+ .debug_frame   0x0000000000001cfc       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o)
+ .debug_frame   0x0000000000001d2c       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o)
+ .debug_frame   0x0000000000001d5c       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o)
+ .debug_frame   0x0000000000001d8c       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o)
+ .debug_frame   0x0000000000001dbc       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memchr.o)
+ .debug_frame   0x0000000000001ddc       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000001e0c       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o)
+ .debug_frame   0x0000000000001e3c       0x64 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x0000000000001ea0       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
+ .debug_frame   0x0000000000001ec0       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
+ .debug_frame   0x0000000000001ee0       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
+ .debug_frame   0x0000000000001f00       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
+ .debug_frame   0x0000000000001f20       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
+
+.stab           0x0000000000000000       0x84
+ .stab          0x0000000000000000       0x24 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
+ .stab          0x0000000000000024       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
+                                         0x24 (size before relaxing)
+ .stab          0x000000000000003c       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
+                                         0x24 (size before relaxing)
+ .stab          0x0000000000000054       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
+                                         0x24 (size before relaxing)
+ .stab          0x000000000000006c       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
+                                         0x24 (size before relaxing)
+
+.stabstr        0x0000000000000000      0x117
+ .stabstr       0x0000000000000000      0x117 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
