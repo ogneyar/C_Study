@@ -124,27 +124,27 @@ int main(void)
     printf("FreeRTOS Kernel Version:%s\r\n",tskKERNEL_VERSION_NUMBER);
 
     GPIO_Toggle_INIT();
-    /* create three task */
-    xTaskCreate((TaskFunction_t )task3_task,
-                    (const char*    )"task3",
-                    (uint16_t       )TASK3_STK_SIZE,
-                    (void*          )NULL,
-                    (UBaseType_t    )TASK3_TASK_PRIO,
-                    (TaskHandle_t*  )&Task3Task_Handler);
-
-    xTaskCreate((TaskFunction_t )task2_task,
-                        (const char*    )"task2",
-                        (uint16_t       )TASK2_STK_SIZE,
-                        (void*          )NULL,
-                        (UBaseType_t    )TASK2_TASK_PRIO,
-                        (TaskHandle_t*  )&Task2Task_Handler);
-
+    /* create three task */   
     xTaskCreate((TaskFunction_t )task1_task,
                     (const char*    )"task1",
                     (uint16_t       )TASK1_STK_SIZE,
                     (void*          )NULL,
                     (UBaseType_t    )TASK1_TASK_PRIO,
                     (TaskHandle_t*  )&Task1Task_Handler);
+
+    xTaskCreate((TaskFunction_t )task2_task,
+                    (const char*    )"task2",
+                    (uint16_t       )TASK2_STK_SIZE,
+                    (void*          )NULL,
+                    (UBaseType_t    )TASK2_TASK_PRIO,
+                    (TaskHandle_t*  )&Task2Task_Handler);
+    
+    xTaskCreate((TaskFunction_t )task3_task,
+                    (const char*    )"task3",
+                    (uint16_t       )TASK3_STK_SIZE,
+                    (void*          )NULL,
+                    (UBaseType_t    )TASK3_TASK_PRIO,
+                    (TaskHandle_t*  )&Task3Task_Handler);
 
     vTaskStartScheduler();
 
