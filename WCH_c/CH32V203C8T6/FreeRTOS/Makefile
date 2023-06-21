@@ -8,6 +8,7 @@ BUILD_DIR = build
 C_SOURCES =  \
 	main.c \
 	src/system_ch32v20x.c \
+	src/ch32v20x_it.c \
 	../libs/Debug/debug.c \
 	../libs/Peripheral/src/ch32v20x_adc.c \
 	../libs/Peripheral/src/ch32v20x_bkp.c \

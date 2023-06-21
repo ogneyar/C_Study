@@ -1,14 +1,3 @@
-/********************************** (C) COPYRIGHT *******************************
- * File Name          : main.c
- * Author             : WCH
- * Version            : V1.0.0
- * Date               : 2021/06/06
- * Description        : Main program body.
-*********************************************************************************
-* Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
-* Attention: This software (modified or not) and binary are used for 
-* microcontroller manufactured by Nanjing Qinheng Microelectronics.
-*******************************************************************************/
 
 /*
  *@Note
@@ -17,14 +6,17 @@
  This example demonstrates SPI operation Winbond W25Qxx SPIFLASH.
 
  pins:
-    CS   -- PA2
-    DO   -- PA6(SPI1_MISO)
-    WP   -- 3.3V
-    DI   -- PA7(SPI1_MOSI)
-    CLK  -- PA5(SPI1_SCK)
-    HOLD -- 3.3V
-
+    1. CS   -- PA2
+    2. DO   -- PA6(SPI1_MISO)
+    3. WP   -- 3.3V
+    4. GND  -- GND
+    5. DI   -- PA7(SPI1_MOSI)
+    6. CLK  -- PA5(SPI1_SCK)
+    7. HOLD -- 3.3V
+    8. VCC  -- 3.3V
 */
+
+// максимальная скорость 144МГц / 4 или 72МГц / 2 = 36МГц
 
 #include "debug.h"
 #include "string.h"

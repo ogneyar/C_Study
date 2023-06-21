@@ -1,4 +1,4 @@
-build/main.o: main.c ../libs/Debug/debug.h \
+build/main.o: src/main.c ../libs/Debug/debug.h \
  ../libs/Peripheral/inc/ch32v20x.h ../libs/Core/core_riscv.h \
  src/system_ch32v20x.h src/ch32v20x_conf.h \
  ../libs/Peripheral/inc/ch32v20x_adc.h ../libs/Peripheral/inc/ch32v20x.h \
