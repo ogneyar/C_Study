@@ -1,9 +1,8 @@
-build/main.o: src/main.c ../libs/Debug/debug.h \
- ../libs/Peripheral/inc/ch32v20x.h ../libs/Core/core_riscv.h \
- src/system_ch32v20x.h src/ch32v20x_conf.h \
- ../libs/Peripheral/inc/ch32v20x_adc.h ../libs/Peripheral/inc/ch32v20x.h \
+build/ch32v20x_can.o: ../libs/Peripheral/src/ch32v20x_can.c \
+ ../libs/Peripheral/inc/ch32v20x_can.h ../libs/Peripheral/inc/ch32v20x.h \
+ ../libs/Core/core_riscv.h src/system_ch32v20x.h src/ch32v20x_conf.h \
+ ../libs/Peripheral/inc/ch32v20x_adc.h \
  ../libs/Peripheral/inc/ch32v20x_bkp.h \
- ../libs/Peripheral/inc/ch32v20x_can.h \
  ../libs/Peripheral/inc/ch32v20x_crc.h \
  ../libs/Peripheral/inc/ch32v20x_dbgmcu.h \
  ../libs/Peripheral/inc/ch32v20x_dma.h \
@@ -19,9 +18,10 @@ build/main.o: src/main.c ../libs/Debug/debug.h \
  ../libs/Peripheral/inc/ch32v20x_tim.h \
  ../libs/Peripheral/inc/ch32v20x_usart.h \
  ../libs/Peripheral/inc/ch32v20x_wwdg.h src/ch32v20x_it.h \
+ ../libs/Debug/debug.h ../libs/Peripheral/inc/ch32v20x.h \
  ../libs/Peripheral/inc/ch32v20x_misc.h
 
-../libs/Debug/debug.h:
+../libs/Peripheral/inc/ch32v20x_can.h:
 
 ../libs/Peripheral/inc/ch32v20x.h:
 
@@ -33,11 +33,7 @@ src/ch32v20x_conf.h:
 
 ../libs/Peripheral/inc/ch32v20x_adc.h:
 
-../libs/Peripheral/inc/ch32v20x.h:
-
 ../libs/Peripheral/inc/ch32v20x_bkp.h:
-
-../libs/Peripheral/inc/ch32v20x_can.h:
 
 ../libs/Peripheral/inc/ch32v20x_crc.h:
 
@@ -70,5 +66,9 @@ src/ch32v20x_conf.h:
 ../libs/Peripheral/inc/ch32v20x_wwdg.h:
 
 src/ch32v20x_it.h:
+
+../libs/Debug/debug.h:
+
+../libs/Peripheral/inc/ch32v20x.h:
 
 ../libs/Peripheral/inc/ch32v20x_misc.h:
