@@ -1,30 +1,16 @@
-/********************************** (C) COPYRIGHT *******************************
- * File Name          : main.c
- * Author             : WCH
- * Version            : V1.0.0
- * Date               : 2021/06/06
- * Description        : Main program body.
-*********************************************************************************
-* Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
-* Attention: This software (modified or not) and binary are used for 
-* microcontroller manufactured by Nanjing Qinheng Microelectronics.
-*******************************************************************************/
 
 /*
  *@Note
  USART Print debugging routine:
  USART1_Tx(PA9).
+ //USART2_Tx(PA2).
+ //USART3_Tx(PB10).
  This example demonstrates using USART1(PA9) as a print debug port output.
 
 */
 
 #include "debug.h"
-
-/* Global typedef */
-
-/* Global define */
-
-/* Global Variable */
+#include <ch32v20x.h>
 
 /*********************************************************************
  * @fn      main
@@ -35,7 +21,7 @@
  */
 int main(void)
 {
-    //NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
     Delay_Init();
     USART_Printf_Init(115200);
     printf("SystemClk:%d\r\n", SystemCoreClock);
