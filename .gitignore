@@ -1,4 +1,6 @@
 
 .vscode
-*/build/*.d
-*/build/*.o
+
+# build
+WCH_c/*/*/build/*.d
+WCH_c/*/*/build/*.o

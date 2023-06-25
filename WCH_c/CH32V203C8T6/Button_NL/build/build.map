@@ -1,0 +1,277 @@
+Archive member included to satisfy reference by file (symbol)
+
+e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+                              build/main.o (__riscv_save_0)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 build/main.o
+ .data          0x0000000000000000        0x0 build/main.o
+ .bss           0x0000000000000000        0x0 build/main.o
+ .text          0x0000000000000000        0x0 build/startup_ch32v20x_D6.o
+ .data          0x0000000000000000        0x0 build/startup_ch32v20x_D6.o
+ .bss           0x0000000000000000        0x0 build/startup_ch32v20x_D6.o
+ .data          0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+ .bss           0x0000000000000000        0x0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+ .eh_frame      0x0000000000000000       0x68 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000010000 xr
+RAM              0x0000000020000000 0x0000000000005000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/main.o
+LOAD build/startup_ch32v20x_D6.o
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+START GROUP
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a
+END GROUP
+START GROUP
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a
+END GROUP
+                0x0000000000000800                __stack_size = 0x800
+                [!provide]                        PROVIDE (_stack_size = __stack_size)
+
+.init           0x0000000000000000       0x38
+                0x0000000000000000                _sinit = .
+                0x0000000000000000                . = ALIGN (0x4)
+ *(SORT_NONE(.init))
+ .init          0x0000000000000000       0x38 build/startup_ch32v20x_D6.o
+                0x0000000000000000                _start
+                0x0000000000000038                . = ALIGN (0x4)
+                0x0000000000000038                _einit = .
+
+.vector         0x0000000000000038      0x108
+ *(.vector)
+ .vector        0x0000000000000038       0xfc build/startup_ch32v20x_D6.o
+                0x0000000000000140                . = ALIGN (0x40)
+ *fill*         0x0000000000000134        0xc 
+
+.text           0x0000000000000140      0x198
+                0x0000000000000140                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000000000000140       0x14 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+                0x0000000000000140                __riscv_save_1
+                0x0000000000000140                __riscv_save_2
+                0x0000000000000140                __riscv_save_0
+                0x000000000000014a                __riscv_restore_0
+                0x000000000000014a                __riscv_restore_1
+                0x000000000000014a                __riscv_restore_2
+ *(.text.*)
+ .text.SystemInit
+                0x0000000000000154        0x2 build/main.o
+                0x0000000000000154                SystemInit
+ .text.GPIO_Init
+                0x0000000000000156       0x3c build/main.o
+                0x0000000000000156                GPIO_Init
+ .text.delay    0x0000000000000192       0x10 build/main.o
+                0x0000000000000192                delay
+ .text.startup.main
+                0x00000000000001a2       0x3a build/main.o
+                0x00000000000001a2                main
+ .text.vector_handler
+                0x00000000000001dc       0x6c build/startup_ch32v20x_D6.o
+                0x00000000000001dc                NMI_Handler
+                0x00000000000001de                HardFault_Handler
+                0x00000000000001e0                Ecall_M_Mode_Handler
+                0x00000000000001e2                Ecall_U_Mode_Handler
+                0x00000000000001e4                Break_Point_Handler
+                0x00000000000001e6                SysTick_Handler
+                0x00000000000001e8                SW_Handler
+                0x00000000000001ea                WWDG_IRQHandler
+                0x00000000000001ec                PVD_IRQHandler
+                0x00000000000001ee                TAMPER_IRQHandler
+                0x00000000000001f0                RTC_IRQHandler
+                0x00000000000001f2                FLASH_IRQHandler
+                0x00000000000001f4                RCC_IRQHandler
+                0x00000000000001f6                EXTI0_IRQHandler
+                0x00000000000001f8                EXTI1_IRQHandler
+                0x00000000000001fa                EXTI2_IRQHandler
+                0x00000000000001fc                EXTI3_IRQHandler
+                0x00000000000001fe                EXTI4_IRQHandler
+                0x0000000000000200                DMA1_Channel1_IRQHandler
+                0x0000000000000202                DMA1_Channel2_IRQHandler
+                0x0000000000000204                DMA1_Channel3_IRQHandler
+                0x0000000000000206                DMA1_Channel4_IRQHandler
+                0x0000000000000208                DMA1_Channel5_IRQHandler
+                0x000000000000020a                DMA1_Channel6_IRQHandler
+                0x000000000000020c                DMA1_Channel7_IRQHandler
+                0x000000000000020e                ADC1_2_IRQHandler
+                0x0000000000000210                USB_HP_CAN1_TX_IRQHandler
+                0x0000000000000212                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000000000214                CAN1_RX1_IRQHandler
+                0x0000000000000216                CAN1_SCE_IRQHandler
+                0x0000000000000218                EXTI9_5_IRQHandler
+                0x000000000000021a                TIM1_BRK_IRQHandler
+                0x000000000000021c                TIM1_UP_IRQHandler
+                0x000000000000021e                TIM1_TRG_COM_IRQHandler
+                0x0000000000000220                TIM1_CC_IRQHandler
+                0x0000000000000222                TIM2_IRQHandler
+                0x0000000000000224                TIM3_IRQHandler
+                0x0000000000000226                TIM4_IRQHandler
+                0x0000000000000228                I2C1_EV_IRQHandler
+                0x000000000000022a                I2C1_ER_IRQHandler
+                0x000000000000022c                I2C2_EV_IRQHandler
+                0x000000000000022e                I2C2_ER_IRQHandler
+                0x0000000000000230                SPI1_IRQHandler
+                0x0000000000000232                SPI2_IRQHandler
+                0x0000000000000234                USART1_IRQHandler
+                0x0000000000000236                USART2_IRQHandler
+                0x0000000000000238                USART3_IRQHandler
+                0x000000000000023a                EXTI15_10_IRQHandler
+                0x000000000000023c                RTCAlarm_IRQHandler
+                0x000000000000023e                USBWakeUp_IRQHandler
+                0x0000000000000240                USBHD_IRQHandler
+                0x0000000000000242                USBHDWakeUp_IRQHandler
+                0x0000000000000244                UART4_IRQHandler
+                0x0000000000000246                DMA1_Channel8_IRQHandler
+ .text.handle_reset
+                0x0000000000000248       0x8e build/startup_ch32v20x_D6.o
+                0x0000000000000248                handle_reset
+ *(.rodata)
+ *(.rodata*)
+ *(.glue_7)
+ *(.glue_7t)
+ *(.gnu.linkonce.t.*)
+                0x00000000000002d8                . = ALIGN (0x4)
+ *fill*         0x00000000000002d6        0x2 
+
+.rela.dyn       0x00000000000002d8        0x0
+ .rela.init     0x00000000000002d8        0x0 build/main.o
+ .rela.vector   0x00000000000002d8        0x0 build/main.o
+ .rela.text.handle_reset
+                0x00000000000002d8        0x0 build/main.o
+
+.fini           0x00000000000002d8        0x0
+ *(SORT_NONE(.fini))
+                0x00000000000002d8                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (_eitcm = .)
+
+.preinit_array  0x00000000000002d8        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x00000000000002d8        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00000000000002d8        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.dalign         0x0000000020000000        0x0 load address 0x00000000000002d8
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_data_vma = .)
+
+.dlalign        0x00000000000002d8        0x0
+                0x00000000000002d8                . = ALIGN (0x4)
+                0x00000000000002d8                PROVIDE (_data_lma = .)
+
+.data           0x0000000020000000        0x0 load address 0x00000000000002d8
+ *(.gnu.linkonce.r.*)
+ *(.data .data.*)
+ *(.gnu.linkonce.d.*)
+                0x0000000020000000                . = ALIGN (0x8)
+                0x0000000020000800                PROVIDE (__global_pointer$ = (. + 0x800))
+ *(.sdata .sdata.*)
+ *(.sdata2.*)
+ *(.gnu.linkonce.s.*)
+                0x0000000020000000                . = ALIGN (0x8)
+ *(.srodata.cst16)
+ *(.srodata.cst8)
+ *(.srodata.cst4)
+ *(.srodata.cst2)
+ *(.srodata .srodata.*)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_edata = .)
+
+.bss            0x0000000020000000        0x0 load address 0x00000000000002d8
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_sbss = .)
+ *(.sbss*)
+ *(.gnu.linkonce.sb.*)
+ *(.bss*)
+ *(.gnu.linkonce.b.*)
+ *(COMMON*)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_ebss = .)
+                [!provide]                        PROVIDE (_end = _ebss)
+                [!provide]                        PROVIDE (end = .)
+
+.stack          0x0000000020004800      0x800
+                [!provide]                        PROVIDE (_heap_end = .)
+                0x0000000020004800                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_susrstack = .)
+                0x0000000020005000                . = (. + __stack_size)
+ *fill*         0x0000000020004800      0x800 
+                0x0000000020005000                PROVIDE (_eusrstack = .)
+OUTPUT(build/build.elf elf32-littleriscv)
+
+.debug_info     0x0000000000000000      0x180
+ .debug_info    0x0000000000000000      0x15e build/main.o
+ .debug_info    0x000000000000015e       0x22 build/startup_ch32v20x_D6.o
+
+.debug_abbrev   0x0000000000000000       0xde
+ .debug_abbrev  0x0000000000000000       0xcc build/main.o
+ .debug_abbrev  0x00000000000000cc       0x12 build/startup_ch32v20x_D6.o
+
+.debug_loc      0x0000000000000000       0x5b
+ .debug_loc     0x0000000000000000       0x5b build/main.o
+
+.debug_aranges  0x0000000000000000       0x68
+ .debug_aranges
+                0x0000000000000000       0x38 build/main.o
+ .debug_aranges
+                0x0000000000000038       0x30 build/startup_ch32v20x_D6.o
+
+.debug_ranges   0x0000000000000000       0x68
+ .debug_ranges  0x0000000000000000       0x40 build/main.o
+ .debug_ranges  0x0000000000000040       0x28 build/startup_ch32v20x_D6.o
+
+.debug_line     0x0000000000000000      0x502
+ .debug_line    0x0000000000000000      0x2ae build/main.o
+ .debug_line    0x00000000000002ae      0x254 build/startup_ch32v20x_D6.o
+
+.debug_str      0x0000000000000000      0x1a4
+ .debug_str     0x0000000000000000      0x182 build/main.o
+                                        0x1d0 (size before relaxing)
+ .debug_str     0x0000000000000182       0x22 build/startup_ch32v20x_D6.o
+                                         0x51 (size before relaxing)
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 build/main.o
+                                         0x34 (size before relaxing)
+
+.debug_frame    0x0000000000000000       0x58
+ .debug_frame   0x0000000000000000       0x58 build/main.o
