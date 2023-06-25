@@ -27,6 +27,7 @@
 
 #include "debug.h"
 #include "string.h"
+#include <ch32v20x.h>
 
 #include "defines.h"
 
