@@ -89,7 +89,7 @@ clean:
 #	-rm -fR $(BUILD_DIR)
 	@-rmdir /s /q build
 
-OPENOCD_CFG = ../libs/Util/wch-riscv.cfg
+OPENOCD_CFG = wch-riscv.cfg
 
 erase: build
 	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "flash erase_sector wch_riscv 0 last" -c exit
