@@ -73,7 +73,7 @@ CFLAGS += $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT)
 
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 
-LDSCRIPT = ../libs/Ld/ch32v20x_map.ld
+LDSCRIPT = ../libs/Ld/ch32v30x_map.ld
 
 LDFLAGS = $(MCU) -g --specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -nostartfiles -Xlinker --gc-sections -Wl,-Map=$(BUILD_DIR)/$(TARGET).map --specs=nosys.specs $(OPT)
 

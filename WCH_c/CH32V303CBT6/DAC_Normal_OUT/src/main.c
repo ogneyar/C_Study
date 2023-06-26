@@ -9,7 +9,7 @@ DAC channel 0 (PA4) output
 */
 
 #include "debug.h"
-#include <ch32v20x.h>
+#include <ch32v30x.h>
 
 /* Global define */
 #define Num    7
