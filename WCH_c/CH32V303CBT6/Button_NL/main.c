@@ -30,11 +30,12 @@ void SystemInit (void){}
 #define GPIOB_CFGLR     (*(uint32_t*)(GPIOB_BASE + 0x00))
 #define GPIOB_OUTDR     (*(uint32_t*)(GPIOB_BASE + 0x0c)) // Port Output Register
 
-
+// Список функций
 void GPIO_Init(void);
 void delay(uint16_t inter);
 
 
+// Основная функция
 int main(void)
 {
     GPIO_Init();
@@ -53,7 +54,7 @@ int main(void)
 }
 
 
-// инициализация PA2, PB3, PB4, PB5
+// Инициализация PA2, PB3, PB4, PB5
 void GPIO_Init(void)
 {
     // включаем тактирование порта A
@@ -76,7 +77,7 @@ void GPIO_Init(void)
 }
 
 
-// delay
+// Задержка
 void delay(uint16_t inter)
 {
 	for(uint32_t i = 0; i < (uint32_t)(inter<<10); i++) __asm("nop");

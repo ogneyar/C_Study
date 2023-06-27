@@ -1,5 +1,5 @@
 
-// #include "main.h"
+#include "main.h"
 #include <stdint.h>
 
 void SystemInit (void){}
@@ -22,10 +22,12 @@ void SystemInit (void){}
 #define GPIOB_CFGLR     (*(uint32_t*)(GPIOB_BASE + 0x00))
 #define GPIOB_OUTDR     (*(uint32_t*)(GPIOB_BASE + 0x0c))
 
+// Список функций
 void GPIOB_Leds_Init(void);
 void delay(uint16_t inter);
 
 
+// Основная функция
 int main(void)
 {
     GPIOB_Leds_Init();
@@ -41,21 +43,23 @@ int main(void)
     }
 }
 
-// инициализация PB3
+// Инициализация PA2, PB3, PB4, PB5
 void GPIOB_Leds_Init(void)
 {
     // включаем тактирование порта B
     RCC_APB2PCENR |= RCC_APB2PCENR_IOPBEN;
-
+    // PB3
     GPIOB_CFGLR &= ~(GPIO_Msk << LED_R*4); // ~(0b1111);
     GPIOB_CFGLR |= (GPIO_PP_50 << LED_R*4); // 0b0011;
+    // PB4
     GPIOB_CFGLR &= ~(GPIO_Msk << LED_G*4); // ~(0b1111);
     GPIOB_CFGLR |= (GPIO_PP_50 << LED_G*4); // 0b0011;
+    // PB5
     GPIOB_CFGLR &= ~(GPIO_Msk << LED_B*4); // ~(0b1111);
     GPIOB_CFGLR |= (GPIO_PP_50 << LED_B*4); // 0b0011;
 }
 
-// delay
+// Задержка
 void delay(uint16_t inter)
 {
 	for(uint32_t i = 0; i < (uint32_t)(inter<<10); i++) __asm("nop");
