@@ -3,8 +3,11 @@
 #define __MAIN_H_
 
 #include <stdint.h>
-
   
+// Список функций
+int main(void);
+
+
 __attribute__((noreturn))
 void Reset_Handler(){
     // Импортируем символы, которые мы создали в скрпите линковки

@@ -8,6 +8,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/main.o
  .data          0x0000000000000000        0x0 build/main.o
  .bss           0x0000000000000000        0x0 build/main.o
+ .text.Reset_Handler
+                0x0000000000000000       0x56 build/main.o
+ .isr_vector    0x0000000000000000        0x8 build/main.o
  .text          0x0000000000000000        0x0 build/startup_ch32v30x_D8.o
  .data          0x0000000000000000        0x0 build/startup_ch32v30x_D8.o
  .bss           0x0000000000000000        0x0 build/startup_ch32v30x_D8.o
@@ -266,40 +269,40 @@ END GROUP
                 0x0000000020008000                PROVIDE (_eusrstack = .)
 OUTPUT(build/build.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000      0x151
- .debug_info    0x0000000000000000      0x12f build/main.o
- .debug_info    0x000000000000012f       0x22 build/startup_ch32v30x_D8.o
+.debug_info     0x0000000000000000      0x273
+ .debug_info    0x0000000000000000      0x251 build/main.o
+ .debug_info    0x0000000000000251       0x22 build/startup_ch32v30x_D8.o
 
-.debug_abbrev   0x0000000000000000       0xea
- .debug_abbrev  0x0000000000000000       0xd8 build/main.o
- .debug_abbrev  0x00000000000000d8       0x12 build/startup_ch32v30x_D8.o
+.debug_abbrev   0x0000000000000000      0x17e
+ .debug_abbrev  0x0000000000000000      0x16c build/main.o
+ .debug_abbrev  0x000000000000016c       0x12 build/startup_ch32v30x_D8.o
 
-.debug_loc      0x0000000000000000       0x40
- .debug_loc     0x0000000000000000       0x40 build/main.o
+.debug_loc      0x0000000000000000       0x87
+ .debug_loc     0x0000000000000000       0x87 build/main.o
 
-.debug_aranges  0x0000000000000000       0x68
+.debug_aranges  0x0000000000000000       0x70
  .debug_aranges
-                0x0000000000000000       0x38 build/main.o
+                0x0000000000000000       0x40 build/main.o
  .debug_aranges
-                0x0000000000000038       0x30 build/startup_ch32v30x_D8.o
+                0x0000000000000040       0x30 build/startup_ch32v30x_D8.o
 
-.debug_ranges   0x0000000000000000       0x68
- .debug_ranges  0x0000000000000000       0x40 build/main.o
- .debug_ranges  0x0000000000000040       0x28 build/startup_ch32v30x_D8.o
+.debug_ranges   0x0000000000000000       0x70
+ .debug_ranges  0x0000000000000000       0x48 build/main.o
+ .debug_ranges  0x0000000000000048       0x28 build/startup_ch32v30x_D8.o
 
-.debug_line     0x0000000000000000      0x591
- .debug_line    0x0000000000000000      0x283 build/main.o
- .debug_line    0x0000000000000283      0x30e build/startup_ch32v30x_D8.o
+.debug_line     0x0000000000000000      0x664
+ .debug_line    0x0000000000000000      0x356 build/main.o
+ .debug_line    0x0000000000000356      0x30e build/startup_ch32v30x_D8.o
 
-.debug_str      0x0000000000000000      0x19f
- .debug_str     0x0000000000000000      0x17d build/main.o
-                                        0x1c3 (size before relaxing)
- .debug_str     0x000000000000017d       0x22 build/startup_ch32v30x_D8.o
+.debug_str      0x0000000000000000      0x23c
+ .debug_str     0x0000000000000000      0x21a build/main.o
+                                        0x268 (size before relaxing)
+ .debug_str     0x000000000000021a       0x22 build/startup_ch32v30x_D8.o
                                          0x50 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 build/main.o
                                          0x34 (size before relaxing)
 
-.debug_frame    0x0000000000000000       0x58
- .debug_frame   0x0000000000000000       0x58 build/main.o
+.debug_frame    0x0000000000000000       0x70
+ .debug_frame   0x0000000000000000       0x70 build/main.o
