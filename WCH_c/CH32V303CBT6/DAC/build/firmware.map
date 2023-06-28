@@ -152,7 +152,7 @@ Discarded input sections
                 0x0000000000000000       0xe0 build/core_riscv.o
  .debug_ranges  0x0000000000000000       0xd0 build/core_riscv.o
  .debug_line    0x0000000000000000      0x557 build/core_riscv.o
- .debug_str     0x0000000000000000      0x2df build/core_riscv.o
+ .debug_str     0x0000000000000000      0x2d4 build/core_riscv.o
  .comment       0x0000000000000000       0x34 build/core_riscv.o
  .debug_frame   0x0000000000000000      0x1a0 build/core_riscv.o
  .text          0x0000000000000000        0x0 build/debug.o
@@ -247,7 +247,7 @@ Discarded input sections
                 0x0000000000000000      0x150 build/ch32v30x_adc.o
  .debug_ranges  0x0000000000000000      0x140 build/ch32v30x_adc.o
  .debug_line    0x0000000000000000     0x17d7 build/ch32v30x_adc.o
- .debug_str     0x0000000000000000      0xc16 build/ch32v30x_adc.o
+ .debug_str     0x0000000000000000      0xc0b build/ch32v30x_adc.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_adc.o
  .debug_frame   0x0000000000000000      0x2c0 build/ch32v30x_adc.o
  .text          0x0000000000000000        0x0 build/ch32v30x_bkp.o
@@ -284,7 +284,7 @@ Discarded input sections
                 0x0000000000000000       0x78 build/ch32v30x_bkp.o
  .debug_ranges  0x0000000000000000       0x68 build/ch32v30x_bkp.o
  .debug_line    0x0000000000000000      0x5f8 build/ch32v30x_bkp.o
- .debug_str     0x0000000000000000      0xaa4 build/ch32v30x_bkp.o
+ .debug_str     0x0000000000000000      0xa99 build/ch32v30x_bkp.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_bkp.o
  .debug_frame   0x0000000000000000       0xec build/ch32v30x_bkp.o
  .text          0x0000000000000000        0x0 build/ch32v30x_can.o
@@ -345,7 +345,7 @@ Discarded input sections
                 0x0000000000000000       0xd8 build/ch32v30x_can.o
  .debug_ranges  0x0000000000000000       0xf8 build/ch32v30x_can.o
  .debug_line    0x0000000000000000     0x19d3 build/ch32v30x_can.o
- .debug_str     0x0000000000000000      0xbba build/ch32v30x_can.o
+ .debug_str     0x0000000000000000      0xbaf build/ch32v30x_can.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_can.o
  .debug_frame   0x0000000000000000      0x19c build/ch32v30x_can.o
  .text          0x0000000000000000        0x0 build/ch32v30x_crc.o
@@ -370,7 +370,7 @@ Discarded input sections
                 0x0000000000000000       0x48 build/ch32v30x_crc.o
  .debug_ranges  0x0000000000000000       0x38 build/ch32v30x_crc.o
  .debug_line    0x0000000000000000      0x376 build/ch32v30x_crc.o
- .debug_str     0x0000000000000000      0x67a build/ch32v30x_crc.o
+ .debug_str     0x0000000000000000      0x66f build/ch32v30x_crc.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_crc.o
  .debug_frame   0x0000000000000000       0x70 build/ch32v30x_crc.o
  .text          0x0000000000000000        0x0 build/ch32v30x_dac.o
@@ -438,7 +438,7 @@ Discarded input sections
                 0x0000000000000000       0x60 build/ch32v30x_dma.o
  .debug_ranges  0x0000000000000000       0x50 build/ch32v30x_dma.o
  .debug_line    0x0000000000000000      0x95f build/ch32v30x_dma.o
- .debug_str     0x0000000000000000      0x7f2 build/ch32v30x_dma.o
+ .debug_str     0x0000000000000000      0x7e7 build/ch32v30x_dma.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_dma.o
  .debug_frame   0x0000000000000000       0xd8 build/ch32v30x_dma.o
  .text          0x0000000000000000        0x0 build/ch32v30x_dvp.o
@@ -456,7 +456,7 @@ Discarded input sections
                 0x0000000000000000       0x30 build/ch32v30x_dvp.o
  .debug_ranges  0x0000000000000000       0x20 build/ch32v30x_dvp.o
  .debug_line    0x0000000000000000      0x3e9 build/ch32v30x_dvp.o
- .debug_str     0x0000000000000000      0x73b build/ch32v30x_dvp.o
+ .debug_str     0x0000000000000000      0x730 build/ch32v30x_dvp.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_dvp.o
  .debug_frame   0x0000000000000000       0x40 build/ch32v30x_dvp.o
  .text          0x0000000000000000        0x0 build/ch32v30x_eth.o
@@ -675,7 +675,7 @@ Discarded input sections
                 0x0000000000000000      0x2f8 build/ch32v30x_eth.o
  .debug_ranges  0x0000000000000000      0x360 build/ch32v30x_eth.o
  .debug_line    0x0000000000000000     0x31ed build/ch32v30x_eth.o
- .debug_str     0x0000000000000000     0x18db build/ch32v30x_eth.o
+ .debug_str     0x0000000000000000     0x18d0 build/ch32v30x_eth.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_eth.o
  .debug_frame   0x0000000000000000      0x6e0 build/ch32v30x_eth.o
  .text          0x0000000000000000        0x0 build/ch32v30x_exti.o
@@ -704,7 +704,7 @@ Discarded input sections
                 0x0000000000000000       0x50 build/ch32v30x_exti.o
  .debug_ranges  0x0000000000000000       0x40 build/ch32v30x_exti.o
  .debug_line    0x0000000000000000      0x564 build/ch32v30x_exti.o
- .debug_str     0x0000000000000000      0x78c build/ch32v30x_exti.o
+ .debug_str     0x0000000000000000      0x781 build/ch32v30x_exti.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_exti.o
  .debug_frame   0x0000000000000000       0x90 build/ch32v30x_exti.o
  .text          0x0000000000000000        0x0 build/ch32v30x_flash.o
@@ -781,7 +781,7 @@ Discarded input sections
                 0x0000000000000000       0xf8 build/ch32v30x_flash.o
  .debug_ranges  0x0000000000000000       0xe8 build/ch32v30x_flash.o
  .debug_line    0x0000000000000000     0x1b96 build/ch32v30x_flash.o
- .debug_str     0x0000000000000000      0xa73 build/ch32v30x_flash.o
+ .debug_str     0x0000000000000000      0xa68 build/ch32v30x_flash.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_flash.o
  .debug_frame   0x0000000000000000      0x314 build/ch32v30x_flash.o
  .text          0x0000000000000000        0x0 build/ch32v30x_fsmc.o
@@ -824,7 +824,7 @@ Discarded input sections
                 0x0000000000000000       0x90 build/ch32v30x_fsmc.o
  .debug_ranges  0x0000000000000000       0x80 build/ch32v30x_fsmc.o
  .debug_line    0x0000000000000000      0xdca build/ch32v30x_fsmc.o
- .debug_str     0x0000000000000000      0xac7 build/ch32v30x_fsmc.o
+ .debug_str     0x0000000000000000      0xabc build/ch32v30x_fsmc.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_fsmc.o
  .debug_frame   0x0000000000000000      0x110 build/ch32v30x_fsmc.o
  .text          0x0000000000000000        0x0 build/ch32v30x_gpio.o
@@ -937,7 +937,7 @@ Discarded input sections
                 0x0000000000000000      0x110 build/ch32v30x_i2c.o
  .debug_ranges  0x0000000000000000      0x100 build/ch32v30x_i2c.o
  .debug_line    0x0000000000000000     0x10e7 build/ch32v30x_i2c.o
- .debug_str     0x0000000000000000      0xadf build/ch32v30x_i2c.o
+ .debug_str     0x0000000000000000      0xad4 build/ch32v30x_i2c.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_i2c.o
  .debug_frame   0x0000000000000000      0x264 build/ch32v30x_i2c.o
  .text          0x0000000000000000        0x0 build/ch32v30x_iwdg.o
@@ -962,7 +962,7 @@ Discarded input sections
                 0x0000000000000000       0x48 build/ch32v30x_iwdg.o
  .debug_ranges  0x0000000000000000       0x38 build/ch32v30x_iwdg.o
  .debug_line    0x0000000000000000      0x33f build/ch32v30x_iwdg.o
- .debug_str     0x0000000000000000      0x69e build/ch32v30x_iwdg.o
+ .debug_str     0x0000000000000000      0x693 build/ch32v30x_iwdg.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_iwdg.o
  .debug_frame   0x0000000000000000       0x70 build/ch32v30x_iwdg.o
  .text          0x0000000000000000        0x0 build/ch32v30x_misc.o
@@ -981,7 +981,7 @@ Discarded input sections
                 0x0000000000000000       0x28 build/ch32v30x_misc.o
  .debug_ranges  0x0000000000000000       0x48 build/ch32v30x_misc.o
  .debug_line    0x0000000000000000      0x45f build/ch32v30x_misc.o
- .debug_str     0x0000000000000000      0xc48 build/ch32v30x_misc.o
+ .debug_str     0x0000000000000000      0xc3d build/ch32v30x_misc.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_misc.o
  .debug_frame   0x0000000000000000       0x30 build/ch32v30x_misc.o
  .text          0x0000000000000000        0x0 build/ch32v30x_opa.o
@@ -1001,7 +1001,7 @@ Discarded input sections
                 0x0000000000000000       0x38 build/ch32v30x_opa.o
  .debug_ranges  0x0000000000000000       0x28 build/ch32v30x_opa.o
  .debug_line    0x0000000000000000      0x3ec build/ch32v30x_opa.o
- .debug_str     0x0000000000000000      0x6ba build/ch32v30x_opa.o
+ .debug_str     0x0000000000000000      0x6af build/ch32v30x_opa.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_opa.o
  .debug_frame   0x0000000000000000       0x50 build/ch32v30x_opa.o
  .text          0x0000000000000000        0x0 build/ch32v30x_pwr.o
@@ -1042,7 +1042,7 @@ Discarded input sections
                 0x0000000000000000       0x88 build/ch32v30x_pwr.o
  .debug_ranges  0x0000000000000000       0xa8 build/ch32v30x_pwr.o
  .debug_line    0x0000000000000000      0x9ea build/ch32v30x_pwr.o
- .debug_str     0x0000000000000000      0x84c build/ch32v30x_pwr.o
+ .debug_str     0x0000000000000000      0x841 build/ch32v30x_pwr.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_pwr.o
  .debug_frame   0x0000000000000000       0xfc build/ch32v30x_pwr.o
  .text          0x0000000000000000        0x0 build/ch32v30x_rcc.o
@@ -1165,7 +1165,7 @@ Discarded input sections
                 0x0000000000000000       0x48 build/ch32v30x_rng.o
  .debug_ranges  0x0000000000000000       0x38 build/ch32v30x_rng.o
  .debug_line    0x0000000000000000      0x3b9 build/ch32v30x_rng.o
- .debug_str     0x0000000000000000      0x68b build/ch32v30x_rng.o
+ .debug_str     0x0000000000000000      0x680 build/ch32v30x_rng.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_rng.o
  .debug_frame   0x0000000000000000       0x8c build/ch32v30x_rng.o
  .text          0x0000000000000000        0x0 build/ch32v30x_rtc.o
@@ -1206,7 +1206,7 @@ Discarded input sections
                 0x0000000000000000       0x80 build/ch32v30x_rtc.o
  .debug_ranges  0x0000000000000000       0x70 build/ch32v30x_rtc.o
  .debug_line    0x0000000000000000      0x735 build/ch32v30x_rtc.o
- .debug_str     0x0000000000000000      0x7eb build/ch32v30x_rtc.o
+ .debug_str     0x0000000000000000      0x7e0 build/ch32v30x_rtc.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_rtc.o
  .debug_frame   0x0000000000000000      0x12c build/ch32v30x_rtc.o
  .text          0x0000000000000000        0x0 build/ch32v30x_sdio.o
@@ -1279,7 +1279,7 @@ Discarded input sections
                 0x0000000000000000       0xf8 build/ch32v30x_sdio.o
  .debug_ranges  0x0000000000000000       0xe8 build/ch32v30x_sdio.o
  .debug_line    0x0000000000000000      0xc29 build/ch32v30x_sdio.o
- .debug_str     0x0000000000000000      0xa5d build/ch32v30x_sdio.o
+ .debug_str     0x0000000000000000      0xa52 build/ch32v30x_sdio.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_sdio.o
  .debug_frame   0x0000000000000000      0x204 build/ch32v30x_sdio.o
  .text          0x0000000000000000        0x0 build/ch32v30x_spi.o
@@ -1336,7 +1336,7 @@ Discarded input sections
                 0x0000000000000000       0xd0 build/ch32v30x_spi.o
  .debug_ranges  0x0000000000000000       0xc0 build/ch32v30x_spi.o
  .debug_line    0x0000000000000000      0xcae build/ch32v30x_spi.o
- .debug_str     0x0000000000000000      0xa8e build/ch32v30x_spi.o
+ .debug_str     0x0000000000000000      0xa83 build/ch32v30x_spi.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_spi.o
  .debug_frame   0x0000000000000000      0x1a4 build/ch32v30x_spi.o
  .text          0x0000000000000000        0x0 build/ch32v30x_tim.o
@@ -1526,7 +1526,7 @@ Discarded input sections
                 0x0000000000000000      0x2d0 build/ch32v30x_tim.o
  .debug_ranges  0x0000000000000000      0x2f0 build/ch32v30x_tim.o
  .debug_line    0x0000000000000000     0x325e build/ch32v30x_tim.o
- .debug_str     0x0000000000000000     0x127a build/ch32v30x_tim.o
+ .debug_str     0x0000000000000000     0x126f build/ch32v30x_tim.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_tim.o
  .debug_frame   0x0000000000000000      0x614 build/ch32v30x_tim.o
  .text          0x0000000000000000        0x0 build/ch32v30x_usart.o
@@ -1608,7 +1608,7 @@ Discarded input sections
                 0x0000000000000000       0x58 build/ch32v30x_wwdg.o
  .debug_ranges  0x0000000000000000       0x48 build/ch32v30x_wwdg.o
  .debug_line    0x0000000000000000      0x427 build/ch32v30x_wwdg.o
- .debug_str     0x0000000000000000      0x6b1 build/ch32v30x_wwdg.o
+ .debug_str     0x0000000000000000      0x6a6 build/ch32v30x_wwdg.o
  .comment       0x0000000000000000       0x34 build/ch32v30x_wwdg.o
  .debug_frame   0x0000000000000000       0xa4 build/ch32v30x_wwdg.o
  .text          0x0000000000000000        0x0 build/startup_ch32v30x_D8.o
@@ -2390,27 +2390,27 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_line    0x0000000000004146      0xf83 build/ch32v30x_usart.o
  .debug_line    0x00000000000050c9      0x31e build/startup_ch32v30x_D8.o
 
-.debug_str      0x0000000000000000     0x1853
- .debug_str     0x0000000000000000      0x7e4 build/main.o
-                                        0x85b (size before relaxing)
- .debug_str     0x00000000000007e4       0xd8 build/system_ch32v30x.o
-                                        0x695 (size before relaxing)
- .debug_str     0x00000000000008bc       0x30 build/ch32v30x_it.o
-                                        0x5ac (size before relaxing)
- .debug_str     0x00000000000008ec      0x1a1 build/debug.o
-                                        0x8fe (size before relaxing)
- .debug_str     0x0000000000000a8d      0x1b8 build/ch32v30x_dac.o
-                                        0x7fe (size before relaxing)
- .debug_str     0x0000000000000c45       0x83 build/ch32v30x_dbgmcu.o
-                                        0x645 (size before relaxing)
- .debug_str     0x0000000000000cc8      0x251 build/ch32v30x_gpio.o
-                                        0x970 (size before relaxing)
- .debug_str     0x0000000000000f19      0x5b2 build/ch32v30x_rcc.o
-                                        0xcc0 (size before relaxing)
- .debug_str     0x00000000000014cb      0x356 build/ch32v30x_usart.o
-                                        0xb16 (size before relaxing)
- .debug_str     0x0000000000001821       0x32 build/startup_ch32v30x_D8.o
-                                         0x66 (size before relaxing)
+.debug_str      0x0000000000000000     0x1848
+ .debug_str     0x0000000000000000      0x7d9 build/main.o
+                                        0x850 (size before relaxing)
+ .debug_str     0x00000000000007d9       0xd8 build/system_ch32v30x.o
+                                        0x68a (size before relaxing)
+ .debug_str     0x00000000000008b1       0x30 build/ch32v30x_it.o
+                                        0x5a1 (size before relaxing)
+ .debug_str     0x00000000000008e1      0x1a1 build/debug.o
+                                        0x8f3 (size before relaxing)
+ .debug_str     0x0000000000000a82      0x1b8 build/ch32v30x_dac.o
+                                        0x7f3 (size before relaxing)
+ .debug_str     0x0000000000000c3a       0x83 build/ch32v30x_dbgmcu.o
+                                        0x63a (size before relaxing)
+ .debug_str     0x0000000000000cbd      0x251 build/ch32v30x_gpio.o
+                                        0x965 (size before relaxing)
+ .debug_str     0x0000000000000f0e      0x5b2 build/ch32v30x_rcc.o
+                                        0xcb5 (size before relaxing)
+ .debug_str     0x00000000000014c0      0x356 build/ch32v30x_usart.o
+                                        0xb0b (size before relaxing)
+ .debug_str     0x0000000000001816       0x32 build/startup_ch32v30x_D8.o
+                                         0x5b (size before relaxing)
 
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 build/main.o
