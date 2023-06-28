@@ -8,13 +8,7 @@
 */
 
 #include "debug.h"
-
-
-/* Global typedef */
-
-/* Global define */
-
-/* Global Variable */
+#include "ch32v30x.h" 
 
 
 /*********************************************************************

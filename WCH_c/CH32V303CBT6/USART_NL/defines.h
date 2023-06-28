@@ -55,6 +55,24 @@ typedef struct
     __IO uint32_t EXTEN_CTR;  // 0x00
 } EXTEN_TypeDef;
 
+/* Universal Synchronous Asynchronous Receiver Transmitter */
+typedef struct
+{
+  __IO uint16_t STATR;
+  uint16_t  RESERVED0;
+  __IO uint16_t DATAR;
+  uint16_t  RESERVED1;
+  __IO uint16_t BRR;
+  uint16_t  RESERVED2;
+  __IO uint16_t CTLR1;
+  uint16_t  RESERVED3;
+  __IO uint16_t CTLR2;
+  uint16_t  RESERVED4;
+  __IO uint16_t CTLR3;
+  uint16_t  RESERVED5;
+  __IO uint16_t GPR;
+  uint16_t  RESERVED6;
+} USART_TypeDef;
 
 #define SET         1
 #define RESET       0
@@ -63,8 +81,25 @@ typedef struct
 #define LED_G       4 // PB4
 #define LED_B       5 // PB5
 
-#define GPIO_Msk    0b1111
-#define GPIO_PP_50  0b0011
+#define PA9         9
+
+// Configuration Mode enumeration
+typedef enum
+{ 
+    GPIO_Mode_AIN = 0x00,
+    GPIO_Mode_IN_FLOATING = 0x04,
+    GPIO_Mode_IPD = 0x28,
+    GPIO_Mode_IPU = 0x48,
+    GPIO_Mode_Out_OD = 0x14,
+    GPIO_Mode_Out_PP = 0x10,
+    GPIO_Mode_AF_OD = 0x1C,
+    GPIO_Mode_AF_PP = 0x18
+} GPIOMode_TypeDef;
+
+#define GPIO_Msk        0b1111
+#define GPIO_Speed_50   0b0011
+#define GPIO_AF_50      0b1011 // Alternate Functions (50Hz)
+#define GPIO_IPU        0b1000 // Input Pull Up
 
 // Peripheral memory map
 #define FLASH_BASE             ((uint32_t)0x08000000)
@@ -74,16 +109,24 @@ typedef struct
 #define APB2PERIPH_BASE        (PERIPH_BASE + 0x10000)      // 0x40010000
 #define AHBPERIPH_BASE         (PERIPH_BASE + 0x20000)      // 0x40020000
 
+#define GPIOA_BASE             (APB2PERIPH_BASE + 0x0800)   // 0x40010800
 #define GPIOB_BASE             (APB2PERIPH_BASE + 0x0C00)   // 0x40010C00
+#define USART1_BASE            (APB2PERIPH_BASE + 0x3800)   // 0x40013800
 #define RCC_BASE               (AHBPERIPH_BASE + 0x1000)    // 0x40021000
 #define EXTEN_BASE             (AHBPERIPH_BASE + 0x3800)    // 0x40023800
 
 #define SysTick                ((SysTick_Type *) 0xE000F000)
-#define RCC                    ((RCC_TypeDef *) RCC_BASE)
+
+#define GPIOA                  ((GPIO_TypeDef *) GPIOA_BASE)
 #define GPIOB                  ((GPIO_TypeDef *) GPIOB_BASE)
+#define USART1                 ((USART_TypeDef *) USART1_BASE)
+#define RCC                    ((RCC_TypeDef *) RCC_BASE)
 #define EXTEN                  ((EXTEN_TypeDef *) EXTEN_BASE)
 
+#define RCC_APB2PCENR_IOPAEN   ((uint32_t)0x00000004) // (1 << 2)
 #define RCC_APB2PCENR_IOPBEN   ((uint32_t)0x00000008) // (1 << 3)
+#define RCC_APB2PCENR_USART1EN ((uint32_t)0x00004000) // (1 << 14)
+
 #define EXTEN_PLL_HSI_PRE      ((uint32_t)0x00000010) // (1 << 4)
 
 #define RCC_HPRE               ((uint32_t)0x000000F0) // HPRE[3:0] bits (AHB prescaler)
