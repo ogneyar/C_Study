@@ -8,7 +8,7 @@
 
 #include "debug.h"
 #include "stdio.h"
-#include <ch32v20x.h>
+#include <ch32v30x.h>
 
 #define SCREEN_BUFFER_LENGTH 512 // 512 * 8 or 128 * 32
 
