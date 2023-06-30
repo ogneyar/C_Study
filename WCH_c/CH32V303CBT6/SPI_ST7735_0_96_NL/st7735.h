@@ -159,12 +159,7 @@ void ST7735_Send(uint8_t dc, uint8_t data)
     if ((GPIOA->INDR & DD_DC) != 0) temp = SET;
     else temp = RESET;
 
-    if (temp != dc) {
-        // GPIOA->OUTDR ^= DD_DC;
-        if (dc) GPIOA->BSHR |= DD_DC;
-        else GPIOA->BCR |= DD_DC;
-        Delay_Ms(10);
-    }
+    if (temp != dc) GPIOA->OUTDR ^= DD_DC;
             
     SPI1_SendData(data);
   
