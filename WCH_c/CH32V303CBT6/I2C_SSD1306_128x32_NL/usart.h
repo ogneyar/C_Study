@@ -5,6 +5,7 @@
 #include "stdio.h"
 #include <stdint.h>
 #include "defines.h"
+#include "system.h"
 
 // Список функций
 void USART1_Init(uint32_t baudrate);
@@ -13,10 +14,10 @@ uint16_t USART1_ReceiveData(void);
 uint8_t USART1_GetFlagStatus(uint16_t USART_FLAG);
 
 
-// Инициализация USART (при тактировании от внутреннего осцилятора и PLL = 6 => 48MHz)
+// Инициализация USART (при тактировании от внутреннего осцилятора и PLL = 6 => 48MHz или PLL = 18 => 144MHz)
 void USART1_Init(uint32_t baudrate)
 {
-    uint32_t apbclock = SYSCLK_FREQ_48MHz_HSI; // SYSCLK_Frequency = 48MHz; PCLK2_Frequency = 48MHz;
+    uint32_t apbclock = SYSCLK_FREQ; // PCLK2_Frequency (APB) == SYSCLK_Frequency
 
     uint32_t tmpreg = 0x00;
     uint32_t integerdivider = 0x00;

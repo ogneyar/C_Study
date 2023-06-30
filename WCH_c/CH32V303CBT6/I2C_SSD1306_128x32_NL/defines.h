@@ -190,8 +190,9 @@ typedef struct
 #define RCC_PLLSRC             ((uint32_t)0x00010000) // PLL entry clock source
 #define RCC_PLLXTPRE           ((uint32_t)0x00020000) // HSE divider for PLL entry
 #define RCC_PLLMULL            ((uint32_t)0x003C0000) // PLLMUL[3:0] bits (PLL multiplication factor)
-#define RCC_PLLSRC_HSI_Div2    ((uint32_t)0x00000000) // HSI clock divided by 2 selected as PLL entry clock source
 #define RCC_PLLMULL6           ((uint32_t)0x00100000) // PLL input clock*6
+#define RCC_PLLMULL18          ((uint32_t)0x003C0000) // PLL input clock*18
+#define RCC_PLLSRC_HSI_Div2    ((uint32_t)0x00000000) // HSI clock divided by 2 selected as PLL entry clock source
 #define RCC_PLLON              ((uint32_t)0x01000000) // PLL enable
 #define RCC_PLLRDY             ((uint32_t)0x02000000) // PLL clock ready flag
 #define RCC_SW                 ((uint32_t)0x00000003) // SW[1:0] bits (System clock Switch)
@@ -201,7 +202,9 @@ typedef struct
 #define HSE_VALUE              ((uint32_t)8000000) // внешний осцилятор
 #define HSI_VALUE              ((uint32_t)8000000) // внутренний осцилятор
 
+
 #define SYSCLK_FREQ_48MHz_HSI  48000000
+#define SYSCLK_FREQ_144MHz_HSI 144000000
 
 
 #define CTLR1_UE_Set              ((uint16_t)0x2000) // USART Enable Mask

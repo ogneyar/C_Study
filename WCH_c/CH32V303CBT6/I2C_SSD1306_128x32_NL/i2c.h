@@ -3,6 +3,7 @@
 #define __I2C_H_
 
 #include "defines.h"
+#include "system.h"
 
 
 /* Список функций */
@@ -15,13 +16,12 @@ uint8_t I2C2_GetFlagStatus(uint32_t I2C_FLAG);
 uint8_t I2C2_CheckEvent(uint32_t I2C_EVENT);
 
 
-
-// Инициализация I2C2 (при тактировании от внутреннего осцилятора и PLL = 6 => 48MHz)
+// Инициализация I2C2 (при тактировании от внутреннего осцилятора и PLL = 6 => 48MHz или PLL = 18 => 144MHz)
 void I2C2_Init(u32 bound, u16 address)
 {
     uint16_t tmpreg = 0, freqrange = 0;
     uint16_t result = 0x04;
-    uint32_t pclk1 = 24000000;  // SYSCLK_Frequency = 48MHz; PCLK1_Frequency = 24MHz;
+    uint32_t pclk1 = (SYSCLK_FREQ / 2);  // PCLK1_Frequency = SYSCLK_Frequency / 2
 
     // включаем тактирование порта B
     RCC->APB2PCENR |= RCC_APB2PCENR_IOPBEN;

@@ -115,6 +115,30 @@ typedef struct
     uint16_t  RESERVED8;
 } I2C_TypeDef;
 
+// Serial Peripheral Interface
+typedef struct
+{
+    __IO uint16_t CTLR1;
+    uint16_t  RESERVED0;
+    __IO uint16_t CTLR2;
+    uint16_t  RESERVED1;
+    __IO uint16_t STATR;
+    uint16_t  RESERVED2;
+    __IO uint16_t DATAR;
+    uint16_t  RESERVED3;
+    __IO uint16_t CRCR;
+    uint16_t  RESERVED4;
+    __IO uint16_t RCRCR;
+    uint16_t  RESERVED5;
+    __IO uint16_t TCRCR;
+    uint16_t  RESERVED6;
+    __IO uint16_t I2SCFGR;
+    uint16_t  RESERVED7;
+    __IO uint16_t I2SPR;
+    uint16_t  RESERVED8;
+    __IO uint16_t HSCR;
+    uint16_t  RESERVED9;
+} SPI_TypeDef;
 
 #define SET         1
 #define RESET       0
@@ -126,7 +150,12 @@ typedef struct
 #define LED_G       4 // PB4
 #define LED_B       5 // PB5
 
+#define PA2         2 // 
+#define PA3         3 // 
 #define PA4         4 // DAC
+#define PA5         5 // SPI1 CLK
+#define PA6         6 // SPI1 MISO
+#define PA7         7 // SPI1 MOSI
 #define PA9         9 // Tx1
 
 #define PB3         3 // LED_R
@@ -137,6 +166,7 @@ typedef struct
 
 #define GPIO_Msk        0b1111
 #define GPIO_Speed_50   0b0011
+#define GPIO_IN_FLOAT   0b0100
 #define GPIO_AF         0b1000 // Alternate Functions
 #define GPIO_AF_50      0b1011 // Alternate Functions with speed 50Hz
 #define GPIO_AF_OD      0b1100 // Alternate Functions
@@ -158,6 +188,7 @@ typedef struct
 
 #define GPIOA_BASE             (APB2PERIPH_BASE + 0x0800)   // 0x40010800
 #define GPIOB_BASE             (APB2PERIPH_BASE + 0x0C00)   // 0x40010C00
+#define SPI1_BASE              (APB2PERIPH_BASE + 0x3000)   // 0x40013000
 #define USART1_BASE            (APB2PERIPH_BASE + 0x3800)   // 0x40013800
 
 #define RCC_BASE               (AHBPERIPH_BASE + 0x1000)    // 0x40021000
@@ -170,6 +201,7 @@ typedef struct
 
 #define GPIOA                  ((GPIO_TypeDef *) GPIOA_BASE)
 #define GPIOB                  ((GPIO_TypeDef *) GPIOB_BASE)
+#define SPI1                   ((SPI_TypeDef *) SPI1_BASE)
 #define USART1                 ((USART_TypeDef *) USART1_BASE)
 #define RCC                    ((RCC_TypeDef *) RCC_BASE)
 #define EXTEN                  ((EXTEN_TypeDef *) EXTEN_BASE)
@@ -179,6 +211,7 @@ typedef struct
 
 #define RCC_APB2PCENR_IOPAEN   ((uint32_t)0x00000004) // (1 << 2)
 #define RCC_APB2PCENR_IOPBEN   ((uint32_t)0x00000008) // (1 << 3)
+#define RCC_APB2PCENR_SPI1EN   ((uint32_t)0x00001000) // (1 << 12)
 #define RCC_APB2PCENR_USART1EN ((uint32_t)0x00004000) // (1 << 14)
 
 #define EXTEN_PLL_HSI_PRE      ((uint32_t)0x00000010) // (1 << 4)
@@ -199,9 +232,9 @@ typedef struct
 #define RCC_SW_PLL             ((uint32_t)0x00000002) // PLL selected as system clock
 #define RCC_SWS                ((uint32_t)0x0000000C) // SWS[1:0] bits (System Clock Switch Status)
 
+
 #define HSE_VALUE              ((uint32_t)8000000) // внешний осцилятор
 #define HSI_VALUE              ((uint32_t)8000000) // внутренний осцилятор
-
 
 #define SYSCLK_FREQ_48MHz_HSI  48000000
 #define SYSCLK_FREQ_144MHz_HSI 144000000

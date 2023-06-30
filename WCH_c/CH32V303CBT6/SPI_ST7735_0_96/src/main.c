@@ -26,8 +26,7 @@
 // максимальная скорость 144МГц / 4 или 72МГц / 2 = 36МГц
 
 #include "debug.h"
-#include "string.h"
-#include <ch32v20x.h>
+#include <ch32v30x.h>
 
 #include "defines.h"
 
