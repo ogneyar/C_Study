@@ -126,9 +126,8 @@ void SPI1_Master_Init(void)
     tmpreg = SPI1->CTLR1;
     tmpreg &= CTLR1_CLEAR_Mask;
     tmpreg |= (uint16_t)((uint32_t)SPI_Direction_2Lines_FullDuplex | SPI_Mode_Master |
-                        //  SPI_DataSize_8b | SPI_CPOL_High | SPI_CPHA_2Edge | SPI_NSS_Soft |
-                         SPI_DataSize_8b | SPI_CPOL_High | SPI_CPHA_1Edge | SPI_NSS_Soft |
-                         SPI_BaudRatePrescaler_8 | SPI_FirstBit_MSB);
+                         SPI_DataSize_8b | SPI_CPOL_Low | SPI_CPHA_1Edge | SPI_NSS_Soft |
+                         SPI_BaudRatePrescaler_2 | SPI_FirstBit_MSB);
     SPI1->CTLR1 = tmpreg;
 
     SPI1->I2SCFGR &= SPI_Mode_Select;
