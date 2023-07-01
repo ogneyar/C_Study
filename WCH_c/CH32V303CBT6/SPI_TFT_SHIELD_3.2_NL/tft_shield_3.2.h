@@ -21,11 +21,21 @@ int Lcd_RGB(int r,int g,int b);
 void Lcd_Fill(unsigned int j);
 void Lcd_Clear();
 
+/*
+	LED  -- PA1
+*/
 
 
 // Инициализация дисплея
 void Lcd_Init(void)
-{
+{ 
+    // включаем тактирование порта A
+    RCC->APB2PCENR |= RCC_APB2PCENR_IOPAEN;    
+    // PA1
+    GPIOA->CFGLR &= ~(GPIO_Msk << PA1*4); // ~(0b1111);
+    GPIOA->CFGLR |= (GPIO_Speed_50 << PA1*4); // 0b0011;
+    GPIOA->BSHR |= (1 << PA1);
+	
     // digitalWrite(RESET, HIGH);
     GPIOA->BSHR |= DD_RES;
     Delay_Ms(5); 
