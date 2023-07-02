@@ -1,4 +1,6 @@
 
+// в разработке
+
 #include <stdint.h>
 #include <stdio.h>
 #include "main.h"
@@ -15,14 +17,14 @@ int main(void)
 {
     Delay_Init();
     GPIO_Init();
-    USART1_Init(115200);
-    printf("SystemClk:%d\r\n", SystemCoreClock);
-    printf("SPI TFT SHIELD 3.2inch\r\n");
+    // USART1_Init(115200);
+    // printf("SystemClk:%d\r\n", SystemCoreClock);
+    // printf("SPI TFT SHIELD 3.2inch\r\n");
 
-    SPI1_Master_Init(0);    
-    Delay_Ms(100);
+    // SPI1_Master_Init(0);    
+    // Delay_Ms(100);
     
-    Lcd_Init();
+    // Lcd_Init();
       
     while(1)
     {
@@ -62,13 +64,13 @@ void Test_Screen(void)
 {    
     uint16_t delay = 500;
     
-    Lcd_Fill(0xf800);
-	Leds_Blink(delay);
-    Lcd_Fill(0x07E0);
-	Leds_Blink(delay);
-    Lcd_Fill(0x001F);
-	Leds_Blink(delay);
-    Lcd_Clear();         
+    // Lcd_Fill(0xf800);
+	// Leds_Blink(delay);
+    // Lcd_Fill(0x07E0);
+	// Leds_Blink(delay);
+    // Lcd_Fill(0x001F);
+	// Leds_Blink(delay);
+    // Lcd_Clear();         
 	Leds_Blink(delay);
 }
 

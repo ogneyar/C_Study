@@ -758,9 +758,9 @@ END GROUP
                 0x0000000020008000                PROVIDE (_eusrstack = .)
 OUTPUT(build/build.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x1e8a
- .debug_info    0x0000000000000000     0x1e68 build/main.o
- .debug_info    0x0000000000001e68       0x22 build/startup_ch32v30x_D8.o
+.debug_info     0x0000000000000000     0x1e8f
+ .debug_info    0x0000000000000000     0x1e6d build/main.o
+ .debug_info    0x0000000000001e6d       0x22 build/startup_ch32v30x_D8.o
 
 .debug_abbrev   0x0000000000000000      0x477
  .debug_abbrev  0x0000000000000000      0x465 build/main.o
