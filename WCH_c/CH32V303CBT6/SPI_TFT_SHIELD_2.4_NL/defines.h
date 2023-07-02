@@ -159,6 +159,12 @@ typedef struct
 #define PA6         6 // SPI1 MISO
 #define PA7         7 // SPI1 MOSI
 #define PA9         9 // Tx1
+#define PA10       10 // 
+#define PA11       11 // 
+#define PA12       12 // 
+#define PA13       13 // 
+#define PA14       14 // 
+#define PA15       15 // 
 
 #define PB3         3 // LED_R
 #define PB4         4 // LED_G
@@ -250,6 +256,13 @@ typedef struct
 #define SYSCLK_FREQ_144MHz_HSI 144000000
 
 
+           
+/*
+
+USART
+
+*/
+
 #define CTLR1_UE_Set              ((uint16_t)0x2000) // USART Enable Mask
 #define CTLR1_UE_Reset            ((uint16_t)0xDFFF) // USART Disable Mask
 
@@ -257,12 +270,6 @@ typedef struct
 #define CTLR1_CLEAR_Mask          ((uint16_t)0xE9F3) // USART CR1 Mask
 #define CTLR3_CLEAR_Mask          ((uint16_t)0xFCFF) // USART CR3 Mask
 
-           
-/*
-
-USART
-
-*/
    
 // USART_Word_Length
 #define USART_WordLength_8b       ((uint16_t)0x0000)
@@ -438,6 +445,71 @@ I2C
 
 // I2C FLAG mask
 #define FLAG_Mask                ((uint32_t)0x00FFFFFF)
+
+
+/*
+
+SPI
+
+*/
+
+// SPI or I2S mode selection masks
+#define SPI_Mode_Select       ((uint16_t)0xF7FF)
+#define I2S_Mode_Select       ((uint16_t)0x0800)
+
+// SPI SPE mask
+#define CTLR1_SPE_Set         ((uint16_t)0x0040)
+#define CTLR1_SPE_Reset       ((uint16_t)0xFFBF)
+
+// SPI_data_direction  
+#define SPI_Direction_2Lines_FullDuplex ((uint16_t)0x0000)
+#define SPI_Direction_2Lines_RxOnly     ((uint16_t)0x0400)
+#define SPI_Direction_1Line_Rx          ((uint16_t)0x8000)
+#define SPI_Direction_1Line_Tx          ((uint16_t)0xC000)
+
+// SPI_mode
+#define SPI_Mode_Master                 ((uint16_t)0x0104)
+#define SPI_Mode_Slave                  ((uint16_t)0x0000)
+
+// SPI_data_size
+#define SPI_DataSize_16b                ((uint16_t)0x0800)
+#define SPI_DataSize_8b                 ((uint16_t)0x0000)
+
+// SPI_Clock_Polarity
+#define SPI_CPOL_Low                    ((uint16_t)0x0000)
+#define SPI_CPOL_High                   ((uint16_t)0x0002)
+
+// SPI_Clock_Phase
+#define SPI_CPHA_1Edge                  ((uint16_t)0x0000)
+#define SPI_CPHA_2Edge                  ((uint16_t)0x0001)
+
+// SPI_Slave_Select_management
+#define SPI_NSS_Soft                    ((uint16_t)0x0200)
+#define SPI_NSS_Hard                    ((uint16_t)0x0000)
+
+// SPI_BaudRate_Prescaler
+#define SPI_BaudRatePrescaler_2         ((uint16_t)0x0000)
+#define SPI_BaudRatePrescaler_4         ((uint16_t)0x0008)
+#define SPI_BaudRatePrescaler_8         ((uint16_t)0x0010)
+#define SPI_BaudRatePrescaler_16        ((uint16_t)0x0018)
+#define SPI_BaudRatePrescaler_32        ((uint16_t)0x0020)
+#define SPI_BaudRatePrescaler_64        ((uint16_t)0x0028)
+#define SPI_BaudRatePrescaler_128       ((uint16_t)0x0030)
+#define SPI_BaudRatePrescaler_256       ((uint16_t)0x0038)
+
+// SPI_MSB_LSB_transmission
+#define SPI_FirstBit_MSB                ((uint16_t)0x0000)
+#define SPI_FirstBit_LSB                ((uint16_t)0x0080)
+
+// SPI_I2S_flags_definition
+#define SPI_I2S_FLAG_RXNE               ((uint16_t)0x0001)
+#define SPI_I2S_FLAG_TXE                ((uint16_t)0x0002)
+#define I2S_FLAG_CHSIDE                 ((uint16_t)0x0004)
+#define I2S_FLAG_UDR                    ((uint16_t)0x0008)
+#define SPI_FLAG_CRCERR                 ((uint16_t)0x0010)
+#define SPI_FLAG_MODF                   ((uint16_t)0x0020)
+#define SPI_I2S_FLAG_OVR                ((uint16_t)0x0040)
+#define SPI_I2S_FLAG_BSY                ((uint16_t)0x0080)
 
 
 #endif /* __DEFINES_H_ */

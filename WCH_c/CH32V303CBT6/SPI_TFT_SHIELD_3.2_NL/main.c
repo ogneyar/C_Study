@@ -25,7 +25,7 @@ int main(void)
     printf("SystemClk:%d\r\n", SystemCoreClock);
     printf("SPI TFT SHIELD 3.2inch\r\n");
 
-    SPI1_Master_Init();    
+    SPI1_Master_Init(0);    
     Delay_Ms(100);
     
     Lcd_Init();
@@ -66,7 +66,7 @@ void Leds_Blink(uint16_t delay)
 // тест дисплея
 void Test_Screen(void) 
 {    
-    uint16_t delay = 100;
+    uint16_t delay = 250;
     
     Lcd_Fill(0xf800);
 	Leds_Blink(delay);

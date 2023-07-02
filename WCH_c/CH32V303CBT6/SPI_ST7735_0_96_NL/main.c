@@ -23,7 +23,7 @@ int main(void)
     printf("SystemClk:%d\r\n", SystemCoreClock);
     printf("SPI ST7735 0.96inch\r\n");
 
-    SPI1_Master_Init();    
+    SPI1_Master_Init(3);    
     Delay_Ms(100);
 
     ST7735_Init();    

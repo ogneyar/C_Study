@@ -13,9 +13,9 @@ static void SetSysClockTo48_HSI(void);
 static void SetSysClockTo144_HSI(void);
 
 
-#define SYSCLK_FREQ            HSI_VALUE
+// #define SYSCLK_FREQ            HSI_VALUE
 // #define SYSCLK_FREQ            SYSCLK_FREQ_48MHz_HSI
-// #define SYSCLK_FREQ            SYSCLK_FREQ_144MHz_HSI
+#define SYSCLK_FREQ            SYSCLK_FREQ_144MHz_HSI
 
 
 uint32_t SystemCoreClock = SYSCLK_FREQ;

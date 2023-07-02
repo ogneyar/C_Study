@@ -26,7 +26,7 @@ int main(void)
     // printf("SystemClk:%d\r\n", SystemCoreClock);
     // printf("SPI TFT SHIELD 2.4inch\r\n");
 
-    // SPI1_Master_Init();    
+    // SPI1_Master_Init(0);    
     // Delay_Ms(100);
       
     // инициализация дисплея

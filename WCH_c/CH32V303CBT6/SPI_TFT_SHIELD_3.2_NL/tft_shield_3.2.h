@@ -127,7 +127,8 @@ void Lcd_Write_Bus(unsigned char d)
 void Lcd_Write_Com(unsigned char VH)  
 {   
     // digitalWrite(DC, LOW);
-    GPIOA->BCR |= DD_DC;
+    if ( GPIOA->INDR & DD_DC ) GPIOA->BCR |= DD_DC;
+    // Delay_Ms(1); 
     Lcd_Write_Bus(VH);
 }
 
@@ -135,7 +136,8 @@ void Lcd_Write_Com(unsigned char VH)
 void Lcd_Write_Data(unsigned char VH)
 {
     // digitalWrite(DC, HIGH);
-    GPIOA->BSHR |= DD_DC;
+    if ( ! (GPIOA->INDR & DD_DC) ) GPIOA->BSHR |= DD_DC;
+    // Delay_Ms(1); 
     Lcd_Write_Bus(VH);
 }
 
