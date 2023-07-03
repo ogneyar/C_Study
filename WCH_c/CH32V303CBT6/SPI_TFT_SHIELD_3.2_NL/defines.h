@@ -158,6 +158,7 @@ typedef struct
 #define PA5         5 // SPI1 CLK
 #define PA6         6 // SPI1 MISO
 #define PA7         7 // SPI1 MOSI
+#define PA8         8 // 
 #define PA9         9 // Tx1
 #define PA10       10 // 
 #define PA11       11 // 

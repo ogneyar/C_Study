@@ -21,6 +21,7 @@
 /* Список функций */
 void SPI1_Master_Init(uint8_t mode);
 void SPI1_SendData(uint16_t Data);
+uint16_t SPI1_ReceiveData(void);
 uint8_t SPI1_GetFlagStatus(uint16_t SPI_FLAG);
 
 
@@ -87,6 +88,13 @@ void SPI1_Master_Init(uint8_t mode)
 void SPI1_SendData(uint16_t Data)
 {
     SPI1->DATAR = Data;
+}
+
+
+// приём данных
+uint16_t SPI1_ReceiveData(void)
+{
+    return SPI1->DATAR;
 }
 
 
