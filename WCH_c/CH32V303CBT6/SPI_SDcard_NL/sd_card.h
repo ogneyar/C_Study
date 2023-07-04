@@ -136,7 +136,7 @@ typedef struct {
 } SD_Init_TypeDef;
 
 
-#define DEBUG_SD_CARD 1
+// #define DEBUG_SD_CARD 1
 
 
 /* Список функций */

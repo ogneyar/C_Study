@@ -1,8 +1,4 @@
 
-
-// в разработке!!! 
-
-
 #include <stdint.h>
 #include <stdio.h>
 #include "main.h"
@@ -23,6 +19,12 @@ int main(void)
     printf("SystemClk: %d\r\n", SystemCoreClock);
     printf("SPI SDcard\r\n");
     
+    /*
+    если SystemCoreClock = HSI_VALUE, тогда SPI_BaudRatePrescaler_2
+    если SystemCoreClock = SYSCLK_FREQ_48MHz_HSI, тогда SPI_BaudRatePrescaler_4
+    если SystemCoreClock = SYSCLK_FREQ_144MHz_HSI, тогда SPI_BaudRatePrescaler_8    
+    */
+
     SD_Init_TypeDef init = SD_Init(GPIOA, PA0);
 
     if (init.error) {
