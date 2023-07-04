@@ -136,32 +136,39 @@ typedef struct {
 } SD_Init_TypeDef;
 
 
+#define DEBUG_SD_CARD 1
+
 
 /* Список функций */
-SD_Init_TypeDef * SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin_);
+SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin_);
+uint8_t SD_sendData(uint8_t data);
+uint8_t SD_receiveData();
 uint8_t SD_cardCommand(uint8_t cmd, uint32_t arg);
 uint8_t SD_cardAcmd(uint8_t cmd, uint32_t arg);
-void SD_readEnd(void);
-uint8_t SD_waitNotBusy(unsigned int timeoutMillis);
+uint8_t SD_waitNotBusy(uint32_t timeoutMillis);
 
+
+static uint8_t chipSelectPin_;
+static GPIO_TypeDef *port_;
 
 
 
 // Инициализация 
-SD_Init_TypeDef * SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin_)
+SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
 {        
     uint32_t arg;
-    uint8_t status_, type_, error_;    
+    uint8_t status_ = 0;
+    uint8_t type_ = 0;
+    uint8_t error_ = 0;    
     uint32_t d = 0;
-    SD_Init_TypeDef *response;
+    SD_Init_TypeDef response;
 
+    chipSelectPin_ = chipSelectPin;
+    port_ = &port;
 
-    SPI1_Master_Init(0);    
-    Delay_Ms(100);
-    
+    SPI1_Master_Init(0);     
 
     // set pin modes
-    // pinMode(chipSelectPin_, OUTPUT);
     if (chipSelectPin_ < 8) {
         port->CFGLR &= ~(GPIO_Msk << chipSelectPin_*4); // ~(0b1111);
         port->CFGLR |= (GPIO_Speed_50 << chipSelectPin_*4); // 0b0011;
@@ -170,101 +177,141 @@ SD_Init_TypeDef * SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin_)
         port->CFGHR |= (GPIO_Speed_50 << (chipSelectPin_-8)*4); // 0b0011;
     }
 
-    // digitalWrite(chipSelectPin_, HIGH);
-    port->BSHR |= (1 << chipSelectPin_);
+    // chipSelectHigh
+    port->BSHR |= (1 << chipSelectPin_); 
     
     // must supply min of 74 clock cycles with CS high.
     for (uint8_t i = 0; i < 10; i++) {
-        // spiSend(0XFF);
-        SPI1_SendData(0XFF);
-    }
+        SD_sendData(0XFF);
+    } 
 
-    // chipSelectLow();
+    // chipSelectLow
     port->BCR |= (1 << chipSelectPin_);
+
+#ifdef DEBUG_SD_CARD
+    printf("command to go idle in SPI mode\r\n");
+#endif
 
     d = 0;
     // command to go idle in SPI mode
     while ((status_ = SD_cardCommand(CMD0, 0)) != R1_IDLE_STATE) {
-        // unsigned int d = millis() - t0;
         d++;
-        // if (d > SD_INIT_TIMEOUT) {
-        if (d > (SD_INIT_TIMEOUT<<10)) {
-            // error(SD_CARD_ERROR_CMD0);
+        if (d > (SD_INIT_TIMEOUT << 2)) {
             error_ = SD_CARD_ERROR_CMD0;
             goto fail;
         }
     }
+
+#ifdef DEBUG_SD_CARD
+    printf("check SD version\r\n");
+#endif
+
     // check SD version
     if ((SD_cardCommand(CMD8, 0x1AA) & R1_ILLEGAL_COMMAND)) {
-        // type(SD_CARD_TYPE_SD1);
         type_ = SD_CARD_TYPE_SD1;
     } else {
         // only need last byte of r7 response
         for (uint8_t i = 0; i < 4; i++) {
-            // status_ = spiRec();
-            status_ = SPI1_ReceiveData();
+            status_ = SD_receiveData();
         }
         if (status_ != 0XAA) {
-            // error(SD_CARD_ERROR_CMD8);
             error_ = SD_CARD_ERROR_CMD8;
             goto fail;
         }
-        // type(SD_CARD_TYPE_SD2);
         type_ = SD_CARD_TYPE_SD2;
     }
+    
+#ifdef DEBUG_SD_CARD
+    printf("initialize card and send host supports SDHC\r\n");
+#endif
+
     // initialize card and send host supports SDHC if SD2
     // arg = type() == SD_CARD_TYPE_SD2 ? 0X40000000 : 0;
     arg = type_ == SD_CARD_TYPE_SD2 ? 0X40000000 : 0;
 
     d = 0;
     while ((status_ = SD_cardAcmd(ACMD41, arg)) != R1_READY_STATE) {
-        // check for timeout
-        // unsigned int d = millis() - t0;        
+        // check for timeout  
         d++;
-        // if (d > SD_INIT_TIMEOUT) {
-        if (d > (SD_INIT_TIMEOUT<<10)) {
-            // error(SD_CARD_ERROR_ACMD41);
+        if (d > (SD_INIT_TIMEOUT << 2)) {
             error_ = SD_CARD_ERROR_ACMD41;
             goto fail;
         }
     }
+    
+#ifdef DEBUG_SD_CARD
+    printf("if SD2 read OCR register\r\n");
+#endif
+
     // if SD2 read OCR register to check for SDHC card
-    // if (type() == SD_CARD_TYPE_SD2) {
     if (type_ == SD_CARD_TYPE_SD2) {
         if (SD_cardCommand(CMD58, 0)) {
-            // error(SD_CARD_ERROR_CMD58);
             error_ = SD_CARD_ERROR_CMD58;
             goto fail;
         }
-        // if ((spiRec() & 0XC0) == 0XC0) {
-        if ((SPI1_ReceiveData() & 0XC0) == 0XC0) {
-            // type(SD_CARD_TYPE_SDHC);
+        if ((SD_receiveData() & 0XC0) == 0XC0) {
             type_ = SD_CARD_TYPE_SDHC;
         }
         // discard rest of ocr - contains allowed voltage range
         for (uint8_t i = 0; i < 3; i++) {
-            // spiRec();
-            SPI1_ReceiveData();
+            SD_receiveData();
         }
     }
 
-    // // chipSelectHigh();
-    // port->BSHR |= (1 << chipSelectPin_);
-
-    // return 1;
+#ifdef DEBUG_SD_CARD
+    printf("end before fail\r\n");
+#endif
     
-
 fail:
-    // chipSelectHigh();
+
+#ifdef DEBUG_SD_CARD
+    printf("end after fail\r\n");
+#endif
+
+    // chipSelectHigh
     port->BSHR |= (1 << chipSelectPin_);
 
-    // return 0;
-
-    response->status = status_;
-    response->type = type_;
-    response->error = error_;
+    response.status = status_;
+    response.type = type_;
+    response.error = error_;
 
     return response;
+}
+
+
+// отправка данных
+uint8_t SD_sendData(uint8_t data)
+{
+    u8 i = 0;
+
+    while(SPI1_GetFlagStatus(SPI_I2S_FLAG_TXE) == RESET)
+    {
+        i++;
+        if(i > 200)
+            return 0;
+    }
+
+    SPI1_SendData(data);
+
+    return 1;
+}
+
+
+// приём данных
+uint8_t SD_receiveData()
+{
+    SD_sendData(0XFF);
+
+    u8 i = 0;
+
+    while(SPI1_GetFlagStatus(SPI_I2S_FLAG_RXNE) == RESET);
+    {
+        i++;
+        if(i > 200)
+            return 0;
+    }
+
+    return SPI1_ReceiveData();
 }
 
 
@@ -273,26 +320,18 @@ uint8_t SD_cardCommand(uint8_t cmd, uint32_t arg)
 {
     uint8_t status_;
 
-    // end read if in partialBlockRead mode
-    // readEnd();
-    SD_readEnd();
-
-    // select card
-    // chipSelectLow();
-    // port->BCR |= (1 << chipSelectPin_);
+    // chipSelectLow
+    port_->BCR |= (1 << chipSelectPin_);
 
     // wait up to 300 ms if busy
-    // waitNotBusy(300);
     SD_waitNotBusy(300);
 
     // send command
-    // spiSend(cmd | 0x40);
-    SPI1_SendData(cmd | 0x40);
+    SD_sendData(cmd | 0x40);
 
     // send argument
     for (int8_t s = 24; s >= 0; s -= 8) {
-        // spiSend(arg >> s);
-        SPI1_SendData(arg >> s);
+        SD_sendData(arg >> s);
     }
 
     // send CRC
@@ -303,12 +342,10 @@ uint8_t SD_cardCommand(uint8_t cmd, uint32_t arg)
     if (cmd == CMD8) {
         crc = 0X87;  // correct crc for CMD8 with arg 0X1AA
     }
-    // spiSend(crc);
-    SPI1_SendData(crc);
+    SD_sendData(crc);
 
     // wait for response
-    // for (uint8_t i = 0; ((status_ = spiRec()) & 0X80) && i != 0XFF; i++)
-    for (uint8_t i = 0; ((status_ = SPI1_ReceiveData()) & 0X80) && i != 0XFF; i++)
+    for (uint8_t i = 0; ((status_ = SD_receiveData()) & 0X80) && i != 0XFF; i++)
         ;
 
     return status_;
@@ -323,33 +360,16 @@ uint8_t SD_cardAcmd(uint8_t cmd, uint32_t arg)
 }
 
 
-// Skip remaining data in a block when in partial block read mode.
-void SD_readEnd(void)
-{
-    // if (inBlock_) {
-    //     while (offset_++ < 514) {
-    //         spiRec();
-    //     }        
-    //     chipSelectHigh();
-    //     inBlock_ = 0;
-    // }
-}
-
-
 // wait for card to go not busy
-uint8_t SD_waitNotBusy(unsigned int timeoutMillis)
+uint8_t SD_waitNotBusy(uint32_t timeoutMillis)
 {
-    // unsigned int t0 = millis();
-    unsigned int d = 0;
+    uint32_t d = 0;
     do {
-        // if (spiRec() == 0XFF) {
-        if (SPI1_ReceiveData() == 0XFF) {
+        if (SD_receiveData() == 0XFF) {
             return 1;
         }
-        // d = millis() - t0;
         d++;
-    // } while (d < timeoutMillis));
-    } while (d < (timeoutMillis << 10));
+    } while (d < (timeoutMillis << 2));
 
     return 0;
 }

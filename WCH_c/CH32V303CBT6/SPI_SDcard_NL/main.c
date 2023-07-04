@@ -20,13 +20,34 @@ int main(void)
     Delay_Init();
     GPIO_Init();
     USART1_Init(115200);
-    printf("SystemClk:%d\r\n", SystemCoreClock);
+    printf("SystemClk: %d\r\n", SystemCoreClock);
     printf("SPI SDcard\r\n");
     
-    // if ( ! SD_Init(GPIOA, PA8) ) while(1) ;
-    SD_Init_TypeDef * init = SD_Init(GPIOA, PA8);
+    SD_Init_TypeDef init = SD_Init(GPIOA, PA0);
 
-    if (init->error) while(1) ;
+    if (init.error) {
+        // while(1) ;
+        printf("init error: %d\r\n", init.error);
+    }
+    
+    if (init.status) printf("init status: %d\r\n", init.status);
+    if (init.type) {
+        printf("init type: %d\r\n", init.type);
+        switch (init.type) {
+            case 1:
+                printf("SD_CARD_TYPE: SD1\r\n");
+            break;
+            case 2:
+                printf("SD_CARD_TYPE: SD2\r\n");
+            break;            
+            case 3:
+                printf("SD_CARD_TYPE: SDHC\r\n");
+            break;
+            default:
+                printf("SD_CARD_TYPE: udefined\r\n");
+            break;
+        }
+    }
       
     while(1)
     {
