@@ -27,14 +27,14 @@ int main(void)
 
     SD_Init_TypeDef init = SD_Init(GPIOA, PA0);
 
-    if (init.error) {
+    if (init.errorCode) {
         // while(1) ;
-        printf("init error: %d\r\n", init.error);
+        printf("init error: %d\r\n", init.errorCode);
     }
     
     if (init.status) printf("init status: %d\r\n", init.status);
     if (init.type) {
-        printf("init type: %d\r\n", init.type);
+        // printf("init type: %d\r\n", init.type);
         switch (init.type) {
             case 1:
                 printf("SD_CARD_TYPE: SD1\r\n");
@@ -50,6 +50,29 @@ int main(void)
             break;
         }
     }
+
+    if ( ! SDvolume_init() ) {
+        printf("Could not find FAT16/FAT32 partition.\nMake sure you've formatted the card\r\n");
+        // while (1);
+    }
+
+    printf("Clusters:           %d\r\n", clusterCount_);
+    printf("Blocks x Cluster:   %d\r\n", blocksPerCluster_);
+
+    printf("Total Blocks:       %d\r\n\r\n", blocksPerCluster_ * clusterCount_);
+
+    uint32_t volumesize;
+    printf("Volume type is:     FAT%d\r\n", fatType_);
+
+    volumesize = blocksPerCluster_; 
+    volumesize *= clusterCount_;
+    volumesize /= 2; // SD card blocks are always 512 bytes (2 blocks are 1 KB)
+    printf("Volume size (KB):   %d\r\n", volumesize);
+    volumesize /= 1024;
+    printf("Volume size (MB):   %d\r\n", volumesize);
+    volumesize = (float)volumesize / 1024.0;
+    if (volumesize) printf("Volume size (GB):   %d\r\n", volumesize);
+    else printf("Volume size (GB):   %d\r\n", 1);
       
     while(1)
     {

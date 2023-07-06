@@ -4,6 +4,7 @@
 
 #include "defines.h"
 #include "system.h"
+#include "usart.h"
 #include "spi.h"
 
 
@@ -74,6 +75,7 @@ uint8_t const SD_CARD_TYPE_SDHC = 3;
 //------------------------------------------------------------------------------
 
 
+/* SDinfo.h */
 
 // SD card commands
 /** GO_IDLE_STATE - init card in spi mode if CS low */
@@ -109,7 +111,7 @@ uint8_t const ACMD23 = 0X17;
 /** SD_SEND_OP_COMD - Sends host capacity support information and
     activates the card's initialization process */
 uint8_t const ACMD41 = 0X29;
-//------------------------------------------------------------------------------
+
 /** status for card in the ready state */
 uint8_t const R1_READY_STATE = 0X00;
 /** status for card in the idle state */
@@ -132,53 +134,214 @@ uint8_t const DATA_RES_ACCEPTED = 0X05;
 typedef struct {
     uint8_t status;
     uint8_t type;
-    uint8_t error;
+    uint8_t errorCode;
 } SD_Init_TypeDef;
 
 
+//------------------------------------------------------------------------------
+
+/* FatStructs.h */
+
+struct biosParmBlock {
+    uint16_t bytesPerSector;
+    uint8_t  sectorsPerCluster;
+    uint16_t reservedSectorCount;
+    uint8_t  fatCount;
+    uint16_t rootDirEntryCount;
+    uint16_t totalSectors16;
+    uint8_t  mediaType;
+    uint16_t sectorsPerFat16;
+    uint16_t sectorsPerTrtack;
+    uint16_t headCount;
+    uint32_t hidddenSectors;
+    uint32_t totalSectors32;
+    uint32_t sectorsPerFat32;
+    uint16_t fat32Flags;
+    uint16_t fat32Version;
+    uint32_t fat32RootCluster;
+    uint16_t fat32FSInfo;
+    uint16_t fat32BackBootBlock;
+    uint8_t  fat32Reserved[12];
+} __attribute__((packed));
+
+typedef struct biosParmBlock bpb_t;
+
+
+struct fat32BootSector {
+    uint8_t  jmpToBootCode[3];
+    char     oemName[8];
+    bpb_t    bpb;
+    uint8_t  driveNumber;
+    uint8_t  reserved1;
+    uint8_t  bootSignature;
+    uint32_t volumeSerialNumber;
+    char     volumeLabel[11];
+    char     fileSystemType[8];
+    uint8_t  bootCode[420];
+    uint8_t  bootSectorSig0;
+    uint8_t  bootSectorSig1;
+} __attribute__((packed));
+
+uint16_t const FAT16EOC = 0XFFFF;
+uint16_t const FAT16EOC_MIN = 0XFFF8;
+uint32_t const FAT32EOC = 0X0FFFFFFF;
+uint32_t const FAT32EOC_MIN = 0X0FFFFFF8;
+uint32_t const FAT32MASK = 0X0FFFFFFF;
+
+typedef struct fat32BootSector fbs_t;
+
+
+struct directoryEntry {
+    uint8_t  name[11];
+    uint8_t  attributes;
+    uint8_t  reservedNT;
+    uint8_t  creationTimeTenths;
+    uint16_t creationTime;
+    uint16_t creationDate;
+    uint16_t lastAccessDate;
+    uint16_t firstClusterHigh;
+    uint16_t lastWriteTime;
+    uint16_t lastWriteDate;
+    uint16_t firstClusterLow;
+    uint32_t fileSize;
+} __attribute__((packed));
+
+typedef struct directoryEntry dir_t;
+
+
+struct partitionTable {
+    uint8_t  boot;
+    uint8_t  beginHead;
+    unsigned beginSector : 6;
+    unsigned beginCylinderHigh : 2;
+    uint8_t  beginCylinderLow;
+    uint8_t  type;
+    uint8_t  endHead;
+    unsigned endSector : 6;
+    unsigned endCylinderHigh : 2;
+    uint8_t  endCylinderLow;
+    uint32_t firstSector;
+    uint32_t totalSectors;
+} __attribute__((packed));
+
+typedef struct partitionTable part_t;
+
+
+struct masterBootRecord {
+  uint8_t  codeArea[440];
+  uint32_t diskSignature;
+  uint16_t usuallyZero;
+  part_t   part[4];
+  uint8_t  mbrSig0;
+  uint8_t  mbrSig1;
+} __attribute__((packed));
+
+typedef struct masterBootRecord mbr_t;
+
+//------------------------------------------------------------------------------
+
+/* SdFat.h */
+
+typedef union {
+    uint8_t  data[512];
+    uint16_t fat16[256];
+    uint32_t fat32[128];
+    dir_t    dir[16];
+    mbr_t    mbr;
+    fbs_t    fbs;
+} cache_t;
+
+
+static uint8_t const CACHE_FOR_READ = 0;
+static uint8_t const CACHE_FOR_WRITE = 1;
+
+// static uint32_t allocSearchStart_ = 2;   // start cluster for alloc search
+static uint8_t blocksPerCluster_;    // cluster size in blocks
+static uint32_t blocksPerFat_;       // FAT size in blocks
+static uint32_t clusterCount_;       // clusters in one FAT
+static uint8_t clusterSizeShift_;    // shift to convert cluster count to block count
+static uint32_t dataStartBlock_;     // first data block number
+static uint8_t fatCount_;            // number of FATs on volume
+static uint32_t fatStartBlock_;      // start block for first FAT
+static uint8_t fatType_ = 0;             // volume type (12, 16, OR 32)
+static uint16_t rootDirEntryCount_;  // number of entries in FAT16 root dir
+static uint32_t rootDirStart_;       // root start block for FAT16, cluster for FAT32
+
+//------------------------------------------------------------------------------
+
+/* SdVolume.cpp */
+
+static uint32_t SDvolume_cacheBlockNumber_ = 0XFFFFFFFF;
+static cache_t  SDvolume_cacheBuffer_;     // 512 byte cache for Sd2Card
+// Sd2Card* SDvolume_sdCard_;          // pointer to SD card object
+static uint8_t  SDvolume_cacheDirty_ = 0;  // cacheFlush() will write block if true
+static uint32_t SDvolume_cacheMirrorBlock_ = 0;  // mirror  block for second FAT
+
+//------------------------------------------------------------------------------
+
+
 // #define DEBUG_SD_CARD 1
+#define SD_PROTECT_BLOCK_ZERO 1
 
 
 /* Список функций */
-SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin_);
+// SDcard
+SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin);
 uint8_t SD_sendData(uint8_t data);
 uint8_t SD_receiveData();
 uint8_t SD_cardCommand(uint8_t cmd, uint32_t arg);
+void SD_readEnd(void);
 uint8_t SD_cardAcmd(uint8_t cmd, uint32_t arg);
 uint8_t SD_waitNotBusy(uint32_t timeoutMillis);
+uint8_t SD_readBlock(uint32_t block, uint8_t* dst);
+uint8_t SD_readData(uint32_t block, uint16_t offset, uint16_t count, uint8_t* dst);
+uint8_t SD_waitStartBlock(void);
+uint8_t SD_writeBlock(uint32_t blockNumber, const uint8_t* src, uint8_t blocking);
+uint8_t SD_writeData(uint8_t token, const uint8_t* src);
+// SDvolume
+uint8_t SDvolume_init();
+uint8_t SDvolume_cacheRawBlock(uint32_t blockNumber, uint8_t action);
+uint8_t SDvolume_cacheFlush(uint8_t blocking);
+uint8_t SDvolume_cacheMirrorBlockFlush(uint8_t blocking);
 
 
-static uint8_t chipSelectPin_;
-static GPIO_TypeDef *port_;
-
+static GPIO_TypeDef *SD_port_ = GPIOA;
+static uint32_t SD_block_ = 0;
+static uint8_t SD_chipSelectPin_ = 0;
+static uint8_t SD_errorCode_ = 0;
+static uint8_t SD_inBlock_ = 0;
+static uint16_t SD_offset_ = 0;
+static uint8_t SD_partialBlockRead_ = 0;
+static uint8_t SD_status_ = 0;
+static uint8_t SD_type_ = 0;
 
 
 // Инициализация 
 SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
 {        
     uint32_t arg;
-    uint8_t status_ = 0;
-    uint8_t type_ = 0;
-    uint8_t error_ = 0;    
+    uint8_t SD_status_ = 0;
+    uint8_t SD_type_ = 0;
+    uint8_t SD_errorCode_ = 0;    
     uint32_t d = 0;
     SD_Init_TypeDef response;
 
-    chipSelectPin_ = chipSelectPin;
-    port_ = &port;
+    SD_chipSelectPin_ = chipSelectPin;
+    SD_port_ = &port;
 
     SPI1_Master_Init(0);     
 
     // set pin modes
-    if (chipSelectPin_ < 8) {
-        port->CFGLR &= ~(GPIO_Msk << chipSelectPin_*4); // ~(0b1111);
-        port->CFGLR |= (GPIO_Speed_50 << chipSelectPin_*4); // 0b0011;
+    if (SD_chipSelectPin_ < 8) {
+        port->CFGLR &= ~(GPIO_Msk << SD_chipSelectPin_*4); // ~(0b1111);
+        port->CFGLR |= (GPIO_Speed_50 << SD_chipSelectPin_*4); // 0b0011;
     }else {
-        port->CFGHR &= ~(GPIO_Msk << (chipSelectPin_-8)*4); // ~(0b1111);
-        port->CFGHR |= (GPIO_Speed_50 << (chipSelectPin_-8)*4); // 0b0011;
+        port->CFGHR &= ~(GPIO_Msk << (SD_chipSelectPin_-8)*4); // ~(0b1111);
+        port->CFGHR |= (GPIO_Speed_50 << (SD_chipSelectPin_-8)*4); // 0b0011;
     }
 
     // chipSelectHigh
-    port->BSHR |= (1 << chipSelectPin_); 
+    SD_port_->BSHR |= (1 << SD_chipSelectPin_); 
     
     // must supply min of 74 clock cycles with CS high.
     for (uint8_t i = 0; i < 10; i++) {
@@ -186,7 +349,7 @@ SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
     } 
 
     // chipSelectLow
-    port->BCR |= (1 << chipSelectPin_);
+    SD_port_->BCR |= (1 << SD_chipSelectPin_);
 
 #ifdef DEBUG_SD_CARD
     printf("command to go idle in SPI mode\r\n");
@@ -194,10 +357,10 @@ SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
 
     d = 0;
     // command to go idle in SPI mode
-    while ((status_ = SD_cardCommand(CMD0, 0)) != R1_IDLE_STATE) {
+    while ((SD_status_ = SD_cardCommand(CMD0, 0)) != R1_IDLE_STATE) {
         d++;
         if (d > (SD_INIT_TIMEOUT << 2)) {
-            error_ = SD_CARD_ERROR_CMD0;
+            SD_errorCode_ = SD_CARD_ERROR_CMD0;
             goto fail;
         }
     }
@@ -208,17 +371,17 @@ SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
 
     // check SD version
     if ((SD_cardCommand(CMD8, 0x1AA) & R1_ILLEGAL_COMMAND)) {
-        type_ = SD_CARD_TYPE_SD1;
+        SD_type_ = SD_CARD_TYPE_SD1;
     } else {
         // only need last byte of r7 response
         for (uint8_t i = 0; i < 4; i++) {
-            status_ = SD_receiveData();
+            SD_status_ = SD_receiveData();
         }
-        if (status_ != 0XAA) {
-            error_ = SD_CARD_ERROR_CMD8;
+        if (SD_status_ != 0XAA) {
+            SD_errorCode_ = SD_CARD_ERROR_CMD8;
             goto fail;
         }
-        type_ = SD_CARD_TYPE_SD2;
+        SD_type_ = SD_CARD_TYPE_SD2;
     }
     
 #ifdef DEBUG_SD_CARD
@@ -227,14 +390,14 @@ SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
 
     // initialize card and send host supports SDHC if SD2
     // arg = type() == SD_CARD_TYPE_SD2 ? 0X40000000 : 0;
-    arg = type_ == SD_CARD_TYPE_SD2 ? 0X40000000 : 0;
+    arg = SD_type_ == SD_CARD_TYPE_SD2 ? 0X40000000 : 0;
 
     d = 0;
-    while ((status_ = SD_cardAcmd(ACMD41, arg)) != R1_READY_STATE) {
+    while ((SD_status_ = SD_cardAcmd(ACMD41, arg)) != R1_READY_STATE) {
         // check for timeout  
         d++;
         if (d > (SD_INIT_TIMEOUT << 2)) {
-            error_ = SD_CARD_ERROR_ACMD41;
+            SD_errorCode_ = SD_CARD_ERROR_ACMD41;
             goto fail;
         }
     }
@@ -244,13 +407,13 @@ SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
 #endif
 
     // if SD2 read OCR register to check for SDHC card
-    if (type_ == SD_CARD_TYPE_SD2) {
+    if (SD_type_ == SD_CARD_TYPE_SD2) {
         if (SD_cardCommand(CMD58, 0)) {
-            error_ = SD_CARD_ERROR_CMD58;
+            SD_errorCode_ = SD_CARD_ERROR_CMD58;
             goto fail;
         }
         if ((SD_receiveData() & 0XC0) == 0XC0) {
-            type_ = SD_CARD_TYPE_SDHC;
+            SD_type_ = SD_CARD_TYPE_SDHC;
         }
         // discard rest of ocr - contains allowed voltage range
         for (uint8_t i = 0; i < 3; i++) {
@@ -269,11 +432,11 @@ fail:
 #endif
 
     // chipSelectHigh
-    port->BSHR |= (1 << chipSelectPin_);
+    SD_port_->BSHR |= (1 << SD_chipSelectPin_);
 
-    response.status = status_;
-    response.type = type_;
-    response.error = error_;
+    response.status = SD_status_;
+    response.type = SD_type_;
+    response.errorCode = SD_errorCode_;
 
     return response;
 }
@@ -320,8 +483,10 @@ uint8_t SD_cardCommand(uint8_t cmd, uint32_t arg)
 {
     uint8_t status_;
 
+    SD_readEnd();
+
     // chipSelectLow
-    port_->BCR |= (1 << chipSelectPin_);
+    SD_port_->BCR |= (1 << SD_chipSelectPin_);
 
     // wait up to 300 ms if busy
     SD_waitNotBusy(300);
@@ -353,6 +518,21 @@ uint8_t SD_cardCommand(uint8_t cmd, uint32_t arg)
 
 
 //
+void SD_readEnd(void)
+{
+    if (SD_inBlock_) {
+        while (SD_offset_++ < 514) {
+            SD_receiveData();
+        }
+        // chipSelectHigh
+        SD_port_->BSHR |= (1 << SD_chipSelectPin_); 
+
+        SD_inBlock_ = 0;
+    }
+}
+
+
+//
 uint8_t SD_cardAcmd(uint8_t cmd, uint32_t arg) 
 {
     SD_cardCommand(CMD55, 0);
@@ -374,6 +554,323 @@ uint8_t SD_waitNotBusy(uint32_t timeoutMillis)
     return 0;
 }
 
+
+//
+uint8_t SD_readBlock(uint32_t block, uint8_t* dst) 
+{
+  return SD_readData(block, 0, 512, dst);
+}
+
+
+//
+uint8_t SD_readData(uint32_t block, uint16_t offset, uint16_t count, uint8_t* dst)
+{
+    if (count == 0) {
+        return 1;
+    }
+    if ((count + offset) > 512) {  
+#ifdef DEBUG_SD_CARD
+        printf("SD_readData (count + offset) > 512\r\n");
+#endif
+        goto fail;
+    }
+    if ( ! SD_inBlock_ || block != SD_block_ || offset < SD_offset_) {
+        SD_block_ = block;
+        // use address if not SDHC card
+        if (SD_type_ != SD_CARD_TYPE_SDHC) {
+            block <<= 9;
+        }
+        if (SD_cardCommand(CMD17, block)) {
+            SD_errorCode_ = SD_CARD_ERROR_CMD17; 
+#ifdef DEBUG_SD_CARD
+            printf("SD_readData SD_errorCode_: %d\r\n", SD_errorCode_);
+#endif
+            goto fail;
+        }
+        if ( ! SD_waitStartBlock() ) {
+#ifdef DEBUG_SD_CARD
+            printf("SD_readData ! SD_waitStartBlock\r\n");
+#endif
+            goto fail;
+        }
+        SD_offset_ = 0;
+        SD_inBlock_ = 1;
+    }
+
+    // skip data before offset
+    for (; SD_offset_ < offset; SD_offset_++) {
+        SD_receiveData();
+    }
+    // transfer data
+    for (uint16_t i = 0; i < count; i++) {
+        dst[i] = SD_receiveData();
+    }
+
+    SD_offset_ += count;
+    if ( ! SD_partialBlockRead_ || SD_offset_ >= 512) {
+        // read rest of data, checksum and set chip select high
+        SD_readEnd();
+    }
+    return 1;
+
+fail:
+    // chipSelectHigh
+    SD_port_->BSHR |= (1 << SD_chipSelectPin_); 
+
+    return 0;
+}
+
+
+//
+uint8_t SD_waitStartBlock(void)
+{
+    uint32_t d = 0;
+    while ((SD_status_ = SD_receiveData()) == 0XFF) {
+        d++;
+        if (d > (SD_READ_TIMEOUT << 10)) {
+            SD_errorCode_ = SD_CARD_ERROR_READ_TIMEOUT;
+#ifdef DEBUG_SD_CARD
+            printf("SD_waitStartBlock SD_READ_TIMEOUT SD_errorCode_: %d\r\n", SD_errorCode_);
+#endif
+            goto fail;
+        }
+    }
+    if (SD_status_ != DATA_START_BLOCK) {
+        SD_errorCode_ = SD_CARD_ERROR_READ;
+#ifdef DEBUG_SD_CARD
+        printf("SD_waitStartBlock SD_status_ != DATA_START_BLOCK SD_errorCode_: %d\r\n", SD_errorCode_);
+#endif
+        goto fail;
+    }
+    return 1;
+
+fail:
+    // chipSelectHigh
+    SD_port_->BSHR |= (1 << SD_chipSelectPin_); 
+
+    return 0;
+}
+
+
+//
+uint8_t SD_writeBlock(uint32_t blockNumber, const uint8_t* src, uint8_t blocking)
+{
+
+#if SD_PROTECT_BLOCK_ZERO
+    // don't allow write to first block
+    if (blockNumber == 0) {
+        SD_errorCode_ = SD_CARD_ERROR_WRITE_BLOCK_ZERO;
+        goto fail;
+    }
+#endif  // SD_PROTECT_BLOCK_ZERO
+
+    // use address if not SDHC card
+    if (SD_type_ != SD_CARD_TYPE_SDHC) {
+        blockNumber <<= 9;
+    }
+    if (SD_cardCommand(CMD24, blockNumber)) {
+        SD_errorCode_ = SD_CARD_ERROR_CMD24;
+        goto fail;
+    }
+    if ( ! SD_writeData(DATA_START_BLOCK, src)) {
+        goto fail;
+    }
+    if (blocking) {
+        // wait for flash programming to complete
+        if ( ! SD_waitNotBusy(SD_WRITE_TIMEOUT)) {
+            SD_errorCode_ = SD_CARD_ERROR_WRITE_TIMEOUT;
+            goto fail;
+        }
+        // response is r2 so get and check two bytes for nonzero
+        if (SD_cardCommand(CMD13, 0) || SD_receiveData()) {
+            SD_errorCode_ = SD_CARD_ERROR_WRITE_PROGRAMMING;
+            goto fail;
+        }
+    }
+    // chipSelectHigh
+    SD_port_->BSHR |= (1 << SD_chipSelectPin_);
+
+    return 1;
+
+fail:
+    // chipSelectHigh
+    SD_port_->BSHR |= (1 << SD_chipSelectPin_);
+
+    return 0;
+}
+
+
+// send one block of data for write block or write multiple blocks
+uint8_t SD_writeData(uint8_t token, const uint8_t* src) 
+{
+    SD_sendData(token);
+    for (uint16_t i = 0; i < 512; i++) {
+        SD_sendData(src[i]);
+    }
+    SD_sendData(0xff);  // dummy crc
+    SD_sendData(0xff);  // dummy crc
+
+    SD_status_ = SD_receiveData();
+
+    if ((SD_status_ & DATA_RES_MASK) != DATA_RES_ACCEPTED) 
+    {
+        SD_errorCode_ = SD_CARD_ERROR_WRITE;
+        // chipSelectHigh
+        SD_port_->BSHR |= (1 << SD_chipSelectPin_);
+
+        return 0;
+    }
+
+    return 1;
+}
+
+
+/***************
+ 
+    SDvolume
+
+***************/
+
+//
+uint8_t SDvolume_init()
+{
+    uint32_t volumeStartBlock = 0;
+    
+    if ( ! SDvolume_cacheRawBlock(volumeStartBlock, CACHE_FOR_READ) ) {        
+#ifdef DEBUG_SD_CARD
+        printf(" ! SDvolume_cacheRawBlock\r\n");
+#endif
+        return 0;
+    }
+    bpb_t* bpb = &SDvolume_cacheBuffer_.fbs.bpb;
+    if (bpb->bytesPerSector != 512 ||
+        bpb->fatCount == 0 ||
+        bpb->reservedSectorCount == 0 ||
+        bpb->sectorsPerCluster == 0) {
+        // not valid FAT volume  
+#ifdef DEBUG_SD_CARD
+        printf("not valid FAT volume\r\n");
+        printf("bpb->bytesPerSector: %d\r\n", bpb->bytesPerSector);
+        printf("bpb->fatCount: %d\r\n", bpb->fatCount);
+        printf("bpb->reservedSectorCount: %d\r\n", bpb->reservedSectorCount);
+        printf("bpb->sectorsPerCluster: %d\r\n", bpb->sectorsPerCluster);
+#endif
+        return 0;
+    }
+    fatCount_ = bpb->fatCount;
+    blocksPerCluster_ = bpb->sectorsPerCluster;
+
+    // determine shift that is same as multiply by blocksPerCluster_
+    clusterSizeShift_ = 0;
+    while (blocksPerCluster_ != (1 << clusterSizeShift_)) {
+        // error if not power of 2
+        if (clusterSizeShift_++ > 7) {
+#ifdef DEBUG_SD_CARD
+            printf("error if not power of 2\r\n");
+#endif
+            return 0;
+        }
+    }
+    blocksPerFat_ = bpb->sectorsPerFat16 ?
+                    bpb->sectorsPerFat16 : bpb->sectorsPerFat32;
+
+    fatStartBlock_ = volumeStartBlock + bpb->reservedSectorCount;
+
+    // count for FAT16 zero for FAT32
+    rootDirEntryCount_ = bpb->rootDirEntryCount;
+
+    // directory start for FAT16 dataStart for FAT32
+    rootDirStart_ = fatStartBlock_ + bpb->fatCount * blocksPerFat_;
+
+    // data start for FAT16 and FAT32
+    dataStartBlock_ = rootDirStart_ + ((32 * bpb->rootDirEntryCount + 511) / 512);
+
+    // total blocks for FAT16 or FAT32
+    uint32_t totalBlocks = bpb->totalSectors16 ?
+                            bpb->totalSectors16 : bpb->totalSectors32;
+    // total data blocks
+    clusterCount_ = totalBlocks - (dataStartBlock_ - volumeStartBlock);
+
+    // divide by cluster size to get cluster count
+    clusterCount_ >>= clusterSizeShift_;
+
+    // FAT type is determined by cluster count
+    if (clusterCount_ < 4085) {
+        fatType_ = 12;
+    } else if (clusterCount_ < 65525) {
+        fatType_ = 16;
+    } else {
+        rootDirStart_ = bpb->fat32RootCluster;
+        fatType_ = 32;
+    }
+#ifdef DEBUG_SD_CARD
+    printf("fatType_: %d\r\n", fatType_);
+#endif
+
+    return 1;
+}
+
+
+//
+uint8_t SDvolume_cacheRawBlock(uint32_t blockNumber, uint8_t action)
+{
+    if (SDvolume_cacheBlockNumber_ != blockNumber) {
+        if ( ! SDvolume_cacheFlush(1) ) { // 1 по умолчанию
+#ifdef DEBUG_SD_CARD
+        printf(" ! SDvolume_cacheFlush\r\n");
+#endif
+            return 0;
+        }
+        if ( ! SD_readBlock(blockNumber, SDvolume_cacheBuffer_.data) ) {   
+#ifdef DEBUG_SD_CARD
+        printf(" ! SD_readBlock\r\n");
+#endif
+            return 0;
+        }
+        SDvolume_cacheBlockNumber_ = blockNumber;
+    }
+    SDvolume_cacheDirty_ |= action;
+    return 1;
+}
+
+
+//
+uint8_t SDvolume_cacheFlush(uint8_t blocking) 
+{
+    if (SDvolume_cacheDirty_) 
+    {
+        if ( ! SD_writeBlock(SDvolume_cacheBlockNumber_, SDvolume_cacheBuffer_.data, blocking)) {
+            return 0;
+        }
+
+        if ( ! blocking) {
+            return 1;
+        }
+
+        // mirror FAT tables
+        if ( ! SDvolume_cacheMirrorBlockFlush(blocking) ) {
+            return 0;
+        }
+        SDvolume_cacheDirty_ = 0;
+    }
+
+    return 1;
+}
+
+
+//
+uint8_t SDvolume_cacheMirrorBlockFlush(uint8_t blocking)
+{
+  if (SDvolume_cacheMirrorBlock_) 
+  {
+    if ( ! SD_writeBlock(SDvolume_cacheMirrorBlock_, SDvolume_cacheBuffer_.data, blocking)) {
+      return 0;
+    }
+    SDvolume_cacheMirrorBlock_ = 0;
+  }
+
+  return 1;
+}
 
 
 #endif /* __SD_CARD_H_ */
