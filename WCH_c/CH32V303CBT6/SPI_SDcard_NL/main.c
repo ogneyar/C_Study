@@ -56,23 +56,11 @@ int main(void)
         // while (1);
     }
 
-    printf("Clusters:           %d\r\n", clusterCount_);
-    printf("Blocks x Cluster:   %d\r\n", blocksPerCluster_);
+    // Print_VolumeInfo();
 
-    printf("Total Blocks:       %d\r\n\r\n", blocksPerCluster_ * clusterCount_);
-
-    uint32_t volumesize;
-    printf("Volume type is:     FAT%d\r\n", fatType_);
-
-    volumesize = blocksPerCluster_; 
-    volumesize *= clusterCount_;
-    volumesize /= 2; // SD card blocks are always 512 bytes (2 blocks are 1 KB)
-    printf("Volume size (KB):   %d\r\n", volumesize);
-    volumesize /= 1024;
-    printf("Volume size (MB):   %d\r\n", volumesize);
-    volumesize = (float)volumesize / 1024.0;
-    if (volumesize) printf("Volume size (GB):   %d\r\n", volumesize);
-    else printf("Volume size (GB):   %d\r\n", 1);
+    SDfile_openRoot();
+    SDfile_ls(LS_R | LS_DATE | LS_SIZE, 0);
+    SDfile_close();
       
     while(1)
     {
@@ -113,5 +101,27 @@ void Test_Screen(void)
     uint16_t delay = 500;
     
 	Leds_Blink(delay);
+}
+
+// 
+void Print_VolumeInfo(void)
+{    
+    printf("Clusters:           %d\r\n", SDvolume_clusterCount_);
+    printf("Blocks x Cluster:   %d\r\n", SDvolume_blocksPerCluster_);
+
+    printf("Total Blocks:       %d\r\n\r\n", SDvolume_blocksPerCluster_ * SDvolume_clusterCount_);
+
+    uint32_t volumesize;
+    printf("Volume type is:     FAT%d\r\n", SDvolume_fatType_);
+
+    volumesize = SDvolume_blocksPerCluster_; 
+    volumesize *= SDvolume_clusterCount_;
+    volumesize /= 2; // SD card blocks are always 512 bytes (2 blocks are 1 KB)
+    printf("Volume size (KB):   %d\r\n", volumesize);
+    volumesize /= 1024;
+    printf("Volume size (MB):   %d\r\n", volumesize);
+    volumesize = (float)volumesize / 1024.0;
+    if (volumesize) printf("Volume size (GB):   %d\r\n", volumesize);
+    else printf("Volume size (GB):   %d\r\n", 1);
 }
 

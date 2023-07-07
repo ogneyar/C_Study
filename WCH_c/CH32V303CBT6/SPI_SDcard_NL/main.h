@@ -9,6 +9,7 @@ int main(void);
 void GPIO_Init(void);
 void Leds_Blink(uint16_t delay);
 void Test_Screen(void);
+void Print_VolumeInfo(void);
 
   
 __attribute__((noreturn))

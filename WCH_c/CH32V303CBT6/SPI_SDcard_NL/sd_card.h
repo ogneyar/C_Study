@@ -2,285 +2,17 @@
 #ifndef __SD_CARD_H_
 #define __SD_CARD_H_
 
+#include "sd_defines.h"
 #include "defines.h"
 #include "system.h"
 #include "usart.h"
 #include "spi.h"
 
 
-
-
-/** init timeout ms */
-unsigned int const SD_INIT_TIMEOUT = 2000;
-/** erase timeout ms */
-unsigned int const SD_ERASE_TIMEOUT = 10000;
-/** read timeout ms */
-unsigned int const SD_READ_TIMEOUT = 300;
-/** write time out ms */
-unsigned int const SD_WRITE_TIMEOUT = 600;
-//------------------------------------------------------------------------------
-// SD card errors
-/** timeout error for command CMD0 */
-uint8_t const SD_CARD_ERROR_CMD0 = 0X1;
-/** CMD8 was not accepted - not a valid SD card*/
-uint8_t const SD_CARD_ERROR_CMD8 = 0X2;
-/** card returned an error response for CMD17 (read block) */
-uint8_t const SD_CARD_ERROR_CMD17 = 0X3;
-/** card returned an error response for CMD24 (write block) */
-uint8_t const SD_CARD_ERROR_CMD24 = 0X4;
-/**  WRITE_MULTIPLE_BLOCKS command failed */
-uint8_t const SD_CARD_ERROR_CMD25 = 0X05;
-/** card returned an error response for CMD58 (read OCR) */
-uint8_t const SD_CARD_ERROR_CMD58 = 0X06;
-/** SET_WR_BLK_ERASE_COUNT failed */
-uint8_t const SD_CARD_ERROR_ACMD23 = 0X07;
-/** card's ACMD41 initialization process timeout */
-uint8_t const SD_CARD_ERROR_ACMD41 = 0X08;
-/** card returned a bad CSR version field */
-uint8_t const SD_CARD_ERROR_BAD_CSD = 0X09;
-/** erase block group command failed */
-uint8_t const SD_CARD_ERROR_ERASE = 0X0A;
-/** card not capable of single block erase */
-uint8_t const SD_CARD_ERROR_ERASE_SINGLE_BLOCK = 0X0B;
-/** Erase sequence timed out */
-uint8_t const SD_CARD_ERROR_ERASE_TIMEOUT = 0X0C;
-/** card returned an error token instead of read data */
-uint8_t const SD_CARD_ERROR_READ = 0X0D;
-/** read CID or CSD failed */
-uint8_t const SD_CARD_ERROR_READ_REG = 0X0E;
-/** timeout while waiting for start of read data */
-uint8_t const SD_CARD_ERROR_READ_TIMEOUT = 0X0F;
-/** card did not accept STOP_TRAN_TOKEN */
-uint8_t const SD_CARD_ERROR_STOP_TRAN = 0X10;
-/** card returned an error token as a response to a write operation */
-uint8_t const SD_CARD_ERROR_WRITE = 0X11;
-/** attempt to write protected block zero */
-uint8_t const SD_CARD_ERROR_WRITE_BLOCK_ZERO = 0X12;
-/** card did not go ready for a multiple block write */
-uint8_t const SD_CARD_ERROR_WRITE_MULTIPLE = 0X13;
-/** card returned an error to a CMD13 status check after a write */
-uint8_t const SD_CARD_ERROR_WRITE_PROGRAMMING = 0X14;
-/** timeout occurred during write programming */
-uint8_t const SD_CARD_ERROR_WRITE_TIMEOUT = 0X15;
-/** incorrect rate selected */
-uint8_t const SD_CARD_ERROR_SCK_RATE = 0X16;
-//------------------------------------------------------------------------------
-// card types
-/** Standard capacity V1 SD card */
-uint8_t const SD_CARD_TYPE_SD1 = 1;
-/** Standard capacity V2 SD card */
-uint8_t const SD_CARD_TYPE_SD2 = 2;
-/** High Capacity SD card */
-uint8_t const SD_CARD_TYPE_SDHC = 3;
-//------------------------------------------------------------------------------
-
-
-/* SDinfo.h */
-
-// SD card commands
-/** GO_IDLE_STATE - init card in spi mode if CS low */
-uint8_t const CMD0 = 0X00;
-/** SEND_IF_COND - verify SD Memory Card interface operating condition.*/
-uint8_t const CMD8 = 0X08;
-/** SEND_CSD - read the Card Specific Data (CSD register) */
-uint8_t const CMD9 = 0X09;
-/** SEND_CID - read the card identification information (CID register) */
-uint8_t const CMD10 = 0X0A;
-/** SEND_STATUS - read the card status register */
-uint8_t const CMD13 = 0X0D;
-/** READ_BLOCK - read a single data block from the card */
-uint8_t const CMD17 = 0X11;
-/** WRITE_BLOCK - write a single data block to the card */
-uint8_t const CMD24 = 0X18;
-/** WRITE_MULTIPLE_BLOCK - write blocks of data until a STOP_TRANSMISSION */
-uint8_t const CMD25 = 0X19;
-/** ERASE_WR_BLK_START - sets the address of the first block to be erased */
-uint8_t const CMD32 = 0X20;
-/** ERASE_WR_BLK_END - sets the address of the last block of the continuous
-    range to be erased*/
-uint8_t const CMD33 = 0X21;
-/** ERASE - erase all previously selected blocks */
-uint8_t const CMD38 = 0X26;
-/** APP_CMD - escape for application specific command */
-uint8_t const CMD55 = 0X37;
-/** READ_OCR - read the OCR register of a card */
-uint8_t const CMD58 = 0X3A;
-/** SET_WR_BLK_ERASE_COUNT - Set the number of write blocks to be
-     pre-erased before writing */
-uint8_t const ACMD23 = 0X17;
-/** SD_SEND_OP_COMD - Sends host capacity support information and
-    activates the card's initialization process */
-uint8_t const ACMD41 = 0X29;
-
-/** status for card in the ready state */
-uint8_t const R1_READY_STATE = 0X00;
-/** status for card in the idle state */
-uint8_t const R1_IDLE_STATE = 0X01;
-/** status bit for illegal command */
-uint8_t const R1_ILLEGAL_COMMAND = 0X04;
-/** start data token for read or write single block*/
-uint8_t const DATA_START_BLOCK = 0XFE;
-/** stop token for write multiple blocks*/
-uint8_t const STOP_TRAN_TOKEN = 0XFD;
-/** start data token for write multiple blocks*/
-uint8_t const WRITE_MULTIPLE_TOKEN = 0XFC;
-/** mask for data response tokens after a write block operation */
-uint8_t const DATA_RES_MASK = 0X1F;
-/** write data accepted token */
-uint8_t const DATA_RES_ACCEPTED = 0X05;
-//------------------------------------------------------------------------------
-
-
-typedef struct {
-    uint8_t status;
-    uint8_t type;
-    uint8_t errorCode;
-} SD_Init_TypeDef;
-
-
-//------------------------------------------------------------------------------
-
-/* FatStructs.h */
-
-struct biosParmBlock {
-    uint16_t bytesPerSector;
-    uint8_t  sectorsPerCluster;
-    uint16_t reservedSectorCount;
-    uint8_t  fatCount;
-    uint16_t rootDirEntryCount;
-    uint16_t totalSectors16;
-    uint8_t  mediaType;
-    uint16_t sectorsPerFat16;
-    uint16_t sectorsPerTrtack;
-    uint16_t headCount;
-    uint32_t hidddenSectors;
-    uint32_t totalSectors32;
-    uint32_t sectorsPerFat32;
-    uint16_t fat32Flags;
-    uint16_t fat32Version;
-    uint32_t fat32RootCluster;
-    uint16_t fat32FSInfo;
-    uint16_t fat32BackBootBlock;
-    uint8_t  fat32Reserved[12];
-} __attribute__((packed));
-
-typedef struct biosParmBlock bpb_t;
-
-
-struct fat32BootSector {
-    uint8_t  jmpToBootCode[3];
-    char     oemName[8];
-    bpb_t    bpb;
-    uint8_t  driveNumber;
-    uint8_t  reserved1;
-    uint8_t  bootSignature;
-    uint32_t volumeSerialNumber;
-    char     volumeLabel[11];
-    char     fileSystemType[8];
-    uint8_t  bootCode[420];
-    uint8_t  bootSectorSig0;
-    uint8_t  bootSectorSig1;
-} __attribute__((packed));
-
-uint16_t const FAT16EOC = 0XFFFF;
-uint16_t const FAT16EOC_MIN = 0XFFF8;
-uint32_t const FAT32EOC = 0X0FFFFFFF;
-uint32_t const FAT32EOC_MIN = 0X0FFFFFF8;
-uint32_t const FAT32MASK = 0X0FFFFFFF;
-
-typedef struct fat32BootSector fbs_t;
-
-
-struct directoryEntry {
-    uint8_t  name[11];
-    uint8_t  attributes;
-    uint8_t  reservedNT;
-    uint8_t  creationTimeTenths;
-    uint16_t creationTime;
-    uint16_t creationDate;
-    uint16_t lastAccessDate;
-    uint16_t firstClusterHigh;
-    uint16_t lastWriteTime;
-    uint16_t lastWriteDate;
-    uint16_t firstClusterLow;
-    uint32_t fileSize;
-} __attribute__((packed));
-
-typedef struct directoryEntry dir_t;
-
-
-struct partitionTable {
-    uint8_t  boot;
-    uint8_t  beginHead;
-    unsigned beginSector : 6;
-    unsigned beginCylinderHigh : 2;
-    uint8_t  beginCylinderLow;
-    uint8_t  type;
-    uint8_t  endHead;
-    unsigned endSector : 6;
-    unsigned endCylinderHigh : 2;
-    uint8_t  endCylinderLow;
-    uint32_t firstSector;
-    uint32_t totalSectors;
-} __attribute__((packed));
-
-typedef struct partitionTable part_t;
-
-
-struct masterBootRecord {
-  uint8_t  codeArea[440];
-  uint32_t diskSignature;
-  uint16_t usuallyZero;
-  part_t   part[4];
-  uint8_t  mbrSig0;
-  uint8_t  mbrSig1;
-} __attribute__((packed));
-
-typedef struct masterBootRecord mbr_t;
-
-//------------------------------------------------------------------------------
-
-/* SdFat.h */
-
-typedef union {
-    uint8_t  data[512];
-    uint16_t fat16[256];
-    uint32_t fat32[128];
-    dir_t    dir[16];
-    mbr_t    mbr;
-    fbs_t    fbs;
-} cache_t;
-
-
-static uint8_t const CACHE_FOR_READ = 0;
-static uint8_t const CACHE_FOR_WRITE = 1;
-
-// static uint32_t allocSearchStart_ = 2;   // start cluster for alloc search
-static uint8_t blocksPerCluster_;    // cluster size in blocks
-static uint32_t blocksPerFat_;       // FAT size in blocks
-static uint32_t clusterCount_;       // clusters in one FAT
-static uint8_t clusterSizeShift_;    // shift to convert cluster count to block count
-static uint32_t dataStartBlock_;     // first data block number
-static uint8_t fatCount_;            // number of FATs on volume
-static uint32_t fatStartBlock_;      // start block for first FAT
-static uint8_t fatType_ = 0;             // volume type (12, 16, OR 32)
-static uint16_t rootDirEntryCount_;  // number of entries in FAT16 root dir
-static uint32_t rootDirStart_;       // root start block for FAT16, cluster for FAT32
-
-//------------------------------------------------------------------------------
-
-/* SdVolume.cpp */
-
-static uint32_t SDvolume_cacheBlockNumber_ = 0XFFFFFFFF;
-static cache_t  SDvolume_cacheBuffer_;     // 512 byte cache for Sd2Card
-// Sd2Card* SDvolume_sdCard_;          // pointer to SD card object
-static uint8_t  SDvolume_cacheDirty_ = 0;  // cacheFlush() will write block if true
-static uint32_t SDvolume_cacheMirrorBlock_ = 0;  // mirror  block for second FAT
-
-//------------------------------------------------------------------------------
-
-
 // #define DEBUG_SD_CARD 1
+// #define DEBUG_SD_VOLUME 1
+// #define DEBUG_SD_FILE 1
+
 #define SD_PROTECT_BLOCK_ZERO 1
 
 
@@ -303,18 +35,53 @@ uint8_t SDvolume_init();
 uint8_t SDvolume_cacheRawBlock(uint32_t blockNumber, uint8_t action);
 uint8_t SDvolume_cacheFlush(uint8_t blocking);
 uint8_t SDvolume_cacheMirrorBlockFlush(uint8_t blocking);
+uint8_t SDvolume_chainSize(uint32_t cluster, uint32_t* size);
+uint8_t SDvolume_isEOC(uint32_t cluster);
+uint8_t SDvolume_fatGet(uint32_t cluster, uint32_t* value);
+uint8_t SDvolume_blockOfCluster(uint32_t position);
+uint32_t SDvolume_clusterStartBlock(uint32_t cluster);
+uint8_t SDvolume_freeChain(uint32_t cluster);
+uint8_t SDvolume_fatPut(uint32_t cluster, uint32_t value);
+void SDvolume_cacheSetDirty(void);
+uint8_t SDvolume_fatPutEOC(uint32_t cluster);
+// SDfile
+uint8_t SDfile_openRoot(void);
+void SDfile_ls(uint8_t flags, uint8_t indent);
+void SDfile_rewind(void);
+dir_t* SDfile_readDirCache(void);
+int16_t SDfile_read_(void);
+int16_t SDfile_read(void* buf, uint16_t nbyte);
+uint8_t SDfile_isDir(void);
+uint8_t SDfile_isOpen(void);
+uint8_t SDfile_isFile(void);
+uint8_t SDfile_isSubDir(void);
+uint8_t SDfile_isRoot(void);
+uint8_t SDfile_unbufferedRead(void);
+void SDfile_printDirName(const dir_t dir, uint8_t width);
+void SDfile_printFatDate(uint16_t fatDate);
+void SDfile_printFatTime(uint16_t fatTime);
+void SDfile_printTwoDigits(uint8_t v);
+// uint8_t SDfile_makeDir(SdFile* dir, const char* dirName);
+uint8_t SDfile_close(void);
+uint8_t SDfile_sync(uint8_t blocking);
+dir_t* SDfile_cacheDirEntry(uint8_t action);
+uint8_t SDfile_openByIndex(uint16_t index, uint8_t oflag);
+uint8_t SDfile_seekSet(uint32_t pos);
+uint8_t SDfile_openCachedEntry(uint8_t dirIndex, uint8_t oflag);
+uint8_t SDfile_truncate(uint32_t length);
 
 
-static GPIO_TypeDef *SD_port_ = GPIOA;
-static uint32_t SD_block_ = 0;
-static uint8_t SD_chipSelectPin_ = 0;
-static uint8_t SD_errorCode_ = 0;
-static uint8_t SD_inBlock_ = 0;
-static uint16_t SD_offset_ = 0;
-static uint8_t SD_partialBlockRead_ = 0;
-static uint8_t SD_status_ = 0;
-static uint8_t SD_type_ = 0;
 
+
+/**********************************************************************************
+
+                *********************************************
+                *                                           *
+                *                  SDcard                   *
+                *                                           *
+                *********************************************
+
+**********************************************************************************/
 
 // Инициализация 
 SD_Init_TypeDef SD_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
@@ -725,11 +492,19 @@ uint8_t SD_writeData(uint8_t token, const uint8_t* src)
 }
 
 
-/***************
- 
-    SDvolume
 
-***************/
+
+
+
+/**********************************************************************************
+
+                *********************************************
+                *                                           *
+                *                 SDvolume                  *
+                *                                           *
+                *********************************************
+
+**********************************************************************************/
 
 //
 uint8_t SDvolume_init()
@@ -737,7 +512,7 @@ uint8_t SDvolume_init()
     uint32_t volumeStartBlock = 0;
     
     if ( ! SDvolume_cacheRawBlock(volumeStartBlock, CACHE_FOR_READ) ) {        
-#ifdef DEBUG_SD_CARD
+#ifdef DEBUG_SD_VOLUME
         printf(" ! SDvolume_cacheRawBlock\r\n");
 #endif
         return 0;
@@ -748,7 +523,7 @@ uint8_t SDvolume_init()
         bpb->reservedSectorCount == 0 ||
         bpb->sectorsPerCluster == 0) {
         // not valid FAT volume  
-#ifdef DEBUG_SD_CARD
+#ifdef DEBUG_SD_VOLUME
         printf("not valid FAT volume\r\n");
         printf("bpb->bytesPerSector: %d\r\n", bpb->bytesPerSector);
         printf("bpb->fatCount: %d\r\n", bpb->fatCount);
@@ -757,53 +532,53 @@ uint8_t SDvolume_init()
 #endif
         return 0;
     }
-    fatCount_ = bpb->fatCount;
-    blocksPerCluster_ = bpb->sectorsPerCluster;
+    SDvolume_fatCount_ = bpb->fatCount;
+    SDvolume_blocksPerCluster_ = bpb->sectorsPerCluster;
 
     // determine shift that is same as multiply by blocksPerCluster_
-    clusterSizeShift_ = 0;
-    while (blocksPerCluster_ != (1 << clusterSizeShift_)) {
+    SDvolume_clusterSizeShift_ = 0;
+    while (SDvolume_blocksPerCluster_ != (1 << SDvolume_clusterSizeShift_)) {
         // error if not power of 2
-        if (clusterSizeShift_++ > 7) {
-#ifdef DEBUG_SD_CARD
+        if (SDvolume_clusterSizeShift_++ > 7) {
+#ifdef DEBUG_SD_VOLUME
             printf("error if not power of 2\r\n");
 #endif
             return 0;
         }
     }
-    blocksPerFat_ = bpb->sectorsPerFat16 ?
+    SDvolume_blocksPerFat_ = bpb->sectorsPerFat16 ?
                     bpb->sectorsPerFat16 : bpb->sectorsPerFat32;
 
-    fatStartBlock_ = volumeStartBlock + bpb->reservedSectorCount;
+    SDvolume_fatStartBlock_ = volumeStartBlock + bpb->reservedSectorCount;
 
     // count for FAT16 zero for FAT32
-    rootDirEntryCount_ = bpb->rootDirEntryCount;
+    SDvolume_rootDirEntryCount_ = bpb->rootDirEntryCount;
 
     // directory start for FAT16 dataStart for FAT32
-    rootDirStart_ = fatStartBlock_ + bpb->fatCount * blocksPerFat_;
+    SDvolume_rootDirStart_ = SDvolume_fatStartBlock_ + bpb->fatCount * SDvolume_blocksPerFat_;
 
     // data start for FAT16 and FAT32
-    dataStartBlock_ = rootDirStart_ + ((32 * bpb->rootDirEntryCount + 511) / 512);
+    SDvolume_dataStartBlock_ = SDvolume_rootDirStart_ + ((32 * bpb->rootDirEntryCount + 511) / 512);
 
     // total blocks for FAT16 or FAT32
     uint32_t totalBlocks = bpb->totalSectors16 ?
                             bpb->totalSectors16 : bpb->totalSectors32;
     // total data blocks
-    clusterCount_ = totalBlocks - (dataStartBlock_ - volumeStartBlock);
+    SDvolume_clusterCount_ = totalBlocks - (SDvolume_dataStartBlock_ - volumeStartBlock);
 
     // divide by cluster size to get cluster count
-    clusterCount_ >>= clusterSizeShift_;
+    SDvolume_clusterCount_ >>= SDvolume_clusterSizeShift_;
 
     // FAT type is determined by cluster count
-    if (clusterCount_ < 4085) {
-        fatType_ = 12;
-    } else if (clusterCount_ < 65525) {
-        fatType_ = 16;
+    if (SDvolume_clusterCount_ < 4085) {
+        SDvolume_fatType_ = 12;
+    } else if (SDvolume_clusterCount_ < 65525) {
+        SDvolume_fatType_ = 16;
     } else {
-        rootDirStart_ = bpb->fat32RootCluster;
-        fatType_ = 32;
+        SDvolume_rootDirStart_ = bpb->fat32RootCluster;
+        SDvolume_fatType_ = 32;
     }
-#ifdef DEBUG_SD_CARD
+#ifdef DEBUG_SD_VOLUME
     printf("fatType_: %d\r\n", fatType_);
 #endif
 
@@ -816,13 +591,13 @@ uint8_t SDvolume_cacheRawBlock(uint32_t blockNumber, uint8_t action)
 {
     if (SDvolume_cacheBlockNumber_ != blockNumber) {
         if ( ! SDvolume_cacheFlush(1) ) { // 1 по умолчанию
-#ifdef DEBUG_SD_CARD
+#ifdef DEBUG_SD_VOLUME
         printf(" ! SDvolume_cacheFlush\r\n");
 #endif
             return 0;
         }
         if ( ! SD_readBlock(blockNumber, SDvolume_cacheBuffer_.data) ) {   
-#ifdef DEBUG_SD_CARD
+#ifdef DEBUG_SD_VOLUME
         printf(" ! SD_readBlock\r\n");
 #endif
             return 0;
@@ -861,16 +636,826 @@ uint8_t SDvolume_cacheFlush(uint8_t blocking)
 //
 uint8_t SDvolume_cacheMirrorBlockFlush(uint8_t blocking)
 {
-  if (SDvolume_cacheMirrorBlock_) 
-  {
-    if ( ! SD_writeBlock(SDvolume_cacheMirrorBlock_, SDvolume_cacheBuffer_.data, blocking)) {
-      return 0;
+    if (SDvolume_cacheMirrorBlock_) 
+    {
+        if ( ! SD_writeBlock(SDvolume_cacheMirrorBlock_, SDvolume_cacheBuffer_.data, blocking)) {
+            return 0;
+        }
+        SDvolume_cacheMirrorBlock_ = 0;
     }
-    SDvolume_cacheMirrorBlock_ = 0;
-  }
 
-  return 1;
+    return 1;
 }
+
+
+// return the size in bytes of a cluster chain
+uint8_t SDvolume_chainSize(uint32_t cluster, uint32_t* size)
+{
+    uint32_t s = 0;
+    do {
+        if ( ! SDvolume_fatGet(cluster, &cluster)) {
+            return 0;
+        }
+        s += 512UL << SDvolume_clusterSizeShift_;
+    } while ( ! SDvolume_isEOC(cluster));
+    *size = s;
+
+    return 1;
+}
+
+
+//
+uint8_t SDvolume_isEOC(uint32_t cluster)
+{
+  return  cluster >= (SDvolume_fatType_ == 16 ? FAT16EOC_MIN : FAT32EOC_MIN);
+}
+
+
+// Fetch a FAT entry
+uint8_t SDvolume_fatGet(uint32_t cluster, uint32_t* value)
+{
+    if (cluster > (SDvolume_clusterCount_ + 1)) {
+        return 0;
+    }
+    uint32_t lba = SDvolume_fatStartBlock_;
+    lba += SDvolume_fatType_ == 16 ? cluster >> 8 : cluster >> 7;
+    if (lba != SDvolume_cacheBlockNumber_) {
+        if ( ! SDvolume_cacheRawBlock(lba, CACHE_FOR_READ)) {
+        return 0;
+        }
+    }
+    if (SDvolume_fatType_ == 16) {
+        *value = SDvolume_cacheBuffer_.fat16[cluster & 0XFF];
+    } else {
+        *value = SDvolume_cacheBuffer_.fat32[cluster & 0X7F] & FAT32MASK;
+    }
+
+    return 1;
+}
+
+
+//
+uint8_t SDvolume_blockOfCluster(uint32_t position)
+{
+    return (position >> 9) & (SDvolume_blocksPerCluster_ - 1);
+}
+
+
+//
+uint32_t SDvolume_clusterStartBlock(uint32_t cluster)
+{
+    return SDvolume_dataStartBlock_ + ((cluster - 2) << SDvolume_clusterSizeShift_);
+}
+
+
+//
+uint8_t SDvolume_freeChain(uint32_t cluster)
+{
+    // clear free cluster location
+    SDvolume_allocSearchStart_ = 2;
+
+    do {
+        uint32_t next;
+        if ( ! SDvolume_fatGet(cluster, &next)) {
+            return 0;
+        }
+
+        // free cluster
+        if ( ! SDvolume_fatPut(cluster, 0)) {
+            return 0;
+        }
+
+        cluster = next;
+    } while ( ! SDvolume_isEOC(cluster));
+
+    return 1;
+}
+
+
+//
+uint8_t SDvolume_fatPut(uint32_t cluster, uint32_t value)
+{
+    // error if reserved cluster
+    if (cluster < 2) {
+        return 0;
+    }
+
+    // error if not in FAT
+    if (cluster > (SDvolume_clusterCount_ + 1)) {
+        return 0;
+    }
+
+    // calculate block address for entry
+    uint32_t lba = SDvolume_fatStartBlock_;
+    lba += SDvolume_fatType_ == 16 ? cluster >> 8 : cluster >> 7;
+
+    if (lba != SDvolume_cacheBlockNumber_) {
+        if ( ! SDvolume_cacheRawBlock(lba, CACHE_FOR_READ)) {
+        return 0;
+        }
+    }
+    // store entry
+    if (SDvolume_fatType_ == 16) {
+        SDvolume_cacheBuffer_.fat16[cluster & 0XFF] = value;
+    } else {
+        SDvolume_cacheBuffer_.fat32[cluster & 0X7F] = value;
+    }
+    SDvolume_cacheSetDirty();
+
+    // mirror second FAT
+    if (SDvolume_fatCount_ > 1) {
+        SDvolume_cacheMirrorBlock_ = lba + SDvolume_blocksPerFat_;
+    }
+
+    return 1;
+}
+
+
+//
+void SDvolume_cacheSetDirty(void)
+{
+    SDvolume_cacheDirty_ |= CACHE_FOR_WRITE;
+}
+
+
+//
+uint8_t SDvolume_fatPutEOC(uint32_t cluster)
+{
+  return SDvolume_fatPut(cluster, 0x0FFFFFFF);
+}
+
+
+
+
+
+
+/**********************************************************************************
+
+                *********************************************
+                *                                           *
+                *                    SDfile                 *
+                *                                           *
+                *********************************************
+
+**********************************************************************************/
+
+
+//
+uint8_t SDfile_openRoot(void)
+{
+    // error if file is already open
+    if (SDfile_isOpen()) {
+        return 0;
+    }
+
+    if (SDvolume_fatType_ == 16) {
+        SDfile_type_ = FAT_FILE_TYPE_ROOT16;
+        SDfile_firstCluster_ = 0;
+        SDfile_fileSize_ = 32 * SDvolume_rootDirEntryCount_;
+    } else if (SDvolume_fatType_ == 32) {
+        SDfile_type_ = FAT_FILE_TYPE_ROOT32;
+        SDfile_firstCluster_ = SDvolume_rootDirStart_;
+        if ( ! SDvolume_chainSize(SDfile_firstCluster_, &SDfile_fileSize_)) {
+            return 0;
+        }
+    } else {
+        // volume is not initialized or FAT12
+        return 0;
+    }
+    
+    // read only
+    SDfile_flags_ = O_READ;
+
+    // set to start of file
+    SDfile_curCluster_ = 0;
+    SDfile_curPosition_ = 0;
+
+    // root has no directory entry
+    SDfile_dirBlock_ = 0;
+    SDfile_dirIndex_ = 0;
+
+    return 1;
+}
+
+
+//
+void SDfile_ls(uint8_t flags, uint8_t indent) // indent =  0, по умолчанию
+{
+    dir_t* p;
+
+    SDfile_rewind();
+    while ((p = SDfile_readDirCache())) {
+        // done if past last used entry
+        if (p->name[0] == DIR_NAME_FREE) {
+            break;
+        }
+
+        // skip deleted entry and entries for . and  ..
+        if (p->name[0] == DIR_NAME_DELETED || p->name[0] == '.') {
+            continue;
+        }
+
+        // only list subdirectories and files
+        if ( ! DIR_IS_FILE_OR_SUBDIR(p)) {
+            continue;
+        }
+
+        // print any indent spaces
+        for (int8_t i = 0; i < indent; i++) {
+            printf(" ");
+        }
+
+#ifdef DEBUG_SD_FILE
+        printf("SDfile_ls print dir/file name\r\n");
+#endif
+
+        // print file name with possible blank fill
+        SDfile_printDirName(*p, flags & (LS_DATE | LS_SIZE) ? 14 : 0);
+
+        // print modify date/time if requested
+        if (flags & LS_DATE) {
+            SDfile_printFatDate(p->lastWriteDate);
+            printf(" ");
+            SDfile_printFatTime(p->lastWriteTime);
+        }
+        // print size if requested
+        if ( ! DIR_IS_SUBDIR(p) && (flags & LS_SIZE)) {            
+#ifdef DEBUG_SD_FILE
+            printf("SDfile_ls print file size\r\n");
+#endif
+            printf(" ");
+            if (p->fileSize >= GIGABYTE) { // >= 1 Gb
+                printf("%d,%d Gb", p->fileSize / GIGABYTE, p->fileSize % GIGABYTE);
+            }else
+            if (p->fileSize >= MEGABYTE) { // >= 1 Mb
+                printf("%d,%d Mb", p->fileSize / MEGABYTE, p->fileSize % MEGABYTE);
+            }else
+            if (p->fileSize >= KILOBYTE) { // >= 1 Kb
+                printf("%d,%d Kb", p->fileSize / KILOBYTE, p->fileSize % KILOBYTE);
+            }else {
+                printf("%d b", p->fileSize);
+            }
+        }
+        printf("\r\n");
+
+        // list subdirectory content if requested
+        if ((flags & LS_R) && DIR_IS_SUBDIR(p)) {
+            
+            printf("list subdirectory content\r\n");
+
+            uint16_t index = SDfile_curPosition_ / 32 - 1;
+            // SdFile s;
+            // if (s.open(this, index, O_READ)) {
+            if (SDfile_openByIndex(index, O_READ)) {
+
+
+
+
+
+                SDfile_ls(flags, indent + 2);
+
+
+
+
+
+            }
+            SDfile_seekSet(32 * (index + 1));
+        }
+    }
+}
+
+
+//
+void SDfile_rewind(void)
+{
+    SDfile_curPosition_ = SDfile_curCluster_ = 0;
+}
+
+
+//
+dir_t* SDfile_readDirCache(void)
+{
+    // error if not directory
+    if ( ! SDfile_isDir()) {
+        return NULL;
+    }
+
+    // index of entry in cache
+    uint8_t i = (SDfile_curPosition_ >> 5) & 0XF;
+
+    // use read to locate and cache block
+    if (SDfile_read_() < 0) {
+        return NULL;
+    }
+
+    // advance to next entry
+    SDfile_curPosition_ += 31;
+
+    // return pointer to entry
+    return (SDvolume_cacheBuffer_.dir + i);
+}
+
+
+//
+int16_t SDfile_read_(void)
+{
+  uint8_t b;
+  return SDfile_read(&b, 1) == 1 ? b : -1;
+}
+
+
+//
+int16_t SDfile_read(void* buf, uint16_t nbyte)
+{
+    uint8_t* dst = (uint8_t*)(buf);
+
+    // error if not open or write only
+    if ( ! SDfile_isOpen() || !(SDfile_flags_ & O_READ)) {
+        return -1;
+    }
+
+    // max bytes left in file
+    if (nbyte > (SDfile_fileSize_ - SDfile_curPosition_)) {
+        nbyte = SDfile_fileSize_ - SDfile_curPosition_;
+    }
+
+    // amount left to read
+    uint16_t toRead = nbyte;
+    while (toRead > 0) {
+        uint32_t block;  // raw device block number
+        uint16_t offset = SDfile_curPosition_ & 0X1FF;  // offset in block
+        if (SDfile_type_ == FAT_FILE_TYPE_ROOT16) {
+        block = SDvolume_rootDirStart_ + (SDfile_curPosition_ >> 9);
+        } else {
+        uint8_t blockOfCluster = SDvolume_blockOfCluster(SDfile_curPosition_);
+        if (offset == 0 && blockOfCluster == 0) {
+            // start of new cluster
+            if (SDfile_curPosition_ == 0) {
+                // use first cluster in file
+                SDfile_curCluster_ = SDfile_firstCluster_;
+            } else {
+                // get next cluster from FAT
+                if ( ! SDvolume_fatGet(SDfile_curCluster_, &SDfile_curCluster_)) {
+                    return -1;
+                }
+            }
+        }
+        block = SDvolume_clusterStartBlock(SDfile_curCluster_) + blockOfCluster;
+        }
+        uint16_t n = toRead;
+
+        // amount to be read from current block
+        if (n > (512 - offset)) {
+        n = 512 - offset;
+        }
+
+        // no buffering needed if n == 512 or user requests no buffering
+        if ((SDfile_unbufferedRead() || n == 512) &&
+            block != SDvolume_cacheBlockNumber_) {
+        if ( ! SD_readData(block, offset, n, dst)) {
+            return -1;
+        }
+        dst += n;
+        } else {
+        // read block to cache and copy data to caller
+        if ( ! SDvolume_cacheRawBlock(block, CACHE_FOR_READ)) {
+            return -1;
+        }
+        uint8_t* src = SDvolume_cacheBuffer_.data + offset;
+        uint8_t* end = src + n;
+        while (src != end) {
+            *dst++ = *src++;
+        }
+        }
+        SDfile_curPosition_ += n;
+        toRead -= n;
+    }
+    return nbyte;
+}
+
+
+//
+uint8_t SDfile_isDir(void)
+{
+  return SDfile_type_ >= FAT_FILE_TYPE_MIN_DIR;
+}
+
+
+//
+uint8_t SDfile_isOpen(void)
+{
+  return SDfile_type_ != FAT_FILE_TYPE_CLOSED;
+}
+
+
+//
+uint8_t SDfile_isFile(void)
+{
+    return SDfile_type_ == FAT_FILE_TYPE_NORMAL;
+}
+
+
+//
+uint8_t SDfile_isSubDir(void)
+{
+    return SDfile_type_ == FAT_FILE_TYPE_SUBDIR;
+}
+
+
+//
+uint8_t SDfile_isRoot(void)
+{
+    return SDfile_type_ == FAT_FILE_TYPE_ROOT16 || SDfile_type_ == FAT_FILE_TYPE_ROOT32;
+}
+
+
+//
+uint8_t SDfile_unbufferedRead(void)
+{
+    return SDfile_flags_ & F_FILE_UNBUFFERED_READ;
+}
+
+
+//
+// void SDfile_printDirName(const dir_t& dir, uint8_t width)
+void SDfile_printDirName(const dir_t dir, uint8_t width)
+{
+    uint8_t w = 0;
+    for (uint8_t i = 0; i < 11; i++) {
+        if (dir.name[i] == ' ') {
+            continue;
+        }
+        if (i == 8) {
+            printf(".");
+            w++;
+        }
+        printf("%c", dir.name[i]);
+        w++;
+    }
+    if (DIR_IS_SUBDIR(&dir)) {
+        printf("/");
+        w++;
+    }
+    while (w < width) {
+        printf(" ");
+        w++;
+    }
+}
+
+
+//
+void SDfile_printFatDate(uint16_t fatDate)
+{
+    printf("%d", FAT_YEAR(fatDate)); 
+    printf("-");
+    SDfile_printTwoDigits(FAT_MONTH(fatDate));
+    printf("-");
+    SDfile_printTwoDigits(FAT_DAY(fatDate));
+}
+
+
+//
+void SDfile_printFatTime(uint16_t fatTime)
+{
+    SDfile_printTwoDigits(FAT_HOUR(fatTime));
+    printf(":");
+    SDfile_printTwoDigits(FAT_MINUTE(fatTime));
+    printf(":");
+    SDfile_printTwoDigits(FAT_SECOND(fatTime));
+}
+
+
+//
+void SDfile_printTwoDigits(uint8_t v)
+{
+    char str[3];
+    str[0] = '0' + v / 10;
+    str[1] = '0' + v % 10;
+    str[2] = 0;
+    printf(str);
+}
+
+
+//
+// uint8_t SDfile_makeDir(SdFile* dir, const char* dirName)
+// {
+//     dir_t d;
+
+//     // create a normal file
+//     if (!open(dir, dirName, O_CREAT | O_EXCL | O_RDWR)) {
+//         return false;
+//     }
+
+//     // convert SdFile to directory
+//     flags_ = O_READ;
+//     type_ = FAT_FILE_TYPE_SUBDIR;
+
+//     // allocate and zero first cluster
+//     if (!addDirCluster()) {
+//         return false;
+//     }
+
+//     // force entry to SD
+//     if (!sync()) {
+//         return false;
+//     }
+
+//     // cache entry - should already be in cache due to sync() call
+//     dir_t* p = cacheDirEntry(SdVolume::CACHE_FOR_WRITE);
+//     if (!p) {
+//         return false;
+//     }
+
+//     // change directory entry  attribute
+//     p->attributes = DIR_ATT_DIRECTORY;
+
+//     // make entry for '.'
+//     memcpy(&d, p, sizeof(d));
+//     for (uint8_t i = 1; i < 11; i++) {
+//         d.name[i] = ' ';
+//     }
+//     d.name[0] = '.';
+
+//     // cache block for '.'  and '..'
+//     uint32_t block = vol_->clusterStartBlock(firstCluster_);
+//     if (!SdVolume::cacheRawBlock(block, SdVolume::CACHE_FOR_WRITE)) {
+//         return false;
+//     }
+
+//     // copy '.' to block
+//     memcpy(&SdVolume::cacheBuffer_.dir[0], &d, sizeof(d));
+
+//     // make entry for '..'
+//     d.name[1] = '.';
+//     if (dir->isRoot()) {
+//         d.firstClusterLow = 0;
+//         d.firstClusterHigh = 0;
+//     } else {
+//         d.firstClusterLow = dir->firstCluster_ & 0XFFFF;
+//         d.firstClusterHigh = dir->firstCluster_ >> 16;
+//     }
+//     // copy '..' to block
+//     memcpy(&SdVolume::cacheBuffer_.dir[1], &d, sizeof(d));
+
+//     // set position after '..'
+//     curPosition_ = 2 * sizeof(d);
+
+//     // write first block
+//     return SdVolume::cacheFlush();
+// }
+
+
+//
+uint8_t SDfile_close(void) 
+{
+    printf("SDfile close");
+
+    if ( ! SDfile_sync(1)) { // 1 по умолчанию
+        return 0;
+    }
+    SDfile_type_ = FAT_FILE_TYPE_CLOSED;
+
+    return 1;
+}
+
+
+
+uint8_t SDfile_sync(uint8_t blocking) // 1 по умолчанию
+{
+    // only allow open files and directories
+    if ( ! SDfile_isOpen()) {
+        return 0;
+    }
+
+    if (SDfile_flags_ & F_FILE_DIR_DIRTY) {
+        dir_t* d = SDfile_cacheDirEntry(CACHE_FOR_WRITE);
+        if (!d) {
+            return 0;
+        }
+
+        // do not set filesize for dir files
+        if ( ! SDfile_isDir()) {
+            d->fileSize = SDfile_fileSize_;
+        }
+
+        // update first cluster fields
+        d->firstClusterLow = SDfile_firstCluster_ & 0XFFFF;
+        d->firstClusterHigh = SDfile_firstCluster_ >> 16;
+
+        // set modify time if user supplied a callback date/time function
+        if (dateTime_) {
+            dateTime_(&d->lastWriteDate, &d->lastWriteTime);
+            d->lastAccessDate = d->lastWriteDate;
+        }
+        // clear directory dirty
+        SDfile_flags_ &= ~F_FILE_DIR_DIRTY;
+    }
+
+    if ( ! blocking) {
+        SDfile_flags_ &= ~F_FILE_NON_BLOCKING_WRITE;
+    }
+
+    return SDvolume_cacheFlush(blocking);
+}
+
+
+//
+dir_t* SDfile_cacheDirEntry(uint8_t action)
+{
+  if ( ! SDvolume_cacheRawBlock(SDfile_dirBlock_, action)) {
+    return NULL;
+  }
+  return SDvolume_cacheBuffer_.dir + SDfile_dirIndex_;
+}
+
+
+//
+uint8_t SDfile_openByIndex(uint16_t index, uint8_t oflag)
+{
+    // error if already open
+    if (SDfile_isOpen()) {
+        return 0;
+    }
+
+    // don't open existing file if O_CREAT and O_EXCL - user call error
+    if ((oflag & (O_CREAT | O_EXCL)) == (O_CREAT | O_EXCL)) {
+        return 0;
+    }
+
+    // seek to location of entry
+    if ( ! SDfile_seekSet(32 * index)) {
+        return 0;
+    }
+
+    // read entry into cache
+    dir_t* p = SDfile_readDirCache();
+    if (p == NULL) {
+        return 0;
+    }
+
+    // error if empty slot or '.' or '..'
+    if (p->name[0] == DIR_NAME_FREE ||
+        p->name[0] == DIR_NAME_DELETED || p->name[0] == '.') {
+        return 0;
+    }
+    // open cached entry
+    return SDfile_openCachedEntry(index & 0XF, oflag);
+}
+
+
+//
+uint8_t SDfile_seekSet(uint32_t pos)
+{
+    // error if file not open or seek past end of file
+    if ( ! SDfile_isOpen() || pos > SDfile_fileSize_) {
+        return 0;
+    }
+
+    if (SDfile_type_ == FAT_FILE_TYPE_ROOT16) {
+        SDfile_curPosition_ = pos;
+        return 1;
+    }
+    if (pos == 0) {
+        // set position to start of file
+        SDfile_curCluster_ = 0;
+        SDfile_curPosition_ = 0;
+        return 1;
+    }
+    // calculate cluster index for cur and new position
+    uint32_t nCur = (SDfile_curPosition_ - 1) >> (SDvolume_clusterSizeShift_ + 9);
+    uint32_t nNew = (pos - 1) >> (SDvolume_clusterSizeShift_ + 9);
+
+    if (nNew < nCur || SDfile_curPosition_ == 0) {
+        // must follow chain from first cluster
+        SDfile_curCluster_ = SDfile_firstCluster_;
+    } else {
+        // advance from curPosition
+        nNew -= nCur;
+    }
+    while (nNew--) {
+        if ( ! SDvolume_fatGet(SDfile_curCluster_, &SDfile_curCluster_)) {
+            return 0;
+        }
+    }
+    SDfile_curPosition_ = pos;
+
+    return 1;
+}
+
+
+//
+uint8_t SDfile_openCachedEntry(uint8_t dirIndex, uint8_t oflag)
+{
+    // location of entry in cache
+    dir_t* p = SDvolume_cacheBuffer_.dir + dirIndex;
+
+    // write or truncate is an error for a directory or read-only file
+    if (p->attributes & (DIR_ATT_READ_ONLY | DIR_ATT_DIRECTORY)) {
+        if (oflag & (O_WRITE | O_TRUNC)) {
+        return 0;
+        }
+    }
+    // remember location of directory entry on SD
+    SDfile_dirIndex_ = dirIndex;
+    SDfile_dirBlock_ = SDvolume_cacheBlockNumber_;
+
+    // copy first cluster number for directory fields
+    SDfile_firstCluster_ = (uint32_t)p->firstClusterHigh << 16;
+    SDfile_firstCluster_ |= p->firstClusterLow;
+
+    // make sure it is a normal file or subdirectory
+    if (DIR_IS_FILE(p)) {
+        SDfile_fileSize_ = p->fileSize;
+        SDfile_type_ = FAT_FILE_TYPE_NORMAL;
+    } else if (DIR_IS_SUBDIR(p)) {
+        if ( ! SDvolume_chainSize(SDfile_firstCluster_, &SDfile_fileSize_)) {
+        return 0;
+        }
+        SDfile_type_ = FAT_FILE_TYPE_SUBDIR;
+    } else {
+        return 0;
+    }
+    // save open flags for read/write
+    SDfile_flags_ = oflag & (O_ACCMODE | O_SYNC | O_APPEND);
+
+    // set to start of file
+    SDfile_curCluster_ = 0;
+    SDfile_curPosition_ = 0;
+
+    // truncate file to zero length if requested
+    if (oflag & O_TRUNC) {
+        return SDfile_truncate(0);
+    }
+    return 1;
+}
+
+
+
+
+uint8_t SDfile_truncate(uint32_t length)
+{
+    // error if not a normal file or read-only
+    if ( ! SDfile_isFile() || !(SDfile_flags_ & O_WRITE)) {
+        return 0;
+    }
+
+    // error if length is greater than current size
+    if (length > SDfile_fileSize_) {
+        return 0;
+    }
+
+    // fileSize and length are zero - nothing to do
+    if (SDfile_fileSize_ == 0) {
+        return 1;
+    }
+
+    // remember position for seek after truncation
+    uint32_t newPos = SDfile_curPosition_ > length ? length : SDfile_curPosition_;
+
+    // position to last cluster in truncated file
+    if ( ! SDfile_seekSet(length)) {
+        return 0;
+    }
+
+    if (length == 0) {
+        // free all clusters
+        if ( ! SDvolume_freeChain(SDfile_firstCluster_)) {
+        return 0;
+        }
+        SDfile_firstCluster_ = 0;
+    } else {
+        uint32_t toFree;
+        if ( ! SDvolume_fatGet(SDfile_curCluster_, &toFree)) {
+        return 0;
+        }
+
+        if ( ! SDvolume_isEOC(toFree)) {
+        // free extra clusters
+        if ( ! SDvolume_freeChain(toFree)) {
+            return 0;
+        }
+
+        // current cluster is end of chain
+        if ( ! SDvolume_fatPutEOC(SDfile_curCluster_)) {
+            return 0;
+        }
+        }
+    }
+    SDfile_fileSize_ = length;
+
+    // need to update directory entry
+    SDfile_flags_ |= F_FILE_DIR_DIRTY;
+
+    if ( ! SDfile_sync(1)) { // 1 по умолчанию
+        return 0;
+    }
+
+    // set file to correct position
+    return SDfile_seekSet(newPos);
+}
+
+
+
 
 
 #endif /* __SD_CARD_H_ */
