@@ -44,6 +44,8 @@ uint8_t SDvolume_freeChain(uint32_t cluster);
 uint8_t SDvolume_fatPut(uint32_t cluster, uint32_t value);
 void SDvolume_cacheSetDirty(void);
 uint8_t SDvolume_fatPutEOC(uint32_t cluster);
+uint8_t SDvolume_cacheZeroBlock(uint32_t blockNumber);
+uint8_t SDvolume_allocContiguous(uint32_t count, uint32_t* curCluster);
 // SDfile
 uint8_t SDfile_openRoot(void);
 void SDfile_ls(uint8_t flags, uint8_t indent);
@@ -61,14 +63,18 @@ void SDfile_printDirName(const dir_t dir, uint8_t width);
 void SDfile_printFatDate(uint16_t fatDate);
 void SDfile_printFatTime(uint16_t fatTime);
 void SDfile_printTwoDigits(uint8_t v);
-// uint8_t SDfile_makeDir(SdFile* dir, const char* dirName);
+uint8_t SDfile_makeDir(const char* dirName);
 uint8_t SDfile_close(void);
 uint8_t SDfile_sync(uint8_t blocking);
 dir_t* SDfile_cacheDirEntry(uint8_t action);
-uint8_t SDfile_openByIndex(uint16_t index, uint8_t oflag);
+uint8_t SDfile_openByIndex(uint16_t index, uint8_t oflag); // open by index
 uint8_t SDfile_seekSet(uint32_t pos);
 uint8_t SDfile_openCachedEntry(uint8_t dirIndex, uint8_t oflag);
 uint8_t SDfile_truncate(uint32_t length);
+uint8_t SDfile_open(const char* fileName, uint8_t oflag); // open by name
+uint8_t SDfile_make83Name(const char* str, uint8_t* name);
+uint8_t SDfile_addDirCluster(void);
+uint8_t SDfile_addCluster(void);
 
 
 
@@ -610,7 +616,7 @@ uint8_t SDvolume_cacheRawBlock(uint32_t blockNumber, uint8_t action)
 
 
 //
-uint8_t SDvolume_cacheFlush(uint8_t blocking) 
+uint8_t SDvolume_cacheFlush(uint8_t blocking) // 1 по умолчанию
 {
     if (SDvolume_cacheDirty_) 
     {
@@ -785,6 +791,105 @@ uint8_t SDvolume_fatPutEOC(uint32_t cluster)
 }
 
 
+//
+uint8_t SDvolume_cacheZeroBlock(uint32_t blockNumber)
+{
+    if ( ! SDvolume_cacheFlush(1)) { // 1 по умолчанию
+        return 0;
+    }
+
+    // loop take less flash than memset(cacheBuffer_.data, 0, 512);
+    for (uint16_t i = 0; i < 512; i++) {
+        SDvolume_cacheBuffer_.data[i] = 0;
+    }
+    SDvolume_cacheBlockNumber_ = blockNumber;
+    SDvolume_cacheSetDirty();
+
+    return 1;
+}
+
+
+//
+uint8_t SDvolume_allocContiguous(uint32_t count, uint32_t* curCluster)
+{
+    // start of group
+    uint32_t bgnCluster;
+
+    // flag to save place to start next search
+    uint8_t setStart;
+
+    // set search start cluster
+    if (*curCluster) {
+        // try to make file contiguous
+        bgnCluster = *curCluster + 1;
+
+        // don't save new start location
+        setStart = 0;
+    } else {
+        // start at likely place for free cluster
+        bgnCluster = SDvolume_allocSearchStart_;
+
+        // save next search start if one cluster
+        setStart = 1 == count;
+    }
+    // end of group
+    uint32_t endCluster = bgnCluster;
+
+    // last cluster of FAT
+    uint32_t fatEnd = SDvolume_clusterCount_ + 1;
+
+    // search the FAT for free clusters
+    for (uint32_t n = 0;; n++, endCluster++) {
+        // can't find space checked all clusters
+        if (n >= SDvolume_clusterCount_) {
+            return 0;
+        }
+
+        // past end - start from beginning of FAT
+        if (endCluster > fatEnd) {
+        bgnCluster = endCluster = 2;
+        }
+        uint32_t f;
+        if ( ! SDvolume_fatGet(endCluster, &f)) {
+            return 0;
+        }
+
+        if (f != 0) {
+        // cluster in use try next cluster as bgnCluster
+        bgnCluster = endCluster + 1;
+        } else if ((endCluster - bgnCluster + 1) == count) {
+            // done - found space
+            break;
+        }
+    }
+    // mark end of chain
+    if ( ! SDvolume_fatPutEOC(endCluster)) {
+        return 0;
+    }
+
+    // link clusters
+    while (endCluster > bgnCluster) {
+        if ( ! SDvolume_fatPut(endCluster - 1, endCluster)) {
+            return 0;
+        }
+        endCluster--;
+    }
+    if (*curCluster != 0) {
+        // connect chains
+        if ( ! SDvolume_fatPut(*curCluster, bgnCluster)) {
+            return 0;
+        }
+    }
+    // return first cluster number to caller
+    *curCluster = bgnCluster;
+
+    // remember possible next free cluster
+    if (setStart) {
+        SDvolume_allocSearchStart_ = bgnCluster + 1;
+    }
+
+    return 1;
+}
 
 
 
@@ -899,25 +1004,15 @@ void SDfile_ls(uint8_t flags, uint8_t indent) // indent =  0, по умолча�
         printf("\r\n");
 
         // list subdirectory content if requested
-        if ((flags & LS_R) && DIR_IS_SUBDIR(p)) {
-            
+        if ((flags & LS_R) && DIR_IS_SUBDIR(p)) {                 
+#ifdef DEBUG_SD_FILE
             printf("list subdirectory content\r\n");
-
+#endif
             uint16_t index = SDfile_curPosition_ / 32 - 1;
-            // SdFile s;
-            // if (s.open(this, index, O_READ)) {
+            /* на си надо как-то рекурсивно вызвать эту же самую библиотеку */
+            /* так не работает!!! */
             if (SDfile_openByIndex(index, O_READ)) {
-
-
-
-
-
                 SDfile_ls(flags, indent + 2);
-
-
-
-
-
             }
             SDfile_seekSet(32 * (index + 1));
         }
@@ -1137,72 +1232,72 @@ void SDfile_printTwoDigits(uint8_t v)
 
 
 //
-// uint8_t SDfile_makeDir(SdFile* dir, const char* dirName)
-// {
-//     dir_t d;
+uint8_t SDfile_makeDir(const char* dirName)
+{
+    dir_t d;
 
-//     // create a normal file
-//     if (!open(dir, dirName, O_CREAT | O_EXCL | O_RDWR)) {
-//         return false;
-//     }
+    // create a normal file
+    if ( ! SDfile_open(dirName, O_CREAT | O_EXCL | O_RDWR)) {
+        return 0;
+    }
 
-//     // convert SdFile to directory
-//     flags_ = O_READ;
-//     type_ = FAT_FILE_TYPE_SUBDIR;
+    // convert SdFile to directory
+    SDfile_flags_ = O_READ;
+    SDfile_type_ = FAT_FILE_TYPE_SUBDIR;
 
-//     // allocate and zero first cluster
-//     if (!addDirCluster()) {
-//         return false;
-//     }
+    // allocate and zero first cluster
+    if ( ! SDfile_addDirCluster()) {
+        return 0;
+    }
 
-//     // force entry to SD
-//     if (!sync()) {
-//         return false;
-//     }
+    // force entry to SD
+    if ( ! SDfile_sync(1)) { // 1 по умолчанию
+        return 0;
+    }
 
-//     // cache entry - should already be in cache due to sync() call
-//     dir_t* p = cacheDirEntry(SdVolume::CACHE_FOR_WRITE);
-//     if (!p) {
-//         return false;
-//     }
+    // cache entry - should already be in cache due to sync() call
+    dir_t* p = SDfile_cacheDirEntry(CACHE_FOR_WRITE);
+    if (!p) {
+        return 0;
+    }
 
-//     // change directory entry  attribute
-//     p->attributes = DIR_ATT_DIRECTORY;
+    // change directory entry  attribute
+    p->attributes = DIR_ATT_DIRECTORY;
 
-//     // make entry for '.'
-//     memcpy(&d, p, sizeof(d));
-//     for (uint8_t i = 1; i < 11; i++) {
-//         d.name[i] = ' ';
-//     }
-//     d.name[0] = '.';
+    // make entry for '.'
+    memcpy(&d, p, sizeof(d));
+    for (uint8_t i = 1; i < 11; i++) {
+        d.name[i] = ' ';
+    }
+    d.name[0] = '.';
 
-//     // cache block for '.'  and '..'
-//     uint32_t block = vol_->clusterStartBlock(firstCluster_);
-//     if (!SdVolume::cacheRawBlock(block, SdVolume::CACHE_FOR_WRITE)) {
-//         return false;
-//     }
+    // cache block for '.'  and '..'
+    uint32_t block = SDvolume_clusterStartBlock(SDfile_firstCluster_);
+    if ( ! SDvolume_cacheRawBlock(block, CACHE_FOR_WRITE)) {
+        return 0;
+    }
 
-//     // copy '.' to block
-//     memcpy(&SdVolume::cacheBuffer_.dir[0], &d, sizeof(d));
+    // copy '.' to block
+    memcpy(&SDvolume_cacheBuffer_.dir[0], &d, sizeof(d));
 
-//     // make entry for '..'
-//     d.name[1] = '.';
-//     if (dir->isRoot()) {
-//         d.firstClusterLow = 0;
-//         d.firstClusterHigh = 0;
-//     } else {
-//         d.firstClusterLow = dir->firstCluster_ & 0XFFFF;
-//         d.firstClusterHigh = dir->firstCluster_ >> 16;
-//     }
-//     // copy '..' to block
-//     memcpy(&SdVolume::cacheBuffer_.dir[1], &d, sizeof(d));
+    // make entry for '..'
+    d.name[1] = '.';
+    if (SDfile_isRoot()) {
+        d.firstClusterLow = 0;
+        d.firstClusterHigh = 0;
+    } else {
+        d.firstClusterLow = SDfile_firstCluster_ & 0XFFFF;
+        d.firstClusterHigh = SDfile_firstCluster_ >> 16;
+    }
+    // copy '..' to block
+    memcpy(&SDvolume_cacheBuffer_.dir[1], &d, sizeof(d));
 
-//     // set position after '..'
-//     curPosition_ = 2 * sizeof(d);
+    // set position after '..'
+    SDfile_curPosition_ = 2 * sizeof(d);
 
-//     // write first block
-//     return SdVolume::cacheFlush();
-// }
+    // write first block
+    return SDvolume_cacheFlush(1); // 1 по умолчанию
+}
 
 
 //
@@ -1390,8 +1485,7 @@ uint8_t SDfile_openCachedEntry(uint8_t dirIndex, uint8_t oflag)
 }
 
 
-
-
+//
 uint8_t SDfile_truncate(uint32_t length)
 {
     // error if not a normal file or read-only
@@ -1455,6 +1549,182 @@ uint8_t SDfile_truncate(uint32_t length)
 }
 
 
+// Open By Name
+uint8_t SDfile_open(const char* fileName, uint8_t oflag)
+{
+    uint8_t dname[11];
+    dir_t* p;
+
+    // error if already open
+    if (SDfile_isOpen()) {
+        return 0;
+    }
+
+    if ( ! SDfile_make83Name(fileName, dname)) {
+        return 0;
+    }
+    
+    SDfile_rewind();
+
+    // bool for empty entry found
+    uint8_t emptyFound = 0;
+
+    // search for file
+    while (SDfile_curPosition_ < SDfile_fileSize_) {
+        uint8_t index = 0XF & (SDfile_curPosition_ >> 5);
+        p = SDfile_readDirCache();
+        if (p == NULL) {
+        return 0;
+        }
+
+        if (p->name[0] == DIR_NAME_FREE || p->name[0] == DIR_NAME_DELETED) {
+        // remember first empty slot
+        if (!emptyFound) {
+            emptyFound = 1;
+            SDfile_dirIndex_ = index;
+            SDfile_dirBlock_ = SDvolume_cacheBlockNumber_;
+        }
+        // done if no entries follow
+        if (p->name[0] == DIR_NAME_FREE) {
+            break;
+        }
+        } else if (!memcmp(dname, p->name, 11)) {
+        // don't open existing file if O_CREAT and O_EXCL
+        if ((oflag & (O_CREAT | O_EXCL)) == (O_CREAT | O_EXCL)) {
+            return 0;
+        }
+
+        // open found file
+        return SDfile_openCachedEntry(0XF & index, oflag);
+        }
+    }
+    // only create file if O_CREAT and O_WRITE
+    if ((oflag & (O_CREAT | O_WRITE)) != (O_CREAT | O_WRITE)) {
+        return 0;
+    }
+
+    // cache found slot or add cluster if end of file
+    if (emptyFound) {
+        p = SDfile_cacheDirEntry(CACHE_FOR_WRITE);
+        if (!p) {
+            return 0;
+        }
+    } else {
+        if (SDfile_type_ == FAT_FILE_TYPE_ROOT16) {
+            return 0;
+        }
+
+        // add and zero cluster for dirFile - first cluster is in cache for write
+        if ( ! SDfile_addDirCluster()) {
+        return 0;
+        }
+
+        // use first entry in cluster
+        SDfile_dirIndex_ = 0;
+        p = SDvolume_cacheBuffer_.dir;
+    }
+    // initialize as empty file
+    memset(p, 0, sizeof(dir_t));
+    memcpy(p->name, dname, 11);
+
+    // set timestamps
+    if (dateTime_) {
+        // call user function
+        dateTime_(&p->creationDate, &p->creationTime);
+    } else {
+        // use default date/time
+        p->creationDate = FAT_DEFAULT_DATE;
+        p->creationTime = FAT_DEFAULT_TIME;
+    }
+    p->lastAccessDate = p->creationDate;
+    p->lastWriteDate = p->creationDate;
+    p->lastWriteTime = p->creationTime;
+
+    // force write of entry to SD
+    if ( ! SDvolume_cacheFlush(1)) { // 1 по умолчанию
+        return 0;
+    }
+
+    // open entry in cache
+    return SDfile_openCachedEntry(SDfile_dirIndex_, oflag);
+}
+
+
+uint8_t SDfile_make83Name(const char* str, uint8_t* name)
+{
+    uint8_t c;
+    uint8_t n = 7;  // max index for part before dot
+    uint8_t i = 0;
+    // blank fill name and extension
+    while (i < 11) {
+        name[i++] = ' ';
+    }
+    i = 0;
+    while ((c = *str++) != '\0') {
+        if (c == '.') {
+            if (n == 10) {
+                return 0;  // only one dot allowed
+            }
+            n = 10;  // max index for full 8.3 name
+            i = 8;   // place for extension
+        } else {
+            // illegal FAT characters
+            uint8_t b;
+            const uint8_t valid[] = "|<>^+=?/[];,*\"\\";
+            const uint8_t *p = valid;
+            while ((b = *p++)) if (b == c) {
+                return 0;
+            }
+            // check size and only allow ASCII printable characters
+            if (i > n || c < 0X21 || c > 0X7E) {
+                return 0;
+            }
+            // only upper case allowed in 8.3 names - convert lower to upper
+            name[i++] = c < 'a' || c > 'z' ?  c : c + ('A' - 'a');
+        }
+    }
+    // must have a file name, extension is optional
+    return name[0] != ' ';
+}
+
+
+//
+uint8_t SDfile_addDirCluster(void)
+{
+    if ( ! SDfile_addCluster()) {
+        return 0;
+    }
+
+    // zero data in cluster insure first cluster is in cache
+    uint32_t block = SDvolume_clusterStartBlock(SDfile_curCluster_);
+    for (uint8_t i = SDvolume_blocksPerCluster_; i != 0; i--) {
+        if ( ! SDvolume_cacheZeroBlock(block + i - 1)) {
+            return 0;
+        }
+    }
+    // Increase directory file size by cluster size
+    SDfile_fileSize_ += 512UL << SDvolume_clusterSizeShift_;
+
+    return 1;
+}
+
+
+//
+uint8_t SDfile_addCluster(void)
+{
+    if ( ! SDvolume_allocContiguous(1, &SDfile_curCluster_)) {
+        return 0;
+    }
+
+    // if first cluster of file link to directory entry
+    if (SDfile_firstCluster_ == 0) {
+        SDfile_firstCluster_ = SDfile_curCluster_;
+        SDfile_flags_ |= F_FILE_DIR_DIRTY;
+    }
+    SDfile_flags_ |= F_FILE_CLUSTER_ADDED;
+
+    return 1;
+}
 
 
 

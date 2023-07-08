@@ -61,6 +61,8 @@ int main(void)
     SDfile_openRoot();
     SDfile_ls(LS_R | LS_DATE | LS_SIZE, 0);
     SDfile_close();
+
+    // SDfile_makeDir("Name");
       
     while(1)
     {
