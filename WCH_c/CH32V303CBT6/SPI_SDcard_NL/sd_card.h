@@ -621,6 +621,11 @@ uint8_t SDvolume_cacheFlush(uint8_t blocking) // 1 по умолчанию
     if (SDvolume_cacheDirty_) 
     {
         if ( ! SD_writeBlock(SDvolume_cacheBlockNumber_, SDvolume_cacheBuffer_.data, blocking)) {
+#ifdef DEBUG_SD_FILE
+            printf("SDvolume_cacheFlush ! SD_writeBlock\r\n");
+            printf("SDvolume_cacheFlush SDvolume_cacheDirty_ = %d\r\n", SDvolume_cacheDirty_);
+            printf("SDvolume_cacheFlush SDvolume_cacheBlockNumber_ = %d\r\n", SDvolume_cacheBlockNumber_);
+#endif
             return 0;
         }
 
@@ -630,6 +635,9 @@ uint8_t SDvolume_cacheFlush(uint8_t blocking) // 1 по умолчанию
 
         // mirror FAT tables
         if ( ! SDvolume_cacheMirrorBlockFlush(blocking) ) {
+#ifdef DEBUG_SD_FILE
+            printf("SDvolume_cacheFlush ! SDvolume_cacheMirrorBlockFlush\r\n");
+#endif
             return 0;
         }
         SDvolume_cacheDirty_ = 0;
@@ -795,6 +803,9 @@ uint8_t SDvolume_fatPutEOC(uint32_t cluster)
 uint8_t SDvolume_cacheZeroBlock(uint32_t blockNumber)
 {
     if ( ! SDvolume_cacheFlush(1)) { // 1 по умолчанию
+#ifdef DEBUG_SD_FILE
+        printf("SDvolume_cacheZeroBlock ! SDvolume_cacheFlush\r\n");
+#endif
         return 0;
     }
 
@@ -1237,7 +1248,10 @@ uint8_t SDfile_makeDir(const char* dirName)
     dir_t d;
 
     // create a normal file
-    if ( ! SDfile_open(dirName, O_CREAT | O_EXCL | O_RDWR)) {
+    if ( ! SDfile_open(dirName, O_CREAT | O_EXCL | O_RDWR)) {             
+#ifdef DEBUG_SD_FILE
+        printf(" ! SDfile_open\r\n");
+#endif
         return 0;
     }
 
@@ -1246,18 +1260,27 @@ uint8_t SDfile_makeDir(const char* dirName)
     SDfile_type_ = FAT_FILE_TYPE_SUBDIR;
 
     // allocate and zero first cluster
-    if ( ! SDfile_addDirCluster()) {
+    if ( ! SDfile_addDirCluster()) {        
+#ifdef DEBUG_SD_FILE
+        printf(" ! SDfile_addDirCluster\r\n");
+#endif
         return 0;
     }
 
     // force entry to SD
-    if ( ! SDfile_sync(1)) { // 1 по умолчанию
+    if ( ! SDfile_sync(1)) { // 1 по умолчанию   
+#ifdef DEBUG_SD_FILE
+        printf(" ! SDfile_sync\r\n");
+#endif
         return 0;
     }
 
     // cache entry - should already be in cache due to sync() call
-    dir_t* p = SDfile_cacheDirEntry(CACHE_FOR_WRITE);
+    dir_t* p = SDfile_cacheDirEntry(CACHE_FOR_WRITE);  
     if (!p) {
+#ifdef DEBUG_SD_FILE
+        printf(" ! SDfile_cacheDirEntry\r\n");
+#endif
         return 0;
     }
 
@@ -1273,7 +1296,10 @@ uint8_t SDfile_makeDir(const char* dirName)
 
     // cache block for '.'  and '..'
     uint32_t block = SDvolume_clusterStartBlock(SDfile_firstCluster_);
-    if ( ! SDvolume_cacheRawBlock(block, CACHE_FOR_WRITE)) {
+    if ( ! SDvolume_cacheRawBlock(block, CACHE_FOR_WRITE)) { 
+#ifdef DEBUG_SD_FILE
+        printf(" ! SDvolume_cacheRawBlock\r\n");
+#endif
         return 0;
     }
 
@@ -1303,7 +1329,7 @@ uint8_t SDfile_makeDir(const char* dirName)
 //
 uint8_t SDfile_close(void) 
 {
-    printf("SDfile close");
+    printf("SDfile close\r\n");
 
     if ( ! SDfile_sync(1)) { // 1 по умолчанию
         return 0;
@@ -1556,16 +1582,22 @@ uint8_t SDfile_open(const char* fileName, uint8_t oflag)
     dir_t* p;
 
     // error if already open
-    if (SDfile_isOpen()) {
+    if (SDfile_isOpen()) {                    
+#ifdef DEBUG_SD_FILE
+        printf("SDfile_open SDfile_isOpen\r\n");
+#endif
         return 0;
     }
 
-    if ( ! SDfile_make83Name(fileName, dname)) {
+    if ( ! SDfile_make83Name(fileName, dname)) {                
+#ifdef DEBUG_SD_FILE
+        printf("SDfile_open ! SDfile_make83Name\r\n");
+#endif
         return 0;
     }
     
     SDfile_rewind();
-
+                  
     // bool for empty entry found
     uint8_t emptyFound = 0;
 
@@ -1574,7 +1606,7 @@ uint8_t SDfile_open(const char* fileName, uint8_t oflag)
         uint8_t index = 0XF & (SDfile_curPosition_ >> 5);
         p = SDfile_readDirCache();
         if (p == NULL) {
-        return 0;
+            return 0;
         }
 
         if (p->name[0] == DIR_NAME_FREE || p->name[0] == DIR_NAME_DELETED) {
@@ -1598,8 +1630,12 @@ uint8_t SDfile_open(const char* fileName, uint8_t oflag)
         return SDfile_openCachedEntry(0XF & index, oflag);
         }
     }
+    
     // only create file if O_CREAT and O_WRITE
     if ((oflag & (O_CREAT | O_WRITE)) != (O_CREAT | O_WRITE)) {
+#ifdef DEBUG_SD_FILE
+        printf("SDfile_open (oflag & (O_CREAT | O_WRITE)) != (O_CREAT | O_WRITE)\r\n");
+#endif
         return 0;
     }
 
@@ -1607,16 +1643,25 @@ uint8_t SDfile_open(const char* fileName, uint8_t oflag)
     if (emptyFound) {
         p = SDfile_cacheDirEntry(CACHE_FOR_WRITE);
         if (!p) {
+#ifdef DEBUG_SD_FILE
+            printf("SDfile_open ! SDfile_cacheDirEntry\r\n");
+#endif
             return 0;
         }
     } else {
         if (SDfile_type_ == FAT_FILE_TYPE_ROOT16) {
+#ifdef DEBUG_SD_FILE
+            printf("SDfile_open file_type_ == FAT_FILE_TYPE_ROOT16\r\n");
+#endif
             return 0;
         }
 
         // add and zero cluster for dirFile - first cluster is in cache for write
-        if ( ! SDfile_addDirCluster()) {
-        return 0;
+        if ( ! SDfile_addDirCluster()) {            
+#ifdef DEBUG_SD_FILE
+            printf("SDfile_open ! SDfile_addDirCluster\r\n");
+#endif
+            return 0;
         }
 
         // use first entry in cluster
@@ -1641,7 +1686,10 @@ uint8_t SDfile_open(const char* fileName, uint8_t oflag)
     p->lastWriteTime = p->creationTime;
 
     // force write of entry to SD
-    if ( ! SDvolume_cacheFlush(1)) { // 1 по умолчанию
+    if ( ! SDvolume_cacheFlush(1)) { // 1 по умолчанию         
+#ifdef DEBUG_SD_FILE
+        printf("SDfile_open ! SDvolume_cacheFlush\r\n");
+#endif
         return 0;
     }
 
@@ -1691,14 +1739,22 @@ uint8_t SDfile_make83Name(const char* str, uint8_t* name)
 //
 uint8_t SDfile_addDirCluster(void)
 {
-    if ( ! SDfile_addCluster()) {
+    if ( ! SDfile_addCluster()) {        
+#ifdef DEBUG_SD_FILE
+        printf("SDfile_addDirCluster ! SDfile_addCluster\r\n");
+#endif
         return 0;
     }
 
     // zero data in cluster insure first cluster is in cache
     uint32_t block = SDvolume_clusterStartBlock(SDfile_curCluster_);
     for (uint8_t i = SDvolume_blocksPerCluster_; i != 0; i--) {
-        if ( ! SDvolume_cacheZeroBlock(block + i - 1)) {
+        if ( ! SDvolume_cacheZeroBlock(block + i - 1)) {     
+#ifdef DEBUG_SD_FILE
+            printf("SDfile_addDirCluster ! SDvolume_cacheZeroBlock\r\n");
+            printf("SDfile_addDirCluster block = %d + (i = %d) - 1\r\n", block, i);
+            printf("SDvolume_blocksPerCluster_ = %d\r\n", SDvolume_blocksPerCluster_);
+#endif
             return 0;
         }
     }

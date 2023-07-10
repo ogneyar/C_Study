@@ -56,7 +56,7 @@ int main(void)
         // while (1);
     }
 
-    // Print_VolumeInfo();
+    Print_VolumeInfo();
 
     SDfile_openRoot();
     SDfile_ls(LS_R | LS_DATE | LS_SIZE, 0);
