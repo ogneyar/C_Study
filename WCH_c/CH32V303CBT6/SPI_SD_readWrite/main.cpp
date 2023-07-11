@@ -35,8 +35,8 @@ int main(void)
 	}
 
     File dataFile;
-    // const char * fileName = "temp.txt";
-    const char * fileName = "0001.bmp";
+    const char * fileName = "temp.txt";
+    // const char * fileName = "0001.bmp";
 
     // const uint8_t * dataString = (const uint8_t *)"dataString";
     // dataFile = SD.open(fileName, FILE_WRITE);
@@ -62,6 +62,7 @@ int main(void)
         printf("sizeof(str): %d\r\n", (u8)sizeof(str));
         printf("str[2]: %c\r\n", (char)str[2]);
     }else printf("error opening %s\r\n", fileName);
+
 
     dataFile.close();
 

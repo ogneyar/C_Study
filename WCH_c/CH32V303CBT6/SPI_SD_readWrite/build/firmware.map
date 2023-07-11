@@ -1565,34 +1565,34 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_line    0x000000000000c7cb      0xcae build/ch32v30x_spi.o
  .debug_line    0x000000000000d479      0x31e build/startup_ch32v30x_D8.o
 
-.debug_str      0x0000000000000000     0x528f
- .debug_str     0x0000000000000000     0x3747 build/main.o
-                                       0x3b0d (size before relaxing)
- .debug_str     0x0000000000003747      0x418 build/Sd2Card.o
+.debug_str      0x0000000000000000     0x52c5
+ .debug_str     0x0000000000000000     0x3746 build/main.o
+                                       0x3b0c (size before relaxing)
+ .debug_str     0x0000000000003746      0x44f build/Sd2Card.o
                                        0x15c9 (size before relaxing)
- .debug_str     0x0000000000003b5f       0xff build/SdVolume.o
+ .debug_str     0x0000000000003b95       0xff build/SdVolume.o
                                        0x1ea2 (size before relaxing)
- .debug_str     0x0000000000003c5e      0x1ef build/SdFile.o
+ .debug_str     0x0000000000003c94      0x1ef build/SdFile.o
                                        0x2b6d (size before relaxing)
- .debug_str     0x0000000000003e4d      0x310 build/SD.o
+ .debug_str     0x0000000000003e83      0x310 build/SD.o
                                        0x2e71 (size before relaxing)
- .debug_str     0x000000000000415d       0x4e build/File.o
+ .debug_str     0x0000000000004193       0x4e build/File.o
                                        0x2c6c (size before relaxing)
- .debug_str     0x00000000000041ab      0x12b build/system_ch32v30x.o
+ .debug_str     0x00000000000041e1      0x12b build/system_ch32v30x.o
                                         0x684 (size before relaxing)
- .debug_str     0x00000000000042d6       0x30 build/ch32v30x_it.o
+ .debug_str     0x000000000000430c       0x30 build/ch32v30x_it.o
                                         0x5af (size before relaxing)
- .debug_str     0x0000000000004306      0x12e build/debug.o
+ .debug_str     0x000000000000433c      0x12e build/debug.o
                                         0x901 (size before relaxing)
- .debug_str     0x0000000000004434      0x611 build/ch32v30x_rcc.o
+ .debug_str     0x000000000000446a      0x611 build/ch32v30x_rcc.o
                                         0xcc3 (size before relaxing)
- .debug_str     0x0000000000004a45      0x356 build/ch32v30x_usart.o
+ .debug_str     0x0000000000004a7b      0x356 build/ch32v30x_usart.o
                                         0xb19 (size before relaxing)
- .debug_str     0x0000000000004d9b      0x229 build/ch32v30x_gpio.o
+ .debug_str     0x0000000000004dd1      0x229 build/ch32v30x_gpio.o
                                         0x973 (size before relaxing)
- .debug_str     0x0000000000004fc4      0x299 build/ch32v30x_spi.o
+ .debug_str     0x0000000000004ffa      0x299 build/ch32v30x_spi.o
                                         0xa91 (size before relaxing)
- .debug_str     0x000000000000525d       0x32 build/startup_ch32v30x_D8.o
+ .debug_str     0x0000000000005293       0x32 build/startup_ch32v30x_D8.o
                                          0x69 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
