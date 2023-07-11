@@ -108,7 +108,6 @@ uint8_t const SD_CARD_TYPE_SDHC = 3;
 
 
 
-
 /**
    \class Sd2Card
    \brief Raw access to SD and SDHC flash memory cards.
@@ -127,12 +126,13 @@ class Sd2Card {
        \return error code for last error. See Sd2Card.h for a list of error codes.
     */
     uint8_t errorCode(void) const {
-      return errorCode_;
+      	return errorCode_;
     }
     /** \return error data for last error. */
     uint8_t errorData(void) const {
-      return status_;
+      	return status_;
     }
+
 
     /**
        Initialize an SD flash memory card 
@@ -146,7 +146,7 @@ class Sd2Card {
 
     /** Returns the current value, true or false, for partial block read. */
     uint8_t partialBlockRead(void) const {
-      return partialBlockRead_;
+      	return partialBlockRead_;
     }
     uint8_t readBlock(uint32_t block, uint8_t* dst);
     uint8_t readData(uint32_t block,
@@ -157,21 +157,21 @@ class Sd2Card {
        information such as Manufacturer ID, Product name, Product serial
        number and Manufacturing date. */
     uint8_t readCID(cid_t* cid) {
-      return readRegister(CMD10, cid);
+      	return readRegister(CMD10, cid);
     }
 
     /**
        Read a cards CSD register. The CSD contains Card-Specific Data that
        provides information regarding access to the card's contents. */
     uint8_t readCSD(csd_t* csd) {
-      return readRegister(CMD9, csd);
+      	return readRegister(CMD9, csd);
     }
     void readEnd(void);
     uint8_t setSckRate(uint8_t sckRateID);
     
     /** Return the card type: SD V1, SD V2 or SDHC */
     uint8_t type(void) const {
-      return type_;
+      	return type_;
     }
     uint8_t writeBlock(uint32_t blockNumber, const uint8_t* src, uint8_t blocking = 1);
     uint8_t writeData(const uint8_t* src);
@@ -191,19 +191,19 @@ class Sd2Card {
     uint8_t type_;
     // private functions
     uint8_t cardAcmd(uint8_t cmd, uint32_t arg) {
-      cardCommand(CMD55, 0);
-      return cardCommand(cmd, arg);
+		cardCommand(CMD55, 0);
+		return cardCommand(cmd, arg);
     }
     uint8_t cardCommand(uint8_t cmd, uint32_t arg);
     void error(uint8_t code) {
-      errorCode_ = code;
+      	errorCode_ = code;
     }
     uint8_t readRegister(uint8_t cmd, void* buf);
-    uint8_t sendWriteCommand(uint32_t blockNumber, uint32_t eraseCount);
+    // uint8_t sendWriteCommand(uint32_t blockNumber, uint32_t eraseCount);
     void chipSelectHigh(void);
     void chipSelectLow(void);
     void type(uint8_t value) {
-      type_ = value;
+      	type_ = value;
     }
     uint8_t waitNotBusy(unsigned int timeoutMillis);
     uint8_t writeData(uint8_t token, const uint8_t* src);

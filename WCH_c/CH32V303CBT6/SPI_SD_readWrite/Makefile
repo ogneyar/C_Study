@@ -9,13 +9,19 @@ CPP_SOURCES = \
 	main.cpp \
 	../libs/Other/SD/Sd2Card.cpp \
 	../libs/Other/SD/SdVolume.cpp \
-	../libs/Other/SD/SdFile.cpp 
+	../libs/Other/SD/SdFile.cpp \
+	../libs/Other/SD/SD.cpp \
+	../libs/Other/SD/File.cpp 
 
 C_SOURCES =  \
 	src/system_ch32v30x.c \
 	src/ch32v30x_it.c \
 	../libs/Core/core_riscv.c \
 	../libs/Debug/debug.c \
+	../libs/Peripheral/src/ch32v30x_rcc.c \
+	../libs/Peripheral/src/ch32v30x_usart.c \
+	../libs/Peripheral/src/ch32v30x_gpio.c \
+	../libs/Peripheral/src/ch32v30x_spi.c #\
 	../libs/Peripheral/src/ch32v30x_adc.c \
 	../libs/Peripheral/src/ch32v30x_bkp.c \
 	../libs/Peripheral/src/ch32v30x_can.c \
@@ -28,19 +34,15 @@ C_SOURCES =  \
 	../libs/Peripheral/src/ch32v30x_exti.c \
 	../libs/Peripheral/src/ch32v30x_flash.c \
 	../libs/Peripheral/src/ch32v30x_fsmc.c \
-	../libs/Peripheral/src/ch32v30x_gpio.c \
 	../libs/Peripheral/src/ch32v30x_i2c.c \
 	../libs/Peripheral/src/ch32v30x_iwdg.c \
 	../libs/Peripheral/src/ch32v30x_misc.c \
 	../libs/Peripheral/src/ch32v30x_opa.c \
 	../libs/Peripheral/src/ch32v30x_pwr.c \
-	../libs/Peripheral/src/ch32v30x_rcc.c \
-	../libs/Peripheral/src/ch32v30x_rng.c \
 	../libs/Peripheral/src/ch32v30x_rtc.c \
+	../libs/Peripheral/src/ch32v30x_rng.c \
 	../libs/Peripheral/src/ch32v30x_sdio.c \
-	../libs/Peripheral/src/ch32v30x_spi.c \
 	../libs/Peripheral/src/ch32v30x_tim.c \
-	../libs/Peripheral/src/ch32v30x_usart.c \
 	../libs/Peripheral/src/ch32v30x_wwdg.c
 
 ASM_SOURCES =  \

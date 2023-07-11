@@ -202,8 +202,6 @@ uint32_t Sd2Card::cardSize(void)
 }
 
 //------------------------------------------------------------------------------
-static uint8_t chip_select_asserted = 0;
-
 void Sd2Card::chipSelectHigh(void) {  
 	GPIOA->BSHR |= (1 << chipSelectPin_); 
 }

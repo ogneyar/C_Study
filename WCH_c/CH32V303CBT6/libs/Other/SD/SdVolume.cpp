@@ -94,10 +94,12 @@ uint8_t SdVolume::allocContiguous(uint32_t count, uint32_t* curCluster)
 }
 
 //------------------------------------------------------------------------------
+// Очистка кеша
 uint8_t SdVolume::cacheFlush(uint8_t blocking)
 {
 	if (cacheDirty_) {
 		if (!sdCard_->writeBlock(cacheBlockNumber_, cacheBuffer_.data, blocking)) {
+			printf("SdVolume::cacheFlush error ! sdCard_->writeBlock\r\n");
 			return false;
 		}
 
@@ -107,6 +109,7 @@ uint8_t SdVolume::cacheFlush(uint8_t blocking)
 
 		// mirror FAT tables
 		if (!cacheMirrorBlockFlush(blocking)) {
+			printf("SdVolume::cacheFlush error ! cacheMirrorBlockFlush\r\n");
 			return false;
 		}
 		cacheDirty_ = 0;
