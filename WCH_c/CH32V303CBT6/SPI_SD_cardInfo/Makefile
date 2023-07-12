@@ -16,6 +16,7 @@ C_SOURCES =  \
 	src/ch32v30x_it.c \
 	../libs/Core/core_riscv.c \
 	../libs/Debug/debug.c \
+	../libs/Other/SPI/spi.c \
 	../libs/Peripheral/src/ch32v30x_rcc.c \
 	../libs/Peripheral/src/ch32v30x_usart.c \
 	../libs/Peripheral/src/ch32v30x_gpio.c \
@@ -72,6 +73,7 @@ C_INCLUDES =  \
 	-I../libs/Core \
 	-I../libs/Debug \
 	-I../libs/Other/SD \
+	-I../libs/Other/SPI \
 	-I../libs/Peripheral/inc
 
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT)

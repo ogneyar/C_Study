@@ -14,6 +14,7 @@
 void GPIO_Leds_Init(void);
 void Leds_Blink(uint16_t delay);
 
+
 const int chipSelect = 0;
 
 
@@ -33,17 +34,39 @@ int main(void)
 	} else {
 		printf("SD begin is correct\r\n");
 	}
-
+    
     File dataFile;
-    const char * fileName = "temp.txt";
-    // const char * fileName = "0001.bmp";
+    // const char * fileName = "temp.txt";
+    // const char * fileName = "test.txt";
+    const char * fileName = "0001.bmp";
+    // const char * fileName = "0001.txt";
+    // const char * fileName = "ttt.txt";
 
-    // const uint8_t * dataString = (const uint8_t *)"dataString";
-    // dataFile = SD.open(fileName, FILE_WRITE);
+
+    /*
+        запись не работает !
+
+        если в файле Sd2Card.cpp в методе Sd2Card::writeData (на 691-692 строках) 
+        закомментировать chipSelectHigh(); и return false;
+        тогда что-то в файл запишется, но это не выход
+
+        решение пока ненайдено :(
+    */
+
+    // const uint8_t * dataString = (const uint8_t *)"zzz";
+    // // dataFile = SD.open(fileName, FILE_WRITE);
+    // dataFile = SD.open(fileName, O_WRITE | O_APPEND);
     // if (dataFile) {
     //     printf("SD open file for write\r\n");
     //     dataFile.write(dataString, sizeof(dataString));
+    //     // dataFile.write((const uint8_t *)'z', 1);
+    //     dataFile.close();
     // }else printf("error opening %s\r\n", fileName);     
+
+
+    /* 
+        чтение работает
+    */
 
     int ch = -1;
     char *str;
@@ -61,10 +84,10 @@ int main(void)
         printf("\r\n");
         printf("sizeof(str): %d\r\n", (u8)sizeof(str));
         printf("str[2]: %c\r\n", (char)str[2]);
+        dataFile.close();
     }else printf("error opening %s\r\n", fileName);
 
 
-    dataFile.close();
 
 
     while(1) 

@@ -76,6 +76,7 @@ C_INCLUDES =  \
 	-I../libs/Debug \
 	-I../libs/Other/SD \
 	-I../libs/Other/SPI \
+	-I../libs/Other/TFT_SHIELD_3_2 \
 	-I../libs/Peripheral/inc
 
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT)

@@ -40,8 +40,8 @@ class File {
     char * name();
     bool isDirectory(void);
 
-    // File openNextFile(uint8_t mode = O_RDONLY);
-    // void rewindDirectory(void);
+    File openNextFile(uint8_t mode = O_RDONLY);
+    void rewindDirectory(void);
 
     // using Print::write;
 };
@@ -108,7 +108,7 @@ class SDClass {
     // It shouldn't be set directly--it is set via the parameters to `open`.
     int fileOpenMode;
 
-    // friend class File;
+    friend class File;
     // friend bool callback_openPath(SdFile&, const char *, bool, void *);
 };
 

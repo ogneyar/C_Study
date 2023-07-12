@@ -16,7 +16,7 @@ int main(void)
     Delay_Init();
     GPIO_Init();
     USART1_Init(115200);
-    printf("SystemClk:%d\r\n", SystemCoreClock);
+    printf("SystemClk: %d\r\n", SystemCoreClock);
     printf("SPI TFT SHIELD 3.2inch\r\n");
 
     SPI1_Master_Init(0);    

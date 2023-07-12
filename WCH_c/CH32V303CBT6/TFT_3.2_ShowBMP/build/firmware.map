@@ -11,7 +11,7 @@ e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/g
 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcmp.o)
                               build/SdFile.o (memcmp)
 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
-                              build/main.o (memcpy)
+                              build/SdFile.o (memcpy)
 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
                               build/SdFile.o (memset)
 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
@@ -21,7 +21,7 @@ e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/g
 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
                               build/main.o (printf)
 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-putchar.o)
-                              build/main.o (putchar)
+                              build/SdFile.o (putchar)
 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
                               build/main.o (puts)
 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
@@ -101,7 +101,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/main.o
  .data          0x0000000000000000        0x0 build/main.o
  .bss           0x0000000000000000        0x0 build/main.o
- .eh_frame      0x0000000000000000       0x64 build/main.o
+ .text._Z7Lcd_RGBiii
+                0x0000000000000000        0xa build/main.o
+ .eh_frame      0x0000000000000000      0x22c build/main.o
  .text          0x0000000000000000        0x0 build/Sd2Card.o
  .data          0x0000000000000000        0x0 build/Sd2Card.o
  .bss           0x0000000000000000        0x0 build/Sd2Card.o
@@ -126,6 +128,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/File.o
  .data          0x0000000000000000        0x0 build/File.o
  .bss           0x0000000000000000        0x0 build/File.o
+ .text._ZN5SDLib4FilecvbEv
+                0x0000000000000000       0x10 build/File.o
  .text._ZN5SDLib4File4nameEv
                 0x0000000000000000        0x2 build/File.o
  .eh_frame      0x0000000000000000      0x204 build/File.o
@@ -198,7 +202,7 @@ Discarded input sections
                 0x0000000000000000       0xe0 build/core_riscv.o
  .debug_ranges  0x0000000000000000       0xd0 build/core_riscv.o
  .debug_line    0x0000000000000000      0x557 build/core_riscv.o
- .debug_str     0x0000000000000000      0x2e1 build/core_riscv.o
+ .debug_str     0x0000000000000000      0x2e0 build/core_riscv.o
  .comment       0x0000000000000000       0x34 build/core_riscv.o
  .debug_frame   0x0000000000000000      0x1a0 build/core_riscv.o
  .text          0x0000000000000000        0x0 build/debug.o
@@ -680,7 +684,7 @@ END GROUP
                 0x0000000000000200                . = ALIGN (0x40)
  *fill*         0x00000000000001d8       0x28 
 
-.text           0x0000000000000200     0x474c
+.text           0x0000000000000200     0x4ac4
                 0x0000000000000200                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000000000200       0x14 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
@@ -701,706 +705,741 @@ END GROUP
  .text          0x00000000000002aa       0xa8 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
                 0x00000000000002aa                memset
  *(.text.*)
+ .text._Z13Lcd_Write_Bush
+                0x0000000000000352        0xa build/main.o
+                0x0000000000000352                Lcd_Write_Bus(unsigned char)
+ .text._Z13Lcd_Write_Comh
+                0x000000000000035c       0x22 build/main.o
+                0x000000000000035c                Lcd_Write_Com(unsigned char)
+ .text._Z14Lcd_Write_Datah
+                0x000000000000037e       0x22 build/main.o
+                0x000000000000037e                Lcd_Write_Data(unsigned char)
+ .text._Z8Lcd_Initv
+                0x00000000000003a0      0x184 build/main.o
+                0x00000000000003a0                Lcd_Init()
+ .text._Z18Lcd_Write_Com_Datahh
+                0x0000000000000524       0x14 build/main.o
+                0x0000000000000524                Lcd_Write_Com_Data(unsigned char, unsigned char)
+ .text._Z15Lcd_Address_Setjjjj
+                0x0000000000000538       0x6e build/main.o
+                0x0000000000000538                Lcd_Address_Set(unsigned int, unsigned int, unsigned int, unsigned int)
+ .text._Z10Lcd_H_linejjjj
+                0x00000000000005a6       0x5e build/main.o
+                0x00000000000005a6                Lcd_H_line(unsigned int, unsigned int, unsigned int, unsigned int)
+ .text._Z10Lcd_V_linejjjj
+                0x0000000000000604       0x5e build/main.o
+                0x0000000000000604                Lcd_V_line(unsigned int, unsigned int, unsigned int, unsigned int)
+ .text._Z8Lcd_Rectjjjjj
+                0x0000000000000662       0x44 build/main.o
+                0x0000000000000662                Lcd_Rect(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
+ .text._Z9Lcd_Rectfjjjjj
+                0x00000000000006a6       0x40 build/main.o
+                0x00000000000006a6                Lcd_Rectf(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
+ .text._Z8Lcd_Fillj
+                0x00000000000006e6       0x66 build/main.o
+                0x00000000000006e6                Lcd_Fill(unsigned int)
+ .text._Z9Lcd_Clearv
+                0x000000000000074c        0xa build/main.o
+                0x000000000000074c                Lcd_Clear()
  .text._Z14GPIO_Leds_Initv
-                0x0000000000000352       0x76 build/main.o
-                0x0000000000000352                GPIO_Leds_Init()
+                0x0000000000000756       0x76 build/main.o
+                0x0000000000000756                GPIO_Leds_Init()
  .text._Z10Leds_Blinkt
-                0x00000000000003c8       0x32 build/main.o
-                0x00000000000003c8                Leds_Blink(unsigned short)
+                0x00000000000007cc       0x34 build/main.o
+                0x00000000000007cc                Leds_Blink(unsigned short)
+ .text._Z11Test_Screenv
+                0x0000000000000800       0x34 build/main.o
+                0x0000000000000800                Test_Screen()
  .text.startup.main
-                0x00000000000003fa      0x124 build/main.o
-                0x00000000000003fa                main
+                0x0000000000000834       0x74 build/main.o
+                0x0000000000000834                main
  .text._ZL7spiSendh
-                0x000000000000051e       0x22 build/Sd2Card.o
+                0x00000000000008a8       0x24 build/Sd2Card.o
  .text._ZL6spiRecv
-                0x0000000000000540       0x1c build/Sd2Card.o
+                0x00000000000008cc       0x1e build/Sd2Card.o
  .text._ZN7Sd2Card14chipSelectHighEv
-                0x000000000000055c       0x18 build/Sd2Card.o
-                0x000000000000055c                Sd2Card::chipSelectHigh()
+                0x00000000000008ea       0x18 build/Sd2Card.o
+                0x00000000000008ea                Sd2Card::chipSelectHigh()
  .text._ZN7Sd2Card13chipSelectLowEv
-                0x0000000000000574       0x18 build/Sd2Card.o
-                0x0000000000000574                Sd2Card::chipSelectLow()
+                0x0000000000000902       0x18 build/Sd2Card.o
+                0x0000000000000902                Sd2Card::chipSelectLow()
  .text._ZN7Sd2Card7readEndEv
-                0x000000000000058c       0x2a build/Sd2Card.o
-                0x000000000000058c                Sd2Card::readEnd()
+                0x000000000000091a       0x2c build/Sd2Card.o
+                0x000000000000091a                Sd2Card::readEnd()
  .text._ZN7Sd2Card16partialBlockReadEh
-                0x00000000000005b6       0x14 build/Sd2Card.o
-                0x00000000000005b6                Sd2Card::partialBlockRead(unsigned char)
+                0x0000000000000946       0x16 build/Sd2Card.o
+                0x0000000000000946                Sd2Card::partialBlockRead(unsigned char)
  .text._ZN7Sd2Card11waitNotBusyEj
-                0x00000000000005ca       0x22 build/Sd2Card.o
-                0x00000000000005ca                Sd2Card::waitNotBusy(unsigned int)
+                0x000000000000095c       0x24 build/Sd2Card.o
+                0x000000000000095c                Sd2Card::waitNotBusy(unsigned int)
  .text._ZN7Sd2Card11cardCommandEhm
-                0x00000000000005ec       0x78 build/Sd2Card.o
-                0x00000000000005ec                Sd2Card::cardCommand(unsigned char, unsigned long)
+                0x0000000000000980       0x7a build/Sd2Card.o
+                0x0000000000000980                Sd2Card::cardCommand(unsigned char, unsigned long)
  .text._ZN7Sd2Card4initEhP12GPIO_TypeDef
-                0x0000000000000664      0x148 build/Sd2Card.o
-                0x0000000000000664                Sd2Card::init(unsigned char, GPIO_TypeDef*)
+                0x00000000000009fa      0x14a build/Sd2Card.o
+                0x00000000000009fa                Sd2Card::init(unsigned char, GPIO_TypeDef*)
  .text._ZN7Sd2Card4initEh
-                0x00000000000007ac       0x10 build/Sd2Card.o
-                0x00000000000007ac                Sd2Card::init(unsigned char)
+                0x0000000000000b44       0x12 build/Sd2Card.o
+                0x0000000000000b44                Sd2Card::init(unsigned char)
  .text._ZN7Sd2Card14waitStartBlockEv
-                0x00000000000007bc       0x38 build/Sd2Card.o
-                0x00000000000007bc                Sd2Card::waitStartBlock()
+                0x0000000000000b56       0x3a build/Sd2Card.o
+                0x0000000000000b56                Sd2Card::waitStartBlock()
  .text._ZN7Sd2Card8readDataEmttPh.part.4
-                0x00000000000007f4       0xb2 build/Sd2Card.o
+                0x0000000000000b90       0xb2 build/Sd2Card.o
  .text._ZN7Sd2Card8readDataEmttPh
-                0x00000000000008a6       0x10 build/Sd2Card.o
-                0x00000000000008a6                Sd2Card::readData(unsigned long, unsigned short, unsigned short, unsigned char*)
+                0x0000000000000c42       0x10 build/Sd2Card.o
+                0x0000000000000c42                Sd2Card::readData(unsigned long, unsigned short, unsigned short, unsigned char*)
  .text._ZN7Sd2Card9readBlockEmPh
-                0x00000000000008b6       0x12 build/Sd2Card.o
-                0x00000000000008b6                Sd2Card::readBlock(unsigned long, unsigned char*)
+                0x0000000000000c52       0x12 build/Sd2Card.o
+                0x0000000000000c52                Sd2Card::readBlock(unsigned long, unsigned char*)
  .text._ZN7Sd2Card12readRegisterEhPv
-                0x00000000000008c8       0x48 build/Sd2Card.o
-                0x00000000000008c8                Sd2Card::readRegister(unsigned char, void*)
+                0x0000000000000c64       0x4c build/Sd2Card.o
+                0x0000000000000c64                Sd2Card::readRegister(unsigned char, void*)
  .text._ZN7Sd2Card8cardSizeEv
-                0x0000000000000910       0x78 build/Sd2Card.o
-                0x0000000000000910                Sd2Card::cardSize()
+                0x0000000000000cb0       0x78 build/Sd2Card.o
+                0x0000000000000cb0                Sd2Card::cardSize()
  .text._ZN7Sd2Card22eraseSingleBlockEnableEv
-                0x0000000000000988       0x1a build/Sd2Card.o
-                0x0000000000000988                Sd2Card::eraseSingleBlockEnable()
+                0x0000000000000d28       0x1a build/Sd2Card.o
+                0x0000000000000d28                Sd2Card::eraseSingleBlockEnable()
  .text._ZN7Sd2Card5eraseEmm
-                0x00000000000009a2       0x6c build/Sd2Card.o
-                0x00000000000009a2                Sd2Card::erase(unsigned long, unsigned long)
+                0x0000000000000d42       0x78 build/Sd2Card.o
+                0x0000000000000d42                Sd2Card::erase(unsigned long, unsigned long)
  .text._ZN7Sd2Card9writeDataEhPKh
-                0x0000000000000a0e       0x6e build/Sd2Card.o
-                0x0000000000000a0e                Sd2Card::writeData(unsigned char, unsigned char const*)
+                0x0000000000000dba       0x7a build/Sd2Card.o
+                0x0000000000000dba                Sd2Card::writeData(unsigned char, unsigned char const*)
  .text._ZN7Sd2Card10writeBlockEmPKhh
-                0x0000000000000a7c       0xb4 build/Sd2Card.o
-                0x0000000000000a7c                Sd2Card::writeBlock(unsigned long, unsigned char const*, unsigned char)
+                0x0000000000000e34       0xba build/Sd2Card.o
+                0x0000000000000e34                Sd2Card::writeBlock(unsigned long, unsigned char const*, unsigned char)
  .text._ZN7Sd2Card9writeDataEPKh
-                0x0000000000000b30       0x42 build/Sd2Card.o
-                0x0000000000000b30                Sd2Card::writeData(unsigned char const*)
+                0x0000000000000eee       0x42 build/Sd2Card.o
+                0x0000000000000eee                Sd2Card::writeData(unsigned char const*)
  .text._ZN7Sd2Card10writeStartEmm
-                0x0000000000000b72       0x56 build/Sd2Card.o
-                0x0000000000000b72                Sd2Card::writeStart(unsigned long, unsigned long)
+                0x0000000000000f30       0x56 build/Sd2Card.o
+                0x0000000000000f30                Sd2Card::writeStart(unsigned long, unsigned long)
  .text._ZN7Sd2Card9writeStopEv
-                0x0000000000000bc8       0x3e build/Sd2Card.o
-                0x0000000000000bc8                Sd2Card::writeStop()
+                0x0000000000000f86       0x3e build/Sd2Card.o
+                0x0000000000000f86                Sd2Card::writeStop()
  .text._ZN7Sd2Card6isBusyEv
-                0x0000000000000c06       0x22 build/Sd2Card.o
-                0x0000000000000c06                Sd2Card::isBusy()
+                0x0000000000000fc4       0x22 build/Sd2Card.o
+                0x0000000000000fc4                Sd2Card::isBusy()
  .text._ZN8SdVolume21cacheMirrorBlockFlushEh
-                0x0000000000000c28       0x24 build/SdVolume.o
-                0x0000000000000c28                SdVolume::cacheMirrorBlockFlush(unsigned char)
+                0x0000000000000fe6       0x24 build/SdVolume.o
+                0x0000000000000fe6                SdVolume::cacheMirrorBlockFlush(unsigned char)
  .text._ZN8SdVolume10cacheFlushEh
-                0x0000000000000c4c       0x5c build/SdVolume.o
-                0x0000000000000c4c                SdVolume::cacheFlush(unsigned char)
+                0x000000000000100a       0x5c build/SdVolume.o
+                0x000000000000100a                SdVolume::cacheFlush(unsigned char)
  .text._ZN8SdVolume13cacheRawBlockEmh
-                0x0000000000000ca8       0x48 build/SdVolume.o
-                0x0000000000000ca8                SdVolume::cacheRawBlock(unsigned long, unsigned char)
+                0x0000000000001066       0x4a build/SdVolume.o
+                0x0000000000001066                SdVolume::cacheRawBlock(unsigned long, unsigned char)
  .text._ZN8SdVolume14cacheZeroBlockEm
-                0x0000000000000cf0       0x3e build/SdVolume.o
-                0x0000000000000cf0                SdVolume::cacheZeroBlock(unsigned long)
+                0x00000000000010b0       0x3e build/SdVolume.o
+                0x00000000000010b0                SdVolume::cacheZeroBlock(unsigned long)
  .text._ZNK8SdVolume6fatGetEmPm
-                0x0000000000000d2e       0x7c build/SdVolume.o
-                0x0000000000000d2e                SdVolume::fatGet(unsigned long, unsigned long*) const
+                0x00000000000010ee       0x7c build/SdVolume.o
+                0x00000000000010ee                SdVolume::fatGet(unsigned long, unsigned long*) const
  .text._ZNK8SdVolume9chainSizeEmPm
-                0x0000000000000daa       0x4c build/SdVolume.o
-                0x0000000000000daa                SdVolume::chainSize(unsigned long, unsigned long*) const
+                0x000000000000116a       0x4c build/SdVolume.o
+                0x000000000000116a                SdVolume::chainSize(unsigned long, unsigned long*) const
  .text._ZN8SdVolume6fatPutEmm
-                0x0000000000000df6       0x9a build/SdVolume.o
-                0x0000000000000df6                SdVolume::fatPut(unsigned long, unsigned long)
+                0x00000000000011b6       0x9a build/SdVolume.o
+                0x00000000000011b6                SdVolume::fatPut(unsigned long, unsigned long)
  .text._ZN8SdVolume15allocContiguousEmPm
-                0x0000000000000e90       0xcc build/SdVolume.o
-                0x0000000000000e90                SdVolume::allocContiguous(unsigned long, unsigned long*)
+                0x0000000000001250       0xcc build/SdVolume.o
+                0x0000000000001250                SdVolume::allocContiguous(unsigned long, unsigned long*)
  .text._ZN8SdVolume9freeChainEm
-                0x0000000000000f5c       0x48 build/SdVolume.o
-                0x0000000000000f5c                SdVolume::freeChain(unsigned long)
+                0x000000000000131c       0x4a build/SdVolume.o
+                0x000000000000131c                SdVolume::freeChain(unsigned long)
  .text._ZN8SdVolume4initEP7Sd2Cardh
-                0x0000000000000fa4      0x12e build/SdVolume.o
-                0x0000000000000fa4                SdVolume::init(Sd2Card*, unsigned char)
+                0x0000000000001366      0x132 build/SdVolume.o
+                0x0000000000001366                SdVolume::init(Sd2Card*, unsigned char)
  .text._ZN6SdFile10addClusterEv
-                0x00000000000010d2       0x30 build/SdFile.o
-                0x00000000000010d2                SdFile::addCluster()
+                0x0000000000001498       0x32 build/SdFile.o
+                0x0000000000001498                SdFile::addCluster()
  .text._ZN6SdFile13addDirClusterEv
-                0x0000000000001102       0x52 build/SdFile.o
-                0x0000000000001102                SdFile::addDirCluster()
+                0x00000000000014ca       0x52 build/SdFile.o
+                0x00000000000014ca                SdFile::addDirCluster()
  .text._ZN6SdFile13cacheDirEntryEh
-                0x0000000000001154       0x24 build/SdFile.o
-                0x0000000000001154                SdFile::cacheDirEntry(unsigned char)
+                0x000000000000151c       0x24 build/SdFile.o
+                0x000000000000151c                SdFile::cacheDirEntry(unsigned char)
  .text._ZN6SdFile15contiguousRangeEPmS0_
-                0x0000000000001178       0x7e build/SdFile.o
-                0x0000000000001178                SdFile::contiguousRange(unsigned long*, unsigned long*)
+                0x0000000000001540       0x7e build/SdFile.o
+                0x0000000000001540                SdFile::contiguousRange(unsigned long*, unsigned long*)
  .text._ZN6SdFile7dirNameERK14directoryEntryPc
-                0x00000000000011f6       0x54 build/SdFile.o
-                0x00000000000011f6                SdFile::dirName(directoryEntry const&, char*)
+                0x00000000000015be       0x54 build/SdFile.o
+                0x00000000000015be                SdFile::dirName(directoryEntry const&, char*)
  .text._ZN6SdFile10make83NameEPKcPh
-                0x000000000000124a       0xb4 build/SdFile.o
-                0x000000000000124a                SdFile::make83Name(char const*, unsigned char*)
+                0x0000000000001612       0xb4 build/SdFile.o
+                0x0000000000001612                SdFile::make83Name(char const*, unsigned char*)
  .text._ZN6SdFile8openRootEP8SdVolume
-                0x00000000000012fe       0x64 build/SdFile.o
-                0x00000000000012fe                SdFile::openRoot(SdVolume*)
+                0x00000000000016c6       0x64 build/SdFile.o
+                0x00000000000016c6                SdFile::openRoot(SdVolume*)
  .text._ZN6SdFile12printDirNameERK14directoryEntryh
-                0x0000000000001362       0x7a build/SdFile.o
-                0x0000000000001362                SdFile::printDirName(directoryEntry const&, unsigned char)
+                0x000000000000172a       0x7a build/SdFile.o
+                0x000000000000172a                SdFile::printDirName(directoryEntry const&, unsigned char)
  .text._ZN6SdFile14printTwoDigitsEh
-                0x00000000000013dc       0x32 build/SdFile.o
-                0x00000000000013dc                SdFile::printTwoDigits(unsigned char)
+                0x00000000000017a4       0x32 build/SdFile.o
+                0x00000000000017a4                SdFile::printTwoDigits(unsigned char)
  .text._ZN6SdFile12printFatDateEt
-                0x000000000000140e       0x3c build/SdFile.o
-                0x000000000000140e                SdFile::printFatDate(unsigned short)
+                0x00000000000017d6       0x3c build/SdFile.o
+                0x00000000000017d6                SdFile::printFatDate(unsigned short)
  .text._ZN6SdFile12printFatTimeEt
-                0x000000000000144a       0x30 build/SdFile.o
-                0x000000000000144a                SdFile::printFatTime(unsigned short)
+                0x0000000000001812       0x30 build/SdFile.o
+                0x0000000000001812                SdFile::printFatTime(unsigned short)
  .text._ZN6SdFile4readEPvt
-                0x000000000000147a      0x134 build/SdFile.o
-                0x000000000000147a                SdFile::read(void*, unsigned short)
+                0x0000000000001842      0x134 build/SdFile.o
+                0x0000000000001842                SdFile::read(void*, unsigned short)
  .text._ZN6SdFile7readDirEP14directoryEntry
-                0x00000000000015ae       0x5c build/SdFile.o
-                0x00000000000015ae                SdFile::readDir(directoryEntry*)
+                0x0000000000001976       0x5e build/SdFile.o
+                0x0000000000001976                SdFile::readDir(directoryEntry*)
  .text._ZN6SdFile12readDirCacheEv
-                0x000000000000160a       0x44 build/SdFile.o
-                0x000000000000160a                SdFile::readDirCache()
+                0x00000000000019d4       0x46 build/SdFile.o
+                0x00000000000019d4                SdFile::readDirCache()
  .text._ZN6SdFile7seekSetEm
-                0x000000000000164e       0x7c build/SdFile.o
-                0x000000000000164e                SdFile::seekSet(unsigned long)
+                0x0000000000001a1a       0x7c build/SdFile.o
+                0x0000000000001a1a                SdFile::seekSet(unsigned long)
  .text._ZN6SdFile4syncEh
-                0x00000000000016ca       0x94 build/SdFile.o
-                0x00000000000016ca                SdFile::sync(unsigned char)
+                0x0000000000001a96       0x94 build/SdFile.o
+                0x0000000000001a96                SdFile::sync(unsigned char)
  .text._ZN6SdFile5closeEv
-                0x000000000000175e       0x34 build/SdFile.o
-                0x000000000000175e                SdFile::close()
+                0x0000000000001b2a       0x36 build/SdFile.o
+                0x0000000000001b2a                SdFile::close()
  .text._ZN6SdFile8dirEntryEP14directoryEntry
-                0x0000000000001792       0x2e build/SdFile.o
-                0x0000000000001792                SdFile::dirEntry(directoryEntry*)
+                0x0000000000001b60       0x30 build/SdFile.o
+                0x0000000000001b60                SdFile::dirEntry(directoryEntry*)
  .text._ZN6SdFile9timestampEhthhhhh
-                0x00000000000017c0       0xf8 build/SdFile.o
-                0x00000000000017c0                SdFile::timestamp(unsigned char, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+                0x0000000000001b90       0xfa build/SdFile.o
+                0x0000000000001b90                SdFile::timestamp(unsigned char, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
  .text._ZN6SdFile8truncateEm
-                0x00000000000018b8       0xae build/SdFile.o
-                0x00000000000018b8                SdFile::truncate(unsigned long)
+                0x0000000000001c8a       0xb0 build/SdFile.o
+                0x0000000000001c8a                SdFile::truncate(unsigned long)
  .text._ZN6SdFile15openCachedEntryEhh
-                0x0000000000001966       0x88 build/SdFile.o
-                0x0000000000001966                SdFile::openCachedEntry(unsigned char, unsigned char)
+                0x0000000000001d3a       0x8a build/SdFile.o
+                0x0000000000001d3a                SdFile::openCachedEntry(unsigned char, unsigned char)
  .text._ZN6SdFile4openEPS_PKch
-                0x00000000000019ee      0x14a build/SdFile.o
-                0x00000000000019ee                SdFile::open(SdFile*, char const*, unsigned char)
+                0x0000000000001dc4      0x14c build/SdFile.o
+                0x0000000000001dc4                SdFile::open(SdFile*, char const*, unsigned char)
  .text._ZN6SdFile7makeDirEPS_PKc
-                0x0000000000001b38       0xe0 build/SdFile.o
-                0x0000000000001b38                SdFile::makeDir(SdFile*, char const*)
+                0x0000000000001f10       0xe2 build/SdFile.o
+                0x0000000000001f10                SdFile::makeDir(SdFile*, char const*)
  .text._ZN6SdFile4openEPS_th
-                0x0000000000001c18       0x68 build/SdFile.o
-                0x0000000000001c18                SdFile::open(SdFile*, unsigned short, unsigned char)
+                0x0000000000001ff2       0x68 build/SdFile.o
+                0x0000000000001ff2                SdFile::open(SdFile*, unsigned short, unsigned char)
  .text._ZN6SdFile2lsEhh
-                0x0000000000001c80      0x16e build/SdFile.o
-                0x0000000000001c80                SdFile::ls(unsigned char, unsigned char)
+                0x000000000000205a      0x170 build/SdFile.o
+                0x000000000000205a                SdFile::ls(unsigned char, unsigned char)
  .text._ZN6SdFile6removeEv
-                0x0000000000001dee       0x2e build/SdFile.o
-                0x0000000000001dee                SdFile::remove()
+                0x00000000000021ca       0x2e build/SdFile.o
+                0x00000000000021ca                SdFile::remove()
  .text._ZN6SdFile16createContiguousEPS_PKcm
-                0x0000000000001e1c       0x5e build/SdFile.o
-                0x0000000000001e1c                SdFile::createContiguous(SdFile*, char const*, unsigned long)
+                0x00000000000021f8       0x60 build/SdFile.o
+                0x00000000000021f8                SdFile::createContiguous(SdFile*, char const*, unsigned long)
  .text._ZN6SdFile6removeEPS_PKc
-                0x0000000000001e7a       0x22 build/SdFile.o
-                0x0000000000001e7a                SdFile::remove(SdFile*, char const*)
+                0x0000000000002258       0x24 build/SdFile.o
+                0x0000000000002258                SdFile::remove(SdFile*, char const*)
  .text._ZN6SdFile5rmDirEv
-                0x0000000000001e9c       0x5c build/SdFile.o
-                0x0000000000001e9c                SdFile::rmDir()
+                0x000000000000227c       0x5e build/SdFile.o
+                0x000000000000227c                SdFile::rmDir()
  .text._ZN6SdFile8rmRfStarEv
-                0x0000000000001ef8       0xa4 build/SdFile.o
-                0x0000000000001ef8                SdFile::rmRfStar()
+                0x00000000000022da       0xa6 build/SdFile.o
+                0x00000000000022da                SdFile::rmRfStar()
  .text._ZN6SdFile5writeEPKvt
-                0x0000000000001f9c      0x20e build/SdFile.o
-                0x0000000000001f9c                SdFile::write(void const*, unsigned short)
+                0x0000000000002380      0x20e build/SdFile.o
+                0x0000000000002380                SdFile::write(void const*, unsigned short)
  .text._ZN6SdFile5writeEh
-                0x00000000000021aa       0x18 build/SdFile.o
-                0x00000000000021aa                SdFile::write(unsigned char)
+                0x000000000000258e       0x18 build/SdFile.o
+                0x000000000000258e                SdFile::write(unsigned char)
  .text._ZN6SdFile5writeEPKc
-                0x00000000000021c2       0x24 build/SdFile.o
-                0x00000000000021c2                SdFile::write(char const*)
+                0x00000000000025a6       0x24 build/SdFile.o
+                0x00000000000025a6                SdFile::write(char const*)
  .text._ZN6SdFile17availableForWriteEv
-                0x00000000000021e6       0x7c build/SdFile.o
-                0x00000000000021e6                SdFile::availableForWrite()
+                0x00000000000025ca       0x7c build/SdFile.o
+                0x00000000000025ca                SdFile::availableForWrite()
  .text._ZN5SDLib19callback_pathExistsER6SdFilePKcbPv
-                0x0000000000002262       0x2a build/SD.o
-                0x0000000000002262                SDLib::callback_pathExists(SdFile&, char const*, bool, void*)
+                0x0000000000002646       0x2a build/SD.o
+                0x0000000000002646                SDLib::callback_pathExists(SdFile&, char const*, bool, void*)
  .text._ZN5SDLib20callback_makeDirPathER6SdFilePKcbPv
-                0x000000000000228c       0x26 build/SD.o
-                0x000000000000228c                SDLib::callback_makeDirPath(SdFile&, char const*, bool, void*)
+                0x0000000000002670       0x28 build/SD.o
+                0x0000000000002670                SDLib::callback_makeDirPath(SdFile&, char const*, bool, void*)
  .text._ZN5SDLib14callback_rmdirER6SdFilePKcbPv
-                0x00000000000022b2       0x34 build/SD.o
-                0x00000000000022b2                SDLib::callback_rmdir(SdFile&, char const*, bool, void*)
+                0x0000000000002698       0x34 build/SD.o
+                0x0000000000002698                SDLib::callback_rmdir(SdFile&, char const*, bool, void*)
  .text._ZN5SDLib15callback_removeER6SdFilePKcbPv
-                0x00000000000022e6       0x16 build/SD.o
-                0x00000000000022e6                SDLib::callback_remove(SdFile&, char const*, bool, void*)
+                0x00000000000026cc       0x16 build/SD.o
+                0x00000000000026cc                SDLib::callback_remove(SdFile&, char const*, bool, void*)
  .text._ZN5SDLib20getNextPathComponentEPKcPjPc
-                0x00000000000022fc       0x62 build/SD.o
-                0x00000000000022fc                SDLib::getNextPathComponent(char const*, unsigned int*, char*)
+                0x00000000000026e2       0x62 build/SD.o
+                0x00000000000026e2                SDLib::getNextPathComponent(char const*, unsigned int*, char*)
  .text._ZN5SDLib8walkPathEPKcR6SdFilePFbS3_S1_bPvES4_
-                0x000000000000235e       0x92 build/SD.o
-                0x000000000000235e                SDLib::walkPath(char const*, SdFile&, bool (*)(SdFile&, char const*, bool, void*), void*)
+                0x0000000000002744       0x92 build/SD.o
+                0x0000000000002744                SDLib::walkPath(char const*, SdFile&, bool (*)(SdFile&, char const*, bool, void*), void*)
  .text._ZN5SDLib7SDClass5beginEh
-                0x00000000000023f0       0x58 build/SD.o
-                0x00000000000023f0                SDLib::SDClass::begin(unsigned char)
+                0x00000000000027d6       0x58 build/SD.o
+                0x00000000000027d6                SDLib::SDClass::begin(unsigned char)
  .text._ZN5SDLib7SDClass3endEv
-                0x0000000000002448       0x10 build/SD.o
-                0x0000000000002448                SDLib::SDClass::end()
+                0x000000000000282e       0x10 build/SD.o
+                0x000000000000282e                SDLib::SDClass::end()
  .text._ZN5SDLib7SDClass12getParentDirEPKcPi
-                0x0000000000002458       0xba build/SD.o
-                0x0000000000002458                SDLib::SDClass::getParentDir(char const*, int*)
+                0x000000000000283e       0xba build/SD.o
+                0x000000000000283e                SDLib::SDClass::getParentDir(char const*, int*)
  .text._ZN5SDLib7SDClass4openEPKch
-                0x0000000000002512       0x8c build/SD.o
-                0x0000000000002512                SDLib::SDClass::open(char const*, unsigned char)
+                0x00000000000028f8       0x8c build/SD.o
+                0x00000000000028f8                SDLib::SDClass::open(char const*, unsigned char)
  .text._ZN5SDLib7SDClass6existsEPKc
-                0x000000000000259e       0x1e build/SD.o
-                0x000000000000259e                SDLib::SDClass::exists(char const*)
+                0x0000000000002984       0x1e build/SD.o
+                0x0000000000002984                SDLib::SDClass::exists(char const*)
  .text._ZN5SDLib7SDClass5mkdirEPKc
-                0x00000000000025bc       0x1e build/SD.o
-                0x00000000000025bc                SDLib::SDClass::mkdir(char const*)
+                0x00000000000029a2       0x1e build/SD.o
+                0x00000000000029a2                SDLib::SDClass::mkdir(char const*)
  .text._ZN5SDLib7SDClass5rmdirEPKc
-                0x00000000000025da       0x1e build/SD.o
-                0x00000000000025da                SDLib::SDClass::rmdir(char const*)
+                0x00000000000029c0       0x1e build/SD.o
+                0x00000000000029c0                SDLib::SDClass::rmdir(char const*)
  .text._ZN5SDLib7SDClass6removeEPKc
-                0x00000000000025f8       0x1e build/SD.o
-                0x00000000000025f8                SDLib::SDClass::remove(char const*)
+                0x00000000000029de       0x1e build/SD.o
+                0x00000000000029de                SDLib::SDClass::remove(char const*)
  .text._ZN5SDLib4File12openNextFileEh
-                0x0000000000002616       0x7c build/SD.o
-                0x0000000000002616                SDLib::File::openNextFile(unsigned char)
+                0x00000000000029fc       0x7c build/SD.o
+                0x00000000000029fc                SDLib::File::openNextFile(unsigned char)
  .text._ZN5SDLib4File15rewindDirectoryEv
-                0x0000000000002692       0x18 build/SD.o
-                0x0000000000002692                SDLib::File::rewindDirectory()
+                0x0000000000002a78       0x18 build/SD.o
+                0x0000000000002a78                SDLib::File::rewindDirectory()
  .text.startup._GLOBAL__sub_I__ZN5SDLib20getNextPathComponentEPKcPjPc
-                0x00000000000026aa       0x22 build/SD.o
+                0x0000000000002a90       0x22 build/SD.o
  .text._ZN6SdFile4readEv
-                0x00000000000026cc       0x22 build/File.o
-                0x00000000000026cc                SdFile::read()
+                0x0000000000002ab2       0x22 build/File.o
+                0x0000000000002ab2                SdFile::read()
  .text._ZN5SDLib4FileC2E6SdFilePKc
-                0x00000000000026ee       0x36 build/File.o
-                0x00000000000026ee                SDLib::File::File(SdFile, char const*)
-                0x00000000000026ee                SDLib::File::File(SdFile, char const*)
+                0x0000000000002ad4       0x36 build/File.o
+                0x0000000000002ad4                SDLib::File::File(SdFile, char const*)
+                0x0000000000002ad4                SDLib::File::File(SdFile, char const*)
  .text._ZN5SDLib4FileC2Ev
-                0x0000000000002724        0xa build/File.o
-                0x0000000000002724                SDLib::File::File()
-                0x0000000000002724                SDLib::File::File()
+                0x0000000000002b0a        0xa build/File.o
+                0x0000000000002b0a                SDLib::File::File()
+                0x0000000000002b0a                SDLib::File::File()
  .text._ZN5SDLib4File5writeEPKhj
-                0x000000000000272e       0x26 build/File.o
-                0x000000000000272e                SDLib::File::write(unsigned char const*, unsigned int)
+                0x0000000000002b14       0x26 build/File.o
+                0x0000000000002b14                SDLib::File::write(unsigned char const*, unsigned int)
  .text._ZN5SDLib4File5writeEh
-                0x0000000000002754       0x18 build/File.o
-                0x0000000000002754                SDLib::File::write(unsigned char)
+                0x0000000000002b3a       0x18 build/File.o
+                0x0000000000002b3a                SDLib::File::write(unsigned char)
  .text._ZN5SDLib4File17availableForWriteEv
-                0x000000000000276c       0x14 build/File.o
-                0x000000000000276c                SDLib::File::availableForWrite()
+                0x0000000000002b52       0x14 build/File.o
+                0x0000000000002b52                SDLib::File::availableForWrite()
  .text._ZN5SDLib4File4peekEv
-                0x0000000000002780       0x2a build/File.o
-                0x0000000000002780                SDLib::File::peek()
+                0x0000000000002b66       0x2a build/File.o
+                0x0000000000002b66                SDLib::File::peek()
  .text._ZN5SDLib4File5flushEv
-                0x00000000000027aa       0x14 build/File.o
-                0x00000000000027aa                SDLib::File::flush()
+                0x0000000000002b90       0x14 build/File.o
+                0x0000000000002b90                SDLib::File::flush()
  .text._ZN5SDLib4File4readEv
-                0x00000000000027be       0x14 build/File.o
-                0x00000000000027be                SDLib::File::read()
+                0x0000000000002ba4       0x14 build/File.o
+                0x0000000000002ba4                SDLib::File::read()
  .text._ZN5SDLib4File4readEPvt
-                0x00000000000027d2       0x14 build/File.o
-                0x00000000000027d2                SDLib::File::read(void*, unsigned short)
+                0x0000000000002bb8       0x14 build/File.o
+                0x0000000000002bb8                SDLib::File::read(void*, unsigned short)
  .text._ZN5SDLib4File4seekEm
-                0x00000000000027e6       0x18 build/File.o
-                0x00000000000027e6                SDLib::File::seek(unsigned long)
+                0x0000000000002bcc       0x18 build/File.o
+                0x0000000000002bcc                SDLib::File::seek(unsigned long)
  .text._ZN5SDLib4File8positionEv
-                0x00000000000027fe        0xc build/File.o
-                0x00000000000027fe                SDLib::File::position()
+                0x0000000000002be4        0xc build/File.o
+                0x0000000000002be4                SDLib::File::position()
  .text._ZN5SDLib4File4sizeEv
-                0x000000000000280a        0xc build/File.o
-                0x000000000000280a                SDLib::File::size()
+                0x0000000000002bf0        0xc build/File.o
+                0x0000000000002bf0                SDLib::File::size()
  .text._ZN5SDLib4File9availableEv
-                0x0000000000002816       0x2c build/File.o
-                0x0000000000002816                SDLib::File::available()
+                0x0000000000002bfc       0x2c build/File.o
+                0x0000000000002bfc                SDLib::File::available()
  .text._ZN5SDLib4File5closeEv
-                0x0000000000002842       0x1c build/File.o
-                0x0000000000002842                SDLib::File::close()
- .text._ZN5SDLib4FilecvbEv
-                0x000000000000285e       0x10 build/File.o
-                0x000000000000285e                SDLib::File::operator bool()
+                0x0000000000002c28       0x1c build/File.o
+                0x0000000000002c28                SDLib::File::close()
  .text._ZN5SDLib4File11isDirectoryEv
-                0x000000000000286e       0x14 build/File.o
-                0x000000000000286e                SDLib::File::isDirectory()
+                0x0000000000002c44       0x14 build/File.o
+                0x0000000000002c44                SDLib::File::isDirectory()
  .text.SystemInit
-                0x0000000000002882       0x42 build/system_ch32v30x.o
-                0x0000000000002882                SystemInit
+                0x0000000000002c58       0x42 build/system_ch32v30x.o
+                0x0000000000002c58                SystemInit
  .text.NMI_Handler
-                0x00000000000028c4        0x4 build/ch32v30x_it.o
-                0x00000000000028c4                NMI_Handler
+                0x0000000000002c9a        0x4 build/ch32v30x_it.o
+                0x0000000000002c9a                NMI_Handler
  .text.HardFault_Handler
-                0x00000000000028c8        0x2 build/ch32v30x_it.o
-                0x00000000000028c8                HardFault_Handler
+                0x0000000000002c9e        0x2 build/ch32v30x_it.o
+                0x0000000000002c9e                HardFault_Handler
  .text.Delay_Init
-                0x00000000000028ca       0x34 build/debug.o
-                0x00000000000028ca                Delay_Init
+                0x0000000000002ca0       0x34 build/debug.o
+                0x0000000000002ca0                Delay_Init
  .text.Delay_Ms
-                0x00000000000028fe       0x42 build/debug.o
-                0x00000000000028fe                Delay_Ms
+                0x0000000000002cd4       0x42 build/debug.o
+                0x0000000000002cd4                Delay_Ms
  .text.USART_Printf_Init
-                0x0000000000002940       0x52 build/debug.o
-                0x0000000000002940                USART_Printf_Init
- .text._write   0x0000000000002992       0x4c build/debug.o
-                0x0000000000002992                _write
- .text._sbrk    0x00000000000029de       0x2a build/debug.o
-                0x00000000000029de                _sbrk
+                0x0000000000002d16       0x52 build/debug.o
+                0x0000000000002d16                USART_Printf_Init
+ .text._write   0x0000000000002d68       0x4c build/debug.o
+                0x0000000000002d68                _write
+ .text._sbrk    0x0000000000002db4       0x2a build/debug.o
+                0x0000000000002db4                _sbrk
  .text.SPI1_Master_Init
-                0x0000000000002a08      0x10e build/spi.o
-                0x0000000000002a08                SPI1_Master_Init
+                0x0000000000002dde      0x10e build/spi.o
+                0x0000000000002dde                SPI1_Master_Init
  .text.SPI1_SendData
-                0x0000000000002b16        0x8 build/spi.o
-                0x0000000000002b16                SPI1_SendData
+                0x0000000000002eec        0x8 build/spi.o
+                0x0000000000002eec                SPI1_SendData
  .text.SPI1_ReceiveData
-                0x0000000000002b1e        0x8 build/spi.o
-                0x0000000000002b1e                SPI1_ReceiveData
+                0x0000000000002ef4        0x8 build/spi.o
+                0x0000000000002ef4                SPI1_ReceiveData
  .text.SPI1_GetFlagStatus
-                0x0000000000002b26        0xe build/spi.o
-                0x0000000000002b26                SPI1_GetFlagStatus
+                0x0000000000002efc        0xe build/spi.o
+                0x0000000000002efc                SPI1_GetFlagStatus
  .text.RCC_GetClocksFreq
-                0x0000000000002b34      0x112 build/ch32v30x_rcc.o
-                0x0000000000002b34                RCC_GetClocksFreq
+                0x0000000000002f0a      0x112 build/ch32v30x_rcc.o
+                0x0000000000002f0a                RCC_GetClocksFreq
  .text.RCC_APB2PeriphClockCmd
-                0x0000000000002c46       0x1e build/ch32v30x_rcc.o
-                0x0000000000002c46                RCC_APB2PeriphClockCmd
+                0x000000000000301c       0x1e build/ch32v30x_rcc.o
+                0x000000000000301c                RCC_APB2PeriphClockCmd
  .text.USART_Init
-                0x0000000000002c64       0xce build/ch32v30x_usart.o
-                0x0000000000002c64                USART_Init
+                0x000000000000303a       0xce build/ch32v30x_usart.o
+                0x000000000000303a                USART_Init
  .text.USART_Cmd
-                0x0000000000002d32       0x16 build/ch32v30x_usart.o
-                0x0000000000002d32                USART_Cmd
+                0x0000000000003108       0x16 build/ch32v30x_usart.o
+                0x0000000000003108                USART_Cmd
  .text.USART_SendData
-                0x0000000000002d48        0x8 build/ch32v30x_usart.o
-                0x0000000000002d48                USART_SendData
+                0x000000000000311e        0x8 build/ch32v30x_usart.o
+                0x000000000000311e                USART_SendData
  .text.USART_GetFlagStatus
-                0x0000000000002d50        0xa build/ch32v30x_usart.o
-                0x0000000000002d50                USART_GetFlagStatus
+                0x0000000000003126        0xa build/ch32v30x_usart.o
+                0x0000000000003126                USART_GetFlagStatus
  .text.GPIO_Init
-                0x0000000000002d5a       0xd6 build/ch32v30x_gpio.o
-                0x0000000000002d5a                GPIO_Init
+                0x0000000000003130       0xd6 build/ch32v30x_gpio.o
+                0x0000000000003130                GPIO_Init
  .text.GPIO_SetBits
-                0x0000000000002e30        0x4 build/ch32v30x_gpio.o
-                0x0000000000002e30                GPIO_SetBits
+                0x0000000000003206        0x4 build/ch32v30x_gpio.o
+                0x0000000000003206                GPIO_SetBits
  .text.SPI_Init
-                0x0000000000002e34       0x3e build/ch32v30x_spi.o
-                0x0000000000002e34                SPI_Init
- .text.SPI_Cmd  0x0000000000002e72       0x1a build/ch32v30x_spi.o
-                0x0000000000002e72                SPI_Cmd
+                0x000000000000320a       0x3e build/ch32v30x_spi.o
+                0x000000000000320a                SPI_Init
+ .text.SPI_Cmd  0x0000000000003248       0x1a build/ch32v30x_spi.o
+                0x0000000000003248                SPI_Cmd
  .text.vector_handler
-                0x0000000000002e8c       0xaa build/startup_ch32v30x_D8.o
-                0x0000000000002e90                Ecall_M_Mode_Handler
-                0x0000000000002e92                Ecall_U_Mode_Handler
-                0x0000000000002e94                Break_Point_Handler
-                0x0000000000002e96                SysTick_Handler
-                0x0000000000002e98                SW_Handler
-                0x0000000000002e9a                WWDG_IRQHandler
-                0x0000000000002e9c                PVD_IRQHandler
-                0x0000000000002e9e                TAMPER_IRQHandler
-                0x0000000000002ea0                RTC_IRQHandler
-                0x0000000000002ea2                FLASH_IRQHandler
-                0x0000000000002ea4                RCC_IRQHandler
-                0x0000000000002ea6                EXTI0_IRQHandler
-                0x0000000000002ea8                EXTI1_IRQHandler
-                0x0000000000002eaa                EXTI2_IRQHandler
-                0x0000000000002eac                EXTI3_IRQHandler
-                0x0000000000002eae                EXTI4_IRQHandler
-                0x0000000000002eb0                DMA1_Channel1_IRQHandler
-                0x0000000000002eb2                DMA1_Channel2_IRQHandler
-                0x0000000000002eb4                DMA1_Channel3_IRQHandler
-                0x0000000000002eb6                DMA1_Channel4_IRQHandler
-                0x0000000000002eb8                DMA1_Channel5_IRQHandler
-                0x0000000000002eba                DMA1_Channel6_IRQHandler
-                0x0000000000002ebc                DMA1_Channel7_IRQHandler
-                0x0000000000002ebe                ADC1_2_IRQHandler
-                0x0000000000002ec0                USB_HP_CAN1_TX_IRQHandler
-                0x0000000000002ec2                USB_LP_CAN1_RX0_IRQHandler
-                0x0000000000002ec4                CAN1_RX1_IRQHandler
-                0x0000000000002ec6                CAN1_SCE_IRQHandler
-                0x0000000000002ec8                EXTI9_5_IRQHandler
-                0x0000000000002eca                TIM1_BRK_IRQHandler
-                0x0000000000002ecc                TIM1_UP_IRQHandler
-                0x0000000000002ece                TIM1_TRG_COM_IRQHandler
-                0x0000000000002ed0                TIM1_CC_IRQHandler
-                0x0000000000002ed2                TIM2_IRQHandler
-                0x0000000000002ed4                TIM3_IRQHandler
-                0x0000000000002ed6                TIM4_IRQHandler
-                0x0000000000002ed8                I2C1_EV_IRQHandler
-                0x0000000000002eda                I2C1_ER_IRQHandler
-                0x0000000000002edc                I2C2_EV_IRQHandler
-                0x0000000000002ede                I2C2_ER_IRQHandler
-                0x0000000000002ee0                SPI1_IRQHandler
-                0x0000000000002ee2                SPI2_IRQHandler
-                0x0000000000002ee4                USART1_IRQHandler
-                0x0000000000002ee6                USART2_IRQHandler
-                0x0000000000002ee8                USART3_IRQHandler
-                0x0000000000002eea                EXTI15_10_IRQHandler
-                0x0000000000002eec                RTCAlarm_IRQHandler
-                0x0000000000002eee                TIM8_BRK_IRQHandler
-                0x0000000000002ef0                TIM8_UP_IRQHandler
-                0x0000000000002ef2                TIM8_TRG_COM_IRQHandler
-                0x0000000000002ef4                TIM8_CC_IRQHandler
-                0x0000000000002ef6                RNG_IRQHandler
-                0x0000000000002ef8                FSMC_IRQHandler
-                0x0000000000002efa                SDIO_IRQHandler
-                0x0000000000002efc                TIM5_IRQHandler
-                0x0000000000002efe                SPI3_IRQHandler
-                0x0000000000002f00                UART4_IRQHandler
-                0x0000000000002f02                UART5_IRQHandler
-                0x0000000000002f04                TIM6_IRQHandler
-                0x0000000000002f06                TIM7_IRQHandler
-                0x0000000000002f08                DMA2_Channel1_IRQHandler
-                0x0000000000002f0a                DMA2_Channel2_IRQHandler
-                0x0000000000002f0c                DMA2_Channel3_IRQHandler
-                0x0000000000002f0e                DMA2_Channel4_IRQHandler
-                0x0000000000002f10                DMA2_Channel5_IRQHandler
-                0x0000000000002f12                OTG_FS_IRQHandler
-                0x0000000000002f14                UART6_IRQHandler
-                0x0000000000002f16                UART7_IRQHandler
-                0x0000000000002f18                UART8_IRQHandler
-                0x0000000000002f1a                TIM9_BRK_IRQHandler
-                0x0000000000002f1c                TIM9_UP_IRQHandler
-                0x0000000000002f1e                TIM9_TRG_COM_IRQHandler
-                0x0000000000002f20                TIM9_CC_IRQHandler
-                0x0000000000002f22                TIM10_BRK_IRQHandler
-                0x0000000000002f24                TIM10_UP_IRQHandler
-                0x0000000000002f26                TIM10_TRG_COM_IRQHandler
-                0x0000000000002f28                TIM10_CC_IRQHandler
-                0x0000000000002f2a                DMA2_Channel6_IRQHandler
-                0x0000000000002f2c                DMA2_Channel7_IRQHandler
-                0x0000000000002f2e                DMA2_Channel8_IRQHandler
-                0x0000000000002f30                DMA2_Channel9_IRQHandler
-                0x0000000000002f32                DMA2_Channel10_IRQHandler
-                0x0000000000002f34                DMA2_Channel11_IRQHandler
+                0x0000000000003262       0xaa build/startup_ch32v30x_D8.o
+                0x0000000000003266                Ecall_M_Mode_Handler
+                0x0000000000003268                Ecall_U_Mode_Handler
+                0x000000000000326a                Break_Point_Handler
+                0x000000000000326c                SysTick_Handler
+                0x000000000000326e                SW_Handler
+                0x0000000000003270                WWDG_IRQHandler
+                0x0000000000003272                PVD_IRQHandler
+                0x0000000000003274                TAMPER_IRQHandler
+                0x0000000000003276                RTC_IRQHandler
+                0x0000000000003278                FLASH_IRQHandler
+                0x000000000000327a                RCC_IRQHandler
+                0x000000000000327c                EXTI0_IRQHandler
+                0x000000000000327e                EXTI1_IRQHandler
+                0x0000000000003280                EXTI2_IRQHandler
+                0x0000000000003282                EXTI3_IRQHandler
+                0x0000000000003284                EXTI4_IRQHandler
+                0x0000000000003286                DMA1_Channel1_IRQHandler
+                0x0000000000003288                DMA1_Channel2_IRQHandler
+                0x000000000000328a                DMA1_Channel3_IRQHandler
+                0x000000000000328c                DMA1_Channel4_IRQHandler
+                0x000000000000328e                DMA1_Channel5_IRQHandler
+                0x0000000000003290                DMA1_Channel6_IRQHandler
+                0x0000000000003292                DMA1_Channel7_IRQHandler
+                0x0000000000003294                ADC1_2_IRQHandler
+                0x0000000000003296                USB_HP_CAN1_TX_IRQHandler
+                0x0000000000003298                USB_LP_CAN1_RX0_IRQHandler
+                0x000000000000329a                CAN1_RX1_IRQHandler
+                0x000000000000329c                CAN1_SCE_IRQHandler
+                0x000000000000329e                EXTI9_5_IRQHandler
+                0x00000000000032a0                TIM1_BRK_IRQHandler
+                0x00000000000032a2                TIM1_UP_IRQHandler
+                0x00000000000032a4                TIM1_TRG_COM_IRQHandler
+                0x00000000000032a6                TIM1_CC_IRQHandler
+                0x00000000000032a8                TIM2_IRQHandler
+                0x00000000000032aa                TIM3_IRQHandler
+                0x00000000000032ac                TIM4_IRQHandler
+                0x00000000000032ae                I2C1_EV_IRQHandler
+                0x00000000000032b0                I2C1_ER_IRQHandler
+                0x00000000000032b2                I2C2_EV_IRQHandler
+                0x00000000000032b4                I2C2_ER_IRQHandler
+                0x00000000000032b6                SPI1_IRQHandler
+                0x00000000000032b8                SPI2_IRQHandler
+                0x00000000000032ba                USART1_IRQHandler
+                0x00000000000032bc                USART2_IRQHandler
+                0x00000000000032be                USART3_IRQHandler
+                0x00000000000032c0                EXTI15_10_IRQHandler
+                0x00000000000032c2                RTCAlarm_IRQHandler
+                0x00000000000032c4                TIM8_BRK_IRQHandler
+                0x00000000000032c6                TIM8_UP_IRQHandler
+                0x00000000000032c8                TIM8_TRG_COM_IRQHandler
+                0x00000000000032ca                TIM8_CC_IRQHandler
+                0x00000000000032cc                RNG_IRQHandler
+                0x00000000000032ce                FSMC_IRQHandler
+                0x00000000000032d0                SDIO_IRQHandler
+                0x00000000000032d2                TIM5_IRQHandler
+                0x00000000000032d4                SPI3_IRQHandler
+                0x00000000000032d6                UART4_IRQHandler
+                0x00000000000032d8                UART5_IRQHandler
+                0x00000000000032da                TIM6_IRQHandler
+                0x00000000000032dc                TIM7_IRQHandler
+                0x00000000000032de                DMA2_Channel1_IRQHandler
+                0x00000000000032e0                DMA2_Channel2_IRQHandler
+                0x00000000000032e2                DMA2_Channel3_IRQHandler
+                0x00000000000032e4                DMA2_Channel4_IRQHandler
+                0x00000000000032e6                DMA2_Channel5_IRQHandler
+                0x00000000000032e8                OTG_FS_IRQHandler
+                0x00000000000032ea                UART6_IRQHandler
+                0x00000000000032ec                UART7_IRQHandler
+                0x00000000000032ee                UART8_IRQHandler
+                0x00000000000032f0                TIM9_BRK_IRQHandler
+                0x00000000000032f2                TIM9_UP_IRQHandler
+                0x00000000000032f4                TIM9_TRG_COM_IRQHandler
+                0x00000000000032f6                TIM9_CC_IRQHandler
+                0x00000000000032f8                TIM10_BRK_IRQHandler
+                0x00000000000032fa                TIM10_UP_IRQHandler
+                0x00000000000032fc                TIM10_TRG_COM_IRQHandler
+                0x00000000000032fe                TIM10_CC_IRQHandler
+                0x0000000000003300                DMA2_Channel6_IRQHandler
+                0x0000000000003302                DMA2_Channel7_IRQHandler
+                0x0000000000003304                DMA2_Channel8_IRQHandler
+                0x0000000000003306                DMA2_Channel9_IRQHandler
+                0x0000000000003308                DMA2_Channel10_IRQHandler
+                0x000000000000330a                DMA2_Channel11_IRQHandler
  .text.handle_reset
-                0x0000000000002f36       0x8a build/startup_ch32v30x_D8.o
-                0x0000000000002f36                handle_reset
- .text.malloc   0x0000000000002fc0        0xe e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-malloc.o)
-                0x0000000000002fc0                malloc
- .text.free     0x0000000000002fce        0xe e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-malloc.o)
-                0x0000000000002fce                free
- .text.memcmp   0x0000000000002fdc       0x24 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcmp.o)
-                0x0000000000002fdc                memcmp
- .text.memcpy   0x0000000000003000       0xd2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
-                0x0000000000003000                memcpy
- .text._free_r  0x00000000000030d2       0xb0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
-                0x00000000000030d2                _free_r
+                0x000000000000330c       0x8a build/startup_ch32v30x_D8.o
+                0x000000000000330c                handle_reset
+ .text.malloc   0x0000000000003396        0xe e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-malloc.o)
+                0x0000000000003396                malloc
+ .text.free     0x00000000000033a4        0xe e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-malloc.o)
+                0x00000000000033a4                free
+ .text.memcmp   0x00000000000033b2       0x24 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcmp.o)
+                0x00000000000033b2                memcmp
+ .text.memcpy   0x00000000000033d6       0xd2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+                0x00000000000033d6                memcpy
+ .text._free_r  0x00000000000034a8       0xb0 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-freer.o)
+                0x00000000000034a8                _free_r
  .text._malloc_r
-                0x0000000000003182       0xda e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
-                0x0000000000003182                _malloc_r
- .text.printf   0x000000000000325c       0x44 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
-                0x000000000000325c                iprintf
-                0x000000000000325c                printf
- .text.putchar  0x00000000000032a0       0x2e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-putchar.o)
-                0x00000000000032a0                putchar
- .text._puts_r  0x00000000000032ce       0xca e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
-                0x00000000000032ce                _puts_r
- .text.puts     0x0000000000003398       0x10 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
-                0x0000000000003398                puts
- .text._sbrk_r  0x00000000000033a8       0x2a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
-                0x00000000000033a8                _sbrk_r
- .text.strchr   0x00000000000033d2       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strchr.o)
-                0x00000000000033d2                strchr
- .text.strlen   0x00000000000033ea       0x12 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
-                0x00000000000033ea                strlen
- .text.strncpy  0x00000000000033fc       0x24 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strncpy.o)
-                0x00000000000033fc                strncpy
+                0x0000000000003558       0xda e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000003558                _malloc_r
+ .text.printf   0x0000000000003632       0x44 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-printf.o)
+                0x0000000000003632                iprintf
+                0x0000000000003632                printf
+ .text.putchar  0x0000000000003676       0x2e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-putchar.o)
+                0x0000000000003676                putchar
+ .text._puts_r  0x00000000000036a4       0xca e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+                0x00000000000036a4                _puts_r
+ .text.puts     0x000000000000376e       0x10 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-puts.o)
+                0x000000000000376e                puts
+ .text._sbrk_r  0x000000000000377e       0x2a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-sbrkr.o)
+                0x000000000000377e                _sbrk_r
+ .text.strchr   0x00000000000037a8       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strchr.o)
+                0x00000000000037a8                strchr
+ .text.strlen   0x00000000000037c0       0x12 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+                0x00000000000037c0                strlen
+ .text.strncpy  0x00000000000037d2       0x24 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strncpy.o)
+                0x00000000000037d2                strncpy
  .text.__swbuf_r
-                0x0000000000003420       0xc2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
-                0x0000000000003420                __swbuf_r
+                0x00000000000037f6       0xc2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wbuf.o)
+                0x00000000000037f6                __swbuf_r
  .text.__swsetup_r
-                0x00000000000034e2      0x104 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o)
-                0x00000000000034e2                __swsetup_r
+                0x00000000000038b8      0x104 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-wsetup.o)
+                0x00000000000038b8                __swsetup_r
  .text.__sflush_r
-                0x00000000000035e6      0x12a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
-                0x00000000000035e6                __sflush_r
+                0x00000000000039bc      0x12a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+                0x00000000000039bc                __sflush_r
  .text._fflush_r
-                0x0000000000003710       0x66 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
-                0x0000000000003710                _fflush_r
- .text.std      0x0000000000003776       0x66 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000003ae6       0x66 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fflush.o)
+                0x0000000000003ae6                _fflush_r
+ .text.std      0x0000000000003b4c       0x66 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x00000000000037dc        0xa e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
-                0x00000000000037dc                _cleanup_r
+                0x0000000000003bb2        0xa e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000003bb2                _cleanup_r
  .text.__sfmoreglue
-                0x00000000000037e6       0x4a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
-                0x00000000000037e6                __sfmoreglue
- .text.__sinit  0x0000000000003830       0x70 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
-                0x0000000000003830                __sinit
- .text.__sfp    0x00000000000038a0       0xa2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
-                0x00000000000038a0                __sfp
+                0x0000000000003bbc       0x4a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000003bbc                __sfmoreglue
+ .text.__sinit  0x0000000000003c06       0x70 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000003c06                __sinit
+ .text.__sfp    0x0000000000003c76       0xa2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000003c76                __sfp
  .text._fwalk_reent
-                0x0000000000003942       0x5e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
-                0x0000000000003942                _fwalk_reent
+                0x0000000000003d18       0x5e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fwalk.o)
+                0x0000000000003d18                _fwalk_reent
  .text.__swhatbuf_r
-                0x00000000000039a0       0x62 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
-                0x00000000000039a0                __swhatbuf_r
+                0x0000000000003d76       0x62 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+                0x0000000000003d76                __swhatbuf_r
  .text.__smakebuf_r
-                0x0000000000003a02       0x90 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
-                0x0000000000003a02                __smakebuf_r
+                0x0000000000003dd8       0x90 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-makebuf.o)
+                0x0000000000003dd8                __smakebuf_r
  .text.__malloc_lock
-                0x0000000000003a92        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
-                0x0000000000003a92                __malloc_lock
+                0x0000000000003e68        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+                0x0000000000003e68                __malloc_lock
  .text.__malloc_unlock
-                0x0000000000003a94        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
-                0x0000000000003a94                __malloc_unlock
+                0x0000000000003e6a        0x2 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-mlock.o)
+                0x0000000000003e6a                __malloc_unlock
  .text.__sfputc_r
-                0x0000000000003a96       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000003e6c       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x0000000000003abe       0x3e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000000003abe                __sfputs_r
+                0x0000000000003e94       0x3e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000003e94                __sfputs_r
  .text._vfprintf_r
-                0x0000000000003afc      0x2aa e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000000003afc                _vfprintf_r
-                0x0000000000003afc                _vfiprintf_r
+                0x0000000000003ed2      0x2aa e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000003ed2                _vfprintf_r
+                0x0000000000003ed2                _vfiprintf_r
  .text._printf_common
-                0x0000000000003da6      0x12c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000000003da6                _printf_common
+                0x000000000000417c      0x12c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000000417c                _printf_common
  .text._printf_i
-                0x0000000000003ed2      0x2ba e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000000003ed2                _printf_i
- .text._putc_r  0x000000000000418c       0x84 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-putc.o)
-                0x000000000000418c                _putc_r
- .text.__sread  0x0000000000004210       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
-                0x0000000000004210                __sread
+                0x00000000000042a8      0x2ba e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000000042a8                _printf_i
+ .text._putc_r  0x0000000000004562       0x84 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-putc.o)
+                0x0000000000004562                _putc_r
+ .text.__sread  0x00000000000045e6       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                0x00000000000045e6                __sread
  .text.__swrite
-                0x000000000000423c       0x48 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
-                0x000000000000423c                __swrite
- .text.__sseek  0x0000000000004284       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
-                0x0000000000004284                __sseek
+                0x0000000000004612       0x48 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                0x0000000000004612                __swrite
+ .text.__sseek  0x000000000000465a       0x30 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                0x000000000000465a                __sseek
  .text.__sclose
-                0x00000000000042b4        0x6 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
-                0x00000000000042b4                __sclose
+                0x000000000000468a        0x6 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-stdio.o)
+                0x000000000000468a                __sclose
  .text._write_r
-                0x00000000000042ba       0x2e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-writer.o)
-                0x00000000000042ba                _write_r
+                0x0000000000004690       0x2e e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-writer.o)
+                0x0000000000004690                _write_r
  .text._close_r
-                0x00000000000042e8       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o)
-                0x00000000000042e8                _close_r
+                0x00000000000046be       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-closer.o)
+                0x00000000000046be                _close_r
  .text._fstat_r
-                0x0000000000004310       0x2a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o)
-                0x0000000000004310                _fstat_r
+                0x00000000000046e6       0x2a e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-fstatr.o)
+                0x00000000000046e6                _fstat_r
  .text._isatty_r
-                0x000000000000433a       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o)
-                0x000000000000433a                _isatty_r
+                0x0000000000004710       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-isattyr.o)
+                0x0000000000004710                _isatty_r
  .text._lseek_r
-                0x0000000000004362       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o)
-                0x0000000000004362                _lseek_r
- .text.memchr   0x000000000000438e       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memchr.o)
-                0x000000000000438e                memchr
- .text._read_r  0x00000000000043a6       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o)
-                0x00000000000043a6                _read_r
- .text._close   0x00000000000043d2        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
-                0x00000000000043d2                _close
- .text._fstat   0x00000000000043de        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
-                0x00000000000043de                _fstat
- .text._isatty  0x00000000000043ea        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
-                0x00000000000043ea                _isatty
- .text._lseek   0x00000000000043f6        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
-                0x00000000000043f6                _lseek
- .text._read    0x0000000000004402        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
-                0x0000000000004402                _read
+                0x0000000000004738       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-lseekr.o)
+                0x0000000000004738                _lseek_r
+ .text.memchr   0x0000000000004764       0x18 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memchr.o)
+                0x0000000000004764                memchr
+ .text._read_r  0x000000000000477c       0x2c e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-readr.o)
+                0x000000000000477c                _read_r
+ .text._close   0x00000000000047a8        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(close.o)
+                0x00000000000047a8                _close
+ .text._fstat   0x00000000000047b4        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(fstat.o)
+                0x00000000000047b4                _fstat
+ .text._isatty  0x00000000000047c0        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(isatty.o)
+                0x00000000000047c0                _isatty
+ .text._lseek   0x00000000000047cc        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(lseek.o)
+                0x00000000000047cc                _lseek
+ .text._read    0x00000000000047d8        0xc e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a(read.o)
+                0x00000000000047d8                _read
  *(.rodata)
  *(.rodata*)
- *fill*         0x000000000000440e        0x2 
+ *fill*         0x00000000000047e4        0x0 
  .rodata.main.str1.4
-                0x0000000000004410       0xbb build/main.o
-                                         0xbf (size before relaxing)
- *fill*         0x00000000000044cb        0x1 
+                0x00000000000047e4       0x5d build/main.o
+ *fill*         0x0000000000004841        0x3 
  .rodata._ZN7Sd2Card10writeBlockEmPKhh.str1.4
-                0x00000000000044cc      0x108 build/Sd2Card.o
+                0x0000000000004844      0x108 build/Sd2Card.o
  .rodata._ZN7Sd2Card9writeDataEPKh.str1.4
-                0x00000000000045d4       0x4c build/Sd2Card.o
+                0x000000000000494c       0x4c build/Sd2Card.o
  .rodata._ZN7Sd2Card9writeDataEhPKh.str1.4
-                0x0000000000004620       0x5c build/Sd2Card.o
+                0x0000000000004998       0x5c build/Sd2Card.o
  .rodata._ZN8SdVolume10cacheFlushEh.str1.4
-                0x000000000000467c       0x68 build/SdVolume.o
+                0x00000000000049f4       0x68 build/SdVolume.o
  .rodata._ZN6SdFile10make83NameEPKcPh.str1.4
-                0x00000000000046e4       0x10 build/SdFile.o
+                0x0000000000004a5c       0x10 build/SdFile.o
  .rodata._ZN6SdFile12printFatDateEt.str1.4
-                0x00000000000046f4        0x3 build/SdFile.o
- *fill*         0x00000000000046f7        0x1 
+                0x0000000000004a6c        0x3 build/SdFile.o
+ *fill*         0x0000000000004a6f        0x1 
  .rodata._ZN6SdFile2lsEhh.str1.4
-                0x00000000000046f8       0x29 build/SdFile.o
+                0x0000000000004a70       0x29 build/SdFile.o
                                          0x2e (size before relaxing)
- *fill*         0x0000000000004721        0x3 
+ *fill*         0x0000000000004a99        0x3 
  .rodata._ZN6SdFile5closeEv.str1.4
-                0x0000000000004724       0x2b build/SdFile.o
- *fill*         0x000000000000474f        0x1 
+                0x0000000000004a9c       0x2b build/SdFile.o
+ *fill*         0x0000000000004ac7        0x1 
  .rodata._ZN6SdFile5writeEPKvt.str1.4
-                0x0000000000004750      0x140 build/SdFile.o
+                0x0000000000004ac8      0x140 build/SdFile.o
  .rodata._ZN5SDLib7SDClass4openEPKch.str1.4
-                0x0000000000004890        0x2 build/SD.o
- *fill*         0x0000000000004892        0x2 
+                0x0000000000004c08        0x2 build/SD.o
+ *fill*         0x0000000000004c0a        0x2 
  .rodata._ZN5SDLib4File5writeEPKhj.str1.4
-                0x0000000000004894       0x1a build/File.o
- *fill*         0x00000000000048ae        0x2 
+                0x0000000000004c0c       0x1a build/File.o
+ *fill*         0x0000000000004c26        0x2 
  .rodata.__sf_fake_stderr
-                0x00000000000048b0       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
-                0x00000000000048b0                __sf_fake_stderr
+                0x0000000000004c28       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000004c28                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x00000000000048d0       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
-                0x00000000000048d0                __sf_fake_stdin
+                0x0000000000004c48       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000004c48                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x00000000000048f0       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
-                0x00000000000048f0                __sf_fake_stdout
+                0x0000000000004c68       0x20 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-findfp.o)
+                0x0000000000004c68                __sf_fake_stdout
  .rodata._vfprintf_r.str1.4
-                0x0000000000004910       0x13 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
- *fill*         0x0000000000004923        0x1 
+                0x0000000000004c88       0x13 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf.o)
+ *fill*         0x0000000000004c9b        0x1 
  .rodata._printf_i.str1.4
-                0x0000000000004924       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000004c9c       0x28 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-nano-vfprintf_i.o)
                                          0x25 (size before relaxing)
  *(.gnu.linkonce.t.*)
-                0x000000000000494c                . = ALIGN (0x4)
+                0x0000000000004cc4                . = ALIGN (0x4)
 
-.rela.dyn       0x000000000000494c        0x0
+.rela.dyn       0x0000000000004cc4        0x0
  .rela.text._ZN5SDLib4File4peekEv
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._ZN5SDLib4File4readEv
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._sbrk
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.data.curbrk.5174
-                0x000000000000494c        0x0 build/main.o
- .rela.init     0x000000000000494c        0x0 build/main.o
- .rela.vector   0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
+ .rela.init     0x0000000000004cc4        0x0 build/main.o
+ .rela.vector   0x0000000000004cc4        0x0 build/main.o
  .rela.text.handle_reset
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._sbrk_r
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._vfprintf_r
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._write_r
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._close_r
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._fstat_r
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._isatty_r
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._lseek_r
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._read_r
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._close
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._fstat
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._isatty
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._lseek
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
  .rela.text._read
-                0x000000000000494c        0x0 build/main.o
+                0x0000000000004cc4        0x0 build/main.o
 
-.fini           0x000000000000494c        0x0
+.fini           0x0000000000004cc4        0x0
  *(SORT_NONE(.fini))
-                0x000000000000494c                . = ALIGN (0x4)
+                0x0000000000004cc4                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (_eitcm = .)
 
-.preinit_array  0x000000000000494c        0x0
+.preinit_array  0x0000000000004cc4        0x0
                 [!provide]                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000000000000494c        0x4
+.init_array     0x0000000000004cc4        0x4
                 [!provide]                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
- .init_array    0x000000000000494c        0x4 build/SD.o
+ .init_array    0x0000000000004cc4        0x4 build/SD.o
                 [!provide]                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000000004950        0x0
+.fini_array     0x0000000000004cc8        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -1420,15 +1459,15 @@ END GROUP
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.dalign         0x0000000020000000        0x0 load address 0x0000000000004950
+.dalign         0x0000000020000000        0x0 load address 0x0000000000004cc8
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data_vma = .)
 
-.dlalign        0x0000000000004950        0x0
-                0x0000000000004950                . = ALIGN (0x4)
-                0x0000000000004950                PROVIDE (_data_lma = .)
+.dlalign        0x0000000000004cc8        0x0
+                0x0000000000004cc8                . = ALIGN (0x4)
+                0x0000000000004cc8                PROVIDE (_data_lma = .)
 
-.data           0x0000000020000000       0x88 load address 0x0000000000004950
+.data           0x0000000020000000       0x88 load address 0x0000000000004cc8
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
  .data._ZN8SdVolume17cacheBlockNumber_E
@@ -1466,7 +1505,7 @@ END GROUP
                 0x0000000020000088                . = ALIGN (0x4)
                 0x0000000020000088                PROVIDE (_edata = .)
 
-.bss            0x0000000020000088      0x27c load address 0x00000000000049d8
+.bss            0x0000000020000088      0x27c load address 0x0000000000004d50
                 0x0000000020000088                . = ALIGN (0x4)
                 0x0000000020000088                PROVIDE (_sbss = .)
  *(.sbss*)
@@ -1518,152 +1557,152 @@ END GROUP
                 0x0000000020008000                PROVIDE (_eusrstack = .)
 OUTPUT(build/firmware.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000    0x20fe5
- .debug_info    0x0000000000000000     0x542b build/main.o
- .debug_info    0x000000000000542b     0x2e54 build/Sd2Card.o
- .debug_info    0x000000000000827f     0x2c7d build/SdVolume.o
- .debug_info    0x000000000000aefc     0x5a92 build/SdFile.o
- .debug_info    0x000000000001098e     0x4770 build/SD.o
- .debug_info    0x00000000000150fe     0x3f90 build/File.o
- .debug_info    0x000000000001908e      0xb0f build/system_ch32v30x.o
- .debug_info    0x0000000000019b9d      0x962 build/ch32v30x_it.o
- .debug_info    0x000000000001a4ff      0xf26 build/debug.o
- .debug_info    0x000000000001b425      0xebf build/spi.o
- .debug_info    0x000000000001c2e4     0x155f build/ch32v30x_rcc.o
- .debug_info    0x000000000001d843     0x1420 build/ch32v30x_usart.o
- .debug_info    0x000000000001ec63     0x1093 build/ch32v30x_gpio.o
- .debug_info    0x000000000001fcf6     0x12cd build/ch32v30x_spi.o
- .debug_info    0x0000000000020fc3       0x22 build/startup_ch32v30x_D8.o
+.debug_info     0x0000000000000000    0x1fe22
+ .debug_info    0x0000000000000000     0x4268 build/main.o
+ .debug_info    0x0000000000004268     0x2e54 build/Sd2Card.o
+ .debug_info    0x00000000000070bc     0x2c7d build/SdVolume.o
+ .debug_info    0x0000000000009d39     0x5a92 build/SdFile.o
+ .debug_info    0x000000000000f7cb     0x4770 build/SD.o
+ .debug_info    0x0000000000013f3b     0x3f90 build/File.o
+ .debug_info    0x0000000000017ecb      0xb0f build/system_ch32v30x.o
+ .debug_info    0x00000000000189da      0x962 build/ch32v30x_it.o
+ .debug_info    0x000000000001933c      0xf26 build/debug.o
+ .debug_info    0x000000000001a262      0xebf build/spi.o
+ .debug_info    0x000000000001b121     0x155f build/ch32v30x_rcc.o
+ .debug_info    0x000000000001c680     0x1420 build/ch32v30x_usart.o
+ .debug_info    0x000000000001daa0     0x1093 build/ch32v30x_gpio.o
+ .debug_info    0x000000000001eb33     0x12cd build/ch32v30x_spi.o
+ .debug_info    0x000000000001fe00       0x22 build/startup_ch32v30x_D8.o
 
-.debug_abbrev   0x0000000000000000     0x462a
- .debug_abbrev  0x0000000000000000      0x8a3 build/main.o
- .debug_abbrev  0x00000000000008a3      0x64e build/Sd2Card.o
- .debug_abbrev  0x0000000000000ef1      0x687 build/SdVolume.o
- .debug_abbrev  0x0000000000001578      0x9da build/SdFile.o
- .debug_abbrev  0x0000000000001f52      0x872 build/SD.o
- .debug_abbrev  0x00000000000027c4      0x76d build/File.o
- .debug_abbrev  0x0000000000002f31      0x27d build/system_ch32v30x.o
- .debug_abbrev  0x00000000000031ae      0x1cf build/ch32v30x_it.o
- .debug_abbrev  0x000000000000337d      0x304 build/debug.o
- .debug_abbrev  0x0000000000003681      0x2c5 build/spi.o
- .debug_abbrev  0x0000000000003946      0x36d build/ch32v30x_rcc.o
- .debug_abbrev  0x0000000000003cb3      0x32e build/ch32v30x_usart.o
- .debug_abbrev  0x0000000000003fe1      0x309 build/ch32v30x_gpio.o
- .debug_abbrev  0x00000000000042ea      0x32e build/ch32v30x_spi.o
- .debug_abbrev  0x0000000000004618       0x12 build/startup_ch32v30x_D8.o
+.debug_abbrev   0x0000000000000000     0x444d
+ .debug_abbrev  0x0000000000000000      0x6c6 build/main.o
+ .debug_abbrev  0x00000000000006c6      0x64e build/Sd2Card.o
+ .debug_abbrev  0x0000000000000d14      0x687 build/SdVolume.o
+ .debug_abbrev  0x000000000000139b      0x9da build/SdFile.o
+ .debug_abbrev  0x0000000000001d75      0x872 build/SD.o
+ .debug_abbrev  0x00000000000025e7      0x76d build/File.o
+ .debug_abbrev  0x0000000000002d54      0x27d build/system_ch32v30x.o
+ .debug_abbrev  0x0000000000002fd1      0x1cf build/ch32v30x_it.o
+ .debug_abbrev  0x00000000000031a0      0x304 build/debug.o
+ .debug_abbrev  0x00000000000034a4      0x2c5 build/spi.o
+ .debug_abbrev  0x0000000000003769      0x36d build/ch32v30x_rcc.o
+ .debug_abbrev  0x0000000000003ad6      0x32e build/ch32v30x_usart.o
+ .debug_abbrev  0x0000000000003e04      0x309 build/ch32v30x_gpio.o
+ .debug_abbrev  0x000000000000410d      0x32e build/ch32v30x_spi.o
+ .debug_abbrev  0x000000000000443b       0x12 build/startup_ch32v30x_D8.o
 
-.debug_loc      0x0000000000000000     0x6a4a
- .debug_loc     0x0000000000000000       0x9b build/main.o
- .debug_loc     0x000000000000009b     0x1144 build/Sd2Card.o
- .debug_loc     0x00000000000011df      0x7e0 build/SdVolume.o
- .debug_loc     0x00000000000019bf     0x1e14 build/SdFile.o
- .debug_loc     0x00000000000037d3      0xcc2 build/SD.o
- .debug_loc     0x0000000000004495      0x435 build/File.o
- .debug_loc     0x00000000000048ca       0xac build/system_ch32v30x.o
- .debug_loc     0x0000000000004976      0x1ed build/debug.o
- .debug_loc     0x0000000000004b63       0x42 build/spi.o
- .debug_loc     0x0000000000004ba5      0xa66 build/ch32v30x_rcc.o
- .debug_loc     0x000000000000560b      0x7d9 build/ch32v30x_usart.o
- .debug_loc     0x0000000000005de4      0x6d2 build/ch32v30x_gpio.o
- .debug_loc     0x00000000000064b6      0x594 build/ch32v30x_spi.o
+.debug_loc      0x0000000000000000     0x7014
+ .debug_loc     0x0000000000000000      0x665 build/main.o
+ .debug_loc     0x0000000000000665     0x1144 build/Sd2Card.o
+ .debug_loc     0x00000000000017a9      0x7e0 build/SdVolume.o
+ .debug_loc     0x0000000000001f89     0x1e14 build/SdFile.o
+ .debug_loc     0x0000000000003d9d      0xcc2 build/SD.o
+ .debug_loc     0x0000000000004a5f      0x435 build/File.o
+ .debug_loc     0x0000000000004e94       0xac build/system_ch32v30x.o
+ .debug_loc     0x0000000000004f40      0x1ed build/debug.o
+ .debug_loc     0x000000000000512d       0x42 build/spi.o
+ .debug_loc     0x000000000000516f      0xa66 build/ch32v30x_rcc.o
+ .debug_loc     0x0000000000005bd5      0x7d9 build/ch32v30x_usart.o
+ .debug_loc     0x00000000000063ae      0x6d2 build/ch32v30x_gpio.o
+ .debug_loc     0x0000000000006a80      0x594 build/ch32v30x_spi.o
 
-.debug_aranges  0x0000000000000000      0x908
+.debug_aranges  0x0000000000000000      0x978
  .debug_aranges
-                0x0000000000000000       0x30 build/main.o
+                0x0000000000000000       0xa0 build/main.o
  .debug_aranges
-                0x0000000000000030       0xe0 build/Sd2Card.o
+                0x00000000000000a0       0xe0 build/Sd2Card.o
  .debug_aranges
-                0x0000000000000110       0x68 build/SdVolume.o
+                0x0000000000000180       0x68 build/SdVolume.o
  .debug_aranges
-                0x0000000000000178      0x128 build/SdFile.o
+                0x00000000000001e8      0x128 build/SdFile.o
  .debug_aranges
-                0x00000000000002a0       0xa0 build/SD.o
+                0x0000000000000310       0xa0 build/SD.o
  .debug_aranges
-                0x0000000000000340       0xa8 build/File.o
+                0x00000000000003b0       0xa8 build/File.o
  .debug_aranges
-                0x00000000000003e8       0x28 build/system_ch32v30x.o
+                0x0000000000000458       0x28 build/system_ch32v30x.o
  .debug_aranges
-                0x0000000000000410       0x28 build/ch32v30x_it.o
+                0x0000000000000480       0x28 build/ch32v30x_it.o
  .debug_aranges
-                0x0000000000000438       0x48 build/debug.o
+                0x00000000000004a8       0x48 build/debug.o
  .debug_aranges
-                0x0000000000000480       0x38 build/spi.o
+                0x00000000000004f0       0x38 build/spi.o
  .debug_aranges
-                0x00000000000004b8      0x1a8 build/ch32v30x_rcc.o
+                0x0000000000000528      0x1a8 build/ch32v30x_rcc.o
  .debug_aranges
-                0x0000000000000660      0x100 build/ch32v30x_usart.o
+                0x00000000000006d0      0x100 build/ch32v30x_usart.o
  .debug_aranges
-                0x0000000000000760       0xa8 build/ch32v30x_gpio.o
+                0x00000000000007d0       0xa8 build/ch32v30x_gpio.o
  .debug_aranges
-                0x0000000000000808       0xd0 build/ch32v30x_spi.o
+                0x0000000000000878       0xd0 build/ch32v30x_spi.o
  .debug_aranges
-                0x00000000000008d8       0x30 build/startup_ch32v30x_D8.o
+                0x0000000000000948       0x30 build/startup_ch32v30x_D8.o
 
-.debug_ranges   0x0000000000000000      0xf88
- .debug_ranges  0x0000000000000000       0x20 build/main.o
- .debug_ranges  0x0000000000000020      0x1a8 build/Sd2Card.o
- .debug_ranges  0x00000000000001c8      0x1c8 build/SdVolume.o
- .debug_ranges  0x0000000000000390      0x530 build/SdFile.o
- .debug_ranges  0x00000000000008c0      0x198 build/SD.o
- .debug_ranges  0x0000000000000a58       0x98 build/File.o
- .debug_ranges  0x0000000000000af0       0x18 build/system_ch32v30x.o
- .debug_ranges  0x0000000000000b08       0x18 build/ch32v30x_it.o
- .debug_ranges  0x0000000000000b20       0x38 build/debug.o
- .debug_ranges  0x0000000000000b58       0x28 build/spi.o
- .debug_ranges  0x0000000000000b80      0x198 build/ch32v30x_rcc.o
- .debug_ranges  0x0000000000000d18       0xf0 build/ch32v30x_usart.o
- .debug_ranges  0x0000000000000e08       0x98 build/ch32v30x_gpio.o
- .debug_ranges  0x0000000000000ea0       0xc0 build/ch32v30x_spi.o
- .debug_ranges  0x0000000000000f60       0x28 build/startup_ch32v30x_D8.o
+.debug_ranges   0x0000000000000000      0xff8
+ .debug_ranges  0x0000000000000000       0x90 build/main.o
+ .debug_ranges  0x0000000000000090      0x1a8 build/Sd2Card.o
+ .debug_ranges  0x0000000000000238      0x1c8 build/SdVolume.o
+ .debug_ranges  0x0000000000000400      0x530 build/SdFile.o
+ .debug_ranges  0x0000000000000930      0x198 build/SD.o
+ .debug_ranges  0x0000000000000ac8       0x98 build/File.o
+ .debug_ranges  0x0000000000000b60       0x18 build/system_ch32v30x.o
+ .debug_ranges  0x0000000000000b78       0x18 build/ch32v30x_it.o
+ .debug_ranges  0x0000000000000b90       0x38 build/debug.o
+ .debug_ranges  0x0000000000000bc8       0x28 build/spi.o
+ .debug_ranges  0x0000000000000bf0      0x198 build/ch32v30x_rcc.o
+ .debug_ranges  0x0000000000000d88       0xf0 build/ch32v30x_usart.o
+ .debug_ranges  0x0000000000000e78       0x98 build/ch32v30x_gpio.o
+ .debug_ranges  0x0000000000000f10       0xc0 build/ch32v30x_spi.o
+ .debug_ranges  0x0000000000000fd0       0x28 build/startup_ch32v30x_D8.o
 
-.debug_line     0x0000000000000000     0xdbab
- .debug_line    0x0000000000000000      0x9ac build/main.o
- .debug_line    0x00000000000009ac     0x1b8a build/Sd2Card.o
- .debug_line    0x0000000000002536      0xf62 build/SdVolume.o
- .debug_line    0x0000000000003498     0x3715 build/SdFile.o
- .debug_line    0x0000000000006bad      0xe80 build/SD.o
- .debug_line    0x0000000000007a2d      0xa9b build/File.o
- .debug_line    0x00000000000084c8      0x42e build/system_ch32v30x.o
- .debug_line    0x00000000000088f6      0x206 build/ch32v30x_it.o
- .debug_line    0x0000000000008afc      0x6bb build/debug.o
- .debug_line    0x00000000000091b7      0x68e build/spi.o
- .debug_line    0x0000000000009845     0x1765 build/ch32v30x_rcc.o
- .debug_line    0x000000000000afaa      0xf83 build/ch32v30x_usart.o
- .debug_line    0x000000000000bf2d      0xcb2 build/ch32v30x_gpio.o
- .debug_line    0x000000000000cbdf      0xcae build/ch32v30x_spi.o
- .debug_line    0x000000000000d88d      0x31e build/startup_ch32v30x_D8.o
+.debug_line     0x0000000000000000     0xe3b5
+ .debug_line    0x0000000000000000     0x11b6 build/main.o
+ .debug_line    0x00000000000011b6     0x1b8a build/Sd2Card.o
+ .debug_line    0x0000000000002d40      0xf62 build/SdVolume.o
+ .debug_line    0x0000000000003ca2     0x3715 build/SdFile.o
+ .debug_line    0x00000000000073b7      0xe80 build/SD.o
+ .debug_line    0x0000000000008237      0xa9b build/File.o
+ .debug_line    0x0000000000008cd2      0x42e build/system_ch32v30x.o
+ .debug_line    0x0000000000009100      0x206 build/ch32v30x_it.o
+ .debug_line    0x0000000000009306      0x6bb build/debug.o
+ .debug_line    0x00000000000099c1      0x68e build/spi.o
+ .debug_line    0x000000000000a04f     0x1765 build/ch32v30x_rcc.o
+ .debug_line    0x000000000000b7b4      0xf83 build/ch32v30x_usart.o
+ .debug_line    0x000000000000c737      0xcb2 build/ch32v30x_gpio.o
+ .debug_line    0x000000000000d3e9      0xcae build/ch32v30x_spi.o
+ .debug_line    0x000000000000e097      0x31e build/startup_ch32v30x_D8.o
 
-.debug_str      0x0000000000000000     0x52a1
- .debug_str     0x0000000000000000     0x37a4 build/main.o
-                                       0x3b6a (size before relaxing)
- .debug_str     0x00000000000037a4       0xf9 build/Sd2Card.o
-                                       0x1255 (size before relaxing)
- .debug_str     0x000000000000389d       0xff build/SdVolume.o
-                                       0x1ea1 (size before relaxing)
- .debug_str     0x000000000000399c      0x1ef build/SdFile.o
-                                       0x2b6c (size before relaxing)
- .debug_str     0x0000000000003b8b      0x310 build/SD.o
-                                       0x2ee4 (size before relaxing)
- .debug_str     0x0000000000003e9b       0x4e build/File.o
-                                       0x2cc9 (size before relaxing)
- .debug_str     0x0000000000003ee9      0x12b build/system_ch32v30x.o
-                                        0x683 (size before relaxing)
- .debug_str     0x0000000000004014       0x30 build/ch32v30x_it.o
-                                        0x5ae (size before relaxing)
- .debug_str     0x0000000000004044      0x2d5 build/debug.o
-                                        0x900 (size before relaxing)
- .debug_str     0x0000000000004319      0x11d build/spi.o
-                                        0x8ee (size before relaxing)
- .debug_str     0x0000000000004436      0x621 build/ch32v30x_rcc.o
-                                        0xcc2 (size before relaxing)
- .debug_str     0x0000000000004a57      0x356 build/ch32v30x_usart.o
-                                        0xb18 (size before relaxing)
- .debug_str     0x0000000000004dad      0x229 build/ch32v30x_gpio.o
-                                        0x972 (size before relaxing)
- .debug_str     0x0000000000004fd6      0x299 build/ch32v30x_spi.o
-                                        0xa90 (size before relaxing)
- .debug_str     0x000000000000526f       0x32 build/startup_ch32v30x_D8.o
-                                         0x68 (size before relaxing)
+.debug_str      0x0000000000000000     0x48ad
+ .debug_str     0x0000000000000000     0x2c87 build/main.o
+                                       0x2df7 (size before relaxing)
+ .debug_str     0x0000000000002c87       0xda build/Sd2Card.o
+                                       0x1254 (size before relaxing)
+ .debug_str     0x0000000000002d61       0xff build/SdVolume.o
+                                       0x1ea0 (size before relaxing)
+ .debug_str     0x0000000000002e60      0x31b build/SdFile.o
+                                       0x2b6b (size before relaxing)
+ .debug_str     0x000000000000317b      0x317 build/SD.o
+                                       0x2ee3 (size before relaxing)
+ .debug_str     0x0000000000003492       0x4e build/File.o
+                                       0x2cc8 (size before relaxing)
+ .debug_str     0x00000000000034e0      0x12b build/system_ch32v30x.o
+                                        0x682 (size before relaxing)
+ .debug_str     0x000000000000360b       0x30 build/ch32v30x_it.o
+                                        0x5ad (size before relaxing)
+ .debug_str     0x000000000000363b      0x2ea build/debug.o
+                                        0x8ff (size before relaxing)
+ .debug_str     0x0000000000003925      0x11d build/spi.o
+                                        0x8ed (size before relaxing)
+ .debug_str     0x0000000000003a42      0x621 build/ch32v30x_rcc.o
+                                        0xcc1 (size before relaxing)
+ .debug_str     0x0000000000004063      0x356 build/ch32v30x_usart.o
+                                        0xb17 (size before relaxing)
+ .debug_str     0x00000000000043b9      0x229 build/ch32v30x_gpio.o
+                                        0x971 (size before relaxing)
+ .debug_str     0x00000000000045e2      0x299 build/ch32v30x_spi.o
+                                        0xa8f (size before relaxing)
+ .debug_str     0x000000000000487b       0x32 build/startup_ch32v30x_D8.o
+                                         0x67 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 build/main.o
