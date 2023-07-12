@@ -88,7 +88,7 @@ uint8_t SdFile::close(void)
 		return false;
 	}
 	type_ = FAT_FILE_TYPE_CLOSED;
-	printf("SdFile::close\r\n");
+	// printf("SdFile::close\r\n");
 
 	return true;
 }

@@ -41,6 +41,9 @@ void Lcd_Rectf(unsigned int x,unsigned int y,unsigned int w,unsigned int h,unsig
 int Lcd_RGB(int r,int g,int b);
 void Lcd_Fill(unsigned int j);
 void Lcd_Clear();
+void Lcd_PushColors(uint16_t * block, int16_t size);
+uint16_t Lcd_Color565(uint8_t r, uint8_t g, uint8_t b);
+
 
 /*
 	LED  -- PA1
@@ -259,8 +262,8 @@ void Lcd_Fill(unsigned int j)
     for(i=0;i<240;i++)
         for(m=0;m<320;m++)
         {
-        Lcd_Write_Data(j>>8);
-        Lcd_Write_Data(j);
+            Lcd_Write_Data(j>>8);
+            Lcd_Write_Data(j);
         }
     // digitalWrite(CS,HIGH);
     GPIOA->BSHR |= DD_CS;
@@ -271,6 +274,25 @@ void Lcd_Clear()
 {	
     Lcd_Fill(0);
 }
+
+//
+void Lcd_PushColors(uint16_t * block, int16_t size)
+{
+    GPIOA->BCR |= DD_CS;
+    for(uint32_t i = 0; i < size; i++)
+    {
+        Lcd_Write_Data(block[i] >> 8);        
+        Lcd_Write_Data(block[i]);
+    }
+    GPIOA->BSHR |= DD_CS;
+}
+
+//
+uint16_t Lcd_Color565(uint8_t r, uint8_t g, uint8_t b)
+{ 
+  return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | ((b & 0xF8) >> 3); 
+}
+
 
 
 #endif  /* _TFT_SHIELD_3_2_H_ */

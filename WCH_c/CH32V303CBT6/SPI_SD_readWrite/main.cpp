@@ -38,9 +38,10 @@ int main(void)
     File dataFile;
     // const char * fileName = "temp.txt";
     // const char * fileName = "test.txt";
-    const char * fileName = "0001.bmp";
+    // const char * fileName = "0001.bmp";
     // const char * fileName = "0001.txt";
     // const char * fileName = "ttt.txt";
+    const char * fileName = "eee.txt";
 
 
     /*
@@ -66,28 +67,45 @@ int main(void)
 
     /* 
         чтение работает
+
+        это побайтовое чтение
     */
 
-    int ch = -1;
-    char *str;
-    uint8_t i = 0;
+    // int ch = -1;
+    // char *str;
+    // uint8_t i = 0;
+    // dataFile = SD.open(fileName);
+    // if (dataFile) {
+    //     printf("SD open file for read\r\n");
+    //     ch = dataFile.read();
+    //     while (ch != -1) {
+    //         printf("%c", ch);
+    //         str[i++] = ch;
+    //         ch = dataFile.read();
+    //     }
+    //     str[i] = '\0';
+    //     printf("\r\n");
+    //     printf("sizeof(str): %d\r\n", (u8)sizeof(str));
+    //     printf("str[2]: %c\r\n", (char)str[2]);
+    //     dataFile.close();
+    // }else printf("error opening %s\r\n", fileName);
+
+
+    /* 
+        чтение работает
+
+        а это чтение в буфер
+    */
+
+    uint8_t	buffer[500];
     dataFile = SD.open(fileName);
     if (dataFile) {
         printf("SD open file for read\r\n");
-        ch = dataFile.read();
-        while (ch != -1) {
-            printf("%c", ch);
-            str[i++] = ch;
-            ch = dataFile.read();
-        }
-        str[i] = '\0';
+        dataFile.read(buffer, sizeof(buffer));
+        printf((const char*)buffer);
         printf("\r\n");
-        printf("sizeof(str): %d\r\n", (u8)sizeof(str));
-        printf("str[2]: %c\r\n", (char)str[2]);
         dataFile.close();
     }else printf("error opening %s\r\n", fileName);
-
-
 
 
     while(1) 
