@@ -54,6 +54,9 @@ uint16_t Lcd_Color565(uint8_t r, uint8_t g, uint8_t b);
 void Lcd_Init(void)
 { 
     SPI1_Master_Init(0);    
+  
+    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_8;
+    SPI1->CTLR1 |= SPI_BaudRatePrescaler_2;
 
     // включаем тактирование порта A
     RCC->APB2PCENR |= RCC_APB2Periph_GPIOA; //RCC_APB2PCENR_IOPAEN;    

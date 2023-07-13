@@ -10,7 +10,7 @@
 
 // #define __DEBUG     1
 
-#define BUFFPIXEL   40
+#define BUFFPIXEL   80
 #define WIDTH       240
 #define HEIGHT      320
 
@@ -18,12 +18,14 @@
 void GPIO_Leds_Init(void);
 void Leds_Blink(uint16_t delay);
 void Test_Screen(void);
+void Bmp_Carousel(void);
 void bmpDraw(char *filename, int x = 0, int y = 0);
 uint16_t read16(File f);
 uint32_t read32(File f);
 
 
 const int chipSelect = 0;
+uint8_t test = 42;
 
 
 // Основная функция
@@ -33,9 +35,7 @@ int main(void)
     USART_Printf_Init(115200);
     printf("SystemClk: %d\r\n", SystemCoreClock);    
     GPIO_Leds_Init();
-    
-    // Delay_Ms(100);
-    
+        
     Lcd_Init();
     Lcd_Fill(0xffff);
     
@@ -47,10 +47,12 @@ int main(void)
 	} else {
 		printf("SD begin is correct\r\n");
 	}
-    
+        
     while(1) 
     {
-        Test_Screen();
+        test++;
+        // Test_Screen();
+        Bmp_Carousel();
     }
 }
 
@@ -85,7 +87,23 @@ void Leds_Blink(uint16_t delay)
 
 
 // тест дисплея
-void Test_Screen(void)
+void Test_Screen(void) 
+{    
+    uint16_t delay = 500;
+    
+    Lcd_Fill(0xf800);
+	Leds_Blink(delay);
+    Lcd_Fill(0x07E0);
+	Leds_Blink(delay);
+    Lcd_Fill(0x001F);
+	Leds_Blink(delay);
+    Lcd_Clear();         
+	Leds_Blink(delay);
+}
+
+
+// карусель картинок
+void Bmp_Carousel(void)
 {    
     uint16_t delay = 500;
     
@@ -240,7 +258,10 @@ void bmpDraw(char *filename, int x, int y)
     printf("\r\nLoading image '%s'\r\n", filename);
 #endif
 
-    if ((bmpFile = SD.open(filename)) == NULL) {
+    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_2;
+    SPI1->CTLR1 |= SPI_BaudRatePrescaler_8;
+
+    if ( ! (bmpFile = SD.open(filename))) {
 #ifdef __DEBUG
         printf("File not found\r\n");
 #endif
@@ -297,6 +318,9 @@ void bmpDraw(char *filename, int x, int y)
                 if((y+h-1) >= HEIGHT) h = HEIGHT - y;
         
 
+                SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_8;
+                SPI1->CTLR1 |= SPI_BaudRatePrescaler_2;
+
                 // Set TFT address window to clipped image bounds
                 GPIOA->BCR |= DD_CS;
                 Lcd_Address_Set(x, y, x+w-1, y+h-1);
@@ -314,6 +338,9 @@ void bmpDraw(char *filename, int x, int y)
                     else 	// Bitmap is stored top-to-bottom
                         pos = bmpImageoffset + row * rowSize;                        
 
+                    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_2;
+                    SPI1->CTLR1 |= SPI_BaudRatePrescaler_8;
+
                     if(bmpFile.position() != pos) { // Need seek?
                         bmpFile.seek(pos);
                         buffidx = sizeof(sdbuffer); // Force buffer reload
@@ -324,9 +351,16 @@ void bmpDraw(char *filename, int x, int y)
                         if (buffidx >= sizeof(sdbuffer)) { // Indeed
                             // Push LCD buffer to the display first
                             if(lcdidx > 0) {
+                                
+                                SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_8;
+                                SPI1->CTLR1 |= SPI_BaudRatePrescaler_2;
+
                                 Lcd_PushColors(lcdbuffer, lcdidx);
                                 lcdidx = 0;
                             }
+
+                            SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_2;
+                            SPI1->CTLR1 |= SPI_BaudRatePrescaler_8;
 
                             bmpFile.read(sdbuffer, sizeof(sdbuffer));     
 
@@ -346,6 +380,10 @@ void bmpDraw(char *filename, int x, int y)
                 } // end scanline
                 // Write any remaining data to LCD
                 if(lcdidx > 0) {
+
+                    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_8;
+                    SPI1->CTLR1 |= SPI_BaudRatePrescaler_2;
+
                     Lcd_PushColors(lcdbuffer, lcdidx);
                 }
                 
@@ -353,10 +391,13 @@ void bmpDraw(char *filename, int x, int y)
         }
     }
     
+    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_2;
+    SPI1->CTLR1 |= SPI_BaudRatePrescaler_8;
+
     bmpFile.close();
-#ifdef __DEBUG
+// #ifdef __DEBUG
     if(!goodBmp) printf("BMP format not recognized.\r\n");
-#endif
+// #endif
 }
 
 uint16_t read16(File f)

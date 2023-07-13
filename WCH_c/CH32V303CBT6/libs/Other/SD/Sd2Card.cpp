@@ -189,6 +189,9 @@ uint8_t Sd2Card::init(uint8_t chipSelectPin, GPIO_TypeDef *port)
 
     SPI1_Master_Init(0);  
 
+    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_2;
+    SPI1->CTLR1 |= SPI_BaudRatePrescaler_8;
+
 	// set pin modes
     if (chipSelectPin_ < 8) {
         port->CFGLR &= ~(0b1111 << chipSelectPin_*4); // GPIO_Msk
