@@ -1,6 +1,6 @@
 
-#ifndef __DEFINES_H_
-#define __DEFINES_H_
+#ifndef __HUTORINO_H_
+#define __HUTORINO_H_
 
 #define __I     volatile    // defines 'read only' permissions
 #define __O     volatile    // defines 'write only' permissions
@@ -217,6 +217,9 @@ typedef struct
 #define PA14       14 // 
 #define PA15       15 // 
 
+#define PB0         0 // 
+#define PB1         1 // 
+#define PB2         2 // 
 #define PB3         3 // LED_R
 #define PB4         4 // LED_G
 #define PB5         5 // LED_B
@@ -675,4 +678,4 @@ SPI
 #define SPI_I2S_FLAG_BSY                ((uint16_t)0x0080)
 
 
-#endif /* __DEFINES_H_ */
+#endif /* __HUTORINO_H_ */
