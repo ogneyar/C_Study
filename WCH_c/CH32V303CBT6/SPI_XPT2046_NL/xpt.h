@@ -38,6 +38,8 @@ void XPT_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
     SPI1_Send(0x80);
     SPI1_Send(0x00);
     SPI1_Send(0x00);
+    
+	Delay_Ms(10);
 
     XPT_ChipSelectHigh();    
 } 
@@ -65,29 +67,36 @@ void XPT_GetTouch_xy(volatile uint16_t *x_kor,volatile uint16_t *y_kor)
 
     XPT_ChipSelectLow();
 
-	SPI1_Send(chx);  //отправляем запрос координаты X
-
+    SPI1_Send(chx);  //отправляем запрос координаты X
+	Delay_Us(100);
+	SPI1_Transmit(0x00); //отправляем пустой запрос
+	Delay_Us(100);
 	touch_x = SPI1_Transmit(0x00); //получаем старшие 8 бит
 	touch_x <<= 8;
-	
-	touch_x |= SPI1_Transmit(0x00); //получаем младшие 4 бита
-	touch_x >>= 4;
+	Delay_Us(100);
+    touch_x |= SPI1_Receive(); //получаем младшие 4 бита
+	touch_x >>= 3;
 
-	Delay_Ms(100);
+	Delay_Us(100);
 
-	SPI1_Send(chy);  //отправляем запрос координаты Y
-	
+	SPI1_Send(chy); //отправляем запрос координаты Y
+	Delay_Us(100);
+	SPI1_Transmit(0x00); //отправляем пустой запрос
+	Delay_Us(100);
 	touch_y = SPI1_Transmit(0x00); //получаем старшие 8 бит
 	touch_y <<= 8;
-	
-	touch_y |= SPI1_Transmit(0x00); //получаем младшие 4 бита
+	Delay_Us(100);
+    touch_y |= SPI1_Receive(); //получаем младшие 4 бита
 	touch_y >>= 3;
+	Delay_Us(100);
 	
 	*x_kor = touch_x;
 	*y_kor = touch_y; 
 
-    printf("touch_x: %d\r\n", touch_x);
-    printf("touch_y: %d\r\n", touch_y);
+    // printf("touch_x: %d\r\n", touch_x);
+    // printf("touch_x hex: 0x%x\r\n", touch_x);
+    // printf("touch_y: %d\r\n", touch_y);
+    // printf("touch_y hex: 0x%x\r\n", touch_y);
 
     XPT_ChipSelectHigh();
 }

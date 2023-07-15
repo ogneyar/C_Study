@@ -11,6 +11,8 @@
 #include "exti.h"
 
 
+volatile uint8_t status = 0;
+volatile uint8_t delay = 0;
 volatile uint16_t x_kor, y_kor;
 
 // Основная функция
@@ -36,7 +38,20 @@ int main(void)
     {
         Test_Screen();
         Test_Screen();
-        printf("Test\r\n");
+        // printf("Test\r\n");
+
+        // if (status && ! delay) {
+        if (status) {
+            // delay = 1;
+
+            // XPT_GetTouch_xy(&x_kor, &y_kor);
+            // printf("x_kor: %d\r\n", x_kor);
+            // printf("y_kor: %d\r\n\r\n", y_kor);
+
+            // Delay_Ms(100);
+            // delay = 0;
+            status = 0;
+        }
     }
 }
 
@@ -81,10 +96,11 @@ void EXTI1_IRQHandler(void)
 {
     if(EXTI_GetITStatusLine1()!=RESET)
     {
-        XPT_GetTouch_xy(&x_kor, &y_kor);
+        status = 1;
         printf("Run at EXTI\r\n");
-        // printf("x_kor: %d\r\n", x_kor);
-        // printf("y_kor: %d\r\n", y_kor);
+        XPT_GetTouch_xy(&x_kor, &y_kor);
+        printf("x_kor: %d\r\n", x_kor);
+        printf("y_kor: %d\r\n\r\n", y_kor);
         EXTI->INTFR = EXTI_Line1;     /* Clear Flag */
     }
 }
