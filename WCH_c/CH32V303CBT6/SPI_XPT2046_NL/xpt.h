@@ -7,6 +7,14 @@
 #define	chy 	0x90 // координатные оси дисплея и тачскрина поменяны местами(там где у дисплея Х у тачсрина Y)
 #define	chx 	0xD0 // за основу возьмём оси дисплея
 
+#define Xmax	3850
+#define Xmin	250
+
+#define Ymax	3900
+#define Ymin	300
+
+//#define calibr
+
 
 void XPT_Init(GPIO_TypeDef *port, uint8_t chipSelectPin);
 void XPT_ChipSelectLow(void);
@@ -90,6 +98,13 @@ void XPT_GetTouch_xy(volatile uint16_t *x_kor,volatile uint16_t *y_kor)
 	touch_y >>= 3;
 	Delay_Us(100);
 	
+#ifndef calibr
+	touch_x -= 300;
+	touch_x = 240 - touch_x/((Xmax-Xmin)/240);
+	touch_y -= 350;
+	touch_y = 320 - touch_y/((Ymax-Ymin)/320);  
+#endif
+
 	*x_kor = touch_x;
 	*y_kor = touch_y; 
 
@@ -97,6 +112,7 @@ void XPT_GetTouch_xy(volatile uint16_t *x_kor,volatile uint16_t *y_kor)
     // printf("touch_x hex: 0x%x\r\n", touch_x);
     // printf("touch_y: %d\r\n", touch_y);
     // printf("touch_y hex: 0x%x\r\n", touch_y);
+    
 
     XPT_ChipSelectHigh();
 }
