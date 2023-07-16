@@ -10,6 +10,7 @@
 #include "xpt.h"
 #include "exti.h"
 
+#define __DEBUG__
 
 volatile uint8_t status = 0;
 volatile uint8_t delay = 0;
@@ -27,9 +28,9 @@ int main(void)
     EXTI1_Init(); // PB1 - External Interrupt
 
     /* 
-    если SystemCoreClock = HSI_VALUE, тогда SPI_BaudRatePrescaler_
-    если SystemCoreClock = SYSCLK_FREQ_48MHz_HSI, тогда SPI_BaudRatePrescaler_
-    если SystemCoreClock = SYSCLK_FREQ_144MHz_HSI, тогда SPI_BaudRatePrescaler_
+    если SystemCoreClock = HSI_VALUE, тогда SPI_BaudRatePrescaler_8
+    если SystemCoreClock = SYSCLK_FREQ_48MHz_HSI, тогда SPI_BaudRatePrescaler_64
+    если SystemCoreClock = SYSCLK_FREQ_144MHz_HSI, тогда SPI_BaudRatePrescaler_128
     */
      
     XPT_Init(GPIOA, PA1); // PA1 - Chip Select Pin
@@ -97,10 +98,14 @@ void EXTI1_IRQHandler(void)
     if(EXTI_GetITStatusLine1()!=RESET)
     {
         status = 1;
-        printf("Run at EXTI\r\n");
         XPT_GetTouch_xy(&x_kor, &y_kor);
-        printf("x_kor: %d\r\n", x_kor);
-        printf("y_kor: %d\r\n\r\n", y_kor);
+#ifdef __DEBUG__
+        if (x_kor <= 240 && y_kor <= 320) {
+            printf("Run at EXTI\r\n");
+            printf("x_kor: %d\r\n", x_kor);
+            printf("y_kor: %d\r\n\r\n", y_kor);
+        }
+#endif /* __DEBUG__ */
         EXTI->INTFR = EXTI_Line1;     /* Clear Flag */
     }
 }

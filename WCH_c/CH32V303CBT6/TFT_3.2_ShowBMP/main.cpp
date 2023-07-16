@@ -4,6 +4,12 @@
 #include "SD.h"
 #include "tft_shield_3_2.h"
 
+/*
+    PA0 - chip select SD card
+    PA1 - chip select Touch
+    PA2 - chip select Screen
+*/
+
 #define LED_R       3 // PB3
 #define LED_G       4 // PB4
 #define LED_B       5 // PB5

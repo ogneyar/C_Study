@@ -24,6 +24,9 @@ void SPI1_Master_Init(uint8_t mode);
 void SPI1_SendData(uint16_t Data);
 uint16_t SPI1_ReceiveData(void);
 uint8_t SPI1_GetFlagStatus(uint16_t SPI_FLAG);
+uint8_t SPI1_Send(uint8_t data);
+uint8_t SPI1_Receive(void);
+uint8_t SPI1_Transmit(uint8_t data);
 
 
 #define DD_CS 		(1 << PA2)

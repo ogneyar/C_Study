@@ -1,27 +1,9 @@
 
-#ifndef __XPT_H_
-#define __XPT_H_
+#include "xpt2046.h"
 
-
-#define	chy 	0x90 // координатные оси дисплея и тачскрина поменяны местами(там где у дисплея Х у тачсрина Y)
-#define	chx 	0xD0 // за основу возьмём оси дисплея
-
-#define Xmax	4200
-#define Xmin	150
-
-#define Ymax	4200
-#define Ymin	150
-
-// #define calibr
 
 GPIO_TypeDef * _portXPT;
 uint8_t _chipSelectPinXPT;
-
-void XPT_Init(GPIO_TypeDef *port, uint8_t chipSelectPin);
-void XPT_ChipSelectLow(void);
-void XPT_ChipSelectHigh(void);
-void XPT_GetTouch_xy(volatile uint16_t *x_kor,volatile uint16_t *y_kor);
-
 
 
 // Инициализация XPT2046
@@ -36,11 +18,11 @@ void XPT_Init(GPIO_TypeDef *port, uint8_t chipSelectPin)
     SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_8;
     SPI1->CTLR1 |= SPI_BaudRatePrescaler_128;
     
-    if (port == GPIOA) RCC->APB2PCENR |= RCC_APB2PCENR_IOPAEN;
+    if (port == GPIOA) RCC->APB2PCENR |= RCC_APB2Periph_GPIOA;
     
     // пока подразумевается PA1
-    port->CFGLR &= ~(GPIO_Msk << chipSelectPin*4); // ~(0b1111);
-    port->CFGLR |= (GPIO_Speed_50 << chipSelectPin*4); // 0b0011;
+    port->CFGLR &= ~(0b1111 << chipSelectPin*4); // GPIO_Msk
+    port->CFGLR |= (0b0011 << chipSelectPin*4); // GPIO_Speed_50
     port->BSHR |= (1 << chipSelectPin);
 
     XPT_ChipSelectLow();
@@ -75,6 +57,10 @@ void XPT_GetTouch_xy(volatile uint16_t *x_kor,volatile uint16_t *y_kor)
 	volatile uint16_t touch_x = 0;
 	volatile uint16_t touch_y = 0;
 
+    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_2;
+    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_8;
+    SPI1->CTLR1 |= SPI_BaudRatePrescaler_128;
+
     XPT_ChipSelectLow();
 
     SPI1_Send(chx);  //отправляем запрос координаты X
@@ -102,7 +88,8 @@ void XPT_GetTouch_xy(volatile uint16_t *x_kor,volatile uint16_t *y_kor)
 	
 #ifndef calibr
 	touch_x -= Xmin;
-	touch_x = 240 - touch_x/((Xmax-Xmin)/240);
+	// touch_x = 240 - touch_x/((Xmax-Xmin)/240);
+	touch_x = touch_x/((Xmax-Xmin)/240);
 	touch_y -= Ymin;
 	touch_y = 320 - touch_y/((Ymax-Ymin)/320);  
 #endif
@@ -119,6 +106,3 @@ void XPT_GetTouch_xy(volatile uint16_t *x_kor,volatile uint16_t *y_kor)
     XPT_ChipSelectHigh();
 }
 
-
-
-#endif /* __XPT_H_ */

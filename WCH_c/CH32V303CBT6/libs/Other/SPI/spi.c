@@ -105,3 +105,46 @@ uint8_t SPI1_GetFlagStatus(uint16_t SPI_FLAG)
     }
 }
 
+
+// отправка данных
+uint8_t SPI1_Send(uint8_t data)
+{
+    u8 i = 0;
+
+    while(SPI1_GetFlagStatus(SPI_I2S_FLAG_TXE) == RESET)
+    {
+        i++;
+        if(i > 200)
+            return 0;
+    }
+
+    SPI1_SendData(data);
+
+    return 1;
+}
+
+
+// приём данных
+uint8_t SPI1_Receive(void)
+{
+    u8 i = 0;
+
+    while(SPI1_GetFlagStatus(SPI_I2S_FLAG_RXNE) == RESET);
+    {
+        i++;
+        if(i > 200)
+            return 0;
+    }
+
+    return SPI1_ReceiveData();
+}
+
+
+// приёмопередача данных
+uint8_t SPI1_Transmit(uint8_t data)
+{
+    SPI1_Send(data);
+
+    return SPI1_Receive();
+}
+
