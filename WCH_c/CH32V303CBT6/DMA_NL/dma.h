@@ -8,33 +8,81 @@
 
 
 // Список функций
-void DMA1_CH3_Init(void);
+void DMA1_CH3_Init(uint32_t *SRC_BUF, uint32_t *DST_BUF, uint8_t Buf_Size);
+void DMA_ClearFlag(uint32_t DMAy_FLAG);
+uint8_t DMA_GetFlagStatus(uint32_t DMAy_FLAG);
 uint8_t BufCmp(uint32_t *buf1, uint32_t *buf2, uint16_t buflength);
 
 
 
 // Инициализация третьего канала первого DMA
-void DMA1_CH3_Init(void)
+void DMA1_CH3_Init(uint32_t *SRC_BUF, uint32_t *DST_BUF, uint8_t Buf_Size)
 {
-    // DMA_InitTypeDef DMA_InitStructure = {0};
-    // RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
+    RCC->AHBPCENR |= RCC_AHBPCENR_DMA1EN;
 
-    // DMA_StructInit(&DMA_InitStructure);
-    // DMA_InitStructure.DMA_PeripheralBaseAddr = (u32)(SRC_BUF);
-    // DMA_InitStructure.DMA_MemoryBaseAddr = (u32)DST_BUF;
-    // DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;
-    // DMA_InitStructure.DMA_BufferSize = Buf_Size * 4;
-    // DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Enable;
-    // DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
-    // DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
-    // DMA_InitStructure.DMA_MemoryDataSize = DMA_PeripheralDataSize_Byte;
-    // DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;
-    // DMA_InitStructure.DMA_Priority = DMA_Priority_VeryHigh;
-    // DMA_InitStructure.DMA_M2M = DMA_M2M_Enable;
-    // DMA_Init(DMA1_Channel3, &DMA_InitStructure);
-    // DMA_ClearFlag(DMA1_FLAG_TC3);
+    uint32_t tmpreg = 0;
+    tmpreg = DMA1_Channel3->CFGR;
+    tmpreg &= CFGR_CLEAR_Mask;
+    tmpreg |= DMA_DIR_PeripheralSRC | DMA_Mode_Normal | DMA_PeripheralInc_Enable | DMA_MemoryInc_Enable |
+              DMA_PeripheralDataSize_Byte | DMA_Priority_VeryHigh | DMA_M2M_Enable;
+    DMA1_Channel3->CFGR = tmpreg;
+    DMA1_Channel3->CNTR = Buf_Size * 4;
+    DMA1_Channel3->PADDR = (u32)(SRC_BUF);
+    DMA1_Channel3->MADDR = (u32)DST_BUF;
 
-    // DMA_Cmd(DMA1_Channel3, ENABLE);
+    DMA_ClearFlag(DMA1_FLAG_TC3);
+
+    DMA1_Channel3->CFGR |= DMA_CFGR1_EN;
+}
+
+
+// Очистка флага
+void DMA_ClearFlag(uint32_t DMAy_FLAG)
+{
+    if((DMAy_FLAG & FLAG_Mask) == FLAG_Mask)
+    {
+        DMA2->INTFCR = DMAy_FLAG;
+    }
+    else if((DMAy_FLAG & DMA2_EXTEN_FLAG_Mask) == DMA2_EXTEN_FLAG_Mask)
+    {
+        DMA2_EXTEN->INTFCR = DMAy_FLAG;
+    }
+    else
+    {
+        DMA1->INTFCR = DMAy_FLAG;
+    }
+}
+
+
+// Получение статуса
+uint8_t DMA_GetFlagStatus(uint32_t DMAy_FLAG)
+{
+    uint8_t bitstatus = RESET;
+    uint32_t tmpreg = 0;
+
+    if((DMAy_FLAG & FLAG_Mask) == FLAG_Mask)
+    {
+        tmpreg = DMA2->INTFR;
+    }
+    else if((DMAy_FLAG & DMA2_EXTEN_FLAG_Mask) == DMA2_EXTEN_FLAG_Mask)
+    {
+        tmpreg = DMA2_EXTEN->INTFR;
+    }
+    else
+    {
+        tmpreg = DMA1->INTFR;
+    }
+
+    if((tmpreg & DMAy_FLAG) != (uint32_t)RESET)
+    {
+        bitstatus = SET;
+    }
+    else
+    {
+        bitstatus = RESET;
+    }
+
+    return bitstatus;
 }
 
 

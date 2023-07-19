@@ -28,13 +28,15 @@ uint8_t Flag = 0;
 // Основная функция
 int main(void)
 {
+    uint8_t i = 0;
+
     Delay_Init();
     GPIOB_Leds_Init();
     USART1_Init(115200);
     printf("SystemClk:%d\r\n", SystemCoreClock);
     printf("DMA MEM2MEM TEST NL\r\n");
 
-    DMA1_CH3_Init();
+    DMA1_CH3_Init(SRC_BUF, DST_BUF, Buf_Size);
     
     while(DMA_GetFlagStatus(DMA1_FLAG_TC3) == RESET) {}
 

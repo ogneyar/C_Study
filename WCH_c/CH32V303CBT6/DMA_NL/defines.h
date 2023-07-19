@@ -188,6 +188,21 @@ typedef struct
     __IO uint32_t PCFR2;  
 } AFIO_TypeDef;
 
+// DMA Channel Controller
+typedef struct
+{
+    __IO uint32_t CFGR;
+    __IO uint32_t CNTR;
+    __IO uint32_t PADDR;
+    __IO uint32_t MADDR;
+} DMA_Channel_TypeDef;
+
+// DMA Controller
+typedef struct
+{
+    __IO uint32_t INTFR;
+    __IO uint32_t INTFCR;
+} DMA_TypeDef;
 
 
 #define SET         1
@@ -217,6 +232,9 @@ typedef struct
 #define PA14       14 // 
 #define PA15       15 // 
 
+#define PB0         0 // 
+#define PB1         1 // 
+#define PB2         2 // 
 #define PB3         3 // LED_R
 #define PB4         4 // LED_G
 #define PB5         5 // LED_B
@@ -260,6 +278,14 @@ typedef struct
 #define SPI1_BASE              (APB2PERIPH_BASE + 0x3000)   // 0x40013000
 #define USART1_BASE            (APB2PERIPH_BASE + 0x3800)   // 0x40013800
 
+#define DMA1_BASE              (AHBPERIPH_BASE + 0x0000)    // 0x40020000
+#define DMA1_Channel1_BASE     (AHBPERIPH_BASE + 0x0008)    // 0x40020008
+#define DMA1_Channel2_BASE     (AHBPERIPH_BASE + 0x001C)    // 0x4002001C
+#define DMA1_Channel3_BASE     (AHBPERIPH_BASE + 0x0030)    // 0x40020030
+
+#define DMA2_BASE              (AHBPERIPH_BASE + 0x0400)    // 0x40020400
+
+#define DMA2_EXTEN_BASE        (AHBPERIPH_BASE + 0x04D0)    // 0x400204D0
 #define RCC_BASE               (AHBPERIPH_BASE + 0x1000)    // 0x40021000
 #define EXTEN_BASE             (AHBPERIPH_BASE + 0x3800)    // 0x40023800
 
@@ -278,8 +304,16 @@ typedef struct
 #define GPIOB                  ((GPIO_TypeDef *) GPIOB_BASE)
 #define SPI1                   ((SPI_TypeDef *) SPI1_BASE)
 #define USART1                 ((USART_TypeDef *) USART1_BASE)
+
+#define DMA1                   ((DMA_TypeDef *) DMA1_BASE)
+#define DMA2                   ((DMA_TypeDef *) DMA2_BASE)
+#define DMA2_EXTEN             ((DMA_TypeDef *) DMA2_EXTEN_BASE)
+#define DMA1_Channel3          ((DMA_Channel_TypeDef *) DMA1_Channel3_BASE)
 #define RCC                    ((RCC_TypeDef *) RCC_BASE)
 #define EXTEN                  ((EXTEN_TypeDef *) EXTEN_BASE)
+
+
+#define RCC_AHBPCENR_DMA1EN    ((uint32_t)0x00000001)
 
 #define RCC_APB1PCENR_I2C2EN   ((uint32_t)0x00400000) // (1 << 22)
 #define RCC_APB1PCENR_DACEN    ((uint32_t)0x20000000) // (1 << 29)
@@ -438,6 +472,67 @@ DAC
 #define DHR12R1_OFFSET     ((uint32_t)0x00000008)
 #define DHR12R2_OFFSET     ((uint32_t)0x00000014)
 #define DHR12RD_OFFSET     ((uint32_t)0x00000020)
+
+
+
+/*
+
+DMA
+
+*/
+
+
+// DMA_data_transfer_direction
+#define DMA_DIR_PeripheralDST              ((uint32_t)0x00000010)
+#define DMA_DIR_PeripheralSRC              ((uint32_t)0x00000000)
+
+// DMA_peripheral_incremented_mode
+#define DMA_PeripheralInc_Enable           ((uint32_t)0x00000040)
+#define DMA_PeripheralInc_Disable          ((uint32_t)0x00000000)
+											
+// DMA_memory_incremented_mode
+#define DMA_MemoryInc_Enable               ((uint32_t)0x00000080)
+#define DMA_MemoryInc_Disable              ((uint32_t)0x00000000)
+										
+// DMA_peripheral_data_size
+#define DMA_PeripheralDataSize_Byte        ((uint32_t)0x00000000)
+#define DMA_PeripheralDataSize_HalfWord    ((uint32_t)0x00000100)
+#define DMA_PeripheralDataSize_Word        ((uint32_t)0x00000200)
+
+// DMA_memory_data_size
+#define DMA_MemoryDataSize_Byte            ((uint32_t)0x00000000)
+#define DMA_MemoryDataSize_HalfWord        ((uint32_t)0x00000400)
+#define DMA_MemoryDataSize_Word            ((uint32_t)0x00000800)
+
+// DMA_circular_normal_mode
+#define DMA_Mode_Circular                  ((uint32_t)0x00000020)
+#define DMA_Mode_Normal                    ((uint32_t)0x00000000)
+
+// DMA_priority_level
+#define DMA_Priority_VeryHigh              ((uint32_t)0x00003000)
+#define DMA_Priority_High                  ((uint32_t)0x00002000)
+#define DMA_Priority_Medium                ((uint32_t)0x00001000)
+#define DMA_Priority_Low                   ((uint32_t)0x00000000)
+
+// DMA_memory_to_memory
+#define DMA_M2M_Enable                     ((uint32_t)0x00004000)
+#define DMA_M2M_Disable                    ((uint32_t)0x00000000)
+
+// DMA2 FLAG mask
+#define FLAG_Mask                 ((uint32_t)0x10000000)
+#define DMA2_EXTEN_FLAG_Mask      ((uint32_t)0x20000000)
+
+// DMA registers Masks
+#define CFGR_CLEAR_Mask           ((uint32_t)0xFFFF800F)
+
+
+
+// DMA_flags_definition
+#define DMA1_FLAG_TC3                      ((uint32_t)0x00000200)
+
+
+// Channel enable
+#define  DMA_CFGR1_EN                      ((uint16_t)0x0001)            
 
 
 /*
