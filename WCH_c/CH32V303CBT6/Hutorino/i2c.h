@@ -121,7 +121,7 @@ uint8_t I2C2_GetFlagStatus(uint32_t I2C_FLAG)
 
     i2cxbase = (uint32_t)I2C2;
     i2creg = I2C_FLAG >> 28;
-    I2C_FLAG &= FLAG_Mask;
+    I2C_FLAG &= I2C_FLAG_Mask;
 
     if(i2creg != 0)
     {
@@ -157,7 +157,7 @@ uint8_t I2C2_CheckEvent(uint32_t I2C_EVENT)
     flag2 = I2C2->STAR2;
     flag2 = flag2 << 16;
 
-    lastevent = (flag1 | flag2) & FLAG_Mask;
+    lastevent = (flag1 | flag2) & I2C_FLAG_Mask;
 
     if((lastevent & I2C_EVENT) == I2C_EVENT)
     {
