@@ -58,10 +58,10 @@ Discarded input sections
  .text.Lcd_Clear
                 0x0000000000000000       0x1a build/main.o
  .text.Reset_Handler
-                0x0000000000000000       0x56 build/main.o
+                0x0000000000000000       0x4e build/main.o
  .data.AHBPrescTable
                 0x0000000000000000       0x10 build/main.o
- .data.curbrk.2874
+ .data.curbrk.2981
                 0x0000000000000000        0x4 build/main.o
  .isr_vector    0x0000000000000000        0x8 build/main.o
  .text          0x0000000000000000        0x0 build/startup_ch32v30x_D8.o
@@ -358,9 +358,9 @@ OUTPUT(build/build.elf elf32-littleriscv)
  .debug_info    0x0000000000000000     0x1d6f build/main.o
  .debug_info    0x0000000000001d6f       0x22 build/startup_ch32v30x_D8.o
 
-.debug_abbrev   0x0000000000000000      0x463
- .debug_abbrev  0x0000000000000000      0x451 build/main.o
- .debug_abbrev  0x0000000000000451       0x12 build/startup_ch32v30x_D8.o
+.debug_abbrev   0x0000000000000000      0x446
+ .debug_abbrev  0x0000000000000000      0x434 build/main.o
+ .debug_abbrev  0x0000000000000434       0x12 build/startup_ch32v30x_D8.o
 
 .debug_loc      0x0000000000000000      0xb11
  .debug_loc     0x0000000000000000      0xb11 build/main.o
@@ -389,5 +389,5 @@ OUTPUT(build/build.elf elf32-littleriscv)
  .comment       0x0000000000000000       0x33 build/main.o
                                          0x34 (size before relaxing)
 
-.debug_frame    0x0000000000000000      0x364
- .debug_frame   0x0000000000000000      0x364 build/main.o
+.debug_frame    0x0000000000000000      0x35c
+ .debug_frame   0x0000000000000000      0x35c build/main.o

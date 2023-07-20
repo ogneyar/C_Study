@@ -13,7 +13,7 @@ void EXTI1_IRQHandler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 uint8_t EXTI_GetITStatusLine1(void);
 
   
-__attribute__((noreturn))
+__attribute__((interrupt("WCH-Interrupt-fast")))
 void Reset_Handler(){
     // Импортируем символы, которые мы создали в скрпите линковки
     extern uint8_t __data_start__, __data_end__, __data_rom__, 

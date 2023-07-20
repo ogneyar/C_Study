@@ -8,10 +8,11 @@
 */
 
 #include "debug.h"
+#include "ch32v20x.h"
 
-/* Global define */
+#define RTC_LSI 1
+// #define RTC_LSE 1
 
-/* Global Variable */
 typedef struct
 {
     vu8 hour;
@@ -71,15 +72,33 @@ u8 RTC_Init(void)
     /* Is it the first configuration */
 
     BKP_DeInit();
+
+#ifndef RTC_LSE // если используется внутренний часовой кварц (LSI)
+
+    RCC_LSICmd(ENABLE);
+    while(RCC_GetFlagStatus(RCC_FLAG_LSIRDY) == RESET && temp < 250)
+    {
+        temp++;
+        Delay_Ms(20);
+    }
+    if(temp >= 250)
+        return 1;
+    RCC_RTCCLKConfig(RCC_RTCCLKSource_LSI);
+
+#else // если используется внешний часовой кварц (LSE)
+
     RCC_LSEConfig(RCC_LSE_ON);
     while(RCC_GetFlagStatus(RCC_FLAG_LSERDY) == RESET && temp < 250)
     {
-            temp++;
-            Delay_Ms(20);
+        temp++;
+        Delay_Ms(20);
     }
     if(temp >= 250)
-    return 1;
+        return 1;
     RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);
+
+#endif
+
     RCC_RTCCLKCmd(ENABLE);
     RTC_WaitForLastTask();
     RTC_WaitForSynchro();
@@ -89,7 +108,7 @@ u8 RTC_Init(void)
     RTC_EnterConfigMode();
     RTC_SetPrescaler(32767);
     RTC_WaitForLastTask();
-    RTC_Set(2019, 10, 8, 13, 58, 55); /* Setup Time */
+    RTC_Set(2023, 7, 20, 13, 43, 00); /* Setup Time */
     RTC_ExitConfigMode();
     BKP_WriteBackupRegister(BKP_DR1, 0XA1A1);
 

@@ -39,7 +39,7 @@ void DMA1_CH3_Init(uint32_t *SRC_BUF, uint32_t *DST_BUF, uint8_t Buf_Size)
 // Очистка флага
 void DMA_ClearFlag(uint32_t DMAy_FLAG)
 {
-    if((DMAy_FLAG & FLAG_Mask) == FLAG_Mask)
+    if((DMAy_FLAG & DMA2_FLAG_Mask) == DMA2_FLAG_Mask)
     {
         DMA2->INTFCR = DMAy_FLAG;
     }
@@ -60,7 +60,7 @@ uint8_t DMA_GetFlagStatus(uint32_t DMAy_FLAG)
     uint8_t bitstatus = RESET;
     uint32_t tmpreg = 0;
 
-    if((DMAy_FLAG & FLAG_Mask) == FLAG_Mask)
+    if((DMAy_FLAG & DMA2_FLAG_Mask) == DMA2_FLAG_Mask)
     {
         tmpreg = DMA2->INTFR;
     }

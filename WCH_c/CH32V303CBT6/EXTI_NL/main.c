@@ -55,7 +55,7 @@ void Leds_Blink(uint16_t delay)
 }
 
 
-//
+// обработчик прерываний EXTI
 void EXTI2_IRQHandler(void)
 {
     if(EXTI_GetITStatusLine2()!=RESET)
@@ -66,7 +66,7 @@ void EXTI2_IRQHandler(void)
 }
 
 
-//
+// получение статуса
 uint8_t EXTI_GetITStatusLine2(void)
 {
     uint8_t bitstatus = RESET;

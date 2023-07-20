@@ -204,6 +204,109 @@ typedef struct
     __IO uint32_t INTFCR;
 } DMA_TypeDef;
 
+// Backup Registers
+typedef struct
+{
+    uint32_t  RESERVED0;
+    __IO uint16_t DATAR1;
+    uint16_t  RESERVED1;
+    __IO uint16_t DATAR2;
+    uint16_t  RESERVED2;
+    __IO uint16_t DATAR3;
+    uint16_t  RESERVED3;
+    __IO uint16_t DATAR4;
+    uint16_t  RESERVED4;
+    __IO uint16_t DATAR5;
+    uint16_t  RESERVED5;
+    __IO uint16_t DATAR6;
+    uint16_t  RESERVED6;
+    __IO uint16_t DATAR7;
+    uint16_t  RESERVED7;
+    __IO uint16_t DATAR8;
+    uint16_t  RESERVED8;
+    __IO uint16_t DATAR9;
+    uint16_t  RESERVED9;
+    __IO uint16_t DATAR10;
+    uint16_t  RESERVED10; 
+    __IO uint16_t OCTLR;
+    uint16_t  RESERVED11;
+    __IO uint16_t TPCTLR;
+    uint16_t  RESERVED12;
+    __IO uint16_t TPCSR;
+    uint16_t  RESERVED13[5];
+    __IO uint16_t DATAR11;
+    uint16_t  RESERVED14;
+    __IO uint16_t DATAR12;
+    uint16_t  RESERVED15;
+    __IO uint16_t DATAR13;
+    uint16_t  RESERVED16;
+    __IO uint16_t DATAR14;
+    uint16_t  RESERVED17;
+    __IO uint16_t DATAR15;
+    uint16_t  RESERVED18;
+    __IO uint16_t DATAR16;
+    uint16_t  RESERVED19;
+    __IO uint16_t DATAR17;
+    uint16_t  RESERVED20;
+    __IO uint16_t DATAR18;
+    uint16_t  RESERVED21;
+    __IO uint16_t DATAR19;
+    uint16_t  RESERVED22;
+    __IO uint16_t DATAR20;
+    uint16_t  RESERVED23;
+    __IO uint16_t DATAR21;
+    uint16_t  RESERVED24;
+    __IO uint16_t DATAR22;
+    uint16_t  RESERVED25;
+    __IO uint16_t DATAR23;
+    uint16_t  RESERVED26;
+    __IO uint16_t DATAR24;
+    uint16_t  RESERVED27;
+    __IO uint16_t DATAR25;
+    uint16_t  RESERVED28;
+    __IO uint16_t DATAR26;
+    uint16_t  RESERVED29;
+    __IO uint16_t DATAR27;
+    uint16_t  RESERVED30;
+    __IO uint16_t DATAR28;
+    uint16_t  RESERVED31;
+    __IO uint16_t DATAR29;
+    uint16_t  RESERVED32;
+    __IO uint16_t DATAR30;
+    uint16_t  RESERVED33; 
+    __IO uint16_t DATAR31;
+    uint16_t  RESERVED34;
+    __IO uint16_t DATAR32;
+    uint16_t  RESERVED35;
+    __IO uint16_t DATAR33;
+    uint16_t  RESERVED36;
+    __IO uint16_t DATAR34;
+    uint16_t  RESERVED37;
+    __IO uint16_t DATAR35;
+    uint16_t  RESERVED38;
+    __IO uint16_t DATAR36;
+    uint16_t  RESERVED39;
+    __IO uint16_t DATAR37;
+    uint16_t  RESERVED40;
+    __IO uint16_t DATAR38;
+    uint16_t  RESERVED41;
+    __IO uint16_t DATAR39;
+    uint16_t  RESERVED42;
+    __IO uint16_t DATAR40;
+    uint16_t  RESERVED43;
+    __IO uint16_t DATAR41;
+    uint16_t  RESERVED44;
+    __IO uint16_t DATAR42;
+    uint16_t  RESERVED45;    
+} BKP_TypeDef;
+
+// Power Control
+typedef struct
+{
+    __IO uint32_t CTLR;
+    __IO uint32_t CSR;
+} PWR_TypeDef;
+
 
 #define SET         1
 #define RESET       0
@@ -269,6 +372,8 @@ typedef struct
 
 #define I2C1_BASE              (APB1PERIPH_BASE + 0x5400)   // 0x40005400
 #define I2C2_BASE              (APB1PERIPH_BASE + 0x5800)   // 0x40005800
+#define BKP_BASE               (APB1PERIPH_BASE + 0x6C00)   // 0x40006C00
+#define PWR_BASE               (APB1PERIPH_BASE + 0x7000)   // 0x40007000
 #define DAC_BASE               (APB1PERIPH_BASE + 0x7400)   // 0x40007400
 
 #define AFIO_BASE              (APB2PERIPH_BASE + 0x0000)   // 0x40010000
@@ -296,6 +401,8 @@ typedef struct
 #define SysTick                ((SysTick_Type *) 0xE000F000)
 
 #define I2C2                   ((I2C_TypeDef *) I2C2_BASE)
+#define BKP                    ((BKP_TypeDef *) BKP_BASE)
+#define PWR                    ((PWR_TypeDef *) PWR_BASE)
 #define DAC                    ((DAC_TypeDef *) DAC_BASE)
 
 #define AFIO                   ((AFIO_TypeDef *) AFIO_BASE)
@@ -316,6 +423,8 @@ typedef struct
 #define RCC_AHBPCENR_DMA1EN    ((uint32_t)0x00000001)
 
 #define RCC_APB1PCENR_I2C2EN   ((uint32_t)0x00400000) // (1 << 22)
+#define RCC_APB1PCENR_BKPEN    ((uint32_t)0x08000000) // (1 << 27)
+#define RCC_APB1PCENR_PWREN    ((uint32_t)0x10000000) // (1 << 28)
 #define RCC_APB1PCENR_DACEN    ((uint32_t)0x20000000) // (1 << 29)
 
 #define RCC_APB2PCENR_AFIOEN   ((uint32_t)0x00000001) // (1 << 0)
@@ -402,6 +511,46 @@ USART
 #define USART_FLAG_FE             ((uint16_t)0x0002)
 #define USART_FLAG_PE             ((uint16_t)0x0001)
 
+/*
+
+BKP
+
+*/
+
+
+// Bit definition for BKP_OCTLR register
+#define BKP_CAL                   ((uint16_t)0x007F)     // Calibration value
+#define BKP_CCO                   ((uint16_t)0x0080)     // Calibration Clock Output
+#define BKP_ASOE                  ((uint16_t)0x0100)     // Alarm or Second Output Enable
+#define BKP_ASOS                  ((uint16_t)0x0200)     // Alarm or Second Output Selection
+
+// Bit definition for BKP_TPCTLR register
+#define BKP_TPE                   ((uint8_t)0x01)        // TAMPER pin enable
+#define BKP_TPAL                  ((uint8_t)0x02)        // TAMPER pin active level
+
+// Bit definition for BKP_TPCSR register
+#define BKP_CTE                   ((uint16_t)0x0001)     // Clear Tamper event
+#define BKP_CTI                   ((uint16_t)0x0002)     // Clear Tamper Interrupt
+#define BKP_TPIE                  ((uint16_t)0x0004)     // TAMPER Pin interrupt enable
+#define BKP_TEF                   ((uint16_t)0x0100)     // Tamper Event Flag
+#define BKP_TIF                   ((uint16_t)0x0200)     // Tamper Interrupt Flag
+
+// Tamper_Pin_active_level
+#define BKP_TamperPinLevel_High   ((uint16_t)0x0000)
+#define BKP_TamperPinLevel_Low    ((uint16_t)0x0001)
+
+// Data_Backup_Register
+#define BKP_DR1                   ((uint16_t)0x0004)
+#define BKP_DR2                   ((uint16_t)0x0008)
+#define BKP_DR3                   ((uint16_t)0x000C)
+#define BKP_DR4                   ((uint16_t)0x0010)
+#define BKP_DR5                   ((uint16_t)0x0014)
+#define BKP_DR6                   ((uint16_t)0x0018)
+#define BKP_DR7                   ((uint16_t)0x001C)
+#define BKP_DR8                   ((uint16_t)0x0020)
+
+
+
 
 /*
 
@@ -409,9 +558,9 @@ DAC
 
 */
 
-#define DAC_EN1            ((uint32_t)0x00000001)        /* DAC channel1 enable */
+#define DAC_EN1                 ((uint32_t)0x00000001)        /* DAC channel1 enable */
 
-#define CTLR_CLEAR_MASK    ((uint32_t)0x00000FFE)
+#define CTLR_CLEAR_MASK         ((uint32_t)0x00000FFE)
 
 // DAC_trigger_selection
 #define DAC_Trigger_None        ((uint32_t)0x00000000) /* Conversion is automatic once the DAC1_DHRxxxx register has been loaded, and not by external trigger */
@@ -519,20 +668,17 @@ DMA
 #define DMA_M2M_Disable                    ((uint32_t)0x00000000)
 
 // DMA2 FLAG mask
-#define FLAG_Mask                 ((uint32_t)0x10000000)
-#define DMA2_EXTEN_FLAG_Mask      ((uint32_t)0x20000000)
+#define DMA2_FLAG_Mask                     ((uint32_t)0x10000000)
+#define DMA2_EXTEN_FLAG_Mask               ((uint32_t)0x20000000)
 
 // DMA registers Masks
-#define CFGR_CLEAR_Mask           ((uint32_t)0xFFFF800F)
-
-
+#define CFGR_CLEAR_Mask                    ((uint32_t)0xFFFF800F)
 
 // DMA_flags_definition
 #define DMA1_FLAG_TC3                      ((uint32_t)0x00000200)
 
-
 // Channel enable
-#define  DMA_CFGR1_EN                      ((uint16_t)0x0001)            
+#define DMA_CFGR1_EN                       ((uint16_t)0x0001)            
 
 
 /*
@@ -684,7 +830,7 @@ I2C
 #define OADDR1_ADD0_Reset        ((uint16_t)0xFFFE)
 
 // I2C FLAG mask
-#define FLAG_Mask                ((uint32_t)0x00FFFFFF)
+#define I2C_FLAG_Mask                ((uint32_t)0x00FFFFFF)
 
 
 
