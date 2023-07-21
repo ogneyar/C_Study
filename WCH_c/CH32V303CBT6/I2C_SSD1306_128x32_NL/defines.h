@@ -11,6 +11,11 @@ typedef uint32_t  u32;
 typedef uint16_t  u16;
 typedef uint8_t   u8;
 
+typedef volatile uint8_t vu8;
+typedef volatile uint16_t vu16;
+typedef volatile uint32_t vu32;
+typedef volatile uint64_t vu64;
+
 // memory mapped structure for Program Fast Interrupt Controller (PFIC)
 typedef struct{
     __I  uint32_t ISR[8];
@@ -307,6 +312,31 @@ typedef struct
     __IO uint32_t CSR;
 } PWR_TypeDef;
 
+// Real-Time Clock
+typedef struct
+{
+    __IO uint16_t CTLRH;
+    uint16_t  RESERVED0;
+    __IO uint16_t CTLRL;
+    uint16_t  RESERVED1;
+    __IO uint16_t PSCRH;
+    uint16_t  RESERVED2;
+    __IO uint16_t PSCRL;
+    uint16_t  RESERVED3;
+    __IO uint16_t DIVH;
+    uint16_t  RESERVED4;
+    __IO uint16_t DIVL;
+    uint16_t  RESERVED5;
+    __IO uint16_t CNTH;
+    uint16_t  RESERVED6;
+    __IO uint16_t CNTL;
+    uint16_t  RESERVED7;
+    __IO uint16_t ALRMH;
+    uint16_t  RESERVED8;
+    __IO uint16_t ALRML;
+    uint16_t  RESERVED9;
+} RTC_TypeDef;
+
 
 #define SET         1
 #define RESET       0
@@ -318,48 +348,6 @@ typedef struct
 #define LED_G       4 // PB4
 #define LED_B       5 // PB5
 
-#define PA0         0 // 
-#define PA1         1 // 
-#define PA2         2 // USR_BTN
-#define PA3         3 // 
-#define PA4         4 // DAC
-#define PA5         5 // SPI1 CLK
-#define PA6         6 // SPI1 MISO
-#define PA7         7 // SPI1 MOSI
-#define PA8         8 // 
-#define PA9         9 // Tx1
-#define PA10       10 // 
-#define PA11       11 // 
-#define PA12       12 // 
-#define PA13       13 // 
-#define PA14       14 // 
-#define PA15       15 // 
-
-#define PB0         0 // 
-#define PB1         1 // 
-#define PB2         2 // 
-#define PB3         3 // LED_R
-#define PB4         4 // LED_G
-#define PB5         5 // LED_B
-#define PB6         6 // 
-#define PB7         7 // 
-#define PB8         8 // 
-#define PB9         9 // 
-#define PB10       10 // SCK I2C2
-#define PB11       11 // SDA I2C2
-#define PB12       12 // 
-#define PB13       13 // 
-#define PB14       14 // 
-#define PB15       15 // 
-
-#define GPIO_Msk        0b1111
-#define GPIO_Speed_50   0b0011
-#define GPIO_IN_FLOAT   0b0100
-#define GPIO_AF         0b1000 // Alternate Functions
-#define GPIO_AF_50      0b1011 // Alternate Functions with speed 50Hz
-#define GPIO_AF_OD      0b1100 // Alternate Functions
-#define GPIO_AF_OD_50   0b1111 // Alternate Functions with speed 50Hz
-#define GPIO_IPU        0b1000 // Input Pull Up
 
 // Peripheral memory map
 #define FLASH_BASE             ((uint32_t)0x08000000)
@@ -370,6 +358,7 @@ typedef struct
 #define APB2PERIPH_BASE        (PERIPH_BASE + 0x10000)      // 0x40010000
 #define AHBPERIPH_BASE         (PERIPH_BASE + 0x20000)      // 0x40020000
 
+#define RTC_BASE               (APB1PERIPH_BASE + 0x2800)   // 0x40002800
 #define I2C1_BASE              (APB1PERIPH_BASE + 0x5400)   // 0x40005400
 #define I2C2_BASE              (APB1PERIPH_BASE + 0x5800)   // 0x40005800
 #define BKP_BASE               (APB1PERIPH_BASE + 0x6C00)   // 0x40006C00
@@ -400,6 +389,7 @@ typedef struct
 
 #define SysTick                ((SysTick_Type *) 0xE000F000)
 
+#define RTC                    ((RTC_TypeDef *) RTC_BASE)
 #define I2C2                   ((I2C_TypeDef *) I2C2_BASE)
 #define BKP                    ((BKP_TypeDef *) BKP_BASE)
 #define PWR                    ((PWR_TypeDef *) PWR_BASE)
@@ -420,37 +410,8 @@ typedef struct
 #define EXTEN                  ((EXTEN_TypeDef *) EXTEN_BASE)
 
 
-#define RCC_AHBPCENR_DMA1EN    ((uint32_t)0x00000001)
-
-#define RCC_APB1PCENR_I2C2EN   ((uint32_t)0x00400000) // (1 << 22)
-#define RCC_APB1PCENR_BKPEN    ((uint32_t)0x08000000) // (1 << 27)
-#define RCC_APB1PCENR_PWREN    ((uint32_t)0x10000000) // (1 << 28)
-#define RCC_APB1PCENR_DACEN    ((uint32_t)0x20000000) // (1 << 29)
-
-#define RCC_APB2PCENR_AFIOEN   ((uint32_t)0x00000001) // (1 << 0)
-#define RCC_APB2PCENR_IOPAEN   ((uint32_t)0x00000004) // (1 << 2)
-#define RCC_APB2PCENR_IOPBEN   ((uint32_t)0x00000008) // (1 << 3)
-#define RCC_APB2PCENR_SPI1EN   ((uint32_t)0x00001000) // (1 << 12)
-#define RCC_APB2PCENR_USART1EN ((uint32_t)0x00004000) // (1 << 14)
 
 #define EXTEN_PLL_HSI_PRE      ((uint32_t)0x00000010) // (1 << 4)
-
-#define RCC_HPRE               ((uint32_t)0x000000F0) // HPRE[3:0] bits (AHB prescaler)
-#define RCC_HPRE_DIV1          ((uint32_t)0x00000000) // SYSCLK not divided
-#define RCC_PPRE2_DIV1         ((uint32_t)0x00000000) // HCLK not divided
-#define RCC_PPRE1_DIV2         ((uint32_t)0x00000400) // HCLK divided by 2
-#define RCC_PLLSRC             ((uint32_t)0x00010000) // PLL entry clock source
-#define RCC_PLLXTPRE           ((uint32_t)0x00020000) // HSE divider for PLL entry
-#define RCC_PLLMULL            ((uint32_t)0x003C0000) // PLLMUL[3:0] bits (PLL multiplication factor)
-#define RCC_PLLMULL6           ((uint32_t)0x00100000) // PLL input clock*6
-#define RCC_PLLMULL18          ((uint32_t)0x003C0000) // PLL input clock*18
-#define RCC_PLLSRC_HSI_Div2    ((uint32_t)0x00000000) // HSI clock divided by 2 selected as PLL entry clock source
-#define RCC_PLLON              ((uint32_t)0x01000000) // PLL enable
-#define RCC_PLLRDY             ((uint32_t)0x02000000) // PLL clock ready flag
-#define RCC_SW                 ((uint32_t)0x00000003) // SW[1:0] bits (System clock Switch)
-#define RCC_SW_PLL             ((uint32_t)0x00000002) // PLL selected as system clock
-#define RCC_SWS                ((uint32_t)0x0000000C) // SWS[1:0] bits (System Clock Switch Status)
-
 
 #define HSE_VALUE              ((uint32_t)8000000) // внешний осцилятор
 #define HSI_VALUE              ((uint32_t)8000000) // внутренний осцилятор
@@ -459,64 +420,12 @@ typedef struct
 #define SYSCLK_FREQ_144MHz_HSI 144000000
 
 
-           
-/*
-
-USART
-
-*/
-
-#define CTLR1_UE_Set              ((uint16_t)0x2000) // USART Enable Mask
-#define CTLR1_UE_Reset            ((uint16_t)0xDFFF) // USART Disable Mask
-
-#define CTLR2_STOP_CLEAR_Mask     ((uint16_t)0xCFFF) // USART CR2 STOP Bits Mask
-#define CTLR1_CLEAR_Mask          ((uint16_t)0xE9F3) // USART CR1 Mask
-#define CTLR3_CLEAR_Mask          ((uint16_t)0xFCFF) // USART CR3 Mask
-
-   
-// USART_Word_Length
-#define USART_WordLength_8b       ((uint16_t)0x0000)
-#define USART_WordLength_9b       ((uint16_t)0x1000)
-
-// USART_Stop_Bits  
-#define USART_StopBits_1          ((uint16_t)0x0000)
-#define USART_StopBits_0_5        ((uint16_t)0x1000)
-#define USART_StopBits_2          ((uint16_t)0x2000)
-#define USART_StopBits_1_5        ((uint16_t)0x3000)
-
-// USART_Parity  
-#define USART_Parity_No           ((uint16_t)0x0000)
-#define USART_Parity_Even         ((uint16_t)0x0400)
-#define USART_Parity_Odd          ((uint16_t)0x0600) 
-
-// USART_Mode 
-#define USART_Mode_Rx             ((uint16_t)0x0004)
-#define USART_Mode_Tx             ((uint16_t)0x0008)
-
-/* USART_Hardware_Flow_Control */
-#define USART_HardwareFlowControl_None       ((uint16_t)0x0000)
-#define USART_HardwareFlowControl_RTS        ((uint16_t)0x0100)
-#define USART_HardwareFlowControl_CTS        ((uint16_t)0x0200)
-#define USART_HardwareFlowControl_RTS_CTS    ((uint16_t)0x0300)
-
-// USART_Flags
-#define USART_FLAG_CTS            ((uint16_t)0x0200)
-#define USART_FLAG_LBD            ((uint16_t)0x0100)
-#define USART_FLAG_TXE            ((uint16_t)0x0080)
-#define USART_FLAG_TC             ((uint16_t)0x0040)
-#define USART_FLAG_RXNE           ((uint16_t)0x0020)
-#define USART_FLAG_IDLE           ((uint16_t)0x0010)
-#define USART_FLAG_ORE            ((uint16_t)0x0008)
-#define USART_FLAG_NE             ((uint16_t)0x0004)
-#define USART_FLAG_FE             ((uint16_t)0x0002)
-#define USART_FLAG_PE             ((uint16_t)0x0001)
 
 /*
 
 BKP
 
 */
-
 
 // Bit definition for BKP_OCTLR register
 #define BKP_CAL                   ((uint16_t)0x007F)     // Calibration value
@@ -736,6 +645,50 @@ GPIO
 
 */
 
+#define PA0         0 // 
+#define PA1         1 // 
+#define PA2         2 // USR_BTN
+#define PA3         3 // 
+#define PA4         4 // DAC
+#define PA5         5 // SPI1 CLK
+#define PA6         6 // SPI1 MISO
+#define PA7         7 // SPI1 MOSI
+#define PA8         8 // 
+#define PA9         9 // Tx1
+#define PA10       10 // 
+#define PA11       11 // 
+#define PA12       12 // 
+#define PA13       13 // 
+#define PA14       14 // 
+#define PA15       15 // 
+
+#define PB0         0 // 
+#define PB1         1 // 
+#define PB2         2 // 
+#define PB3         3 // LED_R
+#define PB4         4 // LED_G
+#define PB5         5 // LED_B
+#define PB6         6 // 
+#define PB7         7 // 
+#define PB8         8 // 
+#define PB9         9 // 
+#define PB10       10 // SCK I2C2
+#define PB11       11 // SDA I2C2
+#define PB12       12 // 
+#define PB13       13 // 
+#define PB14       14 // 
+#define PB15       15 // 
+
+#define GPIO_Msk        0b1111
+#define GPIO_Speed_50   0b0011
+#define GPIO_IN_FLOAT   0b0100
+#define GPIO_AF         0b1000 // Alternate Functions
+#define GPIO_AF_50      0b1011 // Alternate Functions with speed 50Hz
+#define GPIO_AF_OD      0b1100 // Alternate Functions
+#define GPIO_AF_OD_50   0b1111 // Alternate Functions with speed 50Hz
+#define GPIO_IPU        0b1000 // Input Pull Up
+
+
 // GPIO_Port_Sources
 #define GPIO_PortSourceGPIOA        ((uint8_t)0x00)
 #define GPIO_PortSourceGPIOB        ((uint8_t)0x01)
@@ -848,6 +801,116 @@ NVIC
 #define NVIC_PriorityGroup_4           ((uint32_t)0x04)
 
 
+/*
+
+RCC
+
+*/
+
+
+// RCC registers bit address in the alias region
+#define RCC_OFFSET                 (RCC_BASE - PERIPH_BASE)
+
+// BDCTLR Register
+#define BDCTLR_OFFSET              (RCC_OFFSET + 0x20)
+
+// BDCTLR register base address
+#define BDCTLR_ADDRESS             (PERIPH_BASE + BDCTLR_OFFSET)
+
+
+// LSE_configuration
+#define RCC_LSE_OFF                      ((uint8_t)0x00)
+#define RCC_LSE_ON                       ((uint8_t)0x01)
+#define RCC_LSE_Bypass                   ((uint8_t)0x04)
+
+// RTC_clock_source
+#define RCC_RTCCLKSource_LSE             ((uint32_t)0x00000100)
+#define RCC_RTCCLKSource_LSI             ((uint32_t)0x00000200)
+#define RCC_RTCCLKSource_HSE_Div128      ((uint32_t)0x00000300)
+
+
+#define RCC_AHBPCENR_DMA1EN    ((uint32_t)0x00000001)
+
+#define RCC_APB1PCENR_I2C2EN   ((uint32_t)0x00400000) // (1 << 22)
+#define RCC_APB1PCENR_BKPEN    ((uint32_t)0x08000000) // (1 << 27)
+#define RCC_APB1PCENR_PWREN    ((uint32_t)0x10000000) // (1 << 28)
+#define RCC_APB1PCENR_DACEN    ((uint32_t)0x20000000) // (1 << 29)
+
+#define RCC_APB2PCENR_AFIOEN   ((uint32_t)0x00000001) // (1 << 0)
+#define RCC_APB2PCENR_IOPAEN   ((uint32_t)0x00000004) // (1 << 2)
+#define RCC_APB2PCENR_IOPBEN   ((uint32_t)0x00000008) // (1 << 3)
+#define RCC_APB2PCENR_SPI1EN   ((uint32_t)0x00001000) // (1 << 12)
+#define RCC_APB2PCENR_USART1EN ((uint32_t)0x00004000) // (1 << 14)
+
+#define RCC_HPRE               ((uint32_t)0x000000F0) // HPRE[3:0] bits (AHB prescaler)
+#define RCC_HPRE_DIV1          ((uint32_t)0x00000000) // SYSCLK not divided
+#define RCC_PPRE2_DIV1         ((uint32_t)0x00000000) // HCLK not divided
+#define RCC_PPRE1_DIV2         ((uint32_t)0x00000400) // HCLK divided by 2
+#define RCC_PLLSRC             ((uint32_t)0x00010000) // PLL entry clock source
+#define RCC_PLLXTPRE           ((uint32_t)0x00020000) // HSE divider for PLL entry
+#define RCC_PLLMULL            ((uint32_t)0x003C0000) // PLLMUL[3:0] bits (PLL multiplication factor)
+#define RCC_PLLMULL6           ((uint32_t)0x00100000) // PLL input clock*6
+#define RCC_PLLMULL18          ((uint32_t)0x003C0000) // PLL input clock*18
+#define RCC_PLLSRC_HSI_Div2    ((uint32_t)0x00000000) // HSI clock divided by 2 selected as PLL entry clock source
+#define RCC_PLLON              ((uint32_t)0x01000000) // PLL enable
+#define RCC_PLLRDY             ((uint32_t)0x02000000) // PLL clock ready flag
+#define RCC_SW                 ((uint32_t)0x00000003) // SW[1:0] bits (System clock Switch)
+#define RCC_SW_PLL             ((uint32_t)0x00000002) // PLL selected as system clock
+#define RCC_SWS                ((uint32_t)0x0000000C) // SWS[1:0] bits (System Clock Switch Status)
+
+// RCC Flag Mask
+#define RCC_FLAG_Mask          ((uint8_t)0x1F)
+
+// RCC_Flag
+#define RCC_FLAG_HSIRDY        ((uint8_t)0x21)
+#define RCC_FLAG_HSERDY        ((uint8_t)0x31)
+#define RCC_FLAG_PLLRDY        ((uint8_t)0x39)
+#define RCC_FLAG_LSERDY        ((uint8_t)0x41)
+#define RCC_FLAG_LSIRDY        ((uint8_t)0x61)
+#define RCC_FLAG_PINRST        ((uint8_t)0x7A)
+#define RCC_FLAG_PORRST        ((uint8_t)0x7B)
+#define RCC_FLAG_SFTRST        ((uint8_t)0x7C)
+#define RCC_FLAG_IWDGRST       ((uint8_t)0x7D)
+#define RCC_FLAG_WWDGRST       ((uint8_t)0x7E)
+#define RCC_FLAG_LPWRRST       ((uint8_t)0x7F)
+
+
+
+/*
+
+RTC
+
+*/
+
+// Bit definition for RTC_CTLRH register
+#define  RTC_CTLRH_SECIE    ((uint8_t)0x01) // Second Interrupt Enable
+#define  RTC_CTLRH_ALRIE    ((uint8_t)0x02) // Alarm Interrupt Enable
+#define  RTC_CTLRH_OWIE     ((uint8_t)0x04) // OverfloW Interrupt Enable
+
+// Bit definition for RTC_CTLRL register
+#define  RTC_CTLRL_SECF     ((uint8_t)0x01) // Second Flag
+#define  RTC_CTLRL_ALRF     ((uint8_t)0x02) // Alarm Flag
+#define  RTC_CTLRL_OWF      ((uint8_t)0x04) // OverfloW Flag
+#define  RTC_CTLRL_RSF      ((uint8_t)0x08) // Registers Synchronized Flag
+#define  RTC_CTLRL_CNF      ((uint8_t)0x10) // Configuration Flag
+#define  RTC_CTLRL_RTOFF    ((uint8_t)0x20) // RTC operation OFF
+
+// RTC_Private_Defines
+#define RTC_LSB_MASK        ((uint32_t)0x0000FFFF) // RTC LSB Mask
+#define PRLH_MSB_MASK       ((uint32_t)0x000F0000) // RTC Prescaler MSB Mask
+
+// RTC_interrupts_define
+#define RTC_IT_OW           ((uint16_t)0x0004)  // Overflow interrupt
+#define RTC_IT_ALR          ((uint16_t)0x0002)  // Alarm interrupt
+#define RTC_IT_SEC          ((uint16_t)0x0001)  // Second interrupt
+
+// RTC_interrupts_flags
+#define RTC_FLAG_RTOFF      ((uint16_t)0x0020) // RTC Operation OFF flag
+#define RTC_FLAG_RSF        ((uint16_t)0x0008) // Registers Synchronized flag
+#define RTC_FLAG_OW         ((uint16_t)0x0004) // Overflow flag
+#define RTC_FLAG_ALR        ((uint16_t)0x0002) // Alarm flag
+#define RTC_FLAG_SEC        ((uint16_t)0x0001) // Second flag
+
 
 
 
@@ -914,6 +977,64 @@ SPI
 #define SPI_FLAG_MODF                   ((uint16_t)0x0020)
 #define SPI_I2S_FLAG_OVR                ((uint16_t)0x0040)
 #define SPI_I2S_FLAG_BSY                ((uint16_t)0x0080)
+
+
+
+           
+/*
+
+USART
+
+*/
+
+#define CTLR1_UE_Set              ((uint16_t)0x2000) // USART Enable Mask
+#define CTLR1_UE_Reset            ((uint16_t)0xDFFF) // USART Disable Mask
+
+#define CTLR2_STOP_CLEAR_Mask     ((uint16_t)0xCFFF) // USART CR2 STOP Bits Mask
+#define CTLR1_CLEAR_Mask          ((uint16_t)0xE9F3) // USART CR1 Mask
+#define CTLR3_CLEAR_Mask          ((uint16_t)0xFCFF) // USART CR3 Mask
+
+   
+// USART_Word_Length
+#define USART_WordLength_8b       ((uint16_t)0x0000)
+#define USART_WordLength_9b       ((uint16_t)0x1000)
+
+// USART_Stop_Bits  
+#define USART_StopBits_1          ((uint16_t)0x0000)
+#define USART_StopBits_0_5        ((uint16_t)0x1000)
+#define USART_StopBits_2          ((uint16_t)0x2000)
+#define USART_StopBits_1_5        ((uint16_t)0x3000)
+
+// USART_Parity  
+#define USART_Parity_No           ((uint16_t)0x0000)
+#define USART_Parity_Even         ((uint16_t)0x0400)
+#define USART_Parity_Odd          ((uint16_t)0x0600) 
+
+// USART_Mode 
+#define USART_Mode_Rx             ((uint16_t)0x0004)
+#define USART_Mode_Tx             ((uint16_t)0x0008)
+
+/* USART_Hardware_Flow_Control */
+#define USART_HardwareFlowControl_None       ((uint16_t)0x0000)
+#define USART_HardwareFlowControl_RTS        ((uint16_t)0x0100)
+#define USART_HardwareFlowControl_CTS        ((uint16_t)0x0200)
+#define USART_HardwareFlowControl_RTS_CTS    ((uint16_t)0x0300)
+
+// USART_Flags
+#define USART_FLAG_CTS            ((uint16_t)0x0200)
+#define USART_FLAG_LBD            ((uint16_t)0x0100)
+#define USART_FLAG_TXE            ((uint16_t)0x0080)
+#define USART_FLAG_TC             ((uint16_t)0x0040)
+#define USART_FLAG_RXNE           ((uint16_t)0x0020)
+#define USART_FLAG_IDLE           ((uint16_t)0x0010)
+#define USART_FLAG_ORE            ((uint16_t)0x0008)
+#define USART_FLAG_NE             ((uint16_t)0x0004)
+#define USART_FLAG_FE             ((uint16_t)0x0002)
+#define USART_FLAG_PE             ((uint16_t)0x0001)
+
+
+
+
 
 
 #endif /* __DEFINES_H_ */

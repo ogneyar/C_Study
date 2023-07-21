@@ -1,6 +1,6 @@
 
-#ifndef __EXTI_H_
-#define __EXTI_H_
+#ifndef __BKP_H_
+#define __BKP_H_
 
 #include "stdio.h"
 #include <stdint.h>
@@ -75,4 +75,4 @@ uint8_t BKP_GetITStatus(void)
 }
 
 
-#endif /* __EXTI_H_ */
+#endif /* __BKP_H_ */

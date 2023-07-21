@@ -52,8 +52,8 @@ u8 RTC_Get_Week(u16 year, u8 month, u8 day);
 // Основная функция
 int main(void)
 {
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-    SystemCoreClockUpdate();
+    // NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    // SystemCoreClockUpdate();
     Delay_Init();
     USART_Printf_Init(115200);	
     printf("SystemClk:%d\r\n", SystemCoreClock);
@@ -106,7 +106,7 @@ void Leds_Blink(uint16_t delay)
     Delay_Ms(delay);
 }
 
-//
+// настройка контроллера прерываний
 static void RTC_NVIC_Config(void)
 {
     NVIC_InitTypeDef NVIC_InitStructure = {0};
@@ -117,7 +117,7 @@ static void RTC_NVIC_Config(void)
     NVIC_Init(&NVIC_InitStructure);
 }
 
-//
+// Инициализация RTC
 u8 RTC_Init(void)
 {
     u8 temp = 0;
@@ -161,7 +161,7 @@ u8 RTC_Init(void)
     RTC_ITConfig(RTC_IT_SEC, ENABLE);
     RTC_WaitForLastTask();
 
-    uint16_t bkp_data = 0XA1A3;
+    uint16_t bkp_data = 0XA1A5;
 
     // когда надо установить время
     // ---------------------------
@@ -170,7 +170,7 @@ u8 RTC_Init(void)
         RTC_EnterConfigMode();
         RTC_SetPrescaler(32767);
         RTC_WaitForLastTask();
-        RTC_Set(2023, 7, 20, 14, 20, 20); /* Setup Time */
+        RTC_Set(2023, 7, 21, 11, 50, 0); /* Setup Time */
         RTC_ExitConfigMode();
         
         BKP_WriteBackupRegister(BKP_DR1, bkp_data);
