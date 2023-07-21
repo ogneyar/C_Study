@@ -2,6 +2,8 @@
 #ifndef __DEFINES_H_
 #define __DEFINES_H_
 
+#include "stdio.h"
+
 #define __I     volatile    // defines 'read only' permissions
 #define __O     volatile    // defines 'write only' permissions
 #define __IO    volatile    // defines 'read/write' permissions
