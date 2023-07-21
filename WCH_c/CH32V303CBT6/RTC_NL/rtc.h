@@ -99,7 +99,7 @@ u8 RTC_Init(void)
 	RTC->CTLRH |= RTC_IT_SEC;
     RTC_WaitForLastTask();
 
-    uint16_t bkp_data = 0XA1A6;
+    uint16_t bkp_data = 0XA1AA;
 
     // когда надо установить время
     // ---------------------------
@@ -110,7 +110,7 @@ u8 RTC_Init(void)
 		RTC->PSCRH = (32767 & PRLH_MSB_MASK) >> 16;
 		RTC->PSCRL = (32767 & RTC_LSB_MASK);
         RTC_WaitForLastTask();
-        RTC_Set(2023, 7, 21, 13, 2, 0); // Setup Time
+        RTC_Set(2023, 7, 21, 13, 47, 0); // Setup Time
         RTC_ExitConfigMode();
         
         BKP_Write(BKP_DR1, bkp_data);

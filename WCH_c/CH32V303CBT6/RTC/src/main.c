@@ -161,7 +161,7 @@ u8 RTC_Init(void)
     RTC_ITConfig(RTC_IT_SEC, ENABLE);
     RTC_WaitForLastTask();
 
-    uint16_t bkp_data = 0XA1A5;
+    uint16_t bkp_data = 0XA1A8;
 
     // когда надо установить время
     // ---------------------------
@@ -170,10 +170,11 @@ u8 RTC_Init(void)
         RTC_EnterConfigMode();
         RTC_SetPrescaler(32767);
         RTC_WaitForLastTask();
-        RTC_Set(2023, 7, 21, 11, 50, 0); /* Setup Time */
+        RTC_Set(2023, 7, 21, 13, 44, 20); /* Setup Time */
         RTC_ExitConfigMode();
         
         BKP_WriteBackupRegister(BKP_DR1, bkp_data);
+        // printf("BKP_DR1: 0x%04x\r\n", BKP->DATAR1);
     }
     // ---------------------------
 
