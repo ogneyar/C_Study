@@ -23,6 +23,14 @@ int main(void)
     Delay_Ms(100);
     
     Lcd_Init();
+
+    Lcd_Dot(10,10,0xff00);
+    Lcd_Dot(230,10,0xff00);
+    Lcd_Dot(230,310,0xff00);
+    Lcd_Dot(10,310,0xff00);
+    Lcd_Dot(120,160,0xff00);
+
+    Delay_Ms(5000);
       
     while(1)
     {

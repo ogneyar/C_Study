@@ -19,7 +19,10 @@ void Lcd_Rect(unsigned int x,unsigned int y,unsigned int w,unsigned int h,unsign
 void Lcd_Rectf(unsigned int x,unsigned int y,unsigned int w,unsigned int h,unsigned int c);
 int Lcd_RGB(int r,int g,int b);
 void Lcd_Fill(unsigned int j);
-void Lcd_Clear();
+void Lcd_Clear(); 
+void Lcd_PushColors(uint16_t * block, int16_t size);
+uint16_t Lcd_Color565(uint8_t r, uint8_t g, uint8_t b);
+void Lcd_Dot(unsigned int x, unsigned int y, unsigned int c); 
 
 /*
 	LED  -- PA1
@@ -247,6 +250,45 @@ void Lcd_Fill(unsigned int j)
 void Lcd_Clear()
 {	
     Lcd_Fill(0);
+}
+
+//
+void Lcd_PushColors(uint16_t * block, int16_t size)
+{
+    GPIOA->BCR |= DD_CS;
+    for(uint32_t i = 0; i < size; i++)
+    {
+        Lcd_Write_Data(block[i] >> 8);        
+        Lcd_Write_Data(block[i]);
+    }
+    GPIOA->BSHR |= DD_CS;
+}
+
+//
+uint16_t Lcd_Color565(uint8_t r, uint8_t g, uint8_t b)
+{ 
+  return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | ((b & 0xF8) >> 3); 
+}
+
+
+//
+void Lcd_Dot(unsigned int x, unsigned int y, unsigned int c)          
+{	
+    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_8;
+    SPI1->CTLR1 &= ~SPI_BaudRatePrescaler_128;
+    SPI1->CTLR1 |= SPI_BaudRatePrescaler_2;
+
+    GPIOA->BCR |= DD_CS;
+
+    Lcd_Write_Com(0x02c); //write_memory_start    
+    Lcd_Address_Set(x-1, y-1, x+1, y+1);
+    for(uint32_t i = 0; i < 9; i++)
+    {
+        Lcd_Write_Data(c>>8);
+        Lcd_Write_Data(c);
+    }
+
+    GPIOA->BSHR |= DD_CS;     
 }
 
 
