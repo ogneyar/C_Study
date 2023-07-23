@@ -99,6 +99,7 @@ $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | make_folder
 $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | make_folder
 	$(BIN) $< $@	
 	
+	
 make_folder:
 	@-mkdir $(BUILD_DIR)		
 
