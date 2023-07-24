@@ -56,8 +56,18 @@ void Lcd_PushColors(uint16_t * block, int16_t size);
 uint16_t Lcd_Color565(uint8_t r, uint8_t g, uint8_t b);
 void Lcd_Dot(unsigned int x, unsigned int y, unsigned int c); 
 void Lcd_Print(uint8_t ch, uint16_t color);
+void Lcd_Print(const char *ch, uint16_t color);
+void Lcd_Print(uint8_t ch);
+void Lcd_Print(const char *ch);
 void Lcd_DrawChar(uint16_t x, uint16_t y, unsigned char c, uint16_t color, uint16_t bg, uint16_t size_x, uint16_t size_y);
 void Lcd_FillSquare(uint16_t color, uint16_t x, uint16_t y, uint16_t width, uint16_t height);
+void Lcd_PrintNum(uint32_t number, uint16_t color);
+void Lcd_PrintNum(uint32_t number);
+void Lcd_SetCursor(uint16_t x, uint16_t y);
+void Lcd_SetFontSize(uint8_t size);
+void Lcd_SetFontSize(uint8_t sizeX, uint8_t sizeY);
+void Lcd_SetFontColor(uint16_t color);
+void Lcd_SetFontBgColor(uint16_t color);
 
 
 /*
@@ -212,7 +222,8 @@ void Lcd_Address_Set(unsigned int x1,unsigned int y1,unsigned int x2,unsigned in
 	Lcd_Write_Data(y1);
 	Lcd_Write_Data(y2>>8);
 	Lcd_Write_Data(y2);
-	Lcd_Write_Com(0x2c); 							 
+
+	Lcd_Write_Com(0x2c); //write_memory_start					 
 }
 
 //
@@ -226,7 +237,7 @@ void Lcd_H_line(unsigned int x, unsigned int y, unsigned int l, unsigned int c)
     
     GPIOA->BCR |= DD_CS;
 
-    Lcd_Write_Com(0x02c); //write_memory_start
+    // Lcd_Write_Com(0x02c); //write_memory_start
     l=l+x;
     Lcd_Address_Set(x, y, l, y);
     j=l*2;
@@ -249,7 +260,7 @@ void Lcd_V_line(unsigned int x, unsigned int y, unsigned int l, unsigned int c)
     
     GPIOA->BCR |= DD_CS;
 
-    Lcd_Write_Com(0x02c); //write_memory_start
+    // Lcd_Write_Com(0x02c); //write_memory_start
     l=l+y;
     Lcd_Address_Set(x, y, x, l);
     j=l*2;
@@ -290,9 +301,9 @@ int Lcd_RGB(int r,int g,int b)
 void Lcd_Fill(unsigned int j)
 {	
     GPIOA->BCR |= DD_CS;
-    Lcd_Address_Set(0, 0, 240, 320);
-    for(uint32_t i = 0; i < 240; i++)
-        for(uint32_t m = 0; m < 320; m++)
+    Lcd_Address_Set(0, 0, _width, _height);
+    for(uint32_t i = 0; i < _width; i++)
+        for(uint32_t m = 0; m < _height; m++)
         {
             Lcd_Write_Data(j>>8);
             Lcd_Write_Data(j);
@@ -334,14 +345,13 @@ void Lcd_Dot(unsigned int x, unsigned int y, unsigned int c)
 
     GPIOA->BCR |= DD_CS;
 
-    Lcd_Write_Com(0x02c); //write_memory_start    
+    Lcd_Write_Com(0x02c); //write_memory_start  
+
     // Lcd_Address_Set(x-1, y-1, x+1, y+1);
     Lcd_Address_Set(x, y, x, y);
-    // for(uint32_t i = 0; i < 9; i++)
-    // {
-        Lcd_Write_Data(c>>8);
-        Lcd_Write_Data(c);
-    // }
+
+    Lcd_Write_Data(c>>8);
+    Lcd_Write_Data(c);
 
     GPIOA->BSHR |= DD_CS;     
 }
@@ -349,17 +359,40 @@ void Lcd_Dot(unsigned int x, unsigned int y, unsigned int c)
 //
 void Lcd_Print(uint8_t ch, uint16_t color)
 {
-    if (ch == '\n') {              // Newline?
-        cursor_x = 0;               // Reset x to zero,
+    if (ch == '\n') {               // Newline?
+        cursor_x = 0;         // Reset x to zero,
         cursor_y += textsize_y * 8; // advance y one line
-    } else if (ch != '\r') {       // Ignore carriage returns
+    } else if (ch != '\r') {        // Ignore carriage returns
         if (wrap && ((cursor_x + textsize_x * 6) > _width)) { // Off right?
-        cursor_x = 0;                                       // Reset x to zero,
-        cursor_y += textsize_y * 8; // advance y one line
+            cursor_x = 0;     // Reset x to zero,
+            cursor_y += textsize_y * 8; // advance y one line
         }
+        // Lcd_Address_Set(0, 0, _width, _height);
         Lcd_DrawChar(cursor_x, cursor_y, ch, color, textbgcolor, textsize_x, textsize_y);
         cursor_x += textsize_x * 6; // Advance x one char
     }
+}
+
+//
+void Lcd_Print(const char *ch, uint16_t color)
+{
+    const char * ptrCh = ch;
+    while(*ptrCh != '\0') {
+        Lcd_Print(*ptrCh, color);
+        ptrCh++;
+    }
+}
+
+//
+void Lcd_Print(uint8_t ch)
+{
+    Lcd_Print(ch, textcolor);
+}
+
+//
+void Lcd_Print(const char *ch)
+{
+    Lcd_Print(ch, textcolor);
 }
 
 
@@ -369,13 +402,19 @@ void Lcd_DrawChar(uint16_t x, uint16_t y, unsigned char c, uint16_t color, uint1
     const GFXfont *gfxFont = &font;
 
     c -= (uint8_t)gfxFont->first;
-    GFXglyph *glyph = read_glyph_ptr(gfxFont, c);
-    uint8_t *bitmap = read_bitmap_ptr(gfxFont);
 
-    uint16_t bo = glyph->bitmapOffset;
-    uint8_t w = glyph->width, h = glyph->height;
-    uint8_t xo = glyph->xOffset,
-            yo = glyph->yOffset;
+    GFXglyph glyph = read_glyph(gfxFont, c);
+    uint8_t *bitmap = read_bitmap(gfxFont);
+
+    uint16_t bo = glyph.bitmapOffset;
+    uint8_t w = glyph.width, h = glyph.height;
+
+    // добавил эти строки чтобы координаты символа x = 0, y = 0, вмещали символ полностью на экране 
+    x += w;
+    y += (size_y * h);
+
+    int8_t xo = glyph.xOffset,
+           yo = glyph.yOffset;
     uint8_t xx, yy, bits = 0, bit = 0;
     uint16_t xo16 = 0, yo16 = 0;
 
@@ -386,17 +425,17 @@ void Lcd_DrawChar(uint16_t x, uint16_t y, unsigned char c, uint16_t color, uint1
 
     for (yy = 0; yy < h; yy++) {
         for (xx = 0; xx < w; xx++) {
-        if (!(bit++ & 7)) {
-            bits = bitmap[bo++];
-        }
-        if (bits & 0x80) {
-            if (size_x == 1 && size_y == 1) {
-                Lcd_Dot(x + xo + xx, y + yo + yy, color);
-            } else {
-                Lcd_FillSquare(color, x + (xo16 + xx) * size_x, y + (yo16 + yy) * size_y, size_x, size_y);
+            if (!(bit++ & 7)) {
+                bits = bitmap[bo++];
             }
-        }
-        bits <<= 1;
+            if (bits & 0x80) {
+                if (size_x == 1 && size_y == 1) {
+                    Lcd_Dot(x + xo + xx, y + yo + yy, color);
+                } else {
+                    Lcd_FillSquare(color, x + (xo16 + xx) * size_x, y + (yo16 + yy) * size_y, size_x, size_y);
+                }
+            }
+            bits <<= 1;
         }
     }
 }
@@ -411,9 +450,10 @@ void Lcd_FillSquare(uint16_t color, uint16_t x, uint16_t y, uint16_t width, uint
     GPIOA->BCR |= DD_CS;
 
     Lcd_Write_Com(0x02c); //write_memory_start    
-    Lcd_Address_Set(x, y, x + width, y + height);
+    // Lcd_Address_Set(x, y, x + width, y + height);
+    Lcd_Address_Set(x, y - height, x + width, y);
 
-    for(uint32_t i = 0; i < (width * height); i++)
+    for(uint32_t i = 0; i < ((width+1) * (height+1)); i++)
     {
         Lcd_Write_Data(color >> 8);
         Lcd_Write_Data(color);
@@ -422,6 +462,79 @@ void Lcd_FillSquare(uint16_t color, uint16_t x, uint16_t y, uint16_t width, uint
     GPIOA->BSHR |= DD_CS;   
 
 }
+
+
+//
+void Lcd_PrintNum(uint32_t number, uint16_t color)
+{
+    if (number <= 9) { 
+        Lcd_Print(number + 0x30, color);
+    }else if (number > 9 && number < 100) {
+        Lcd_Print(number/10 + 0x30, color);
+        Lcd_Print( number - ((number/10) * 10) + 0x30, color);
+    }else if (number > 99 && number < 1000) {
+        uint8_t temp = number / 100;
+        Lcd_Print(temp + 0x30, color);
+        uint8_t temp2 = ( number - temp*100 )  / 10;
+        Lcd_Print(temp2 + 0x30, color);
+        uint8_t temp3 = number - temp*100 - temp2*10;
+        Lcd_Print(temp3 + 0x30, color);
+    }else if (number > 999 && number < 10000) {
+        uint8_t temp = number / 1000;
+        Lcd_Print(temp + 0x30, color);
+        uint8_t temp2 = ( number - temp*1000 )  / 100;
+        Lcd_Print(temp2 + 0x30, color);
+        uint8_t temp3 = (number - temp*1000 - temp2*100) / 10;
+        Lcd_Print(temp3 + 0x30, color);
+        uint8_t temp4 = number - temp*1000 - temp2*100 - temp3*10;
+        Lcd_Print(temp4 + 0x30, color);
+    }
+}
+
+//
+void Lcd_PrintNum(uint32_t number)
+{  
+    Lcd_PrintNum(number, textcolor);
+}
+
+//
+void Lcd_SetCursor(uint16_t x, uint16_t y)
+{
+    cursor_x = x; // x+5;
+    cursor_y = y; // y+10;
+}
+
+//
+void Lcd_SetFontSize(uint8_t size)
+{  
+    textsize_x = size;
+    textsize_y = size;
+}
+
+//
+void Lcd_SetFontSize(uint8_t sizeX, uint8_t sizeY)
+{  
+    if (rotation == 1) {
+        textsize_x = sizeY;
+        textsize_y = sizeX;
+    }else {    
+        textsize_x = sizeX;
+        textsize_y = sizeY;
+    }
+}
+
+//
+void Lcd_SetFontColor(uint16_t color)
+{
+    textcolor = color;
+}
+
+//
+void Lcd_SetFontBgColor(uint16_t color)
+{
+    textbgcolor = color;
+}
+
 
 
 

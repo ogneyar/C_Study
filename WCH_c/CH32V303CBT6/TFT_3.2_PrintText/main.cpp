@@ -19,28 +19,24 @@ int main(void)
     Delay_Init();    
     USART_Printf_Init(115200);
     printf("SystemClk: %d\r\n", SystemCoreClock);    
+    printf("TFT 3.2 Print Text\r\n");    
     GPIO_Leds_Init();
         
     Lcd_Init();
-    Lcd_Fill(WHITE);
-    Delay_Ms(1000);
+    // Lcd_Fill(WHITE);
+    // Delay_Ms(1000);
     Lcd_Fill(0xff00);
-    Delay_Ms(1000);
+    // Delay_Ms(1000);
 
-    Lcd_Dot(120, 160, BLACK);
-    Lcd_Dot(121, 160, BLACK);
-    Lcd_Dot(120, 161, BLACK);
-    Lcd_Dot(121, 161, BLACK);    
-    Delay_Ms(1000);
+    Lcd_SetFontSize(4);
+    Lcd_SetCursor(0, 60);
 
-    Lcd_Print('a',BLACK);
-    Lcd_Print('b',BLACK);
-    Lcd_Print('c',BLACK);
-    Lcd_Print('d',BLACK);
-    Lcd_Print('e',BLACK);
-    Lcd_Print('f',BLACK);
-    Lcd_Print('g',BLACK);
-            
+    Lcd_Print(" HELL'O\r\n ");
+    Lcd_PrintNum(2023);
+    Lcd_Print(" year");
+                
+    Lcd_Rect(10, 40, 220, 100, WHITE);
+
     while(1) 
     {
 	    Leds_Blink(100);
