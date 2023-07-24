@@ -271,7 +271,7 @@ END GROUP
  *fill*         0x000000000000009e        0x2 
                 0x00000000000000a0                _einit = .
 
-.text           0x00000000000000a0      0x598
+.text           0x00000000000000a0      0x52c
                 0x00000000000000a0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000000000a0       0x14 e:/program/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
@@ -319,81 +319,81 @@ END GROUP
                 0x0000000000000322       0x2e build/main.o
                 0x0000000000000322                main
  .text.SystemInit
-                0x0000000000000350       0xfe build/system_ch32v00x.o
+                0x0000000000000350       0x90 build/system_ch32v00x.o
                 0x0000000000000350                SystemInit
  .text.Delay_Us
-                0x000000000000044e       0x36 build/debug.o
-                0x000000000000044e                Delay_Us
+                0x00000000000003e0       0x36 build/debug.o
+                0x00000000000003e0                Delay_Us
  .text.RCC_APB2PeriphClockCmd
-                0x0000000000000484       0x1e build/ch32v00x_rcc.o
-                0x0000000000000484                RCC_APB2PeriphClockCmd
+                0x0000000000000416       0x1e build/ch32v00x_rcc.o
+                0x0000000000000416                RCC_APB2PeriphClockCmd
  .text.GPIO_Init
-                0x00000000000004a2       0xd6 build/ch32v00x_gpio.o
-                0x00000000000004a2                GPIO_Init
+                0x0000000000000434       0xd6 build/ch32v00x_gpio.o
+                0x0000000000000434                GPIO_Init
  .text.GPIO_ReadInputDataBit
-                0x0000000000000578        0xa build/ch32v00x_gpio.o
-                0x0000000000000578                GPIO_ReadInputDataBit
+                0x000000000000050a        0xa build/ch32v00x_gpio.o
+                0x000000000000050a                GPIO_ReadInputDataBit
  .text.vector_handler
-                0x0000000000000582       0x36 build/startup_ch32v00x.o
-                0x0000000000000582                NMI_Handler
-                0x0000000000000584                HardFault_Handler
-                0x0000000000000586                SysTick_Handler
-                0x0000000000000588                SW_Handler
-                0x000000000000058a                WWDG_IRQHandler
-                0x000000000000058c                PVD_IRQHandler
-                0x000000000000058e                FLASH_IRQHandler
-                0x0000000000000590                RCC_IRQHandler
-                0x0000000000000592                EXTI7_0_IRQHandler
-                0x0000000000000594                AWU_IRQHandler
-                0x0000000000000596                DMA1_Channel1_IRQHandler
-                0x0000000000000598                DMA1_Channel2_IRQHandler
-                0x000000000000059a                DMA1_Channel3_IRQHandler
-                0x000000000000059c                DMA1_Channel4_IRQHandler
-                0x000000000000059e                DMA1_Channel5_IRQHandler
-                0x00000000000005a0                DMA1_Channel6_IRQHandler
-                0x00000000000005a2                DMA1_Channel7_IRQHandler
-                0x00000000000005a4                ADC1_IRQHandler
-                0x00000000000005a6                I2C1_EV_IRQHandler
-                0x00000000000005a8                I2C1_ER_IRQHandler
-                0x00000000000005aa                USART1_IRQHandler
-                0x00000000000005ac                SPI1_IRQHandler
-                0x00000000000005ae                TIM1_BRK_IRQHandler
-                0x00000000000005b0                TIM1_UP_IRQHandler
-                0x00000000000005b2                TIM1_TRG_COM_IRQHandler
-                0x00000000000005b4                TIM1_CC_IRQHandler
-                0x00000000000005b6                TIM2_IRQHandler
+                0x0000000000000514       0x36 build/startup_ch32v00x.o
+                0x0000000000000514                NMI_Handler
+                0x0000000000000516                HardFault_Handler
+                0x0000000000000518                SysTick_Handler
+                0x000000000000051a                SW_Handler
+                0x000000000000051c                WWDG_IRQHandler
+                0x000000000000051e                PVD_IRQHandler
+                0x0000000000000520                FLASH_IRQHandler
+                0x0000000000000522                RCC_IRQHandler
+                0x0000000000000524                EXTI7_0_IRQHandler
+                0x0000000000000526                AWU_IRQHandler
+                0x0000000000000528                DMA1_Channel1_IRQHandler
+                0x000000000000052a                DMA1_Channel2_IRQHandler
+                0x000000000000052c                DMA1_Channel3_IRQHandler
+                0x000000000000052e                DMA1_Channel4_IRQHandler
+                0x0000000000000530                DMA1_Channel5_IRQHandler
+                0x0000000000000532                DMA1_Channel6_IRQHandler
+                0x0000000000000534                DMA1_Channel7_IRQHandler
+                0x0000000000000536                ADC1_IRQHandler
+                0x0000000000000538                I2C1_EV_IRQHandler
+                0x000000000000053a                I2C1_ER_IRQHandler
+                0x000000000000053c                USART1_IRQHandler
+                0x000000000000053e                SPI1_IRQHandler
+                0x0000000000000540                TIM1_BRK_IRQHandler
+                0x0000000000000542                TIM1_UP_IRQHandler
+                0x0000000000000544                TIM1_TRG_COM_IRQHandler
+                0x0000000000000546                TIM1_CC_IRQHandler
+                0x0000000000000548                TIM2_IRQHandler
  .text.handle_reset
-                0x00000000000005b8       0x80 build/startup_ch32v00x.o
-                0x00000000000005b8                handle_reset
+                0x000000000000054a       0x80 build/startup_ch32v00x.o
+                0x000000000000054a                handle_reset
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.t.*)
-                0x0000000000000638                . = ALIGN (0x4)
- *fill*         0x0000000000000638        0x0 
+                0x00000000000005cc                . = ALIGN (0x4)
+ *fill*         0x00000000000005ca        0x2 
 
-.rela.dyn       0x0000000000000638        0x0
- .rela.init     0x0000000000000638        0x0 build/main.o
+.rela.dyn       0x00000000000005cc        0x0
+ .rela.init     0x00000000000005cc        0x0 build/main.o
  .rela.text.handle_reset
-                0x0000000000000638        0x0 build/main.o
+                0x00000000000005cc        0x0 build/main.o
 
-.fini           0x0000000000000638        0x0
+.fini           0x00000000000005cc        0x0
  *(SORT_NONE(.fini))
-                0x0000000000000638                . = ALIGN (0x4)
+                0x00000000000005cc                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (_eitcm = .)
 
-.preinit_array  0x0000000000000638        0x0
+.preinit_array  0x00000000000005cc        0x0
                 [!provide]                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000000000638        0x0
+.init_array     0x00000000000005cc        0x0
                 [!provide]                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
                 [!provide]                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000000000638        0x0
+.fini_array     0x00000000000005cc        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -413,15 +413,15 @@ END GROUP
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.dalign         0x0000000020000000        0x0 load address 0x0000000000000638
+.dalign         0x0000000020000000        0x0 load address 0x00000000000005cc
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data_vma = .)
 
-.dlalign        0x0000000000000638        0x0
-                0x0000000000000638                . = ALIGN (0x4)
-                0x0000000000000638                PROVIDE (_data_lma = .)
+.dlalign        0x00000000000005cc        0x0
+                0x00000000000005cc                . = ALIGN (0x4)
+                0x00000000000005cc                PROVIDE (_data_lma = .)
 
-.data           0x0000000020000000       0x10 load address 0x0000000000000638
+.data           0x0000000020000000       0x10 load address 0x00000000000005cc
                 0x0000000020000000                . = ALIGN (0x4)
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
@@ -450,7 +450,7 @@ END GROUP
                 0x0000000020000010                . = ALIGN (0x4)
                 0x0000000020000010                PROVIDE (_edata = .)
 
-.bss            0x0000000020000010        0xc load address 0x0000000000000648
+.bss            0x0000000020000010        0xc load address 0x00000000000005dc
                 0x0000000020000010                . = ALIGN (0x4)
                 0x0000000020000010                PROVIDE (_sbss = .)
  *(.sbss*)
@@ -482,21 +482,21 @@ END GROUP
                 0x0000000020000800                PROVIDE (_eusrstack = .)
 OUTPUT(build/firmware.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x4ec7
- .debug_info    0x0000000000000000     0x13b3 build/main.o
- .debug_info    0x00000000000013b3      0xc00 build/system_ch32v00x.o
- .debug_info    0x0000000000001fb3      0xef8 build/debug.o
- .debug_info    0x0000000000002eab     0x1071 build/ch32v00x_rcc.o
- .debug_info    0x0000000000003f1c      0xf89 build/ch32v00x_gpio.o
- .debug_info    0x0000000000004ea5       0x22 build/startup_ch32v00x.o
+.debug_info     0x0000000000000000     0x4e3b
+ .debug_info    0x0000000000000000     0x13ce build/main.o
+ .debug_info    0x00000000000013ce      0xb59 build/system_ch32v00x.o
+ .debug_info    0x0000000000001f27      0xef8 build/debug.o
+ .debug_info    0x0000000000002e1f     0x1071 build/ch32v00x_rcc.o
+ .debug_info    0x0000000000003e90      0xf89 build/ch32v00x_gpio.o
+ .debug_info    0x0000000000004e19       0x22 build/startup_ch32v00x.o
 
-.debug_abbrev   0x0000000000000000      0xf67
- .debug_abbrev  0x0000000000000000      0x34e build/main.o
- .debug_abbrev  0x000000000000034e      0x2af build/system_ch32v00x.o
- .debug_abbrev  0x00000000000005fd      0x2f3 build/debug.o
- .debug_abbrev  0x00000000000008f0      0x36d build/ch32v00x_rcc.o
- .debug_abbrev  0x0000000000000c5d      0x2f8 build/ch32v00x_gpio.o
- .debug_abbrev  0x0000000000000f55       0x12 build/startup_ch32v00x.o
+.debug_abbrev   0x0000000000000000      0xf2a
+ .debug_abbrev  0x0000000000000000      0x357 build/main.o
+ .debug_abbrev  0x0000000000000357      0x269 build/system_ch32v00x.o
+ .debug_abbrev  0x00000000000005c0      0x2f3 build/debug.o
+ .debug_abbrev  0x00000000000008b3      0x36d build/ch32v00x_rcc.o
+ .debug_abbrev  0x0000000000000c20      0x2f8 build/ch32v00x_gpio.o
+ .debug_abbrev  0x0000000000000f18       0x12 build/startup_ch32v00x.o
 
 .debug_loc      0x0000000000000000     0x1299
  .debug_loc     0x0000000000000000      0x4bd build/main.o
@@ -519,32 +519,32 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_aranges
                 0x0000000000000270       0x30 build/startup_ch32v00x.o
 
-.debug_ranges   0x0000000000000000      0x2d8
+.debug_ranges   0x0000000000000000      0x2b8
  .debug_ranges  0x0000000000000000       0xf0 build/main.o
- .debug_ranges  0x00000000000000f0       0x38 build/system_ch32v00x.o
- .debug_ranges  0x0000000000000128       0x38 build/debug.o
- .debug_ranges  0x0000000000000160       0xd0 build/ch32v00x_rcc.o
- .debug_ranges  0x0000000000000230       0x80 build/ch32v00x_gpio.o
- .debug_ranges  0x00000000000002b0       0x28 build/startup_ch32v00x.o
+ .debug_ranges  0x00000000000000f0       0x18 build/system_ch32v00x.o
+ .debug_ranges  0x0000000000000108       0x38 build/debug.o
+ .debug_ranges  0x0000000000000140       0xd0 build/ch32v00x_rcc.o
+ .debug_ranges  0x0000000000000210       0x80 build/ch32v00x_gpio.o
+ .debug_ranges  0x0000000000000290       0x28 build/startup_ch32v00x.o
 
-.debug_line     0x0000000000000000     0x3002
- .debug_line    0x0000000000000000      0x96e build/main.o
- .debug_line    0x000000000000096e      0x5f0 build/system_ch32v00x.o
- .debug_line    0x0000000000000f5e      0x6c2 build/debug.o
- .debug_line    0x0000000000001620      0xcda build/ch32v00x_rcc.o
- .debug_line    0x00000000000022fa      0xb55 build/ch32v00x_gpio.o
- .debug_line    0x0000000000002e4f      0x1b3 build/startup_ch32v00x.o
+.debug_line     0x0000000000000000     0x2ea6
+ .debug_line    0x0000000000000000      0x97e build/main.o
+ .debug_line    0x000000000000097e      0x484 build/system_ch32v00x.o
+ .debug_line    0x0000000000000e02      0x6c2 build/debug.o
+ .debug_line    0x00000000000014c4      0xcda build/ch32v00x_rcc.o
+ .debug_line    0x000000000000219e      0xb55 build/ch32v00x_gpio.o
+ .debug_line    0x0000000000002cf3      0x1b3 build/startup_ch32v00x.o
 
 .debug_str      0x0000000000000000      0xfbf
  .debug_str     0x0000000000000000      0x7ef build/main.o
                                         0x87f (size before relaxing)
- .debug_str     0x00000000000007ef      0x12f build/system_ch32v00x.o
-                                        0x6f7 (size before relaxing)
- .debug_str     0x000000000000091e      0x1a3 build/debug.o
+ .debug_str     0x00000000000007ef       0xfc build/system_ch32v00x.o
+                                        0x6aa (size before relaxing)
+ .debug_str     0x00000000000008eb      0x1a3 build/debug.o
                                         0x8e9 (size before relaxing)
- .debug_str     0x0000000000000ac1      0x336 build/ch32v00x_rcc.o
+ .debug_str     0x0000000000000a8e      0x34f build/ch32v00x_rcc.o
                                         0x9ba (size before relaxing)
- .debug_str     0x0000000000000df7      0x199 build/ch32v00x_gpio.o
+ .debug_str     0x0000000000000ddd      0x1b3 build/ch32v00x_gpio.o
                                         0x908 (size before relaxing)
  .debug_str     0x0000000000000f90       0x2f build/startup_ch32v00x.o
                                          0x62 (size before relaxing)
@@ -557,9 +557,9 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .comment       0x0000000000000033       0x34 build/ch32v00x_rcc.o
  .comment       0x0000000000000033       0x34 build/ch32v00x_gpio.o
 
-.debug_frame    0x0000000000000000      0x5cc
+.debug_frame    0x0000000000000000      0x5c0
  .debug_frame   0x0000000000000000      0x1cc build/main.o
- .debug_frame   0x00000000000001cc       0x4c build/system_ch32v00x.o
- .debug_frame   0x0000000000000218       0xc8 build/debug.o
- .debug_frame   0x00000000000002e0      0x1c0 build/ch32v00x_rcc.o
- .debug_frame   0x00000000000004a0      0x12c build/ch32v00x_gpio.o
+ .debug_frame   0x00000000000001cc       0x40 build/system_ch32v00x.o
+ .debug_frame   0x000000000000020c       0xc8 build/debug.o
+ .debug_frame   0x00000000000002d4      0x1c0 build/ch32v00x_rcc.o
+ .debug_frame   0x0000000000000494      0x12c build/ch32v00x_gpio.o

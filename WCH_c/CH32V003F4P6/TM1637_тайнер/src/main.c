@@ -11,8 +11,10 @@ int main(void)
     tm1637_brightness(1);  // яркость, 0 - 7 (минимум - максимум)
     tm1637_point(1);
     tm1637_display(0, 0, 0, 0);
-    Delay_Ms(1000);
-    tm1637_display(0, 1, 2, 3);
+    // Delay_Ms(1000);
+    // tm1637_display(0, 1, 2, 3);
+    // Delay_Ms(1000);
+    tm1637_point(0);
 
     while(1)
     {
