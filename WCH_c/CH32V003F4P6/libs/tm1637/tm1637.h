@@ -21,7 +21,7 @@ uint8_t digit[10] = { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6f
 uint8_t Cmd_DispCtrl = 0;  //0x88;
 uint8_t _DispCLKpin = 5;
 uint8_t _DispDIOpin = 6;
-uint8_t points = 0;
+uint8_t _points = 0;
 
 
 // Список функций
@@ -160,9 +160,9 @@ void tm1637_brightness(uint8_t bri)
 
 
 // показывать ли точки
-void tm1637_point(uint8_t pointFlag)
+void tm1637_point(uint8_t points)
 {
-    points = pointFlag;
+    _points = points;
 }
 
 
@@ -174,7 +174,7 @@ void tm1637_sendOne(uint8_t number, uint8_t data)
     tm1637_stop();                             //
     tm1637_start();                            //
     tm1637_writeByte(number - 1 | STARTADDR);  //
-    if (points) tm1637_writeByte(data | 0x80);
+    if (_points) tm1637_writeByte(data | 0x80);
     else tm1637_writeByte(data);     //
     tm1637_stop();                   //
     tm1637_start();                  //
@@ -192,7 +192,7 @@ void tm1637_sendAll(uint8_t data[])
     tm1637_start();               //
     tm1637_writeByte(STARTADDR);  //
     for (uint8_t i = 0; i < 4; i++) {
-        if (points) tm1637_writeByte(data[i] | 0x80);
+        if (_points) tm1637_writeByte(data[i] | 0x80);
         else tm1637_writeByte(data[i]);  //
     }
     tm1637_stop();                   //
@@ -205,7 +205,7 @@ void tm1637_sendAll(uint8_t data[])
 // очистка экрана
 void tm1637_clear(void)
 {
-    points = 0;
+    _points = 0;
     tm1637_sendOne(1, 0x00);
     tm1637_sendOne(2, 0x00);
     tm1637_sendOne(3, 0x00);
