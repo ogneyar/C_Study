@@ -5,7 +5,6 @@ DEBUG = 0
 
 OPT = -Os
 
-
 BUILD_DIR = build
 
 
@@ -16,7 +15,6 @@ C_SOURCES =  \
 	../libs/Peripheral/src/ch32v00x_rcc.c \
 	../libs/Peripheral/src/ch32v00x_gpio.c \
 	../libs/Peripheral/src/ch32v00x_usart.c \
-	../libs/Peripheral/src/ch32v00x_tim.c \
 	../libs/Peripheral/src/ch32v00x_misc.c #\
 	../libs/Peripheral/src/ch32v00x_dma.c \
 	../libs/Peripheral/src/ch32v00x_adc.c \
@@ -28,6 +26,7 @@ C_SOURCES =  \
 	../libs/Peripheral/src/ch32v00x_opa.c \
 	../libs/Peripheral/src/ch32v00x_pwr.c \
 	../libs/Peripheral/src/ch32v00x_spi.c \
+	../libs/Peripheral/src/ch32v00x_tim.c \
 	../libs/Peripheral/src/ch32v00x_wwdg.c
 
 # ASM sources
@@ -115,8 +114,7 @@ C_INCLUDES =  \
 	-Isrc \
 	-I../libs/Core \
 	-I../libs/Debug \
-	-I../libs/Peripheral/inc \
-	-I../libs/tm1637
+	-I../libs/Peripheral/inc
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT)

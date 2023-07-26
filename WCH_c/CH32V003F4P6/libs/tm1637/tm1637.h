@@ -38,7 +38,7 @@ void tm1637_point(uint8_t pointFlag);
 void tm1637_sendOne(uint8_t number, uint8_t data);
 void tm1637_sendAll(uint8_t data[]);
 void tm1637_clear(void);
-
+void tm1637_clearWithOutPoints(void);
 
 
 // 
@@ -211,6 +211,16 @@ void tm1637_clear(void)
     tm1637_sendOne(3, 0x00);
     tm1637_sendOne(4, 0x00);
 }
+
+// очистка экрана без точек
+void tm1637_clearWithOutPoints(void)
+{
+    tm1637_sendOne(1, 0x00);
+    tm1637_sendOne(2, 0x00);
+    tm1637_sendOne(3, 0x00);
+    tm1637_sendOne(4, 0x00);
+}
+
 
 
 

@@ -14,12 +14,12 @@ bool update = false;        // флаг для обновления
 bool beepFlag = false;      // флаг для сигнала
 bool setTimeFlag = false;   // флаг установки тайнера
 
-uint8_t segment1 = 1;
-uint8_t segment2 = 2;
-uint8_t segment3 = 5;
-uint8_t segment4 = 8;
-uint8_t segment5 = 5; // сегменты секунд не отображаются
-uint8_t segment6 = 9; // но считаются
+uint8_t segment1 = 0;
+uint8_t segment2 = 0;
+uint8_t segment3 = 0;
+uint8_t segment4 = 0;
+uint8_t segment5 = 0; // сегменты секунд не отображаются
+uint8_t segment6 = 5; // но считаются
 
 uint8_t points = 0;
 
@@ -38,6 +38,8 @@ uint8_t height_segments = 57;
 
 
 // список функций
+void TIM2_IRQHandler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void TIM2_Init(u16 period);
 void buttonInit(void);
 void showTime(void);
 void beep(void);
@@ -53,6 +55,8 @@ int main(void)
     printf("SystemClk:%d\r\n", SystemCoreClock);
     printf("Tainer on TM1637\r\n");
 
+    TIM2_Init(1000); // прерывание таймера раз в секунду
+
     tm1637_init(GPIOC, GPIO_Pin_2, GPIO_Pin_1);  // по умолчанию CLK = GPIO_Pin_2, а DIO = GPIO_Pin_1
     tm1637_clear();
     tm1637_brightness(1);  // яркость, 0 - 7 (минимум - максимум)
@@ -62,10 +66,8 @@ int main(void)
     buttonInit();
 
     while(1)
-    {
-        update = ! setTime(); // если была нажата 1 кнопка, то тайнер останавливается, до следующего нажатия этой же кнопки
-
-        blinkPoints();
+    {     
+        // update = ! setTime(); // если была нажата 1 кнопка, то тайнер останавливается, до следующего нажатия этой же кнопки
 
         showTime();        
 
@@ -75,6 +77,38 @@ int main(void)
     }
 }
 
+//
+void TIM2_IRQHandler(void)
+{
+    if (TIM_GetITStatus(TIM2, TIM_IT_CC4) != RESET)
+    {        
+#ifdef __DEBUG_TAINER_
+        printf("Run at TIM2\r\n");
+#endif
+        update = 1;
+        TIM_ClearITPendingBit(TIM2, TIM_IT_CC4);     /* Clear Flag */
+    }
+
+}
+
+//
+void TIM2_Init(u16 period)
+{
+    TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure={0};
+
+    RCC_APB1PeriphClockCmd( RCC_APB1Periph_TIM2, ENABLE );
+   
+    TIM_TimeBaseInitStructure.TIM_Period = period;
+    TIM_TimeBaseInitStructure.TIM_Prescaler = (SystemCoreClock/1000)-1;
+    TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+    TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    TIM_TimeBaseInit( TIM2, &TIM_TimeBaseInitStructure);
+
+    TIM_Cmd( TIM2, ENABLE );
+
+    NVIC_EnableIRQ(TIM2_IRQn);
+    TIM_ITConfig(TIM2, TIM_IT_CC4, ENABLE);
+}
 
 //
 void buttonInit(void)
@@ -99,10 +133,13 @@ void showTime(void)
 {  
     if (update)
     {    
-        if (segment1 || segment2 || segment3 || segment4)
+        if (segment1 || segment2 || segment3 || segment4 || segment5 || segment6)
         {
             tm1637_point(points = !points);
-            tm1637_display(segment1, segment2, segment3, segment4);
+
+            if (segment1 || segment2) tm1637_display(segment1, segment2, segment3, segment4); // часы и минуты
+            else tm1637_display(segment3, segment4, segment5, segment6); // минуты и секунды
+
             if (segment6) segment6--;
             else
             {
@@ -167,24 +204,26 @@ void showTime(void)
 void beep(void)
 {
     beepFlag = true;
+
+    while(beepFlag)
+    {
+        blinkPoints();
 #ifdef __DEBUG_TAINER_
-    printf("beep\r\n");
+        printf("beep\r\n");
 #endif
+    }
+    
 }
 
 //
 void blinkPoints(void)
 {
-    if (update)
+    for (uint8_t i = 0; i < 10; i++)
     {
-        for (uint8_t i = 0; i < 10; i++)
-        {
-            Delay_Ms(100);
-            if (beepFlag) {
-                tm1637_point(points = !points);
-                tm1637_display(0, 0, 0, 0);
-            }
-        }
+        Delay_Ms(100);
+        tm1637_point(points = !points);
+        if ( ! points) tm1637_display(0, 0, 0, 0);
+        else tm1637_clearWithOutPoints();
     }
 }
 

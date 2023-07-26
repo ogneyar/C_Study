@@ -5,7 +5,6 @@ DEBUG = 0
 
 OPT = -Os
 
-
 BUILD_DIR = build
 
 
@@ -115,8 +114,7 @@ C_INCLUDES =  \
 	-Isrc \
 	-I../libs/Core \
 	-I../libs/Debug \
-	-I../libs/Peripheral/inc \
-	-I../libs/tm1637
+	-I../libs/Peripheral/inc
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT)
