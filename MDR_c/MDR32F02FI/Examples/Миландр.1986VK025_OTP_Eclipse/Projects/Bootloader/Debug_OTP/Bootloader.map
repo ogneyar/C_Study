@@ -1,0 +1,280 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+                              ./src/startup_MLDR187.o (__libc_init_array)
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc ./src/main.o
+ .group         0x0000000000000000        0xc ./src/main.o
+ .group         0x0000000000000000        0xc ./src/main.o
+ .group         0x0000000000000000        0xc ./src/main.o
+ .group         0x0000000000000000        0xc ./src/main.o
+ .group         0x0000000000000000        0xc ./src/main.o
+ .group         0x0000000000000000        0xc ./src/main.o
+ .group         0x0000000000000000        0xc ./src/main.o
+ .group         0x0000000000000000        0xc ./src/main.o
+ .text          0x0000000000000000        0x0 ./src/main.o
+ .data          0x0000000000000000        0x0 ./src/main.o
+ .bss           0x0000000000000000        0x0 ./src/main.o
+ .text          0x0000000000000000        0x0 ./src/startup_MLDR187.o
+ .bss           0x0000000000000000        0x0 ./src/startup_MLDR187.o
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000010000000 0x0000000000040000 xr
+OTP              0x0000000000020000 0x0000000000004000 xr
+TCMA_RAM         0x0000000080000000 0x0000000000010000 xrw
+TCMB_RAM         0x0000000080010000 0x0000000000008000 xrw
+AHB_RAM          0x0000000020000000 0x0000000000004000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./src/main.o
+LOAD ./src/startup_MLDR187.o
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libstdc++_nano.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libm.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libc_nano.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+START GROUP
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libc_nano.a
+END GROUP
+                0x0000000000000200                __stack_size = 0x200
+                0x0000000000000200                __heap_min_size = 0x200
+
+.text.init      0x0000000000020000      0x150
+ *(.text.init)
+ .text.init     0x0000000000020000      0x150 ./src/startup_MLDR187.o
+                0x0000000000020000                _start
+
+.text           0x0000000000020150      0x684
+                0x0000000000020150                . = ALIGN (0x4)
+ *(.text*)
+ .text.main     0x0000000000020150      0x3ec ./src/main.o
+                0x0000000000020150                main
+ .text.UartModeInit
+                0x000000000002053c       0x54 ./src/main.o
+                0x000000000002053c                UartModeInit
+ .text.UartSetBaud
+                0x0000000000020590       0x54 ./src/main.o
+                0x0000000000020590                UartSetBaud
+ .text.UartSendByte
+                0x00000000000205e4       0x42 ./src/main.o
+                0x00000000000205e4                UartSendByte
+ .text.UartReceiveByte
+                0x0000000000020626       0x26 ./src/main.o
+                0x0000000000020626                UartReceiveByte
+ .text.UartSyncErr
+                0x000000000002064c       0x48 ./src/main.o
+                0x000000000002064c                UartSyncErr
+ .text.UartReceiveParam
+                0x0000000000020694       0x82 ./src/main.o
+                0x0000000000020694                UartReceiveParam
+ .text.UartWaitBusy
+                0x0000000000020716       0x1c ./src/main.o
+                0x0000000000020716                UartWaitBusy
+ .text.AF_Run   0x0000000000020732       0x1a ./src/main.o
+                0x0000000000020732                AF_Run
+ .text.InitPort
+                0x000000000002074c       0x3a ./src/main.o
+                0x000000000002074c                InitPort
+ .text.__libc_init_array
+                0x0000000000020786       0x4e c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+                0x0000000000020786                __libc_init_array
+
+.rodata         0x00000000000207d4        0x0
+                0x00000000000207d4                . = ALIGN (0x4)
+ *fill*         0x00000000000207d4        0x0 
+ *(.rodata*)
+ *(.srodata*)
+
+.dalign         0x00000000000207d4        0x0
+                0x00000000000207d4                . = ALIGN (0x4)
+                0x00000000000207d4                __data_load_start = LOADADDR (.data)
+
+.data           0x0000000080000000      0x100 load address 0x00000000000207d4
+                0x0000000080000000                . = ALIGN (0x4)
+                0x0000000080000000                __data_start = .
+ *(.data*)
+ .data          0x0000000080000000       0xfc ./src/startup_MLDR187.o
+                0x0000000080000100                . = ALIGN (0x8)
+ *fill*         0x00000000800000fc        0x4 
+                0x0000000080000100                __sdata_start = .
+ *(.sdata*)
+                0x0000000080000100                . = ALIGN (0x4)
+                0x0000000080000100                __data_end = .
+
+.bss            0x0000000080000100        0x0
+                0x0000000080000100                . = ALIGN (0x8)
+                0x0000000080000100                __bss_start = .
+ *(.sbss*)
+ *(.scommon)
+ *(.bss*)
+ *(COMMON)
+                0x0000000080000100                . = ALIGN (0x8)
+                0x0000000080000100                __bss_end = .
+                0x0000000080000800                __global_pointer$ = MIN ((__sdata_start + 0x800), MAX ((__data_start + 0x800), (__bss_end - 0x800)))
+                0x0000000080000100                . = ALIGN (0x8)
+                0x0000000080000100                __end = .
+
+.aalign         0x00000000000208d4        0x0
+                0x00000000000208d4                . = ALIGN (0x4)
+                0x00000000000208d4                __ahbram_data_load_start = LOADADDR (.ahbram_data)
+
+.ahbram_data    0x0000000020000000        0x0 load address 0x00000000000208d4
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_data_start = .
+ *(.ahbram_data)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_data_end = .
+
+.ahbram_bss     0x0000000020000000        0x0
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_bss_start = .
+ *(.ahbram_bss)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_bss_end = .
+
+.ralign         0x00000000000208d4        0x0
+                0x00000000000208d4                . = ALIGN (0x4)
+                0x00000000000208d4                __ramfunc_load_start = LOADADDR (.ramfunc)
+
+.ramfunc        0x0000000080010000      0x166 load address 0x00000000000208d4
+                0x0000000080010000                . = ALIGN (0x4)
+                0x0000000080010000                __ramfunc_start = .
+ *(.ramfunc*)
+ .ramfunc       0x0000000080010000      0x166 ./src/startup_MLDR187.o
+                0x0000000080010000                trap_vector
+                0x00000000800100d6                trap_iam
+                0x00000000800100d8                trap_iaf
+                0x00000000800100da                trap_ii
+                0x00000000800100dc                trap_lam
+                0x00000000800100de                trap_laf
+                0x00000000800100e0                trap_sam
+                0x00000000800100e2                trap_saf
+                0x00000000800100e4                trap_ecallm
+                0x00000000800100e6                _exit
+                0x00000000800100e8                PendSV_Handler
+                0x00000000800100ea                enable_PendSV_Handler
+                0x00000000800100f2                disable_PendSV_Handler
+                0x00000000800100fa                SysTick_Handler
+                0x00000000800100fc                enable_SysTick_Handler
+                0x0000000080010106                disable_SysTick_Handler
+                0x0000000080010110                irq_extm
+                0x0000000080010112                enable_irq_extm
+                0x000000008001011e                disable_irq_extm
+                0x000000008001012a                DMA_IRQHandler
+                0x000000008001012c                UART1_IRQHandler
+                0x000000008001012e                UART2_IRQHandler
+                0x0000000080010130                SSP1_IRQHandler
+                0x0000000080010132                POWER_IRQHandler
+                0x0000000080010134                WWDG_IRQHandler
+                0x0000000080010136                Timer1_IRQHandler
+                0x0000000080010138                Timer2_IRQHandler
+                0x000000008001013a                ADC_IRQHandler
+                0x000000008001013c                I2C_IRQHandler
+                0x000000008001013e                BACKUP_IRQHandler
+                0x0000000080010140                EXT_1_IRQHandler
+                0x0000000080010142                EXT_2_IRQHandler
+                0x0000000080010144                EXT_3_IRQHandler
+                0x0000000080010146                ADCIU_1_IRQHandler
+                0x0000000080010148                ADCIU_2_IRQHandler
+                0x000000008001014a                ADCIU_3_IRQHandler
+                0x000000008001014c                L_BLOCK_IRQHandler
+                0x000000008001014e                Default_IRQHandler
+                0x0000000080010150                SENSORS_IRQHandler
+                0x0000000080010152                CLK_MEASURE_IRQHandler
+                0x0000000080010154                RANDOM_IRQHandler
+                0x0000000080010156                ISO7816_IRQHandler
+                0x0000000080010158                UART3_IRQHandler
+                0x000000008001015a                SSP2_IRQHandler
+                0x000000008001015c                SSP3_IRQHandler
+                0x000000008001015e                Timer3_IRQHandler
+                0x0000000080010160                Timer4_IRQHandler
+                0x0000000080010162                UART4_IRQHandler
+                0x0000000080010164                OTP_Corrupt_IRQHandler
+                0x0000000080010168                . = ALIGN (0x4)
+                0x0000000080010168                __ramfunc_end = .
+
+.boot_version   0x0000000000023fdf        0x1
+ *(.boot_version)
+ .boot_version  0x0000000000023fdf        0x1 ./src/main.o
+                0x0000000000023fdf                BootloaderVersion
+                0x0000000080010000                __stack_top = (ORIGIN (REGION_DATA) + LENGTH (REGION_DATA))
+                0x000000008000fe00                __stack_limit = (__stack_top - __stack_size)
+                0x0000000080000100                __heap_top = __end
+                0x000000000000fd00                __heap_size = (__stack_limit - __heap_top)
+                0x000000008000fe00                __heap_limit = (__heap_top + __heap_size)
+                0x0000000000000001                ASSERT ((__heap_size >= __heap_min_size), Unable to allocate __heap_min_size for heap!)
+
+.rela.dyn       0x0000000010000000        0x0
+ .rela.data     0x0000000010000000        0x0 ./src/main.o
+ .rela.text.init
+                0x0000000010000000        0x0 ./src/main.o
+ .rela.text.__libc_init_array
+                0x0000000010000000        0x0 ./src/main.o
+
+.heap           0x0000000080000100     0xfd00
+                0x000000008000fe00                . = (. + __heap_size)
+ *fill*         0x0000000080000100     0xfd00 
+
+.stack          0x000000008000fe00      0x200
+                0x0000000080010000                . = (. + __stack_size)
+ *fill*         0x000000008000fe00      0x200 
+OUTPUT(Bootloader.elf elf32-littleriscv)
+
+.debug_info     0x0000000000000000      0x739
+ .debug_info    0x0000000000000000      0x717 ./src/main.o
+ .debug_info    0x0000000000000717       0x22 ./src/startup_MLDR187.o
+
+.debug_abbrev   0x0000000000000000      0x211
+ .debug_abbrev  0x0000000000000000      0x1ff ./src/main.o
+ .debug_abbrev  0x00000000000001ff       0x12 ./src/startup_MLDR187.o
+
+.debug_aranges  0x0000000000000000       0x90
+ .debug_aranges
+                0x0000000000000000       0x68 ./src/main.o
+ .debug_aranges
+                0x0000000000000068       0x28 ./src/startup_MLDR187.o
+
+.debug_ranges   0x0000000000000000       0x90
+ .debug_ranges  0x0000000000000000       0x70 ./src/main.o
+ .debug_ranges  0x0000000000000070       0x20 ./src/startup_MLDR187.o
+
+.debug_macro    0x0000000000000000     0x591f
+ .debug_macro   0x0000000000000000       0xfb ./src/main.o
+ .debug_macro   0x00000000000000fb      0x76c ./src/main.o
+ .debug_macro   0x0000000000000867       0x22 ./src/main.o
+ .debug_macro   0x0000000000000889       0x8e ./src/main.o
+ .debug_macro   0x0000000000000917       0x51 ./src/main.o
+ .debug_macro   0x0000000000000968      0x103 ./src/main.o
+ .debug_macro   0x0000000000000a6b       0x6a ./src/main.o
+ .debug_macro   0x0000000000000ad5      0x1df ./src/main.o
+ .debug_macro   0x0000000000000cb4     0x4c43 ./src/main.o
+ .debug_macro   0x00000000000058f7       0x28 ./src/main.o
+
+.debug_line     0x0000000000000000     0x105a
+ .debug_line    0x0000000000000000      0xaad ./src/main.o
+ .debug_line    0x0000000000000aad      0x5ad ./src/startup_MLDR187.o
+
+.debug_str      0x0000000000000000    0x2181d
+ .debug_str     0x0000000000000000    0x217f8 ./src/main.o
+                                      0x21969 (size before relaxing)
+ .debug_str     0x00000000000217f8       0x25 ./src/startup_MLDR187.o
+                                         0x55 (size before relaxing)
+
+.comment        0x0000000000000000       0x31
+ .comment       0x0000000000000000       0x31 ./src/main.o
+                                         0x32 (size before relaxing)
+ .comment       0x0000000000000031       0x32 c:/eclipse/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+
+.debug_frame    0x0000000000000000      0x170
+ .debug_frame   0x0000000000000000      0x170 ./src/main.o

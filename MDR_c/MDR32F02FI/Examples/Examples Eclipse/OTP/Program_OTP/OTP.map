@@ -1,0 +1,2349 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_divdi3.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__divdi3)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_udivdi3.o)
+                              ./MLDR187_SPL/MLDR187_math.o (__udivdi3)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(addsf3.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__addsf3)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(divsf3.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__divsf3)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(gesf2.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__gtsf2)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(lesf2.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__ltsf2)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(mulsf3.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__mulsf3)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(subsf3.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__subsf3)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(fixsfsi.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__fixsfsi)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(floatsisf.o)
+                              ./MLDR187_SPL/src/MLDR187_math.o (__floatsisf)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clz.o)
+                              c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_divdi3.o) (__clz_tab)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clzsi2.o)
+                              c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(addsf3.o) (__clzsi2)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-errno.o)
+                              ./program/syscalls.o (__errno)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-exit.o)
+                              ./program/init.o (exit)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-impure.o)
+                              c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-init.o)
+                              ./program/startup_MLDR187.o (__libc_init_array)
+c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-memset.o)
+                              ./program/syscalls.o (memset)
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .group         0x0000000000000000        0xc ./program/init.o
+ .text          0x0000000000000000        0x0 ./program/init.o
+ .data          0x0000000000000000        0x0 ./program/init.o
+ .bss           0x0000000000000000        0x0 ./program/init.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .group         0x0000000000000000        0xc ./program/main.o
+ .text          0x0000000000000000        0x0 ./program/main.o
+ .data          0x0000000000000000        0x0 ./program/main.o
+ .bss           0x0000000000000000        0x0 ./program/main.o
+ .debug_macro   0x0000000000000000      0x748 ./program/main.o
+ .debug_macro   0x0000000000000000       0x22 ./program/main.o
+ .debug_macro   0x0000000000000000       0x8e ./program/main.o
+ .debug_macro   0x0000000000000000       0x51 ./program/main.o
+ .debug_macro   0x0000000000000000      0x103 ./program/main.o
+ .debug_macro   0x0000000000000000       0x6a ./program/main.o
+ .debug_macro   0x0000000000000000      0x1df ./program/main.o
+ .debug_macro   0x0000000000000000       0x10 ./program/main.o
+ .debug_macro   0x0000000000000000       0x19 ./program/main.o
+ .debug_macro   0x0000000000000000       0x52 ./program/main.o
+ .debug_macro   0x0000000000000000       0x34 ./program/main.o
+ .debug_macro   0x0000000000000000       0x34 ./program/main.o
+ .debug_macro   0x0000000000000000       0x16 ./program/main.o
+ .debug_macro   0x0000000000000000      0x10e ./program/main.o
+ .debug_macro   0x0000000000000000       0x8d ./program/main.o
+ .debug_macro   0x0000000000000000       0x16 ./program/main.o
+ .debug_macro   0x0000000000000000       0x43 ./program/main.o
+ .debug_macro   0x0000000000000000       0x34 ./program/main.o
+ .debug_macro   0x0000000000000000       0x10 ./program/main.o
+ .debug_macro   0x0000000000000000       0x52 ./program/main.o
+ .debug_macro   0x0000000000000000      0x182 ./program/main.o
+ .debug_macro   0x0000000000000000      0x339 ./program/main.o
+ .debug_macro   0x0000000000000000       0x16 ./program/main.o
+ .debug_macro   0x0000000000000000       0x29 ./program/main.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp.o
+ .text          0x0000000000000000        0x0 ./program/otp.o
+ .data          0x0000000000000000        0x0 ./program/otp.o
+ .bss           0x0000000000000000        0x0 ./program/otp.o
+ .debug_macro   0x0000000000000000      0x748 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x22 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x8e ./program/otp.o
+ .debug_macro   0x0000000000000000       0x51 ./program/otp.o
+ .debug_macro   0x0000000000000000      0x103 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x6a ./program/otp.o
+ .debug_macro   0x0000000000000000      0x1df ./program/otp.o
+ .debug_macro   0x0000000000000000     0x4c49 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x2e ./program/otp.o
+ .debug_macro   0x0000000000000000       0x19 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x52 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x34 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x34 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x16 ./program/otp.o
+ .debug_macro   0x0000000000000000      0x10e ./program/otp.o
+ .debug_macro   0x0000000000000000       0x8d ./program/otp.o
+ .debug_macro   0x0000000000000000       0x16 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x43 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x34 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x10 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x52 ./program/otp.o
+ .debug_macro   0x0000000000000000      0x182 ./program/otp.o
+ .debug_macro   0x0000000000000000      0x339 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x16 ./program/otp.o
+ .debug_macro   0x0000000000000000       0x29 ./program/otp.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .group         0x0000000000000000        0xc ./program/otp_functions.o
+ .text          0x0000000000000000        0x0 ./program/otp_functions.o
+ .data          0x0000000000000000        0x0 ./program/otp_functions.o
+ .bss           0x0000000000000000        0x0 ./program/otp_functions.o
+ .rodata.OTP_functions
+                0x0000000000000000       0x10 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000      0x748 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x19 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x22 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x34 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x34 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x16 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000      0x10e ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x8d ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x16 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x43 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x34 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x10 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x52 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000      0x182 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000      0x339 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x16 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x29 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000      0x103 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x6a ./program/otp_functions.o
+ .debug_macro   0x0000000000000000      0x1df ./program/otp_functions.o
+ .debug_macro   0x0000000000000000     0x4c43 ./program/otp_functions.o
+ .debug_macro   0x0000000000000000       0x2e ./program/otp_functions.o
+ .text          0x0000000000000000        0x0 ./program/startup_MLDR187.o
+ .bss           0x0000000000000000        0x0 ./program/startup_MLDR187.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./program/syscalls.o
+ .text          0x0000000000000000        0x0 ./program/syscalls.o
+ .data          0x0000000000000000        0x0 ./program/syscalls.o
+ .bss           0x0000000000000000        0x0 ./program/syscalls.o
+ .text.sys_close
+                0x0000000000000000       0x22 ./program/syscalls.o
+ .text.sys_write
+                0x0000000000000000       0x44 ./program/syscalls.o
+ .text.sys_fstat
+                0x0000000000000000       0x3c ./program/syscalls.o
+ .text.sys_brk  0x0000000000000000       0x78 ./program/syscalls.o
+ .text.brk      0x0000000000000000       0x3c ./program/syscalls.o
+ .sbss.curbrk   0x0000000000000000        0x4 ./program/syscalls.o
+ .text._sbrk    0x0000000000000000       0x8c ./program/syscalls.o
+ .text._write   0x0000000000000000       0x34 ./program/syscalls.o
+ .text._close   0x0000000000000000       0x24 ./program/syscalls.o
+ .text._fstat   0x0000000000000000       0x2c ./program/syscalls.o
+ .text._read    0x0000000000000000       0x30 ./program/syscalls.o
+ .text._isatty  0x0000000000000000       0x28 ./program/syscalls.o
+ .text._lseek   0x0000000000000000       0x30 ./program/syscalls.o
+ .text._kill    0x0000000000000000       0x2e ./program/syscalls.o
+ .text._getpid  0x0000000000000000       0x10 ./program/syscalls.o
+ .debug_macro   0x0000000000000000      0x748 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x22 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x8e ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x51 ./program/syscalls.o
+ .debug_macro   0x0000000000000000      0x103 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x6a ./program/syscalls.o
+ .debug_macro   0x0000000000000000      0x1df ./program/syscalls.o
+ .debug_macro   0x0000000000000000     0x4c43 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x2e ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x52 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x19 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x16 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x43 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x10 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x52 ./program/syscalls.o
+ .debug_macro   0x0000000000000000      0x182 ./program/syscalls.o
+ .debug_macro   0x0000000000000000      0x339 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x16 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x16 ./program/syscalls.o
+ .debug_macro   0x0000000000000000       0x29 ./program/syscalls.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adc.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_adc.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_adc.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_Init
+                0x0000000000000000       0xf8 ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_StructInitDefault
+                0x0000000000000000       0x5a ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_DeInit
+                0x0000000000000000       0x50 ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_SetChannel
+                0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_Cmd  0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_Start
+                0x0000000000000000       0x1e ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_GetResult
+                0x0000000000000000       0x24 ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_GetResultChannel
+                0x0000000000000000       0x2c ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_SetConversionChannelMask
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_SetValidMargins
+                0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_BandgapTrim
+                0x0000000000000000       0x1e ./MLDR187_SPL/src/MLDR187_adc.o
+ .text.ADC_CmdNoiseGen
+                0x0000000000000000       0x40 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_info    0x0000000000000000      0x688 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_abbrev  0x0000000000000000      0x1a8 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_aranges
+                0x0000000000000000       0x78 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_ranges  0x0000000000000000       0x68 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000       0xc0 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_line    0x0000000000000000      0x5bd ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_str     0x0000000000000000    0x21ec2 ./MLDR187_SPL/src/MLDR187_adc.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_adc.o
+ .debug_frame   0x0000000000000000      0x1c8 ./MLDR187_SPL/src/MLDR187_adc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_Init
+                0x0000000000000000      0x19c ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_StructInitDefault
+                0x0000000000000000       0xb8 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_DeInit
+                0x0000000000000000      0x14a ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_SetupVoltageDropControl
+                0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_NoVoltageDetectionTimeout
+                0x0000000000000000       0x24 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_InitChannel
+                0x0000000000000000      0x186 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_ChannelStructInitDefault
+                0x0000000000000000       0x96 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_ChannelCalibration
+                0x0000000000000000       0xb0 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetPhaseShift
+                0x0000000000000000       0x44 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetNextVoltageFifoValue
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetNextCurrentFifoValue
+                0x0000000000000000       0x42 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetPeakVoltage
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetPeakCurrent
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetRMSVoltage
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetRMSCurrent
+                0x0000000000000000       0x44 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetRMS2Voltage
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetRMS2Current
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_Calibrate
+                0x0000000000000000       0x80 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetEnergyAccumulator
+                0x0000000000000000       0xb8 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetEnergyAccumulatorHigh32
+                0x0000000000000000       0x36 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_ResetEnergyAccumulator
+                0x0000000000000000       0x7e ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetStatus
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_GetFlag
+                0x0000000000000000       0x48 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_ClearFlag
+                0x0000000000000000       0x36 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_SetMask
+                0x0000000000000000       0x36 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.ADCUI_SetSingleMask
+                0x0000000000000000       0x3e ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.adcuiGetValue
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.adcuiGetChannelControlReg
+                0x0000000000000000      0x194 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .rodata.adcuiGetChannelControlReg
+                0x0000000000000000       0x40 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .text.adcuiGetChannelAccumReg
+                0x0000000000000000      0x158 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_info    0x0000000000000000     0x1580 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_abbrev  0x0000000000000000      0x23a ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_aranges
+                0x0000000000000000      0x100 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_ranges  0x0000000000000000       0xf0 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000      0x10d ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_line    0x0000000000000000     0x1178 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_str     0x0000000000000000    0x236f3 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .debug_frame   0x0000000000000000      0x480 ./MLDR187_SPL/src/MLDR187_adcui.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .sdata.BKP_LSE_Speed
+                0x0000000000000000        0x4 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_Init
+                0x0000000000000000      0x23c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_StructInitDefault
+                0x0000000000000000       0x86 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_DeInit
+                0x0000000000000000       0xe6 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetBootMode
+                0x0000000000000000       0x24 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetFPOR
+                0x0000000000000000       0x2c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_SetFPOR
+                0x0000000000000000       0x70 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetCovDetectionFlag
+                0x0000000000000000       0x2c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_SetTamperNewState
+                0x0000000000000000       0x54 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_SetCovDetectionFlag
+                0x0000000000000000       0x78 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetWakeupStates
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetSWPinState
+                0x0000000000000000       0x2c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_SwitchOffAlarmPower
+                0x0000000000000000       0x3c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_ConvertToBINFormat
+                0x0000000000000000       0xca ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_ConvertToBCDFormat
+                0x0000000000000000       0xca ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetDateTimeBCD
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetDateTimeBCDTimestamp
+                0x0000000000000000       0x86 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_SetDateTimeBCD
+                0x0000000000000000      0x108 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_SetAlarm
+                0x0000000000000000      0x12a ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_SetItNewState
+                0x0000000000000000       0xac ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_SetAlarmNewState
+                0x0000000000000000       0x5a ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetFlags
+                0x0000000000000000       0x2c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetSingleFlag
+                0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_InitTamper
+                0x0000000000000000       0xc4 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_InitExternalEvent
+                0x0000000000000000       0xca ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetTamperEventState
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BCDtoBIN
+                0x0000000000000000       0x44 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BINtoBCD
+                0x0000000000000000       0x52 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_GetDateTimeReg
+                0x0000000000000000       0xde ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_WaitComplete
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_WaitRTCCycle
+                0x0000000000000000       0xac ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .text.CLK_MSR_Init
+                0x0000000000000000       0xcc ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .text.CLK_MSR_Cmd
+                0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_info    0x0000000000000000      0x392 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_abbrev  0x0000000000000000      0x125 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_ranges  0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000       0xa2 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_line    0x0000000000000000      0x37a ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_str     0x0000000000000000    0x21900 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .debug_frame   0x0000000000000000       0x5c ./MLDR187_SPL/src/MLDR187_clk_msr.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_crc.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_crc.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_crc.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_crc.o
+ .text.CRC_Init
+                0x0000000000000000       0x52 ./MLDR187_SPL/src/MLDR187_crc.o
+ .text.CRC_DeInit
+                0x0000000000000000       0x36 ./MLDR187_SPL/src/MLDR187_crc.o
+ .text.CRC_Start
+                0x0000000000000000       0x2e ./MLDR187_SPL/src/MLDR187_crc.o
+ .text.CRC_ProceedByte
+                0x0000000000000000       0x4c ./MLDR187_SPL/src/MLDR187_crc.o
+ .text.CRC_ProceedHalfWord
+                0x0000000000000000       0x56 ./MLDR187_SPL/src/MLDR187_crc.o
+ .text.CRC_ProceedWord
+                0x0000000000000000       0x56 ./MLDR187_SPL/src/MLDR187_crc.o
+ .text.CRC_Finalize
+                0x0000000000000000       0x46 ./MLDR187_SPL/src/MLDR187_crc.o
+ .text.CRC_Mem  0x0000000000000000       0xce ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_info    0x0000000000000000      0x45f ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_abbrev  0x0000000000000000      0x19d ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_aranges
+                0x0000000000000000       0x58 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_ranges  0x0000000000000000       0x48 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000       0xa4 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_macro   0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_line    0x0000000000000000      0x5b7 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_str     0x0000000000000000    0x21911 ./MLDR187_SPL/src/MLDR187_crc.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_crc.o
+ .debug_frame   0x0000000000000000      0x13c ./MLDR187_SPL/src/MLDR187_crc.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesRcon
+                0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesSBox
+                0x0000000000000000      0x100 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesSboxM1
+                0x0000000000000000      0x100 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesE   0x0000000000000000      0x100 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesL   0x0000000000000000      0x100 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesBeginTrm
+                0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesFinishTrm
+                0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesShftTblTrm
+                0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .data.g_AesShftTblM1Trm
+                0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .text.aesInitCCPU
+                0x0000000000000000      0x2ee ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .text.aesExpandKey
+                0x0000000000000000       0x3a ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .text.aesEncBlock
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .text.aesDecBlock
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .text.aesLinearFill
+                0x0000000000000000       0x36 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .text.aesGFM   0x0000000000000000       0xb2 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_info    0x0000000000000000      0xdef ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_abbrev  0x0000000000000000      0x26f ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_aranges
+                0x0000000000000000       0x48 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_ranges  0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000      0x149 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x4c ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x19 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x94 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000      0x174 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x43 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x57 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x52 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000      0x182 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000      0x339 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x35 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_macro   0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_line    0x0000000000000000      0x89d ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_str     0x0000000000000000    0x242ea ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .debug_frame   0x0000000000000000      0x104 ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .rodata.g_KuzPi
+                0x0000000000000000      0x100 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .rodata.g_KuzPiM1
+                0x0000000000000000      0x100 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .rodata.kB     0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .text.kuzInitCCPU
+                0x0000000000000000      0x278 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .text.kuzExpandKey
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .text.kuzEncBlock
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .text.kuzDecBlock
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .text.kuzMulGF256_1
+                0x0000000000000000       0x72 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_info    0x0000000000000000      0xd5c ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_abbrev  0x0000000000000000      0x27e ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_aranges
+                0x0000000000000000       0x40 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_ranges  0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000      0x149 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x4c ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x19 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x94 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000      0x174 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x43 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x57 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x52 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000      0x182 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000      0x339 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x35 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_macro   0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_line    0x0000000000000000      0x83e ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_str     0x0000000000000000    0x242ae ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .debug_frame   0x0000000000000000       0xd4 ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_dma.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_dma.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_dma.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_ChCfgInit
+                0x0000000000000000      0x100 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_Init
+                0x0000000000000000       0x42 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_DeInit
+                0x0000000000000000       0x76 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_Cmd  0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetBaseChannelAddr
+                0x0000000000000000       0x14 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetAlternateChannelAddr
+                0x0000000000000000       0x14 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetChannelsCount
+                0x0000000000000000       0x2e ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetState
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetMasterEnable
+                0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetRequests
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetSingleRequest
+                0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_ManualSetRequest
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_BurstSetNewState
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_MaskSetNewState
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_EnableChannels
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_AltSetEnable
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_IsAlternateActive
+                0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_HighPriorityEnable
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetErrors
+                0x0000000000000000       0x14 ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_GetSingleError
+                0x0000000000000000       0x2e ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_ClearErrors
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_dma.o
+ .text.DMA_IrqPreInit
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_info    0x0000000000000000      0xb5f ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_abbrev  0x0000000000000000      0x21e ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_aranges
+                0x0000000000000000       0xc8 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_ranges  0x0000000000000000       0xb8 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000       0xe4 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_line    0x0000000000000000      0x903 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_str     0x0000000000000000    0x229dd ./MLDR187_SPL/src/MLDR187_dma.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_dma.o
+ .debug_frame   0x0000000000000000      0x330 ./MLDR187_SPL/src/MLDR187_dma.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ EXECUTABLE_MEMORY_SECTION
+                0x0000000000000000      0x800 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_Init
+                0x0000000000000000      0x1c0 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_StructInitDefault
+                0x0000000000000000       0x3a ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_DeInit
+                0x0000000000000000       0x48 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_Write
+                0x0000000000000000       0x5c ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_Read
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_ReadPin
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_SetReset
+                0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_ReadBackPort
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_gpio.o
+ .text.PORT_ReadBackPin
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_info    0x0000000000000000      0x694 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_abbrev  0x0000000000000000      0x217 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_aranges
+                0x0000000000000000       0x60 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_ranges  0x0000000000000000       0x50 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0xc8 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_line    0x0000000000000000      0x5e2 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_str     0x0000000000000000    0x21f8b ./MLDR187_SPL/src/MLDR187_gpio.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_gpio.o
+ .debug_frame   0x0000000000000000      0x15c ./MLDR187_SPL/src/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_Init
+                0x0000000000000000       0x60 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_DeInit
+                0x0000000000000000       0x46 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_StructInit
+                0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_Cmd  0x0000000000000000       0x3a ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_SendData
+                0x0000000000000000       0xa2 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_ReceiveData
+                0x0000000000000000       0xcc ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_Send7bitAddress
+                0x0000000000000000       0x4c ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_SendByte
+                0x0000000000000000       0x3c ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_ReceiveByte
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_StartReceiveData
+                0x0000000000000000       0x42 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_GetReceivedData
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_SendSTOP
+                0x0000000000000000       0x1e ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_ITConfig
+                0x0000000000000000       0x3a ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_GetITStatus
+                0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_ClearITPendingBit
+                0x0000000000000000       0x1e ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_GetFlags
+                0x0000000000000000       0x14 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .text.I2C_GetFlagStatus
+                0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_info    0x0000000000000000      0x65b ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_abbrev  0x0000000000000000      0x250 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_aranges
+                0x0000000000000000       0xa0 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_ranges  0x0000000000000000       0x90 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000       0xb4 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_line    0x0000000000000000      0x7ab ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_str     0x0000000000000000    0x21b90 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .debug_frame   0x0000000000000000      0x288 ./MLDR187_SPL/src/MLDR187_i2c.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_Init
+                0x0000000000000000      0x290 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_StructInitDefault
+                0x0000000000000000       0xac ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_DeInit
+                0x0000000000000000       0x50 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_Cmd
+                0x0000000000000000       0x3c ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_PutNext
+                0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_GetLast
+                0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_GetFlags
+                0x0000000000000000       0x14 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_GetFlagSingle
+                0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_ClearFlags
+                0x0000000000000000       0x24 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .text.ISO7816_ITsetNewState
+                0x0000000000000000       0x9a ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_info    0x0000000000000000      0x723 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_abbrev  0x0000000000000000      0x21a ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_aranges
+                0x0000000000000000       0x68 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_ranges  0x0000000000000000       0x58 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000       0xe4 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_line    0x0000000000000000      0x823 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_str     0x0000000000000000    0x220fd ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .debug_frame   0x0000000000000000      0x184 ./MLDR187_SPL/src/MLDR187_iso7816.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .text.IWDG_SetupAndActivate
+                0x0000000000000000       0x7e ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .text.IWDG_Refresh
+                0x0000000000000000       0x1a ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_info    0x0000000000000000      0x2ea ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_abbrev  0x0000000000000000       0xf8 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_ranges  0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000       0xaa ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_line    0x0000000000000000      0x2f4 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_str     0x0000000000000000    0x2199d ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .debug_frame   0x0000000000000000       0x5c ./MLDR187_SPL/src/MLDR187_iwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_math.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_math.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_math.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_ABS
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_SQRT
+                0x0000000000000000      0x1d8 ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_oversample
+                0x0000000000000000      0x1d2 ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_FFT
+                0x0000000000000000       0x3a ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_ComplexMagnitude
+                0x0000000000000000       0x66 ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_KhdCalc
+                0x0000000000000000       0xde ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_TrueRMS
+                0x0000000000000000       0xe6 ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_TriangleSideCalc
+                0x0000000000000000      0x1ec ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_arcTan
+                0x0000000000000000      0x124 ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_FastSinA
+                0x0000000000000000       0xd0 ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_FastCosA
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_math.o
+ .text.MATH_AtanF
+                0x0000000000000000      0x252 ./MLDR187_SPL/src/MLDR187_math.o
+ .rodata        0x0000000000000000       0x2c ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_info    0x0000000000000000      0xe51 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_abbrev  0x0000000000000000      0x2fc ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_aranges
+                0x0000000000000000       0x78 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_ranges  0x0000000000000000       0x68 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000      0x148 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x19 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x52 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000      0x10e ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x8d ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x43 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x52 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000      0x182 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000      0x339 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_macro   0x0000000000000000       0x29 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_line    0x0000000000000000      0xb20 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_str     0x0000000000000000     0x64f7 ./MLDR187_SPL/src/MLDR187_math.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_math.o
+ .debug_frame   0x0000000000000000      0x240 ./MLDR187_SPL/src/MLDR187_math.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .rodata.MATH_fftReorderTbl
+                0x0000000000000000      0x400 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .rodata.MATH_fftCosSinLookupTable
+                0x0000000000000000     0x3000 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .rodata.MATH_TABLE_SIN_PREC
+                0x0000000000000000     0x2004 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_info    0x0000000000000000      0x110 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_abbrev  0x0000000000000000       0x6f ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000       0x68 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_macro   0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_line    0x0000000000000000      0x1da ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .debug_str     0x0000000000000000     0x3483 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_mathTables.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_otp.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_otp.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_otp.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_otp.o
+ .text.OTP_ReadReadProtection
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_otp.o
+ .text.OTP_SetReadProtection
+                0x0000000000000000       0x1e ./MLDR187_SPL/src/MLDR187_otp.o
+ .text.OTP_ReadWriteProtection
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_otp.o
+ .text.OTP_SetWriteProtection
+                0x0000000000000000       0x1e ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_otp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_power.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_power.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_power.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_power.o
+ .text.POWER_DetectorInit
+                0x0000000000000000      0x17e ./MLDR187_SPL/src/MLDR187_power.o
+ .text.POWER_DetectorDeInit
+                0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_power.o
+ .text.POWER_GetFlag
+                0x0000000000000000       0x4a ./MLDR187_SPL/src/MLDR187_power.o
+ .text.POWER_ClearFlag
+                0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_info    0x0000000000000000      0x38c ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_abbrev  0x0000000000000000      0x177 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_ranges  0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000       0xaa ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_line    0x0000000000000000      0x404 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_str     0x0000000000000000    0x21bb9 ./MLDR187_SPL/src/MLDR187_power.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_power.o
+ .debug_frame   0x0000000000000000       0xa8 ./MLDR187_SPL/src/MLDR187_power.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rng.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_rng.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_rng.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_rng.o
+ .text.RNG_Init
+                0x0000000000000000       0xb2 ./MLDR187_SPL/src/MLDR187_rng.o
+ .text.RNG_DeInit
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_rng.o
+ .text.RNG_Next
+                0x0000000000000000       0x4e ./MLDR187_SPL/src/MLDR187_rng.o
+ .text.RNG_Stop
+                0x0000000000000000       0x4a ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_info    0x0000000000000000      0x348 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_abbrev  0x0000000000000000      0x136 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_ranges  0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000       0xaa ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_line    0x0000000000000000      0x378 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_str     0x0000000000000000    0x21955 ./MLDR187_SPL/src/MLDR187_rng.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_rng.o
+ .debug_frame   0x0000000000000000       0xac ./MLDR187_SPL/src/MLDR187_rng.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .text.RST_CLK_SetupLsPeripheralCLock
+                0x0000000000000000      0x10e ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .text.RST_CLK_IsPeripheralClockEnabled
+                0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .text.RST_CLK_DisablePeripheralClock
+                0x0000000000000000      0x3d2 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .text.RST_CLK_ResetKeyRAM
+                0x0000000000000000       0x1e ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_sensors.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .text.SENSORS_Enable
+                0x0000000000000000       0x2e ./MLDR187_SPL/src/MLDR187_sensors.o
+ .text.SENSORS_ItEnable
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_sensors.o
+ .text.SENSORS_KeyResetEnable
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_sensors.o
+ .text.SENSORS_MeshInit
+                0x0000000000000000       0x92 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .text.SENSORS_ReadHistory
+                0x0000000000000000       0x14 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .text.SENSORS_ResetHistory
+                0x0000000000000000       0x16 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .text.SENSORS_ReadRealTime
+                0x0000000000000000       0x14 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_info    0x0000000000000000      0x49c ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_abbrev  0x0000000000000000      0x17b ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_aranges
+                0x0000000000000000       0x50 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_ranges  0x0000000000000000       0x40 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000       0xaa ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_macro   0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_line    0x0000000000000000      0x419 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_str     0x0000000000000000    0x21b6f ./MLDR187_SPL/src/MLDR187_sensors.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .debug_frame   0x0000000000000000      0x110 ./MLDR187_SPL/src/MLDR187_sensors.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_Init
+                0x0000000000000000       0xca ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_StructInit
+                0x0000000000000000       0x5e ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_DeInit
+                0x0000000000000000       0x84 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_Cmd  0x0000000000000000       0x3e ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_SlaveOutputCmd
+                0x0000000000000000       0x3e ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_SendSingle
+                0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_SendBytes
+                0x0000000000000000       0xc0 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_SendData
+                0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_ReceiveSingle
+                0x0000000000000000       0x2e ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_ReceiveBytes
+                0x0000000000000000       0xc4 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_ReceiveData
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_GetFlags
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_GetFlagStatus
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_ITsetMask
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_ITConfig
+                0x0000000000000000       0x4a ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_GetITStatus
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_GetITStatusMasked
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_ClearITPendingBit
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_DMACmd
+                0x0000000000000000       0x50 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_DMATransmit
+                0x0000000000000000      0x186 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_DMAReceive
+                0x0000000000000000      0x280 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_DMACycleModeRefresh
+                0x0000000000000000      0x154 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .text.SSP_GetDMAaddresses
+                0x0000000000000000       0xca ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_info    0x0000000000000000     0x1064 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_abbrev  0x0000000000000000      0x1eb ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_aranges
+                0x0000000000000000       0xd0 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_ranges  0x0000000000000000       0xc0 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000      0x102 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_line    0x0000000000000000      0xe55 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_str     0x0000000000000000    0x22ed5 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .debug_frame   0x0000000000000000      0x368 ./MLDR187_SPL/src/MLDR187_ssp.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_timer.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_timer.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_timer.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_Init
+                0x0000000000000000      0x140 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_StructInitDefault
+                0x0000000000000000       0x7a ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_DeInit
+                0x0000000000000000      0x188 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_Cmd
+                0x0000000000000000       0x5a ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_SetCounter
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_SetPrescaler
+                0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_SetPeriod
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_GetCounter
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ChnInit
+                0x0000000000000000      0x170 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ChnStructInitDefault
+                0x0000000000000000       0x72 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_SetChCCR
+                0x0000000000000000       0x4e ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_GetChCCR
+                0x0000000000000000       0x46 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ChnETR_Cmd
+                0x0000000000000000       0x88 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ChnCCR1_Cmd
+                0x0000000000000000       0x64 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ChnOutInit
+                0x0000000000000000       0xb4 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ChnOutStructInitDefault
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_GetStatus
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_GetFlagStatus
+                0x0000000000000000       0x32 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ClearFlag
+                0x0000000000000000       0x24 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ItConfig
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_ItSetNewState
+                0x0000000000000000       0x48 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_DMAset
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_DMAsetNewState
+                0x0000000000000000       0x48 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_DMAChannelSet
+                0x0000000000000000       0x3e ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_DMAChannelSetNewState
+                0x0000000000000000       0x72 ./MLDR187_SPL/src/MLDR187_timer.o
+ .text.TIMER_GetChannelRegisters
+                0x0000000000000000      0x2a0 ./MLDR187_SPL/src/MLDR187_timer.o
+ .rodata.TIMER_GetChannelRegisters
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_info    0x0000000000000000     0x1278 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_abbrev  0x0000000000000000      0x1f5 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_aranges
+                0x0000000000000000       0xe8 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_ranges  0x0000000000000000       0xd8 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000      0x11b ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_line    0x0000000000000000      0xf0c ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_str     0x0000000000000000    0x232c0 ./MLDR187_SPL/src/MLDR187_timer.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_timer.o
+ .debug_frame   0x0000000000000000      0x3e0 ./MLDR187_SPL/src/MLDR187_timer.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_uart.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_uart.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_uart.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_Init
+                0x0000000000000000      0x2d6 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_StructInitDefault
+                0x0000000000000000       0xa0 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_DeInit
+                0x0000000000000000       0xba ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_Cmd
+                0x0000000000000000       0x3e ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_Send
+                0x0000000000000000       0x36 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_SendBytes
+                0x0000000000000000       0xc2 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_SendString
+                0x0000000000000000       0x4a ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_SendData
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_Receive
+                0x0000000000000000       0x2a ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_ReceiveBytes
+                0x0000000000000000       0xe6 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_ReceiveData
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_BreakLine
+                0x0000000000000000       0x3e ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_IrDACmd
+                0x0000000000000000       0x3e ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_GetFlags
+                0x0000000000000000       0x18 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_GetFlagStatus
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_DMAConfig
+                0x0000000000000000       0x2e ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_ITsetMask
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_ITConfig
+                0x0000000000000000       0x4a ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_GetITStatus
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_GetITStatusMasked
+                0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_ClearITPendingBit
+                0x0000000000000000       0x20 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_DMACmd
+                0x0000000000000000       0x52 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_DMATransmit
+                0x0000000000000000      0x160 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_DMAReceive
+                0x0000000000000000      0x206 ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_DMACycleModeRefresh
+                0x0000000000000000      0x10c ./MLDR187_SPL/src/MLDR187_uart.o
+ .text.UART_GetDMAaddresses
+                0x0000000000000000       0xea ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_info    0x0000000000000000     0x12ba ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_abbrev  0x0000000000000000      0x1e3 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_aranges
+                0x0000000000000000       0xe8 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_ranges  0x0000000000000000       0xd8 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0xfc ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x10 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_line    0x0000000000000000     0x1092 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_str     0x0000000000000000    0x2315d ./MLDR187_SPL/src/MLDR187_uart.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_uart.o
+ .debug_frame   0x0000000000000000      0x3d8 ./MLDR187_SPL/src/MLDR187_uart.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .text          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .text.WWDG_Init
+                0x0000000000000000       0x9c ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .text.WWDG_SetNewCounter
+                0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .text.WWDG_EnableReset
+                0x0000000000000000       0x2c ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .text.WWDG_GetFlagStatus
+                0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .text.WWDG_ClearFlag
+                0x0000000000000000       0x1c ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_info    0x0000000000000000      0x3b6 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_abbrev  0x0000000000000000      0x14c ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_aranges
+                0x0000000000000000       0x40 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_ranges  0x0000000000000000       0x30 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000       0xa8 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000      0x748 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000       0x22 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000       0x8e ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000       0x51 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000      0x103 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000       0x6a ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000      0x1df ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000     0x4c43 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000       0x28 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_macro   0x0000000000000000       0x26 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_line    0x0000000000000000      0x3d5 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_str     0x0000000000000000    0x219be ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .comment       0x0000000000000000       0x34 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .debug_frame   0x0000000000000000       0xc8 ./MLDR187_SPL/src/MLDR187_wwdg.o
+ .text          0x0000000000000000      0x4bc ./MLDR187_SPL/MLDR187_cryptoAes.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/MLDR187_cryptoAes.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/MLDR187_cryptoAes.o
+ .debug_line    0x0000000000000000      0x49e ./MLDR187_SPL/MLDR187_cryptoAes.o
+ .debug_info    0x0000000000000000       0x26 ./MLDR187_SPL/MLDR187_cryptoAes.o
+ .debug_abbrev  0x0000000000000000       0x14 ./MLDR187_SPL/MLDR187_cryptoAes.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./MLDR187_SPL/MLDR187_cryptoAes.o
+ .debug_str     0x0000000000000000       0x67 ./MLDR187_SPL/MLDR187_cryptoAes.o
+ .text          0x0000000000000000      0x350 ./MLDR187_SPL/MLDR187_cryptoKuz.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/MLDR187_cryptoKuz.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/MLDR187_cryptoKuz.o
+ .debug_line    0x0000000000000000      0x318 ./MLDR187_SPL/MLDR187_cryptoKuz.o
+ .debug_info    0x0000000000000000       0x26 ./MLDR187_SPL/MLDR187_cryptoKuz.o
+ .debug_abbrev  0x0000000000000000       0x14 ./MLDR187_SPL/MLDR187_cryptoKuz.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./MLDR187_SPL/MLDR187_cryptoKuz.o
+ .debug_str     0x0000000000000000       0x67 ./MLDR187_SPL/MLDR187_cryptoKuz.o
+ .text          0x0000000000000000      0x344 ./MLDR187_SPL/MLDR187_math.o
+ .data          0x0000000000000000        0x0 ./MLDR187_SPL/MLDR187_math.o
+ .bss           0x0000000000000000        0x0 ./MLDR187_SPL/MLDR187_math.o
+ .debug_line    0x0000000000000000      0x594 ./MLDR187_SPL/MLDR187_math.o
+ .debug_info    0x0000000000000000       0x26 ./MLDR187_SPL/MLDR187_math.o
+ .debug_abbrev  0x0000000000000000       0x14 ./MLDR187_SPL/MLDR187_math.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./MLDR187_SPL/MLDR187_math.o
+ .debug_str     0x0000000000000000       0x62 ./MLDR187_SPL/MLDR187_math.o
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_divdi3.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_divdi3.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_divdi3.o)
+ .text.__divdi3
+                0x0000000000000000      0x4ec c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_divdi3.o)
+ .eh_frame      0x0000000000000000       0x28 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_divdi3.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_udivdi3.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_udivdi3.o)
+ .text.__udivdi3
+                0x0000000000000000      0x4a0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_udivdi3.o)
+ .eh_frame      0x0000000000000000       0x28 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_udivdi3.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(addsf3.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(addsf3.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(addsf3.o)
+ .text.__addsf3
+                0x0000000000000000      0x468 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(addsf3.o)
+ .debug_frame   0x0000000000000000       0x40 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(addsf3.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(divsf3.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(divsf3.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(divsf3.o)
+ .text.__divsf3
+                0x0000000000000000      0x3c8 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(divsf3.o)
+ .rodata.__divsf3
+                0x0000000000000000       0x80 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(divsf3.o)
+ .debug_frame   0x0000000000000000       0x50 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(divsf3.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(gesf2.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(gesf2.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(gesf2.o)
+ .text.__gesf2  0x0000000000000000       0xc4 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(gesf2.o)
+ .debug_frame   0x0000000000000000       0x20 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(gesf2.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(lesf2.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(lesf2.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(lesf2.o)
+ .text.__lesf2  0x0000000000000000       0xc4 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(lesf2.o)
+ .debug_frame   0x0000000000000000       0x20 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(lesf2.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(mulsf3.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(mulsf3.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(mulsf3.o)
+ .text.__mulsf3
+                0x0000000000000000      0x38c c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(mulsf3.o)
+ .rodata.__mulsf3
+                0x0000000000000000       0x40 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(mulsf3.o)
+ .debug_frame   0x0000000000000000       0x50 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(mulsf3.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(subsf3.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(subsf3.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(subsf3.o)
+ .text.__subsf3
+                0x0000000000000000      0x488 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(subsf3.o)
+ .debug_frame   0x0000000000000000       0x3c c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(subsf3.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(fixsfsi.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(fixsfsi.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(fixsfsi.o)
+ .text.__fixsfsi
+                0x0000000000000000       0x74 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(fixsfsi.o)
+ .debug_frame   0x0000000000000000       0x20 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(fixsfsi.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(floatsisf.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(floatsisf.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(floatsisf.o)
+ .text.__floatsisf
+                0x0000000000000000      0x118 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(floatsisf.o)
+ .debug_frame   0x0000000000000000       0x38 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(floatsisf.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clz.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clz.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clz.o)
+ .rodata.__clz_tab
+                0x0000000000000000      0x100 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clz.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clzsi2.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clzsi2.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clzsi2.o)
+ .text.__clzsi2
+                0x0000000000000000       0x94 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clzsi2.o)
+ .debug_frame   0x0000000000000000       0x20 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a(_clzsi2.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-errno.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-errno.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-errno.o)
+ .text.__errno  0x0000000000000000       0x10 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x0000000000000000       0x20 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-errno.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-impure.o)
+ .sdata._impure_ptr
+                0x0000000000000000        0x4 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-init.o)
+ .text          0x0000000000000000       0x1c c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000010000000 0x0000000000040000 xr
+AHB_RAM          0x0000000020000000 0x0000000000004000 xrw
+OTP              0x0000000070000000 0x0000000000004000 xr
+TCMA_RAM         0x0000000080000000 0x0000000000010000 xrw
+TCMB_RAM         0x0000000080010000 0x0000000000008000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./program/init.o
+LOAD ./program/main.o
+LOAD ./program/otp.o
+LOAD ./program/otp_functions.o
+LOAD ./program/startup_MLDR187.o
+LOAD ./program/syscalls.o
+LOAD ./MLDR187_SPL/src/MLDR187_adc.o
+LOAD ./MLDR187_SPL/src/MLDR187_adcui.o
+LOAD ./MLDR187_SPL/src/MLDR187_bkp.o
+LOAD ./MLDR187_SPL/src/MLDR187_clk_msr.o
+LOAD ./MLDR187_SPL/src/MLDR187_crc.o
+LOAD ./MLDR187_SPL/src/MLDR187_cryptoAes.o
+LOAD ./MLDR187_SPL/src/MLDR187_cryptoKuz.o
+LOAD ./MLDR187_SPL/src/MLDR187_dma.o
+LOAD ./MLDR187_SPL/src/MLDR187_eeprom.o
+LOAD ./MLDR187_SPL/src/MLDR187_gpio.o
+LOAD ./MLDR187_SPL/src/MLDR187_i2c.o
+LOAD ./MLDR187_SPL/src/MLDR187_iso7816.o
+LOAD ./MLDR187_SPL/src/MLDR187_iwdg.o
+LOAD ./MLDR187_SPL/src/MLDR187_math.o
+LOAD ./MLDR187_SPL/src/MLDR187_mathTables.o
+LOAD ./MLDR187_SPL/src/MLDR187_otp.o
+LOAD ./MLDR187_SPL/src/MLDR187_power.o
+LOAD ./MLDR187_SPL/src/MLDR187_rng.o
+LOAD ./MLDR187_SPL/src/MLDR187_rst_clk.o
+LOAD ./MLDR187_SPL/src/MLDR187_sensors.o
+LOAD ./MLDR187_SPL/src/MLDR187_ssp.o
+LOAD ./MLDR187_SPL/src/MLDR187_timer.o
+LOAD ./MLDR187_SPL/src/MLDR187_uart.o
+LOAD ./MLDR187_SPL/src/MLDR187_wwdg.o
+LOAD ./MLDR187_SPL/MLDR187_cryptoAes.o
+LOAD ./MLDR187_SPL/MLDR187_cryptoKuz.o
+LOAD ./MLDR187_SPL/MLDR187_math.o
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libstdc++_nano.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libm.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libc_nano.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a
+START GROUP
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/rv32im/ilp32\libgcc.a
+LOAD c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libc_nano.a
+END GROUP
+                0x0000000000001000                __stack_size = 0x1000
+                0x0000000000001000                __heap_size = 0x1000
+
+.text.init      0x0000000080000000      0x14a
+ *(.text.init)
+ .text.init     0x0000000080000000      0x14a ./program/startup_MLDR187.o
+                0x0000000080000000                _start
+
+.text           0x000000008000014c     0x1860
+                0x000000008000014c                . = ALIGN (0x4)
+ *(.text*)
+ .text.init_clock
+                0x000000008000014c       0xa0 ./program/init.o
+                0x000000008000014c                init_clock
+ .text.main     0x00000000800001ec      0x17a ./program/main.o
+                0x00000000800001ec                main
+ .text.OTP_write_memory
+                0x0000000080000366       0x88 ./program/otp.o
+                0x0000000080000366                OTP_write_memory
+ .text.OTP_check_can_write
+                0x00000000800003ee       0x92 ./program/otp.o
+                0x00000000800003ee                OTP_check_can_write
+ .text.terminate
+                0x0000000080000480       0x14 ./program/syscalls.o
+ .text.sys_exit
+                0x0000000080000494       0x1c ./program/syscalls.o
+                0x0000000080000494                sys_exit
+ .text._exit    0x00000000800004b0       0x12 ./program/syscalls.o
+                0x00000000800004b0                _exit
+ .text.BKP_FreqGenCmd
+                0x00000000800004c2      0x1ae ./MLDR187_SPL/src/MLDR187_bkp.o
+                0x00000000800004c2                BKP_FreqGenCmd
+ .text.BKP_GenState
+                0x0000000080000670       0x64 ./MLDR187_SPL/src/MLDR187_bkp.o
+                0x0000000080000670                BKP_GenState
+ .text.BKP_GenWaitForOn
+                0x00000000800006d4       0x5c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_DisableWP
+                0x0000000080000730       0x2c ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.BKP_EnableWP
+                0x000000008000075c       0x16 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .text.EEPROM_SetLatency
+                0x0000000080000772       0x50 ./MLDR187_SPL/src/MLDR187_eeprom.o
+                0x0000000080000772                EEPROM_SetLatency
+ .text.OTP_Init
+                0x00000000800007c2       0xf8 ./MLDR187_SPL/src/MLDR187_otp.o
+                0x00000000800007c2                OTP_Init
+ .text.OTP_WriteBit
+                0x00000000800008ba      0x112 ./MLDR187_SPL/src/MLDR187_otp.o
+                0x00000000800008ba                OTP_WriteBit
+ .text.OTP_WriteByte
+                0x00000000800009cc       0xa4 ./MLDR187_SPL/src/MLDR187_otp.o
+                0x00000000800009cc                OTP_WriteByte
+ .text.OTP_Read
+                0x0000000080000a70       0x48 ./MLDR187_SPL/src/MLDR187_otp.o
+                0x0000000080000a70                OTP_Read
+ .text.RST_CLK_SetupCpuSpeed
+                0x0000000080000ab8      0x480 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+                0x0000000080000ab8                RST_CLK_SetupCpuSpeed
+ .text.RST_CLK_SetupHsPeripheralClock
+                0x0000000080000f38      0x19c ./MLDR187_SPL/src/MLDR187_rst_clk.o
+                0x0000000080000f38                RST_CLK_SetupHsPeripheralClock
+ .text.RST_CLK_EnablePeripheralClock
+                0x00000000800010d4      0x646 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+                0x00000000800010d4                RST_CLK_EnablePeripheralClock
+ .text.rccEncodeDivisor3bit
+                0x000000008000171a       0x84 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .text.rccEncodeDivisor4bit
+                0x000000008000179e       0x8c ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .text.rccEncodeDivisorNumeric
+                0x000000008000182a       0x98 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ *fill*         0x00000000800018c2        0x2 
+ .text.exit     0x00000000800018c4       0x44 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-exit.o)
+                0x00000000800018c4                exit
+ .text.__libc_init_array
+                0x0000000080001908       0xa4 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-init.o)
+                0x0000000080001908                __libc_init_array
+
+.rodata         0x0000000080010000       0x78
+                0x0000000080010000                . = ALIGN (0x4)
+ *(.rodata*)
+ .rodata.OTP_functions
+                0x0000000080010000       0x10 ./program/main.o
+ .rodata.rccEncodeDivisor3bit
+                0x0000000080010010       0x20 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .rodata.rccEncodeDivisor4bit
+                0x0000000080010030       0x24 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .rodata.rccEncodeDivisorNumeric
+                0x0000000080010054       0x24 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ *(.srodata*)
+
+.dalign         0x00000000800019ac        0x0
+                0x00000000800019ac                . = ALIGN (0x4)
+                0x00000000800019ac                __data_load_start = LOADADDR (.data)
+
+.data           0x0000000080010080      0x17c load address 0x00000000800019ac
+                0x0000000080010080                . = ALIGN (0x4)
+                0x0000000080010080                __data_start = .
+ *(.data*)
+ .data          0x0000000080010080      0x110 ./program/startup_MLDR187.o
+                0x0000000080010180                brk_base
+                0x0000000080010188                brk_size
+ .data.impure_data
+                0x0000000080010190       0x60 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-impure.o)
+                0x00000000800101f0                . = ALIGN (0x8)
+                0x00000000800101f0                __sdata_start = .
+ *(.sdata*)
+ .sdata.RST_CLK_CpuSpeed
+                0x00000000800101f0        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+                0x00000000800101f0                RST_CLK_CpuSpeed
+ .sdata.RST_CLK_HclkSpeed
+                0x00000000800101f4        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+                0x00000000800101f4                RST_CLK_HclkSpeed
+ .sdata2._global_impure_ptr
+                0x00000000800101f8        0x4 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-impure.o)
+                0x00000000800101f8                _global_impure_ptr
+                0x00000000800101fc                . = ALIGN (0x4)
+                0x00000000800101fc                __data_end = .
+
+.bss            0x00000000800101fc       0x2c
+                0x0000000080010200                . = ALIGN (0x8)
+ *fill*         0x00000000800101fc        0x4 
+                0x0000000080010200                __bss_start = .
+ *(.sbss*)
+ .sbss.RST_CLK_PER1C2_Speed
+                0x0000000080010200        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+                0x0000000080010200                RST_CLK_PER1C2_Speed
+ .sbss.rccHseSpeed
+                0x0000000080010204        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .sbss.rccCpuC1Speed
+                0x0000000080010208        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .sbss.rccPllSpeed
+                0x000000008001020c        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .sbss.rccCpuC3Speed
+                0x0000000080010210        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .sbss.rccPer1C1Speed
+                0x0000000080010214        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .sbss.rccAdcUIC1Speed
+                0x0000000080010218        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .sbss.rccAdcC1Speed
+                0x000000008001021c        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .sbss.rccWwdgSpeed
+                0x0000000080010220        0x4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ *(.scommon)
+ *(.bss*)
+ *(COMMON)
+                0x0000000080010228                . = ALIGN (0x8)
+ *fill*         0x0000000080010224        0x4 
+                0x0000000080010228                __bss_end = .
+                0x0000000080010880                __global_pointer$ = MIN ((__sdata_start + 0x800), MAX ((__data_start + 0x800), (__bss_end - 0x800)))
+                0x0000000080010228                . = ALIGN (0x8)
+                0x0000000080010228                __end = .
+
+.aalign         0x0000000080001b28        0x0
+                0x0000000080001b28                . = ALIGN (0x4)
+                0x0000000080001b28                __ahbram_data_load_start = LOADADDR (.ahbram_data)
+
+.ahbram_data    0x0000000020000000        0x0 load address 0x0000000080001b28
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_data_start = .
+ *(.ahbram_data)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_data_end = .
+
+.ahbram_bss     0x0000000020000000        0x0
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_bss_start = .
+ *(.ahbram_bss)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_bss_end = .
+                0x0000000080001b28                __otpfunc_load_start = LOADADDR (.EEPROM_ProgramWord_from_OTP)
+
+.EEPROM_ProgramWord_from_OTP
+                0x0000000070003800      0x1e2 load address 0x0000000080001b28
+ *(.EEPROM_ProgramWord_from_OTP)
+ .EEPROM_ProgramWord_from_OTP
+                0x0000000070003800      0x1e2 ./program/otp_functions.o
+                0x0000000070003800                EEPROM_ProgramWord_from_OTP
+                0x00000000700039e2                __EEPROM_ProgramWord_from_OTP_end = .
+
+.EEPROM_ErasePage_from_OTP
+                0x0000000070003a00      0x1aa load address 0x0000000080001d0a
+ *(.EEPROM_ErasePage_from_OTP)
+ .EEPROM_ErasePage_from_OTP
+                0x0000000070003a00      0x1aa ./program/otp_functions.o
+                0x0000000070003a00                EEPROM_ErasePage_from_OTP
+                0x0000000070003baa                __EEPROM_ErasePage_from_OTP_end = .
+
+.ralign         0x0000000080001eb4        0x0
+                0x0000000080001eb4                . = ALIGN (0x4)
+                0x0000000080001eb4                __ramfunc_load_start = LOADADDR (.ramfunc)
+
+.ramfunc        0x0000000080001eb4      0x1d2
+                0x0000000080001eb4                . = ALIGN (0x4)
+                0x0000000080001eb4                __ramfunc_start = .
+ *(.ramfunc*)
+ .ramfunc       0x0000000080001eb4      0x1d2 ./program/startup_MLDR187.o
+                0x0000000080001eb4                trap_vector
+                0x0000000080001fa8                trap_iam
+                0x0000000080001fb2                trap_iaf
+                0x0000000080001fbc                trap_ii
+                0x0000000080001fc6                trap_lam
+                0x0000000080001fd0                trap_laf
+                0x0000000080001fda                trap_sam
+                0x0000000080001fe4                trap_saf
+                0x0000000080001fee                trap_ecallm
+                0x0000000080002002                PendSV_Handler
+                0x0000000080002004                enable_PendSV_Handler
+                0x000000008000200c                disable_PendSV_Handler
+                0x0000000080002014                SysTick_Handler
+                0x0000000080002016                enable_SysTick_Handler
+                0x0000000080002020                disable_SysTick_Handler
+                0x000000008000202a                irq_extm
+                0x000000008000202c                enable_irq_extm
+                0x000000008000203a                disable_irq_extm
+                0x0000000080002048                DMA_IRQHandler
+                0x000000008000204a                UART1_IRQHandler
+                0x000000008000204c                UART2_IRQHandler
+                0x000000008000204e                SSP1_IRQHandler
+                0x0000000080002050                POWER_IRQHandler
+                0x0000000080002052                WWDG_IRQHandler
+                0x0000000080002054                Timer1_IRQHandler
+                0x0000000080002056                Timer2_IRQHandler
+                0x0000000080002058                ADC_IRQHandler
+                0x000000008000205a                I2C_IRQHandler
+                0x000000008000205c                BACKUP_IRQHandler
+                0x000000008000205e                EXT_1_IRQHandler
+                0x0000000080002060                EXT_2_IRQHandler
+                0x0000000080002062                EXT_3_IRQHandler
+                0x0000000080002064                ADCIU_1_IRQHandler
+                0x0000000080002066                ADCIU_2_IRQHandler
+                0x0000000080002068                ADCIU_3_IRQHandler
+                0x000000008000206a                L_BLOCK_IRQHandler
+                0x000000008000206c                Default_IRQHandler
+                0x000000008000206e                SENSORS_IRQHandler
+                0x0000000080002070                CLK_MEASURE_IRQHandler
+                0x0000000080002072                RANDOM_IRQHandler
+                0x0000000080002074                ISO7816_IRQHandler
+                0x0000000080002076                UART3_IRQHandler
+                0x0000000080002078                SSP2_IRQHandler
+                0x000000008000207a                SSP3_IRQHandler
+                0x000000008000207c                Timer3_IRQHandler
+                0x000000008000207e                Timer4_IRQHandler
+                0x0000000080002080                UART4_IRQHandler
+                0x0000000080002082                OTP_Corrupt_IRQHandler
+
+.rela.dyn       0x0000000080002088        0x0
+ .rela.rodata.OTP_functions
+                0x0000000080002088        0x0 ./program/init.o
+ .rela.text.main
+                0x0000000080002088        0x0 ./program/init.o
+ .rela.data     0x0000000080002088        0x0 ./program/init.o
+ .rela.text.init
+                0x0000000080002088        0x0 ./program/init.o
+ .rela.text.exit
+                0x0000000080002088        0x0 ./program/init.o
+ .rela.data.impure_data
+                0x0000000080002088        0x0 ./program/init.o
+ .rela.text.__libc_init_array
+                0x0000000080002088        0x0 ./program/init.o
+                0x0000000080002088                . = ALIGN (0x4)
+                0x0000000080002088                __ramfunc_end = .
+
+.heap           0x0000000080010228     0x1000
+                0x0000000080011228                . = (. + __heap_size)
+ *fill*         0x0000000080010228     0x1000 
+                0x0000000080011228                __heap_end = .
+
+.stack          0x0000000080017000     0x1000
+                0x0000000080018000                . = (. + __stack_size)
+ *fill*         0x0000000080017000     0x1000 
+                0x0000000080018000                __sp = .
+OUTPUT(OTP.elf elf32-littleriscv)
+
+.debug_info     0x0000000000000000     0x624c
+ .debug_info    0x0000000000000000      0xcf2 ./program/init.o
+ .debug_info    0x0000000000000cf2      0xaf6 ./program/main.o
+ .debug_info    0x00000000000017e8      0xabb ./program/otp.o
+ .debug_info    0x00000000000022a3      0xca3 ./program/otp_functions.o
+ .debug_info    0x0000000000002f46       0x22 ./program/startup_MLDR187.o
+ .debug_info    0x0000000000002f68     0x10fa ./program/syscalls.o
+ .debug_info    0x0000000000004062      0xf2f ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_info    0x0000000000004f91      0x505 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_info    0x0000000000005496      0x354 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_info    0x00000000000057ea      0xa62 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+
+.debug_abbrev   0x0000000000000000     0x1380
+ .debug_abbrev  0x0000000000000000      0x20f ./program/init.o
+ .debug_abbrev  0x000000000000020f      0x226 ./program/main.o
+ .debug_abbrev  0x0000000000000435      0x24a ./program/otp.o
+ .debug_abbrev  0x000000000000067f      0x2a3 ./program/otp_functions.o
+ .debug_abbrev  0x0000000000000922       0x12 ./program/startup_MLDR187.o
+ .debug_abbrev  0x0000000000000934      0x2c3 ./program/syscalls.o
+ .debug_abbrev  0x0000000000000bf7      0x283 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_abbrev  0x0000000000000e7a      0x18f ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_abbrev  0x0000000000001009      0x162 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_abbrev  0x000000000000116b      0x215 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+
+.debug_aranges  0x0000000000000000      0x3b0
+ .debug_aranges
+                0x0000000000000000       0x20 ./program/init.o
+ .debug_aranges
+                0x0000000000000020       0x20 ./program/main.o
+ .debug_aranges
+                0x0000000000000040       0x28 ./program/otp.o
+ .debug_aranges
+                0x0000000000000068       0x28 ./program/otp_functions.o
+ .debug_aranges
+                0x0000000000000090       0x28 ./program/startup_MLDR187.o
+ .debug_aranges
+                0x00000000000000b8       0xa0 ./program/syscalls.o
+ .debug_aranges
+                0x0000000000000158      0x130 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_aranges
+                0x0000000000000288       0x68 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_aranges
+                0x00000000000002f0       0x58 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_aranges
+                0x0000000000000348       0x68 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+
+.debug_ranges   0x0000000000000000      0x330
+ .debug_ranges  0x0000000000000000       0x10 ./program/init.o
+ .debug_ranges  0x0000000000000010       0x10 ./program/main.o
+ .debug_ranges  0x0000000000000020       0x18 ./program/otp.o
+ .debug_ranges  0x0000000000000038       0x18 ./program/otp_functions.o
+ .debug_ranges  0x0000000000000050       0x20 ./program/startup_MLDR187.o
+ .debug_ranges  0x0000000000000070       0x90 ./program/syscalls.o
+ .debug_ranges  0x0000000000000100      0x120 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_ranges  0x0000000000000220       0x58 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_ranges  0x0000000000000278       0x48 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_ranges  0x00000000000002c0       0x70 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+
+.debug_macro    0x0000000000000000     0xc24f
+ .debug_macro   0x0000000000000000      0x165 ./program/init.o
+ .debug_macro   0x0000000000000165      0x748 ./program/init.o
+ .debug_macro   0x00000000000008ad       0x22 ./program/init.o
+ .debug_macro   0x00000000000008cf       0x8e ./program/init.o
+ .debug_macro   0x000000000000095d       0x51 ./program/init.o
+ .debug_macro   0x00000000000009ae      0x103 ./program/init.o
+ .debug_macro   0x0000000000000ab1       0x6a ./program/init.o
+ .debug_macro   0x0000000000000b1b      0x1df ./program/init.o
+ .debug_macro   0x0000000000000cfa     0x4c43 ./program/init.o
+ .debug_macro   0x000000000000593d       0x28 ./program/init.o
+ .debug_macro   0x0000000000005965       0x20 ./program/init.o
+ .debug_macro   0x0000000000005985       0x10 ./program/init.o
+ .debug_macro   0x0000000000005995       0x19 ./program/init.o
+ .debug_macro   0x00000000000059ae       0x52 ./program/init.o
+ .debug_macro   0x0000000000005a00       0x34 ./program/init.o
+ .debug_macro   0x0000000000005a34       0x34 ./program/init.o
+ .debug_macro   0x0000000000005a68       0x16 ./program/init.o
+ .debug_macro   0x0000000000005a7e      0x10e ./program/init.o
+ .debug_macro   0x0000000000005b8c       0x8d ./program/init.o
+ .debug_macro   0x0000000000005c19       0x16 ./program/init.o
+ .debug_macro   0x0000000000005c2f       0x43 ./program/init.o
+ .debug_macro   0x0000000000005c72       0x34 ./program/init.o
+ .debug_macro   0x0000000000005ca6       0x10 ./program/init.o
+ .debug_macro   0x0000000000005cb6       0x52 ./program/init.o
+ .debug_macro   0x0000000000005d08      0x182 ./program/init.o
+ .debug_macro   0x0000000000005e8a      0x339 ./program/init.o
+ .debug_macro   0x00000000000061c3       0x16 ./program/init.o
+ .debug_macro   0x00000000000061d9       0x29 ./program/init.o
+ .debug_macro   0x0000000000006202      0x16e ./program/main.o
+ .debug_macro   0x0000000000006370     0x4c49 ./program/main.o
+ .debug_macro   0x000000000000afb9       0x2e ./program/main.o
+ .debug_macro   0x000000000000afe7      0x141 ./program/otp.o
+ .debug_macro   0x000000000000b128      0x171 ./program/otp_functions.o
+ .debug_macro   0x000000000000b299       0x4c ./program/otp_functions.o
+ .debug_macro   0x000000000000b2e5       0x94 ./program/otp_functions.o
+ .debug_macro   0x000000000000b379       0x57 ./program/otp_functions.o
+ .debug_macro   0x000000000000b3d0      0x268 ./program/syscalls.o
+ .debug_macro   0x000000000000b638       0x88 ./program/syscalls.o
+ .debug_macro   0x000000000000b6c0       0x26 ./program/syscalls.o
+ .debug_macro   0x000000000000b6e6      0x174 ./program/syscalls.o
+ .debug_macro   0x000000000000b85a       0x10 ./program/syscalls.o
+ .debug_macro   0x000000000000b86a       0x35 ./program/syscalls.o
+ .debug_macro   0x000000000000b89f       0x10 ./program/syscalls.o
+ .debug_macro   0x000000000000b8af      0x241 ./program/syscalls.o
+ .debug_macro   0x000000000000baf0       0x16 ./program/syscalls.o
+ .debug_macro   0x000000000000bb06       0x10 ./program/syscalls.o
+ .debug_macro   0x000000000000bb16       0x10 ./program/syscalls.o
+ .debug_macro   0x000000000000bb26       0x10 ./program/syscalls.o
+ .debug_macro   0x000000000000bb36       0x1c ./program/syscalls.o
+ .debug_macro   0x000000000000bb52       0x52 ./program/syscalls.o
+ .debug_macro   0x000000000000bba4       0x40 ./program/syscalls.o
+ .debug_macro   0x000000000000bbe4       0x10 ./program/syscalls.o
+ .debug_macro   0x000000000000bbf4       0x40 ./program/syscalls.o
+ .debug_macro   0x000000000000bc34       0xd5 ./program/syscalls.o
+ .debug_macro   0x000000000000bd09       0x1c ./program/syscalls.o
+ .debug_macro   0x000000000000bd25       0x3d ./program/syscalls.o
+ .debug_macro   0x000000000000bd62       0x35 ./program/syscalls.o
+ .debug_macro   0x000000000000bd97      0x122 ./program/syscalls.o
+ .debug_macro   0x000000000000beb9      0x13a ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_macro   0x000000000000bff3       0xc8 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_macro   0x000000000000c0bb       0x9e ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_macro   0x000000000000c159       0xf6 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+
+.debug_line     0x0000000000000000     0x6123
+ .debug_line    0x0000000000000000      0x3a8 ./program/init.o
+ .debug_line    0x00000000000003a8      0x415 ./program/main.o
+ .debug_line    0x00000000000007bd      0x3f1 ./program/otp.o
+ .debug_line    0x0000000000000bae      0x803 ./program/otp_functions.o
+ .debug_line    0x00000000000013b1      0x5ab ./program/startup_MLDR187.o
+ .debug_line    0x000000000000195c      0x78e ./program/syscalls.o
+ .debug_line    0x00000000000020ea     0x166a ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_line    0x0000000000003754      0xdad ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_line    0x0000000000004501      0x648 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_line    0x0000000000004b49     0x15da ./MLDR187_SPL/src/MLDR187_rst_clk.o
+
+.debug_str      0x0000000000000000    0x28b6b
+ .debug_str     0x0000000000000000    0x24702 ./program/init.o
+                                      0x24957 (size before relaxing)
+ .debug_str     0x0000000000024702      0x12b ./program/main.o
+                                      0x24321 (size before relaxing)
+ .debug_str     0x000000000002482d       0x44 ./program/otp.o
+                                      0x24224 (size before relaxing)
+ .debug_str     0x0000000000024871      0x2b7 ./program/otp_functions.o
+                                      0x244f0 (size before relaxing)
+ .debug_str     0x0000000000024b28       0x29 ./program/startup_MLDR187.o
+                                         0x61 (size before relaxing)
+ .debug_str     0x0000000000024b51     0x1c30 ./program/syscalls.o
+                                      0x26048 (size before relaxing)
+ .debug_str     0x0000000000026781     0x1139 ./MLDR187_SPL/src/MLDR187_bkp.o
+                                      0x228d4 (size before relaxing)
+ .debug_str     0x00000000000278ba      0x129 ./MLDR187_SPL/src/MLDR187_eeprom.o
+                                      0x2194d (size before relaxing)
+ .debug_str     0x00000000000279e3      0x1a4 ./MLDR187_SPL/src/MLDR187_otp.o
+                                      0x21726 (size before relaxing)
+ .debug_str     0x0000000000027b87      0xfe4 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+                                      0x22aef (size before relaxing)
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 ./program/init.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 ./program/main.o
+ .comment       0x0000000000000033       0x34 ./program/otp.o
+ .comment       0x0000000000000033       0x34 ./program/otp_functions.o
+ .comment       0x0000000000000033       0x34 ./program/syscalls.o
+ .comment       0x0000000000000033       0x34 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .comment       0x0000000000000033       0x34 ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .comment       0x0000000000000033       0x34 ./MLDR187_SPL/src/MLDR187_otp.o
+ .comment       0x0000000000000033       0x34 ./MLDR187_SPL/src/MLDR187_rst_clk.o
+
+.debug_frame    0x0000000000000000      0xf94
+ .debug_frame   0x0000000000000000       0x38 ./program/init.o
+ .debug_frame   0x0000000000000038       0x38 ./program/main.o
+ .debug_frame   0x0000000000000070       0x60 ./program/otp.o
+ .debug_frame   0x00000000000000d0       0x58 ./program/otp_functions.o
+ .debug_frame   0x0000000000000128      0x1dc ./program/startup_MLDR187.o
+ .debug_frame   0x0000000000000304      0x29c ./program/syscalls.o
+ .debug_frame   0x00000000000005a0      0x540 ./MLDR187_SPL/src/MLDR187_bkp.o
+ .debug_frame   0x0000000000000ae0      0x18c ./MLDR187_SPL/src/MLDR187_eeprom.o
+ .debug_frame   0x0000000000000c6c      0x138 ./MLDR187_SPL/src/MLDR187_otp.o
+ .debug_frame   0x0000000000000da4      0x18c ./MLDR187_SPL/src/MLDR187_rst_clk.o
+ .debug_frame   0x0000000000000f30       0x28 c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000f58       0x3c c:/eclipse/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32im/ilp32\libg_nano.a(lib_a-init.o)

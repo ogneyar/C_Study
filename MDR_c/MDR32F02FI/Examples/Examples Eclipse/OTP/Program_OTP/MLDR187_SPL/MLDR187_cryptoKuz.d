@@ -1,0 +1,1 @@
+MLDR187_SPL/MLDR187_cryptoKuz.o: ../MLDR187_SPL/MLDR187_cryptoKuz.S
