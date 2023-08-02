@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<flash_device>
+  <exe>MLDR187.out</exe>
+  <page>4096</page>
+  <block>64 0x1000</block>
+  <flash_base>0x10000000</flash_base>
+  <macro>MLDR187.mac</macro>
+  <aggregate>1</aggregate>
+</flash_device>

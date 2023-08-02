@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<template>
+  <description>K1986BK025 Interrupt project.</description>
+  <displayname>K1986BK025 Interrupt project</displayname>
+
+  <files>
+    <file>$PROJ_DIR$\src\main.c</file>
+    <file>$PROJ_DIR$\src\interrupt.c</file>
+  </files>
+
+</template>
+
+

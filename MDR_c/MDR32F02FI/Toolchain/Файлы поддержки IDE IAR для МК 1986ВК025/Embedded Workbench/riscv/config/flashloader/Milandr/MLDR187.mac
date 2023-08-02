@@ -1,0 +1,57 @@
+// Flashloader macros for Flash memories Milandr MLDR187
+
+__param PER2_CLOCK=0x4002001C;
+__param CPU_CLOCK=0x4002000C;
+__param BKP_WRP=0x40060000;
+__param BKP_CLK=0x40060008;
+
+execUserFlashInit()
+{
+    __var reg;
+
+    //__message("-I- execUserFlashInit");
+
+    reg  = __readMemory32(PER2_CLOCK, "Memory");
+    reg |= (1<<3); // FLASH
+    reg |= (1<<12); // BKP
+    reg &=~(1<<5); // DMA
+    __writeMemory32(reg, PER2_CLOCK, "Memory");
+
+    reg  = __readMemory32(CPU_CLOCK, "Memory");
+    reg &=~(3<<8); // CPU_CLK = HSI
+    __writeMemory32(reg, CPU_CLOCK, "Memory");
+
+
+    __writeMemory32(0x8555AAA1, BKP_WRP, "Memory");
+
+    reg  = __readMemory32(BKP_CLK, "Memory");
+    reg &=~(63<<15); // HSItrim = 0x00
+    reg |= (0x20<<15); // HSItrim = 0x20
+    __writeMemory32(reg, BKP_CLK, "Memory");
+
+    __writeMemory32(0, BKP_WRP, "Memory");
+}
+
+execUserFlashExit()
+{
+    __var reg;
+
+    //__message("-I- execUserFlashExit");
+
+    __writeMemory32(0x8555AAA1, BKP_WRP, "Memory");
+
+    reg  = __readMemory32(BKP_CLK, "Memory");
+    //__message "BKP_CLK = ", reg:%x;
+
+    reg &=~(63<<15); // HSItrim = 0x00
+    __writeMemory32(reg, BKP_CLK, "Memory");
+
+    __writeMemory32(0, BKP_WRP, "Memory");
+
+
+    reg  = __readMemory32(PER2_CLOCK, "Memory");
+    reg &=~(1<<3); // FLASH
+    reg &=~(1<<12); // BKP
+    __writeMemory32(reg, PER2_CLOCK, "Memory");
+}
+

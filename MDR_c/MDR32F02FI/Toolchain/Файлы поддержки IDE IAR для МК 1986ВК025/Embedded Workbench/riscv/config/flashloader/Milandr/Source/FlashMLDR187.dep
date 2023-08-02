@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>1601776336</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash_loader.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash_loader.o</file>
+            <file>$TOOLKIT_DIR$\inc\csr.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\List\flash_loader_ram.lst</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\List\flash_loader.lst</file>
+            <file>$PROJ_DIR$\Debug\List\flash_loader_asm.lst</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash_loader_ram.__cstat.et</file>
+            <file>$PROJ_DIR$\FlashMLDR187.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash_loader_ram.o</file>
+            <file>$PROJ_DIR$\src\flash_loader_ram.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\src\flash_config.h</file>
+            <file>$PROJ_DIR$\src\flash_loader.h</file>
+            <file>$PROJ_DIR$\Debug\List\FlashMLDR187.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash_loader.__cstat.et</file>
+            <file>$PROJ_DIR$\src\flash_loader.c</file>
+            <file>$PROJ_DIR$\Debug\Exe\FlashMLDR187.out</file>
+            <file>$PROJ_DIR$\src\flash_loader_extra.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash_loader_ram.xcl</file>
+            <file>$PROJ_DIR$\src\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\src\flash_loader_ram.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash_loader_asm.o</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\src\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRISCV</name>
+                    <file> 8 3</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 1</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 20</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRISCV</name>
+                    <file> 18 17 2 15 16 7 10 5 23</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\FlashMLDR187.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 19</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 12 3 27 13</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>IASMRISCV</name>
+                    <file> 27 9</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\flash_loader_ram.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRISCV</name>
+                    <file> 6 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 11</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRISCV</name>
+                    <file> 18 17 2 15 16 7 10 5 23 14 0 4</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 22 19</file>
+                </tool>
+            </outputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs>
+            <file>$PROJ_DIR$\Release\Obj\flash_loader.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\csr.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Release\Obj\flash_loader.xcl</file>
+            <file>$PROJ_DIR$\Release\List\FlashMLDR187.map</file>
+            <file>$PROJ_DIR$\Release\Obj\flash_loader_asm.o</file>
+            <file>$PROJ_DIR$\Release\Obj\flash_loader_ram.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\FlashMLDR187.icf</file>
+            <file>$PROJ_DIR$\Release\List\flash_loader_ram.lst</file>
+            <file>$PROJ_DIR$\Release\List\flash_loader.lst</file>
+            <file>$PROJ_DIR$\Release\Obj\flash_loader.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Exe\FlashMLDR187.out</file>
+            <file>$PROJ_DIR$\Release\Obj\FlashMLDR187.pbd</file>
+            <file>$PROJ_DIR$\src\flash_loader_ram.h</file>
+            <file>$PROJ_DIR$\Release\List\flash_loader_asm.lst</file>
+            <file>$PROJ_DIR$\Release\Obj\flash_loader_ram.o</file>
+            <file>$PROJ_DIR$\Release\Obj\flash_loader_ram.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\src\flash_config.h</file>
+            <file>$PROJ_DIR$\src\flash_loader.h</file>
+            <file>$PROJ_DIR$\src\flash_loader.c</file>
+            <file>$PROJ_DIR$\src\flash_loader_extra.h</file>
+            <file>$PROJ_DIR$\src\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\src\flash_loader_ram.c</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\Release\Exe\FlashMLDR187.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 11 0 7 19</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRISCV</name>
+                    <file> 13 0</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 5</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRISCV</name>
+                    <file> 24 23 2 21 22 9 10 4 26</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>IASMRISCV</name>
+                    <file> 7 18</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\flash_loader_ram.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRISCV</name>
+                    <file> 12 19</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 8</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 20</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRISCV</name>
+                    <file> 24 23 2 21 22 9 10 4 26 17 1 3</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 15 6</file>
+                </tool>
+            </outputs>
+        </file>
+    </configuration>
+</project>

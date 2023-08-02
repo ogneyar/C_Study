@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<template>
+  <description>C project using default tool settings for K1986BK025 including an empty main.c file.</description>
+  <displayname>K1986BK025 empty project</displayname>
+
+  <files>
+    <file>$PROJ_DIR$\src\main.c</file>
+    <file>$PROJ_DIR$\src\interrupt.c</file>
+  </files>
+
+</template>
+
+

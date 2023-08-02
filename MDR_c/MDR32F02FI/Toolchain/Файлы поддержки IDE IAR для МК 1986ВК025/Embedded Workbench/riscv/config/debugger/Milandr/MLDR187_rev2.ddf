@@ -1,0 +1,96 @@
+;;-------------------------------------------------------------------------
+;; Declarations of SFR registers and bits, interrupt/exception vectors,
+;; interrupt control registers, memory map information, and additional
+;; configurations for Milandr MLDR187 RISC-V device.
+;;
+;; This declaration file can be used by all flavors of the IAR C-SPY
+;; Debugger for RISC-V (simulator and emulators).
+;;
+;; Copyright 2019 IAR Systems AB.
+;;-------------------------------------------------------------------------
+
+
+;;-------------------------------------------------------------------------
+;; SFR declaration file
+;;
+;; Syntax: File = Filename
+;;
+;;   Filename   Name of SFR declaration file
+;;-------------------------------------------------------------------------
+
+[SfrInclude]
+File = MLDR187_rev2.svd
+
+
+;;-------------------------------------------------------------------------
+;; Memory information
+;;
+;; Syntax: Memory[NN] = Name Zone StartAdr EndAdr AccType
+;;
+;;   NN         Optional counter
+;;   Name       Name of address space (legal characters: A-Z, a-z, 0-9, _)
+;;   Zone       Must be Memory
+;;   StartAdr   Start address of memory address space
+;;   EndAdr     End address of memory address space
+;;   AccType    Type of access, read-only (R) or read-write (RW)
+;;              (W - noncached) for SFR areas and areas that are shared,
+;;              implemented as different core-specific physical memories
+;;              in a multicore device.
+;;
+;; Used to define named memory address spaces within the 'Memory' zone.
+;;
+;;-------------------------------------------------------------------------
+;;       Name            Zone      StartAdr      EndAdr        AccType
+;;-------------------------------------------------------------------------
+
+[Memory]
+Memory = CLINT           Memory    0x02000000    0x0200FFFF    W
+Memory = PLIC            Memory    0x0C000000    0x0C2FFFFF    W
+Memory = BootOTP         Memory    0x00020000    0x00023FFF    R
+Memory = Flash           Memory    0x10000000    0x1003FFFF    R
+Memory = Peripherals     Memory    0x40000000    0x7FFFFFFF    W
+Memory = RAM             Memory    0x20000000    0x20003FFF    RW
+Memory = TCMA            Memory    0x80000000    0x8000FFFF    RW
+Memory = TCMB            Memory    0x80010000    0x8001FFFF    RW
+
+TrustedRanges = true
+
+;;-------------------------------------------------------------------------
+;; Interrupt declarations
+;;
+;; Syntax: InterruptNN = Id Vector Type
+;;
+;;   NN          Counter
+;;   Id          Unique Interrupt 'name'
+;;   Vector      Exception Code
+;;   Controller  MLDR187
+;;   Core        Core Number
+;;   Enable      Enable bit
+;;   Pending     Pending bit
+;;   Priority    Priority level
+;;   UserLvl     (M)achine/(S)upervisor/(U)ser
+;;   Trap        '0' exception
+;;               '1' interrupt
+;;   Maskable    '0' Non Maskable
+;;               '1' Maskable
+;;-------------------------------------------------------------------------
+;;[InterruptList]
+;;Interrupt1 = GLOBAL_IRQ  0x07  MLDR187  0x00  mie.mtie  mip.mtip  0x00  M  0x01  0x00
+
+
+;;-------------------------------------------------------------------------
+;; Device information
+;;
+;; Syntax: Item = Value
+;;
+;;   Item    Name of item
+;;   Value   Value of item
+;;-------------------------------------------------------------------------
+
+[DeviceInfo]
+CoreNumbers = 1
+
+
+;;-------------------------------------------------------------------------
+;; End of file
+;;-------------------------------------------------------------------------

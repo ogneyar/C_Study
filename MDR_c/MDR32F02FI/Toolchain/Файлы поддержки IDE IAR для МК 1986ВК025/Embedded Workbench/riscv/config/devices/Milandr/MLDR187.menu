@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<optionMenuItem>
+  <tag>MLDR187</tag>
+  <display>Milandr MLDR187</display>
+  <data>$CUR_DIR$\MLDR187.menu</data>
+  <dataEx>
+    <icffilename>Milandr\MLDR187.icf</icffilename>
+    <ddffilename>Milandr\MLDR187_rev2.ddf</ddffilename>
+    <boardfilename>Milandr\MLDR187.board</boardfilename>
+    <core>RV32IMC</core>
+    <numcores>1</numcores>
+    <ijethwresetdelay>1000</ijethwresetdelay>
+    <resetcatch />
+    <cyclecounter />
+  </dataEx>
+</optionMenuItem>
