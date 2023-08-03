@@ -16,10 +16,12 @@ c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/
                               build/main.o (putchar)
 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putc.o)
                               c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putchar.o) (_putc_r)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-puts.o)
+                              build/main.o (puts)
 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o)
                               c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putc.o) (__swbuf_r)
 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wsetup.o)
-                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o) (__swsetup_r)
+                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-puts.o) (__swsetup_r)
 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fflush.o)
                               c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o) (_fflush_r)
 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
@@ -124,6 +126,8 @@ Discarded input sections
                 0x0000000000000000        0x4 build/main.o
  .data.Logotip1
                 0x0000000000000000      0x1c0 build/main.o
+ .text.init_leds
+                0x0000000000000000       0xda build/main.o
  .group         0x0000000000000000        0xc build/init.o
  .group         0x0000000000000000        0xc build/init.o
  .group         0x0000000000000000        0xc build/init.o
@@ -388,6 +392,8 @@ Discarded input sections
                 0x0000000000000000       0x3c build/MLDR187_bkp.o
  .text.BKP_GetDateTimeBCDTimestamp
                 0x0000000000000000       0xe8 build/MLDR187_bkp.o
+ .text.BKP_SetDateTimeBCD
+                0x0000000000000000      0x108 build/MLDR187_bkp.o
  .text.BKP_GetSingleFlag
                 0x0000000000000000       0x30 build/MLDR187_bkp.o
  .text.BKP_InitTamper
@@ -537,6 +543,8 @@ Discarded input sections
                 0x0000000000000000       0x3e build/MLDR187_uart.o
  .text.UART_GetFlags
                 0x0000000000000000       0x18 build/MLDR187_uart.o
+ .text.UART_GetFlagStatus
+                0x0000000000000000       0x34 build/MLDR187_uart.o
  .text.UART_DMAConfig
                 0x0000000000000000       0x2e build/MLDR187_uart.o
  .text.UART_ITsetMask
@@ -600,6 +608,9 @@ Discarded input sections
  .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putc.o)
  .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putc.o)
  .text.putc     0x0000000000000000       0x14 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putc.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-puts.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-puts.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-puts.o)
  .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o)
  .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o)
  .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o)
@@ -763,375 +774,371 @@ END GROUP
  .text.init     0x0000000010000000      0x148 build/startup_MLDR187.o
                 0x0000000010000000                _start
 
-.text           0x0000000010000148     0x4aa2
+.text           0x0000000010000148     0x4c88
                 0x0000000010000148                . = ALIGN (0x4)
  *fill*         0x0000000010000148        0x0 
  *(.text*)
- .text.main     0x0000000010000148       0x7c build/main.o
+ .text.main     0x0000000010000148       0x70 build/main.o
                 0x0000000010000148                main
  .text.BACKUP_IRQHandler
-                0x00000000100001c4      0x156 build/main.o
-                0x00000000100001c4                BACKUP_IRQHandler
+                0x00000000100001b8      0x1cc build/main.o
+                0x00000000100001b8                BACKUP_IRQHandler
  .text.SysTick_Handler
-                0x000000001000031a       0x3e build/main.o
-                0x000000001000031a                SysTick_Handler
- .text.Setup_Interrupts
-                0x0000000010000358       0x60 build/main.o
-                0x0000000010000358                Setup_Interrupts
- .text.Setup_Key
-                0x00000000100003b8       0x48 build/main.o
-                0x00000000100003b8                Setup_Key
- .text.Setup_LED_Port
-                0x0000000010000400       0x78 build/main.o
-                0x0000000010000400                Setup_LED_Port
- .text.puts     0x0000000010000478       0x76 build/main.o
-                0x0000000010000478                puts
+                0x0000000010000384       0x3e build/main.o
+                0x0000000010000384                SysTick_Handler
+ .text.LCD_printNum
+                0x00000000100003c2      0x31c build/main.o
+                0x00000000100003c2                LCD_printNum
+ .text.Led_Init
+                0x00000000100006de       0x78 build/main.o
+                0x00000000100006de                Led_Init
+ .text.Btn_Init
+                0x0000000010000756       0x48 build/main.o
+                0x0000000010000756                Btn_Init
+ .text.Itr_Init
+                0x000000001000079e       0x60 build/main.o
+                0x000000001000079e                Itr_Init
  .text.setAlarm
-                0x00000000100004ee      0x164 build/main.o
-                0x00000000100004ee                setAlarm
+                0x00000000100007fe      0x164 build/main.o
+                0x00000000100007fe                setAlarm
  .text.toggle_led
-                0x0000000010000652       0x9e build/main.o
-                0x0000000010000652                toggle_led
- .text.set_led  0x00000000100006f0       0x76 build/main.o
-                0x00000000100006f0                set_led
- .text.init_leds
-                0x0000000010000766       0xd2 build/main.o
-                0x0000000010000766                init_leds
+                0x0000000010000962       0x9e build/main.o
+                0x0000000010000962                toggle_led
+ .text.set_led  0x0000000010000a00       0x76 build/main.o
+                0x0000000010000a00                set_led
  .text.init_bkp
-                0x0000000010000838       0xfe build/main.o
-                0x0000000010000838                init_bkp
+                0x0000000010000a76       0xea build/main.o
+                0x0000000010000a76                init_bkp
  .text.init_clock
-                0x0000000010000936       0x82 build/init.o
-                0x0000000010000936                init_clock
+                0x0000000010000b60       0x82 build/init.o
+                0x0000000010000b60                init_clock
  .text.init_uart
-                0x00000000100009b8       0x7c build/init.o
-                0x00000000100009b8                init_uart
+                0x0000000010000be2       0x7c build/init.o
+                0x0000000010000be2                init_uart
  .text.terminate
-                0x0000000010000a34       0x14 build/syscalls.o
+                0x0000000010000c5e       0x14 build/syscalls.o
  .text.sys_close
-                0x0000000010000a48       0x22 build/syscalls.o
-                0x0000000010000a48                sys_close
+                0x0000000010000c72       0x22 build/syscalls.o
+                0x0000000010000c72                sys_close
  .text.sys_write
-                0x0000000010000a6a       0x40 build/syscalls.o
-                0x0000000010000a6a                sys_write
+                0x0000000010000c94       0x40 build/syscalls.o
+                0x0000000010000c94                sys_write
  .text.sys_fstat
-                0x0000000010000aaa       0x38 build/syscalls.o
-                0x0000000010000aaa                sys_fstat
+                0x0000000010000cd4       0x38 build/syscalls.o
+                0x0000000010000cd4                sys_fstat
  .text.sys_exit
-                0x0000000010000ae2       0x1c build/syscalls.o
-                0x0000000010000ae2                sys_exit
- .text.sys_brk  0x0000000010000afe       0x60 build/syscalls.o
-                0x0000000010000afe                sys_brk
- .text._exit    0x0000000010000b5e       0x12 build/syscalls.o
-                0x0000000010000b5e                _exit
- .text._sbrk    0x0000000010000b70       0x70 build/syscalls.o
-                0x0000000010000b70                _sbrk
- .text._write   0x0000000010000be0       0x2e build/syscalls.o
-                0x0000000010000be0                _write
- .text._close   0x0000000010000c0e       0x1e build/syscalls.o
-                0x0000000010000c0e                _close
- .text._fstat   0x0000000010000c2c       0x26 build/syscalls.o
-                0x0000000010000c2c                _fstat
- .text._read    0x0000000010000c52       0x2c build/syscalls.o
-                0x0000000010000c52                _read
- .text._isatty  0x0000000010000c7e       0x24 build/syscalls.o
-                0x0000000010000c7e                _isatty
- .text._lseek   0x0000000010000ca2       0x2c build/syscalls.o
-                0x0000000010000ca2                _lseek
+                0x0000000010000d0c       0x1c build/syscalls.o
+                0x0000000010000d0c                sys_exit
+ .text.sys_brk  0x0000000010000d28       0x60 build/syscalls.o
+                0x0000000010000d28                sys_brk
+ .text._exit    0x0000000010000d88       0x12 build/syscalls.o
+                0x0000000010000d88                _exit
+ .text._sbrk    0x0000000010000d9a       0x70 build/syscalls.o
+                0x0000000010000d9a                _sbrk
+ .text._write   0x0000000010000e0a       0x2e build/syscalls.o
+                0x0000000010000e0a                _write
+ .text._close   0x0000000010000e38       0x1e build/syscalls.o
+                0x0000000010000e38                _close
+ .text._fstat   0x0000000010000e56       0x26 build/syscalls.o
+                0x0000000010000e56                _fstat
+ .text._read    0x0000000010000e7c       0x2c build/syscalls.o
+                0x0000000010000e7c                _read
+ .text._isatty  0x0000000010000ea8       0x24 build/syscalls.o
+                0x0000000010000ea8                _isatty
+ .text._lseek   0x0000000010000ecc       0x2c build/syscalls.o
+                0x0000000010000ecc                _lseek
  .text.LCD_PUT_PICT
-                0x0000000010000cce       0xd8 build/text.o
-                0x0000000010000cce                LCD_PUT_PICT
+                0x0000000010000ef8       0xd8 build/text.o
+                0x0000000010000ef8                LCD_PUT_PICT
  .text.LCD_PUT_BYTE
-                0x0000000010000da6      0x350 build/text.o
-                0x0000000010000da6                LCD_PUT_BYTE
+                0x0000000010000fd0      0x350 build/text.o
+                0x0000000010000fd0                LCD_PUT_BYTE
  .text.LCD_PUTC
-                0x00000000100010f6      0x120 build/text.o
-                0x00000000100010f6                LCD_PUTC
+                0x0000000010001320      0x120 build/text.o
+                0x0000000010001320                LCD_PUTC
  .text.LCD_PUTS
-                0x0000000010001216       0x86 build/text.o
-                0x0000000010001216                LCD_PUTS
+                0x0000000010001440       0x86 build/text.o
+                0x0000000010001440                LCD_PUTS
  .text.LCDClock
-                0x000000001000129c       0x2e build/lcd_MLDR187.o
-                0x000000001000129c                LCDClock
+                0x00000000100014c6       0x2e build/lcd_MLDR187.o
+                0x00000000100014c6                LCDClock
  .text.ResetLCD
-                0x00000000100012ca       0x2c build/lcd_MLDR187.o
-                0x00000000100012ca                ResetLCD
+                0x00000000100014f4       0x2c build/lcd_MLDR187.o
+                0x00000000100014f4                ResetLCD
  .text.SetCrystal
-                0x00000000100012f6       0x50 build/lcd_MLDR187.o
-                0x00000000100012f6                SetCrystal
+                0x0000000010001520       0x50 build/lcd_MLDR187.o
+                0x0000000010001520                SetCrystal
  .text.WriteLCD_Cmd
-                0x0000000010001346       0xa6 build/lcd_MLDR187.o
-                0x0000000010001346                WriteLCD_Cmd
+                0x0000000010001570       0xa6 build/lcd_MLDR187.o
+                0x0000000010001570                WriteLCD_Cmd
  .text.WriteLCD_Data
-                0x00000000100013ec       0xa6 build/lcd_MLDR187.o
-                0x00000000100013ec                WriteLCD_Data
+                0x0000000010001616       0xa6 build/lcd_MLDR187.o
+                0x0000000010001616                WriteLCD_Data
  .text.ReadLCD_Cmd
-                0x0000000010001492       0x58 build/lcd_MLDR187.o
-                0x0000000010001492                ReadLCD_Cmd
+                0x00000000100016bc       0x58 build/lcd_MLDR187.o
+                0x00000000100016bc                ReadLCD_Cmd
  .text.ReadLCD_Data
-                0x00000000100014ea       0x5c build/lcd_MLDR187.o
-                0x00000000100014ea                ReadLCD_Data
+                0x0000000010001714       0x5c build/lcd_MLDR187.o
+                0x0000000010001714                ReadLCD_Data
  .text.LCD_INIT
-                0x0000000010001546       0xb6 build/lcd_MLDR187.o
-                0x0000000010001546                LCD_INIT
- .text.LCD_CLS  0x00000000100015fc       0x8e build/lcd_MLDR187.o
-                0x00000000100015fc                LCD_CLS
+                0x0000000010001770       0xb6 build/lcd_MLDR187.o
+                0x0000000010001770                LCD_INIT
+ .text.LCD_CLS  0x0000000010001826       0x8e build/lcd_MLDR187.o
+                0x0000000010001826                LCD_CLS
  .text.GetStatus
-                0x000000001000168a       0x1e build/lcd_MLDR187.o
+                0x00000000100018b4       0x1e build/lcd_MLDR187.o
  .text.WhileStatus
-                0x00000000100016a8       0x32 build/lcd_MLDR187.o
- .text.Pause    0x00000000100016da       0x28 build/lcd_MLDR187.o
+                0x00000000100018d2       0x32 build/lcd_MLDR187.o
+ .text.Pause    0x0000000010001904       0x28 build/lcd_MLDR187.o
  .text.BKP_FreqGenCmd
-                0x0000000010001702      0x1b6 build/MLDR187_bkp.o
-                0x0000000010001702                BKP_FreqGenCmd
+                0x000000001000192c      0x1b6 build/MLDR187_bkp.o
+                0x000000001000192c                BKP_FreqGenCmd
  .text.BKP_GenState
-                0x00000000100018b8       0x64 build/MLDR187_bkp.o
-                0x00000000100018b8                BKP_GenState
+                0x0000000010001ae2       0x64 build/MLDR187_bkp.o
+                0x0000000010001ae2                BKP_GenState
  .text.BKP_Init
-                0x000000001000191c      0x22e build/MLDR187_bkp.o
-                0x000000001000191c                BKP_Init
+                0x0000000010001b46      0x22c build/MLDR187_bkp.o
+                0x0000000010001b46                BKP_Init
  .text.BKP_StructInitDefault
-                0x0000000010001b4a       0x86 build/MLDR187_bkp.o
-                0x0000000010001b4a                BKP_StructInitDefault
+                0x0000000010001d72       0x86 build/MLDR187_bkp.o
+                0x0000000010001d72                BKP_StructInitDefault
  .text.BKP_ConvertToBINFormat
-                0x0000000010001bd0       0xa6 build/MLDR187_bkp.o
-                0x0000000010001bd0                BKP_ConvertToBINFormat
+                0x0000000010001df8       0xa6 build/MLDR187_bkp.o
+                0x0000000010001df8                BKP_ConvertToBINFormat
  .text.BKP_ConvertToBCDFormat
-                0x0000000010001c76       0xa6 build/MLDR187_bkp.o
-                0x0000000010001c76                BKP_ConvertToBCDFormat
+                0x0000000010001e9e       0xa6 build/MLDR187_bkp.o
+                0x0000000010001e9e                BKP_ConvertToBCDFormat
  .text.BKP_GetDateTimeBCD
-                0x0000000010001d1c       0x5a build/MLDR187_bkp.o
-                0x0000000010001d1c                BKP_GetDateTimeBCD
- .text.BKP_SetDateTimeBCD
-                0x0000000010001d76       0xf0 build/MLDR187_bkp.o
-                0x0000000010001d76                BKP_SetDateTimeBCD
+                0x0000000010001f44       0x5a build/MLDR187_bkp.o
+                0x0000000010001f44                BKP_GetDateTimeBCD
  .text.BKP_SetAlarm
-                0x0000000010001e66      0x11e build/MLDR187_bkp.o
-                0x0000000010001e66                BKP_SetAlarm
+                0x0000000010001f9e      0x11e build/MLDR187_bkp.o
+                0x0000000010001f9e                BKP_SetAlarm
  .text.BKP_SetItNewState
-                0x0000000010001f84       0xa0 build/MLDR187_bkp.o
-                0x0000000010001f84                BKP_SetItNewState
+                0x00000000100020bc       0xa0 build/MLDR187_bkp.o
+                0x00000000100020bc                BKP_SetItNewState
  .text.BKP_SetAlarmNewState
-                0x0000000010002024       0x4e build/MLDR187_bkp.o
-                0x0000000010002024                BKP_SetAlarmNewState
+                0x000000001000215c       0x4e build/MLDR187_bkp.o
+                0x000000001000215c                BKP_SetAlarmNewState
  .text.BKP_GetFlags
-                0x0000000010002072       0x2c build/MLDR187_bkp.o
-                0x0000000010002072                BKP_GetFlags
+                0x00000000100021aa       0x2c build/MLDR187_bkp.o
+                0x00000000100021aa                BKP_GetFlags
  .text.BKP_InitExternalEvent
-                0x000000001000209e       0xb2 build/MLDR187_bkp.o
-                0x000000001000209e                BKP_InitExternalEvent
+                0x00000000100021d6       0xb2 build/MLDR187_bkp.o
+                0x00000000100021d6                BKP_InitExternalEvent
  .text.BKP_GetTamperEventState
-                0x0000000010002150       0x2a build/MLDR187_bkp.o
-                0x0000000010002150                BKP_GetTamperEventState
+                0x0000000010002288       0x2a build/MLDR187_bkp.o
+                0x0000000010002288                BKP_GetTamperEventState
  .text.BCDtoBIN
-                0x000000001000217a       0x44 build/MLDR187_bkp.o
+                0x00000000100022b2       0x44 build/MLDR187_bkp.o
  .text.BINtoBCD
-                0x00000000100021be       0x52 build/MLDR187_bkp.o
+                0x00000000100022f6       0x52 build/MLDR187_bkp.o
  .text.BKP_GetDateTimeReg
-                0x0000000010002210       0xde build/MLDR187_bkp.o
+                0x0000000010002348       0xde build/MLDR187_bkp.o
  .text.BKP_GenWaitForOn
-                0x00000000100022ee       0x5c build/MLDR187_bkp.o
+                0x0000000010002426       0x5c build/MLDR187_bkp.o
  .text.BKP_DisableWP
-                0x000000001000234a       0x2e build/MLDR187_bkp.o
+                0x0000000010002482       0x2e build/MLDR187_bkp.o
  .text.BKP_EnableWP
-                0x0000000010002378       0x16 build/MLDR187_bkp.o
+                0x00000000100024b0       0x16 build/MLDR187_bkp.o
  .text.BKP_WaitComplete
-                0x000000001000238e       0x1e build/MLDR187_bkp.o
+                0x00000000100024c6       0x1e build/MLDR187_bkp.o
  .text.PORT_Init
-                0x00000000100023ac      0x1be build/MLDR187_gpio.o
-                0x00000000100023ac                PORT_Init
+                0x00000000100024e4      0x1be build/MLDR187_gpio.o
+                0x00000000100024e4                PORT_Init
  .text.PORT_Write
-                0x000000001000256a       0x5c build/MLDR187_gpio.o
-                0x000000001000256a                PORT_Write
+                0x00000000100026a2       0x5c build/MLDR187_gpio.o
+                0x00000000100026a2                PORT_Write
  .text.PORT_Read
-                0x00000000100025c6       0x1c build/MLDR187_gpio.o
-                0x00000000100025c6                PORT_Read
+                0x00000000100026fe       0x1c build/MLDR187_gpio.o
+                0x00000000100026fe                PORT_Read
  .text.PORT_SetReset
-                0x00000000100025e2       0x38 build/MLDR187_gpio.o
-                0x00000000100025e2                PORT_SetReset
+                0x000000001000271a       0x38 build/MLDR187_gpio.o
+                0x000000001000271a                PORT_SetReset
  .text.RST_CLK_SetupCpuSpeed
-                0x000000001000261a      0x488 build/MLDR187_rst_clk.o
-                0x000000001000261a                RST_CLK_SetupCpuSpeed
+                0x0000000010002752      0x488 build/MLDR187_rst_clk.o
+                0x0000000010002752                RST_CLK_SetupCpuSpeed
  .text.RST_CLK_SetupHsPeripheralClock
-                0x0000000010002aa2      0x1ca build/MLDR187_rst_clk.o
-                0x0000000010002aa2                RST_CLK_SetupHsPeripheralClock
+                0x0000000010002bda      0x1ca build/MLDR187_rst_clk.o
+                0x0000000010002bda                RST_CLK_SetupHsPeripheralClock
  .text.RST_CLK_EnablePeripheralClock
-                0x0000000010002c6c      0x670 build/MLDR187_rst_clk.o
-                0x0000000010002c6c                RST_CLK_EnablePeripheralClock
+                0x0000000010002da4      0x670 build/MLDR187_rst_clk.o
+                0x0000000010002da4                RST_CLK_EnablePeripheralClock
  .text.rccEncodeDivisor3bit
-                0x00000000100032dc       0x84 build/MLDR187_rst_clk.o
+                0x0000000010003414       0x84 build/MLDR187_rst_clk.o
  .text.rccEncodeDivisor4bit
-                0x0000000010003360       0x8c build/MLDR187_rst_clk.o
+                0x0000000010003498       0x8c build/MLDR187_rst_clk.o
  .text.rccEncodeDivisorNumeric
-                0x00000000100033ec       0x98 build/MLDR187_rst_clk.o
+                0x0000000010003524       0x98 build/MLDR187_rst_clk.o
  .text.UART_Init
-                0x0000000010003484      0x2de build/MLDR187_uart.o
-                0x0000000010003484                UART_Init
+                0x00000000100035bc      0x2de build/MLDR187_uart.o
+                0x00000000100035bc                UART_Init
  .text.UART_StructInitDefault
-                0x0000000010003762       0xa0 build/MLDR187_uart.o
-                0x0000000010003762                UART_StructInitDefault
+                0x000000001000389a       0xa0 build/MLDR187_uart.o
+                0x000000001000389a                UART_StructInitDefault
  .text.UART_Cmd
-                0x0000000010003802       0x3e build/MLDR187_uart.o
-                0x0000000010003802                UART_Cmd
+                0x000000001000393a       0x3e build/MLDR187_uart.o
+                0x000000001000393a                UART_Cmd
  .text.UART_Send
-                0x0000000010003840       0x36 build/MLDR187_uart.o
-                0x0000000010003840                UART_Send
+                0x0000000010003978       0x36 build/MLDR187_uart.o
+                0x0000000010003978                UART_Send
  .text.UART_SendBytes
-                0x0000000010003876       0xb6 build/MLDR187_uart.o
-                0x0000000010003876                UART_SendBytes
- .text.UART_GetFlagStatus
-                0x000000001000392c       0x34 build/MLDR187_uart.o
-                0x000000001000392c                UART_GetFlagStatus
- .text.__errno  0x0000000010003960        0x6 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-errno.o)
-                0x0000000010003960                __errno
- .text.exit     0x0000000010003966       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o)
-                0x0000000010003966                exit
+                0x00000000100039ae       0xb6 build/MLDR187_uart.o
+                0x00000000100039ae                UART_SendBytes
+ .text.__errno  0x0000000010003a64        0x6 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-errno.o)
+                0x0000000010003a64                __errno
+ .text.exit     0x0000000010003a6a       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o)
+                0x0000000010003a6a                exit
  .text.__libc_init_array
-                0x0000000010003992       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
-                0x0000000010003992                __libc_init_array
- .text          0x00000000100039e0       0xa8 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
-                0x00000000100039e0                memset
- .text.printf   0x0000000010003a88       0x3a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-printf.o)
-                0x0000000010003a88                iprintf
-                0x0000000010003a88                printf
- .text.putchar  0x0000000010003ac2       0x26 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putchar.o)
-                0x0000000010003ac2                putchar
- .text._putc_r  0x0000000010003ae8       0x82 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putc.o)
-                0x0000000010003ae8                _putc_r
+                0x0000000010003a96       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+                0x0000000010003a96                __libc_init_array
+ .text          0x0000000010003ae4       0xa8 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
+                0x0000000010003ae4                memset
+ .text.printf   0x0000000010003b8c       0x3a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-printf.o)
+                0x0000000010003b8c                iprintf
+                0x0000000010003b8c                printf
+ .text.putchar  0x0000000010003bc6       0x26 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putchar.o)
+                0x0000000010003bc6                putchar
+ .text._putc_r  0x0000000010003bec       0x82 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putc.o)
+                0x0000000010003bec                _putc_r
+ .text._puts_r  0x0000000010003c6e       0xda c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-puts.o)
+                0x0000000010003c6e                _puts_r
+ .text.puts     0x0000000010003d48        0x8 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-puts.o)
+                0x0000000010003d48                puts
  .text.__swbuf_r
-                0x0000000010003b6a       0xc0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o)
-                0x0000000010003b6a                __swbuf_r
+                0x0000000010003d50       0xc0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o)
+                0x0000000010003d50                __swbuf_r
  .text.__swsetup_r
-                0x0000000010003c2a      0x106 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wsetup.o)
-                0x0000000010003c2a                __swsetup_r
+                0x0000000010003e10      0x106 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wsetup.o)
+                0x0000000010003e10                __swsetup_r
  .text.__sflush_r
-                0x0000000010003d30      0x146 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fflush.o)
-                0x0000000010003d30                __sflush_r
+                0x0000000010003f16      0x146 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fflush.o)
+                0x0000000010003f16                __sflush_r
  .text._fflush_r
-                0x0000000010003e76       0x64 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fflush.o)
-                0x0000000010003e76                _fflush_r
- .text.std      0x0000000010003eda       0x6a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+                0x000000001000405c       0x64 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fflush.o)
+                0x000000001000405c                _fflush_r
+ .text.std      0x00000000100040c0       0x6a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x0000000010003f44        0xa c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
-                0x0000000010003f44                _cleanup_r
+                0x000000001000412a        0xa c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+                0x000000001000412a                _cleanup_r
  .text.__sfmoreglue
-                0x0000000010003f4e       0x46 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
-                0x0000000010003f4e                __sfmoreglue
- .text.__sinit  0x0000000010003f94       0x6a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
-                0x0000000010003f94                __sinit
- .text.__sfp    0x0000000010003ffe       0x9e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
-                0x0000000010003ffe                __sfp
+                0x0000000010004134       0x46 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+                0x0000000010004134                __sfmoreglue
+ .text.__sinit  0x000000001000417a       0x6a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+                0x000000001000417a                __sinit
+ .text.__sfp    0x00000000100041e4       0x9e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+                0x00000000100041e4                __sfp
  .text._fwalk_reent
-                0x000000001000409c       0x6a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fwalk.o)
-                0x000000001000409c                _fwalk_reent
+                0x0000000010004282       0x6a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fwalk.o)
+                0x0000000010004282                _fwalk_reent
  .text.__swhatbuf_r
-                0x0000000010004106       0x5a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-makebuf.o)
-                0x0000000010004106                __swhatbuf_r
+                0x00000000100042ec       0x5a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-makebuf.o)
+                0x00000000100042ec                __swhatbuf_r
  .text.__smakebuf_r
-                0x0000000010004160       0x9c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-makebuf.o)
-                0x0000000010004160                __smakebuf_r
- .text._free_r  0x00000000100041fc       0x9e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
-                0x00000000100041fc                _free_r
+                0x0000000010004346       0x9c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-makebuf.o)
+                0x0000000010004346                __smakebuf_r
+ .text._free_r  0x00000000100043e2       0x9e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
+                0x00000000100043e2                _free_r
  .text._malloc_r
-                0x000000001000429a       0xd0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
-                0x000000001000429a                _malloc_r
+                0x0000000010004480       0xd0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000010004480                _malloc_r
  .text.__sfputc_r
-                0x000000001000436a       0x2a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000010004550       0x2a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x0000000010004394       0x42 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000010004394                __sfputs_r
+                0x000000001000457a       0x42 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x000000001000457a                __sfputs_r
  .text._vfprintf_r
-                0x00000000100043d6      0x296 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x00000000100043d6                _vfprintf_r
-                0x00000000100043d6                _vfiprintf_r
- .text._sbrk_r  0x000000001000466c       0x28 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
-                0x000000001000466c                _sbrk_r
- .text.__sread  0x0000000010004694       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
-                0x0000000010004694                __sread
+                0x00000000100045bc      0x296 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00000000100045bc                _vfprintf_r
+                0x00000000100045bc                _vfiprintf_r
+ .text._sbrk_r  0x0000000010004852       0x28 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
+                0x0000000010004852                _sbrk_r
+ .text.__sread  0x000000001000487a       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
+                0x000000001000487a                __sread
  .text.__swrite
-                0x00000000100046c4       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
-                0x00000000100046c4                __swrite
- .text.__sseek  0x0000000010004712       0x36 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
-                0x0000000010004712                __sseek
+                0x00000000100048aa       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
+                0x00000000100048aa                __swrite
+ .text.__sseek  0x00000000100048f8       0x36 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
+                0x00000000100048f8                __sseek
  .text.__sclose
-                0x0000000010004748        0x6 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
-                0x0000000010004748                __sclose
+                0x000000001000492e        0x6 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
+                0x000000001000492e                __sclose
  .text._write_r
-                0x000000001000474e       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-writer.o)
-                0x000000001000474e                _write_r
+                0x0000000010004934       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-writer.o)
+                0x0000000010004934                _write_r
  .text._close_r
-                0x000000001000477a       0x28 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-closer.o)
-                0x000000001000477a                _close_r
+                0x0000000010004960       0x28 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-closer.o)
+                0x0000000010004960                _close_r
  .text._fstat_r
-                0x00000000100047a2       0x2a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fstatr.o)
-                0x00000000100047a2                _fstat_r
+                0x0000000010004988       0x2a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fstatr.o)
+                0x0000000010004988                _fstat_r
  .text._isatty_r
-                0x00000000100047cc       0x28 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-isattyr.o)
-                0x00000000100047cc                _isatty_r
+                0x00000000100049b2       0x28 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-isattyr.o)
+                0x00000000100049b2                _isatty_r
  .text._lseek_r
-                0x00000000100047f4       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-lseekr.o)
-                0x00000000100047f4                _lseek_r
- .text.memchr   0x0000000010004820       0x1a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memchr.o)
-                0x0000000010004820                memchr
+                0x00000000100049da       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-lseekr.o)
+                0x00000000100049da                _lseek_r
+ .text.memchr   0x0000000010004a06       0x1a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memchr.o)
+                0x0000000010004a06                memchr
  .text.__malloc_lock
-                0x000000001000483a        0x2 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
-                0x000000001000483a                __malloc_lock
+                0x0000000010004a20        0x2 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+                0x0000000010004a20                __malloc_lock
  .text.__malloc_unlock
-                0x000000001000483c        0x2 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
-                0x000000001000483c                __malloc_unlock
+                0x0000000010004a22        0x2 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+                0x0000000010004a22                __malloc_unlock
  .text._printf_common
-                0x000000001000483e      0x10c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000001000483e                _printf_common
+                0x0000000010004a24      0x10c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000010004a24                _printf_common
  .text._printf_i
-                0x000000001000494a      0x274 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000001000494a                _printf_i
- .text._read_r  0x0000000010004bbe       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-readr.o)
-                0x0000000010004bbe                _read_r
+                0x0000000010004b30      0x274 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000010004b30                _printf_i
+ .text._read_r  0x0000000010004da4       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-readr.o)
+                0x0000000010004da4                _read_r
 
-.rodata         0x0000000010004bec      0xa28
-                0x0000000010004bec                . = ALIGN (0x4)
+.rodata         0x0000000010004dd0      0xa48
+                0x0000000010004dd0                . = ALIGN (0x4)
  *(.rodata*)
  .rodata.Logotip
-                0x0000000010004bec      0x1c0 build/main.o
-                0x0000000010004bec                Logotip
- .rodata        0x0000000010004dac       0xe0 build/main.o
+                0x0000000010004dd0      0x1c0 build/main.o
+                0x0000000010004dd0                Logotip
+ .rodata        0x0000000010004f90      0x100 build/main.o
  .rodata.LCD_PUT_BYTE
-                0x0000000010004e8c       0x28 build/text.o
+                0x0000000010005090       0x28 build/text.o
  .rodata.Font_ASCII_6x8_Data
-                0x0000000010004eb4      0x600 build/Font_ASCII_6x8.o
+                0x00000000100050b8      0x600 build/Font_ASCII_6x8.o
  .rodata.rccEncodeDivisor3bit
-                0x00000000100054b4       0x20 build/MLDR187_rst_clk.o
+                0x00000000100056b8       0x20 build/MLDR187_rst_clk.o
  .rodata.rccEncodeDivisor4bit
-                0x00000000100054d4       0x24 build/MLDR187_rst_clk.o
+                0x00000000100056d8       0x24 build/MLDR187_rst_clk.o
  .rodata.rccEncodeDivisorNumeric
-                0x00000000100054f8       0x24 build/MLDR187_rst_clk.o
+                0x00000000100056fc       0x24 build/MLDR187_rst_clk.o
  .rodata.__sf_fake_stderr
-                0x000000001000551c       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
-                0x000000001000551c                __sf_fake_stderr
+                0x0000000010005720       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+                0x0000000010005720                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x000000001000553c       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
-                0x000000001000553c                __sf_fake_stdin
+                0x0000000010005740       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+                0x0000000010005740                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x000000001000555c       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
-                0x000000001000555c                __sf_fake_stdout
+                0x0000000010005760       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+                0x0000000010005760                __sf_fake_stdout
  .rodata._vfprintf_r.str1.4
-                0x000000001000557c       0x13 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
- *fill*         0x000000001000558f        0x1 
+                0x0000000010005780       0x13 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
+ *fill*         0x0000000010005793        0x1 
  .rodata._printf_i.str1.4
-                0x0000000010005590       0x25 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
- *fill*         0x00000000100055b5        0x3 
+                0x0000000010005794       0x25 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ *fill*         0x00000000100057b9        0x3 
  .rodata._printf_i
-                0x00000000100055b8       0x58 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000100057bc       0x58 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
  *(.srodata*)
  .srodata._global_impure_ptr
-                0x0000000010005610        0x4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
-                0x0000000010005610                _global_impure_ptr
+                0x0000000010005814        0x4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
+                0x0000000010005814                _global_impure_ptr
 
-.dalign         0x0000000010005614        0x0
-                0x0000000010005614                . = ALIGN (0x4)
-                0x0000000010005614                __data_load_start = LOADADDR (.data)
+.dalign         0x0000000010005818        0x0
+                0x0000000010005818                . = ALIGN (0x4)
+                0x0000000010005818                __data_load_start = LOADADDR (.data)
 
-.data           0x0000000080000000      0x1c4 load address 0x0000000010005614
+.data           0x0000000080000000      0x1c4 load address 0x0000000010005818
                 0x0000000080000000                . = ALIGN (0x4)
                 0x0000000080000000                __data_start = .
  *(.data*)
@@ -1231,11 +1238,11 @@ END GROUP
                 0x0000000080000230                . = ALIGN (0x8)
                 0x0000000080000230                __end = .
 
-.aalign         0x00000000100057d8        0x0
-                0x00000000100057d8                . = ALIGN (0x4)
-                0x00000000100057d8                __ahbram_data_load_start = LOADADDR (.ahbram_data)
+.aalign         0x00000000100059dc        0x0
+                0x00000000100059dc                . = ALIGN (0x4)
+                0x00000000100059dc                __ahbram_data_load_start = LOADADDR (.ahbram_data)
 
-.ahbram_data    0x0000000020000000        0x0 load address 0x00000000100057d8
+.ahbram_data    0x0000000020000000        0x0 load address 0x00000000100059dc
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                __ahbram_data_start = .
  *(.ahbram_data)
@@ -1249,11 +1256,11 @@ END GROUP
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                __ahbram_bss_end = .
 
-.ralign         0x00000000100057d8        0x0
-                0x00000000100057d8                . = ALIGN (0x4)
-                0x00000000100057d8                __ramfunc_load_start = LOADADDR (.ramfunc)
+.ralign         0x00000000100059dc        0x0
+                0x00000000100059dc                . = ALIGN (0x4)
+                0x00000000100059dc                __ramfunc_load_start = LOADADDR (.ramfunc)
 
-.ramfunc        0x0000000080010000      0x1c6 load address 0x00000000100057d8
+.ramfunc        0x0000000080010000      0x1c6 load address 0x00000000100059dc
                 0x0000000080010000                . = ALIGN (0x4)
                 0x0000000080010000                __ramfunc_start = .
  *(.ramfunc*)
@@ -1305,7 +1312,7 @@ END GROUP
                 0x00000000800101c0                UART4_IRQHandler
                 0x00000000800101c2                OTP_Corrupt_IRQHandler
 
-.rela.dyn       0x00000000800101c8        0x0 load address 0x000000001000599e
+.rela.dyn       0x00000000800101c8        0x0 load address 0x0000000010005ba2
  .rela.data     0x00000000800101c8        0x0 build/main.o
  .rela.text.init
                 0x00000000800101c8        0x0 build/main.o
@@ -1335,31 +1342,31 @@ END GROUP
                 0x0000000080010000                __sp = .
 OUTPUT(build/firmware.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x61d9
- .debug_info    0x0000000000000000     0x134f build/main.o
- .debug_info    0x000000000000134f      0x822 build/init.o
- .debug_info    0x0000000000001b71      0x7ee build/syscalls.o
- .debug_info    0x000000000000235f      0x36a build/text.o
- .debug_info    0x00000000000026c9      0x130 build/Font_ASCII_6x8.o
- .debug_info    0x00000000000027f9      0x709 build/lcd_MLDR187.o
- .debug_info    0x0000000000002f02      0xf53 build/MLDR187_bkp.o
- .debug_info    0x0000000000003e55      0x670 build/MLDR187_gpio.o
- .debug_info    0x00000000000044c5      0xa56 build/MLDR187_rst_clk.o
- .debug_info    0x0000000000004f1b     0x129c build/MLDR187_uart.o
- .debug_info    0x00000000000061b7       0x22 build/startup_MLDR187.o
+.debug_info     0x0000000000000000     0x60d2
+ .debug_info    0x0000000000000000     0x1248 build/main.o
+ .debug_info    0x0000000000001248      0x822 build/init.o
+ .debug_info    0x0000000000001a6a      0x7ee build/syscalls.o
+ .debug_info    0x0000000000002258      0x36a build/text.o
+ .debug_info    0x00000000000025c2      0x130 build/Font_ASCII_6x8.o
+ .debug_info    0x00000000000026f2      0x709 build/lcd_MLDR187.o
+ .debug_info    0x0000000000002dfb      0xf53 build/MLDR187_bkp.o
+ .debug_info    0x0000000000003d4e      0x670 build/MLDR187_gpio.o
+ .debug_info    0x00000000000043be      0xa56 build/MLDR187_rst_clk.o
+ .debug_info    0x0000000000004e14     0x129c build/MLDR187_uart.o
+ .debug_info    0x00000000000060b0       0x22 build/startup_MLDR187.o
 
-.debug_abbrev   0x0000000000000000     0x11d9
- .debug_abbrev  0x0000000000000000      0x270 build/main.o
- .debug_abbrev  0x0000000000000270      0x12e build/init.o
- .debug_abbrev  0x000000000000039e      0x1b9 build/syscalls.o
- .debug_abbrev  0x0000000000000557      0x124 build/text.o
- .debug_abbrev  0x000000000000067b       0xad build/Font_ASCII_6x8.o
- .debug_abbrev  0x0000000000000728      0x233 build/lcd_MLDR187.o
- .debug_abbrev  0x000000000000095b      0x283 build/MLDR187_bkp.o
- .debug_abbrev  0x0000000000000bde      0x204 build/MLDR187_gpio.o
- .debug_abbrev  0x0000000000000de2      0x215 build/MLDR187_rst_clk.o
- .debug_abbrev  0x0000000000000ff7      0x1d0 build/MLDR187_uart.o
- .debug_abbrev  0x00000000000011c7       0x12 build/startup_MLDR187.o
+.debug_abbrev   0x0000000000000000     0x11c6
+ .debug_abbrev  0x0000000000000000      0x25d build/main.o
+ .debug_abbrev  0x000000000000025d      0x12e build/init.o
+ .debug_abbrev  0x000000000000038b      0x1b9 build/syscalls.o
+ .debug_abbrev  0x0000000000000544      0x124 build/text.o
+ .debug_abbrev  0x0000000000000668       0xad build/Font_ASCII_6x8.o
+ .debug_abbrev  0x0000000000000715      0x233 build/lcd_MLDR187.o
+ .debug_abbrev  0x0000000000000948      0x283 build/MLDR187_bkp.o
+ .debug_abbrev  0x0000000000000bcb      0x204 build/MLDR187_gpio.o
+ .debug_abbrev  0x0000000000000dcf      0x215 build/MLDR187_rst_clk.o
+ .debug_abbrev  0x0000000000000fe4      0x1d0 build/MLDR187_uart.o
+ .debug_abbrev  0x00000000000011b4       0x12 build/startup_MLDR187.o
 
 .debug_aranges  0x0000000000000000      0x518
  .debug_aranges
@@ -1474,41 +1481,41 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_macro   0x0000000000007ce5       0xfc build/MLDR187_uart.o
  .debug_macro   0x0000000000007de1       0x10 build/MLDR187_uart.o
 
-.debug_line     0x0000000000000000     0x7123
- .debug_line    0x0000000000000000      0xb3b build/main.o
- .debug_line    0x0000000000000b3b      0x416 build/init.o
- .debug_line    0x0000000000000f51      0x7a0 build/syscalls.o
- .debug_line    0x00000000000016f1      0x7bc build/text.o
- .debug_line    0x0000000000001ead      0x1d8 build/Font_ASCII_6x8.o
- .debug_line    0x0000000000002085      0x784 build/lcd_MLDR187.o
- .debug_line    0x0000000000002809     0x1736 build/MLDR187_bkp.o
- .debug_line    0x0000000000003f3f      0x5e6 build/MLDR187_gpio.o
- .debug_line    0x0000000000004525     0x15c2 build/MLDR187_rst_clk.o
- .debug_line    0x0000000000005ae7     0x108c build/MLDR187_uart.o
- .debug_line    0x0000000000006b73      0x5b0 build/startup_MLDR187.o
+.debug_line     0x0000000000000000     0x725f
+ .debug_line    0x0000000000000000      0xc77 build/main.o
+ .debug_line    0x0000000000000c77      0x416 build/init.o
+ .debug_line    0x000000000000108d      0x7a0 build/syscalls.o
+ .debug_line    0x000000000000182d      0x7bc build/text.o
+ .debug_line    0x0000000000001fe9      0x1d8 build/Font_ASCII_6x8.o
+ .debug_line    0x00000000000021c1      0x784 build/lcd_MLDR187.o
+ .debug_line    0x0000000000002945     0x1736 build/MLDR187_bkp.o
+ .debug_line    0x000000000000407b      0x5e6 build/MLDR187_gpio.o
+ .debug_line    0x0000000000004661     0x15c2 build/MLDR187_rst_clk.o
+ .debug_line    0x0000000000005c23     0x108c build/MLDR187_uart.o
+ .debug_line    0x0000000000006caf      0x5b0 build/startup_MLDR187.o
 
-.debug_str      0x0000000000000000    0x2b071
- .debug_str     0x0000000000000000    0x26bda build/main.o
-                                      0x26e26 (size before relaxing)
- .debug_str     0x0000000000026bda      0x1e9 build/init.o
+.debug_str      0x0000000000000000    0x2b081
+ .debug_str     0x0000000000000000    0x26b11 build/main.o
+                                      0x26d5d (size before relaxing)
+ .debug_str     0x0000000000026b11      0x240 build/init.o
                                       0x24983 (size before relaxing)
- .debug_str     0x0000000000026dc3      0xbba build/syscalls.o
+ .debug_str     0x0000000000026d51      0xbba build/syscalls.o
                                       0x25cbd (size before relaxing)
- .debug_str     0x000000000002797d       0xd0 build/text.o
+ .debug_str     0x000000000002790b       0xd0 build/text.o
                                       0x247f5 (size before relaxing)
- .debug_str     0x0000000000027a4d       0x29 build/Font_ASCII_6x8.o
+ .debug_str     0x00000000000279db       0x29 build/Font_ASCII_6x8.o
                                       0x2147f (size before relaxing)
- .debug_str     0x0000000000027a76      0x139 build/lcd_MLDR187.o
+ .debug_str     0x0000000000027a04      0x139 build/lcd_MLDR187.o
                                       0x220c0 (size before relaxing)
- .debug_str     0x0000000000027baf      0xd5a build/MLDR187_bkp.o
+ .debug_str     0x0000000000027b3d      0xd5a build/MLDR187_bkp.o
                                       0x22b10 (size before relaxing)
- .debug_str     0x0000000000028909      0x65a build/MLDR187_gpio.o
+ .debug_str     0x0000000000028897      0x65a build/MLDR187_gpio.o
                                       0x221e1 (size before relaxing)
- .debug_str     0x0000000000028f63     0x100b build/MLDR187_rst_clk.o
+ .debug_str     0x0000000000028ef1     0x100b build/MLDR187_rst_clk.o
                                       0x22d51 (size before relaxing)
- .debug_str     0x0000000000029f6e     0x10d5 build/MLDR187_uart.o
+ .debug_str     0x0000000000029efc     0x1157 build/MLDR187_uart.o
                                       0x2339f (size before relaxing)
- .debug_str     0x000000000002b043       0x2e build/startup_MLDR187.o
+ .debug_str     0x000000000002b053       0x2e build/startup_MLDR187.o
                                          0x68 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
@@ -1524,7 +1531,7 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .comment       0x0000000000000033       0x34 build/MLDR187_rst_clk.o
  .comment       0x0000000000000033       0x34 build/MLDR187_uart.o
 
-.debug_frame    0x0000000000000000     0x1ebc
+.debug_frame    0x0000000000000000     0x1f10
  .debug_frame   0x0000000000000000      0x1e4 build/main.o
  .debug_frame   0x00000000000001e4       0x60 build/init.o
  .debug_frame   0x0000000000000244      0x29c build/syscalls.o
@@ -1541,24 +1548,25 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_frame   0x0000000000001604       0x54 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-printf.o)
  .debug_frame   0x0000000000001658       0x4c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putchar.o)
  .debug_frame   0x00000000000016a4       0x4c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-putc.o)
- .debug_frame   0x00000000000016f0       0x50 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o)
- .debug_frame   0x0000000000001740       0x3c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wsetup.o)
- .debug_frame   0x000000000000177c       0x7c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fflush.o)
- .debug_frame   0x00000000000017f8      0x148 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
- .debug_frame   0x0000000000001940       0x8c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fwalk.o)
- .debug_frame   0x00000000000019cc       0x68 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-makebuf.o)
- .debug_frame   0x0000000000001a34       0x38 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000000000001a6c       0x40 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000000000001aac       0xd0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x0000000000001b7c       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000001bac       0xa4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
- .debug_frame   0x0000000000001c50       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-writer.o)
- .debug_frame   0x0000000000001c80       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-closer.o)
- .debug_frame   0x0000000000001cb0       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fstatr.o)
- .debug_frame   0x0000000000001ce0       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-isattyr.o)
- .debug_frame   0x0000000000001d10       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-lseekr.o)
- .debug_frame   0x0000000000001d40       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memchr.o)
- .debug_frame   0x0000000000001d60       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000000000001d90       0x8c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x0000000000001e1c       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-readr.o)
- .debug_frame   0x0000000000001e4c       0x70 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x00000000000016f0       0x54 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-puts.o)
+ .debug_frame   0x0000000000001744       0x50 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x0000000000001794       0x3c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x00000000000017d0       0x7c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fflush.o)
+ .debug_frame   0x000000000000184c      0x148 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-findfp.o)
+ .debug_frame   0x0000000000001994       0x8c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x0000000000001a20       0x68 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x0000000000001a88       0x38 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000001ac0       0x40 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000001b00       0xd0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x0000000000001bd0       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000001c00       0xa4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-stdio.o)
+ .debug_frame   0x0000000000001ca4       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-writer.o)
+ .debug_frame   0x0000000000001cd4       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-closer.o)
+ .debug_frame   0x0000000000001d04       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-fstatr.o)
+ .debug_frame   0x0000000000001d34       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-isattyr.o)
+ .debug_frame   0x0000000000001d64       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-lseekr.o)
+ .debug_frame   0x0000000000001d94       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memchr.o)
+ .debug_frame   0x0000000000001db4       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000001de4       0x8c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000000000001e70       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-readr.o)
+ .debug_frame   0x0000000000001ea0       0x70 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)

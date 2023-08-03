@@ -157,10 +157,11 @@ bool alarm_triggered = false;
 void BACKUP_IRQHandler(void);
 void SysTick_Handler(void);
 
-void Setup_LED_Port(void);
-void Setup_CPU_Clock(void);
-void Setup_Interrupts(void);
-void Setup_Key(void);
+void LCD_printNum(uint8_t x, uint8_t y, uint32_t number);
+
+void Led_Init(void);
+void Btn_Init(void);
+void Itr_Init(void);
 
 void setAlarm(uint32_t minutes_after, uint32_t seconds_after);
 void toggle_led(int i);
@@ -169,30 +170,28 @@ void init_leds();
 
 
 
-
+/* Main Function */
 int main()
 {    
     // from RTC
     init_clock();
     init_uart();
-    init_leds();
+    // init_leds();
     init_bkp(&INIT_DATE);
 
     setAlarm(ALARM_POST_MINUTES, ALARM_POST_SECONDS);
 
 
     // from LCD
-    Setup_Interrupts();
-    Setup_LED_Port();
-    Setup_Key();
+    Itr_Init();
+    Led_Init();
+    Btn_Init();
 
     LCD_INIT();
     LCD_CLS();
     LCD_CurrentMethod = MET_AND;
     LCD_PUT_PICT(8, 0, 112, 32, Logotip);
     LCD_PUTS(54, 28, "K1986BK025");
-    // LCD_PUTS(54, 38, "MDR32F02FI");
-    LCD_PUTC(24, 44, 0x04); // •
 
     printf("K1986BK025 Init end!\n");
 
@@ -213,9 +212,9 @@ void BACKUP_IRQHandler(void)
         BKP_SetItNewState(bkpAlarmAIE, DISABLE);
         BKP_SetAlarmNewState(bkpAlarmAEN, DISABLE);
 
-        printf(" !! WAKE UP !! \n");
+        printf(" !!! WAKE UP !!! \n");
         
-        LCD_PUTS(44, 38, " !! WAKE UP !! ");
+        LCD_PUTS(20, 40, "!!! WAKE UP !!!");
 
         alarm_triggered = true;
         set_led(0, RESET);
@@ -226,6 +225,8 @@ void BACKUP_IRQHandler(void)
         // Button pressed
 
         printf("Button pressed\n");
+
+        LCD_PUTS(20, 40, "               ");
 
         // Disable button until new tick
         BKP_SetItNewState(bkpTSIE, DISABLE);
@@ -256,8 +257,13 @@ void BACKUP_IRQHandler(void)
                dateTime.hours, dateTime.minutes, dateTime.seconds,
                dateTime.day, dateTime.month, dateTime.year
         );
-        
-        LCD_PUTS(54, 48, "dateTime.seconds");
+
+        LCD_PUTS(40, 50, "          ");
+        LCD_printNum(40, 50, dateTime.hours);
+        LCD_PUTS(52, 50, ":");
+        LCD_printNum(58, 50, dateTime.minutes);
+        LCD_PUTS(70, 50, ":");
+        LCD_printNum(76, 50, dateTime.seconds);
 
         // Blink led and print alarm message
         if (alarm_triggered) {
@@ -290,36 +296,37 @@ void SysTick_Handler(void)
 
 }
 
-/* --- */
-void Setup_Interrupts(void)
-{
-    /* Disable SysTick interrupt */
-    disable_SysTick_Handler();
-    /* Safely set up SysTick cmp value */
-    MDR_CLIC_MSIP_Reg = 0;
-    MDR_CLIC_MTIMECMP_Reg = MDR_CLIC_MTIMECMP_Reg + 32768;
-    /* Enable SysTick interrupt */
-    enable_SysTick_Handler();
-    RST_CLK_EnablePeripheralClock(RST_CLK_BKP, RST_CLK_Div1);
-    MDR_BKP->WPR = 0x8555AAA1;
-    MDR_BKP->CLK |= 0x00000003;
 
+void LCD_printNum(uint8_t x, uint8_t y, uint32_t number)
+{
+    if (number <= 9) { 
+        LCD_PUTC(x, y, (uint8_t)(number + 0x30));
+    }else if (number > 9 && number < 100) {
+        LCD_PUTC(x, y, (uint8_t)(number/10 + 0x30));
+        LCD_PUTC(x + 6, y, (uint8_t)(number - ((number/10) * 10) + 0x30));
+    }else if (number > 99 && number < 1000) {
+        uint8_t temp = number / 100;
+        LCD_PUTC(x, y, (uint8_t)(temp + 0x30));
+        uint8_t temp2 = ( number - temp*100 )  / 10;
+        LCD_PUTC(x + 6, y, (uint8_t)(temp2 + 0x30));
+        uint8_t temp3 = number - temp*100 - temp2*10;
+        LCD_PUTC(x + 12, y, (uint8_t)(temp3 + 0x30));
+    }else if (number > 999 && number < 10000) {
+        uint8_t temp = number / 1000;
+        LCD_PUTC(x, y, (uint8_t)(temp + 0x30));
+        uint8_t temp2 = ( number - temp*1000 )  / 100;
+        LCD_PUTC(x + 6, y, (uint8_t)(temp2 + 0x30));
+        uint8_t temp3 = (number - temp*1000 - temp2*100) / 10;
+        LCD_PUTC(x + 12, y, (uint8_t)(temp3 + 0x30));
+        uint8_t temp4 = number - temp*1000 - temp2*100 - temp3*10;
+        LCD_PUTC(x + 18, y, (uint8_t)(temp4 + 0x30));
+    }
 }
 
 
-/* --- */
-void Setup_Key(void)
-{
-    PORT_InitStructure.PORT_OE    = PORT_OE_IN;
-    PORT_InitStructure.PORT_FUNC  = PORT_FUNC_PORT;
-    PORT_InitStructure.PORT_MODE  = PORT_MODE_DIGITAL;
-    PORT_InitStructure.PORT_SPEED = PORT_SPEED_SLOW_4mA;
-    PORT_InitStructure.PORT_PULL_DOWN   = PORT_PULL_DOWN_OFF;
-    PORT_Init(KEY_PORT, (KEY_PIN_0 | KEY_PIN_1 | KEY_PIN_2 | KEY_PIN_3), &PORT_InitStructure);
-}
 
 /* --- */
-void Setup_LED_Port(void)
+void Led_Init(void)
 {
     PORT_InitStructure.PORT_OE    = PORT_OE_OUT;
     PORT_InitStructure.PORT_FUNC  = PORT_FUNC_PORT;
@@ -333,45 +340,37 @@ void Setup_LED_Port(void)
     PORT_SetReset(LED_PORT, LED_PIN_3, SET);
 }
 
-/* retarget the C library printf function to the UART */
-int	puts (const char * buf)
+/* --- */
+void Btn_Init(void)
 {
-    uint32_t i;
-    uint32_t nChars = 0;
+    PORT_InitStructure.PORT_OE    = PORT_OE_IN;
+    PORT_InitStructure.PORT_FUNC  = PORT_FUNC_PORT;
+    PORT_InitStructure.PORT_MODE  = PORT_MODE_DIGITAL;
+    PORT_InitStructure.PORT_SPEED = PORT_SPEED_SLOW_4mA;
+    PORT_InitStructure.PORT_PULL_DOWN   = PORT_PULL_DOWN_OFF;
+    PORT_Init(KEY_PORT, (KEY_PIN_0 | KEY_PIN_1 | KEY_PIN_2 | KEY_PIN_3), &PORT_InitStructure);
+}
 
-    for (i=0; buf[i]; i++)
-    {
-        UART_Send(UART_MODULE, buf[i] );
-        while ( UART_GetFlagStatus(UART_MODULE, UART_FLAG_TXFE)== RESET){}
-        ++nChars;
-    }
-
-    return nChars;
+/* --- */
+void Itr_Init(void)
+{
+    /* Disable SysTick interrupt */
+    disable_SysTick_Handler();
+    /* Safely set up SysTick cmp value */
+    MDR_CLIC_MSIP_Reg = 0;
+    MDR_CLIC_MTIMECMP_Reg = MDR_CLIC_MTIMECMP_Reg + 32768;
+    /* Enable SysTick interrupt */
+    enable_SysTick_Handler();
+    RST_CLK_EnablePeripheralClock(RST_CLK_BKP, RST_CLK_Div1);
+    MDR_BKP->WPR = 0x8555AAA1;
+    MDR_BKP->CLK |= 0x00000003;
 }
 
 
-// /* retarget the C library printf function to the UART */
-// int _write(int fd, char * ptr, int len)
-// {
-//     size_t nChars = 0;
 
-//     if (fd == -1)
-//     {
-//         return 0;
-//     }
 
-//     for (; len > 0; --len)
-//     {
-//         UART_Send(UART_MODULE, (uint8_t) *ptr );
-//         while ( UART_GetFlagStatus(UART_MODULE, UART_FLAG_TXFE)== RESET){}
-//         ++ptr;
-//         ++nChars;
-//     }
-
-//     return nChars;
-// }
-
-void setAlarm(uint32_t minutes_after, uint32_t seconds_after) {
+void setAlarm(uint32_t minutes_after, uint32_t seconds_after)
+{
     RTC_DateTime dateTime;
     BKP_GetDateTimeBCD(&dateTime);
     BKP_ConvertToBINFormat(&dateTime);
@@ -460,9 +459,12 @@ void init_bkp(RTC_DateTime * dateTime) {
     bkpInit.RTCenable = DISABLE;
     BKP_Init(&bkpInit);
 
+// установка времени компиляции
+// ----------------------------
     // Set date and time
-    BKP_ConvertToBCDFormat(dateTime);
-    BKP_SetDateTimeBCD(dateTime, SET, SET);
+    // BKP_ConvertToBCDFormat(dateTime);
+    // BKP_SetDateTimeBCD(dateTime, SET, SET);
+// ----------------------------
 
     // In this example we use WAKEUP1 as a button.
     // Here we initialize it
