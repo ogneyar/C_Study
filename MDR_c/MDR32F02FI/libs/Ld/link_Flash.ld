@@ -1,23 +1,8 @@
 /*****************************************************************************
 *
 * @file    src/link_Flash.ld
-* @author  Milandr Application Team
 * @version V1.0.2
 * @date    01/06/2021
-* @brief   Linker Script.
-*
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-* "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-* LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-* A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-* OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-* SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-* LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-* DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-* THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *
 ******************************************************************************/
 
@@ -45,13 +30,15 @@
  *   __heap_min_size
  *   __heap_size
  *   __heap_limit
+ *   __heap_end
+ *   __sp
  */
 
 OUTPUT_ARCH( "riscv" )
 ENTRY(_start)
 
 /* __stack_size - total stack size */
-__stack_size    	= 0x1000;
+__stack_size    	  = 0x1000;
 /* __heap_min_size - minimum heap size, used to check if space can be allocated. The total heap size (__heap_size) takes up all space from end of the .bss to beginning of .stack */
 __heap_min_size     = 0x1000;
 
@@ -74,15 +61,6 @@ MEMORY
   REGION_ALIAS("REGION_LOAD",    FLASH);
   REGION_ALIAS("REGION_DATA",    TCMA_RAM);
   REGION_ALIAS("REGION_RAMFUNC", TCMB_RAM);
-
-/* RUN IN RAM */
-/*REGION_ALIAS("REGION_LOAD",    TCMB_RAM);
-  REGION_ALIAS("REGION_DATA",    TCMA_RAM);
-  REGION_ALIAS("REGION_RAMFUNC", TCMB_RAM);*/
-
-/* Define output sections */
-/* ">vma_region" - VMA (virtual memory address), 
-   "AT>lma_region" - LMA (load memory address) */
 
 SECTIONS
 {
@@ -207,7 +185,8 @@ SECTIONS
      It is only used for linker to calculate size of heap sections, and assign values to heap symbols */
   .heap __heap_top :
   {
-	. += __heap_size;
+	. += __heap_size; 
+    __heap_end = .;
   } >REGION_DATA
 
   /* .stack section doesn't contains any symbols. 
@@ -215,5 +194,6 @@ SECTIONS
   .stack __stack_limit :
   {
 	. += __stack_size;
+    __sp = .;
   } >REGION_DATA
 }

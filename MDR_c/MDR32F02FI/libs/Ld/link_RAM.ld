@@ -1,23 +1,8 @@
 /*****************************************************************************
 *
 * @file    src/link_RAM.ld
-* @author  Milandr Application Team
 * @version V1.0.2
 * @date    01/06/2021
-* @brief   Linker Script.
-*
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-* "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-* LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-* A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-* OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-* SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-* LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-* DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-* THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *
 ******************************************************************************/
 
@@ -45,6 +30,8 @@
  *   __heap_min_size
  *   __heap_size
  *   __heap_limit
+ *   __heap_end
+ *   __sp
  */
 
 OUTPUT_ARCH( "riscv" )
@@ -70,19 +57,10 @@ MEMORY
 - REGION_DATA     - region where initialized and uninitialized data, stack and heap are located
 - REGION_RAMFUNC  - the region of RAM where the code is stored                 */
 
-/* RUN IN FLASH */
-/*REGION_ALIAS("REGION_LOAD",    FLASH);
-  REGION_ALIAS("REGION_DATA",    TCMA_RAM);
-  REGION_ALIAS("REGION_RAMFUNC", TCMB_RAM);*/
-
 /* RUN IN RAM */
   REGION_ALIAS("REGION_LOAD",    TCMB_RAM);
   REGION_ALIAS("REGION_DATA",    TCMA_RAM);
   REGION_ALIAS("REGION_RAMFUNC", TCMB_RAM);
-
-/* Define output sections */
-/* ">vma_region" - VMA (virtual memory address), 
-   "AT>lma_region" - LMA (load memory address) */
 
 SECTIONS
 {
@@ -208,6 +186,7 @@ SECTIONS
   .heap __heap_top :
   {
 	. += __heap_size;
+    __heap_end = .;
   } >REGION_DATA
 
   /* .stack section doesn't contains any symbols. 
@@ -215,5 +194,6 @@ SECTIONS
   .stack __stack_limit :
   {
 	. += __stack_size;
+    __sp = .;
   } >REGION_DATA
 }

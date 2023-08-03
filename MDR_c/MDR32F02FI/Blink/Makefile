@@ -8,6 +8,8 @@ BUILD_DIR = build
 
 C_SOURCES =  \
 	src/main.c \
+	../libs/SPL/src/MLDR187_rst_clk.c \
+	../libs/SPL/src/MLDR187_gpio.c #\
 	../libs/SPL/src/MLDR187_adc.c \
 	../libs/SPL/src/MLDR187_adcui.c \
 	../libs/SPL/src/MLDR187_bkp.c \
@@ -17,7 +19,6 @@ C_SOURCES =  \
 	../libs/SPL/src/MLDR187_cryptoKuz.c \
 	../libs/SPL/src/MLDR187_dma.c \
 	../libs/SPL/src/MLDR187_eeprom.c \
-	../libs/SPL/src/MLDR187_gpio.c \
 	../libs/SPL/src/MLDR187_i2c.c \
 	../libs/SPL/src/MLDR187_iso7816.c \
 	../libs/SPL/src/MLDR187_iwdg.c \
@@ -26,7 +27,6 @@ C_SOURCES =  \
 	../libs/SPL/src/MLDR187_otp.c \
 	../libs/SPL/src/MLDR187_power.c \
 	../libs/SPL/src/MLDR187_rng.c \
-	../libs/SPL/src/MLDR187_rst_clk.c \
 	../libs/SPL/src/MLDR187_sensors.c \
 	../libs/SPL/src/MLDR187_ssp.c \
 	../libs/SPL/src/MLDR187_timer.c \
@@ -110,6 +110,7 @@ clean:
 
 
 OPENOCD_CFG=../libs/Util/MLDR187-ft2232hl.cfg
+# OPENOCD_CFG=../libs/Util/MLDR187-jlink.cfg
 
 
 erase: build
@@ -118,7 +119,7 @@ erase: build
 	
 
 flash: erase 
-	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "program $(BUILD_DIR)/$(TARGET).hex" -c exit
+	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "program $(BUILD_DIR)/$(TARGET).hex" -c reset -c exit
 #	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "program $(BUILD_DIR)/$(TARGET).hex" -c wlink_reset_resume -c exit
 	
 

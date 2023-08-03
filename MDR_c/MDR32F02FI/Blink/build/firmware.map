@@ -1,31 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_divdi3.o)
-                              build/MLDR187_math.o (__divdi3)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(addsf3.o)
-                              build/MLDR187_math.o (__addsf3)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(divsf3.o)
-                              build/MLDR187_math.o (__divsf3)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(gesf2.o)
-                              build/MLDR187_math.o (__gtsf2)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(lesf2.o)
-                              build/MLDR187_math.o (__ltsf2)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(mulsf3.o)
-                              build/MLDR187_math.o (__mulsf3)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(subsf3.o)
-                              build/MLDR187_math.o (__subsf3)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(fixsfsi.o)
-                              build/MLDR187_math.o (__fixsfsi)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(floatsisf.o)
-                              build/MLDR187_math.o (__floatsisf)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
-                              e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_divdi3.o) (__clz_tab)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
-                              e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(addsf3.o) (__clzsi2)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
                               build/startup_MLDR187.o (__libc_init_array)
-e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
-                              build/MLDR187_cryptoAes.o (memset)
 
 Discarded input sections
 
@@ -42,1101 +18,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/main.o
  .data          0x0000000000000000        0x0 build/main.o
  .bss           0x0000000000000000        0x0 build/main.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adc.o
- .text          0x0000000000000000        0x0 build/MLDR187_adc.o
- .data          0x0000000000000000        0x0 build/MLDR187_adc.o
- .bss           0x0000000000000000        0x0 build/MLDR187_adc.o
- .text.ADC_Init
-                0x0000000000000000       0xf8 build/MLDR187_adc.o
- .text.ADC_StructInitDefault
-                0x0000000000000000       0x62 build/MLDR187_adc.o
- .text.ADC_DeInit
-                0x0000000000000000       0x50 build/MLDR187_adc.o
- .text.ADC_SetChannel
-                0x0000000000000000       0x38 build/MLDR187_adc.o
- .text.ADC_Cmd  0x0000000000000000       0x38 build/MLDR187_adc.o
- .text.ADC_Start
-                0x0000000000000000       0x1e build/MLDR187_adc.o
- .text.ADC_GetResult
-                0x0000000000000000       0x24 build/MLDR187_adc.o
- .text.ADC_GetResultChannel
-                0x0000000000000000       0x2c build/MLDR187_adc.o
- .text.ADC_SetConversionChannelMask
-                0x0000000000000000       0x1c build/MLDR187_adc.o
- .text.ADC_SetValidMargins
-                0x0000000000000000       0x30 build/MLDR187_adc.o
- .text.ADC_BandgapTrim
-                0x0000000000000000       0x1e build/MLDR187_adc.o
- .text.ADC_CmdNoiseGen
-                0x0000000000000000       0x40 build/MLDR187_adc.o
- .debug_info    0x0000000000000000      0x673 build/MLDR187_adc.o
- .debug_abbrev  0x0000000000000000      0x1c2 build/MLDR187_adc.o
- .debug_aranges
-                0x0000000000000000       0x78 build/MLDR187_adc.o
- .debug_ranges  0x0000000000000000       0x68 build/MLDR187_adc.o
- .debug_macro   0x0000000000000000       0xc6 build/MLDR187_adc.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_adc.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_adc.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_adc.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_adc.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_adc.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_adc.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_adc.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_adc.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_adc.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_adc.o
- .debug_line    0x0000000000000000      0x5ba build/MLDR187_adc.o
- .debug_str     0x0000000000000000    0x22123 build/MLDR187_adc.o
- .comment       0x0000000000000000       0x34 build/MLDR187_adc.o
- .debug_frame   0x0000000000000000      0x1c8 build/MLDR187_adc.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_adcui.o
- .text          0x0000000000000000        0x0 build/MLDR187_adcui.o
- .data          0x0000000000000000        0x0 build/MLDR187_adcui.o
- .bss           0x0000000000000000        0x0 build/MLDR187_adcui.o
- .rodata.ADCUI_DATA_SOURCE
-                0x0000000000000000       0x1c build/MLDR187_adcui.o
- .rodata.ADCUI_DMA_OFFSET
-                0x0000000000000000       0x1c build/MLDR187_adcui.o
- .rodata.ADCUI_CTRL1_CH_EN_MASK
-                0x0000000000000000        0xc build/MLDR187_adcui.o
- .rodata.ADCUI_CHANNEL
-                0x0000000000000000       0x1c build/MLDR187_adcui.o
- .rodata.ADCUI_FIFO_EMPTY_FLAG
-                0x0000000000000000       0x1c build/MLDR187_adcui.o
- .rodata.ADCUI_CHANNEL0_LINES
-                0x0000000000000000        0xc build/MLDR187_adcui.o
- .srodata.ADCUI_CHANNEL1_LINES
-                0x0000000000000000        0x8 build/MLDR187_adcui.o
- .srodata.ADCUI_CHANNEL2_LINES
-                0x0000000000000000        0x8 build/MLDR187_adcui.o
- .data.ADCUI_CHANNEL_LINES
-                0x0000000000000000        0xc build/MLDR187_adcui.o
- .text.ADCUI_Init
-                0x0000000000000000      0x19c build/MLDR187_adcui.o
- .text.ADCUI_StructInitDefault
-                0x0000000000000000       0xb8 build/MLDR187_adcui.o
- .text.ADCUI_DeInit
-                0x0000000000000000      0x14a build/MLDR187_adcui.o
- .text.ADCUI_SetupVoltageDropControl
-                0x0000000000000000       0x30 build/MLDR187_adcui.o
- .text.ADCUI_NoVoltageDetectionTimeout
-                0x0000000000000000       0x24 build/MLDR187_adcui.o
- .text.ADCUI_InitChannel
-                0x0000000000000000      0x1ac build/MLDR187_adcui.o
- .text.ADCUI_ChannelStructInitDefault
-                0x0000000000000000       0x96 build/MLDR187_adcui.o
- .text.ADCUI_ChannelCalibration
-                0x0000000000000000       0xba build/MLDR187_adcui.o
- .text.ADCUI_GetPhaseShift
-                0x0000000000000000       0x4a build/MLDR187_adcui.o
- .text.ADCUI_GetNextVoltageFifoValue
-                0x0000000000000000       0x26 build/MLDR187_adcui.o
- .text.ADCUI_GetNextCurrentFifoValue
-                0x0000000000000000       0x42 build/MLDR187_adcui.o
- .text.ADCUI_GetPeakVoltage
-                0x0000000000000000       0x26 build/MLDR187_adcui.o
- .text.ADCUI_GetPeakCurrent
-                0x0000000000000000       0x26 build/MLDR187_adcui.o
- .text.ADCUI_GetRMSVoltage
-                0x0000000000000000       0x26 build/MLDR187_adcui.o
- .text.ADCUI_GetRMSCurrent
-                0x0000000000000000       0x44 build/MLDR187_adcui.o
- .text.ADCUI_GetRMS2Voltage
-                0x0000000000000000       0x26 build/MLDR187_adcui.o
- .text.ADCUI_GetRMS2Current
-                0x0000000000000000       0x26 build/MLDR187_adcui.o
- .text.ADCUI_Calibrate
-                0x0000000000000000       0x80 build/MLDR187_adcui.o
- .text.ADCUI_GetEnergyAccumulator
-                0x0000000000000000       0xb8 build/MLDR187_adcui.o
- .text.ADCUI_GetEnergyAccumulatorHigh32
-                0x0000000000000000       0x36 build/MLDR187_adcui.o
- .text.ADCUI_ResetEnergyAccumulator
-                0x0000000000000000       0x7e build/MLDR187_adcui.o
- .text.ADCUI_GetStatus
-                0x0000000000000000       0x26 build/MLDR187_adcui.o
- .text.ADCUI_GetFlag
-                0x0000000000000000       0x48 build/MLDR187_adcui.o
- .text.ADCUI_ClearFlag
-                0x0000000000000000       0x36 build/MLDR187_adcui.o
- .text.ADCUI_SetMask
-                0x0000000000000000       0x36 build/MLDR187_adcui.o
- .text.ADCUI_SetSingleMask
-                0x0000000000000000       0x3e build/MLDR187_adcui.o
- .text.ADCUI_DMAReceive
-                0x0000000000000000      0x1da build/MLDR187_adcui.o
- .text.ADCUI_DMAFinish
-                0x0000000000000000      0x11e build/MLDR187_adcui.o
- .text.ADCUI_DMACycleModeRefresh
-                0x0000000000000000       0xa2 build/MLDR187_adcui.o
- .text.ADCUI_DMAIsComplete
-                0x0000000000000000       0x94 build/MLDR187_adcui.o
- .text.adcuiGetValue
-                0x0000000000000000       0x34 build/MLDR187_adcui.o
- .text.adcuiGetChannelControlReg
-                0x0000000000000000      0x194 build/MLDR187_adcui.o
- .rodata.adcuiGetChannelControlReg
-                0x0000000000000000       0x40 build/MLDR187_adcui.o
- .text.adcuiGetChannelAccumReg
-                0x0000000000000000      0x180 build/MLDR187_adcui.o
- .text.ADCUI_DMAConfigureLine
-                0x0000000000000000      0x204 build/MLDR187_adcui.o
- .text.ADCUI_DMAFinishLine
-                0x0000000000000000       0x98 build/MLDR187_adcui.o
- .text.ADCUI_DMARefreshIfRequired
-                0x0000000000000000      0x210 build/MLDR187_adcui.o
- .text.ADCUI_DMAIsLineComplete
-                0x0000000000000000      0x118 build/MLDR187_adcui.o
- .debug_info    0x0000000000000000     0x1e01 build/MLDR187_adcui.o
- .debug_abbrev  0x0000000000000000      0x286 build/MLDR187_adcui.o
- .debug_aranges
-                0x0000000000000000      0x140 build/MLDR187_adcui.o
- .debug_ranges  0x0000000000000000      0x130 build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000      0x12d build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_adcui.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_adcui.o
- .debug_line    0x0000000000000000     0x1b1e build/MLDR187_adcui.o
- .debug_str     0x0000000000000000    0x2446b build/MLDR187_adcui.o
- .comment       0x0000000000000000       0x34 build/MLDR187_adcui.o
- .debug_frame   0x0000000000000000      0x5c0 build/MLDR187_adcui.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_bkp.o
- .text          0x0000000000000000        0x0 build/MLDR187_bkp.o
- .data          0x0000000000000000        0x0 build/MLDR187_bkp.o
- .bss           0x0000000000000000        0x0 build/MLDR187_bkp.o
- .sdata.BKP_LSE_Speed
-                0x0000000000000000        0x4 build/MLDR187_bkp.o
- .text.BKP_FreqGenCmd
-                0x0000000000000000      0x1c6 build/MLDR187_bkp.o
- .text.BKP_GenState
-                0x0000000000000000       0x64 build/MLDR187_bkp.o
- .text.BKP_Init
-                0x0000000000000000      0x24a build/MLDR187_bkp.o
- .text.BKP_StructInitDefault
-                0x0000000000000000       0x86 build/MLDR187_bkp.o
- .text.BKP_DeInit
-                0x0000000000000000       0xe6 build/MLDR187_bkp.o
- .text.BKP_GetBootMode
-                0x0000000000000000       0x24 build/MLDR187_bkp.o
- .text.BKP_GetFPOR
-                0x0000000000000000       0x2c build/MLDR187_bkp.o
- .text.BKP_SetFPOR
-                0x0000000000000000       0x70 build/MLDR187_bkp.o
- .text.BKP_GetCovDetectionFlag
-                0x0000000000000000       0x2c build/MLDR187_bkp.o
- .text.BKP_SetTamperNewState
-                0x0000000000000000       0x54 build/MLDR187_bkp.o
- .text.BKP_SetCovDetectionFlag
-                0x0000000000000000       0x78 build/MLDR187_bkp.o
- .text.BKP_GetWakeupStates
-                0x0000000000000000       0x18 build/MLDR187_bkp.o
- .text.BKP_GetSWPinState
-                0x0000000000000000       0x2c build/MLDR187_bkp.o
- .text.BKP_SwitchOffAlarmPower
-                0x0000000000000000       0x3c build/MLDR187_bkp.o
- .text.BKP_ConvertToBINFormat
-                0x0000000000000000       0xca build/MLDR187_bkp.o
- .text.BKP_ConvertToBCDFormat
-                0x0000000000000000       0xca build/MLDR187_bkp.o
- .text.BKP_GetDateTimeBCD
-                0x0000000000000000       0x60 build/MLDR187_bkp.o
- .text.BKP_GetDateTimeBCDTimestamp
-                0x0000000000000000       0xe8 build/MLDR187_bkp.o
- .text.BKP_SetDateTimeBCD
-                0x0000000000000000      0x108 build/MLDR187_bkp.o
- .text.BKP_SetAlarm
-                0x0000000000000000      0x12a build/MLDR187_bkp.o
- .text.BKP_SetItNewState
-                0x0000000000000000       0xac build/MLDR187_bkp.o
- .text.BKP_SetAlarmNewState
-                0x0000000000000000       0x5a build/MLDR187_bkp.o
- .text.BKP_GetFlags
-                0x0000000000000000       0x2c build/MLDR187_bkp.o
- .text.BKP_GetSingleFlag
-                0x0000000000000000       0x30 build/MLDR187_bkp.o
- .text.BKP_InitTamper
-                0x0000000000000000       0xc4 build/MLDR187_bkp.o
- .text.BKP_InitExternalEvent
-                0x0000000000000000       0xca build/MLDR187_bkp.o
- .text.BKP_GetTamperEventState
-                0x0000000000000000       0x2a build/MLDR187_bkp.o
- .text.BCDtoBIN
-                0x0000000000000000       0x44 build/MLDR187_bkp.o
- .text.BINtoBCD
-                0x0000000000000000       0x52 build/MLDR187_bkp.o
- .text.BKP_GetDateTimeReg
-                0x0000000000000000       0xde build/MLDR187_bkp.o
- .text.BKP_GenWaitForOn
-                0x0000000000000000       0x5c build/MLDR187_bkp.o
- .text.BKP_DisableWP
-                0x0000000000000000       0x2e build/MLDR187_bkp.o
- .text.BKP_EnableWP
-                0x0000000000000000       0x16 build/MLDR187_bkp.o
- .text.BKP_WaitComplete
-                0x0000000000000000       0x1e build/MLDR187_bkp.o
- .text.BKP_WaitRTCCycle
-                0x0000000000000000       0xac build/MLDR187_bkp.o
- .debug_info    0x0000000000000000      0xf53 build/MLDR187_bkp.o
- .debug_abbrev  0x0000000000000000      0x283 build/MLDR187_bkp.o
- .debug_aranges
-                0x0000000000000000      0x130 build/MLDR187_bkp.o
- .debug_ranges  0x0000000000000000      0x120 build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000      0x13a build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_bkp.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_bkp.o
- .debug_line    0x0000000000000000     0x1727 build/MLDR187_bkp.o
- .debug_str     0x0000000000000000    0x22aff build/MLDR187_bkp.o
- .comment       0x0000000000000000       0x34 build/MLDR187_bkp.o
- .debug_frame   0x0000000000000000      0x540 build/MLDR187_bkp.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_clk_msr.o
- .text          0x0000000000000000        0x0 build/MLDR187_clk_msr.o
- .data          0x0000000000000000        0x0 build/MLDR187_clk_msr.o
- .bss           0x0000000000000000        0x0 build/MLDR187_clk_msr.o
- .text.CLK_MSR_Init
-                0x0000000000000000       0xcc build/MLDR187_clk_msr.o
- .text.CLK_MSR_Cmd
-                0x0000000000000000       0x38 build/MLDR187_clk_msr.o
- .debug_info    0x0000000000000000      0x36e build/MLDR187_clk_msr.o
- .debug_abbrev  0x0000000000000000      0x112 build/MLDR187_clk_msr.o
- .debug_aranges
-                0x0000000000000000       0x28 build/MLDR187_clk_msr.o
- .debug_ranges  0x0000000000000000       0x18 build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000       0xa2 build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_clk_msr.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_clk_msr.o
- .debug_line    0x0000000000000000      0x36f build/MLDR187_clk_msr.o
- .debug_str     0x0000000000000000    0x21b1d build/MLDR187_clk_msr.o
- .comment       0x0000000000000000       0x34 build/MLDR187_clk_msr.o
- .debug_frame   0x0000000000000000       0x5c build/MLDR187_clk_msr.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_crc.o
- .text          0x0000000000000000        0x0 build/MLDR187_crc.o
- .data          0x0000000000000000        0x0 build/MLDR187_crc.o
- .bss           0x0000000000000000        0x0 build/MLDR187_crc.o
- .text.CRC_Init
-                0x0000000000000000       0x52 build/MLDR187_crc.o
- .text.CRC_DeInit
-                0x0000000000000000       0x36 build/MLDR187_crc.o
- .text.CRC_Start
-                0x0000000000000000       0x2e build/MLDR187_crc.o
- .text.CRC_ProceedByte
-                0x0000000000000000       0x4c build/MLDR187_crc.o
- .text.CRC_ProceedHalfWord
-                0x0000000000000000       0x56 build/MLDR187_crc.o
- .text.CRC_ProceedWord
-                0x0000000000000000       0x56 build/MLDR187_crc.o
- .text.CRC_Finalize
-                0x0000000000000000       0x46 build/MLDR187_crc.o
- .text.CRC_Mem  0x0000000000000000       0xce build/MLDR187_crc.o
- .debug_info    0x0000000000000000      0x43b build/MLDR187_crc.o
- .debug_abbrev  0x0000000000000000      0x18a build/MLDR187_crc.o
- .debug_aranges
-                0x0000000000000000       0x58 build/MLDR187_crc.o
- .debug_ranges  0x0000000000000000       0x48 build/MLDR187_crc.o
- .debug_macro   0x0000000000000000       0xa4 build/MLDR187_crc.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_crc.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_crc.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_crc.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_crc.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_crc.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_crc.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_crc.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_crc.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_crc.o
- .debug_macro   0x0000000000000000       0x20 build/MLDR187_crc.o
- .debug_line    0x0000000000000000      0x5ac build/MLDR187_crc.o
- .debug_str     0x0000000000000000    0x21b2e build/MLDR187_crc.o
- .comment       0x0000000000000000       0x34 build/MLDR187_crc.o
- .debug_frame   0x0000000000000000      0x13c build/MLDR187_crc.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoAes.o
- .text          0x0000000000000000        0x0 build/MLDR187_cryptoAes.o
- .data          0x0000000000000000        0x0 build/MLDR187_cryptoAes.o
- .bss           0x0000000000000000        0x0 build/MLDR187_cryptoAes.o
- .data.g_AesRcon
-                0x0000000000000000       0x10 build/MLDR187_cryptoAes.o
- .data.g_AesSBox
-                0x0000000000000000      0x100 build/MLDR187_cryptoAes.o
- .data.g_AesSboxM1
-                0x0000000000000000      0x100 build/MLDR187_cryptoAes.o
- .data.g_AesE   0x0000000000000000      0x100 build/MLDR187_cryptoAes.o
- .data.g_AesL   0x0000000000000000      0x100 build/MLDR187_cryptoAes.o
- .data.g_AesBeginTrm
-                0x0000000000000000       0x10 build/MLDR187_cryptoAes.o
- .data.g_AesFinishTrm
-                0x0000000000000000       0x10 build/MLDR187_cryptoAes.o
- .data.g_AesShftTblTrm
-                0x0000000000000000       0x10 build/MLDR187_cryptoAes.o
- .data.g_AesShftTblM1Trm
-                0x0000000000000000       0x10 build/MLDR187_cryptoAes.o
- .text.aesInitCCPU
-                0x0000000000000000      0x2f0 build/MLDR187_cryptoAes.o
- .text.aesExpandKey
-                0x0000000000000000       0x3a build/MLDR187_cryptoAes.o
- .text.aesEncBlock
-                0x0000000000000000       0x32 build/MLDR187_cryptoAes.o
- .text.aesDecBlock
-                0x0000000000000000       0x32 build/MLDR187_cryptoAes.o
- .text.aesLinearFill
-                0x0000000000000000       0x36 build/MLDR187_cryptoAes.o
- .text.aesGFM   0x0000000000000000       0xb2 build/MLDR187_cryptoAes.o
- .debug_info    0x0000000000000000      0x553 build/MLDR187_cryptoAes.o
- .debug_abbrev  0x0000000000000000      0x150 build/MLDR187_cryptoAes.o
- .debug_aranges
-                0x0000000000000000       0x48 build/MLDR187_cryptoAes.o
- .debug_ranges  0x0000000000000000       0x38 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000      0x149 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x52 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x19 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x94 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000      0x174 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x16 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x43 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x57 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x52 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000      0x182 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000      0x341 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x35 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_cryptoAes.o
- .debug_macro   0x0000000000000000       0x16 build/MLDR187_cryptoAes.o
- .debug_line    0x0000000000000000      0x89f build/MLDR187_cryptoAes.o
- .debug_str     0x0000000000000000    0x24186 build/MLDR187_cryptoAes.o
- .comment       0x0000000000000000       0x34 build/MLDR187_cryptoAes.o
- .debug_frame   0x0000000000000000      0x104 build/MLDR187_cryptoAes.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_cryptoKuz.o
- .text          0x0000000000000000        0x0 build/MLDR187_cryptoKuz.o
- .data          0x0000000000000000        0x0 build/MLDR187_cryptoKuz.o
- .bss           0x0000000000000000        0x0 build/MLDR187_cryptoKuz.o
- .rodata.g_KuzPi
-                0x0000000000000000      0x100 build/MLDR187_cryptoKuz.o
- .rodata.g_KuzPiM1
-                0x0000000000000000      0x100 build/MLDR187_cryptoKuz.o
- .rodata.kB     0x0000000000000000       0x10 build/MLDR187_cryptoKuz.o
- .text.kuzInitCCPU
-                0x0000000000000000      0x27a build/MLDR187_cryptoKuz.o
- .text.kuzExpandKey
-                0x0000000000000000       0x2a build/MLDR187_cryptoKuz.o
- .text.kuzEncBlock
-                0x0000000000000000       0x2a build/MLDR187_cryptoKuz.o
- .text.kuzDecBlock
-                0x0000000000000000       0x2a build/MLDR187_cryptoKuz.o
- .text.kuzMulGF256_1
-                0x0000000000000000       0x72 build/MLDR187_cryptoKuz.o
- .debug_info    0x0000000000000000      0x4c0 build/MLDR187_cryptoKuz.o
- .debug_abbrev  0x0000000000000000      0x166 build/MLDR187_cryptoKuz.o
- .debug_aranges
-                0x0000000000000000       0x40 build/MLDR187_cryptoKuz.o
- .debug_ranges  0x0000000000000000       0x30 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000      0x149 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x52 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x19 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x94 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000      0x174 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x16 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x43 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x57 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x52 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000      0x182 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000      0x341 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x35 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_cryptoKuz.o
- .debug_macro   0x0000000000000000       0x16 build/MLDR187_cryptoKuz.o
- .debug_line    0x0000000000000000      0x840 build/MLDR187_cryptoKuz.o
- .debug_str     0x0000000000000000    0x2414a build/MLDR187_cryptoKuz.o
- .comment       0x0000000000000000       0x34 build/MLDR187_cryptoKuz.o
- .debug_frame   0x0000000000000000       0xd4 build/MLDR187_cryptoKuz.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_dma.o
- .text          0x0000000000000000        0x0 build/MLDR187_dma.o
- .data          0x0000000000000000        0x0 build/MLDR187_dma.o
- .bss           0x0000000000000000        0x0 build/MLDR187_dma.o
- .text.DMA_ChCfgInit
-                0x0000000000000000      0x100 build/MLDR187_dma.o
- .text.DMA_Init
-                0x0000000000000000       0x42 build/MLDR187_dma.o
- .text.DMA_DeInit
-                0x0000000000000000       0x76 build/MLDR187_dma.o
- .text.DMA_Cmd  0x0000000000000000       0x38 build/MLDR187_dma.o
- .text.DMA_GetBaseChannelAddr
-                0x0000000000000000       0x14 build/MLDR187_dma.o
- .text.DMA_GetAlternateChannelAddr
-                0x0000000000000000       0x14 build/MLDR187_dma.o
- .text.DMA_GetChannelsCount
-                0x0000000000000000       0x2e build/MLDR187_dma.o
- .text.DMA_GetState
-                0x0000000000000000       0x18 build/MLDR187_dma.o
- .text.DMA_GetMasterEnable
-                0x0000000000000000       0x28 build/MLDR187_dma.o
- .text.DMA_GetRequests
-                0x0000000000000000       0x2a build/MLDR187_dma.o
- .text.DMA_GetSingleRequest
-                0x0000000000000000       0x38 build/MLDR187_dma.o
- .text.DMA_ManualSetRequest
-                0x0000000000000000       0x1c build/MLDR187_dma.o
- .text.DMA_BurstSetNewState
-                0x0000000000000000       0x32 build/MLDR187_dma.o
- .text.DMA_MaskSetNewState
-                0x0000000000000000       0x32 build/MLDR187_dma.o
- .text.DMA_EnableChannels
-                0x0000000000000000       0x32 build/MLDR187_dma.o
- .text.DMA_AltSetEnable
-                0x0000000000000000       0x32 build/MLDR187_dma.o
- .text.DMA_IsAlternateActive
-                0x0000000000000000       0x30 build/MLDR187_dma.o
- .text.DMA_HighPriorityEnable
-                0x0000000000000000       0x32 build/MLDR187_dma.o
- .text.DMA_GetErrors
-                0x0000000000000000       0x14 build/MLDR187_dma.o
- .text.DMA_GetSingleError
-                0x0000000000000000       0x2e build/MLDR187_dma.o
- .text.DMA_ClearErrors
-                0x0000000000000000       0x1c build/MLDR187_dma.o
- .text.DMA_IrqPreInit
-                0x0000000000000000       0x2a build/MLDR187_dma.o
- .debug_info    0x0000000000000000      0xb41 build/MLDR187_dma.o
- .debug_abbrev  0x0000000000000000      0x20b build/MLDR187_dma.o
- .debug_aranges
-                0x0000000000000000       0xc8 build/MLDR187_dma.o
- .debug_ranges  0x0000000000000000       0xb8 build/MLDR187_dma.o
- .debug_macro   0x0000000000000000       0xe4 build/MLDR187_dma.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_dma.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_dma.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_dma.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_dma.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_dma.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_dma.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_dma.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_dma.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_dma.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_dma.o
- .debug_line    0x0000000000000000      0x8f8 build/MLDR187_dma.o
- .debug_str     0x0000000000000000    0x22bfb build/MLDR187_dma.o
- .comment       0x0000000000000000       0x34 build/MLDR187_dma.o
- .debug_frame   0x0000000000000000      0x330 build/MLDR187_dma.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_eeprom.o
- .text          0x0000000000000000        0x0 build/MLDR187_eeprom.o
- .data          0x0000000000000000        0x0 build/MLDR187_eeprom.o
- .bss           0x0000000000000000        0x0 build/MLDR187_eeprom.o
- EXECUTABLE_MEMORY_SECTION
-                0x0000000000000000      0x802 build/MLDR187_eeprom.o
- .text.EEPROM_SetLatency
-                0x0000000000000000       0x50 build/MLDR187_eeprom.o
- .debug_info    0x0000000000000000      0x4e1 build/MLDR187_eeprom.o
- .debug_abbrev  0x0000000000000000      0x17c build/MLDR187_eeprom.o
- .debug_aranges
-                0x0000000000000000       0x68 build/MLDR187_eeprom.o
- .debug_ranges  0x0000000000000000       0x58 build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000       0xc8 build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_eeprom.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_eeprom.o
- .debug_line    0x0000000000000000      0xda2 build/MLDR187_eeprom.o
- .debug_str     0x0000000000000000    0x21b6a build/MLDR187_eeprom.o
- .comment       0x0000000000000000       0x34 build/MLDR187_eeprom.o
- .debug_frame   0x0000000000000000      0x18c build/MLDR187_eeprom.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_gpio.o
- .text          0x0000000000000000        0x0 build/MLDR187_gpio.o
- .data          0x0000000000000000        0x0 build/MLDR187_gpio.o
- .bss           0x0000000000000000        0x0 build/MLDR187_gpio.o
- .text.PORT_StructInitDefault
-                0x0000000000000000       0x3a build/MLDR187_gpio.o
- .text.PORT_DeInit
-                0x0000000000000000       0x48 build/MLDR187_gpio.o
- .text.PORT_Write
-                0x0000000000000000       0x5c build/MLDR187_gpio.o
- .text.PORT_Read
-                0x0000000000000000       0x1c build/MLDR187_gpio.o
- .text.PORT_ReadBackPort
-                0x0000000000000000       0x1c build/MLDR187_gpio.o
- .text.PORT_ReadBackPin
-                0x0000000000000000       0x34 build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_gpio.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_gpio.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_i2c.o
- .text          0x0000000000000000        0x0 build/MLDR187_i2c.o
- .data          0x0000000000000000        0x0 build/MLDR187_i2c.o
- .bss           0x0000000000000000        0x0 build/MLDR187_i2c.o
- .text.I2C_Init
-                0x0000000000000000       0x60 build/MLDR187_i2c.o
- .text.I2C_DeInit
-                0x0000000000000000       0x46 build/MLDR187_i2c.o
- .text.I2C_StructInit
-                0x0000000000000000       0x22 build/MLDR187_i2c.o
- .text.I2C_Cmd  0x0000000000000000       0x3a build/MLDR187_i2c.o
- .text.I2C_SendData
-                0x0000000000000000       0xa2 build/MLDR187_i2c.o
- .text.I2C_ReceiveData
-                0x0000000000000000       0xcc build/MLDR187_i2c.o
- .text.I2C_Send7bitAddress
-                0x0000000000000000       0x4c build/MLDR187_i2c.o
- .text.I2C_SendByte
-                0x0000000000000000       0x3c build/MLDR187_i2c.o
- .text.I2C_ReceiveByte
-                0x0000000000000000       0x34 build/MLDR187_i2c.o
- .text.I2C_StartReceiveData
-                0x0000000000000000       0x42 build/MLDR187_i2c.o
- .text.I2C_GetReceivedData
-                0x0000000000000000       0x18 build/MLDR187_i2c.o
- .text.I2C_SendSTOP
-                0x0000000000000000       0x1e build/MLDR187_i2c.o
- .text.I2C_ITConfig
-                0x0000000000000000       0x3a build/MLDR187_i2c.o
- .text.I2C_GetITStatus
-                0x0000000000000000       0x28 build/MLDR187_i2c.o
- .text.I2C_ClearITPendingBit
-                0x0000000000000000       0x1e build/MLDR187_i2c.o
- .text.I2C_GetFlags
-                0x0000000000000000       0x14 build/MLDR187_i2c.o
- .text.I2C_GetFlagStatus
-                0x0000000000000000       0x30 build/MLDR187_i2c.o
- .debug_info    0x0000000000000000      0x637 build/MLDR187_i2c.o
- .debug_abbrev  0x0000000000000000      0x23d build/MLDR187_i2c.o
- .debug_aranges
-                0x0000000000000000       0xa0 build/MLDR187_i2c.o
- .debug_ranges  0x0000000000000000       0x90 build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000       0xb4 build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_i2c.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_i2c.o
- .debug_line    0x0000000000000000      0x7a0 build/MLDR187_i2c.o
- .debug_str     0x0000000000000000    0x21dad build/MLDR187_i2c.o
- .comment       0x0000000000000000       0x34 build/MLDR187_i2c.o
- .debug_frame   0x0000000000000000      0x288 build/MLDR187_i2c.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iso7816.o
- .text          0x0000000000000000        0x0 build/MLDR187_iso7816.o
- .data          0x0000000000000000        0x0 build/MLDR187_iso7816.o
- .bss           0x0000000000000000        0x0 build/MLDR187_iso7816.o
- .text.ISO7816_Init
-                0x0000000000000000      0x290 build/MLDR187_iso7816.o
- .text.ISO7816_StructInitDefault
-                0x0000000000000000       0xac build/MLDR187_iso7816.o
- .text.ISO7816_DeInit
-                0x0000000000000000       0x50 build/MLDR187_iso7816.o
- .text.ISO7816_Cmd
-                0x0000000000000000       0x3c build/MLDR187_iso7816.o
- .text.ISO7816_PutNext
-                0x0000000000000000       0x22 build/MLDR187_iso7816.o
- .text.ISO7816_GetLast
-                0x0000000000000000       0x28 build/MLDR187_iso7816.o
- .text.ISO7816_GetFlags
-                0x0000000000000000       0x14 build/MLDR187_iso7816.o
- .text.ISO7816_GetFlagSingle
-                0x0000000000000000       0x38 build/MLDR187_iso7816.o
- .text.ISO7816_ClearFlags
-                0x0000000000000000       0x24 build/MLDR187_iso7816.o
- .text.ISO7816_ITsetNewState
-                0x0000000000000000       0x9a build/MLDR187_iso7816.o
- .debug_info    0x0000000000000000      0x6ff build/MLDR187_iso7816.o
- .debug_abbrev  0x0000000000000000      0x207 build/MLDR187_iso7816.o
- .debug_aranges
-                0x0000000000000000       0x68 build/MLDR187_iso7816.o
- .debug_ranges  0x0000000000000000       0x58 build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000       0xe4 build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_iso7816.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_iso7816.o
- .debug_line    0x0000000000000000      0x818 build/MLDR187_iso7816.o
- .debug_str     0x0000000000000000    0x2231a build/MLDR187_iso7816.o
- .comment       0x0000000000000000       0x34 build/MLDR187_iso7816.o
- .debug_frame   0x0000000000000000      0x184 build/MLDR187_iso7816.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_iwdg.o
- .text          0x0000000000000000        0x0 build/MLDR187_iwdg.o
- .data          0x0000000000000000        0x0 build/MLDR187_iwdg.o
- .bss           0x0000000000000000        0x0 build/MLDR187_iwdg.o
- .text.IWDG_SetupAndActivate
-                0x0000000000000000       0x7e build/MLDR187_iwdg.o
- .text.IWDG_Refresh
-                0x0000000000000000       0x1a build/MLDR187_iwdg.o
- .debug_info    0x0000000000000000      0x2c6 build/MLDR187_iwdg.o
- .debug_abbrev  0x0000000000000000       0xe5 build/MLDR187_iwdg.o
- .debug_aranges
-                0x0000000000000000       0x28 build/MLDR187_iwdg.o
- .debug_ranges  0x0000000000000000       0x18 build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000       0xaa build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_iwdg.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_iwdg.o
- .debug_line    0x0000000000000000      0x2e9 build/MLDR187_iwdg.o
- .debug_str     0x0000000000000000    0x21bba build/MLDR187_iwdg.o
- .comment       0x0000000000000000       0x34 build/MLDR187_iwdg.o
- .debug_frame   0x0000000000000000       0x5c build/MLDR187_iwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_math.o
- .text          0x0000000000000000        0x0 build/MLDR187_math.o
- .data          0x0000000000000000        0x0 build/MLDR187_math.o
- .bss           0x0000000000000000        0x0 build/MLDR187_math.o
- .text.MATH_ABS
-                0x0000000000000000       0x2a build/MLDR187_math.o
- .text.MATH_SQRT
-                0x0000000000000000      0x1da build/MLDR187_math.o
- .text.MATH_oversample
-                0x0000000000000000      0x1d2 build/MLDR187_math.o
- .text.MATH_FFT
-                0x0000000000000000       0x3a build/MLDR187_math.o
- .text.MATH_ComplexMagnitude
-                0x0000000000000000       0x68 build/MLDR187_math.o
- .text.MATH_KhdCalc
-                0x0000000000000000       0xe0 build/MLDR187_math.o
- .text.MATH_TrueRMS
-                0x0000000000000000       0xee build/MLDR187_math.o
- .text.MATH_TriangleSideCalc
-                0x0000000000000000      0x1ee build/MLDR187_math.o
- .text.MATH_arcTan
-                0x0000000000000000      0x124 build/MLDR187_math.o
- .text.MATH_FastSinA
-                0x0000000000000000       0xd0 build/MLDR187_math.o
- .text.MATH_FastCosA
-                0x0000000000000000       0x32 build/MLDR187_math.o
- .text.MATH_AtanF
-                0x0000000000000000      0x252 build/MLDR187_math.o
- .rodata        0x0000000000000000       0x2c build/MLDR187_math.o
- .debug_info    0x0000000000000000      0x5a9 build/MLDR187_math.o
- .debug_abbrev  0x0000000000000000      0x1ac build/MLDR187_math.o
- .debug_aranges
-                0x0000000000000000       0x78 build/MLDR187_math.o
- .debug_ranges  0x0000000000000000       0x68 build/MLDR187_math.o
- .debug_macro   0x0000000000000000      0x148 build/MLDR187_math.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_math.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_math.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x16 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x19 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x58 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x16 build/MLDR187_math.o
- .debug_macro   0x0000000000000000      0x10e build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x8d build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x16 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x43 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x34 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x52 build/MLDR187_math.o
- .debug_macro   0x0000000000000000      0x182 build/MLDR187_math.o
- .debug_macro   0x0000000000000000      0x341 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x16 build/MLDR187_math.o
- .debug_macro   0x0000000000000000       0x29 build/MLDR187_math.o
- .debug_line    0x0000000000000000      0xb2a build/MLDR187_math.o
- .debug_str     0x0000000000000000     0x62fb build/MLDR187_math.o
- .comment       0x0000000000000000       0x34 build/MLDR187_math.o
- .debug_frame   0x0000000000000000      0x240 build/MLDR187_math.o
- .group         0x0000000000000000        0xc build/MLDR187_mathTables.o
- .group         0x0000000000000000        0xc build/MLDR187_mathTables.o
- .group         0x0000000000000000        0xc build/MLDR187_mathTables.o
- .group         0x0000000000000000        0xc build/MLDR187_mathTables.o
- .group         0x0000000000000000        0xc build/MLDR187_mathTables.o
- .group         0x0000000000000000        0xc build/MLDR187_mathTables.o
- .group         0x0000000000000000        0xc build/MLDR187_mathTables.o
- .group         0x0000000000000000        0xc build/MLDR187_mathTables.o
- .text          0x0000000000000000        0x0 build/MLDR187_mathTables.o
- .data          0x0000000000000000        0x0 build/MLDR187_mathTables.o
- .bss           0x0000000000000000        0x0 build/MLDR187_mathTables.o
- .rodata.MATH_fftReorderTbl
-                0x0000000000000000      0x400 build/MLDR187_mathTables.o
- .rodata.MATH_fftCosSinLookupTable
-                0x0000000000000000     0x3000 build/MLDR187_mathTables.o
- .rodata.MATH_TABLE_SIN_PREC
-                0x0000000000000000     0x2004 build/MLDR187_mathTables.o
- .debug_info    0x0000000000000000      0x15e build/MLDR187_mathTables.o
- .debug_abbrev  0x0000000000000000       0x7a build/MLDR187_mathTables.o
- .debug_aranges
-                0x0000000000000000       0x18 build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000       0x68 build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_mathTables.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_mathTables.o
- .debug_line    0x0000000000000000      0x1cf build/MLDR187_mathTables.o
- .debug_str     0x0000000000000000     0x364d build/MLDR187_mathTables.o
- .comment       0x0000000000000000       0x34 build/MLDR187_mathTables.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_otp.o
- .text          0x0000000000000000        0x0 build/MLDR187_otp.o
- .data          0x0000000000000000        0x0 build/MLDR187_otp.o
- .bss           0x0000000000000000        0x0 build/MLDR187_otp.o
- .text.OTP_Init
-                0x0000000000000000      0x10c build/MLDR187_otp.o
- .text.OTP_WriteBit
-                0x0000000000000000      0x11e build/MLDR187_otp.o
- .text.OTP_WriteByte
-                0x0000000000000000       0xb0 build/MLDR187_otp.o
- .text.OTP_Read
-                0x0000000000000000       0x48 build/MLDR187_otp.o
- .text.OTP_ReadReadProtection
-                0x0000000000000000       0x18 build/MLDR187_otp.o
- .text.OTP_SetReadProtection
-                0x0000000000000000       0x1e build/MLDR187_otp.o
- .text.OTP_ReadWriteProtection
-                0x0000000000000000       0x18 build/MLDR187_otp.o
- .text.OTP_SetWriteProtection
-                0x0000000000000000       0x1e build/MLDR187_otp.o
- .debug_info    0x0000000000000000      0x33c build/MLDR187_otp.o
- .debug_abbrev  0x0000000000000000      0x162 build/MLDR187_otp.o
- .debug_aranges
-                0x0000000000000000       0x58 build/MLDR187_otp.o
- .debug_ranges  0x0000000000000000       0x48 build/MLDR187_otp.o
- .debug_macro   0x0000000000000000       0x9e build/MLDR187_otp.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_otp.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_otp.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_otp.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_otp.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_otp.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_otp.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_otp.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_otp.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_otp.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_otp.o
- .debug_line    0x0000000000000000      0x63d build/MLDR187_otp.o
- .debug_str     0x0000000000000000    0x21955 build/MLDR187_otp.o
- .comment       0x0000000000000000       0x34 build/MLDR187_otp.o
- .debug_frame   0x0000000000000000      0x138 build/MLDR187_otp.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_power.o
- .text          0x0000000000000000        0x0 build/MLDR187_power.o
- .data          0x0000000000000000        0x0 build/MLDR187_power.o
- .bss           0x0000000000000000        0x0 build/MLDR187_power.o
- .text.POWER_DetectorInit
-                0x0000000000000000      0x17e build/MLDR187_power.o
- .text.POWER_DetectorDeInit
-                0x0000000000000000       0x28 build/MLDR187_power.o
- .text.POWER_GetFlag
-                0x0000000000000000       0x4a build/MLDR187_power.o
- .text.POWER_ClearFlag
-                0x0000000000000000       0x6a build/MLDR187_power.o
- .debug_info    0x0000000000000000      0x368 build/MLDR187_power.o
- .debug_abbrev  0x0000000000000000      0x164 build/MLDR187_power.o
- .debug_aranges
-                0x0000000000000000       0x38 build/MLDR187_power.o
- .debug_ranges  0x0000000000000000       0x28 build/MLDR187_power.o
- .debug_macro   0x0000000000000000       0xaa build/MLDR187_power.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_power.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_power.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_power.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_power.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_power.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_power.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_power.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_power.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_power.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_power.o
- .debug_line    0x0000000000000000      0x3f9 build/MLDR187_power.o
- .debug_str     0x0000000000000000    0x21dd6 build/MLDR187_power.o
- .comment       0x0000000000000000       0x34 build/MLDR187_power.o
- .debug_frame   0x0000000000000000       0xa8 build/MLDR187_power.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .group         0x0000000000000000        0xc build/MLDR187_rng.o
- .text          0x0000000000000000        0x0 build/MLDR187_rng.o
- .data          0x0000000000000000        0x0 build/MLDR187_rng.o
- .bss           0x0000000000000000        0x0 build/MLDR187_rng.o
- .text.RNG_Init
-                0x0000000000000000       0xb2 build/MLDR187_rng.o
- .text.RNG_DeInit
-                0x0000000000000000       0x26 build/MLDR187_rng.o
- .text.RNG_Next
-                0x0000000000000000       0x4e build/MLDR187_rng.o
- .text.RNG_Stop
-                0x0000000000000000       0x4a build/MLDR187_rng.o
- .debug_info    0x0000000000000000      0x324 build/MLDR187_rng.o
- .debug_abbrev  0x0000000000000000      0x123 build/MLDR187_rng.o
- .debug_aranges
-                0x0000000000000000       0x38 build/MLDR187_rng.o
- .debug_ranges  0x0000000000000000       0x28 build/MLDR187_rng.o
- .debug_macro   0x0000000000000000       0xaa build/MLDR187_rng.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_rng.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_rng.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_rng.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_rng.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_rng.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_rng.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_rng.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_rng.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_rng.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_rng.o
- .debug_line    0x0000000000000000      0x36d build/MLDR187_rng.o
- .debug_str     0x0000000000000000    0x21b72 build/MLDR187_rng.o
- .comment       0x0000000000000000       0x34 build/MLDR187_rng.o
- .debug_frame   0x0000000000000000       0xac build/MLDR187_rng.o
  .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
  .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
  .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
@@ -1181,430 +62,46 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x1df build/MLDR187_rst_clk.o
  .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_rst_clk.o
  .debug_macro   0x0000000000000000       0x28 build/MLDR187_rst_clk.o
- .debug_macro   0x0000000000000000       0x20 build/MLDR187_rst_clk.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_sensors.o
- .text          0x0000000000000000        0x0 build/MLDR187_sensors.o
- .data          0x0000000000000000        0x0 build/MLDR187_sensors.o
- .bss           0x0000000000000000        0x0 build/MLDR187_sensors.o
- .text.SENSORS_Enable
-                0x0000000000000000       0x2e build/MLDR187_sensors.o
- .text.SENSORS_ItEnable
-                0x0000000000000000       0x1c build/MLDR187_sensors.o
- .text.SENSORS_KeyResetEnable
-                0x0000000000000000       0x1c build/MLDR187_sensors.o
- .text.SENSORS_MeshInit
-                0x0000000000000000       0x92 build/MLDR187_sensors.o
- .text.SENSORS_ReadHistory
-                0x0000000000000000       0x14 build/MLDR187_sensors.o
- .text.SENSORS_ResetHistory
-                0x0000000000000000       0x16 build/MLDR187_sensors.o
- .text.SENSORS_ReadRealTime
-                0x0000000000000000       0x14 build/MLDR187_sensors.o
- .debug_info    0x0000000000000000      0x478 build/MLDR187_sensors.o
- .debug_abbrev  0x0000000000000000      0x168 build/MLDR187_sensors.o
- .debug_aranges
-                0x0000000000000000       0x50 build/MLDR187_sensors.o
- .debug_ranges  0x0000000000000000       0x40 build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000       0xaa build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_sensors.o
- .debug_macro   0x0000000000000000       0x20 build/MLDR187_sensors.o
- .debug_line    0x0000000000000000      0x40e build/MLDR187_sensors.o
- .debug_str     0x0000000000000000    0x21d8c build/MLDR187_sensors.o
- .comment       0x0000000000000000       0x34 build/MLDR187_sensors.o
- .debug_frame   0x0000000000000000      0x110 build/MLDR187_sensors.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_ssp.o
- .text          0x0000000000000000        0x0 build/MLDR187_ssp.o
- .data          0x0000000000000000        0x0 build/MLDR187_ssp.o
- .bss           0x0000000000000000        0x0 build/MLDR187_ssp.o
- .text.SSP_Init
-                0x0000000000000000       0xca build/MLDR187_ssp.o
- .text.SSP_StructInit
-                0x0000000000000000       0x5e build/MLDR187_ssp.o
- .text.SSP_DeInit
-                0x0000000000000000       0x84 build/MLDR187_ssp.o
- .text.SSP_Cmd  0x0000000000000000       0x3e build/MLDR187_ssp.o
- .text.SSP_SlaveOutputCmd
-                0x0000000000000000       0x3e build/MLDR187_ssp.o
- .text.SSP_SendSingle
-                0x0000000000000000       0x30 build/MLDR187_ssp.o
- .text.SSP_SendBytes
-                0x0000000000000000       0xc0 build/MLDR187_ssp.o
- .text.SSP_SendData
-                0x0000000000000000       0x22 build/MLDR187_ssp.o
- .text.SSP_ReceiveSingle
-                0x0000000000000000       0x2e build/MLDR187_ssp.o
- .text.SSP_ReceiveBytes
-                0x0000000000000000       0xc4 build/MLDR187_ssp.o
- .text.SSP_ReceiveData
-                0x0000000000000000       0x20 build/MLDR187_ssp.o
- .text.SSP_GetFlags
-                0x0000000000000000       0x18 build/MLDR187_ssp.o
- .text.SSP_GetFlagStatus
-                0x0000000000000000       0x34 build/MLDR187_ssp.o
- .text.SSP_ITsetMask
-                0x0000000000000000       0x20 build/MLDR187_ssp.o
- .text.SSP_ITConfig
-                0x0000000000000000       0x4a build/MLDR187_ssp.o
- .text.SSP_GetITStatus
-                0x0000000000000000       0x34 build/MLDR187_ssp.o
- .text.SSP_GetITStatusMasked
-                0x0000000000000000       0x34 build/MLDR187_ssp.o
- .text.SSP_ClearITPendingBit
-                0x0000000000000000       0x20 build/MLDR187_ssp.o
- .text.SSP_DMACmd
-                0x0000000000000000       0x56 build/MLDR187_ssp.o
- .text.SSP_DMATransmit
-                0x0000000000000000      0x186 build/MLDR187_ssp.o
- .text.SSP_DMAReceive
-                0x0000000000000000      0x280 build/MLDR187_ssp.o
- .text.SSP_DMACycleModeRefresh
-                0x0000000000000000      0x154 build/MLDR187_ssp.o
- .text.SSP_GetDMAaddresses
-                0x0000000000000000       0xca build/MLDR187_ssp.o
- .debug_info    0x0000000000000000     0x1046 build/MLDR187_ssp.o
- .debug_abbrev  0x0000000000000000      0x1d8 build/MLDR187_ssp.o
- .debug_aranges
-                0x0000000000000000       0xd0 build/MLDR187_ssp.o
- .debug_ranges  0x0000000000000000       0xc0 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000      0x102 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_ssp.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_ssp.o
- .debug_line    0x0000000000000000      0xe4a build/MLDR187_ssp.o
- .debug_str     0x0000000000000000    0x23106 build/MLDR187_ssp.o
- .comment       0x0000000000000000       0x34 build/MLDR187_ssp.o
- .debug_frame   0x0000000000000000      0x368 build/MLDR187_ssp.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_timer.o
- .text          0x0000000000000000        0x0 build/MLDR187_timer.o
- .data          0x0000000000000000        0x0 build/MLDR187_timer.o
- .bss           0x0000000000000000        0x0 build/MLDR187_timer.o
- .text.TIMER_Init
-                0x0000000000000000      0x142 build/MLDR187_timer.o
- .text.TIMER_StructInitDefault
-                0x0000000000000000       0x7a build/MLDR187_timer.o
- .text.TIMER_DeInit
-                0x0000000000000000      0x188 build/MLDR187_timer.o
- .text.TIMER_Cmd
-                0x0000000000000000       0x5c build/MLDR187_timer.o
- .text.TIMER_SetCounter
-                0x0000000000000000       0x20 build/MLDR187_timer.o
- .text.TIMER_SetPrescaler
-                0x0000000000000000       0x22 build/MLDR187_timer.o
- .text.TIMER_SetPeriod
-                0x0000000000000000       0x20 build/MLDR187_timer.o
- .text.TIMER_GetCounter
-                0x0000000000000000       0x18 build/MLDR187_timer.o
- .text.TIMER_ChnInit
-                0x0000000000000000      0x170 build/MLDR187_timer.o
- .text.TIMER_ChnStructInitDefault
-                0x0000000000000000       0x72 build/MLDR187_timer.o
- .text.TIMER_SetChCCR
-                0x0000000000000000       0x4e build/MLDR187_timer.o
- .text.TIMER_GetChCCR
-                0x0000000000000000       0x46 build/MLDR187_timer.o
- .text.TIMER_ChnETR_Cmd
-                0x0000000000000000       0x8a build/MLDR187_timer.o
- .text.TIMER_ChnCCR1_Cmd
-                0x0000000000000000       0x64 build/MLDR187_timer.o
- .text.TIMER_ChnOutInit
-                0x0000000000000000       0xb4 build/MLDR187_timer.o
- .text.TIMER_ChnOutStructInitDefault
-                0x0000000000000000       0x2a build/MLDR187_timer.o
- .text.TIMER_GetStatus
-                0x0000000000000000       0x18 build/MLDR187_timer.o
- .text.TIMER_GetFlagStatus
-                0x0000000000000000       0x32 build/MLDR187_timer.o
- .text.TIMER_ClearFlag
-                0x0000000000000000       0x24 build/MLDR187_timer.o
- .text.TIMER_ItConfig
-                0x0000000000000000       0x20 build/MLDR187_timer.o
- .text.TIMER_ItSetNewState
-                0x0000000000000000       0x48 build/MLDR187_timer.o
- .text.TIMER_DMAset
-                0x0000000000000000       0x20 build/MLDR187_timer.o
- .text.TIMER_DMAsetNewState
-                0x0000000000000000       0x48 build/MLDR187_timer.o
- .text.TIMER_DMAChannelSet
-                0x0000000000000000       0x3e build/MLDR187_timer.o
- .text.TIMER_DMAChannelSetNewState
-                0x0000000000000000       0x72 build/MLDR187_timer.o
- .text.TIMER_GetChannelRegisters
-                0x0000000000000000      0x2a0 build/MLDR187_timer.o
- .rodata.TIMER_GetChannelRegisters
-                0x0000000000000000       0x1c build/MLDR187_timer.o
- .debug_info    0x0000000000000000     0x1254 build/MLDR187_timer.o
- .debug_abbrev  0x0000000000000000      0x1e2 build/MLDR187_timer.o
- .debug_aranges
-                0x0000000000000000       0xe8 build/MLDR187_timer.o
- .debug_ranges  0x0000000000000000       0xd8 build/MLDR187_timer.o
- .debug_macro   0x0000000000000000      0x11b build/MLDR187_timer.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_timer.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_timer.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_timer.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_timer.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_timer.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_timer.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_timer.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_timer.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_timer.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_timer.o
- .debug_line    0x0000000000000000      0xef9 build/MLDR187_timer.o
- .debug_str     0x0000000000000000    0x234c8 build/MLDR187_timer.o
- .comment       0x0000000000000000       0x34 build/MLDR187_timer.o
- .debug_frame   0x0000000000000000      0x3e0 build/MLDR187_timer.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_uart.o
- .text          0x0000000000000000        0x0 build/MLDR187_uart.o
- .data          0x0000000000000000        0x0 build/MLDR187_uart.o
- .bss           0x0000000000000000        0x0 build/MLDR187_uart.o
- .text.UART_Init
-                0x0000000000000000      0x2e2 build/MLDR187_uart.o
- .text.UART_StructInitDefault
-                0x0000000000000000       0xa0 build/MLDR187_uart.o
- .text.UART_DeInit
-                0x0000000000000000       0xba build/MLDR187_uart.o
- .text.UART_Cmd
-                0x0000000000000000       0x3e build/MLDR187_uart.o
- .text.UART_Send
-                0x0000000000000000       0x36 build/MLDR187_uart.o
- .text.UART_SendBytes
-                0x0000000000000000       0xc2 build/MLDR187_uart.o
- .text.UART_SendString
-                0x0000000000000000       0x4c build/MLDR187_uart.o
- .text.UART_SendData
-                0x0000000000000000       0x26 build/MLDR187_uart.o
- .text.UART_Receive
-                0x0000000000000000       0x2a build/MLDR187_uart.o
- .text.UART_ReceiveBytes
-                0x0000000000000000       0xe6 build/MLDR187_uart.o
- .text.UART_ReceiveData
-                0x0000000000000000       0x1c build/MLDR187_uart.o
- .text.UART_BreakLine
-                0x0000000000000000       0x3e build/MLDR187_uart.o
- .text.UART_IrDACmd
-                0x0000000000000000       0x3e build/MLDR187_uart.o
- .text.UART_GetFlags
-                0x0000000000000000       0x18 build/MLDR187_uart.o
- .text.UART_GetFlagStatus
-                0x0000000000000000       0x34 build/MLDR187_uart.o
- .text.UART_DMAConfig
-                0x0000000000000000       0x2e build/MLDR187_uart.o
- .text.UART_ITsetMask
-                0x0000000000000000       0x20 build/MLDR187_uart.o
- .text.UART_ITConfig
-                0x0000000000000000       0x4a build/MLDR187_uart.o
- .text.UART_GetITStatus
-                0x0000000000000000       0x34 build/MLDR187_uart.o
- .text.UART_GetITStatusMasked
-                0x0000000000000000       0x34 build/MLDR187_uart.o
- .text.UART_ClearITPendingBit
-                0x0000000000000000       0x20 build/MLDR187_uart.o
- .text.UART_DMACmd
-                0x0000000000000000       0x52 build/MLDR187_uart.o
- .text.UART_DMATransmit
-                0x0000000000000000      0x160 build/MLDR187_uart.o
- .text.UART_DMAReceive
-                0x0000000000000000      0x206 build/MLDR187_uart.o
- .text.UART_DMACycleModeRefresh
-                0x0000000000000000      0x10c build/MLDR187_uart.o
- .text.UART_GetDMAaddresses
-                0x0000000000000000       0xea build/MLDR187_uart.o
- .debug_info    0x0000000000000000     0x129c build/MLDR187_uart.o
- .debug_abbrev  0x0000000000000000      0x1d0 build/MLDR187_uart.o
- .debug_aranges
-                0x0000000000000000       0xe8 build/MLDR187_uart.o
- .debug_ranges  0x0000000000000000       0xd8 build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0xfc build/MLDR187_uart.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_uart.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_uart.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_uart.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0x10 build/MLDR187_uart.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_uart.o
- .debug_line    0x0000000000000000     0x107d build/MLDR187_uart.o
- .debug_str     0x0000000000000000    0x2338e build/MLDR187_uart.o
- .comment       0x0000000000000000       0x34 build/MLDR187_uart.o
- .debug_frame   0x0000000000000000      0x3d8 build/MLDR187_uart.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .group         0x0000000000000000        0xc build/MLDR187_wwdg.o
- .text          0x0000000000000000        0x0 build/MLDR187_wwdg.o
- .data          0x0000000000000000        0x0 build/MLDR187_wwdg.o
- .bss           0x0000000000000000        0x0 build/MLDR187_wwdg.o
- .text.WWDG_Init
-                0x0000000000000000       0x9e build/MLDR187_wwdg.o
- .text.WWDG_SetNewCounter
-                0x0000000000000000       0x32 build/MLDR187_wwdg.o
- .text.WWDG_EnableReset
-                0x0000000000000000       0x2e build/MLDR187_wwdg.o
- .text.WWDG_GetFlagStatus
-                0x0000000000000000       0x26 build/MLDR187_wwdg.o
- .text.WWDG_ClearFlag
-                0x0000000000000000       0x1c build/MLDR187_wwdg.o
- .debug_info    0x0000000000000000      0x392 build/MLDR187_wwdg.o
- .debug_abbrev  0x0000000000000000      0x139 build/MLDR187_wwdg.o
- .debug_aranges
-                0x0000000000000000       0x40 build/MLDR187_wwdg.o
- .debug_ranges  0x0000000000000000       0x30 build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000       0xa8 build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000      0x76c build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000       0x22 build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000       0x8e build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000       0x51 build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000      0x103 build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000       0x6a build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000      0x1df build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000       0x28 build/MLDR187_wwdg.o
- .debug_macro   0x0000000000000000       0x26 build/MLDR187_wwdg.o
- .debug_line    0x0000000000000000      0x3ca build/MLDR187_wwdg.o
- .debug_str     0x0000000000000000    0x21bdb build/MLDR187_wwdg.o
- .comment       0x0000000000000000       0x34 build/MLDR187_wwdg.o
- .debug_frame   0x0000000000000000       0xc8 build/MLDR187_wwdg.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .text          0x0000000000000000        0x0 build/MLDR187_gpio.o
+ .data          0x0000000000000000        0x0 build/MLDR187_gpio.o
+ .bss           0x0000000000000000        0x0 build/MLDR187_gpio.o
+ .text.PORT_StructInitDefault
+                0x0000000000000000       0x3a build/MLDR187_gpio.o
+ .text.PORT_DeInit
+                0x0000000000000000       0x48 build/MLDR187_gpio.o
+ .text.PORT_Write
+                0x0000000000000000       0x5c build/MLDR187_gpio.o
+ .text.PORT_Read
+                0x0000000000000000       0x1c build/MLDR187_gpio.o
+ .text.PORT_ReadBackPort
+                0x0000000000000000       0x1c build/MLDR187_gpio.o
+ .text.PORT_ReadBackPin
+                0x0000000000000000       0x34 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x76c build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x22 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x8e build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x51 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x103 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x6a build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x1df build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x28 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x26 build/MLDR187_gpio.o
  .text          0x0000000000000000        0x0 build/startup_MLDR187.o
  .bss           0x0000000000000000        0x0 build/startup_MLDR187.o
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_divdi3.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_divdi3.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_divdi3.o)
- .text.__divdi3
-                0x0000000000000000      0x3e0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_divdi3.o)
- .eh_frame      0x0000000000000000       0x28 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_divdi3.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(addsf3.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(addsf3.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(addsf3.o)
- .text.__addsf3
-                0x0000000000000000      0x39a e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(addsf3.o)
- .debug_frame   0x0000000000000000       0x40 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(addsf3.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(divsf3.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(divsf3.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(divsf3.o)
- .text.__divsf3
-                0x0000000000000000      0x2b0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(divsf3.o)
- .rodata.__divsf3
-                0x0000000000000000       0x80 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(divsf3.o)
- .debug_frame   0x0000000000000000       0x50 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(divsf3.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(gesf2.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(gesf2.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(gesf2.o)
- .text.__gesf2  0x0000000000000000       0x82 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(gesf2.o)
- .debug_frame   0x0000000000000000       0x20 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(gesf2.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(lesf2.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(lesf2.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(lesf2.o)
- .text.__lesf2  0x0000000000000000       0x82 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(lesf2.o)
- .debug_frame   0x0000000000000000       0x20 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(lesf2.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(mulsf3.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(mulsf3.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(mulsf3.o)
- .text.__mulsf3
-                0x0000000000000000      0x294 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(mulsf3.o)
- .rodata.__mulsf3
-                0x0000000000000000       0x40 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(mulsf3.o)
- .debug_frame   0x0000000000000000       0x50 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(mulsf3.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(subsf3.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(subsf3.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(subsf3.o)
- .text.__subsf3
-                0x0000000000000000      0x38e e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(subsf3.o)
- .debug_frame   0x0000000000000000       0x3c e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(subsf3.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(fixsfsi.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(fixsfsi.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(fixsfsi.o)
- .text.__fixsfsi
-                0x0000000000000000       0x62 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(fixsfsi.o)
- .debug_frame   0x0000000000000000       0x20 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(fixsfsi.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(floatsisf.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(floatsisf.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(floatsisf.o)
- .text.__floatsisf
-                0x0000000000000000       0xd6 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(floatsisf.o)
- .debug_frame   0x0000000000000000       0x38 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(floatsisf.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
- .rodata.__clz_tab
-                0x0000000000000000      0x100 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
- .text.__clzsi2
-                0x0000000000000000       0x76 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
- .debug_frame   0x0000000000000000       0x20 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
- .text          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
- .text          0x0000000000000000       0xa8 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
- .data          0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
- .bss           0x0000000000000000        0x0 e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
 
 Memory Configuration
 
@@ -1619,142 +116,121 @@ AHB_RAM          0x0000000020000000 0x0000000000004000 xrw
 Linker script and memory map
 
 LOAD build/main.o
-LOAD build/MLDR187_adc.o
-LOAD build/MLDR187_adcui.o
-LOAD build/MLDR187_bkp.o
-LOAD build/MLDR187_clk_msr.o
-LOAD build/MLDR187_crc.o
-LOAD build/MLDR187_cryptoAes.o
-LOAD build/MLDR187_cryptoKuz.o
-LOAD build/MLDR187_dma.o
-LOAD build/MLDR187_eeprom.o
-LOAD build/MLDR187_gpio.o
-LOAD build/MLDR187_i2c.o
-LOAD build/MLDR187_iso7816.o
-LOAD build/MLDR187_iwdg.o
-LOAD build/MLDR187_math.o
-LOAD build/MLDR187_mathTables.o
-LOAD build/MLDR187_otp.o
-LOAD build/MLDR187_power.o
-LOAD build/MLDR187_rng.o
 LOAD build/MLDR187_rst_clk.o
-LOAD build/MLDR187_sensors.o
-LOAD build/MLDR187_ssp.o
-LOAD build/MLDR187_timer.o
-LOAD build/MLDR187_uart.o
-LOAD build/MLDR187_wwdg.o
+LOAD build/MLDR187_gpio.o
 LOAD build/startup_MLDR187.o
-LOAD e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
-LOAD e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a
-LOAD e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libc_nano.a
-LOAD e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libc_nano.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
 START GROUP
-LOAD e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
-LOAD e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libc_nano.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libc_nano.a
 END GROUP
                 0x0000000000001000                __stack_size = 0x1000
                 0x0000000000001000                __heap_min_size = 0x1000
 
-.text.init      0x0000000010000000      0x124
+.text.init      0x0000000010000000      0x148
  *(.text.init)
- .text.init     0x0000000010000000      0x124 build/startup_MLDR187.o
+ .text.init     0x0000000010000000      0x148 build/startup_MLDR187.o
                 0x0000000010000000                _start
 
-.text           0x0000000010000124      0xb70
-                0x0000000010000124                . = ALIGN (0x4)
- *fill*         0x0000000010000124        0x0 
+.text           0x0000000010000148      0xb8e
+                0x0000000010000148                . = ALIGN (0x4)
+ *fill*         0x0000000010000148        0x0 
  *(.text*)
- .text.main     0x0000000010000124       0xe2 build/main.o
-                0x0000000010000124                main
- .text.PORT_Init
-                0x0000000010000206      0x1bc build/MLDR187_gpio.o
-                0x0000000010000206                PORT_Init
- .text.PORT_ReadPin
-                0x00000000100003c2       0x34 build/MLDR187_gpio.o
-                0x00000000100003c2                PORT_ReadPin
- .text.PORT_SetReset
-                0x00000000100003f6       0x38 build/MLDR187_gpio.o
-                0x00000000100003f6                PORT_SetReset
+ .text.main     0x0000000010000148       0xfe build/main.o
+                0x0000000010000148                main
  .text.RST_CLK_EnablePeripheralClock
-                0x000000001000042e      0x670 build/MLDR187_rst_clk.o
-                0x000000001000042e                RST_CLK_EnablePeripheralClock
+                0x0000000010000246      0x670 build/MLDR187_rst_clk.o
+                0x0000000010000246                RST_CLK_EnablePeripheralClock
  .text.rccEncodeDivisor3bit
-                0x0000000010000a9e       0x84 build/MLDR187_rst_clk.o
+                0x00000000100008b6       0x84 build/MLDR187_rst_clk.o
  .text.rccEncodeDivisor4bit
-                0x0000000010000b22       0x8c build/MLDR187_rst_clk.o
+                0x000000001000093a       0x8c build/MLDR187_rst_clk.o
  .text.rccEncodeDivisorNumeric
-                0x0000000010000bae       0x98 build/MLDR187_rst_clk.o
+                0x00000000100009c6       0x98 build/MLDR187_rst_clk.o
+ .text.PORT_Init
+                0x0000000010000a5e      0x1be build/MLDR187_gpio.o
+                0x0000000010000a5e                PORT_Init
+ .text.PORT_ReadPin
+                0x0000000010000c1c       0x34 build/MLDR187_gpio.o
+                0x0000000010000c1c                PORT_ReadPin
+ .text.PORT_SetReset
+                0x0000000010000c50       0x38 build/MLDR187_gpio.o
+                0x0000000010000c50                PORT_SetReset
  .text.__libc_init_array
-                0x0000000010000c46       0x4e e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
-                0x0000000010000c46                __libc_init_array
+                0x0000000010000c88       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+                0x0000000010000c88                __libc_init_array
 
-.rodata         0x0000000010000c94       0x68
-                0x0000000010000c94                . = ALIGN (0x4)
+.rodata         0x0000000010000cd8       0x68
+                0x0000000010000cd8                . = ALIGN (0x4)
  *(.rodata*)
  .rodata.rccEncodeDivisor3bit
-                0x0000000010000c94       0x20 build/MLDR187_rst_clk.o
+                0x0000000010000cd8       0x20 build/MLDR187_rst_clk.o
  .rodata.rccEncodeDivisor4bit
-                0x0000000010000cb4       0x24 build/MLDR187_rst_clk.o
+                0x0000000010000cf8       0x24 build/MLDR187_rst_clk.o
  .rodata.rccEncodeDivisorNumeric
-                0x0000000010000cd8       0x24 build/MLDR187_rst_clk.o
+                0x0000000010000d1c       0x24 build/MLDR187_rst_clk.o
  *(.srodata*)
 
-.dalign         0x0000000010000cfc        0x0
-                0x0000000010000cfc                . = ALIGN (0x4)
-                0x0000000010000cfc                __data_load_start = LOADADDR (.data)
+.dalign         0x0000000010000d40        0x0
+                0x0000000010000d40                . = ALIGN (0x4)
+                0x0000000010000d40                __data_load_start = LOADADDR (.data)
 
-.data           0x0000000080000000      0x104 load address 0x0000000010000cfc
+.data           0x0000000080000000      0x114 load address 0x0000000010000d40
                 0x0000000080000000                . = ALIGN (0x4)
                 0x0000000080000000                __data_start = .
  *(.data*)
- .data          0x0000000080000000       0xfc build/startup_MLDR187.o
-                0x0000000080000100                . = ALIGN (0x8)
- *fill*         0x00000000800000fc        0x4 
-                0x0000000080000100                __sdata_start = .
+ .data          0x0000000080000000      0x110 build/startup_MLDR187.o
+                0x0000000080000100                brk_base
+                0x0000000080000108                brk_size
+                0x0000000080000110                . = ALIGN (0x8)
+                0x0000000080000110                __sdata_start = .
  *(.sdata*)
  .sdata.RST_CLK_HclkSpeed
-                0x0000000080000100        0x4 build/MLDR187_rst_clk.o
-                0x0000000080000100                RST_CLK_HclkSpeed
-                0x0000000080000104                . = ALIGN (0x4)
-                0x0000000080000104                __data_end = .
+                0x0000000080000110        0x4 build/MLDR187_rst_clk.o
+                0x0000000080000110                RST_CLK_HclkSpeed
+                0x0000000080000114                . = ALIGN (0x4)
+                0x0000000080000114                __data_end = .
 
-.bss            0x0000000080000104       0x34
-                0x0000000080000108                . = ALIGN (0x8)
- *fill*         0x0000000080000104        0x4 
-                0x0000000080000108                __bss_start = .
+.bss            0x0000000080000114       0x34
+                0x0000000080000118                . = ALIGN (0x8)
+ *fill*         0x0000000080000114        0x4 
+                0x0000000080000118                __bss_start = .
  *(.sbss*)
  .sbss.DelayCnt
-                0x0000000080000108        0x4 build/main.o
-                0x0000000080000108                DelayCnt
+                0x0000000080000118        0x4 build/main.o
+                0x0000000080000118                DelayCnt
  .sbss.RST_CLK_PER1C2_Speed
-                0x000000008000010c        0x4 build/MLDR187_rst_clk.o
-                0x000000008000010c                RST_CLK_PER1C2_Speed
- .sbss.rccHseSpeed
-                0x0000000080000110        0x4 build/MLDR187_rst_clk.o
- .sbss.rccAdcUIC1Speed
-                0x0000000080000114        0x4 build/MLDR187_rst_clk.o
- .sbss.rccAdcC1Speed
-                0x0000000080000118        0x4 build/MLDR187_rst_clk.o
- .sbss.rccWwdgSpeed
                 0x000000008000011c        0x4 build/MLDR187_rst_clk.o
+                0x000000008000011c                RST_CLK_PER1C2_Speed
+ .sbss.rccHseSpeed
+                0x0000000080000120        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccAdcUIC1Speed
+                0x0000000080000124        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccAdcC1Speed
+                0x0000000080000128        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccWwdgSpeed
+                0x000000008000012c        0x4 build/MLDR187_rst_clk.o
  *(.scommon)
  *(.bss*)
  .bss.PORT_InitStructure
-                0x0000000080000120       0x14 build/main.o
-                0x0000000080000120                PORT_InitStructure
+                0x0000000080000130       0x14 build/main.o
+                0x0000000080000130                PORT_InitStructure
  *(COMMON)
-                0x0000000080000138                . = ALIGN (0x8)
- *fill*         0x0000000080000134        0x4 
-                0x0000000080000138                __bss_end = .
+                0x0000000080000148                . = ALIGN (0x8)
+ *fill*         0x0000000080000144        0x4 
+                0x0000000080000148                __bss_end = .
                 0x0000000080000800                __global_pointer$ = MIN ((__sdata_start + 0x800), MAX ((__data_start + 0x800), (__bss_end - 0x800)))
-                0x0000000080000138                . = ALIGN (0x8)
-                0x0000000080000138                __end = .
+                0x0000000080000148                . = ALIGN (0x8)
+                0x0000000080000148                __end = .
 
-.aalign         0x0000000010000e00        0x0
-                0x0000000010000e00                . = ALIGN (0x4)
-                0x0000000010000e00                __ahbram_data_load_start = LOADADDR (.ahbram_data)
+.aalign         0x0000000010000e54        0x0
+                0x0000000010000e54                . = ALIGN (0x4)
+                0x0000000010000e54                __ahbram_data_load_start = LOADADDR (.ahbram_data)
 
-.ahbram_data    0x0000000020000000        0x0 load address 0x0000000010000e00
+.ahbram_data    0x0000000020000000        0x0 load address 0x0000000010000e54
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                __ahbram_data_start = .
  *(.ahbram_data)
@@ -1768,118 +244,120 @@ END GROUP
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                __ahbram_bss_end = .
 
-.ralign         0x0000000010000e00        0x0
-                0x0000000010000e00                . = ALIGN (0x4)
-                0x0000000010000e00                __ramfunc_load_start = LOADADDR (.ramfunc)
+.ralign         0x0000000010000e54        0x0
+                0x0000000010000e54                . = ALIGN (0x4)
+                0x0000000010000e54                __ramfunc_load_start = LOADADDR (.ramfunc)
 
-.ramfunc        0x0000000080010000      0x166 load address 0x0000000010000e00
+.ramfunc        0x0000000080010000      0x1ca load address 0x0000000010000e54
                 0x0000000080010000                . = ALIGN (0x4)
                 0x0000000080010000                __ramfunc_start = .
  *(.ramfunc*)
- .ramfunc       0x0000000080010000      0x166 build/startup_MLDR187.o
+ .ramfunc       0x0000000080010000      0x1ca build/startup_MLDR187.o
                 0x0000000080010000                trap_vector
-                0x00000000800100d6                trap_iam
-                0x00000000800100d8                trap_iaf
-                0x00000000800100da                trap_ii
-                0x00000000800100dc                trap_lam
-                0x00000000800100de                trap_laf
-                0x00000000800100e0                trap_sam
-                0x00000000800100e2                trap_saf
-                0x00000000800100e4                trap_ecallm
-                0x00000000800100e6                _exit
-                0x00000000800100e8                PendSV_Handler
-                0x00000000800100ea                enable_PendSV_Handler
-                0x00000000800100f2                disable_PendSV_Handler
-                0x00000000800100fa                SysTick_Handler
-                0x00000000800100fc                enable_SysTick_Handler
-                0x0000000080010106                disable_SysTick_Handler
-                0x0000000080010110                irq_extm
-                0x0000000080010112                enable_irq_extm
-                0x000000008001011e                disable_irq_extm
-                0x000000008001012a                DMA_IRQHandler
-                0x000000008001012c                UART1_IRQHandler
-                0x000000008001012e                UART2_IRQHandler
-                0x0000000080010130                SSP1_IRQHandler
-                0x0000000080010132                POWER_IRQHandler
-                0x0000000080010134                WWDG_IRQHandler
-                0x0000000080010136                Timer1_IRQHandler
-                0x0000000080010138                Timer2_IRQHandler
-                0x000000008001013a                ADC_IRQHandler
-                0x000000008001013c                I2C_IRQHandler
-                0x000000008001013e                BACKUP_IRQHandler
-                0x0000000080010140                EXT_1_IRQHandler
-                0x0000000080010142                EXT_2_IRQHandler
-                0x0000000080010144                EXT_3_IRQHandler
-                0x0000000080010146                ADCIU_1_IRQHandler
-                0x0000000080010148                ADCIU_2_IRQHandler
-                0x000000008001014a                ADCIU_3_IRQHandler
-                0x000000008001014c                L_BLOCK_IRQHandler
-                0x000000008001014e                Default_IRQHandler
-                0x0000000080010150                SENSORS_IRQHandler
-                0x0000000080010152                CLK_MEASURE_IRQHandler
-                0x0000000080010154                RANDOM_IRQHandler
-                0x0000000080010156                ISO7816_IRQHandler
-                0x0000000080010158                UART3_IRQHandler
-                0x000000008001015a                SSP2_IRQHandler
-                0x000000008001015c                SSP3_IRQHandler
-                0x000000008001015e                Timer3_IRQHandler
-                0x0000000080010160                Timer4_IRQHandler
-                0x0000000080010162                UART4_IRQHandler
-                0x0000000080010164                OTP_Corrupt_IRQHandler
+                0x00000000800100f0                trap_iam
+                0x00000000800100fa                trap_iaf
+                0x0000000080010104                trap_ii
+                0x000000008001010e                trap_lam
+                0x0000000080010118                trap_laf
+                0x0000000080010122                trap_sam
+                0x000000008001012c                trap_saf
+                0x0000000080010136                trap_ecallm
+                0x0000000080010140                _exit
+                0x000000008001014a                PendSV_Handler
+                0x000000008001014c                enable_PendSV_Handler
+                0x0000000080010154                disable_PendSV_Handler
+                0x000000008001015c                SysTick_Handler
+                0x000000008001015e                enable_SysTick_Handler
+                0x0000000080010168                disable_SysTick_Handler
+                0x0000000080010172                irq_extm
+                0x0000000080010174                enable_irq_extm
+                0x0000000080010180                disable_irq_extm
+                0x000000008001018c                DMA_IRQHandler
+                0x000000008001018e                UART1_IRQHandler
+                0x0000000080010190                UART2_IRQHandler
+                0x0000000080010192                SSP1_IRQHandler
+                0x0000000080010194                POWER_IRQHandler
+                0x0000000080010196                WWDG_IRQHandler
+                0x0000000080010198                Timer1_IRQHandler
+                0x000000008001019a                Timer2_IRQHandler
+                0x000000008001019c                ADC_IRQHandler
+                0x000000008001019e                I2C_IRQHandler
+                0x00000000800101a0                BACKUP_IRQHandler
+                0x00000000800101a2                EXT_1_IRQHandler
+                0x00000000800101a4                EXT_2_IRQHandler
+                0x00000000800101a6                EXT_3_IRQHandler
+                0x00000000800101a8                ADCIU_1_IRQHandler
+                0x00000000800101aa                ADCIU_2_IRQHandler
+                0x00000000800101ac                ADCIU_3_IRQHandler
+                0x00000000800101ae                L_BLOCK_IRQHandler
+                0x00000000800101b0                Default_IRQHandler
+                0x00000000800101b2                SENSORS_IRQHandler
+                0x00000000800101b4                CLK_MEASURE_IRQHandler
+                0x00000000800101b6                RANDOM_IRQHandler
+                0x00000000800101b8                ISO7816_IRQHandler
+                0x00000000800101ba                UART3_IRQHandler
+                0x00000000800101bc                SSP2_IRQHandler
+                0x00000000800101be                SSP3_IRQHandler
+                0x00000000800101c0                Timer3_IRQHandler
+                0x00000000800101c2                Timer4_IRQHandler
+                0x00000000800101c4                UART4_IRQHandler
+                0x00000000800101c6                OTP_Corrupt_IRQHandler
 
-.rela.dyn       0x0000000080010168        0x0 load address 0x0000000010000f66
- .rela.data     0x0000000080010168        0x0 build/main.o
+.rela.dyn       0x00000000800101cc        0x0 load address 0x000000001000101e
+ .rela.data     0x00000000800101cc        0x0 build/main.o
  .rela.text.init
-                0x0000000080010168        0x0 build/main.o
+                0x00000000800101cc        0x0 build/main.o
  .rela.text.__libc_init_array
-                0x0000000080010168        0x0 build/main.o
-                0x0000000080010168                . = ALIGN (0x4)
-                0x0000000080010168                __ramfunc_end = .
+                0x00000000800101cc        0x0 build/main.o
+                0x00000000800101cc                . = ALIGN (0x4)
+                0x00000000800101cc                __ramfunc_end = .
                 0x0000000080010000                __stack_top = (ORIGIN (REGION_DATA) + LENGTH (REGION_DATA))
                 0x000000008000f000                __stack_limit = (__stack_top - __stack_size)
-                0x0000000080000138                __heap_top = __end
-                0x000000000000eec8                __heap_size = (__stack_limit - __heap_top)
+                0x0000000080000148                __heap_top = __end
+                0x000000000000eeb8                __heap_size = (__stack_limit - __heap_top)
                 0x000000008000f000                __heap_limit = (__heap_top + __heap_size)
                 0x0000000000000001                ASSERT ((__heap_size >= __heap_min_size), Unable to allocate __heap_min_size for heap!)
 
-.heap           0x0000000080000138     0xeec8
+.heap           0x0000000080000148     0xeeb8
                 0x000000008000f000                . = (. + __heap_size)
- *fill*         0x0000000080000138     0xeec8 
+ *fill*         0x0000000080000148     0xeeb8 
+                0x000000008000f000                __heap_end = .
 
 .stack          0x000000008000f000     0x1000
                 0x0000000080010000                . = (. + __stack_size)
  *fill*         0x000000008000f000     0x1000 
+                0x0000000080010000                __sp = .
 OUTPUT(build/firmware.elf elf32-littleriscv)
 
 .debug_info     0x0000000000000000     0x13a1
  .debug_info    0x0000000000000000      0x2b9 build/main.o
- .debug_info    0x00000000000002b9      0x670 build/MLDR187_gpio.o
- .debug_info    0x0000000000000929      0xa56 build/MLDR187_rst_clk.o
+ .debug_info    0x00000000000002b9      0xa56 build/MLDR187_rst_clk.o
+ .debug_info    0x0000000000000d0f      0x670 build/MLDR187_gpio.o
  .debug_info    0x000000000000137f       0x22 build/startup_MLDR187.o
 
 .debug_abbrev   0x0000000000000000      0x520
  .debug_abbrev  0x0000000000000000       0xf5 build/main.o
- .debug_abbrev  0x00000000000000f5      0x204 build/MLDR187_gpio.o
- .debug_abbrev  0x00000000000002f9      0x215 build/MLDR187_rst_clk.o
+ .debug_abbrev  0x00000000000000f5      0x215 build/MLDR187_rst_clk.o
+ .debug_abbrev  0x000000000000030a      0x204 build/MLDR187_gpio.o
  .debug_abbrev  0x000000000000050e       0x12 build/startup_MLDR187.o
 
 .debug_aranges  0x0000000000000000      0x110
  .debug_aranges
                 0x0000000000000000       0x20 build/main.o
  .debug_aranges
-                0x0000000000000020       0x60 build/MLDR187_gpio.o
+                0x0000000000000020       0x68 build/MLDR187_rst_clk.o
  .debug_aranges
-                0x0000000000000080       0x68 build/MLDR187_rst_clk.o
+                0x0000000000000088       0x60 build/MLDR187_gpio.o
  .debug_aranges
                 0x00000000000000e8       0x28 build/startup_MLDR187.o
 
 .debug_ranges   0x0000000000000000       0xf0
  .debug_ranges  0x0000000000000000       0x10 build/main.o
- .debug_ranges  0x0000000000000010       0x50 build/MLDR187_gpio.o
- .debug_ranges  0x0000000000000060       0x70 build/MLDR187_rst_clk.o
+ .debug_ranges  0x0000000000000010       0x70 build/MLDR187_rst_clk.o
+ .debug_ranges  0x0000000000000080       0x50 build/MLDR187_gpio.o
  .debug_ranges  0x00000000000000d0       0x20 build/startup_MLDR187.o
 
-.debug_macro    0x0000000000000000     0x5abe
+.debug_macro    0x0000000000000000     0x5ade
  .debug_macro   0x0000000000000000       0xb6 build/main.o
  .debug_macro   0x00000000000000b6      0x76c build/main.o
  .debug_macro   0x0000000000000822       0x22 build/main.o
@@ -1891,33 +369,35 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_macro   0x0000000000000c6f     0x4c43 build/main.o
  .debug_macro   0x00000000000058b2       0x28 build/main.o
  .debug_macro   0x00000000000058da       0x26 build/main.o
- .debug_macro   0x0000000000005900       0xc8 build/MLDR187_gpio.o
- .debug_macro   0x00000000000059c8       0xf6 build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000005900       0xf6 build/MLDR187_rst_clk.o
+ .debug_macro   0x00000000000059f6       0x20 build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000005a16       0xc8 build/MLDR187_gpio.o
 
-.debug_line     0x0000000000000000     0x2378
- .debug_line    0x0000000000000000      0x29e build/main.o
- .debug_line    0x000000000000029e      0x5d7 build/MLDR187_gpio.o
- .debug_line    0x0000000000000875     0x15b3 build/MLDR187_rst_clk.o
- .debug_line    0x0000000000001e28      0x550 build/startup_MLDR187.o
+.debug_line     0x0000000000000000     0x2405
+ .debug_line    0x0000000000000000      0x2ad build/main.o
+ .debug_line    0x00000000000002ad     0x15c2 build/MLDR187_rst_clk.o
+ .debug_line    0x000000000000186f      0x5e6 build/MLDR187_gpio.o
+ .debug_line    0x0000000000001e55      0x5b0 build/startup_MLDR187.o
 
-.debug_str      0x0000000000000000    0x234c9
- .debug_str     0x0000000000000000    0x2183a build/main.o
-                                      0x219aa (size before relaxing)
- .debug_str     0x000000000002183a      0x8bd build/MLDR187_gpio.o
-                                      0x221d0 (size before relaxing)
- .debug_str     0x00000000000220f7     0x13a4 build/MLDR187_rst_clk.o
-                                      0x22d40 (size before relaxing)
- .debug_str     0x000000000002349b       0x2e build/startup_MLDR187.o
-                                         0x57 (size before relaxing)
+.debug_str      0x0000000000000000    0x234d5
+ .debug_str     0x0000000000000000    0x21846 build/main.o
+                                      0x219b6 (size before relaxing)
+ .debug_str     0x0000000000021846     0x15f2 build/MLDR187_rst_clk.o
+                                      0x22d4c (size before relaxing)
+ .debug_str     0x0000000000022e38      0x66f build/MLDR187_gpio.o
+                                      0x221dc (size before relaxing)
+ .debug_str     0x00000000000234a7       0x2e build/startup_MLDR187.o
+                                         0x63 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 build/main.o
                                          0x34 (size before relaxing)
- .comment       0x0000000000000033       0x34 build/MLDR187_gpio.o
  .comment       0x0000000000000033       0x34 build/MLDR187_rst_clk.o
+ .comment       0x0000000000000033       0x34 build/MLDR187_gpio.o
 
-.debug_frame    0x0000000000000000      0x350
+.debug_frame    0x0000000000000000      0x52c
  .debug_frame   0x0000000000000000       0x2c build/main.o
- .debug_frame   0x000000000000002c      0x15c build/MLDR187_gpio.o
- .debug_frame   0x0000000000000188      0x18c build/MLDR187_rst_clk.o
- .debug_frame   0x0000000000000314       0x3c e:/program/tool_chain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x000000000000002c      0x18c build/MLDR187_rst_clk.o
+ .debug_frame   0x00000000000001b8      0x15c build/MLDR187_gpio.o
+ .debug_frame   0x0000000000000314      0x1dc build/startup_MLDR187.o
+ .debug_frame   0x00000000000004f0       0x3c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
