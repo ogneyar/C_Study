@@ -4,3 +4,5 @@
 # build
 WCH_c/*/*/build/*.d
 WCH_c/*/*/build/*.o
+*/*/*/build/*.d
+*/*/*/build/*.o
