@@ -141,13 +141,18 @@ struct {
 
 LED_PINS[] = {
     {MDR_PORTD, pin0, false},
-    {MDR_PORTD, pin1, false}
+    {MDR_PORTD, pin1, false},
+    {MDR_PORTD, pin2, false},
+    {MDR_PORTD, pin3, false}
 };
 
 RTC_DateTime INIT_DATE = {
-    .year = 21, .month = 3, .day = 22,
-    .hours = 14, .minutes = 13, .seconds = 0
+    .year = 23, .month = 8, .day = 3,
+    .hours = 14, .minutes = 31, .seconds = 0
 };
+
+// если надо установить время, разкомментируй дефайн SET_TIME
+// #define SET_TIME 1
 
 
 bool alarm_triggered = false;
@@ -176,7 +181,7 @@ int main()
     // from RTC
     init_clock();
     init_uart();
-    // init_leds();
+    init_leds();
     init_bkp(&INIT_DATE);
 
     setAlarm(ALARM_POST_MINUTES, ALARM_POST_SECONDS);
@@ -184,7 +189,7 @@ int main()
 
     // from LCD
     Itr_Init();
-    Led_Init();
+    // Led_Init();
     Btn_Init();
 
     LCD_INIT();
@@ -196,7 +201,57 @@ int main()
     printf("K1986BK025 Init end!\n");
 
 
-    for (;;);
+    
+    while (1)
+    {
+        LCD_CurrentMethod = MET_AND;
+
+        /* Key left*/
+        if (PORT_ReadPin(KEY_PORT, KEY_PIN_1))
+            LCD_PUTC(0, 52, 0);
+        else
+            LCD_PUTC(0, 52, 0x1B);
+
+        /* Key up*/
+        if (PORT_ReadPin(KEY_PORT, KEY_PIN_3))
+            LCD_PUTC(6, 48, 0);
+        else
+            LCD_PUTC(6, 48, 0x18);
+            
+        /* Key right*/
+        if (PORT_ReadPin(KEY_PORT, KEY_PIN_2))
+            LCD_PUTC(12, 52, 0);
+        else
+            LCD_PUTC(12, 52, 0x1A);
+
+        /* Key down*/
+        if (PORT_ReadPin(KEY_PORT, KEY_PIN_0))
+            LCD_PUTC(6, 56, 0);
+        else
+            LCD_PUTC(6, 56, 0x19);
+
+        /* 1 second */
+        if (TickTock)
+        {
+            // LCD_PUTC(80, 52, 0x5C);
+            PORT_SetReset(LED_PORT, LED_PIN_3, RESET);
+        }
+        else
+        {
+            // LCD_PUTC(80, 52, 0x2F);
+            PORT_SetReset(LED_PORT, LED_PIN_3, SET);
+        }
+
+        /* Program delay */
+        if (DelayCnt++ >= 0x00000100)
+        {
+            DelayCnt = 0;
+            if (PORT_ReadPin(LED_PORT, LED_PIN_2) != RESET)
+                PORT_SetReset(LED_PORT, LED_PIN_2, RESET);
+            else
+                PORT_SetReset(LED_PORT, LED_PIN_2, SET);
+        }
+    }
 }
 
 
@@ -285,22 +340,15 @@ void SysTick_Handler(void)
     // Set up time for next interrupt 
     MDR_CLIC_MTIMECMP_Reg = MDR_CLIC_MTIME_Reg + 32768;
     
-    if (TickTock)
-    {
-        TickTock = 0;
-    }
-    else
-    {
-        TickTock = 1;
-    }
-
+    TickTock = ! TickTock;
 }
 
 
 void LCD_printNum(uint8_t x, uint8_t y, uint32_t number)
 {
     if (number <= 9) { 
-        LCD_PUTC(x, y, (uint8_t)(number + 0x30));
+        LCD_PUTC(x, y, 0x30);
+        LCD_PUTC(x + 6, y, (uint8_t)(number + 0x30));
     }else if (number > 9 && number < 100) {
         LCD_PUTC(x, y, (uint8_t)(number/10 + 0x30));
         LCD_PUTC(x + 6, y, (uint8_t)(number - ((number/10) * 10) + 0x30));
@@ -461,9 +509,11 @@ void init_bkp(RTC_DateTime * dateTime) {
 
 // установка времени компиляции
 // ----------------------------
+#ifdef SET_TIME
     // Set date and time
-    // BKP_ConvertToBCDFormat(dateTime);
-    // BKP_SetDateTimeBCD(dateTime, SET, SET);
+    BKP_ConvertToBCDFormat(dateTime);
+    BKP_SetDateTimeBCD(dateTime, SET, SET);
+#endif
 // ----------------------------
 
     // In this example we use WAKEUP1 as a button.
