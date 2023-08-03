@@ -152,7 +152,7 @@ RTC_DateTime INIT_DATE = {
 };
 
 // если надо установить время, разкомментируй дефайн SET_TIME
-// #define SET_TIME 1
+#define SET_TIME 1
 
 
 bool alarm_triggered = false;
@@ -172,6 +172,7 @@ void setAlarm(uint32_t minutes_after, uint32_t seconds_after);
 void toggle_led(int i);
 void set_led(int i, BitStatus state);
 void init_leds();
+void init_bkp(RTC_DateTime * dateTime);
 
 
 
@@ -483,7 +484,8 @@ void init_leds() {
 }
 
 
-void init_bkp(RTC_DateTime * dateTime) {
+void init_bkp(RTC_DateTime * dateTime)
+{
     BKP_InitTypeDef bkpInit;
     BKP_StructInitDefault(&bkpInit);
 
