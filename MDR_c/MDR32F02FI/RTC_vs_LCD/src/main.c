@@ -148,7 +148,7 @@ LED_PINS[] = {
 
 RTC_DateTime INIT_DATE = {
     .year = 23, .month = 8, .day = 3,
-    .hours = 14, .minutes = 31, .seconds = 0
+    .hours = 15, .minutes = 28, .seconds = 0
 };
 
 // если надо установить время, разкомментируй дефайн SET_TIME
