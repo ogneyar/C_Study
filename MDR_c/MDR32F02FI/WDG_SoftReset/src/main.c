@@ -186,8 +186,11 @@ void Delay(uint32_t wait_ticks)
 
 void vError(void)
 {
-	PORT_SetReset(LED_PORT, LED_4, RESET);
-	Delay(500000);
-	PORT_SetReset(LED_PORT, LED_4, SET);
-	Delay(500000);
+	while(1)
+	{
+		PORT_SetReset(LED_PORT, LED_4, RESET);
+		Delay(500000);
+		PORT_SetReset(LED_PORT, LED_4, SET);
+		Delay(500000);
+	}
 }

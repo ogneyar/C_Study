@@ -18,31 +18,61 @@
 #include <stdbool.h>
 
 
-struct {MDR_GPIO_TypeDef* port; uint16_t pin; bool state;}
+struct {
+    MDR_GPIO_TypeDef* port; 
+    uint16_t pin; 
+    bool state;
+}
+
 LED_PINS[] = {
-        {MDR_PORTD, pin0, false},
-        {MDR_PORTD, pin1, false}
+    {MDR_PORTD, pin0, false},
+    {MDR_PORTD, pin1, false},
+    {MDR_PORTD, pin2, false},
+    {MDR_PORTD, pin3, false}
 };
 
 RTC_DateTime INIT_DATE = {
-        .year = 21, .month = 3, .day = 22,
-        .hours = 14, .minutes = 13, .seconds = 0
+    .year = 21, .month = 3, .day = 22,
+    .hours = 14, .minutes = 13, .seconds = 0
 };
 
 #define ALARM_POST_MINUTES 0
 #define ALARM_POST_SECONDS 10
 
-#define LSE_FREQUENCY 32768
+#define LSE_LSI_FREQUENCY 32768
 
 
 bool alarm_triggered = false;
 
+
+void BACKUP_IRQHandler(void);
 void setAlarm(uint32_t minutes_after, uint32_t seconds_after);
 void toggle_led(int i);
 void set_led(int i, BitStatus state);
 void init_leds();
+void init_bkp(RTC_DateTime * dateTime);
 
-void BACKUP_IRQHandler() {
+
+
+int main()
+{
+    init_clock();
+    init_uart();
+    init_leds();    
+    init_bkp(&INIT_DATE);
+
+    setAlarm(ALARM_POST_MINUTES, ALARM_POST_SECONDS);
+    
+	set_led(2, SET);
+
+    for (;;);
+}
+
+
+
+void BACKUP_IRQHandler(void)
+{
+	set_led(3, SET);
     uint32_t bkp_flags = BKP_GetFlags();
 
     if (bkp_flags & bkpAlarmAFlag) {
@@ -173,14 +203,17 @@ void init_leds() {
 }
 
 
-void init_bkp(RTC_DateTime * dateTime) {
+void init_bkp(RTC_DateTime * dateTime)
+{
     BKP_InitTypeDef bkpInit;
     BKP_StructInitDefault(&bkpInit);
 
     // Enable peripheral clock to BKP
     RST_CLK_EnablePeripheralClock(RST_CLK_BKP, RST_CLK_Div1);
-    BKP_FreqGenCmd(bkpLse, ENABLE, ENABLE);
-    bkpInit.RTCsrc = bkpRtc_LSE;
+    // BKP_FreqGenCmd(bkpLse, ENABLE, ENABLE);
+    BKP_FreqGenCmd(bkpLsi, ENABLE, ENABLE);
+    // bkpInit.RTCsrc = bkpRtc_LSE;
+    bkpInit.RTCsrc = bkpRtc_LSI;
 
     // As BKP is not reset on main core reset, we need to clear and disable all
     // BKP related interrupts that occurred before to avoid undefined behaviour
@@ -191,7 +224,7 @@ void init_bkp(RTC_DateTime * dateTime) {
     PLIC_ReleaseIRQ(BACKUP_IRQn);
     enable_irq_extm();
 
-    uint32_t prescaler = LSE_FREQUENCY;
+    uint32_t prescaler = LSE_LSI_FREQUENCY;
 
     // RTC time can only be changed when RTC is disabled
     bkpInit.RTCenable = DISABLE;
@@ -218,17 +251,3 @@ void init_bkp(RTC_DateTime * dateTime) {
     BKP_SetItNewState(bkpSecondIE | bkpAlarmAIE | bkpTSIE, ENABLE);
     PLIC_EnableIRQ(BACKUP_IRQn);
 }
-
-
-int main()
-{
-    init_clock();
-    init_uart();
-    init_leds();
-    init_bkp(&INIT_DATE);
-
-    setAlarm(ALARM_POST_MINUTES, ALARM_POST_SECONDS);
-
-    for (;;);
-}
-

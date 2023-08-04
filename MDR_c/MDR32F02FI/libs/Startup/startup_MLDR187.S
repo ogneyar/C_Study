@@ -1,39 +1,8 @@
-/*****************************************************************************
-*
-* @brief Startup file.
-*
-* Copyright (c) 2018 CloudBEAR LLC - http://www.cloudbear.ru/
-* Copyright (c) 2020 JSC "ICC MILANDR" - https://www.milandr.ru/
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions
-* are met:
-*
-*   Redistributions of source code must retain the above copyright
-*   notice, this list of conditions and the following disclaimer.
-*
-*   Redistributions in binary form must reproduce the above copyright
-*   notice, this list of conditions and the following disclaimer in the
-*   documentation and/or other materials provided with the
-*   distribution.
-*
-*   Neither the name of Milandr nor the names of
-*   its contributors may be used to endorse or promote products derived
-*   from this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-* "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-* LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-* A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-* OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-* SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-* LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-* DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-* THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*
-******************************************************************************/
+
+
+// внёс тут небольшие правки (:
+
+
 
 // Interrupt numbers:
 #define IRQ_M_SOFT      3   // machine software interrupt
@@ -150,7 +119,8 @@ _start:
     la gp, __global_pointer$
   .option pop
 
-  la   sp, __sp
+  // Set stack pointer to the end of available memory
+  la   sp, __stack_top
 
   /*-----------*/
   /* Init trap */
@@ -245,7 +215,7 @@ _start:
   sub s6, s6, s4
   la t0, brk_size
   SREG s6, 0(t0)
-
+  
   /*------------------------------*/
   /* Init machine mode interrupts */
   /*------------------------------*/
@@ -261,58 +231,49 @@ _start:
   // get main return code
   mv t0, a0
 
-  j .
-
   /*-------------*/
   /* Trap vector */
   /*-------------*/
   // trap vector must be aligned on a 4-byte boundary
 .section .ramfunc, "ax"
-.cfi_sections	.debug_frame
 .align 2
 .type trap_vector, @function
 .globl trap_vector
-trap_vector:                        ; .cfi_startproc
-  addi sp, sp, -33*REGBYTES         ; .cfi_def_cfa_offset 33*REGBYTES
+trap_vector:
+  addi sp, sp, -32*REGBYTES
 
   // save registers to stack
-  SREG s0, 8*REGBYTES(sp)           ; .cfi_offset 8, -25*REGBYTES
-  addi s0, sp, 33*REGBYTES          ; .cfi_def_cfa 8, 0
-
   SREG x1, 1*REGBYTES(sp)
   SREG x2, 2*REGBYTES(sp)
   SREG x3, 3*REGBYTES(sp)
   SREG x4, 4*REGBYTES(sp)
   SREG x5, 5*REGBYTES(sp)
-  SREG x6, 6*REGBYTES(sp)           ; .cfi_offset 6, -27*REGBYTES
-  SREG x7, 7*REGBYTES(sp)           ; .cfi_offset 7, -26*REGBYTES
-
-  SREG x9, 9*REGBYTES(sp)           ; .cfi_offset 9, -24*REGBYTES
-  SREG x10, 10*REGBYTES(sp)         ; .cfi_offset 10, -23*REGBYTES
-  SREG x11, 11*REGBYTES(sp)         ; .cfi_offset 11, -22*REGBYTES
-  SREG x12, 12*REGBYTES(sp)         ; .cfi_offset 12, -21*REGBYTES
-  SREG x13, 13*REGBYTES(sp)         ; .cfi_offset 13, -20*REGBYTES
-  SREG x14, 14*REGBYTES(sp)         ; .cfi_offset 14, -19*REGBYTES
-  SREG x15, 15*REGBYTES(sp)         ; .cfi_offset 15, -18*REGBYTES
-  SREG x16, 16*REGBYTES(sp)         ; .cfi_offset 16, -17*REGBYTES
-  SREG x17, 17*REGBYTES(sp)         ; .cfi_offset 17, -16*REGBYTES
-  SREG x18, 18*REGBYTES(sp)         ; .cfi_offset 18, -15*REGBYTES
-  SREG x19, 19*REGBYTES(sp)         ; .cfi_offset 19, -14*REGBYTES
-  SREG x20, 20*REGBYTES(sp)         ; .cfi_offset 20, -13*REGBYTES
-  SREG x21, 21*REGBYTES(sp)         ; .cfi_offset 21, -12*REGBYTES
-  SREG x22, 22*REGBYTES(sp)         ; .cfi_offset 22, -11*REGBYTES
-  SREG x23, 23*REGBYTES(sp)         ; .cfi_offset 23, -10*REGBYTES
-  SREG x24, 24*REGBYTES(sp)         ; .cfi_offset 24, -9*REGBYTES
-  SREG x25, 25*REGBYTES(sp)         ; .cfi_offset 25, -8*REGBYTES
-  SREG x26, 26*REGBYTES(sp)         ; .cfi_offset 26, -7*REGBYTES
-  SREG x27, 27*REGBYTES(sp)         ; .cfi_offset 27, -6*REGBYTES
-  SREG x28, 28*REGBYTES(sp)         ; .cfi_offset 28, -5*REGBYTES
-  SREG x29, 29*REGBYTES(sp)         ; .cfi_offset 29, -4*REGBYTES
-  SREG x30, 30*REGBYTES(sp)         ; .cfi_offset 30, -3*REGBYTES
-  SREG x31, 31*REGBYTES(sp)//         ; .cfi_offset 31, -2*REGBYTES
-
-  csrr ra, mepc
-  SREG ra, 32*REGBYTES(sp)          ; .cfi_offset 1, -REGBYTES
+  SREG x6, 6*REGBYTES(sp)
+  SREG x7, 7*REGBYTES(sp)
+  SREG x8, 8*REGBYTES(sp)
+  SREG x9, 9*REGBYTES(sp)
+  SREG x10, 10*REGBYTES(sp)
+  SREG x11, 11*REGBYTES(sp)
+  SREG x12, 12*REGBYTES(sp)
+  SREG x13, 13*REGBYTES(sp)
+  SREG x14, 14*REGBYTES(sp)
+  SREG x15, 15*REGBYTES(sp)
+  SREG x16, 16*REGBYTES(sp)
+  SREG x17, 17*REGBYTES(sp)
+  SREG x18, 18*REGBYTES(sp)
+  SREG x19, 19*REGBYTES(sp)
+  SREG x20, 20*REGBYTES(sp)
+  SREG x21, 21*REGBYTES(sp)
+  SREG x22, 22*REGBYTES(sp)
+  SREG x23, 23*REGBYTES(sp)
+  SREG x24, 24*REGBYTES(sp)
+  SREG x25, 25*REGBYTES(sp)
+  SREG x26, 26*REGBYTES(sp)
+  SREG x27, 27*REGBYTES(sp)
+  SREG x28, 28*REGBYTES(sp)
+  SREG x29, 29*REGBYTES(sp)
+  SREG x30, 30*REGBYTES(sp)
+  SREG x31, 31*REGBYTES(sp)
 
   csrr s1, mcause
   // Highest bit indicates is it interrupt or not, so we can compare it with zero: negative value
@@ -343,61 +304,53 @@ trap_vector:                        ; .cfi_startproc
   sll s1, s1, LOG2_REGBYTES // s1 = mcause << 2 (xlen == 32) or mcause << 3 (xlen == 64)
   add s2, s2, s1            // s2 = &table[mcause]
   LREG s2, 0(s2)            // s2 = table[mcause] (s2 - address of corresponding handler)
-  csrr a0, mepc
-  csrr a1, mcause
-  mv a2, sp
   jalr s2                   // Invoke the handler
-  csrw mepc, a0
 5:
   // load registers from stack
-  LREG ra, 1*REGBYTES(sp)           ; .cfi_restore 1
-  LREG x2, 2*REGBYTES(sp)           ; .cfi_restore 2
-  LREG x3, 3*REGBYTES(sp)           ; .cfi_restore 3
-  LREG x4, 4*REGBYTES(sp)           ; .cfi_restore 4
-  LREG x5, 5*REGBYTES(sp)           ; .cfi_restore 5
-  LREG x6, 6*REGBYTES(sp)           ; .cfi_restore 6
-  LREG x7, 7*REGBYTES(sp)           ; .cfi_restore 7
-  LREG s0, 8*REGBYTES(sp)           ; .cfi_restore 8; .cfi_def_cfa 2, 33*REGBYTES
-  LREG x9, 9*REGBYTES(sp)           ; .cfi_restore 9
-  LREG x10, 10*REGBYTES(sp)         ; .cfi_restore 10
-  LREG x11, 11*REGBYTES(sp)         ; .cfi_restore 11
-  LREG x12, 12*REGBYTES(sp)         ; .cfi_restore 12
-  LREG x13, 13*REGBYTES(sp)         ; .cfi_restore 13
-  LREG x14, 14*REGBYTES(sp)         ; .cfi_restore 14
-  LREG x15, 15*REGBYTES(sp)         ; .cfi_restore 15
-  LREG x16, 16*REGBYTES(sp)         ; .cfi_restore 16
-  LREG x17, 17*REGBYTES(sp)         ; .cfi_restore 17
-  LREG x18, 18*REGBYTES(sp)         ; .cfi_restore 18
-  LREG x19, 19*REGBYTES(sp)         ; .cfi_restore 19
-  LREG x20, 20*REGBYTES(sp)         ; .cfi_restore 20
-  LREG x21, 21*REGBYTES(sp)         ; .cfi_restore 21
-  LREG x22, 22*REGBYTES(sp)         ; .cfi_restore 22
-  LREG x23, 23*REGBYTES(sp)         ; .cfi_restore 23
-  LREG x24, 24*REGBYTES(sp)         ; .cfi_restore 24
-  LREG x25, 25*REGBYTES(sp)         ; .cfi_restore 25
-  LREG x26, 26*REGBYTES(sp)         ; .cfi_restore 26
-  LREG x27, 27*REGBYTES(sp)         ; .cfi_restore 27
-  LREG x28, 28*REGBYTES(sp)         ; .cfi_restore 28
-  LREG x29, 29*REGBYTES(sp)         ; .cfi_restore 29
-  LREG x30, 30*REGBYTES(sp)         ; .cfi_restore 30
-  LREG x31, 31*REGBYTES(sp)         ; .cfi_restore 31
+  LREG x1, 1*REGBYTES(sp)
+  LREG x2, 2*REGBYTES(sp)
+  LREG x3, 3*REGBYTES(sp)
+  LREG x4, 4*REGBYTES(sp)
+  LREG x5, 5*REGBYTES(sp)
+  LREG x6, 6*REGBYTES(sp)
+  LREG x7, 7*REGBYTES(sp)
+  LREG x8, 8*REGBYTES(sp)
+  LREG x9, 9*REGBYTES(sp)
+  LREG x10, 10*REGBYTES(sp)
+  LREG x11, 11*REGBYTES(sp)
+  LREG x12, 12*REGBYTES(sp)
+  LREG x13, 13*REGBYTES(sp)
+  LREG x14, 14*REGBYTES(sp)
+  LREG x15, 15*REGBYTES(sp)
+  LREG x16, 16*REGBYTES(sp)
+  LREG x17, 17*REGBYTES(sp)
+  LREG x18, 18*REGBYTES(sp)
+  LREG x19, 19*REGBYTES(sp)
+  LREG x20, 20*REGBYTES(sp)
+  LREG x21, 21*REGBYTES(sp)
+  LREG x22, 22*REGBYTES(sp)
+  LREG x23, 23*REGBYTES(sp)
+  LREG x24, 24*REGBYTES(sp)
+  LREG x25, 25*REGBYTES(sp)
+  LREG x26, 26*REGBYTES(sp)
+  LREG x27, 27*REGBYTES(sp)
+  LREG x28, 28*REGBYTES(sp)
+  LREG x29, 29*REGBYTES(sp)
+  LREG x30, 30*REGBYTES(sp)
+  LREG x31, 31*REGBYTES(sp)
 
-  addi sp, sp, 33*REGBYTES          ; .cfi_def_cfa_offset 0
-  mret                              ; .cfi_endproc
+  addi sp, sp, 32*REGBYTES
+  mret
 
 unexpected_handler:
   j .
 
 // This macros is used to define weak exception handler
 # define DECLARE_WEAK_EXC_FUNC(func_name) \
-.type func_name, @function; \
-.weak func_name; \
-func_name:          ; .cfi_startproc; \
-  addi    sp,sp,-8  ; .cfi_def_cfa_offset 8; \
-  sw      ra,4(sp)  ; .cfi_offset 1, -4; \
-  sw      s0,0(sp)  ; .cfi_offset 8, -8; \
-  addi    s0,sp,8   ; .cfi_def_cfa 8, 0; \
-  j .               ; .cfi_endproc
+  .type func_name, @function; \
+  .weak func_name; \
+  func_name: \
+  j .
 
 DECLARE_WEAK_EXC_FUNC(trap_iam) // instruction address misaligned
 DECLARE_WEAK_EXC_FUNC(trap_iaf) // instruction access fault
@@ -419,7 +372,7 @@ DECLARE_WEAK_EXC_FUNC(_exit)
 # define DECLARE_WEAK_IRQ_FUNC(func_name, irq_num) \
   .type func_name, @function; \
   .weak func_name; \
-  func_name:; \
+  func_name: \
     j . ; \
   .type enable_##func_name, @function; \
   .globl enable_##func_name; \

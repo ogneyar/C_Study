@@ -1113,10 +1113,11 @@ static FunctionalState BKP_GenWaitForOn(uint32_t readyFlag)
  */
 static inline void BKP_DisableWP(void)
 {
+	uint32_t temp = 0;
 	/* disable write protection */
-	MDR_BKP->WPR = BKP_WPR_KEY;
+	MDR_BKP->WPR = BKP_WPR_KEY;	
 	/* wait till write access will be granted */
-	while ((MDR_BKP->CS & BKP_RTC_CS_WEC) != 0) {
+	while ((MDR_BKP->CS & BKP_RTC_CS_WEC) != 0/*) { //*/ && temp++ < 0x00010000) {
 		asm("nop");
 	}
 }
@@ -1134,7 +1135,10 @@ static inline void BKP_EnableWP(void)
  */
 static inline void BKP_WaitComplete(void)
 {
-    while ((MDR_BKP->CS & BKP_RTC_CS_WEC) != 0);
+	uint32_t temp = 0;
+    while ((MDR_BKP->CS & BKP_RTC_CS_WEC) != 0/*) { //*/ && temp++ < 0x00010000) {
+		asm("nop");
+	}
 }
 
 void BKP_WaitRTCCycle(void) {

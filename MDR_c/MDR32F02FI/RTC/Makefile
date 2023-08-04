@@ -90,20 +90,26 @@ vpath %.s $(sort $(dir $(ASM_SOURCES)))
 
 $(BUILD_DIR)/%.o: %.c Makefile | make_folder 
 	$(CC) -c $(CFLAGS) -g -std=gnu11 -MT"$(@)" -c "$<" -o "$@"
+	@echo --------
 #	$(CC) -c $(CFLAGS) -g -std=gnu99 -MT"$(@)" -c "$<" -o "$@"
 
 $(BUILD_DIR)/%.o: %.s Makefile | make_folder
 	$(AS) -c $(CFLAGS) -g -MT"$(@)" -c "$<" -o "$@"
+	@echo --------
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile | make_folder
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+	@echo --------
 	$(SZ) $@
+	@echo --------
 
 $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | make_folder
 	$(HEX) $< $@
+	@echo --------
 	
 $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | make_folder
 	$(BIN) $< $@	
+	@echo --------
 	
 make_folder:
 	@-mkdir $(BUILD_DIR)		
@@ -118,6 +124,7 @@ OPENOCD_CFG=../libs/Util/MLDR187-ft2232hl.cfg
 
 erase: build
 	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "flash erase_sector bank0 0 last" -c exit
+#	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "flash erase_check bank0" -c exit
 #	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "flash erase_sector wch_riscv 0 last" -c exit
 	
 

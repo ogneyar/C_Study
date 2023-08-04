@@ -88,20 +88,26 @@ vpath %.s $(sort $(dir $(ASM_SOURCES)))
 
 $(BUILD_DIR)/%.o: %.c Makefile | make_folder 
 	$(CC) -c $(CFLAGS) -g -std=gnu11 -MT"$(@)" -c "$<" -o "$@"
+	@echo --------
 #	$(CC) -c $(CFLAGS) -g -std=gnu99 -MT"$(@)" -c "$<" -o "$@"
 
 $(BUILD_DIR)/%.o: %.s Makefile | make_folder
 	$(AS) -c $(CFLAGS) -g -MT"$(@)" -c "$<" -o "$@"
+	@echo --------
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile | make_folder
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+	@echo --------
 	$(SZ) $@
+	@echo --------
 
 $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | make_folder
 	$(HEX) $< $@
+	@echo --------
 	
 $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | make_folder
 	$(BIN) $< $@	
+	@echo --------
 	
 make_folder:
 	@-mkdir $(BUILD_DIR)		

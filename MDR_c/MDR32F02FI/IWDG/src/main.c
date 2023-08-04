@@ -6,7 +6,7 @@
 #include <MLDR187_iwdg.h>
 #include <stdlib.h>
 
-#include <wait.h>
+#include "wait.h"
 #include <stdio.h>
 #include <math.h>
 #include <MLDR187_uart.h>
@@ -26,7 +26,7 @@ int main() {
     init_uart();
 
     // Refresh test
-    enable_watchdog(1.1 * (double)TEST_PERIOD / (double)TRIMMING);
+    enable_watchdog(2.1 * (double)TEST_PERIOD / (double)TRIMMING);
     printf("\nCounting to %d\n", TEST_N);
     for (int i = 0; i < TEST_N; i++) {
         wait(TEST_PERIOD, MDR_TIMER1);

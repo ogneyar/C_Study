@@ -92,7 +92,7 @@ Discarded input sections
  .text.BKP_GetDateTimeReg
                 0x0000000000000000       0xde build/MLDR187_bkp.o
  .text.BKP_WaitComplete
-                0x0000000000000000       0x1e build/MLDR187_bkp.o
+                0x0000000000000000       0x20 build/MLDR187_bkp.o
  .text.BKP_WaitRTCCycle
                 0x0000000000000000       0xac build/MLDR187_bkp.o
  .debug_macro   0x0000000000000000      0x76c build/MLDR187_bkp.o
@@ -282,14 +282,14 @@ END GROUP
                 0x0000000000001000                __stack_size = 0x1000
                 0x0000000000001000                __heap_min_size = 0x1000
 
-.text.init      0x0000000010000000      0x148
+.text.init      0x0000000010000000      0x146
  *(.text.init)
- .text.init     0x0000000010000000      0x148 build/startup_MLDR187.o
+ .text.init     0x0000000010000000      0x146 build/startup_MLDR187.o
                 0x0000000010000000                _start
 
-.text           0x0000000010000148     0x1856
+.text           0x0000000010000146     0x1850
                 0x0000000010000148                . = ALIGN (0x4)
- *fill*         0x0000000010000148        0x0 
+ *fill*         0x0000000010000146        0x2 
  *(.text*)
  .text.main     0x0000000010000148       0xc6 build/main.o
                 0x0000000010000148                main
@@ -309,82 +309,82 @@ END GROUP
                 0x0000000010000376                ButtonInit
  .text.Delay    0x00000000100003b0       0x26 build/main.o
                 0x00000000100003b0                Delay
- .text.vError   0x00000000100003d6       0x3a build/main.o
+ .text.vError   0x00000000100003d6       0x32 build/main.o
                 0x00000000100003d6                vError
  .text.BKP_FreqGenCmd
-                0x0000000010000410      0x1ae build/MLDR187_bkp.o
-                0x0000000010000410                BKP_FreqGenCmd
+                0x0000000010000408      0x1ae build/MLDR187_bkp.o
+                0x0000000010000408                BKP_FreqGenCmd
  .text.BKP_GenState
-                0x00000000100005be       0x64 build/MLDR187_bkp.o
-                0x00000000100005be                BKP_GenState
+                0x00000000100005b6       0x64 build/MLDR187_bkp.o
+                0x00000000100005b6                BKP_GenState
  .text.BKP_GenWaitForOn
-                0x0000000010000622       0x5c build/MLDR187_bkp.o
+                0x000000001000061a       0x5c build/MLDR187_bkp.o
  .text.BKP_DisableWP
-                0x000000001000067e       0x2e build/MLDR187_bkp.o
+                0x0000000010000676       0x2e build/MLDR187_bkp.o
  .text.BKP_EnableWP
-                0x00000000100006ac       0x16 build/MLDR187_bkp.o
+                0x00000000100006a4       0x16 build/MLDR187_bkp.o
  .text.EEPROM_SetLatency
-                0x00000000100006c2       0x50 build/MLDR187_eeprom.o
-                0x00000000100006c2                EEPROM_SetLatency
+                0x00000000100006ba       0x50 build/MLDR187_eeprom.o
+                0x00000000100006ba                EEPROM_SetLatency
  .text.PORT_Init
-                0x0000000010000712      0x1be build/MLDR187_gpio.o
-                0x0000000010000712                PORT_Init
+                0x000000001000070a      0x1be build/MLDR187_gpio.o
+                0x000000001000070a                PORT_Init
  .text.PORT_StructInitDefault
-                0x00000000100008d0       0x3a build/MLDR187_gpio.o
-                0x00000000100008d0                PORT_StructInitDefault
+                0x00000000100008c8       0x3a build/MLDR187_gpio.o
+                0x00000000100008c8                PORT_StructInitDefault
  .text.PORT_ReadPin
-                0x000000001000090a       0x34 build/MLDR187_gpio.o
-                0x000000001000090a                PORT_ReadPin
+                0x0000000010000902       0x34 build/MLDR187_gpio.o
+                0x0000000010000902                PORT_ReadPin
  .text.PORT_SetReset
-                0x000000001000093e       0x38 build/MLDR187_gpio.o
-                0x000000001000093e                PORT_SetReset
+                0x0000000010000936       0x38 build/MLDR187_gpio.o
+                0x0000000010000936                PORT_SetReset
  .text.IWDG_SetupAndActivate
-                0x0000000010000976       0x78 build/MLDR187_iwdg.o
-                0x0000000010000976                IWDG_SetupAndActivate
+                0x000000001000096e       0x78 build/MLDR187_iwdg.o
+                0x000000001000096e                IWDG_SetupAndActivate
  .text.RST_CLK_SetupCpuSpeed
-                0x00000000100009ee      0x486 build/MLDR187_rst_clk.o
-                0x00000000100009ee                RST_CLK_SetupCpuSpeed
+                0x00000000100009e6      0x486 build/MLDR187_rst_clk.o
+                0x00000000100009e6                RST_CLK_SetupCpuSpeed
  .text.RST_CLK_SetupHsPeripheralClock
-                0x0000000010000e74      0x1ca build/MLDR187_rst_clk.o
-                0x0000000010000e74                RST_CLK_SetupHsPeripheralClock
+                0x0000000010000e6c      0x1ca build/MLDR187_rst_clk.o
+                0x0000000010000e6c                RST_CLK_SetupHsPeripheralClock
  .text.RST_CLK_EnablePeripheralClock
-                0x000000001000103e      0x670 build/MLDR187_rst_clk.o
-                0x000000001000103e                RST_CLK_EnablePeripheralClock
+                0x0000000010001036      0x670 build/MLDR187_rst_clk.o
+                0x0000000010001036                RST_CLK_EnablePeripheralClock
  .text.rccEncodeDivisor3bit
-                0x00000000100016ae       0x84 build/MLDR187_rst_clk.o
+                0x00000000100016a6       0x84 build/MLDR187_rst_clk.o
  .text.rccEncodeDivisor4bit
-                0x0000000010001732       0x8c build/MLDR187_rst_clk.o
+                0x000000001000172a       0x8c build/MLDR187_rst_clk.o
  .text.rccEncodeDivisorNumeric
-                0x00000000100017be       0x98 build/MLDR187_rst_clk.o
+                0x00000000100017b6       0x98 build/MLDR187_rst_clk.o
  .text.WWDG_Init
-                0x0000000010001856       0x9a build/MLDR187_wwdg.o
-                0x0000000010001856                WWDG_Init
+                0x000000001000184e       0x9a build/MLDR187_wwdg.o
+                0x000000001000184e                WWDG_Init
  .text.WWDG_SetNewCounter
-                0x00000000100018f0       0x32 build/MLDR187_wwdg.o
-                0x00000000100018f0                WWDG_SetNewCounter
+                0x00000000100018e8       0x32 build/MLDR187_wwdg.o
+                0x00000000100018e8                WWDG_SetNewCounter
  .text.WWDG_EnableReset
-                0x0000000010001922       0x2e build/MLDR187_wwdg.o
-                0x0000000010001922                WWDG_EnableReset
+                0x000000001000191a       0x2e build/MLDR187_wwdg.o
+                0x000000001000191a                WWDG_EnableReset
  .text.__libc_init_array
-                0x0000000010001950       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
-                0x0000000010001950                __libc_init_array
+                0x0000000010001948       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+                0x0000000010001948                __libc_init_array
 
-.rodata         0x00000000100019a0       0x68
-                0x00000000100019a0                . = ALIGN (0x4)
+.rodata         0x0000000010001998       0x68
+                0x0000000010001998                . = ALIGN (0x4)
  *(.rodata*)
  .rodata.rccEncodeDivisor3bit
-                0x00000000100019a0       0x20 build/MLDR187_rst_clk.o
+                0x0000000010001998       0x20 build/MLDR187_rst_clk.o
  .rodata.rccEncodeDivisor4bit
-                0x00000000100019c0       0x24 build/MLDR187_rst_clk.o
+                0x00000000100019b8       0x24 build/MLDR187_rst_clk.o
  .rodata.rccEncodeDivisorNumeric
-                0x00000000100019e4       0x24 build/MLDR187_rst_clk.o
+                0x00000000100019dc       0x24 build/MLDR187_rst_clk.o
  *(.srodata*)
 
-.dalign         0x0000000010001a08        0x0
-                0x0000000010001a08                . = ALIGN (0x4)
-                0x0000000010001a08                __data_load_start = LOADADDR (.data)
+.dalign         0x0000000010001a00        0x0
+                0x0000000010001a00                . = ALIGN (0x4)
+                0x0000000010001a00                __data_load_start = LOADADDR (.data)
 
-.data           0x0000000080000000      0x118 load address 0x0000000010001a08
+.data           0x0000000080000000      0x118 load address 0x0000000010001a00
                 0x0000000080000000                . = ALIGN (0x4)
                 0x0000000080000000                __data_start = .
  *(.data*)
@@ -438,11 +438,11 @@ END GROUP
                 0x0000000080000140                . = ALIGN (0x8)
                 0x0000000080000140                __end = .
 
-.aalign         0x0000000010001b20        0x0
-                0x0000000010001b20                . = ALIGN (0x4)
-                0x0000000010001b20                __ahbram_data_load_start = LOADADDR (.ahbram_data)
+.aalign         0x0000000010001b18        0x0
+                0x0000000010001b18                . = ALIGN (0x4)
+                0x0000000010001b18                __ahbram_data_load_start = LOADADDR (.ahbram_data)
 
-.ahbram_data    0x0000000020000000        0x0 load address 0x0000000010001b20
+.ahbram_data    0x0000000020000000        0x0 load address 0x0000000010001b18
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                __ahbram_data_start = .
  *(.ahbram_data)
@@ -456,73 +456,73 @@ END GROUP
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                __ahbram_bss_end = .
 
-.ralign         0x0000000010001b20        0x0
-                0x0000000010001b20                . = ALIGN (0x4)
-                0x0000000010001b20                __ramfunc_load_start = LOADADDR (.ramfunc)
+.ralign         0x0000000010001b18        0x0
+                0x0000000010001b18                . = ALIGN (0x4)
+                0x0000000010001b18                __ramfunc_load_start = LOADADDR (.ramfunc)
 
-.ramfunc        0x0000000080010000      0x1ca load address 0x0000000010001b20
+.ramfunc        0x0000000080010000      0x166 load address 0x0000000010001b18
                 0x0000000080010000                . = ALIGN (0x4)
                 0x0000000080010000                __ramfunc_start = .
  *(.ramfunc*)
- .ramfunc       0x0000000080010000      0x1ca build/startup_MLDR187.o
+ .ramfunc       0x0000000080010000      0x166 build/startup_MLDR187.o
                 0x0000000080010000                trap_vector
-                0x00000000800100f0                trap_iam
-                0x00000000800100fa                trap_iaf
-                0x0000000080010104                trap_ii
-                0x000000008001010e                trap_lam
-                0x0000000080010118                trap_laf
-                0x0000000080010122                trap_sam
-                0x000000008001012c                trap_saf
-                0x0000000080010136                trap_ecallm
-                0x0000000080010140                _exit
-                0x000000008001014a                PendSV_Handler
-                0x000000008001014c                enable_PendSV_Handler
-                0x0000000080010154                disable_PendSV_Handler
-                0x000000008001015c                SysTick_Handler
-                0x000000008001015e                enable_SysTick_Handler
-                0x0000000080010168                disable_SysTick_Handler
-                0x0000000080010172                irq_extm
-                0x0000000080010174                enable_irq_extm
-                0x0000000080010180                disable_irq_extm
-                0x000000008001018c                DMA_IRQHandler
-                0x000000008001018e                UART1_IRQHandler
-                0x0000000080010190                UART2_IRQHandler
-                0x0000000080010192                SSP1_IRQHandler
-                0x0000000080010194                POWER_IRQHandler
-                0x0000000080010196                WWDG_IRQHandler
-                0x0000000080010198                Timer1_IRQHandler
-                0x000000008001019a                Timer2_IRQHandler
-                0x000000008001019c                ADC_IRQHandler
-                0x000000008001019e                I2C_IRQHandler
-                0x00000000800101a0                BACKUP_IRQHandler
-                0x00000000800101a2                EXT_1_IRQHandler
-                0x00000000800101a4                EXT_2_IRQHandler
-                0x00000000800101a6                EXT_3_IRQHandler
-                0x00000000800101a8                ADCIU_1_IRQHandler
-                0x00000000800101aa                ADCIU_2_IRQHandler
-                0x00000000800101ac                ADCIU_3_IRQHandler
-                0x00000000800101ae                L_BLOCK_IRQHandler
-                0x00000000800101b0                Default_IRQHandler
-                0x00000000800101b2                SENSORS_IRQHandler
-                0x00000000800101b4                CLK_MEASURE_IRQHandler
-                0x00000000800101b6                RANDOM_IRQHandler
-                0x00000000800101b8                ISO7816_IRQHandler
-                0x00000000800101ba                UART3_IRQHandler
-                0x00000000800101bc                SSP2_IRQHandler
-                0x00000000800101be                SSP3_IRQHandler
-                0x00000000800101c0                Timer3_IRQHandler
-                0x00000000800101c2                Timer4_IRQHandler
-                0x00000000800101c4                UART4_IRQHandler
-                0x00000000800101c6                OTP_Corrupt_IRQHandler
+                0x00000000800100d6                trap_iam
+                0x00000000800100d8                trap_iaf
+                0x00000000800100da                trap_ii
+                0x00000000800100dc                trap_lam
+                0x00000000800100de                trap_laf
+                0x00000000800100e0                trap_sam
+                0x00000000800100e2                trap_saf
+                0x00000000800100e4                trap_ecallm
+                0x00000000800100e6                _exit
+                0x00000000800100e8                PendSV_Handler
+                0x00000000800100ea                enable_PendSV_Handler
+                0x00000000800100f2                disable_PendSV_Handler
+                0x00000000800100fa                SysTick_Handler
+                0x00000000800100fc                enable_SysTick_Handler
+                0x0000000080010106                disable_SysTick_Handler
+                0x0000000080010110                irq_extm
+                0x0000000080010112                enable_irq_extm
+                0x000000008001011e                disable_irq_extm
+                0x000000008001012a                DMA_IRQHandler
+                0x000000008001012c                UART1_IRQHandler
+                0x000000008001012e                UART2_IRQHandler
+                0x0000000080010130                SSP1_IRQHandler
+                0x0000000080010132                POWER_IRQHandler
+                0x0000000080010134                WWDG_IRQHandler
+                0x0000000080010136                Timer1_IRQHandler
+                0x0000000080010138                Timer2_IRQHandler
+                0x000000008001013a                ADC_IRQHandler
+                0x000000008001013c                I2C_IRQHandler
+                0x000000008001013e                BACKUP_IRQHandler
+                0x0000000080010140                EXT_1_IRQHandler
+                0x0000000080010142                EXT_2_IRQHandler
+                0x0000000080010144                EXT_3_IRQHandler
+                0x0000000080010146                ADCIU_1_IRQHandler
+                0x0000000080010148                ADCIU_2_IRQHandler
+                0x000000008001014a                ADCIU_3_IRQHandler
+                0x000000008001014c                L_BLOCK_IRQHandler
+                0x000000008001014e                Default_IRQHandler
+                0x0000000080010150                SENSORS_IRQHandler
+                0x0000000080010152                CLK_MEASURE_IRQHandler
+                0x0000000080010154                RANDOM_IRQHandler
+                0x0000000080010156                ISO7816_IRQHandler
+                0x0000000080010158                UART3_IRQHandler
+                0x000000008001015a                SSP2_IRQHandler
+                0x000000008001015c                SSP3_IRQHandler
+                0x000000008001015e                Timer3_IRQHandler
+                0x0000000080010160                Timer4_IRQHandler
+                0x0000000080010162                UART4_IRQHandler
+                0x0000000080010164                OTP_Corrupt_IRQHandler
 
-.rela.dyn       0x00000000800101cc        0x0 load address 0x0000000010001cea
- .rela.data     0x00000000800101cc        0x0 build/main.o
+.rela.dyn       0x0000000080010168        0x0 load address 0x0000000010001c7e
+ .rela.data     0x0000000080010168        0x0 build/main.o
  .rela.text.init
-                0x00000000800101cc        0x0 build/main.o
+                0x0000000080010168        0x0 build/main.o
  .rela.text.__libc_init_array
-                0x00000000800101cc        0x0 build/main.o
-                0x00000000800101cc                . = ALIGN (0x4)
-                0x00000000800101cc                __ramfunc_end = .
+                0x0000000080010168        0x0 build/main.o
+                0x0000000080010168                . = ALIGN (0x4)
+                0x0000000080010168                __ramfunc_end = .
                 0x0000000080010000                __stack_top = (ORIGIN (REGION_DATA) + LENGTH (REGION_DATA))
                 0x000000008000f000                __stack_limit = (__stack_top - __stack_size)
                 0x0000000080000140                __heap_top = __end
@@ -611,33 +611,33 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_macro   0x0000000000005dd8       0x20 build/MLDR187_rst_clk.o
  .debug_macro   0x0000000000005df8       0xa8 build/MLDR187_wwdg.o
 
-.debug_line     0x0000000000000000     0x528b
- .debug_line    0x0000000000000000      0x57b build/main.o
- .debug_line    0x000000000000057b     0x1736 build/MLDR187_bkp.o
- .debug_line    0x0000000000001cb1      0xdb1 build/MLDR187_eeprom.o
- .debug_line    0x0000000000002a62      0x5e6 build/MLDR187_gpio.o
- .debug_line    0x0000000000003048      0x2f8 build/MLDR187_iwdg.o
- .debug_line    0x0000000000003340     0x15c2 build/MLDR187_rst_clk.o
- .debug_line    0x0000000000004902      0x3d9 build/MLDR187_wwdg.o
- .debug_line    0x0000000000004cdb      0x5b0 build/startup_MLDR187.o
+.debug_line     0x0000000000000000     0x5269
+ .debug_line    0x0000000000000000      0x58d build/main.o
+ .debug_line    0x000000000000058d     0x1732 build/MLDR187_bkp.o
+ .debug_line    0x0000000000001cbf      0xdb1 build/MLDR187_eeprom.o
+ .debug_line    0x0000000000002a70      0x5e6 build/MLDR187_gpio.o
+ .debug_line    0x0000000000003056      0x2f8 build/MLDR187_iwdg.o
+ .debug_line    0x000000000000334e     0x15c2 build/MLDR187_rst_clk.o
+ .debug_line    0x0000000000004910      0x3d9 build/MLDR187_wwdg.o
+ .debug_line    0x0000000000004ce9      0x580 build/startup_MLDR187.o
 
-.debug_str      0x0000000000000000    0x24e32
- .debug_str     0x0000000000000000    0x21fd4 build/main.o
-                                      0x22166 (size before relaxing)
- .debug_str     0x0000000000021fd4     0x1120 build/MLDR187_bkp.o
-                                      0x22b09 (size before relaxing)
- .debug_str     0x00000000000230f4      0x387 build/MLDR187_eeprom.o
-                                      0x21b74 (size before relaxing)
- .debug_str     0x000000000002347b      0x65a build/MLDR187_gpio.o
-                                      0x221da (size before relaxing)
- .debug_str     0x0000000000023ad5      0x1fe build/MLDR187_iwdg.o
-                                      0x21bc4 (size before relaxing)
- .debug_str     0x0000000000023cd3      0xf80 build/MLDR187_rst_clk.o
-                                      0x22d4a (size before relaxing)
- .debug_str     0x0000000000024c53      0x1b1 build/MLDR187_wwdg.o
-                                      0x21be5 (size before relaxing)
- .debug_str     0x0000000000024e04       0x2e build/startup_MLDR187.o
-                                         0x61 (size before relaxing)
+.debug_str      0x0000000000000000    0x24e30
+ .debug_str     0x0000000000000000    0x21fd2 build/main.o
+                                      0x22164 (size before relaxing)
+ .debug_str     0x0000000000021fd2     0x1120 build/MLDR187_bkp.o
+                                      0x22b07 (size before relaxing)
+ .debug_str     0x00000000000230f2      0x387 build/MLDR187_eeprom.o
+                                      0x21b72 (size before relaxing)
+ .debug_str     0x0000000000023479      0x65a build/MLDR187_gpio.o
+                                      0x221d8 (size before relaxing)
+ .debug_str     0x0000000000023ad3      0x1fe build/MLDR187_iwdg.o
+                                      0x21bc2 (size before relaxing)
+ .debug_str     0x0000000000023cd1      0xf80 build/MLDR187_rst_clk.o
+                                      0x22d48 (size before relaxing)
+ .debug_str     0x0000000000024c51      0x1b1 build/MLDR187_wwdg.o
+                                      0x21be3 (size before relaxing)
+ .debug_str     0x0000000000024e02       0x2e build/startup_MLDR187.o
+                                         0x5f (size before relaxing)
 
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 build/main.o
@@ -649,13 +649,12 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .comment       0x0000000000000033       0x34 build/MLDR187_rst_clk.o
  .comment       0x0000000000000033       0x34 build/MLDR187_wwdg.o
 
-.debug_frame    0x0000000000000000      0xe18
- .debug_frame   0x0000000000000000      0x128 build/main.o
- .debug_frame   0x0000000000000128      0x540 build/MLDR187_bkp.o
- .debug_frame   0x0000000000000668      0x18c build/MLDR187_eeprom.o
- .debug_frame   0x00000000000007f4      0x15c build/MLDR187_gpio.o
- .debug_frame   0x0000000000000950       0x5c build/MLDR187_iwdg.o
- .debug_frame   0x00000000000009ac      0x18c build/MLDR187_rst_clk.o
- .debug_frame   0x0000000000000b38       0xc8 build/MLDR187_wwdg.o
- .debug_frame   0x0000000000000c00      0x1dc build/startup_MLDR187.o
- .debug_frame   0x0000000000000ddc       0x3c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+.debug_frame    0x0000000000000000      0xc30
+ .debug_frame   0x0000000000000000      0x11c build/main.o
+ .debug_frame   0x000000000000011c      0x540 build/MLDR187_bkp.o
+ .debug_frame   0x000000000000065c      0x18c build/MLDR187_eeprom.o
+ .debug_frame   0x00000000000007e8      0x15c build/MLDR187_gpio.o
+ .debug_frame   0x0000000000000944       0x5c build/MLDR187_iwdg.o
+ .debug_frame   0x00000000000009a0      0x18c build/MLDR187_rst_clk.o
+ .debug_frame   0x0000000000000b2c       0xc8 build/MLDR187_wwdg.o
+ .debug_frame   0x0000000000000bf4       0x3c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
