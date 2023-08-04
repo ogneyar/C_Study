@@ -1,0 +1,2383 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
+                              build/tasks.o (__clzsi2)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
+                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o) (__clz_tab)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-errno.o)
+                              build/syscalls.o (__errno)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o)
+                              build/init.o (exit)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
+                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+                              build/startup_MLDR187.o (__libc_init_array)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o)
+                              build/heap_3.o (malloc)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memcpy.o)
+                              build/queue.o (memcpy)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
+                              build/syscalls.o (memset)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
+                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o) (_free_r)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o) (_malloc_r)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
+                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-strlen.o)
+                              build/tasks.o (strlen)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)
+                              c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o) (errno)
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .group         0x0000000000000000        0xc build/main.o
+ .text          0x0000000000000000        0x0 build/main.o
+ .data          0x0000000000000000        0x0 build/main.o
+ .bss           0x0000000000000000        0x0 build/main.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .group         0x0000000000000000        0xc build/hooks.o
+ .text          0x0000000000000000        0x0 build/hooks.o
+ .data          0x0000000000000000        0x0 build/hooks.o
+ .bss           0x0000000000000000        0x0 build/hooks.o
+ .debug_macro   0x0000000000000000      0x76c build/hooks.o
+ .debug_macro   0x0000000000000000      0x174 build/hooks.o
+ .debug_macro   0x0000000000000000       0x22 build/hooks.o
+ .debug_macro   0x0000000000000000       0x8e build/hooks.o
+ .debug_macro   0x0000000000000000       0x51 build/hooks.o
+ .debug_macro   0x0000000000000000      0x103 build/hooks.o
+ .debug_macro   0x0000000000000000       0x6a build/hooks.o
+ .debug_macro   0x0000000000000000      0x1df build/hooks.o
+ .debug_macro   0x0000000000000000     0x4c49 build/hooks.o
+ .debug_macro   0x0000000000000000       0x8e build/hooks.o
+ .debug_macro   0x0000000000000000      0x123 build/hooks.o
+ .debug_macro   0x0000000000000000      0x15a build/hooks.o
+ .debug_macro   0x0000000000000000       0xd3 build/hooks.o
+ .debug_macro   0x0000000000000000       0x28 build/hooks.o
+ .debug_macro   0x0000000000000000       0x1f build/hooks.o
+ .debug_macro   0x0000000000000000       0x12 build/hooks.o
+ .debug_macro   0x0000000000000000      0x4f6 build/hooks.o
+ .debug_macro   0x0000000000000000       0xc3 build/hooks.o
+ .debug_macro   0x0000000000000000      0x120 build/hooks.o
+ .debug_macro   0x0000000000000000       0x58 build/hooks.o
+ .debug_macro   0x0000000000000000       0x19 build/hooks.o
+ .debug_macro   0x0000000000000000       0x34 build/hooks.o
+ .debug_macro   0x0000000000000000       0x34 build/hooks.o
+ .debug_macro   0x0000000000000000       0x16 build/hooks.o
+ .debug_macro   0x0000000000000000       0x35 build/hooks.o
+ .debug_macro   0x0000000000000000      0x341 build/hooks.o
+ .debug_macro   0x0000000000000000       0x10 build/hooks.o
+ .debug_macro   0x0000000000000000       0x16 build/hooks.o
+ .debug_macro   0x0000000000000000       0x43 build/hooks.o
+ .debug_macro   0x0000000000000000       0x34 build/hooks.o
+ .debug_macro   0x0000000000000000       0x10 build/hooks.o
+ .debug_macro   0x0000000000000000       0x52 build/hooks.o
+ .debug_macro   0x0000000000000000      0x182 build/hooks.o
+ .debug_macro   0x0000000000000000       0x10 build/hooks.o
+ .debug_macro   0x0000000000000000       0x1c build/hooks.o
+ .debug_macro   0x0000000000000000       0x52 build/hooks.o
+ .debug_macro   0x0000000000000000       0x22 build/hooks.o
+ .debug_macro   0x0000000000000000       0x10 build/hooks.o
+ .debug_macro   0x0000000000000000       0x52 build/hooks.o
+ .debug_macro   0x0000000000000000       0xd5 build/hooks.o
+ .debug_macro   0x0000000000000000       0x1c build/hooks.o
+ .debug_macro   0x0000000000000000       0x3d build/hooks.o
+ .debug_macro   0x0000000000000000       0x16 build/hooks.o
+ .debug_macro   0x0000000000000000      0x16f build/hooks.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .group         0x0000000000000000        0xc build/init.o
+ .text          0x0000000000000000        0x0 build/init.o
+ .data          0x0000000000000000        0x0 build/init.o
+ .bss           0x0000000000000000        0x0 build/init.o
+ .debug_macro   0x0000000000000000      0x76c build/init.o
+ .debug_macro   0x0000000000000000       0x22 build/init.o
+ .debug_macro   0x0000000000000000       0x8e build/init.o
+ .debug_macro   0x0000000000000000       0x51 build/init.o
+ .debug_macro   0x0000000000000000      0x103 build/init.o
+ .debug_macro   0x0000000000000000       0x6a build/init.o
+ .debug_macro   0x0000000000000000      0x1df build/init.o
+ .debug_macro   0x0000000000000000       0x28 build/init.o
+ .debug_macro   0x0000000000000000       0x19 build/init.o
+ .debug_macro   0x0000000000000000       0x58 build/init.o
+ .debug_macro   0x0000000000000000       0x34 build/init.o
+ .debug_macro   0x0000000000000000       0x34 build/init.o
+ .debug_macro   0x0000000000000000       0x16 build/init.o
+ .debug_macro   0x0000000000000000       0x16 build/init.o
+ .debug_macro   0x0000000000000000       0x43 build/init.o
+ .debug_macro   0x0000000000000000       0x34 build/init.o
+ .debug_macro   0x0000000000000000       0x10 build/init.o
+ .debug_macro   0x0000000000000000       0x52 build/init.o
+ .debug_macro   0x0000000000000000      0x182 build/init.o
+ .debug_macro   0x0000000000000000      0x341 build/init.o
+ .debug_macro   0x0000000000000000       0x16 build/init.o
+ .debug_macro   0x0000000000000000       0x29 build/init.o
+ .debug_macro   0x0000000000000000       0x26 build/init.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .group         0x0000000000000000        0xc build/syscalls.o
+ .text          0x0000000000000000        0x0 build/syscalls.o
+ .data          0x0000000000000000        0x0 build/syscalls.o
+ .bss           0x0000000000000000        0x0 build/syscalls.o
+ .text.sys_close
+                0x0000000000000000       0x22 build/syscalls.o
+ .text.sys_write
+                0x0000000000000000       0x44 build/syscalls.o
+ .text.sys_fstat
+                0x0000000000000000       0x3c build/syscalls.o
+ .text.brk      0x0000000000000000       0x3c build/syscalls.o
+ .text._write   0x0000000000000000       0x34 build/syscalls.o
+ .text._close   0x0000000000000000       0x24 build/syscalls.o
+ .text._fstat   0x0000000000000000       0x2c build/syscalls.o
+ .text._read    0x0000000000000000       0x30 build/syscalls.o
+ .text._isatty  0x0000000000000000       0x28 build/syscalls.o
+ .text._lseek   0x0000000000000000       0x30 build/syscalls.o
+ .text._kill    0x0000000000000000       0x2e build/syscalls.o
+ .text._getpid  0x0000000000000000       0x10 build/syscalls.o
+ .debug_macro   0x0000000000000000      0x76c build/syscalls.o
+ .debug_macro   0x0000000000000000       0x22 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x8e build/syscalls.o
+ .debug_macro   0x0000000000000000       0x51 build/syscalls.o
+ .debug_macro   0x0000000000000000      0x103 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x6a build/syscalls.o
+ .debug_macro   0x0000000000000000      0x1df build/syscalls.o
+ .debug_macro   0x0000000000000000     0x4c43 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x2e build/syscalls.o
+ .debug_macro   0x0000000000000000       0x26 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x58 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x19 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 build/syscalls.o
+ .debug_macro   0x0000000000000000      0x174 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x16 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x43 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x10 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x52 build/syscalls.o
+ .debug_macro   0x0000000000000000      0x182 build/syscalls.o
+ .debug_macro   0x0000000000000000      0x341 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x35 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x10 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x1c build/syscalls.o
+ .debug_macro   0x0000000000000000       0x52 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x22 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x10 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x52 build/syscalls.o
+ .debug_macro   0x0000000000000000       0xd5 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x1c build/syscalls.o
+ .debug_macro   0x0000000000000000       0x3d build/syscalls.o
+ .debug_macro   0x0000000000000000       0x16 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x16 build/syscalls.o
+ .debug_macro   0x0000000000000000       0x29 build/syscalls.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .group         0x0000000000000000        0xc build/croutine.o
+ .text          0x0000000000000000        0x0 build/croutine.o
+ .data          0x0000000000000000        0x0 build/croutine.o
+ .bss           0x0000000000000000        0x0 build/croutine.o
+ .debug_info    0x0000000000000000       0x76 build/croutine.o
+ .debug_abbrev  0x0000000000000000       0x29 build/croutine.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/croutine.o
+ .debug_macro   0x0000000000000000      0x104 build/croutine.o
+ .debug_macro   0x0000000000000000      0x76c build/croutine.o
+ .debug_macro   0x0000000000000000      0x174 build/croutine.o
+ .debug_macro   0x0000000000000000       0x22 build/croutine.o
+ .debug_macro   0x0000000000000000       0x8e build/croutine.o
+ .debug_macro   0x0000000000000000       0x51 build/croutine.o
+ .debug_macro   0x0000000000000000      0x103 build/croutine.o
+ .debug_macro   0x0000000000000000       0x6a build/croutine.o
+ .debug_macro   0x0000000000000000      0x1df build/croutine.o
+ .debug_macro   0x0000000000000000     0x4c49 build/croutine.o
+ .debug_macro   0x0000000000000000       0x28 build/croutine.o
+ .debug_macro   0x0000000000000000       0x20 build/croutine.o
+ .debug_macro   0x0000000000000000       0x8e build/croutine.o
+ .debug_macro   0x0000000000000000      0x123 build/croutine.o
+ .debug_macro   0x0000000000000000      0x15a build/croutine.o
+ .debug_macro   0x0000000000000000       0xd3 build/croutine.o
+ .debug_macro   0x0000000000000000       0x28 build/croutine.o
+ .debug_macro   0x0000000000000000       0x1f build/croutine.o
+ .debug_macro   0x0000000000000000       0x12 build/croutine.o
+ .debug_macro   0x0000000000000000      0x4f6 build/croutine.o
+ .debug_macro   0x0000000000000000       0xc3 build/croutine.o
+ .debug_macro   0x0000000000000000      0x120 build/croutine.o
+ .debug_macro   0x0000000000000000       0x49 build/croutine.o
+ .debug_line    0x0000000000000000      0x35a build/croutine.o
+ .debug_str     0x0000000000000000    0x27213 build/croutine.o
+ .comment       0x0000000000000000       0x34 build/croutine.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .group         0x0000000000000000        0xc build/event_groups.o
+ .text          0x0000000000000000        0x0 build/event_groups.o
+ .data          0x0000000000000000        0x0 build/event_groups.o
+ .bss           0x0000000000000000        0x0 build/event_groups.o
+ .text.xEventGroupCreate
+                0x0000000000000000       0x42 build/event_groups.o
+ .text.xEventGroupSync
+                0x0000000000000000      0x1a4 build/event_groups.o
+ .text.xEventGroupWaitBits
+                0x0000000000000000      0x1e2 build/event_groups.o
+ .text.xEventGroupClearBits
+                0x0000000000000000       0x78 build/event_groups.o
+ .text.xEventGroupGetBitsFromISR
+                0x0000000000000000       0x2c build/event_groups.o
+ .text.xEventGroupSetBits
+                0x0000000000000000      0x16a build/event_groups.o
+ .text.vEventGroupDelete
+                0x0000000000000000       0x88 build/event_groups.o
+ .text.vEventGroupSetBitsCallback
+                0x0000000000000000       0x2a build/event_groups.o
+ .text.vEventGroupClearBitsCallback
+                0x0000000000000000       0x2a build/event_groups.o
+ .text.prvTestWaitCondition
+                0x0000000000000000       0x54 build/event_groups.o
+ .debug_info    0x0000000000000000      0x69e build/event_groups.o
+ .debug_abbrev  0x0000000000000000      0x177 build/event_groups.o
+ .debug_aranges
+                0x0000000000000000       0x68 build/event_groups.o
+ .debug_ranges  0x0000000000000000       0x58 build/event_groups.o
+ .debug_macro   0x0000000000000000      0x1fc build/event_groups.o
+ .debug_macro   0x0000000000000000      0x76c build/event_groups.o
+ .debug_macro   0x0000000000000000       0x19 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x22 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x52 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x94 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x34 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x34 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 build/event_groups.o
+ .debug_macro   0x0000000000000000      0x10e build/event_groups.o
+ .debug_macro   0x0000000000000000       0x8d build/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x43 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x57 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x34 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x10 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x52 build/event_groups.o
+ .debug_macro   0x0000000000000000      0x182 build/event_groups.o
+ .debug_macro   0x0000000000000000      0x341 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x29 build/event_groups.o
+ .debug_macro   0x0000000000000000      0x103 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x6a build/event_groups.o
+ .debug_macro   0x0000000000000000      0x1df build/event_groups.o
+ .debug_macro   0x0000000000000000     0x4c49 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x28 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x20 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x8e build/event_groups.o
+ .debug_macro   0x0000000000000000      0x123 build/event_groups.o
+ .debug_macro   0x0000000000000000      0x15a build/event_groups.o
+ .debug_macro   0x0000000000000000       0xd3 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x28 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x1f build/event_groups.o
+ .debug_macro   0x0000000000000000       0x12 build/event_groups.o
+ .debug_macro   0x0000000000000000      0x4f6 build/event_groups.o
+ .debug_macro   0x0000000000000000       0xc3 build/event_groups.o
+ .debug_macro   0x0000000000000000      0x120 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x91 build/event_groups.o
+ .debug_macro   0x0000000000000000       0x19 build/event_groups.o
+ .debug_line    0x0000000000000000      0xb5d build/event_groups.o
+ .debug_str     0x0000000000000000    0x2a17f build/event_groups.o
+ .comment       0x0000000000000000       0x34 build/event_groups.o
+ .debug_frame   0x0000000000000000      0x198 build/event_groups.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .group         0x0000000000000000        0xc build/list.o
+ .text          0x0000000000000000        0x0 build/list.o
+ .data          0x0000000000000000        0x0 build/list.o
+ .bss           0x0000000000000000        0x0 build/list.o
+ .text.vListInsertEnd
+                0x0000000000000000       0x66 build/list.o
+ .debug_macro   0x0000000000000000      0x76c build/list.o
+ .debug_macro   0x0000000000000000       0x19 build/list.o
+ .debug_macro   0x0000000000000000       0x22 build/list.o
+ .debug_macro   0x0000000000000000       0x52 build/list.o
+ .debug_macro   0x0000000000000000       0x94 build/list.o
+ .debug_macro   0x0000000000000000       0x34 build/list.o
+ .debug_macro   0x0000000000000000       0x34 build/list.o
+ .debug_macro   0x0000000000000000       0x16 build/list.o
+ .debug_macro   0x0000000000000000      0x10e build/list.o
+ .debug_macro   0x0000000000000000       0x8d build/list.o
+ .debug_macro   0x0000000000000000       0x16 build/list.o
+ .debug_macro   0x0000000000000000       0x43 build/list.o
+ .debug_macro   0x0000000000000000       0x57 build/list.o
+ .debug_macro   0x0000000000000000       0x34 build/list.o
+ .debug_macro   0x0000000000000000       0x10 build/list.o
+ .debug_macro   0x0000000000000000       0x52 build/list.o
+ .debug_macro   0x0000000000000000      0x182 build/list.o
+ .debug_macro   0x0000000000000000      0x341 build/list.o
+ .debug_macro   0x0000000000000000       0x16 build/list.o
+ .debug_macro   0x0000000000000000       0x29 build/list.o
+ .debug_macro   0x0000000000000000      0x103 build/list.o
+ .debug_macro   0x0000000000000000       0x6a build/list.o
+ .debug_macro   0x0000000000000000      0x1df build/list.o
+ .debug_macro   0x0000000000000000     0x4c49 build/list.o
+ .debug_macro   0x0000000000000000       0x28 build/list.o
+ .debug_macro   0x0000000000000000       0x20 build/list.o
+ .debug_macro   0x0000000000000000       0x8e build/list.o
+ .debug_macro   0x0000000000000000      0x123 build/list.o
+ .debug_macro   0x0000000000000000      0x15a build/list.o
+ .debug_macro   0x0000000000000000       0xd3 build/list.o
+ .debug_macro   0x0000000000000000       0x28 build/list.o
+ .debug_macro   0x0000000000000000       0x1f build/list.o
+ .debug_macro   0x0000000000000000       0x12 build/list.o
+ .debug_macro   0x0000000000000000      0x4f6 build/list.o
+ .debug_macro   0x0000000000000000       0xc3 build/list.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .group         0x0000000000000000        0xc build/queue.o
+ .text          0x0000000000000000        0x0 build/queue.o
+ .data          0x0000000000000000        0x0 build/queue.o
+ .bss           0x0000000000000000        0x0 build/queue.o
+ .text.prvInitialiseMutex
+                0x0000000000000000       0x46 build/queue.o
+ .text.xQueueCreateMutex
+                0x0000000000000000       0x4c build/queue.o
+ .text.xQueueGetMutexHolder
+                0x0000000000000000       0x58 build/queue.o
+ .text.xQueueGetMutexHolderFromISR
+                0x0000000000000000       0x3c build/queue.o
+ .text.xQueueGiveMutexRecursive
+                0x0000000000000000       0x7e build/queue.o
+ .text.xQueueTakeMutexRecursive
+                0x0000000000000000       0x8e build/queue.o
+ .text.xQueueCreateCountingSemaphore
+                0x0000000000000000       0x68 build/queue.o
+ .text.xQueueGenericSend
+                0x0000000000000000      0x224 build/queue.o
+ .text.xQueueGenericSendFromISR
+                0x0000000000000000      0x138 build/queue.o
+ .text.xQueueGiveFromISR
+                0x0000000000000000      0x10a build/queue.o
+ .text.xQueueSemaphoreTake
+                0x0000000000000000      0x26a build/queue.o
+ .text.xQueuePeek
+                0x0000000000000000      0x204 build/queue.o
+ .text.xQueueReceiveFromISR
+                0x0000000000000000      0x102 build/queue.o
+ .text.xQueuePeekFromISR
+                0x0000000000000000       0x9e build/queue.o
+ .text.uxQueueMessagesWaiting
+                0x0000000000000000       0x42 build/queue.o
+ .text.uxQueueSpacesAvailable
+                0x0000000000000000       0x54 build/queue.o
+ .text.uxQueueMessagesWaitingFromISR
+                0x0000000000000000       0x36 build/queue.o
+ .text.vQueueDelete
+                0x0000000000000000       0x44 build/queue.o
+ .text.prvGetDisinheritPriorityAfterTimeout
+                0x0000000000000000       0x36 build/queue.o
+ .text.prvCopyDataToQueue
+                0x0000000000000000      0x136 build/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x0000000000000000       0x40 build/queue.o
+ .text.prvIsQueueFull
+                0x0000000000000000       0x46 build/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x0000000000000000       0x48 build/queue.o
+ .text.pcQueueGetName
+                0x0000000000000000       0x74 build/queue.o
+ .text.vQueueUnregisterQueue
+                0x0000000000000000       0x80 build/queue.o
+ .debug_macro   0x0000000000000000      0x76c build/queue.o
+ .debug_macro   0x0000000000000000       0x19 build/queue.o
+ .debug_macro   0x0000000000000000       0x22 build/queue.o
+ .debug_macro   0x0000000000000000       0x52 build/queue.o
+ .debug_macro   0x0000000000000000       0x94 build/queue.o
+ .debug_macro   0x0000000000000000       0x34 build/queue.o
+ .debug_macro   0x0000000000000000       0x34 build/queue.o
+ .debug_macro   0x0000000000000000       0x16 build/queue.o
+ .debug_macro   0x0000000000000000      0x10e build/queue.o
+ .debug_macro   0x0000000000000000       0x8d build/queue.o
+ .debug_macro   0x0000000000000000       0x16 build/queue.o
+ .debug_macro   0x0000000000000000       0x43 build/queue.o
+ .debug_macro   0x0000000000000000       0x57 build/queue.o
+ .debug_macro   0x0000000000000000       0x34 build/queue.o
+ .debug_macro   0x0000000000000000       0x10 build/queue.o
+ .debug_macro   0x0000000000000000       0x52 build/queue.o
+ .debug_macro   0x0000000000000000      0x182 build/queue.o
+ .debug_macro   0x0000000000000000      0x341 build/queue.o
+ .debug_macro   0x0000000000000000       0x16 build/queue.o
+ .debug_macro   0x0000000000000000       0x29 build/queue.o
+ .debug_macro   0x0000000000000000       0x35 build/queue.o
+ .debug_macro   0x0000000000000000      0x103 build/queue.o
+ .debug_macro   0x0000000000000000       0x6a build/queue.o
+ .debug_macro   0x0000000000000000      0x1df build/queue.o
+ .debug_macro   0x0000000000000000     0x4c49 build/queue.o
+ .debug_macro   0x0000000000000000       0x28 build/queue.o
+ .debug_macro   0x0000000000000000       0x20 build/queue.o
+ .debug_macro   0x0000000000000000       0x8e build/queue.o
+ .debug_macro   0x0000000000000000      0x123 build/queue.o
+ .debug_macro   0x0000000000000000      0x15a build/queue.o
+ .debug_macro   0x0000000000000000       0xd3 build/queue.o
+ .debug_macro   0x0000000000000000       0x28 build/queue.o
+ .debug_macro   0x0000000000000000       0x1f build/queue.o
+ .debug_macro   0x0000000000000000       0x12 build/queue.o
+ .debug_macro   0x0000000000000000      0x4f6 build/queue.o
+ .debug_macro   0x0000000000000000       0xc3 build/queue.o
+ .debug_macro   0x0000000000000000      0x120 build/queue.o
+ .debug_macro   0x0000000000000000       0x80 build/queue.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/stream_buffer.o
+ .text          0x0000000000000000        0x0 build/stream_buffer.o
+ .data          0x0000000000000000        0x0 build/stream_buffer.o
+ .bss           0x0000000000000000        0x0 build/stream_buffer.o
+ .text.xStreamBufferGenericCreate
+                0x0000000000000000       0xd0 build/stream_buffer.o
+ .text.vStreamBufferDelete
+                0x0000000000000000       0x58 build/stream_buffer.o
+ .text.xStreamBufferReset
+                0x0000000000000000       0x82 build/stream_buffer.o
+ .text.xStreamBufferSetTriggerLevel
+                0x0000000000000000       0x60 build/stream_buffer.o
+ .text.xStreamBufferSpacesAvailable
+                0x0000000000000000       0x92 build/stream_buffer.o
+ .text.xStreamBufferBytesAvailable
+                0x0000000000000000       0x40 build/stream_buffer.o
+ .text.xStreamBufferSend
+                0x0000000000000000      0x1f0 build/stream_buffer.o
+ .text.xStreamBufferSendFromISR
+                0x0000000000000000       0xe4 build/stream_buffer.o
+ .text.prvWriteMessageToBuffer
+                0x0000000000000000       0xaa build/stream_buffer.o
+ .text.xStreamBufferReceive
+                0x0000000000000000      0x174 build/stream_buffer.o
+ .text.xStreamBufferNextMessageLengthBytes
+                0x0000000000000000       0x94 build/stream_buffer.o
+ .text.xStreamBufferReceiveFromISR
+                0x0000000000000000       0xd2 build/stream_buffer.o
+ .text.prvReadMessageFromBuffer
+                0x0000000000000000       0xbc build/stream_buffer.o
+ .text.xStreamBufferIsEmpty
+                0x0000000000000000       0x50 build/stream_buffer.o
+ .text.xStreamBufferIsFull
+                0x0000000000000000       0x6a build/stream_buffer.o
+ .text.xStreamBufferSendCompletedFromISR
+                0x0000000000000000       0x6e build/stream_buffer.o
+ .text.xStreamBufferReceiveCompletedFromISR
+                0x0000000000000000       0x6e build/stream_buffer.o
+ .text.prvWriteBytesToBuffer
+                0x0000000000000000      0x108 build/stream_buffer.o
+ .text.prvReadBytesFromBuffer
+                0x0000000000000000      0x100 build/stream_buffer.o
+ .text.prvBytesInBuffer
+                0x0000000000000000       0x5a build/stream_buffer.o
+ .text.prvInitialiseNewStreamBuffer
+                0x0000000000000000       0x92 build/stream_buffer.o
+ .debug_info    0x0000000000000000      0xbae build/stream_buffer.o
+ .debug_abbrev  0x0000000000000000      0x1b9 build/stream_buffer.o
+ .debug_aranges
+                0x0000000000000000       0xc0 build/stream_buffer.o
+ .debug_ranges  0x0000000000000000       0xb0 build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x1fd build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x76c build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x22 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x8e build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x51 build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x103 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x6a build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x1df build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x58 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x19 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x34 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x34 build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x174 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x16 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x43 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x34 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x10 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x52 build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x182 build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x341 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x10 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x35 build/stream_buffer.o
+ .debug_macro   0x0000000000000000     0x4c49 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x28 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x20 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x8e build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x123 build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x15a build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0xd3 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x28 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x1f build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x12 build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x4f6 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0xc3 build/stream_buffer.o
+ .debug_macro   0x0000000000000000      0x120 build/stream_buffer.o
+ .debug_macro   0x0000000000000000       0x18 build/stream_buffer.o
+ .debug_line    0x0000000000000000     0x11f8 build/stream_buffer.o
+ .debug_str     0x0000000000000000    0x2a0dd build/stream_buffer.o
+ .comment       0x0000000000000000       0x34 build/stream_buffer.o
+ .debug_frame   0x0000000000000000      0x348 build/stream_buffer.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .group         0x0000000000000000        0xc build/tasks.o
+ .text          0x0000000000000000        0x0 build/tasks.o
+ .data          0x0000000000000000        0x0 build/tasks.o
+ .bss           0x0000000000000000        0x0 build/tasks.o
+ .text.vTaskDelete
+                0x0000000000000000      0x16c build/tasks.o
+ .text.xTaskDelayUntil
+                0x0000000000000000      0x106 build/tasks.o
+ .text.eTaskGetState
+                0x0000000000000000      0x122 build/tasks.o
+ .text.uxTaskPriorityGet
+                0x0000000000000000       0x4e build/tasks.o
+ .text.uxTaskPriorityGetFromISR
+                0x0000000000000000       0x3e build/tasks.o
+ .text.vTaskPrioritySet
+                0x0000000000000000      0x23c build/tasks.o
+ .text.vTaskSuspend
+                0x0000000000000000      0x18e build/tasks.o
+ .text.prvTaskIsTaskSuspended
+                0x0000000000000000       0x62 build/tasks.o
+ .text.vTaskResume
+                0x0000000000000000      0x152 build/tasks.o
+ .text.xTaskResumeFromISR
+                0x0000000000000000      0x16a build/tasks.o
+ .text.vTaskEndScheduler
+                0x0000000000000000       0x2a build/tasks.o
+ .text.xTaskGetTickCountFromISR
+                0x0000000000000000       0x24 build/tasks.o
+ .text.uxTaskGetNumberOfTasks
+                0x0000000000000000       0x18 build/tasks.o
+ .text.pcTaskGetName
+                0x0000000000000000       0x42 build/tasks.o
+ .text.prvSearchForNameWithinSingleList
+                0x0000000000000000      0x12a build/tasks.o
+ .text.xTaskGetHandle
+                0x0000000000000000      0x10e build/tasks.o
+ .text.xTaskCatchUpTicks
+                0x0000000000000000       0x5c build/tasks.o
+ .text.xTaskAbortDelay
+                0x0000000000000000      0x186 build/tasks.o
+ .text.vTaskPlaceOnUnorderedEventList
+                0x0000000000000000       0xd8 build/tasks.o
+ .text.vTaskRemoveFromUnorderedEventList
+                0x0000000000000000      0x1e8 build/tasks.o
+ .text.vTaskSetTimeOutState
+                0x0000000000000000       0x54 build/tasks.o
+ .text.xTaskGetCurrentTaskHandle
+                0x0000000000000000       0x20 build/tasks.o
+ .text.xTaskPriorityInherit
+                0x0000000000000000      0x1cc build/tasks.o
+ .text.xTaskPriorityDisinherit
+                0x0000000000000000      0x1a0 build/tasks.o
+ .text.vTaskPriorityDisinheritAfterTimeout
+                0x0000000000000000      0x1e0 build/tasks.o
+ .text.uxTaskResetEventItemValue
+                0x0000000000000000       0x40 build/tasks.o
+ .text.pvTaskIncrementMutexHeldCount
+                0x0000000000000000       0x34 build/tasks.o
+ .text.ulTaskGenericNotifyTake
+                0x0000000000000000      0x108 build/tasks.o
+ .text.xTaskGenericNotifyWait
+                0x0000000000000000      0x15c build/tasks.o
+ .text.xTaskGenericNotify
+                0x0000000000000000      0x2c0 build/tasks.o
+ .rodata.xTaskGenericNotify
+                0x0000000000000000       0x14 build/tasks.o
+ .text.xTaskGenericNotifyFromISR
+                0x0000000000000000      0x340 build/tasks.o
+ .rodata.xTaskGenericNotifyFromISR
+                0x0000000000000000       0x14 build/tasks.o
+ .text.vTaskGenericNotifyGiveFromISR
+                0x0000000000000000      0x264 build/tasks.o
+ .text.xTaskGenericNotifyStateClear
+                0x0000000000000000       0x88 build/tasks.o
+ .text.ulTaskGenericNotifyValueClear
+                0x0000000000000000       0x8a build/tasks.o
+ .debug_macro   0x0000000000000000      0x76c build/tasks.o
+ .debug_macro   0x0000000000000000       0x19 build/tasks.o
+ .debug_macro   0x0000000000000000       0x22 build/tasks.o
+ .debug_macro   0x0000000000000000       0x52 build/tasks.o
+ .debug_macro   0x0000000000000000       0x94 build/tasks.o
+ .debug_macro   0x0000000000000000       0x34 build/tasks.o
+ .debug_macro   0x0000000000000000       0x34 build/tasks.o
+ .debug_macro   0x0000000000000000       0x16 build/tasks.o
+ .debug_macro   0x0000000000000000      0x10e build/tasks.o
+ .debug_macro   0x0000000000000000       0x8d build/tasks.o
+ .debug_macro   0x0000000000000000       0x16 build/tasks.o
+ .debug_macro   0x0000000000000000       0x43 build/tasks.o
+ .debug_macro   0x0000000000000000       0x57 build/tasks.o
+ .debug_macro   0x0000000000000000       0x34 build/tasks.o
+ .debug_macro   0x0000000000000000       0x10 build/tasks.o
+ .debug_macro   0x0000000000000000       0x52 build/tasks.o
+ .debug_macro   0x0000000000000000      0x182 build/tasks.o
+ .debug_macro   0x0000000000000000      0x341 build/tasks.o
+ .debug_macro   0x0000000000000000       0x16 build/tasks.o
+ .debug_macro   0x0000000000000000       0x29 build/tasks.o
+ .debug_macro   0x0000000000000000       0x16 build/tasks.o
+ .debug_macro   0x0000000000000000       0x35 build/tasks.o
+ .debug_macro   0x0000000000000000      0x103 build/tasks.o
+ .debug_macro   0x0000000000000000       0x6a build/tasks.o
+ .debug_macro   0x0000000000000000      0x1df build/tasks.o
+ .debug_macro   0x0000000000000000     0x4c49 build/tasks.o
+ .debug_macro   0x0000000000000000       0x28 build/tasks.o
+ .debug_macro   0x0000000000000000       0x20 build/tasks.o
+ .debug_macro   0x0000000000000000       0x8e build/tasks.o
+ .debug_macro   0x0000000000000000      0x123 build/tasks.o
+ .debug_macro   0x0000000000000000      0x15a build/tasks.o
+ .debug_macro   0x0000000000000000       0xd3 build/tasks.o
+ .debug_macro   0x0000000000000000       0x28 build/tasks.o
+ .debug_macro   0x0000000000000000       0x1f build/tasks.o
+ .debug_macro   0x0000000000000000       0x12 build/tasks.o
+ .debug_macro   0x0000000000000000      0x4f6 build/tasks.o
+ .debug_macro   0x0000000000000000       0xc3 build/tasks.o
+ .debug_macro   0x0000000000000000      0x120 build/tasks.o
+ .debug_macro   0x0000000000000000       0x91 build/tasks.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .group         0x0000000000000000        0xc build/timers.o
+ .text          0x0000000000000000        0x0 build/timers.o
+ .data          0x0000000000000000        0x0 build/timers.o
+ .bss           0x0000000000000000        0x0 build/timers.o
+ .text.xTimerCreate
+                0x0000000000000000       0x68 build/timers.o
+ .text.prvInitialiseNewTimer
+                0x0000000000000000       0x96 build/timers.o
+ .text.xTimerGenericCommand
+                0x0000000000000000       0xe8 build/timers.o
+ .text.xTimerGetTimerDaemonTaskHandle
+                0x0000000000000000       0x2c build/timers.o
+ .text.xTimerGetPeriod
+                0x0000000000000000       0x2e build/timers.o
+ .text.vTimerSetReloadMode
+                0x0000000000000000       0x76 build/timers.o
+ .text.uxTimerGetReloadMode
+                0x0000000000000000       0x58 build/timers.o
+ .text.xTimerGetExpiryTime
+                0x0000000000000000       0x36 build/timers.o
+ .text.pcTimerGetName
+                0x0000000000000000       0x2e build/timers.o
+ .text.xTimerIsTimerActive
+                0x0000000000000000       0x58 build/timers.o
+ .text.pvTimerGetTimerID
+                0x0000000000000000       0x4a build/timers.o
+ .text.vTimerSetTimerID
+                0x0000000000000000       0x4a build/timers.o
+ .text.xTimerPendFunctionCallFromISR
+                0x0000000000000000       0x68 build/timers.o
+ .text.xTimerPendFunctionCall
+                0x0000000000000000       0x7c build/timers.o
+ .debug_macro   0x0000000000000000      0x76c build/timers.o
+ .debug_macro   0x0000000000000000       0x19 build/timers.o
+ .debug_macro   0x0000000000000000       0x22 build/timers.o
+ .debug_macro   0x0000000000000000       0x52 build/timers.o
+ .debug_macro   0x0000000000000000       0x94 build/timers.o
+ .debug_macro   0x0000000000000000       0x34 build/timers.o
+ .debug_macro   0x0000000000000000       0x34 build/timers.o
+ .debug_macro   0x0000000000000000       0x16 build/timers.o
+ .debug_macro   0x0000000000000000      0x10e build/timers.o
+ .debug_macro   0x0000000000000000       0x8d build/timers.o
+ .debug_macro   0x0000000000000000       0x16 build/timers.o
+ .debug_macro   0x0000000000000000       0x43 build/timers.o
+ .debug_macro   0x0000000000000000       0x57 build/timers.o
+ .debug_macro   0x0000000000000000       0x34 build/timers.o
+ .debug_macro   0x0000000000000000       0x10 build/timers.o
+ .debug_macro   0x0000000000000000       0x52 build/timers.o
+ .debug_macro   0x0000000000000000      0x182 build/timers.o
+ .debug_macro   0x0000000000000000      0x341 build/timers.o
+ .debug_macro   0x0000000000000000       0x16 build/timers.o
+ .debug_macro   0x0000000000000000       0x29 build/timers.o
+ .debug_macro   0x0000000000000000      0x103 build/timers.o
+ .debug_macro   0x0000000000000000       0x6a build/timers.o
+ .debug_macro   0x0000000000000000      0x1df build/timers.o
+ .debug_macro   0x0000000000000000     0x4c49 build/timers.o
+ .debug_macro   0x0000000000000000       0x28 build/timers.o
+ .debug_macro   0x0000000000000000       0x20 build/timers.o
+ .debug_macro   0x0000000000000000       0x8e build/timers.o
+ .debug_macro   0x0000000000000000      0x123 build/timers.o
+ .debug_macro   0x0000000000000000      0x15a build/timers.o
+ .debug_macro   0x0000000000000000       0xd3 build/timers.o
+ .debug_macro   0x0000000000000000       0x28 build/timers.o
+ .debug_macro   0x0000000000000000       0x1f build/timers.o
+ .debug_macro   0x0000000000000000       0x12 build/timers.o
+ .debug_macro   0x0000000000000000      0x4f6 build/timers.o
+ .debug_macro   0x0000000000000000       0xc3 build/timers.o
+ .debug_macro   0x0000000000000000      0x120 build/timers.o
+ .debug_macro   0x0000000000000000       0x80 build/timers.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .group         0x0000000000000000        0xc build/port.o
+ .text          0x0000000000000000        0x0 build/port.o
+ .data          0x0000000000000000        0x0 build/port.o
+ .bss           0x0000000000000000        0x0 build/port.o
+ .srodata.ullMachineTimerCompareRegisterBase
+                0x0000000000000000        0x4 build/port.o
+ .text.vPortEndScheduler
+                0x0000000000000000        0x8 build/port.o
+ .debug_macro   0x0000000000000000      0x76c build/port.o
+ .debug_macro   0x0000000000000000      0x174 build/port.o
+ .debug_macro   0x0000000000000000       0x22 build/port.o
+ .debug_macro   0x0000000000000000       0x8e build/port.o
+ .debug_macro   0x0000000000000000       0x51 build/port.o
+ .debug_macro   0x0000000000000000      0x103 build/port.o
+ .debug_macro   0x0000000000000000       0x6a build/port.o
+ .debug_macro   0x0000000000000000      0x1df build/port.o
+ .debug_macro   0x0000000000000000     0x4c49 build/port.o
+ .debug_macro   0x0000000000000000       0x28 build/port.o
+ .debug_macro   0x0000000000000000       0x20 build/port.o
+ .debug_macro   0x0000000000000000       0x8e build/port.o
+ .debug_macro   0x0000000000000000      0x123 build/port.o
+ .debug_macro   0x0000000000000000      0x15a build/port.o
+ .debug_macro   0x0000000000000000       0xd3 build/port.o
+ .debug_macro   0x0000000000000000       0x28 build/port.o
+ .debug_macro   0x0000000000000000       0x1f build/port.o
+ .debug_macro   0x0000000000000000       0x12 build/port.o
+ .debug_macro   0x0000000000000000      0x4f6 build/port.o
+ .debug_macro   0x0000000000000000       0xc3 build/port.o
+ .debug_macro   0x0000000000000000      0x120 build/port.o
+ .debug_macro   0x0000000000000000       0x58 build/port.o
+ .debug_macro   0x0000000000000000       0x19 build/port.o
+ .debug_macro   0x0000000000000000       0x34 build/port.o
+ .debug_macro   0x0000000000000000       0x34 build/port.o
+ .debug_macro   0x0000000000000000       0x16 build/port.o
+ .debug_macro   0x0000000000000000       0x43 build/port.o
+ .debug_macro   0x0000000000000000       0x34 build/port.o
+ .debug_macro   0x0000000000000000       0x10 build/port.o
+ .debug_macro   0x0000000000000000       0x52 build/port.o
+ .debug_macro   0x0000000000000000      0x182 build/port.o
+ .debug_macro   0x0000000000000000      0x341 build/port.o
+ .debug_macro   0x0000000000000000       0x10 build/port.o
+ .debug_macro   0x0000000000000000       0x35 build/port.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .group         0x0000000000000000        0xc build/heap_3.o
+ .text          0x0000000000000000        0x0 build/heap_3.o
+ .data          0x0000000000000000        0x0 build/heap_3.o
+ .bss           0x0000000000000000        0x0 build/heap_3.o
+ .debug_macro   0x0000000000000000      0x76c build/heap_3.o
+ .debug_macro   0x0000000000000000       0x19 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x22 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x52 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x94 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x34 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x34 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x16 build/heap_3.o
+ .debug_macro   0x0000000000000000      0x10e build/heap_3.o
+ .debug_macro   0x0000000000000000       0x8d build/heap_3.o
+ .debug_macro   0x0000000000000000       0x16 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x43 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x57 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x34 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x10 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x52 build/heap_3.o
+ .debug_macro   0x0000000000000000      0x182 build/heap_3.o
+ .debug_macro   0x0000000000000000      0x341 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x16 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x29 build/heap_3.o
+ .debug_macro   0x0000000000000000      0x103 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x6a build/heap_3.o
+ .debug_macro   0x0000000000000000      0x1df build/heap_3.o
+ .debug_macro   0x0000000000000000     0x4c49 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x28 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x20 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x8e build/heap_3.o
+ .debug_macro   0x0000000000000000      0x123 build/heap_3.o
+ .debug_macro   0x0000000000000000      0x15a build/heap_3.o
+ .debug_macro   0x0000000000000000       0xd3 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x28 build/heap_3.o
+ .debug_macro   0x0000000000000000       0x1f build/heap_3.o
+ .debug_macro   0x0000000000000000       0x12 build/heap_3.o
+ .debug_macro   0x0000000000000000      0x4f6 build/heap_3.o
+ .debug_macro   0x0000000000000000       0xc3 build/heap_3.o
+ .debug_macro   0x0000000000000000      0x120 build/heap_3.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_bkp.o
+ .text          0x0000000000000000        0x0 build/MLDR187_bkp.o
+ .data          0x0000000000000000        0x0 build/MLDR187_bkp.o
+ .bss           0x0000000000000000        0x0 build/MLDR187_bkp.o
+ .text.BKP_DeInit
+                0x0000000000000000       0xe6 build/MLDR187_bkp.o
+ .text.BKP_GetBootMode
+                0x0000000000000000       0x24 build/MLDR187_bkp.o
+ .text.BKP_GetFPOR
+                0x0000000000000000       0x2c build/MLDR187_bkp.o
+ .text.BKP_SetFPOR
+                0x0000000000000000       0x70 build/MLDR187_bkp.o
+ .text.BKP_GetCovDetectionFlag
+                0x0000000000000000       0x2c build/MLDR187_bkp.o
+ .text.BKP_SetTamperNewState
+                0x0000000000000000       0x54 build/MLDR187_bkp.o
+ .text.BKP_SetCovDetectionFlag
+                0x0000000000000000       0x78 build/MLDR187_bkp.o
+ .text.BKP_GetWakeupStates
+                0x0000000000000000       0x18 build/MLDR187_bkp.o
+ .text.BKP_GetSWPinState
+                0x0000000000000000       0x2c build/MLDR187_bkp.o
+ .text.BKP_SwitchOffAlarmPower
+                0x0000000000000000       0x3c build/MLDR187_bkp.o
+ .text.BKP_ConvertToBINFormat
+                0x0000000000000000       0xca build/MLDR187_bkp.o
+ .text.BKP_ConvertToBCDFormat
+                0x0000000000000000       0xca build/MLDR187_bkp.o
+ .text.BKP_GetDateTimeBCD
+                0x0000000000000000       0x60 build/MLDR187_bkp.o
+ .text.BKP_GetDateTimeBCDTimestamp
+                0x0000000000000000       0xe8 build/MLDR187_bkp.o
+ .text.BKP_SetDateTimeBCD
+                0x0000000000000000      0x108 build/MLDR187_bkp.o
+ .text.BKP_SetAlarm
+                0x0000000000000000      0x12a build/MLDR187_bkp.o
+ .text.BKP_SetItNewState
+                0x0000000000000000       0xac build/MLDR187_bkp.o
+ .text.BKP_SetAlarmNewState
+                0x0000000000000000       0x5a build/MLDR187_bkp.o
+ .text.BKP_GetFlags
+                0x0000000000000000       0x2c build/MLDR187_bkp.o
+ .text.BKP_GetSingleFlag
+                0x0000000000000000       0x30 build/MLDR187_bkp.o
+ .text.BKP_InitTamper
+                0x0000000000000000       0xc4 build/MLDR187_bkp.o
+ .text.BKP_InitExternalEvent
+                0x0000000000000000       0xca build/MLDR187_bkp.o
+ .text.BKP_GetTamperEventState
+                0x0000000000000000       0x2a build/MLDR187_bkp.o
+ .text.BCDtoBIN
+                0x0000000000000000       0x44 build/MLDR187_bkp.o
+ .text.BINtoBCD
+                0x0000000000000000       0x52 build/MLDR187_bkp.o
+ .text.BKP_GetDateTimeReg
+                0x0000000000000000       0xde build/MLDR187_bkp.o
+ .text.BKP_WaitRTCCycle
+                0x0000000000000000       0xac build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000      0x76c build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x22 build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x8e build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x51 build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000      0x103 build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x6a build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000      0x1df build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x28 build/MLDR187_bkp.o
+ .debug_macro   0x0000000000000000       0x26 build/MLDR187_bkp.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_gpio.o
+ .text          0x0000000000000000        0x0 build/MLDR187_gpio.o
+ .data          0x0000000000000000        0x0 build/MLDR187_gpio.o
+ .bss           0x0000000000000000        0x0 build/MLDR187_gpio.o
+ .text.PORT_StructInitDefault
+                0x0000000000000000       0x3a build/MLDR187_gpio.o
+ .text.PORT_DeInit
+                0x0000000000000000       0x48 build/MLDR187_gpio.o
+ .text.PORT_Write
+                0x0000000000000000       0x5c build/MLDR187_gpio.o
+ .text.PORT_Read
+                0x0000000000000000       0x1c build/MLDR187_gpio.o
+ .text.PORT_ReadBackPort
+                0x0000000000000000       0x1c build/MLDR187_gpio.o
+ .text.PORT_ReadBackPin
+                0x0000000000000000       0x34 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x76c build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x22 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x8e build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x51 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x103 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x6a build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000      0x1df build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x28 build/MLDR187_gpio.o
+ .debug_macro   0x0000000000000000       0x26 build/MLDR187_gpio.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_rst_clk.o
+ .text          0x0000000000000000        0x0 build/MLDR187_rst_clk.o
+ .data          0x0000000000000000        0x0 build/MLDR187_rst_clk.o
+ .bss           0x0000000000000000        0x0 build/MLDR187_rst_clk.o
+ .text.RST_CLK_SetupLsPeripheralCLock
+                0x0000000000000000      0x124 build/MLDR187_rst_clk.o
+ .text.RST_CLK_IsPeripheralClockEnabled
+                0x0000000000000000       0x30 build/MLDR187_rst_clk.o
+ .text.RST_CLK_DisablePeripheralClock
+                0x0000000000000000      0x3fc build/MLDR187_rst_clk.o
+ .text.RST_CLK_ResetKeyRAM
+                0x0000000000000000       0x1e build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000      0x76c build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x22 build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x8e build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x51 build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000      0x103 build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x6a build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000      0x1df build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x28 build/MLDR187_rst_clk.o
+ .debug_macro   0x0000000000000000       0x20 build/MLDR187_rst_clk.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .group         0x0000000000000000        0xc build/MLDR187_uart.o
+ .text          0x0000000000000000        0x0 build/MLDR187_uart.o
+ .data          0x0000000000000000        0x0 build/MLDR187_uart.o
+ .bss           0x0000000000000000        0x0 build/MLDR187_uart.o
+ .text.UART_DeInit
+                0x0000000000000000       0xba build/MLDR187_uart.o
+ .text.UART_Send
+                0x0000000000000000       0x36 build/MLDR187_uart.o
+ .text.UART_SendBytes
+                0x0000000000000000       0xc2 build/MLDR187_uart.o
+ .text.UART_SendString
+                0x0000000000000000       0x4c build/MLDR187_uart.o
+ .text.UART_SendData
+                0x0000000000000000       0x26 build/MLDR187_uart.o
+ .text.UART_Receive
+                0x0000000000000000       0x2a build/MLDR187_uart.o
+ .text.UART_ReceiveBytes
+                0x0000000000000000       0xe6 build/MLDR187_uart.o
+ .text.UART_ReceiveData
+                0x0000000000000000       0x1c build/MLDR187_uart.o
+ .text.UART_BreakLine
+                0x0000000000000000       0x3e build/MLDR187_uart.o
+ .text.UART_IrDACmd
+                0x0000000000000000       0x3e build/MLDR187_uart.o
+ .text.UART_GetFlags
+                0x0000000000000000       0x18 build/MLDR187_uart.o
+ .text.UART_GetFlagStatus
+                0x0000000000000000       0x34 build/MLDR187_uart.o
+ .text.UART_DMAConfig
+                0x0000000000000000       0x2e build/MLDR187_uart.o
+ .text.UART_ITsetMask
+                0x0000000000000000       0x20 build/MLDR187_uart.o
+ .text.UART_ITConfig
+                0x0000000000000000       0x4a build/MLDR187_uart.o
+ .text.UART_GetITStatus
+                0x0000000000000000       0x34 build/MLDR187_uart.o
+ .text.UART_GetITStatusMasked
+                0x0000000000000000       0x34 build/MLDR187_uart.o
+ .text.UART_ClearITPendingBit
+                0x0000000000000000       0x20 build/MLDR187_uart.o
+ .text.UART_DMACmd
+                0x0000000000000000       0x52 build/MLDR187_uart.o
+ .text.UART_DMATransmit
+                0x0000000000000000      0x160 build/MLDR187_uart.o
+ .text.UART_DMAReceive
+                0x0000000000000000      0x206 build/MLDR187_uart.o
+ .text.UART_DMACycleModeRefresh
+                0x0000000000000000      0x10c build/MLDR187_uart.o
+ .text.UART_GetDMAaddresses
+                0x0000000000000000       0xea build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000      0x76c build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x22 build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x8e build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x51 build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000      0x103 build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x6a build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000      0x1df build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000     0x4c43 build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x28 build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x26 build/MLDR187_uart.o
+ .debug_macro   0x0000000000000000       0x8e build/MLDR187_uart.o
+ .text          0x0000000000000000        0x0 build/startup_MLDR187.o
+ .bss           0x0000000000000000        0x0 build/startup_MLDR187.o
+ .data          0x0000000000000000        0x0 build/portASM.o
+ .bss           0x0000000000000000        0x0 build/portASM.o
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-errno.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-errno.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-errno.o)
+ .text.__errno  0x0000000000000000        0xa c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x0000000000000000       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-errno.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-strlen.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-strlen.o)
+ .text.strlen   0x0000000000000000       0x12 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000000       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000      0x10a c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000010000000 0x0000000000040000 xr
+OTP              0x0000000000020000 0x0000000000004000 xr
+TCMA_RAM         0x0000000080000000 0x0000000000010000 xrw
+TCMB_RAM         0x0000000080010000 0x0000000000008000 xrw
+AHB_RAM          0x0000000020000000 0x0000000000004000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/main.o
+LOAD build/hooks.o
+LOAD build/init.o
+LOAD build/syscalls.o
+LOAD build/croutine.o
+LOAD build/event_groups.o
+LOAD build/list.o
+LOAD build/queue.o
+LOAD build/stream_buffer.o
+LOAD build/tasks.o
+LOAD build/timers.o
+LOAD build/port.o
+LOAD build/heap_3.o
+LOAD build/MLDR187_bkp.o
+LOAD build/MLDR187_gpio.o
+LOAD build/MLDR187_rst_clk.o
+LOAD build/MLDR187_uart.o
+LOAD build/startup_MLDR187.o
+LOAD build/portASM.o
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libc_nano.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+START GROUP
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a
+LOAD c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libc_nano.a
+END GROUP
+                0x0000000000001000                __stack_size = 0x1000
+                0x0000000000001000                __heap_min_size = 0x1000
+
+.text.init      0x0000000010000000      0x146
+ *(.text.init)
+ .text.init     0x0000000010000000      0x146 build/startup_MLDR187.o
+                0x0000000010000000                _start
+
+.text           0x0000000010000200     0x476a
+                0x0000000010000200                . = ALIGN (0x4)
+ *(.text*)
+ .text.blink_task
+                0x0000000010000200       0x36 build/main.o
+                0x0000000010000200                blink_task
+ .text.blink_task2
+                0x0000000010000236       0x36 build/main.o
+                0x0000000010000236                blink_task2
+ .text.main     0x000000001000026c       0x74 build/main.o
+                0x000000001000026c                main
+ .text.vApplicationMallocFailedHook
+                0x00000000100002e0        0xe build/hooks.o
+                0x00000000100002e0                vApplicationMallocFailedHook
+ .text.vApplicationIdleHook
+                0x00000000100002ee        0xe build/hooks.o
+                0x00000000100002ee                vApplicationIdleHook
+ .text.vApplicationStackOverflowHook
+                0x00000000100002fc       0x16 build/hooks.o
+                0x00000000100002fc                vApplicationStackOverflowHook
+ .text.vApplicationTickHook
+                0x0000000010000312        0xe build/hooks.o
+                0x0000000010000312                vApplicationTickHook
+ .text.init_clock
+                0x0000000010000320       0x82 build/init.o
+                0x0000000010000320                init_clock
+ .text.init_uart
+                0x00000000100003a2       0x7c build/init.o
+                0x00000000100003a2                init_uart
+ .text.init_bkp
+                0x000000001000041e       0x3e build/init.o
+                0x000000001000041e                init_bkp
+ .text.init_leds
+                0x000000001000045c       0x54 build/init.o
+                0x000000001000045c                init_leds
+ .text.terminate
+                0x00000000100004b0       0x14 build/syscalls.o
+ .text.sys_exit
+                0x00000000100004c4       0x1c build/syscalls.o
+                0x00000000100004c4                sys_exit
+ .text.sys_brk  0x00000000100004e0       0x60 build/syscalls.o
+                0x00000000100004e0                sys_brk
+ .text._exit    0x0000000010000540       0x12 build/syscalls.o
+                0x0000000010000540                _exit
+ .text._sbrk    0x0000000010000552       0x70 build/syscalls.o
+                0x0000000010000552                _sbrk
+ .text.vListInitialise
+                0x00000000100005c2       0x4c build/list.o
+                0x00000000100005c2                vListInitialise
+ .text.vListInitialiseItem
+                0x000000001000060e       0x1a build/list.o
+                0x000000001000060e                vListInitialiseItem
+ .text.vListInsert
+                0x0000000010000628       0xa2 build/list.o
+                0x0000000010000628                vListInsert
+ .text.uxListRemove
+                0x00000000100006ca       0x70 build/list.o
+                0x00000000100006ca                uxListRemove
+ .text.xQueueGenericReset
+                0x000000001000073a      0x120 build/queue.o
+                0x000000001000073a                xQueueGenericReset
+ .text.xQueueGenericCreate
+                0x000000001000085a       0xbc build/queue.o
+                0x000000001000085a                xQueueGenericCreate
+ .text.prvInitialiseNewQueue
+                0x0000000010000916       0x60 build/queue.o
+ .text.xQueueReceive
+                0x0000000010000976      0x19c build/queue.o
+                0x0000000010000976                xQueueReceive
+ .text.prvCopyDataFromQueue
+                0x0000000010000b12       0x6a build/queue.o
+ .text.prvUnlockQueue
+                0x0000000010000b7c       0xc4 build/queue.o
+ .text.prvIsQueueEmpty
+                0x0000000010000c40       0x36 build/queue.o
+ .text.vQueueAddToRegistry
+                0x0000000010000c76       0xb4 build/queue.o
+                0x0000000010000c76                vQueueAddToRegistry
+ .text.vQueueWaitForMessageRestricted
+                0x0000000010000d2a       0x8a build/queue.o
+                0x0000000010000d2a                vQueueWaitForMessageRestricted
+ .text.xTaskCreate
+                0x0000000010000db4       0xac build/tasks.o
+                0x0000000010000db4                xTaskCreate
+ .text.prvInitialiseNewTask
+                0x0000000010000e60      0x1b4 build/tasks.o
+ .text.prvAddNewTaskToReadyList
+                0x0000000010001014      0x14e build/tasks.o
+ .text.vTaskDelay
+                0x0000000010001162       0x4c build/tasks.o
+                0x0000000010001162                vTaskDelay
+ .text.vTaskStartScheduler
+                0x00000000100011ae       0x8a build/tasks.o
+                0x00000000100011ae                vTaskStartScheduler
+ .text.vTaskSuspendAll
+                0x0000000010001238       0x1e build/tasks.o
+                0x0000000010001238                vTaskSuspendAll
+ .text.xTaskResumeAll
+                0x0000000010001256      0x23c build/tasks.o
+                0x0000000010001256                xTaskResumeAll
+ .text.xTaskGetTickCount
+                0x0000000010001492       0x1c build/tasks.o
+                0x0000000010001492                xTaskGetTickCount
+ .text.xTaskIncrementTick
+                0x00000000100014ae      0x2ac build/tasks.o
+                0x00000000100014ae                xTaskIncrementTick
+ .text.vTaskSwitchContext
+                0x000000001000175a      0x120 build/tasks.o
+                0x000000001000175a                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x000000001000187a       0x44 build/tasks.o
+                0x000000001000187a                vTaskPlaceOnEventList
+ .text.vTaskPlaceOnEventListRestricted
+                0x00000000100018be       0xa2 build/tasks.o
+                0x00000000100018be                vTaskPlaceOnEventListRestricted
+ .text.xTaskRemoveFromEventList
+                0x0000000010001960      0x216 build/tasks.o
+                0x0000000010001960                xTaskRemoveFromEventList
+ .text.vTaskInternalSetTimeOutState
+                0x0000000010001b76       0x2a build/tasks.o
+                0x0000000010001b76                vTaskInternalSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x0000000010001ba0       0xf2 build/tasks.o
+                0x0000000010001ba0                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x0000000010001c92       0x16 build/tasks.o
+                0x0000000010001c92                vTaskMissedYield
+ .text.prvIdleTask
+                0x0000000010001ca8       0x14 build/tasks.o
+ .text.prvInitialiseTaskLists
+                0x0000000010001cbc       0x80 build/tasks.o
+ .text.prvCheckTasksWaitingTermination
+                0x0000000010001d3c       0x60 build/tasks.o
+ .text.prvDeleteTCB
+                0x0000000010001d9c       0x2a build/tasks.o
+ .text.prvResetNextTaskUnblockTime
+                0x0000000010001dc6       0x32 build/tasks.o
+ .text.xTaskGetSchedulerState
+                0x0000000010001df8       0x36 build/tasks.o
+                0x0000000010001df8                xTaskGetSchedulerState
+ .text.vTaskEnterCritical
+                0x0000000010001e2e       0x2c build/tasks.o
+                0x0000000010001e2e                vTaskEnterCritical
+ .text.vTaskExitCritical
+                0x0000000010001e5a       0x3a build/tasks.o
+                0x0000000010001e5a                vTaskExitCritical
+ .text.prvAddCurrentTaskToDelayedList
+                0x0000000010001e94      0x140 build/tasks.o
+ .text.xTimerCreateTimerTask
+                0x0000000010001fd4       0x56 build/timers.o
+                0x0000000010001fd4                xTimerCreateTimerTask
+ .text.prvReloadTimer
+                0x000000001000202a       0x5e build/timers.o
+ .text.prvProcessExpiredTimer
+                0x0000000010002088       0x72 build/timers.o
+ .text.prvTimerTask
+                0x00000000100020fa       0x28 build/timers.o
+ .text.prvProcessTimerOrBlockTask
+                0x0000000010002122       0x9c build/timers.o
+ .text.prvGetNextExpireTime
+                0x00000000100021be       0x48 build/timers.o
+ .text.prvSampleTimeNow
+                0x0000000010002206       0x4e build/timers.o
+ .text.prvInsertTimerInActiveList
+                0x0000000010002254       0xb0 build/timers.o
+ .text.prvProcessReceivedCommands
+                0x0000000010002304      0x1d8 build/timers.o
+ .text.prvSwitchTimerLists
+                0x00000000100024dc       0x56 build/timers.o
+ .text.prvCheckForValidListAndQueue
+                0x0000000010002532       0x74 build/timers.o
+ .text.vPortSetupTimerInterrupt
+                0x00000000100025a6      0x136 build/port.o
+                0x00000000100025a6                vPortSetupTimerInterrupt
+ .text.xPortStartScheduler
+                0x00000000100026dc       0x56 build/port.o
+                0x00000000100026dc                xPortStartScheduler
+ .text.pvPortMalloc
+                0x0000000010002732       0x3a build/heap_3.o
+                0x0000000010002732                pvPortMalloc
+ .text.vPortFree
+                0x000000001000276c       0x2c build/heap_3.o
+                0x000000001000276c                vPortFree
+ .text.BKP_FreqGenCmd
+                0x0000000010002798      0x1ae build/MLDR187_bkp.o
+                0x0000000010002798                BKP_FreqGenCmd
+ .text.BKP_GenState
+                0x0000000010002946       0x64 build/MLDR187_bkp.o
+                0x0000000010002946                BKP_GenState
+ .text.BKP_Init
+                0x00000000100029aa      0x228 build/MLDR187_bkp.o
+                0x00000000100029aa                BKP_Init
+ .text.BKP_StructInitDefault
+                0x0000000010002bd2       0x86 build/MLDR187_bkp.o
+                0x0000000010002bd2                BKP_StructInitDefault
+ .text.BKP_GenWaitForOn
+                0x0000000010002c58       0x5c build/MLDR187_bkp.o
+ .text.BKP_DisableWP
+                0x0000000010002cb4       0x42 build/MLDR187_bkp.o
+ .text.BKP_EnableWP
+                0x0000000010002cf6       0x16 build/MLDR187_bkp.o
+ .text.BKP_WaitComplete
+                0x0000000010002d0c       0x34 build/MLDR187_bkp.o
+ .text.PORT_Init
+                0x0000000010002d40      0x1be build/MLDR187_gpio.o
+                0x0000000010002d40                PORT_Init
+ .text.PORT_ReadPin
+                0x0000000010002efe       0x34 build/MLDR187_gpio.o
+                0x0000000010002efe                PORT_ReadPin
+ .text.PORT_SetReset
+                0x0000000010002f32       0x38 build/MLDR187_gpio.o
+                0x0000000010002f32                PORT_SetReset
+ .text.RST_CLK_SetupCpuSpeed
+                0x0000000010002f6a      0x488 build/MLDR187_rst_clk.o
+                0x0000000010002f6a                RST_CLK_SetupCpuSpeed
+ .text.RST_CLK_SetupHsPeripheralClock
+                0x00000000100033f2      0x1ca build/MLDR187_rst_clk.o
+                0x00000000100033f2                RST_CLK_SetupHsPeripheralClock
+ .text.RST_CLK_EnablePeripheralClock
+                0x00000000100035bc      0x670 build/MLDR187_rst_clk.o
+                0x00000000100035bc                RST_CLK_EnablePeripheralClock
+ .text.rccEncodeDivisor3bit
+                0x0000000010003c2c       0x84 build/MLDR187_rst_clk.o
+ .text.rccEncodeDivisor4bit
+                0x0000000010003cb0       0x8c build/MLDR187_rst_clk.o
+ .text.rccEncodeDivisorNumeric
+                0x0000000010003d3c       0x98 build/MLDR187_rst_clk.o
+ .text.UART_Init
+                0x0000000010003dd4      0x2de build/MLDR187_uart.o
+                0x0000000010003dd4                UART_Init
+ .text.UART_StructInitDefault
+                0x00000000100040b2       0xa0 build/MLDR187_uart.o
+                0x00000000100040b2                UART_StructInitDefault
+ .text.UART_Cmd
+                0x0000000010004152       0x3e build/MLDR187_uart.o
+                0x0000000010004152                UART_Cmd
+ *fill*         0x0000000010004190       0x70 
+ .text          0x0000000010004200      0x34c build/portASM.o
+                0x0000000010004200                freertos_risc_v_trap_handler
+                0x0000000010004400                xPortStartFirstTask
+                0x0000000010004500                pxPortInitialiseStack
+ .text.__clzsi2
+                0x000000001000454c       0x76 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
+                0x000000001000454c                __clzsi2
+ .text.exit     0x00000000100045c2       0x2c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o)
+                0x00000000100045c2                exit
+ .text.__libc_init_array
+                0x00000000100045ee       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+                0x00000000100045ee                __libc_init_array
+ .text.malloc   0x000000001000463c        0x8 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o)
+                0x000000001000463c                malloc
+ .text.free     0x0000000010004644        0x8 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o)
+                0x0000000010004644                free
+ .text.memcpy   0x000000001000464c       0xdc c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memcpy.o)
+                0x000000001000464c                memcpy
+ .text          0x0000000010004728       0xa8 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memset.o)
+                0x0000000010004728                memset
+ .text._free_r  0x00000000100047d0       0x9e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
+                0x00000000100047d0                _free_r
+ .text._malloc_r
+                0x000000001000486e       0xd0 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+                0x000000001000486e                _malloc_r
+ .text._sbrk_r  0x000000001000493e       0x28 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
+                0x000000001000493e                _sbrk_r
+ .text.__malloc_lock
+                0x0000000010004966        0x2 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+                0x0000000010004966                __malloc_lock
+ .text.__malloc_unlock
+                0x0000000010004968        0x2 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+                0x0000000010004968                __malloc_unlock
+
+.rodata         0x000000001000496c      0x1c4
+                0x000000001000496c                . = ALIGN (0x4)
+ *(.rodata*)
+ .rodata        0x000000001000496c        0xf build/main.o
+ *fill*         0x000000001000497b        0x1 
+ .rodata        0x000000001000497c        0x5 build/tasks.o
+ *fill*         0x0000000010004981        0x3 
+ .rodata        0x0000000010004984        0xd build/timers.o
+ *fill*         0x0000000010004991        0x3 
+ .rodata.prvProcessReceivedCommands
+                0x0000000010004994       0x28 build/timers.o
+ .rodata.rccEncodeDivisor3bit
+                0x00000000100049bc       0x20 build/MLDR187_rst_clk.o
+ .rodata.rccEncodeDivisor4bit
+                0x00000000100049dc       0x24 build/MLDR187_rst_clk.o
+ .rodata.rccEncodeDivisorNumeric
+                0x0000000010004a00       0x24 build/MLDR187_rst_clk.o
+ .rodata.__clz_tab
+                0x0000000010004a24      0x100 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clz.o)
+                0x0000000010004a24                __clz_tab
+ *(.srodata*)
+ .srodata.xISRStackTop
+                0x0000000010004b24        0x4 build/port.o
+                0x0000000010004b24                xISRStackTop
+ .srodata.uxTimerIncrementsForOneTick
+                0x0000000010004b28        0x4 build/port.o
+                0x0000000010004b28                uxTimerIncrementsForOneTick
+ .srodata._global_impure_ptr
+                0x0000000010004b2c        0x4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
+                0x0000000010004b2c                _global_impure_ptr
+
+.dalign         0x0000000010004b30        0x0
+                0x0000000010004b30                . = ALIGN (0x4)
+                0x0000000010004b30                __data_load_start = LOADADDR (.data)
+
+.data           0x0000000080000000      0x188 load address 0x0000000010004b30
+                0x0000000080000000                . = ALIGN (0x4)
+                0x0000000080000000                __data_start = .
+ *(.data*)
+ .data          0x0000000080000000      0x110 build/startup_MLDR187.o
+                0x0000000080000100                brk_base
+                0x0000000080000108                brk_size
+ .data.impure_data
+                0x0000000080000110       0x60 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
+                0x0000000080000170                . = ALIGN (0x8)
+                0x0000000080000170                __sdata_start = .
+ *(.sdata*)
+ .sdata.uxTopUsedPriority
+                0x0000000080000170        0x4 build/tasks.o
+                0x0000000080000170                uxTopUsedPriority
+ .sdata.pullNextTime
+                0x0000000080000174        0x4 build/port.o
+                0x0000000080000174                pullNextTime
+ .sdata.BKP_LSE_Speed
+                0x0000000080000178        0x4 build/MLDR187_bkp.o
+                0x0000000080000178                BKP_LSE_Speed
+ .sdata.RST_CLK_CpuSpeed
+                0x000000008000017c        0x4 build/MLDR187_rst_clk.o
+                0x000000008000017c                RST_CLK_CpuSpeed
+ .sdata.RST_CLK_HclkSpeed
+                0x0000000080000180        0x4 build/MLDR187_rst_clk.o
+                0x0000000080000180                RST_CLK_HclkSpeed
+ .sdata._impure_ptr
+                0x0000000080000184        0x4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-impure.o)
+                0x0000000080000184                _impure_ptr
+                0x0000000080000188                . = ALIGN (0x4)
+                0x0000000080000188                __data_end = .
+
+.bss            0x0000000080000188      0x1c8
+                0x0000000080000188                . = ALIGN (0x8)
+                0x0000000080000188                __bss_start = .
+ *(.sbss*)
+ .sbss.xQueue   0x0000000080000188        0x4 build/main.o
+ .sbss.curbrk   0x000000008000018c        0x4 build/syscalls.o
+ .sbss.pxCurrentTCB
+                0x0000000080000190        0x4 build/tasks.o
+                0x0000000080000190                pxCurrentTCB
+ .sbss.pxDelayedTaskList
+                0x0000000080000194        0x4 build/tasks.o
+ .sbss.pxOverflowDelayedTaskList
+                0x0000000080000198        0x4 build/tasks.o
+ .sbss.uxDeletedTasksWaitingCleanUp
+                0x000000008000019c        0x4 build/tasks.o
+ .sbss.uxCurrentNumberOfTasks
+                0x00000000800001a0        0x4 build/tasks.o
+ .sbss.xTickCount
+                0x00000000800001a4        0x4 build/tasks.o
+ .sbss.uxTopReadyPriority
+                0x00000000800001a8        0x4 build/tasks.o
+ .sbss.xSchedulerRunning
+                0x00000000800001ac        0x4 build/tasks.o
+ .sbss.xPendedTicks
+                0x00000000800001b0        0x4 build/tasks.o
+ .sbss.xYieldPending
+                0x00000000800001b4        0x4 build/tasks.o
+ .sbss.xNumOfOverflows
+                0x00000000800001b8        0x4 build/tasks.o
+ .sbss.uxTaskNumber
+                0x00000000800001bc        0x4 build/tasks.o
+ .sbss.xNextTaskUnblockTime
+                0x00000000800001c0        0x4 build/tasks.o
+ .sbss.xIdleTaskHandle
+                0x00000000800001c4        0x4 build/tasks.o
+ .sbss.uxSchedulerSuspended
+                0x00000000800001c8        0x4 build/tasks.o
+ .sbss.pxCurrentTimerList
+                0x00000000800001cc        0x4 build/timers.o
+ .sbss.pxOverflowTimerList
+                0x00000000800001d0        0x4 build/timers.o
+ .sbss.xTimerQueue
+                0x00000000800001d4        0x4 build/timers.o
+ .sbss.xTimerTaskHandle
+                0x00000000800001d8        0x4 build/timers.o
+ .sbss.xLastTime.0
+                0x00000000800001dc        0x4 build/timers.o
+ .sbss.ullNextTime
+                0x00000000800001e0        0x8 build/port.o
+                0x00000000800001e0                ullNextTime
+ .sbss.pullMachineTimerCompareRegister
+                0x00000000800001e8        0x4 build/port.o
+                0x00000000800001e8                pullMachineTimerCompareRegister
+ .sbss.RST_CLK_PER1C2_Speed
+                0x00000000800001ec        0x4 build/MLDR187_rst_clk.o
+                0x00000000800001ec                RST_CLK_PER1C2_Speed
+ .sbss.rccHseSpeed
+                0x00000000800001f0        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccCpuC1Speed
+                0x00000000800001f4        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccPllSpeed
+                0x00000000800001f8        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccCpuC3Speed
+                0x00000000800001fc        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccPer1C1Speed
+                0x0000000080000200        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccAdcUIC1Speed
+                0x0000000080000204        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccAdcC1Speed
+                0x0000000080000208        0x4 build/MLDR187_rst_clk.o
+ .sbss.rccWwdgSpeed
+                0x000000008000020c        0x4 build/MLDR187_rst_clk.o
+ .sbss.__malloc_free_list
+                0x0000000080000210        0x4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000080000210                __malloc_free_list
+ .sbss.__malloc_sbrk_start
+                0x0000000080000214        0x4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000080000214                __malloc_sbrk_start
+ .sbss.errno    0x0000000080000218        0x4 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)
+                0x0000000080000218                errno
+ *(.scommon)
+ *(.bss*)
+ .bss.xQueueRegistry
+                0x000000008000021c       0x40 build/queue.o
+                0x000000008000021c                xQueueRegistry
+ .bss.pxReadyTasksLists
+                0x000000008000025c       0x64 build/tasks.o
+ .bss.xDelayedTaskList1
+                0x00000000800002c0       0x14 build/tasks.o
+ .bss.xDelayedTaskList2
+                0x00000000800002d4       0x14 build/tasks.o
+ .bss.xPendingReadyList
+                0x00000000800002e8       0x14 build/tasks.o
+ .bss.xTasksWaitingTermination
+                0x00000000800002fc       0x14 build/tasks.o
+ .bss.xSuspendedTaskList
+                0x0000000080000310       0x14 build/tasks.o
+ .bss.xActiveTimerList1
+                0x0000000080000324       0x14 build/timers.o
+ .bss.xActiveTimerList2
+                0x0000000080000338       0x14 build/timers.o
+ *(COMMON)
+                0x0000000080000350                . = ALIGN (0x8)
+ *fill*         0x000000008000034c        0x4 
+                0x0000000080000350                __bss_end = .
+                0x0000000080000800                __global_pointer$ = MIN ((__sdata_start + 0x800), MAX ((__data_start + 0x800), (__bss_end - 0x800)))
+                0x0000000080000350                . = ALIGN (0x8)
+                0x0000000080000350                __end = .
+
+.aalign         0x0000000010004cb8        0x0
+                0x0000000010004cb8                . = ALIGN (0x4)
+                0x0000000010004cb8                __ahbram_data_load_start = LOADADDR (.ahbram_data)
+
+.ahbram_data    0x0000000020000000        0x0 load address 0x0000000010004cb8
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_data_start = .
+ *(.ahbram_data)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_data_end = .
+
+.ahbram_bss     0x0000000020000000        0x0
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_bss_start = .
+ *(.ahbram_bss)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __ahbram_bss_end = .
+
+.ralign         0x0000000010004cb8        0x0
+                0x0000000010004cb8                . = ALIGN (0x4)
+                0x0000000010004cb8                __ramfunc_load_start = LOADADDR (.ramfunc)
+
+.ramfunc        0x0000000080010000      0x16e load address 0x0000000010004cb8
+                0x0000000080010000                . = ALIGN (0x4)
+                0x0000000080010000                __ramfunc_start = .
+ *(.ramfunc*)
+ .ramfunc       0x0000000080010000      0x16e build/startup_MLDR187.o
+                0x0000000080010000                trap_vector
+                0x00000000800100de                trap_iam
+                0x00000000800100e0                trap_iaf
+                0x00000000800100e2                trap_ii
+                0x00000000800100e4                trap_lam
+                0x00000000800100e6                trap_laf
+                0x00000000800100e8                trap_sam
+                0x00000000800100ea                trap_saf
+                0x00000000800100ec                trap_ecallm
+                0x00000000800100f0                PendSV_Handler
+                0x00000000800100f2                enable_PendSV_Handler
+                0x00000000800100fa                disable_PendSV_Handler
+                0x0000000080010102                SysTick_Handler
+                0x0000000080010104                enable_SysTick_Handler
+                0x000000008001010e                disable_SysTick_Handler
+                0x0000000080010118                irq_extm
+                0x000000008001011a                enable_irq_extm
+                0x0000000080010126                disable_irq_extm
+                0x0000000080010132                DMA_IRQHandler
+                0x0000000080010134                UART1_IRQHandler
+                0x0000000080010136                UART2_IRQHandler
+                0x0000000080010138                SSP1_IRQHandler
+                0x000000008001013a                POWER_IRQHandler
+                0x000000008001013c                WWDG_IRQHandler
+                0x000000008001013e                Timer1_IRQHandler
+                0x0000000080010140                Timer2_IRQHandler
+                0x0000000080010142                ADC_IRQHandler
+                0x0000000080010144                I2C_IRQHandler
+                0x0000000080010146                BACKUP_IRQHandler
+                0x0000000080010148                EXT_1_IRQHandler
+                0x000000008001014a                EXT_2_IRQHandler
+                0x000000008001014c                EXT_3_IRQHandler
+                0x000000008001014e                ADCIU_1_IRQHandler
+                0x0000000080010150                ADCIU_2_IRQHandler
+                0x0000000080010152                ADCIU_3_IRQHandler
+                0x0000000080010154                L_BLOCK_IRQHandler
+                0x0000000080010156                Default_IRQHandler
+                0x0000000080010158                SENSORS_IRQHandler
+                0x000000008001015a                CLK_MEASURE_IRQHandler
+                0x000000008001015c                RANDOM_IRQHandler
+                0x000000008001015e                ISO7816_IRQHandler
+                0x0000000080010160                UART3_IRQHandler
+                0x0000000080010162                SSP2_IRQHandler
+                0x0000000080010164                SSP3_IRQHandler
+                0x0000000080010166                Timer3_IRQHandler
+                0x0000000080010168                Timer4_IRQHandler
+                0x000000008001016a                UART4_IRQHandler
+                0x000000008001016c                OTP_Corrupt_IRQHandler
+
+.rela.dyn       0x0000000080010170        0x0 load address 0x0000000010004e26
+ .rela.srodata.xISRStackTop
+                0x0000000080010170        0x0 build/main.o
+ .rela.text.xPortStartScheduler
+                0x0000000080010170        0x0 build/main.o
+ .rela.data     0x0000000080010170        0x0 build/main.o
+ .rela.text.init
+                0x0000000080010170        0x0 build/main.o
+ .rela.text.exit
+                0x0000000080010170        0x0 build/main.o
+ .rela.data.impure_data
+                0x0000000080010170        0x0 build/main.o
+ .rela.text.__libc_init_array
+                0x0000000080010170        0x0 build/main.o
+                0x0000000080010170                . = ALIGN (0x4)
+                0x0000000080010170                __ramfunc_end = .
+                0x0000000080010000                __stack_top = (ORIGIN (REGION_DATA) + LENGTH (REGION_DATA))
+                0x000000008000f000                __stack_limit = (__stack_top - __stack_size)
+                0x0000000080000350                __heap_top = __end
+                0x000000000000ecb0                __heap_size = (__stack_limit - __heap_top)
+                0x000000008000f000                __heap_limit = (__heap_top + __heap_size)
+                0x0000000000000001                ASSERT ((__heap_size >= __heap_min_size), Unable to allocate __heap_min_size for heap!)
+
+.heap           0x0000000080000350     0xecb0
+                0x000000008000f000                . = (. + __heap_size)
+ *fill*         0x0000000080000350     0xecb0 
+                0x000000008000f000                __heap_end = .
+
+.stack          0x000000008000f000     0x1000
+                0x0000000080010000                . = (. + __stack_size)
+ *fill*         0x000000008000f000     0x1000 
+                0x0000000080010000                __sp = .
+                0x0000000080010000                __freertos_irq_stack_top = .
+OUTPUT(build/firmware.elf elf32-littleriscv)
+
+.debug_info     0x0000000000000000     0x894f
+ .debug_info    0x0000000000000000      0x1f9 build/main.o
+ .debug_info    0x00000000000001f9      0x106 build/hooks.o
+ .debug_info    0x00000000000002ff      0xb42 build/init.o
+ .debug_info    0x0000000000000e41      0x7ee build/syscalls.o
+ .debug_info    0x000000000000162f      0x2d1 build/list.o
+ .debug_info    0x0000000000001900     0x113c build/queue.o
+ .debug_info    0x0000000000002a3c     0x1c62 build/tasks.o
+ .debug_info    0x000000000000469e      0xc2f build/timers.o
+ .debug_info    0x00000000000052cd      0x263 build/port.o
+ .debug_info    0x0000000000005530       0xf8 build/heap_3.o
+ .debug_info    0x0000000000005628      0xf7d build/MLDR187_bkp.o
+ .debug_info    0x00000000000065a5      0x670 build/MLDR187_gpio.o
+ .debug_info    0x0000000000006c15      0xa56 build/MLDR187_rst_clk.o
+ .debug_info    0x000000000000766b     0x129c build/MLDR187_uart.o
+ .debug_info    0x0000000000008907       0x22 build/startup_MLDR187.o
+ .debug_info    0x0000000000008929       0x26 build/portASM.o
+
+.debug_abbrev   0x0000000000000000     0x1668
+ .debug_abbrev  0x0000000000000000      0x10e build/main.o
+ .debug_abbrev  0x000000000000010e       0x95 build/hooks.o
+ .debug_abbrev  0x00000000000001a3      0x140 build/init.o
+ .debug_abbrev  0x00000000000002e3      0x1b9 build/syscalls.o
+ .debug_abbrev  0x000000000000049c       0xf2 build/list.o
+ .debug_abbrev  0x000000000000058e      0x207 build/queue.o
+ .debug_abbrev  0x0000000000000795      0x275 build/tasks.o
+ .debug_abbrev  0x0000000000000a0a      0x1fa build/timers.o
+ .debug_abbrev  0x0000000000000c04      0x108 build/port.o
+ .debug_abbrev  0x0000000000000d0c       0xca build/heap_3.o
+ .debug_abbrev  0x0000000000000dd6      0x283 build/MLDR187_bkp.o
+ .debug_abbrev  0x0000000000001059      0x204 build/MLDR187_gpio.o
+ .debug_abbrev  0x000000000000125d      0x215 build/MLDR187_rst_clk.o
+ .debug_abbrev  0x0000000000001472      0x1d0 build/MLDR187_uart.o
+ .debug_abbrev  0x0000000000001642       0x12 build/startup_MLDR187.o
+ .debug_abbrev  0x0000000000001654       0x14 build/portASM.o
+
+.debug_aranges  0x0000000000000000      0x8f8
+ .debug_aranges
+                0x0000000000000000       0x30 build/main.o
+ .debug_aranges
+                0x0000000000000030       0x38 build/hooks.o
+ .debug_aranges
+                0x0000000000000068       0x38 build/init.o
+ .debug_aranges
+                0x00000000000000a0       0xa0 build/syscalls.o
+ .debug_aranges
+                0x0000000000000140       0x40 build/list.o
+ .debug_aranges
+                0x0000000000000180      0x128 build/queue.o
+ .debug_aranges
+                0x00000000000002a8      0x1f0 build/tasks.o
+ .debug_aranges
+                0x0000000000000498       0xe0 build/timers.o
+ .debug_aranges
+                0x0000000000000578       0x30 build/port.o
+ .debug_aranges
+                0x00000000000005a8       0x28 build/heap_3.o
+ .debug_aranges
+                0x00000000000005d0      0x130 build/MLDR187_bkp.o
+ .debug_aranges
+                0x0000000000000700       0x60 build/MLDR187_gpio.o
+ .debug_aranges
+                0x0000000000000760       0x68 build/MLDR187_rst_clk.o
+ .debug_aranges
+                0x00000000000007c8       0xe8 build/MLDR187_uart.o
+ .debug_aranges
+                0x00000000000008b0       0x28 build/startup_MLDR187.o
+ .debug_aranges
+                0x00000000000008d8       0x20 build/portASM.o
+
+.debug_ranges   0x0000000000000000      0x808
+ .debug_ranges  0x0000000000000000       0x20 build/main.o
+ .debug_ranges  0x0000000000000020       0x28 build/hooks.o
+ .debug_ranges  0x0000000000000048       0x28 build/init.o
+ .debug_ranges  0x0000000000000070       0x90 build/syscalls.o
+ .debug_ranges  0x0000000000000100       0x30 build/list.o
+ .debug_ranges  0x0000000000000130      0x118 build/queue.o
+ .debug_ranges  0x0000000000000248      0x1e0 build/tasks.o
+ .debug_ranges  0x0000000000000428       0xd0 build/timers.o
+ .debug_ranges  0x00000000000004f8       0x20 build/port.o
+ .debug_ranges  0x0000000000000518       0x18 build/heap_3.o
+ .debug_ranges  0x0000000000000530      0x120 build/MLDR187_bkp.o
+ .debug_ranges  0x0000000000000650       0x50 build/MLDR187_gpio.o
+ .debug_ranges  0x00000000000006a0       0x70 build/MLDR187_rst_clk.o
+ .debug_ranges  0x0000000000000710       0xd8 build/MLDR187_uart.o
+ .debug_ranges  0x00000000000007e8       0x20 build/startup_MLDR187.o
+
+.debug_macro    0x0000000000000000     0xdce2
+ .debug_macro   0x0000000000000000      0x2a2 build/main.o
+ .debug_macro   0x00000000000002a2      0x76c build/main.o
+ .debug_macro   0x0000000000000a0e       0x22 build/main.o
+ .debug_macro   0x0000000000000a30       0x8e build/main.o
+ .debug_macro   0x0000000000000abe       0x51 build/main.o
+ .debug_macro   0x0000000000000b0f      0x103 build/main.o
+ .debug_macro   0x0000000000000c12       0x6a build/main.o
+ .debug_macro   0x0000000000000c7c      0x1df build/main.o
+ .debug_macro   0x0000000000000e5b     0x4c49 build/main.o
+ .debug_macro   0x0000000000005aa4       0x2e build/main.o
+ .debug_macro   0x0000000000005ad2      0x174 build/main.o
+ .debug_macro   0x0000000000005c46       0x26 build/main.o
+ .debug_macro   0x0000000000005c6c       0x8e build/main.o
+ .debug_macro   0x0000000000005cfa      0x123 build/main.o
+ .debug_macro   0x0000000000005e1d      0x15a build/main.o
+ .debug_macro   0x0000000000005f77       0xd3 build/main.o
+ .debug_macro   0x000000000000604a       0x28 build/main.o
+ .debug_macro   0x0000000000006072       0x1f build/main.o
+ .debug_macro   0x0000000000006091       0x12 build/main.o
+ .debug_macro   0x00000000000060a3      0x4f6 build/main.o
+ .debug_macro   0x0000000000006599       0xc3 build/main.o
+ .debug_macro   0x000000000000665c      0x120 build/main.o
+ .debug_macro   0x000000000000677c       0x80 build/main.o
+ .debug_macro   0x00000000000067fc       0x58 build/main.o
+ .debug_macro   0x0000000000006854       0x19 build/main.o
+ .debug_macro   0x000000000000686d       0x34 build/main.o
+ .debug_macro   0x00000000000068a1       0x34 build/main.o
+ .debug_macro   0x00000000000068d5       0x16 build/main.o
+ .debug_macro   0x00000000000068eb       0x35 build/main.o
+ .debug_macro   0x0000000000006920      0x341 build/main.o
+ .debug_macro   0x0000000000006c61       0x10 build/main.o
+ .debug_macro   0x0000000000006c71       0x16 build/main.o
+ .debug_macro   0x0000000000006c87       0x43 build/main.o
+ .debug_macro   0x0000000000006cca       0x34 build/main.o
+ .debug_macro   0x0000000000006cfe       0x10 build/main.o
+ .debug_macro   0x0000000000006d0e       0x52 build/main.o
+ .debug_macro   0x0000000000006d60      0x182 build/main.o
+ .debug_macro   0x0000000000006ee2       0x10 build/main.o
+ .debug_macro   0x0000000000006ef2       0x1c build/main.o
+ .debug_macro   0x0000000000006f0e       0x52 build/main.o
+ .debug_macro   0x0000000000006f60       0x22 build/main.o
+ .debug_macro   0x0000000000006f82       0x10 build/main.o
+ .debug_macro   0x0000000000006f92       0x52 build/main.o
+ .debug_macro   0x0000000000006fe4       0xd5 build/main.o
+ .debug_macro   0x00000000000070b9       0x1c build/main.o
+ .debug_macro   0x00000000000070d5       0x3d build/main.o
+ .debug_macro   0x0000000000007112       0x16 build/main.o
+ .debug_macro   0x0000000000007128      0x16f build/main.o
+ .debug_macro   0x0000000000007297       0x16 build/main.o
+ .debug_macro   0x00000000000072ad       0x16 build/main.o
+ .debug_macro   0x00000000000072c3       0x29 build/main.o
+ .debug_macro   0x00000000000072ec       0x22 build/main.o
+ .debug_macro   0x000000000000730e       0x1c build/main.o
+ .debug_macro   0x000000000000732a      0x24b build/hooks.o
+ .debug_macro   0x0000000000007575       0x28 build/hooks.o
+ .debug_macro   0x000000000000759d       0x20 build/hooks.o
+ .debug_macro   0x00000000000075bd      0x17d build/init.o
+ .debug_macro   0x000000000000773a     0x4c43 build/init.o
+ .debug_macro   0x000000000000c37d       0x16 build/init.o
+ .debug_macro   0x000000000000c393      0x10e build/init.o
+ .debug_macro   0x000000000000c4a1       0x8d build/init.o
+ .debug_macro   0x000000000000c52e      0x268 build/syscalls.o
+ .debug_macro   0x000000000000c796       0x88 build/syscalls.o
+ .debug_macro   0x000000000000c81e       0x10 build/syscalls.o
+ .debug_macro   0x000000000000c82e       0x10 build/syscalls.o
+ .debug_macro   0x000000000000c83e      0x241 build/syscalls.o
+ .debug_macro   0x000000000000ca7f       0x16 build/syscalls.o
+ .debug_macro   0x000000000000ca95       0x10 build/syscalls.o
+ .debug_macro   0x000000000000caa5       0x10 build/syscalls.o
+ .debug_macro   0x000000000000cab5       0x35 build/syscalls.o
+ .debug_macro   0x000000000000caea      0x12c build/syscalls.o
+ .debug_macro   0x000000000000cc16      0x1af build/list.o
+ .debug_macro   0x000000000000cdc5      0x239 build/queue.o
+ .debug_macro   0x000000000000cffe       0x16 build/queue.o
+ .debug_macro   0x000000000000d014      0x296 build/tasks.o
+ .debug_macro   0x000000000000d2aa       0x16 build/tasks.o
+ .debug_macro   0x000000000000d2c0      0x1fe build/timers.o
+ .debug_macro   0x000000000000d4be       0x97 build/timers.o
+ .debug_macro   0x000000000000d555      0x1cb build/port.o
+ .debug_macro   0x000000000000d720      0x1be build/heap_3.o
+ .debug_macro   0x000000000000d8de      0x13a build/MLDR187_bkp.o
+ .debug_macro   0x000000000000da18       0xc8 build/MLDR187_gpio.o
+ .debug_macro   0x000000000000dae0       0xf6 build/MLDR187_rst_clk.o
+ .debug_macro   0x000000000000dbd6       0xfc build/MLDR187_uart.o
+ .debug_macro   0x000000000000dcd2       0x10 build/MLDR187_uart.o
+
+.debug_line     0x0000000000000000     0xcec5
+ .debug_line    0x0000000000000000      0x599 build/main.o
+ .debug_line    0x0000000000000599      0x4d6 build/hooks.o
+ .debug_line    0x0000000000000a6f      0x4ba build/init.o
+ .debug_line    0x0000000000000f29      0x7a0 build/syscalls.o
+ .debug_line    0x00000000000016c9      0x600 build/list.o
+ .debug_line    0x0000000000001cc9     0x2017 build/queue.o
+ .debug_line    0x0000000000003ce0     0x2bc7 build/tasks.o
+ .debug_line    0x00000000000068a7      0xee7 build/timers.o
+ .debug_line    0x000000000000778e      0x53f build/port.o
+ .debug_line    0x0000000000007ccd      0x46b build/heap_3.o
+ .debug_line    0x0000000000008138     0x1770 build/MLDR187_bkp.o
+ .debug_line    0x00000000000098a8      0x5e6 build/MLDR187_gpio.o
+ .debug_line    0x0000000000009e8e     0x15c2 build/MLDR187_rst_clk.o
+ .debug_line    0x000000000000b450     0x108c build/MLDR187_uart.o
+ .debug_line    0x000000000000c4dc      0x580 build/startup_MLDR187.o
+ .debug_line    0x000000000000ca5c      0x469 build/portASM.o
+
+.debug_str      0x0000000000000000    0x326c9
+ .debug_str     0x0000000000000000    0x2aa11 build/main.o
+                                      0x2ac2f (size before relaxing)
+ .debug_str     0x000000000002aa11       0x97 build/hooks.o
+                                      0x2a37c (size before relaxing)
+ .debug_str     0x000000000002aaa8      0xadc build/init.o
+                                      0x24d52 (size before relaxing)
+ .debug_str     0x000000000002b584      0xa3a build/syscalls.o
+                                      0x25caf (size before relaxing)
+ .debug_str     0x000000000002bfbe      0x16b build/list.o
+                                      0x282d5 (size before relaxing)
+ .debug_str     0x000000000002c129      0x86b build/queue.o
+                                      0x2a514 (size before relaxing)
+ .debug_str     0x000000000002c994     0x1c9d build/tasks.o
+                                      0x2b2e0 (size before relaxing)
+ .debug_str     0x000000000002e631      0x5d6 build/timers.o
+                                      0x2aa30 (size before relaxing)
+ .debug_str     0x000000000002ec07      0x1a5 build/port.o
+                                      0x294cf (size before relaxing)
+ .debug_str     0x000000000002edac       0x37 build/heap_3.o
+                                      0x29434 (size before relaxing)
+ .debug_str     0x000000000002ede3      0xf83 build/MLDR187_bkp.o
+                                      0x22b07 (size before relaxing)
+ .debug_str     0x000000000002fd66      0x65a build/MLDR187_gpio.o
+                                      0x221d3 (size before relaxing)
+ .debug_str     0x00000000000303c0     0x100b build/MLDR187_rst_clk.o
+                                      0x22d43 (size before relaxing)
+ .debug_str     0x00000000000313cb     0x12a1 build/MLDR187_uart.o
+                                      0x23391 (size before relaxing)
+ .debug_str     0x000000000003266c       0x2e build/startup_MLDR187.o
+                                         0x5a (size before relaxing)
+ .debug_str     0x000000000003269a       0x2f build/portASM.o
+                                         0x67 (size before relaxing)
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 build/main.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 build/hooks.o
+ .comment       0x0000000000000033       0x34 build/init.o
+ .comment       0x0000000000000033       0x34 build/syscalls.o
+ .comment       0x0000000000000033       0x34 build/list.o
+ .comment       0x0000000000000033       0x34 build/queue.o
+ .comment       0x0000000000000033       0x34 build/tasks.o
+ .comment       0x0000000000000033       0x34 build/timers.o
+ .comment       0x0000000000000033       0x34 build/port.o
+ .comment       0x0000000000000033       0x34 build/heap_3.o
+ .comment       0x0000000000000033       0x34 build/MLDR187_bkp.o
+ .comment       0x0000000000000033       0x34 build/MLDR187_gpio.o
+ .comment       0x0000000000000033       0x34 build/MLDR187_rst_clk.o
+ .comment       0x0000000000000033       0x34 build/MLDR187_uart.o
+
+.debug_frame    0x0000000000000000     0x260c
+ .debug_frame   0x0000000000000000       0x70 build/main.o
+ .debug_frame   0x0000000000000070       0x90 build/hooks.o
+ .debug_frame   0x0000000000000100       0xb0 build/init.o
+ .debug_frame   0x00000000000001b0      0x29c build/syscalls.o
+ .debug_frame   0x000000000000044c       0xc4 build/list.o
+ .debug_frame   0x0000000000000510      0x548 build/queue.o
+ .debug_frame   0x0000000000000a58      0x8e8 build/tasks.o
+ .debug_frame   0x0000000000001340      0x3d8 build/timers.o
+ .debug_frame   0x0000000000001718       0x78 build/port.o
+ .debug_frame   0x0000000000001790       0x60 build/heap_3.o
+ .debug_frame   0x00000000000017f0      0x540 build/MLDR187_bkp.o
+ .debug_frame   0x0000000000001d30      0x15c build/MLDR187_gpio.o
+ .debug_frame   0x0000000000001e8c      0x18c build/MLDR187_rst_clk.o
+ .debug_frame   0x0000000000002018      0x3d8 build/MLDR187_uart.o
+ .debug_frame   0x00000000000023f0       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/rv32imc/ilp32\libgcc.a(_clzsi2.o)
+ .debug_frame   0x0000000000002410       0x28 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000000000002438       0x3c c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000002474       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-malloc.o)
+ .debug_frame   0x00000000000024a4       0x20 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00000000000024c4       0x38 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00000000000024fc       0x40 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x000000000000253c       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x000000000000256c       0x30 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x000000000000259c       0x70 c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-reent.o)

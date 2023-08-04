@@ -1,53 +1,36 @@
 /*****************************************************************************
 *
 * @file    src/link_Flash.ld
-* @version V1.0.2
-* @date    01/06/2021
+* @author  Milandr Application Team
+* @version V1.0.1
+* @date    15/12/2020
+* @brief   Linker Script.
+*
+*
+* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+* "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+* LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+* A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+* OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+* SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+* LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+* DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+* THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *
 ******************************************************************************/
-
-/* It defines following symbols, which code can use without definition:
- *   __data_load_start
- *   __data_start
- *   __sdata_start
- *   __data_end
- *   __bss_start
- *   __bss_end
- *   __global_pointer$
- *   __end
- *   __ahbram_data_load_start
- *   __ahbram_data_start
- *   __ahbram_data_end
- *   __ahbram_bss_start
- *   __ahbram_bss_end
- *   __ramfunc_load_start
- *   __ramfunc_start
- *   __ramfunc_end
- *   __stack_top
- *   __stack_size
- *   __stack_limit
- *   __heap_top
- *   __heap_min_size
- *   __heap_size
- *   __heap_limit
- *   __heap_end
- *   __sp
- *   __freertos_irq_stack_top
- */
 
 OUTPUT_ARCH( "riscv" )
 ENTRY(_start)
 
-/* __stack_size - total stack size */
-__stack_size    	  = 0x1000;
-/* __heap_min_size - minimum heap size, used to check if space can be allocated. The total heap size (__heap_size) takes up all space from end of the .bss to beginning of .stack */
-__heap_min_size     = 0x1000;
+__stack_size    = 0x1000;
+__heap_size     = 0x6000;
 
 /* Specify the memory areas */
 MEMORY
 {
 	FLASH     (rx)      : ORIGIN = 0x10000000, LENGTH = 256K
-	OTP       (rx)      : ORIGIN = 0x00020000, LENGTH = 16K
 	TCMA_RAM  (xrw)     : ORIGIN = 0x80000000, LENGTH = 64K
 	TCMB_RAM  (xrw)     : ORIGIN = 0x80010000, LENGTH = 32K
 	AHB_RAM   (xrw)     : ORIGIN = 0x20000000, LENGTH = 16K
@@ -63,6 +46,15 @@ MEMORY
   REGION_ALIAS("REGION_DATA",    TCMA_RAM);
   REGION_ALIAS("REGION_RAMFUNC", TCMB_RAM);
 
+/* RUN IN RAM */
+/*REGION_ALIAS("REGION_LOAD",    TCMB_RAM);
+  REGION_ALIAS("REGION_DATA",    TCMA_RAM);
+  REGION_ALIAS("REGION_RAMFUNC", TCMB_RAM);*/
+
+/* Define output sections */
+/* ">vma_region" - VMA (virtual memory address), 
+   "AT>lma_region" - LMA (load memory address) */
+
 SECTIONS
 {
   /* The startup code goes first into REGION_LOAD */
@@ -71,19 +63,13 @@ SECTIONS
 	*(.text.init)
   } >REGION_LOAD
   
-  /* The program code goes into REGION_LOAD */
+  /* The program code and other data goes into REGION_LOAD */
   .text :
   {
 	. = ALIGN(4);
 	*(.text*)
-  } >REGION_LOAD
-
-  /* Read-only data goes into REGION_LOAD */
-  .rodata :
-  {
-    . = ALIGN(4);
-    *(.rodata*)
-  	*(.srodata*)
+	*(.rodata*)
+	*(.srodata*)
   } >REGION_LOAD
   
   /* Alignment of the following section .data */  
@@ -171,30 +157,20 @@ SECTIONS
   
   . = ALIGN(4);   
   __ramfunc_end = .;
-  
-  /* Stack and Heap symbol definitions */
-  __stack_top = ORIGIN(REGION_DATA) + LENGTH(REGION_DATA);
-  __stack_limit = __stack_top - __stack_size;
-  __heap_top = __end;
-  __heap_size = __stack_limit - __heap_top;
-  __heap_limit = __heap_top + __heap_size;
-  
-  /* Check allocation for heap of size __heap_min_size */
-  ASSERT(__heap_size >= __heap_min_size, "Unable to allocate __heap_min_size for heap!")
    
   /* .heap section doesn't contains any symbols. 
      It is only used for linker to calculate size of heap sections, and assign values to heap symbols */
-  .heap __heap_top :
+  .heap __end :
   {
-	. += __heap_size; 
+	. += __heap_size;  
     __heap_end = .;
   } >REGION_DATA
 
   /* .stack section doesn't contains any symbols. 
      It is only used for linker to calculate size of stack sections, and assign values to stack symbols */
-  .stack __stack_limit :
+  .stack ORIGIN(REGION_DATA) + LENGTH(REGION_DATA) - __stack_size :
   {
-	. += __stack_size;
+	. += __stack_size;  
     __sp = .;
     __freertos_irq_stack_top = .;
   } >REGION_DATA

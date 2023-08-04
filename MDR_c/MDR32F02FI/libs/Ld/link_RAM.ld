@@ -32,6 +32,7 @@
  *   __heap_limit
  *   __heap_end
  *   __sp
+ *   __freertos_irq_stack_top
  */
 
 OUTPUT_ARCH( "riscv" )
@@ -195,5 +196,6 @@ SECTIONS
   {
 	. += __stack_size;
     __sp = .;
+    __freertos_irq_stack_top = .;
   } >REGION_DATA
 }
