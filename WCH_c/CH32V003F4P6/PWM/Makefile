@@ -13,15 +13,15 @@ C_SOURCES =  \
 	src/main.c \
 	src/system_ch32v00x.c \
 	../libs/Debug/debug.c \
-	../libs/Peripheral/src/ch32v00x_exti.c \
 	../libs/Peripheral/src/ch32v00x_gpio.c \
 	../libs/Peripheral/src/ch32v00x_misc.c \
 	../libs/Peripheral/src/ch32v00x_rcc.c \
 	../libs/Peripheral/src/ch32v00x_tim.c \
 	../libs/Peripheral/src/ch32v00x_usart.c #\
-	../libs/Peripheral/src/ch32v00x_dma.c \
 	../libs/Peripheral/src/ch32v00x_adc.c \
 	../libs/Peripheral/src/ch32v00x_dbgmcu.c \
+	../libs/Peripheral/src/ch32v00x_dma.c \
+	../libs/Peripheral/src/ch32v00x_exti.c \
 	../libs/Peripheral/src/ch32v00x_flash.c \
 	../libs/Peripheral/src/ch32v00x_i2c.c \
 	../libs/Peripheral/src/ch32v00x_iwdg.c \
@@ -115,8 +115,7 @@ C_INCLUDES =  \
 	-Isrc \
 	-I../libs/Core \
 	-I../libs/Debug \
-	-I../libs/Peripheral/inc \
-	-I../libs/tm1637
+	-I../libs/Peripheral/inc
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT)
@@ -163,25 +162,25 @@ vpath %.s $(sort $(dir $(ASM_SOURCES)))
 
 $(BUILD_DIR)/%.o: %.c Makefile | make_folder
 	$(CC) -c $(CFLAGS) -g -std=gnu99 -MT"$(@)" -c "$<" -o "$@"
-	@echo ---------------
+	@echo --------
 
 $(BUILD_DIR)/%.o: %.s Makefile | make_folder
 	$(AS) -c $(CFLAGS) -g -MT"$(@)" -c "$<" -o "$@"
-	@echo ---------------
+	@echo --------
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile | make_folder
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
-	@echo ---------------
+	@echo --------
 	$(SZ) $@
-	@echo ---------------
+	@echo --------
 
 $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | make_folder
 	$(HEX) $< $@
-	@echo ---------------
+	@echo --------
 	
 $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | make_folder
-	$(BIN) $< $@
-	@echo ---------------
+	$(BIN) $< $@	
+	@echo --------
 	
 	
 make_folder:
@@ -197,16 +196,16 @@ OPENOCD_CFG = ../libs/Util/wch-riscv.cfg
 
 erase: build
 	$(OCD) -f $(OPENOCD_CFG) -c init -c halt -c "flash erase_sector wch_riscv 0 last" -c exit
-	@echo ---------------
+	@echo --------
 
 
 flash: erase
 	$(OCD) -f $(OPENOCD_CFG)  -c init -c halt  -c "program $(BUILD_DIR)/$(TARGET).hex" -c wlink_reset_resume -c exit
-	@echo ---------------
+	@echo --------
 
 
 reset:
 	$(OCD) -f $(OPENOCD_CFG) -c init -c reset -c resume -c exit
-	@echo ---------------
+	@echo --------
 
 
