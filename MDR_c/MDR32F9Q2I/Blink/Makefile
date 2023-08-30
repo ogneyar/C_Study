@@ -1,5 +1,6 @@
 
-TOOL_CHAIN	:= E:/Program/arm-gnu-toolchain/bin
+# TOOL_CHAIN	:= E:/Program/arm-gnu-toolchain/bin
+TOOL_CHAIN	:= E:\Program\MounRiver\MounRiver_Studio\toolchain\arm-none-eabi-gcc\bin
 OPENOCD_INTERFACE := interface/stlink.cfg
 OPENOCD_TARGET := target/mdr32f9q2i.cfg
 

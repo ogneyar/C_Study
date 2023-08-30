@@ -162,6 +162,12 @@ SECTIONS
 	.heap (COPY):
 	{
 		__end__ = .;
+
+		/* компилятор просил _exit
+		* я ему дал _exit
+		* хз что это (: */
+		_exit = .;
+
 		PROVIDE(end = .);
 		*(.heap*)
 		__HeapLimit = .;
