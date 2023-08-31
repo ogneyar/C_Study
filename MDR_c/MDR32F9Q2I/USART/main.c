@@ -68,7 +68,7 @@ int main (void)
 
 
 	/* Select HSI/2 as CPU_CLK source*/
-	RST_CLK_CPU_PLLconfig (RST_CLK_CPU_PLLsrcHSIdiv2,0);
+	RST_CLK_CPU_PLLconfig (RST_CLK_CPU_PLLsrcHSEdiv2,0);
 
 	/* Enables the CPU_CLK clock on UART2 */
 	RST_CLK_PCLKcmd(RST_CLK_PCLK_UART2, ENABLE);
@@ -81,7 +81,7 @@ int main (void)
 	UART_InitStructure.UART_WordLength              = UART_WordLength8b;
 	UART_InitStructure.UART_StopBits                = UART_StopBits1;
 	UART_InitStructure.UART_Parity                  = UART_Parity_No;
-	UART_InitStructure.UART_FIFOMode                = UART_FIFO_OFF;
+	UART_InitStructure.UART_FIFOMode                = UART_FIFO_ON;
 	UART_InitStructure.UART_HardwareFlowControl     = UART_HardwareFlowControl_RXE | UART_HardwareFlowControl_TXE;
 
 	/* Configure UART2 parameters*/
@@ -90,10 +90,26 @@ int main (void)
 	/* Enables UART2 peripheral */
 	UART_Cmd(MDR_UART2,ENABLE);
 
-	UART_SendData(MDR_UART2, "tmp_data\r\n");while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
-	UART_SendData(MDR_UART2, "tmp_data\r\n");while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
-	UART_SendData(MDR_UART2, "tmp_data\r\n");while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
+	MDR_UART2->DR = (uint32_t)'a';
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
+	UART_SendData(MDR_UART2, '\r');
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);	
+	UART_SendData(MDR_UART2, '\n');
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
 
+	MDR_UART2->DR = (uint32_t)'b';
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
+	UART_SendData(MDR_UART2, '\r');
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);	
+	UART_SendData(MDR_UART2, '\n');
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
+	
+	MDR_UART2->DR = (uint32_t)'c';
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
+	UART_SendData(MDR_UART2, '\r');
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);	
+	UART_SendData(MDR_UART2, '\n');
+	while (UART_GetFlagStatus (MDR_UART2, UART_FLAG_TXFE) != SET);
 
 	while (1)
 	{
