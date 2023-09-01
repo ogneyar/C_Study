@@ -10,6 +10,9 @@ C_SOURCES =  \
 	src/system_ch32v20x.c \
 	src/ch32v20x_it.c \
 	../libs/Debug/debug.c \
+	../libs/Peripheral/src/ch32v20x_gpio.c \
+	../libs/Peripheral/src/ch32v20x_rcc.c \
+	../libs/Peripheral/src/ch32v20x_usart.c #\
 	../libs/Peripheral/src/ch32v20x_adc.c \
 	../libs/Peripheral/src/ch32v20x_bkp.c \
 	../libs/Peripheral/src/ch32v20x_can.c \
@@ -18,17 +21,14 @@ C_SOURCES =  \
 	../libs/Peripheral/src/ch32v20x_dma.c \
 	../libs/Peripheral/src/ch32v20x_exti.c \
 	../libs/Peripheral/src/ch32v20x_flash.c \
-	../libs/Peripheral/src/ch32v20x_gpio.c \
 	../libs/Peripheral/src/ch32v20x_i2c.c \
 	../libs/Peripheral/src/ch32v20x_iwdg.c \
 	../libs/Peripheral/src/ch32v20x_misc.c \
 	../libs/Peripheral/src/ch32v20x_opa.c \
 	../libs/Peripheral/src/ch32v20x_pwr.c \
-	../libs/Peripheral/src/ch32v20x_rcc.c \
 	../libs/Peripheral/src/ch32v20x_rtc.c \
 	../libs/Peripheral/src/ch32v20x_spi.c \
 	../libs/Peripheral/src/ch32v20x_tim.c \
-	../libs/Peripheral/src/ch32v20x_usart.c \
 	../libs/Peripheral/src/ch32v20x_wwdg.c
 
 ASM_SOURCES =  \
@@ -68,7 +68,9 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 
 LDSCRIPT = ../libs/Ld/ch32v20x_map.ld
 
-LDFLAGS = $(MCU) -g --specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -nostartfiles -Xlinker --gc-sections -Wl,-Map=$(BUILD_DIR)/$(TARGET).map --specs=nosys.specs $(OPT)
+LDFLAGS = $(MCU) -g --specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -nostartfiles \
+	-Xlinker --gc-sections -Wl,-Map=$(BUILD_DIR)/$(TARGET).map \
+	--specs=nosys.specs $(OPT) #--print-memory-usage
 
 
 all: flash 
@@ -87,7 +89,7 @@ $(BUILD_DIR)/%.o: %.c Makefile | make_folder
 	$(CC) -c $(CFLAGS) -g -std=gnu99 -MT"$(@)" -c "$<" -o "$@"
 
 $(BUILD_DIR)/%.o: %.s Makefile | make_folder
-	$(AS) -c $(CFLAGS) -g -MT"$(@)" -c "$<" -o "$@"
+	$(AS) -c $(CFLAGS) -g -MT"$(@)" -c "$<" -o "$@"	
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile | make_folder
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
