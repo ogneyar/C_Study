@@ -86,7 +86,7 @@ $(BUILD_DIR)/%.o: %.s Makefile
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
 	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
-	$(CC) $(OBJECTS) -g -T$(SCRIPT) -o $@
+	$(CC) $(OBJECTS) -g -T$(SCRIPT) -o $@ -Wl,--print-memory-usage
 	$(SZ) $@
 
 $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf
