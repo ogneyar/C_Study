@@ -37,7 +37,7 @@ obj: link
 	@$(TOOL_CHAIN)\arm-none-eabi-objcopy.exe -O ihex $(ELF) $(HEX)
 
 link: compile
-	@$(TOOL_CHAIN)\arm-none-eabi-ld -g -T$(SCRIPT) -o $(ELF) $(OBJ)
+	@$(TOOL_CHAIN)\arm-none-eabi-ld -g -T$(SCRIPT) -o $(ELF) $(OBJ) --print-memory-usage
     
 compile:
 	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
