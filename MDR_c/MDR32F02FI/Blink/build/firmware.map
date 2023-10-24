@@ -327,6 +327,7 @@ END GROUP
                 0x0000000080010000                . = (. + __stack_size)
  *fill*         0x000000008000f000     0x1000 
                 0x0000000080010000                __sp = .
+                0x0000000080010000                __freertos_irq_stack_top = .
 OUTPUT(build/firmware.elf elf32-littleriscv)
 
 .debug_info     0x0000000000000000     0x13a1

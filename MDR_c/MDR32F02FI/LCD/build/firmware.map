@@ -217,7 +217,7 @@ Discarded input sections
  .text.BKP_GetDateTimeReg
                 0x0000000000000000       0xde build/MLDR187_bkp.o
  .text.BKP_WaitComplete
-                0x0000000000000000       0x20 build/MLDR187_bkp.o
+                0x0000000000000000       0x34 build/MLDR187_bkp.o
  .text.BKP_WaitRTCCycle
                 0x0000000000000000       0xac build/MLDR187_bkp.o
  .debug_macro   0x0000000000000000      0x76c build/MLDR187_bkp.o
@@ -423,7 +423,7 @@ END GROUP
  .text.init     0x0000000010000000      0x146 build/startup_MLDR187.o
                 0x0000000010000000                _start
 
-.text           0x0000000010000146     0x2c3a
+.text           0x0000000010000146     0x2c4e
                 0x0000000010000148                . = ALIGN (0x4)
  *fill*         0x0000000010000146        0x2 
  *(.text*)
@@ -501,92 +501,92 @@ END GROUP
  .text.BKP_GenWaitForOn
                 0x0000000010001254       0x5c build/MLDR187_bkp.o
  .text.BKP_DisableWP
-                0x00000000100012b0       0x2e build/MLDR187_bkp.o
+                0x00000000100012b0       0x42 build/MLDR187_bkp.o
  .text.BKP_EnableWP
-                0x00000000100012de       0x16 build/MLDR187_bkp.o
+                0x00000000100012f2       0x16 build/MLDR187_bkp.o
  .text.EEPROM_SetLatency
-                0x00000000100012f4       0x50 build/MLDR187_eeprom.o
-                0x00000000100012f4                EEPROM_SetLatency
+                0x0000000010001308       0x50 build/MLDR187_eeprom.o
+                0x0000000010001308                EEPROM_SetLatency
  .text.PORT_Init
-                0x0000000010001344      0x1be build/MLDR187_gpio.o
-                0x0000000010001344                PORT_Init
+                0x0000000010001358      0x1be build/MLDR187_gpio.o
+                0x0000000010001358                PORT_Init
  .text.PORT_Write
-                0x0000000010001502       0x5c build/MLDR187_gpio.o
-                0x0000000010001502                PORT_Write
+                0x0000000010001516       0x5c build/MLDR187_gpio.o
+                0x0000000010001516                PORT_Write
  .text.PORT_Read
-                0x000000001000155e       0x1c build/MLDR187_gpio.o
-                0x000000001000155e                PORT_Read
+                0x0000000010001572       0x1c build/MLDR187_gpio.o
+                0x0000000010001572                PORT_Read
  .text.PORT_ReadPin
-                0x000000001000157a       0x34 build/MLDR187_gpio.o
-                0x000000001000157a                PORT_ReadPin
+                0x000000001000158e       0x34 build/MLDR187_gpio.o
+                0x000000001000158e                PORT_ReadPin
  .text.PORT_SetReset
-                0x00000000100015ae       0x38 build/MLDR187_gpio.o
-                0x00000000100015ae                PORT_SetReset
+                0x00000000100015c2       0x38 build/MLDR187_gpio.o
+                0x00000000100015c2                PORT_SetReset
  .text.RST_CLK_SetupCpuSpeed
-                0x00000000100015e6      0x486 build/MLDR187_rst_clk.o
-                0x00000000100015e6                RST_CLK_SetupCpuSpeed
+                0x00000000100015fa      0x486 build/MLDR187_rst_clk.o
+                0x00000000100015fa                RST_CLK_SetupCpuSpeed
  .text.RST_CLK_SetupHsPeripheralClock
-                0x0000000010001a6c      0x1ca build/MLDR187_rst_clk.o
-                0x0000000010001a6c                RST_CLK_SetupHsPeripheralClock
+                0x0000000010001a80      0x1ca build/MLDR187_rst_clk.o
+                0x0000000010001a80                RST_CLK_SetupHsPeripheralClock
  .text.RST_CLK_EnablePeripheralClock
-                0x0000000010001c36      0x67c build/MLDR187_rst_clk.o
-                0x0000000010001c36                RST_CLK_EnablePeripheralClock
+                0x0000000010001c4a      0x67c build/MLDR187_rst_clk.o
+                0x0000000010001c4a                RST_CLK_EnablePeripheralClock
  .text.RST_CLK_DisablePeripheralClock
-                0x00000000100022b2      0x3fc build/MLDR187_rst_clk.o
-                0x00000000100022b2                RST_CLK_DisablePeripheralClock
+                0x00000000100022c6      0x3fc build/MLDR187_rst_clk.o
+                0x00000000100022c6                RST_CLK_DisablePeripheralClock
  .text.rccEncodeDivisor3bit
-                0x00000000100026ae       0x84 build/MLDR187_rst_clk.o
+                0x00000000100026c2       0x84 build/MLDR187_rst_clk.o
  .text.rccEncodeDivisor4bit
-                0x0000000010002732       0x8c build/MLDR187_rst_clk.o
+                0x0000000010002746       0x8c build/MLDR187_rst_clk.o
  .text.rccEncodeDivisorNumeric
-                0x00000000100027be       0x98 build/MLDR187_rst_clk.o
+                0x00000000100027d2       0x98 build/MLDR187_rst_clk.o
  .text.UART_Init
-                0x0000000010002856      0x2de build/MLDR187_uart.o
-                0x0000000010002856                UART_Init
+                0x000000001000286a      0x2de build/MLDR187_uart.o
+                0x000000001000286a                UART_Init
  .text.UART_StructInitDefault
-                0x0000000010002b34       0xa0 build/MLDR187_uart.o
-                0x0000000010002b34                UART_StructInitDefault
+                0x0000000010002b48       0xa0 build/MLDR187_uart.o
+                0x0000000010002b48                UART_StructInitDefault
  .text.UART_DeInit
-                0x0000000010002bd4       0xb6 build/MLDR187_uart.o
-                0x0000000010002bd4                UART_DeInit
+                0x0000000010002be8       0xb6 build/MLDR187_uart.o
+                0x0000000010002be8                UART_DeInit
  .text.UART_Cmd
-                0x0000000010002c8a       0x3e build/MLDR187_uart.o
-                0x0000000010002c8a                UART_Cmd
+                0x0000000010002c9e       0x3e build/MLDR187_uart.o
+                0x0000000010002c9e                UART_Cmd
  .text.UART_Send
-                0x0000000010002cc8       0x36 build/MLDR187_uart.o
-                0x0000000010002cc8                UART_Send
+                0x0000000010002cdc       0x36 build/MLDR187_uart.o
+                0x0000000010002cdc                UART_Send
  .text.UART_GetFlagStatus
-                0x0000000010002cfe       0x34 build/MLDR187_uart.o
-                0x0000000010002cfe                UART_GetFlagStatus
+                0x0000000010002d12       0x34 build/MLDR187_uart.o
+                0x0000000010002d12                UART_GetFlagStatus
  .text.__libc_init_array
-                0x0000000010002d32       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
-                0x0000000010002d32                __libc_init_array
+                0x0000000010002d46       0x4e c:/program files/toolchain/xpack-riscv-none-embed-gcc-10.2.0-1.1/bin/../lib/gcc/riscv-none-embed/10.2.0/../../../../riscv-none-embed/lib/rv32imc/ilp32\libg_nano.a(lib_a-init.o)
+                0x0000000010002d46                __libc_init_array
 
-.rodata         0x0000000010002d80      0x880
-                0x0000000010002d80                . = ALIGN (0x4)
+.rodata         0x0000000010002d94      0x880
+                0x0000000010002d94                . = ALIGN (0x4)
  *(.rodata*)
  .rodata.Logotip
-                0x0000000010002d80      0x1c0 build/main.o
-                0x0000000010002d80                Logotip
- .rodata        0x0000000010002f40       0x2d build/main.o
- *fill*         0x0000000010002f6d        0x3 
+                0x0000000010002d94      0x1c0 build/main.o
+                0x0000000010002d94                Logotip
+ .rodata        0x0000000010002f54       0x2d build/main.o
+ *fill*         0x0000000010002f81        0x3 
  .rodata.LCD_PUT_BYTE
-                0x0000000010002f70       0x28 build/text.o
+                0x0000000010002f84       0x28 build/text.o
  .rodata.Font_ASCII_6x8_Data
-                0x0000000010002f98      0x600 build/Font_ASCII_6x8.o
+                0x0000000010002fac      0x600 build/Font_ASCII_6x8.o
  .rodata.rccEncodeDivisor3bit
-                0x0000000010003598       0x20 build/MLDR187_rst_clk.o
+                0x00000000100035ac       0x20 build/MLDR187_rst_clk.o
  .rodata.rccEncodeDivisor4bit
-                0x00000000100035b8       0x24 build/MLDR187_rst_clk.o
+                0x00000000100035cc       0x24 build/MLDR187_rst_clk.o
  .rodata.rccEncodeDivisorNumeric
-                0x00000000100035dc       0x24 build/MLDR187_rst_clk.o
+                0x00000000100035f0       0x24 build/MLDR187_rst_clk.o
  *(.srodata*)
 
-.dalign         0x0000000010003600        0x0
-                0x0000000010003600                . = ALIGN (0x4)
-                0x0000000010003600                __data_load_start = LOADADDR (.data)
+.dalign         0x0000000010003614        0x0
+                0x0000000010003614                . = ALIGN (0x4)
+                0x0000000010003614                __data_load_start = LOADADDR (.data)
 
-.data           0x0000000080000000      0x15c load address 0x0000000010003600
+.data           0x0000000080000000      0x15c load address 0x0000000010003614
                 0x0000000080000000                . = ALIGN (0x4)
                 0x0000000080000000                __data_start = .
  *(.data*)
@@ -669,11 +669,11 @@ END GROUP
                 0x0000000080000220                . = ALIGN (0x8)
                 0x0000000080000220                __end = .
 
-.aalign         0x000000001000375c        0x0
-                0x000000001000375c                . = ALIGN (0x4)
-                0x000000001000375c                __ahbram_data_load_start = LOADADDR (.ahbram_data)
+.aalign         0x0000000010003770        0x0
+                0x0000000010003770                . = ALIGN (0x4)
+                0x0000000010003770                __ahbram_data_load_start = LOADADDR (.ahbram_data)
 
-.ahbram_data    0x0000000020000000        0x0 load address 0x000000001000375c
+.ahbram_data    0x0000000020000000        0x0 load address 0x0000000010003770
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                __ahbram_data_start = .
  *(.ahbram_data)
@@ -687,11 +687,11 @@ END GROUP
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                __ahbram_bss_end = .
 
-.ralign         0x000000001000375c        0x0
-                0x000000001000375c                . = ALIGN (0x4)
-                0x000000001000375c                __ramfunc_load_start = LOADADDR (.ramfunc)
+.ralign         0x0000000010003770        0x0
+                0x0000000010003770                . = ALIGN (0x4)
+                0x0000000010003770                __ramfunc_load_start = LOADADDR (.ramfunc)
 
-.ramfunc        0x0000000080010000      0x162 load address 0x000000001000375c
+.ramfunc        0x0000000080010000      0x162 load address 0x0000000010003770
                 0x0000000080010000                . = ALIGN (0x4)
                 0x0000000080010000                __ramfunc_start = .
  *(.ramfunc*)
@@ -745,7 +745,7 @@ END GROUP
                 0x000000008001015e                UART4_IRQHandler
                 0x0000000080010160                OTP_Corrupt_IRQHandler
 
-.rela.dyn       0x0000000080010164        0x0 load address 0x00000000100038be
+.rela.dyn       0x0000000080010164        0x0 load address 0x00000000100038d2
  .rela.data     0x0000000080010164        0x0 build/main.o
  .rela.text.init
                 0x0000000080010164        0x0 build/main.o
@@ -769,19 +769,20 @@ END GROUP
                 0x0000000080010000                . = (. + __stack_size)
  *fill*         0x000000008000f000     0x1000 
                 0x0000000080010000                __sp = .
+                0x0000000080010000                __freertos_irq_stack_top = .
 OUTPUT(build/firmware.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x50b0
+.debug_info     0x0000000000000000     0x50da
  .debug_info    0x0000000000000000      0xd55 build/main.o
  .debug_info    0x0000000000000d55      0x36a build/text.o
  .debug_info    0x00000000000010bf      0x130 build/Font_ASCII_6x8.o
  .debug_info    0x00000000000011ef      0x709 build/lcd_MLDR187.o
- .debug_info    0x00000000000018f8      0xf53 build/MLDR187_bkp.o
- .debug_info    0x000000000000284b      0x4e1 build/MLDR187_eeprom.o
- .debug_info    0x0000000000002d2c      0x670 build/MLDR187_gpio.o
- .debug_info    0x000000000000339c      0xa56 build/MLDR187_rst_clk.o
- .debug_info    0x0000000000003df2     0x129c build/MLDR187_uart.o
- .debug_info    0x000000000000508e       0x22 build/startup_MLDR187.o
+ .debug_info    0x00000000000018f8      0xf7d build/MLDR187_bkp.o
+ .debug_info    0x0000000000002875      0x4e1 build/MLDR187_eeprom.o
+ .debug_info    0x0000000000002d56      0x670 build/MLDR187_gpio.o
+ .debug_info    0x00000000000033c6      0xa56 build/MLDR187_rst_clk.o
+ .debug_info    0x0000000000003e1c     0x129c build/MLDR187_uart.o
+ .debug_info    0x00000000000050b8       0x22 build/startup_MLDR187.o
 
 .debug_abbrev   0x0000000000000000     0x1011
  .debug_abbrev  0x0000000000000000      0x213 build/main.o
@@ -889,19 +890,19 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_macro   0x0000000000007349       0x10 build/MLDR187_uart.o
  .debug_macro   0x0000000000007359       0x8e build/MLDR187_uart.o
 
-.debug_line     0x0000000000000000     0x70b2
+.debug_line     0x0000000000000000     0x70f0
  .debug_line    0x0000000000000000      0x903 build/main.o
  .debug_line    0x0000000000000903      0x7bc build/text.o
  .debug_line    0x00000000000010bf      0x1d8 build/Font_ASCII_6x8.o
  .debug_line    0x0000000000001297      0x784 build/lcd_MLDR187.o
- .debug_line    0x0000000000001a1b     0x1732 build/MLDR187_bkp.o
- .debug_line    0x000000000000314d      0xdb1 build/MLDR187_eeprom.o
- .debug_line    0x0000000000003efe      0x5e6 build/MLDR187_gpio.o
- .debug_line    0x00000000000044e4     0x15c2 build/MLDR187_rst_clk.o
- .debug_line    0x0000000000005aa6     0x108c build/MLDR187_uart.o
- .debug_line    0x0000000000006b32      0x580 build/startup_MLDR187.o
+ .debug_line    0x0000000000001a1b     0x1770 build/MLDR187_bkp.o
+ .debug_line    0x000000000000318b      0xdb1 build/MLDR187_eeprom.o
+ .debug_line    0x0000000000003f3c      0x5e6 build/MLDR187_gpio.o
+ .debug_line    0x0000000000004522     0x15c2 build/MLDR187_rst_clk.o
+ .debug_line    0x0000000000005ae4     0x108c build/MLDR187_uart.o
+ .debug_line    0x0000000000006b70      0x580 build/startup_MLDR187.o
 
-.debug_str      0x0000000000000000    0x2a5a4
+.debug_str      0x0000000000000000    0x2a5a9
  .debug_str     0x0000000000000000    0x266b1 build/main.o
                                       0x268da (size before relaxing)
  .debug_str     0x00000000000266b1      0x108 build/text.o
@@ -910,17 +911,17 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
                                       0x2146c (size before relaxing)
  .debug_str     0x00000000000267e2      0x149 build/lcd_MLDR187.o
                                       0x220ad (size before relaxing)
- .debug_str     0x000000000002692b     0x10ba build/MLDR187_bkp.o
-                                      0x22afd (size before relaxing)
- .debug_str     0x00000000000279e5      0x368 build/MLDR187_eeprom.o
+ .debug_str     0x000000000002692b     0x10bf build/MLDR187_bkp.o
+                                      0x22b02 (size before relaxing)
+ .debug_str     0x00000000000279ea      0x368 build/MLDR187_eeprom.o
                                       0x21b68 (size before relaxing)
- .debug_str     0x0000000000027d4d      0x65a build/MLDR187_gpio.o
+ .debug_str     0x0000000000027d52      0x65a build/MLDR187_gpio.o
                                       0x221ce (size before relaxing)
- .debug_str     0x00000000000283a7      0xfa1 build/MLDR187_rst_clk.o
+ .debug_str     0x00000000000283ac      0xfa1 build/MLDR187_rst_clk.o
                                       0x22d3e (size before relaxing)
- .debug_str     0x0000000000029348     0x122e build/MLDR187_uart.o
+ .debug_str     0x000000000002934d     0x122e build/MLDR187_uart.o
                                       0x2338c (size before relaxing)
- .debug_str     0x000000000002a576       0x2e build/startup_MLDR187.o
+ .debug_str     0x000000000002a57b       0x2e build/startup_MLDR187.o
                                          0x55 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
