@@ -47,134 +47,121 @@
                                      47 	.area HOME
       000000                         48 __interrupt_vect:
       000000 82v00u00u00             49 	int s_GSINIT ; reset
-      000004 82 00 00 00             50 	int 0x000000 ; trap
-      000008 82 00 00 00             51 	int 0x000000 ; int0
-      00000C 82 00 00 00             52 	int 0x000000 ; int1
-      000010 82 00 00 00             53 	int 0x000000 ; int2
-      000014 82 00 00 00             54 	int 0x000000 ; int3
-      000018 82 00 00 00             55 	int 0x000000 ; int4
-      00001C 82 00 00 00             56 	int 0x000000 ; int5
-      000020 82 00 00 00             57 	int 0x000000 ; int6
-      000024 82 00 00 00             58 	int 0x000000 ; int7
-      000028 82 00 00 00             59 	int 0x000000 ; int8
-      00002C 82 00 00 00             60 	int 0x000000 ; int9
-      000030 82 00 00 00             61 	int 0x000000 ; int10
-      000034 82v00u00u00             62 	int _TIM1_overflow_Handler ; int11
-                                     63 ;--------------------------------------------------------
-                                     64 ; global & static initialisations
-                                     65 ;--------------------------------------------------------
-                                     66 	.area HOME
-                                     67 	.area GSINIT
-                                     68 	.area GSFINAL
-                                     69 	.area GSINIT
-      000000 CDr00r00         [ 4]   70 	call	___sdcc_external_startup
-      000003 4D               [ 1]   71 	tnz	a
-      000004 27 03            [ 1]   72 	jreq	__sdcc_init_data
-      000006 CCr00r38         [ 2]   73 	jp	__sdcc_program_startup
-      000009                         74 __sdcc_init_data:
-                                     75 ; stm8_genXINIT() start
-      000009 AEr00r00         [ 2]   76 	ldw x, #l_DATA
-      00000C 27 07            [ 1]   77 	jreq	00002$
-      00000E                         78 00001$:
-      00000E 72 4FuFFuFF      [ 1]   79 	clr (s_DATA - 1, x)
-      000012 5A               [ 2]   80 	decw x
-      000013 26 F9            [ 1]   81 	jrne	00001$
-      000015                         82 00002$:
-      000015 AEr00r00         [ 2]   83 	ldw	x, #l_INITIALIZER
-      000018 27 09            [ 1]   84 	jreq	00004$
-      00001A                         85 00003$:
-      00001A D6uFFuFF         [ 1]   86 	ld	a, (s_INITIALIZER - 1, x)
-      00001D D7uFFuFF         [ 1]   87 	ld	(s_INITIALIZED - 1, x), a
-      000020 5A               [ 2]   88 	decw	x
-      000021 26 F7            [ 1]   89 	jrne	00003$
-      000023                         90 00004$:
-                                     91 ; stm8_genXINIT() end
-                                     92 	.area GSFINAL
-      000000 CCr00r38         [ 2]   93 	jp	__sdcc_program_startup
-                                     94 ;--------------------------------------------------------
-                                     95 ; Home
-                                     96 ;--------------------------------------------------------
-                                     97 	.area HOME
-                                     98 	.area HOME
-      000038                         99 __sdcc_program_startup:
-      000038 CCr00r2B         [ 2]  100 	jp	_main
-                                    101 ;	return from main will return to caller
-                                    102 ;--------------------------------------------------------
-                                    103 ; code
-                                    104 ;--------------------------------------------------------
-                                    105 	.area CODE
-                                    106 ;	main.c: 36: void TIM1_overflow_Handler() __interrupt(11)
-                                    107 ;	-----------------------------------------
-                                    108 ;	 function TIM1_overflow_Handler
-                                    109 ;	-----------------------------------------
-      000000                        110 _TIM1_overflow_Handler:
-      000000 88               [ 1]  111 	push	a
-                                    112 ;	main.c: 38: TIM1_SR1 &= ~1;
-      000001 72 11 52 55      [ 1]  113 	bres	0x5255, #0
-                                    114 ;	main.c: 39: if (led == 1) {
-      000005 C6u00u00         [ 1]  115 	ld	a, _led+0
-      000008 4A               [ 1]  116 	dec	a
-      000009 26 05            [ 1]  117 	jrne	00112$
-      00000B A6 01            [ 1]  118 	ld	a, #0x01
-      00000D 6B 01            [ 1]  119 	ld	(0x01, sp), a
-      00000F C5                     120 	.byte 0xc5
-      000010                        121 00112$:
-      000010 0F 01            [ 1]  122 	clr	(0x01, sp)
-      000012                        123 00113$:
-                                    124 ;	main.c: 40: GPIOB->ODR |= (1 << 5);
-      000012 C6 50 05         [ 1]  125 	ld	a, 0x5005
-                                    126 ;	main.c: 39: if (led == 1) {
-      000015 0D 01            [ 1]  127 	tnz	(0x01, sp)
-      000017 27 07            [ 1]  128 	jreq	00102$
-                                    129 ;	main.c: 40: GPIOB->ODR |= (1 << 5);
-      000019 AA 20            [ 1]  130 	or	a, #0x20
-      00001B C7 50 05         [ 1]  131 	ld	0x5005, a
-      00001E 20 05            [ 2]  132 	jra	00103$
-      000020                        133 00102$:
-                                    134 ;	main.c: 44: GPIOB->ODR &= ~(1 << 5);  
-      000020 A4 DF            [ 1]  135 	and	a, #0xdf
-      000022 C7 50 05         [ 1]  136 	ld	0x5005, a
-      000025                        137 00103$:
-                                    138 ;	main.c: 46: led  ^= 1;
-      000025 90 10u00u00      [ 1]  139 	bcpl	_led+0, #0
-                                    140 ;	main.c: 47: }
-      000029 84               [ 1]  141 	pop	a
-      00002A 80               [11]  142 	iret
-                                    143 ;	main.c: 50: void main(void)
-                                    144 ;	-----------------------------------------
-                                    145 ;	 function main
-                                    146 ;	-----------------------------------------
-      00002B                        147 _main:
-                                    148 ;	main.c: 52: CLK_DIVR = 0x00;
-      00002B 35 00 50 C6      [ 1]  149 	mov	0x50c6+0, #0x00
-                                    150 ;	main.c: 53: CLK_PCKENR1 = 0xFF;
-      00002F 35 FF 50 C7      [ 1]  151 	mov	0x50c7+0, #0xff
-                                    152 ;	main.c: 55: GPIOB->DDR |= (1 << 5);
-      000033 72 1A 50 07      [ 1]  153 	bset	0x5007, #5
-                                    154 ;	main.c: 56: GPIOB->ODR |= (1 << 5);
-      000037 C6 50 05         [ 1]  155 	ld	a, 0x5005
-      00003A AA 20            [ 1]  156 	or	a, #0x20
-      00003C C7 50 05         [ 1]  157 	ld	0x5005, a
-                                    158 ;	main.c: 58: TIM1_PSCRH = 0x00;
-      00003F 35 00 52 60      [ 1]  159 	mov	0x5260+0, #0x00
-                                    160 ;	main.c: 59: TIM1_PSCRL = 0xF4;
-      000043 35 F4 52 61      [ 1]  161 	mov	0x5261+0, #0xf4
-                                    162 ;	main.c: 60: TIM1_CR1 = 0x01;
-      000047 35 01 52 50      [ 1]  163 	mov	0x5250+0, #0x01
-                                    164 ;	main.c: 61: TIM1_IER = 0x01;
-      00004B 35 01 52 54      [ 1]  165 	mov	0x5254+0, #0x01
-                                    166 ;	main.c: 62: __asm__ ("rim");
-      00004F 9A               [ 1]  167 	rim
-                                    168 ;	main.c: 63: while(1)
-      000050                        169 00102$:
-                                    170 ;	main.c: 65: __asm__ ("WFI");
-      000050 8F               [10]  171 	WFI
-      000051 20 FD            [ 2]  172 	jra	00102$
-                                    173 ;	main.c: 67: }
-      000053 81               [ 4]  174 	ret
-                                    175 	.area CODE
-                                    176 	.area CONST
-                                    177 	.area INITIALIZER
-      000000                        178 __xinit__led:
-      000000 00                     179 	.db #0x00	; 0
-                                    180 	.area CABS (ABS)
+                                     50 ;--------------------------------------------------------
+                                     51 ; global & static initialisations
+                                     52 ;--------------------------------------------------------
+                                     53 	.area HOME
+                                     54 	.area GSINIT
+                                     55 	.area GSFINAL
+                                     56 	.area GSINIT
+      000000 CDr00r00         [ 4]   57 	call	___sdcc_external_startup
+      000003 4D               [ 1]   58 	tnz	a
+      000004 27 03            [ 1]   59 	jreq	__sdcc_init_data
+      000006 CCr00r04         [ 2]   60 	jp	__sdcc_program_startup
+      000009                         61 __sdcc_init_data:
+                                     62 ; stm8_genXINIT() start
+      000009 AEr00r00         [ 2]   63 	ldw x, #l_DATA
+      00000C 27 07            [ 1]   64 	jreq	00002$
+      00000E                         65 00001$:
+      00000E 72 4FuFFuFF      [ 1]   66 	clr (s_DATA - 1, x)
+      000012 5A               [ 2]   67 	decw x
+      000013 26 F9            [ 1]   68 	jrne	00001$
+      000015                         69 00002$:
+      000015 AEr00r00         [ 2]   70 	ldw	x, #l_INITIALIZER
+      000018 27 09            [ 1]   71 	jreq	00004$
+      00001A                         72 00003$:
+      00001A D6uFFuFF         [ 1]   73 	ld	a, (s_INITIALIZER - 1, x)
+      00001D D7uFFuFF         [ 1]   74 	ld	(s_INITIALIZED - 1, x), a
+      000020 5A               [ 2]   75 	decw	x
+      000021 26 F7            [ 1]   76 	jrne	00003$
+      000023                         77 00004$:
+                                     78 ; stm8_genXINIT() end
+                                     79 	.area GSFINAL
+      000000 CCr00r04         [ 2]   80 	jp	__sdcc_program_startup
+                                     81 ;--------------------------------------------------------
+                                     82 ; Home
+                                     83 ;--------------------------------------------------------
+                                     84 	.area HOME
+                                     85 	.area HOME
+      000004                         86 __sdcc_program_startup:
+      000004 CCr00r2B         [ 2]   87 	jp	_main
+                                     88 ;	return from main will return to caller
+                                     89 ;--------------------------------------------------------
+                                     90 ; code
+                                     91 ;--------------------------------------------------------
+                                     92 	.area CODE
+                                     93 ;	main.c: 36: void TIM1_overflow_Handler() //__interrupt(11)
+                                     94 ;	-----------------------------------------
+                                     95 ;	 function TIM1_overflow_Handler
+                                     96 ;	-----------------------------------------
+      000000                         97 _TIM1_overflow_Handler:
+      000000 88               [ 1]   98 	push	a
+                                     99 ;	main.c: 38: TIM1_SR1 &= ~1;
+      000001 72 11 52 55      [ 1]  100 	bres	0x5255, #0
+                                    101 ;	main.c: 39: if (led == 1) {
+      000005 C6u00u00         [ 1]  102 	ld	a, _led+0
+      000008 4A               [ 1]  103 	dec	a
+      000009 26 05            [ 1]  104 	jrne	00112$
+      00000B A6 01            [ 1]  105 	ld	a, #0x01
+      00000D 6B 01            [ 1]  106 	ld	(0x01, sp), a
+      00000F C5                     107 	.byte 0xc5
+      000010                        108 00112$:
+      000010 0F 01            [ 1]  109 	clr	(0x01, sp)
+      000012                        110 00113$:
+                                    111 ;	main.c: 40: GPIOB->ODR |= (1 << 5);
+      000012 C6 50 05         [ 1]  112 	ld	a, 0x5005
+                                    113 ;	main.c: 39: if (led == 1) {
+      000015 0D 01            [ 1]  114 	tnz	(0x01, sp)
+      000017 27 07            [ 1]  115 	jreq	00102$
+                                    116 ;	main.c: 40: GPIOB->ODR |= (1 << 5);
+      000019 AA 20            [ 1]  117 	or	a, #0x20
+      00001B C7 50 05         [ 1]  118 	ld	0x5005, a
+      00001E 20 05            [ 2]  119 	jra	00103$
+      000020                        120 00102$:
+                                    121 ;	main.c: 44: GPIOB->ODR &= ~(1 << 5);  
+      000020 A4 DF            [ 1]  122 	and	a, #0xdf
+      000022 C7 50 05         [ 1]  123 	ld	0x5005, a
+      000025                        124 00103$:
+                                    125 ;	main.c: 46: led  ^= 1;
+      000025 90 10u00u00      [ 1]  126 	bcpl	_led+0, #0
+                                    127 ;	main.c: 47: }
+      000029 84               [ 1]  128 	pop	a
+      00002A 81               [ 4]  129 	ret
+                                    130 ;	main.c: 50: void main(void)
+                                    131 ;	-----------------------------------------
+                                    132 ;	 function main
+                                    133 ;	-----------------------------------------
+      00002B                        134 _main:
+                                    135 ;	main.c: 52: CLK_DIVR = 0x00;
+      00002B 35 00 50 C6      [ 1]  136 	mov	0x50c6+0, #0x00
+                                    137 ;	main.c: 53: CLK_PCKENR1 = 0xFF;
+      00002F 35 FF 50 C7      [ 1]  138 	mov	0x50c7+0, #0xff
+                                    139 ;	main.c: 55: GPIOB->DDR |= (1 << 5);
+      000033 72 1A 50 07      [ 1]  140 	bset	0x5007, #5
+                                    141 ;	main.c: 56: GPIOB->ODR |= (1 << 5);
+      000037 C6 50 05         [ 1]  142 	ld	a, 0x5005
+      00003A AA 20            [ 1]  143 	or	a, #0x20
+      00003C C7 50 05         [ 1]  144 	ld	0x5005, a
+                                    145 ;	main.c: 58: TIM1_PSCRH = 0x00;
+      00003F 35 00 52 60      [ 1]  146 	mov	0x5260+0, #0x00
+                                    147 ;	main.c: 59: TIM1_PSCRL = 0xF4;
+      000043 35 F4 52 61      [ 1]  148 	mov	0x5261+0, #0xf4
+                                    149 ;	main.c: 60: TIM1_CR1 = 0x01;
+      000047 35 01 52 50      [ 1]  150 	mov	0x5250+0, #0x01
+                                    151 ;	main.c: 61: TIM1_IER = 0x01;
+      00004B 35 01 52 54      [ 1]  152 	mov	0x5254+0, #0x01
+                                    153 ;	main.c: 62: __asm__ ("rim");
+      00004F 9A               [ 1]  154 	rim
+                                    155 ;	main.c: 63: while(1)
+      000050                        156 00102$:
+                                    157 ;	main.c: 65: __asm__ ("WFI");
+      000050 8F               [10]  158 	WFI
+      000051 20 FD            [ 2]  159 	jra	00102$
+                                    160 ;	main.c: 67: }
+      000053 81               [ 4]  161 	ret
+                                    162 	.area CODE
+                                    163 	.area CONST
+                                    164 	.area INITIALIZER
+      000000                        165 __xinit__led:
+      000000 00                     166 	.db #0x00	; 0
+                                    167 	.area CABS (ABS)

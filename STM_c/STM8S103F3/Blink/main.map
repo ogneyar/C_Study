@@ -23,15 +23,15 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000001  s_INITIALIZED                   
      00000002  s_SSEG                          
      00000003  l_GSFINAL                       
+     00000007  l_HOME                          
      00000023  l_GSINIT                        
-     0000003B  l_HOME                          
      00000056  l_CODE                          
      00008000  s_HOME                          
-     0000803B  s_GSINIT                        
-     0000805E  s_GSFINAL                       
-     00008061  s_CONST                         
-     00008061  s_INITIALIZER                   
-     00008062  s_CODE                          
+     00008007  s_GSINIT                        
+     0000802A  s_GSFINAL                       
+     0000802D  s_CONST                         
+     0000802D  s_INITIALIZER                   
+     0000802E  s_CODE                          
 
 ASxxxx Linker V03.00/V05.40 + sdld,  page 2.
 Hexadecimal  [32-Bits]
@@ -58,7 +58,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-HOME                                00008000    0000003B =          59. bytes (REL,CON)
+HOME                                00008000    00000007 =           7. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -67,7 +67,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-GSINIT                              0000803B    00000023 =          35. bytes (REL,CON)
+GSINIT                              00008007    00000023 =          35. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -76,7 +76,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-GSFINAL                             0000805E    00000003 =           3. bytes (REL,CON)
+GSFINAL                             0000802A    00000003 =           3. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -85,7 +85,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-INITIALIZER                         00008061    00000001 =           1. bytes (REL,CON)
+INITIALIZER                         0000802D    00000001 =           1. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -94,13 +94,13 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CODE                                00008062    00000056 =          86. bytes (REL,CON)
+CODE                                0000802E    00000056 =          86. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00008062  _TIM1_overflow_Handler             main
-     0000808D  _main                              main
-     000080B6  ___sdcc_external_startup           _startup
+     0000802E  _TIM1_overflow_Handler             main
+     00008059  _main                              main
+     00008082  ___sdcc_external_startup           _startup
 ASxxxx Linker V03.00/V05.40 + sdld,  page 9.
 
 Files Linked                              [ module(s) ]

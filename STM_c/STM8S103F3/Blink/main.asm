@@ -47,19 +47,6 @@ __start__stack:
 	.area HOME
 __interrupt_vect:
 	int s_GSINIT ; reset
-	int 0x000000 ; trap
-	int 0x000000 ; int0
-	int 0x000000 ; int1
-	int 0x000000 ; int2
-	int 0x000000 ; int3
-	int 0x000000 ; int4
-	int 0x000000 ; int5
-	int 0x000000 ; int6
-	int 0x000000 ; int7
-	int 0x000000 ; int8
-	int 0x000000 ; int9
-	int 0x000000 ; int10
-	int _TIM1_overflow_Handler ; int11
 ;--------------------------------------------------------
 ; global & static initialisations
 ;--------------------------------------------------------
@@ -103,7 +90,7 @@ __sdcc_program_startup:
 ; code
 ;--------------------------------------------------------
 	.area CODE
-;	main.c: 36: void TIM1_overflow_Handler() __interrupt(11)
+;	main.c: 36: void TIM1_overflow_Handler() //__interrupt(11)
 ;	-----------------------------------------
 ;	 function TIM1_overflow_Handler
 ;	-----------------------------------------
@@ -139,7 +126,7 @@ _TIM1_overflow_Handler:
 	bcpl	_led+0, #0
 ;	main.c: 47: }
 	pop	a
-	iret
+	ret
 ;	main.c: 50: void main(void)
 ;	-----------------------------------------
 ;	 function main

@@ -49,28 +49,19 @@ void TIM1_overflow_Handler() //__interrupt(11)
 
 void main(void)
 {
-__asm__(
-    // CLK_DIVR = 0x00;
-    "mov	0x50c6+0, #0x00"
-    // CLK_PCKENR1 = 0xFF;
-	"mov	0x50c7+0, #0xff"
-    // GPIOB->DDR |= (1 << 5);
-	"bset	0x5007, #5"
-    // GPIOB->ODR |= (1 << 5);
-	"ld	a, 0x5005"
-	"or	a, #0x20"
-	"ld	0x5005, a"
-    // TIM1_PSCRH = 0x00;
-	"mov	0x5260+0, #0x00"
-    // TIM1_PSCRL = 0xF4;
-	"mov	0x5261+0, #0xf4"
-    // TIM1_CR1 = 0x01;
-	"mov	0x5250+0, #0x01"
-    // TIM1_IER = 0x01;
-	"mov	0x5254+0, #0x01"
-	"rim"
-"while_true:"
-	"WFI"
-	"jra	while_true"
-);
+    CLK_DIVR = 0x00;
+    CLK_PCKENR1 = 0xFF;
+
+    GPIOB->DDR |= (1 << 5);
+    GPIOB->ODR |= (1 << 5);
+
+    TIM1_PSCRH = 0x00;
+    TIM1_PSCRL = 0xF4;
+    TIM1_CR1 = 0x01;
+    TIM1_IER = 0x01;
+    __asm__ ("rim");
+    while(1)
+    {
+        __asm__ ("WFI");
+    }
 }
