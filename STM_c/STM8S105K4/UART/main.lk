@@ -1,0 +1,9 @@
+-muwx
+-i main.ihx
+-b HOME = 0x8000
+-b DATA = 0x0001
+-k E:\Program\sdcc\bin\..\lib\stm8
+-l stm8
+main.rel
+
+-e
