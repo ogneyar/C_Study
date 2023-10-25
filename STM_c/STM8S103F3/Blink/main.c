@@ -1,6 +1,4 @@
 
-// НЕ РАБОТАЕТ!!!
-
 #include <stdint.h>
 #include <stdio.h>
 
@@ -39,11 +37,11 @@ void TIM1_overflow_Handler() //__interrupt(11)
 {
      TIM1_SR1 &= ~1;
      if (led == 1) {
-        GPIOE->ODR |= (1 << 5);
+        GPIOB->ODR |= (1 << 5);
      }
      else
      {
-        GPIOE->ODR &= ~(1 << 5);  
+        GPIOB->ODR &= ~(1 << 5);  
      }
      led  ^= 1;
 }
@@ -54,8 +52,8 @@ void main(void)
     CLK_DIVR = 0x00;
     CLK_PCKENR1 = 0xFF;
 
-    GPIOE->DDR |= (1 << 5);
-    GPIOE->ODR |= (1 << 5);
+    GPIOB->DDR |= (1 << 5);
+    GPIOB->ODR |= (1 << 5);
 
     TIM1_PSCRH = 0x00;
     TIM1_PSCRL = 0xF4;
