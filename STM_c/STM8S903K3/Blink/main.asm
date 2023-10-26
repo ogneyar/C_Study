@@ -9,6 +9,7 @@
 ; Public variables in this module
 ;--------------------------------------------------------
 	.globl _main
+	.globl _TIM1_overflow_Handler
 	.globl _led
 ;--------------------------------------------------------
 ; ram data
@@ -89,23 +90,74 @@ __sdcc_program_startup:
 ; code
 ;--------------------------------------------------------
 	.area CODE
-;	main.c: 50: void main(void)
+;	main.c: 38: void TIM1_overflow_Handler() //__interrupt(11)
+;	-----------------------------------------
+;	 function TIM1_overflow_Handler
+;	-----------------------------------------
+_TIM1_overflow_Handler:
+	push	a
+;	main.c: 40: TIM1_SR1 &= ~1;
+	bres	0x5255, #0
+;	main.c: 41: if (led == 1) {
+	ld	a, _led+0
+	dec	a
+	jrne	00112$
+	ld	a, #0x01
+	ld	(0x01, sp), a
+	.byte 0xc5
+00112$:
+	clr	(0x01, sp)
+00113$:
+;	main.c: 42: GPIOE->ODR |= (1 << 5);
+	ld	a, 0x5014
+;	main.c: 41: if (led == 1) {
+	tnz	(0x01, sp)
+	jreq	00102$
+;	main.c: 42: GPIOE->ODR |= (1 << 5);
+	or	a, #0x20
+	ld	0x5014, a
+	jra	00103$
+00102$:
+;	main.c: 46: GPIOE->ODR &= ~(1 << 5);  
+	and	a, #0xdf
+	ld	0x5014, a
+00103$:
+;	main.c: 48: led  ^= 1;
+	bcpl	_led+0, #0
+;	main.c: 49: }
+	pop	a
+	ret
+;	main.c: 52: void main(void)
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-;	main.c: 55: GPIOE->DDR |= (1 << 5);
+;	main.c: 54: CLK_DIVR = 0x00;
+	mov	0x50c6+0, #0x00
+;	main.c: 55: CLK_PCKENR1 = 0xFF;
+	mov	0x50c7+0, #0xff
+;	main.c: 57: GPIOE->DDR |= (1 << 5);
 	bset	0x5016, #5
-;	main.c: 56: GPIOE->ODR |= (1 << 5);
+;	main.c: 58: GPIOE->ODR |= (1 << 5);
 	ld	a, 0x5014
 	or	a, #0x20
 	ld	0x5014, a
-;	main.c: 63: while(1)
+;	main.c: 60: TIM1_PSCRH = 0x00;
+	mov	0x5260+0, #0x00
+;	main.c: 61: TIM1_PSCRL = 0xF4;
+	mov	0x5261+0, #0xf4
+;	main.c: 62: TIM1_CR1 = 0x01;
+	mov	0x5250+0, #0x01
+;	main.c: 63: TIM1_IER = 0x01;
+	mov	0x5254+0, #0x01
+;	main.c: 64: __asm__ ("rim");
+	rim
+;	main.c: 65: while(1)
 00102$:
-;	main.c: 65: __asm__ ("WFI");
+;	main.c: 67: __asm__ ("WFI");
 	WFI
 	jra	00102$
-;	main.c: 67: }
+;	main.c: 69: }
 	ret
 	.area CODE
 	.area CONST

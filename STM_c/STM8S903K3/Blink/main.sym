@@ -7,6 +7,7 @@ Symbol Table
     .__.ABS.                                                    =  000000 G
     .__.CPU.                                                    =  000000 L
     .__.H$L.                                                    =  000001 L
+  A _TIM1_overflow_Handler                                         000000 GR
     ___sdcc_external_startup                                       ****** GX
   5 __interrupt_vect                                               000000 R
   6 __sdcc_init_data                                               000009 R
@@ -14,13 +15,14 @@ Symbol Table
   3 __start__stack                                                 000000 R
   9 __xinit__led                                                   000000 R
   2 _led                                                           000000 GR
-  A _main                                                          000000 GR
+  A _main                                                          00002B GR
     l_DATA                                                         ****** GX
     l_INITIALIZER                                                  ****** GX
     s_DATA                                                         ****** GX
     s_GSINIT                                                       ****** GX
     s_INITIALIZED                                                  ****** GX
     s_INITIALIZER                                                  ****** GX
+
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 2
 Hexadecimal [24-Bits]
@@ -37,6 +39,6 @@ Area Table
    7 GSFINAL                                    size      3   flags    0
    8 CONST                                      size      0   flags    0
    9 INITIALIZER                                size      1   flags    0
-   A CODE                                       size     10   flags    0
+   A CODE                                       size     54   flags    0
    B CABS                                       size      0   flags    8
 

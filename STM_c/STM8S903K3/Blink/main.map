@@ -24,8 +24,8 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000002  s_SSEG                          
      00000003  l_GSFINAL                       
      00000007  l_HOME                          
-     00000012  l_CODE                          
      00000023  l_GSINIT                        
+     00000056  l_CODE                          
      00008000  s_HOME                          
      00008007  s_GSINIT                        
      0000802A  s_GSFINAL                       
@@ -94,13 +94,13 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CODE                                0000802E    00000012 =          18. bytes (REL,CON)
+CODE                                0000802E    00000056 =          86. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     0000802E  _main                              main
-     0000803E  ___sdcc_external_startup           _startup
-
+     0000802E  _TIM1_overflow_Handler             main
+     00008059  _main                              main
+     00008082  ___sdcc_external_startup           _startup
 ASxxxx Linker V03.00/V05.40 + sdld,  page 9.
 
 Files Linked                              [ module(s) ]
