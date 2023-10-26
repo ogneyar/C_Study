@@ -1,0 +1,70 @@
+
+PREFIX				:= arm-none-eabi-
+TOOL_CHAIN			:= E:/Program/MounRiver/MounRiver_Studio/toolchain/arm-none-eabi-gcc/bin/$(PREFIX)
+OPENOCD_INTERFACE 	:= interface/stlink.cfg
+OPENOCD_TARGET 		:= target/stm32f1x.cfg
+
+MCPU		:= cortex-m4
+
+SCRIPT		:= scriptC6.ld
+
+BUILD_DIR	:= build
+
+FILE_NAME	:= Blink
+CFILE		:= $(FILE_NAME).c
+OBJ			:= $(BUILD_DIR)/$(FILE_NAME).o
+ELF			:= $(BUILD_DIR)/$(FILE_NAME).elf
+HEX			:= $(BUILD_DIR)/$(FILE_NAME).hex
+BIN			:= $(BUILD_DIR)/$(FILE_NAME).bin
+
+# C includes
+C_INCLUDES =  \
+	-I. \
+	-I../libs
+	
+all: flash
+	@echo finish All
+
+flash: obj
+	@openocd -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET) -c "program $(ELF)" -c "verify_image $(ELF)" -c reset -c exit
+
+obj: link
+	@$(TOOL_CHAIN)objcopy -O binary $(ELF) $(BIN)
+	@$(TOOL_CHAIN)objcopy -O ihex $(ELF) $(HEX)
+
+link: compile
+	@$(TOOL_CHAIN)ld -g -T$(SCRIPT) -o $(ELF) $(OBJ)
+    
+compile:
+	@if not exist $(BUILD_DIR) (mkdir $(BUILD_DIR))
+	@$(TOOL_CHAIN)gcc -c -g -Wall -mcpu=$(MCPU) -mthumb -std=gnu99 -o $(OBJ) $(CFILE) $(C_INCLUDES)
+
+size: 
+#	@$(TOOL_CHAIN)nm –print-size $(OBJ)
+	@$(TOOL_CHAIN)nm --print-size $(ELF)
+
+# запуск для дебага
+ocd:
+	@openocd -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET)
+	
+debug:
+	@$(TOOL_CHAIN)gdb $(ELF)
+
+# target remote 127.0.0.1:3333
+# monitor halt — остановка чипа
+# load - загрузка файла Test.elf
+# monitor reset init - инициализировать чип (сбросить регистры тд)
+# x/20wux 0x800000 - показать дамп памяти по адресу 0x8000000, 20 слов (w) беззнаково (u) в HEX (x)
+# x/20wux 0x00 - дамп области начала памяти
+# p/x *(uint32_t*) 0x04 - команда p – печать переменной, через дробь параметр x – отобразить в HEX, а дальше обычный синтаксис C
+# p/x &Reset_Handler
+# step - выполнение до следующей строки исходника
+# stepi - выполнение до следующей машинной инструкции
+# continue - запуск программы пока она не будет прервана вручную или точной останова
+
+
+test: 
+	@E:/Program/MounRiver/MounRiver_Studio/toolchain/OpenOCD/bin/openocd \
+	-c "adapter driver hla" -c "hla_layout stlink" -c "hla_device_desc 'ST-LINK'" \
+	-c "hla_vid_pid 0x0483 0x3744 0x0483 0x3748 0x0483 0x374b 0x0483 0x374d 0x0483 0x374e 0x0483 0x374f 0x0483 0x3752 0x0483 0x3753 0x0483 0x3754" \
+	-f "E:/Program/MounRiver/MounRiver_Studio/toolchain/OpenOCD/scripts/target/stm32f1x.cfg" -c "program $(ELF)" -c "verify_image $(ELF)" -c reset -c exit
