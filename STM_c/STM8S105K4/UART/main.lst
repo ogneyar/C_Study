@@ -1,0 +1,145 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler 
+                                      3 ; Version 4.3.0 #14184 (MINGW64)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module main
+                                      6 	.optsdcc -mstm8
+                                      7 	
+                                      8 ;--------------------------------------------------------
+                                      9 ; Public variables in this module
+                                     10 ;--------------------------------------------------------
+                                     11 	.globl _main
+                                     12 	.globl _fputc
+                                     13 	.globl _puts
+                                     14 ;--------------------------------------------------------
+                                     15 ; ram data
+                                     16 ;--------------------------------------------------------
+                                     17 	.area DATA
+                                     18 ;--------------------------------------------------------
+                                     19 ; ram data
+                                     20 ;--------------------------------------------------------
+                                     21 	.area INITIALIZED
+                                     22 ;--------------------------------------------------------
+                                     23 ; Stack segment in internal ram
+                                     24 ;--------------------------------------------------------
+                                     25 	.area SSEG
+      000000                         26 __start__stack:
+      000000                         27 	.ds	1
+                                     28 
+                                     29 ;--------------------------------------------------------
+                                     30 ; absolute external ram data
+                                     31 ;--------------------------------------------------------
+                                     32 	.area DABS (ABS)
+                                     33 
+                                     34 ; default segment ordering for linker
+                                     35 	.area HOME
+                                     36 	.area GSINIT
+                                     37 	.area GSFINAL
+                                     38 	.area CONST
+                                     39 	.area INITIALIZER
+                                     40 	.area CODE
+                                     41 
+                                     42 ;--------------------------------------------------------
+                                     43 ; interrupt vector
+                                     44 ;--------------------------------------------------------
+                                     45 	.area HOME
+      000000                         46 __interrupt_vect:
+      000000 82v00u00u00             47 	int s_GSINIT ; reset
+                                     48 ;--------------------------------------------------------
+                                     49 ; global & static initialisations
+                                     50 ;--------------------------------------------------------
+                                     51 	.area HOME
+                                     52 	.area GSINIT
+                                     53 	.area GSFINAL
+                                     54 	.area GSINIT
+      000000 CDr00r00         [ 4]   55 	call	___sdcc_external_startup
+      000003 4D               [ 1]   56 	tnz	a
+      000004 27 03            [ 1]   57 	jreq	__sdcc_init_data
+      000006 CCr00r04         [ 2]   58 	jp	__sdcc_program_startup
+      000009                         59 __sdcc_init_data:
+                                     60 ; stm8_genXINIT() start
+      000009 AEr00r00         [ 2]   61 	ldw x, #l_DATA
+      00000C 27 07            [ 1]   62 	jreq	00002$
+      00000E                         63 00001$:
+      00000E 72 4FuFFuFF      [ 1]   64 	clr (s_DATA - 1, x)
+      000012 5A               [ 2]   65 	decw x
+      000013 26 F9            [ 1]   66 	jrne	00001$
+      000015                         67 00002$:
+      000015 AEr00r00         [ 2]   68 	ldw	x, #l_INITIALIZER
+      000018 27 09            [ 1]   69 	jreq	00004$
+      00001A                         70 00003$:
+      00001A D6uFFuFF         [ 1]   71 	ld	a, (s_INITIALIZER - 1, x)
+      00001D D7uFFuFF         [ 1]   72 	ld	(s_INITIALIZED - 1, x), a
+      000020 5A               [ 2]   73 	decw	x
+      000021 26 F7            [ 1]   74 	jrne	00003$
+      000023                         75 00004$:
+                                     76 ; stm8_genXINIT() end
+                                     77 	.area GSFINAL
+      000000 CCr00r04         [ 2]   78 	jp	__sdcc_program_startup
+                                     79 ;--------------------------------------------------------
+                                     80 ; Home
+                                     81 ;--------------------------------------------------------
+                                     82 	.area HOME
+                                     83 	.area HOME
+      000004                         84 __sdcc_program_startup:
+      000004 CCr00r10         [ 2]   85 	jp	_main
+                                     86 ;	return from main will return to caller
+                                     87 ;--------------------------------------------------------
+                                     88 ; code
+                                     89 ;--------------------------------------------------------
+                                     90 	.area CODE
+                                     91 ;	main.c: 20: void fputc(char c) //вывод символа в UART
+                                     92 ;	-----------------------------------------
+                                     93 ;	 function fputc
+                                     94 ;	-----------------------------------------
+      000000                         95 _fputc:
+      000000 88               [ 1]   96 	push	a
+      000001 6B 01            [ 1]   97 	ld	(0x01, sp), a
+                                     98 ;	main.c: 22: while(!(UART1_SR & UART_SR_TXE));
+      000003                         99 00101$:
+      000003 C6 52 30         [ 1]  100 	ld	a, 0x5230
+      000006 2A FB            [ 1]  101 	jrpl	00101$
+                                    102 ;	main.c: 23: UART1_DR = c;
+      000008 AE 52 31         [ 2]  103 	ldw	x, #0x5231
+      00000B 7B 01            [ 1]  104 	ld	a, (0x01, sp)
+      00000D F7               [ 1]  105 	ld	(x), a
+                                    106 ;	main.c: 24: }
+      00000E 84               [ 1]  107 	pop	a
+      00000F 81               [ 4]  108 	ret
+                                    109 ;	main.c: 28: void main(void)
+                                    110 ;	-----------------------------------------
+                                    111 ;	 function main
+                                    112 ;	-----------------------------------------
+      000010                        113 _main:
+                                    114 ;	main.c: 30: CLK_DIVR = 0x00; //установка тактовой частоты 16 MГц
+      000010 35 00 50 C6      [ 1]  115 	mov	0x50c6+0, #0x00
+                                    116 ;	main.c: 31: CLK_PCKENR1 = 0xFF; //включение периферии
+      000014 35 FF 50 C7      [ 1]  117 	mov	0x50c7+0, #0xff
+                                    118 ;	main.c: 32: UART1_CR2 = UART_CR2_TEN; //разрешение TX и RX
+      000018 35 08 52 35      [ 1]  119 	mov	0x5235+0, #0x08
+                                    120 ;	main.c: 33: UART1_CR3 &= ~(UART_CR3_STOP1 | UART_CR3_STOP2); //1 стоп-бит
+      00001C C6 52 36         [ 1]  121 	ld	a, 0x5236
+      00001F A4 CF            [ 1]  122 	and	a, #0xcf
+      000021 C7 52 36         [ 1]  123 	ld	0x5236, a
+                                    124 ;	main.c: 34: UART1_BRR2 = 0x03; UART1_BRR1 = 0x68; //9600 бод
+      000024 35 03 52 33      [ 1]  125 	mov	0x5233+0, #0x03
+      000028 35 68 52 32      [ 1]  126 	mov	0x5232+0, #0x68
+                                    127 ;	main.c: 36: while(1)
+      00002C                        128 00102$:
+                                    129 ;	main.c: 38: printf("Hello,world!\r\n"); //вывод строки в UART
+      00002C AEr00r00         [ 2]  130 	ldw	x, #(___str_1+0)
+      00002F CDr00r00         [ 4]  131 	call	_puts
+      000032 20 F8            [ 2]  132 	jra	00102$
+                                    133 ;	main.c: 40: }
+      000034 81               [ 4]  134 	ret
+                                    135 	.area CODE
+                                    136 	.area CONST
+                                    137 	.area CONST
+      000000                        138 ___str_1:
+      000000 48 65 6C 6C 6F 2C 77   139 	.ascii "Hello,world!"
+             6F 72 6C 64 21
+      00000C 0D                     140 	.db 0x0d
+      00000D 00                     141 	.db 0x00
+                                    142 	.area CODE
+                                    143 	.area INITIALIZER
+                                    144 	.area CABS (ABS)
