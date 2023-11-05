@@ -9,9 +9,9 @@
 
 
 struct {MDR_GPIO_TypeDef* port; uint16_t pin; bool state;}
-		LED_PINS[] = {
-		{MDR_PORTD, pin0, 0},
-		{MDR_PORTD, pin1, 0}
+LED_PINS[] = {
+	{MDR_PORTD, pin0, 0},
+	{MDR_PORTD, pin1, 0}
 };
 
 void init_clock()
