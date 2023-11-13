@@ -380,14 +380,14 @@ OUTPUT(build/firmware.elf elf32-littleriscv)
  .debug_line    0x000000000000186f      0x5e6 build/MLDR187_gpio.o
  .debug_line    0x0000000000001e55      0x580 build/startup_MLDR187.o
 
-.debug_str      0x0000000000000000    0x234fe
+.debug_str      0x0000000000000000    0x234c9
  .debug_str     0x0000000000000000    0x2183a build/main.o
                                       0x219aa (size before relaxing)
- .debug_str     0x000000000002183a     0x1627 build/MLDR187_rst_clk.o
-                                      0x22d4c (size before relaxing)
- .debug_str     0x0000000000022e61      0x66f build/MLDR187_gpio.o
-                                      0x221dc (size before relaxing)
- .debug_str     0x00000000000234d0       0x2e build/startup_MLDR187.o
+ .debug_str     0x000000000002183a     0x15f2 build/MLDR187_rst_clk.o
+                                      0x22d40 (size before relaxing)
+ .debug_str     0x0000000000022e2c      0x66f build/MLDR187_gpio.o
+                                      0x221d0 (size before relaxing)
+ .debug_str     0x000000000002349b       0x2e build/startup_MLDR187.o
                                          0x57 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
