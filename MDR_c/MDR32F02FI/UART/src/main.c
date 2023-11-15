@@ -47,6 +47,8 @@ int main() {
    
     blink(slow);
 
+    while(1) {}
+
     return 0;
 }
 
@@ -144,7 +146,8 @@ void blink(uint8_t fast) {
                 PORT_SetReset(LED_PORT, LED_PIN_2, SET);
                 PORT_SetReset(LED_PORT, LED_PIN_3, RESET);
             }
-        }
+            printf("o!\n");  
+        }        
     }
 }
 
