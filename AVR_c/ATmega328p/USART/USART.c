@@ -12,10 +12,13 @@ int main(void) {
 	DDRB |= (1 << PB5); // пин LED на выход 
 	USART_Init(115200);	// инициализация UART
 
-	USART_Transmit("Hello Чел!!!\r\n\r\n");
+	USART_Transmit("Привет Чел!!!\r\n\r\n");
+	USART_Transmit("Hello Bro!!!\r\n\r\n");
 
 	USART_Transmit("Жми 1 для включения LED\r\n"); 
+	USART_Transmit("Press 1 for on LED\r\n"); 
 	USART_Transmit("Жми 0 для выключения\r\n"); 
+	USART_Transmit("Press 0 for off LED\r\n"); 
 
 	while (1) 
 	{
@@ -26,12 +29,16 @@ int main(void) {
 			USART_Transmit("\n\r");
 			USART_Transmit("LED выкл");
 			USART_Transmit("\n\r");
+			USART_Transmit("LED off");
+			USART_Transmit("\n\r");
 		}
 		else if (data == '1')
 		{
 			PORTB |= (1 << PB5);
 			USART_Transmit("\n\r");
 			USART_Transmit("LED вкл");
+			USART_Transmit("\n\r");
+			USART_Transmit("LED on");
 			USART_Transmit("\n\r");
 		}
 	}

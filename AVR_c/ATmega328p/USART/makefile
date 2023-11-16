@@ -2,7 +2,7 @@
 PROGRAMMER		:= arduino
 TARGET_MCU		:= atmega328p
 BAUD 			:= 115200
-PORT			:= com8
+PORT			:= com11
 
 TARGET_FCPU		:= 16000000
 
