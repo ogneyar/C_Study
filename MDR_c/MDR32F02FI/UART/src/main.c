@@ -39,6 +39,8 @@ void error();
 
 
 int main() {
+    // while(DelayCnt++ < 0x00080000) {} // 2s
+    while(DelayCnt++ < 0x00040000) {} // 1s
     init_clock();
     init_led();
     init_uart();
@@ -125,6 +127,7 @@ void init_uart()
 
 
 void blink(uint8_t fast) {
+    DelayCnt = 0;
     uint32_t delay = 0x00100000;
     if (fast) delay = 0x00010000;
     while (1)
